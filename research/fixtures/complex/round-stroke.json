@@ -14,7 +14,7 @@
         {
           "key": 4,
           "wire": "string",
-          "value": "Feather"
+          "value": "Stroke"
         },
         {
           "key": 7,
@@ -32,29 +32,14 @@
       "type": 3,
       "properties": [
         {
-          "key": 4,
-          "wire": "string",
-          "value": "Box"
-        },
-        {
           "key": 5,
           "wire": "uint",
           "value": 0
-        },
-        {
-          "key": 13,
-          "wire": "float",
-          "value": 128
-        },
-        {
-          "key": 14,
-          "wire": "float",
-          "value": 128
         }
       ]
     },
     {
-      "type": 7,
+      "type": 16,
       "properties": [
         {
           "key": 5,
@@ -62,29 +47,69 @@
           "value": 1
         },
         {
-          "key": 20,
-          "wire": "float",
-          "value": 64
-        },
-        {
-          "key": 21,
-          "wire": "float",
-          "value": 64
+          "key": 32,
+          "wire": "bool",
+          "value": false
         }
       ]
     },
     {
-      "type": 20,
+      "type": 5,
       "properties": [
         {
           "key": 5,
-          "wire": "uint",
-          "value": 1
-        },
-        {
-          "key": 40,
           "wire": "uint",
           "value": 2
+        },
+        {
+          "key": 24,
+          "wire": "float",
+          "value": 64
+        },
+        {
+          "key": 25,
+          "wire": "float",
+          "value": 128
+        }
+      ]
+    },
+    {
+      "type": 5,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 2
+        },
+        {
+          "key": 24,
+          "wire": "float",
+          "value": 192
+        },
+        {
+          "key": 25,
+          "wire": "float",
+          "value": 128
+        }
+      ]
+    },
+    {
+      "type": 24,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 1
+        },
+        {
+          "key": 47,
+          "wire": "float",
+          "value": 16
+        },
+        {
+          "key": 48,
+          "wire": "uint",
+          "value": 1
         }
       ]
     },
@@ -94,27 +119,12 @@
         {
           "key": 5,
           "wire": "uint",
-          "value": 3
+          "value": 5
         },
         {
           "key": 37,
           "wire": "color",
           "value": 4280837340
-        }
-      ]
-    },
-    {
-      "type": 533,
-      "properties": [
-        {
-          "key": 5,
-          "wire": "uint",
-          "value": 3
-        },
-        {
-          "key": 749,
-          "wire": "float",
-          "value": 12
         }
       ]
     }

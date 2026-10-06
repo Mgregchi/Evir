@@ -19,7 +19,13 @@
     "vector:lab": "node tools/vector_lab.cjs",
     "probe:feather": "RIVE_RENDERER=webgl2 node tools/probe_feather.cjs",
     "compile:rml": "python3 tools/compile_rml.py",
-    "research:advanced": "npm run generate:advanced && npm test && npm run test:geometry && npm run validate:advanced && npm run validate:advanced:webgl2 && npm run vector:lab"
+    "research:advanced": "npm run generate:advanced && npm test && npm run test:geometry && npm run validate:advanced && npm run validate:advanced:webgl2 && npm run vector:lab",
+    "generate:complex": "python3 tools/generate_complex.py",
+    "validate:complex": "node tools/validate_complex.cjs",
+    "validate:complex:webgl2": "RIVE_RENDERER=webgl2 node tools/validate_complex.cjs",
+    "research:complex": "npm run generate:advanced && npm run generate:complex && npm test && npm run test:geometry && npm run validate:complex && npm run validate:complex:webgl2 && npm run probe:feather",
+    "probe:hardware": "node tools/probe_hardware.cjs",
+    "benchmark:hardware": "RIVE_RENDERER=webgl2 EVIR_REQUIRE_HARDWARE=1 EVIR_BENCHMARK_OUTPUT=research/results/runtime-benchmark-hardware.json node tools/benchmark_runtime.cjs"
   },
   "dependencies": {
     "@rive-app/canvas": "2.44.0",

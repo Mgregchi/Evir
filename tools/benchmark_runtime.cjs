@@ -15,6 +15,18 @@ function stats(v) {
 }
 run(async (page, browser) => {
   const { capture } = require("./pixels.cjs");
+  if (process.env.EVIR_REQUIRE_HARDWARE === "1") {
+    if (process.env.RIVE_RENDERER !== "webgl2")
+      throw Error("Hardware checks require RIVE_RENDERER=webgl2");
+    const gpu = require("./gpu_diagnostics.cjs");
+    await gpu.install(page);
+    await page.goto("http://127.0.0.1:8776/tools/runtime.html?renderer=webgl2");
+    await page.evaluate(() =>
+      loadFixture("static", { useOffscreenRenderer: false }),
+    );
+    await page.waitForTimeout(100);
+    gpu.requireHardware(await gpu.collect(page));
+  }
   const fixtures = [
     "static",
     "static-explicit-defaults",
@@ -201,9 +213,10 @@ run(async (page, browser) => {
     results: rows,
   };
   fs.writeFileSync(
-    "research/results/runtime-benchmark-" +
-      (process.env.RIVE_RENDERER || "canvas") +
-      ".json",
+    process.env.EVIR_BENCHMARK_OUTPUT ||
+      "research/results/runtime-benchmark-" +
+        (process.env.RIVE_RENDERER || "canvas") +
+        ".json",
     JSON.stringify(out, null, 2) + "\n",
   );
 }).catch((e) => {

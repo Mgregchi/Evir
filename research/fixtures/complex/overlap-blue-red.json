@@ -14,7 +14,7 @@
         {
           "key": 4,
           "wire": "string",
-          "value": "Feather"
+          "value": "Overlap"
         },
         {
           "key": 7,
@@ -44,7 +44,7 @@
         {
           "key": 13,
           "wire": "float",
-          "value": 128
+          "value": 104
         },
         {
           "key": 14,
@@ -64,12 +64,12 @@
         {
           "key": 20,
           "wire": "float",
-          "value": 64
+          "value": 96
         },
         {
           "key": 21,
           "wire": "float",
-          "value": 64
+          "value": 96
         }
       ]
     },
@@ -80,11 +80,6 @@
           "key": 5,
           "wire": "uint",
           "value": 1
-        },
-        {
-          "key": 40,
-          "wire": "uint",
-          "value": 2
         }
       ]
     },
@@ -99,22 +94,77 @@
         {
           "key": 37,
           "wire": "color",
-          "value": 4280837340
+          "value": 2147483903
         }
       ]
     },
     {
-      "type": 533,
+      "type": 3,
+      "properties": [
+        {
+          "key": 4,
+          "wire": "string",
+          "value": "Box"
+        },
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 0
+        },
+        {
+          "key": 13,
+          "wire": "float",
+          "value": 152
+        },
+        {
+          "key": 14,
+          "wire": "float",
+          "value": 128
+        }
+      ]
+    },
+    {
+      "type": 7,
       "properties": [
         {
           "key": 5,
           "wire": "uint",
-          "value": 3
+          "value": 5
         },
         {
-          "key": 749,
+          "key": 20,
           "wire": "float",
-          "value": 12
+          "value": 96
+        },
+        {
+          "key": 21,
+          "wire": "float",
+          "value": 96
+        }
+      ]
+    },
+    {
+      "type": 20,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "type": 18,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 7
+        },
+        {
+          "key": 37,
+          "wire": "color",
+          "value": 2164195328
         }
       ]
     }

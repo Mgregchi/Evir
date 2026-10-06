@@ -142,10 +142,12 @@ def clipping():
 
 
 def feather():
+    o = rect(x=128, y=128, width=64, height=64)
+    # RiveRenderer::drawPath skips feathered fills under any other rule.
+    o[2] = obj("Fill", parentId=1, fillRule=2)
     return scene(
         "Feather",
-        rect(x=128, y=128, width=64, height=64)
-        + [obj("Feather", parentId=3, strength=12)],
+        o + [obj("Feather", parentId=3, strength=12)],
     )
 
 

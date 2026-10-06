@@ -1,0 +1,33 @@
+<Rive version="1" kind="fragment">
+  <Artboard name="DirectBlend" width="256" height="256" id="0:1" styleId="0:2" defaultStateMachineId="0:10">
+    <LayoutComponentStyle id="0:2"/>
+    <Shape name="Box" x="64" y="128" id="0:3">
+      <Rectangle width="48" height="48"/>
+      <Fill><SolidColor colorValue="FF2864DC"/></Fill>
+    </Shape>
+    <StateMachine name="Direct" id="0:10">
+      <StateMachineNumber name="left" value="100" id="0:11"/>
+      <StateMachineNumber name="right" value="0" id="0:12"/>
+      <StateMachineLayer name="Main">
+        <EntryState x="0" y="0"><StateTransition stateToId="0:17"/></EntryState>
+        <AnyState x="200" y="-120"/><ExitState x="400" y="-120"/>
+        <BlendStateDirect x="200" y="0" flags="2" id="0:17">
+          <BlendAnimationDirect animationId="0:20" inputId="0:11"/>
+          <BlendAnimationDirect animationId="0:21" inputId="0:12"/>
+        </BlendStateDirect>
+      </StateMachineLayer>
+    </StateMachine>
+    <LinearAnimation name="Left" fps="60" duration="60" loopValue="1" id="0:20">
+      <KeyedObject objectId="0:3"><KeyedProperty propertyKey="13">
+        <KeyFrameDouble frame="0" value="64" interpolationType="linear"/>
+        <KeyFrameDouble frame="60" value="64" interpolationType="linear"/>
+      </KeyedProperty></KeyedObject>
+    </LinearAnimation>
+    <LinearAnimation name="Right" fps="60" duration="60" loopValue="1" id="0:21">
+      <KeyedObject objectId="0:3"><KeyedProperty propertyKey="13">
+        <KeyFrameDouble frame="0" value="192" interpolationType="linear"/>
+        <KeyFrameDouble frame="60" value="192" interpolationType="linear"/>
+      </KeyedProperty></KeyedObject>
+    </LinearAnimation>
+  </Artboard>
+</Rive>

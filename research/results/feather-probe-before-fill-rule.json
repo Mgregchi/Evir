@@ -1,0 +1,49 @@
+{
+  "runtime": "@rive-app/webgl2 2.44.0",
+  "results": [
+    {
+      "fixture": "feather",
+      "offscreen": false,
+      "pixels": {
+        "count": 0,
+        "cx": null,
+        "cy": null,
+        "hash": 4125924805
+      },
+      "status": "failed-empty-capture"
+    },
+    {
+      "fixture": "feather",
+      "offscreen": true,
+      "pixels": {
+        "count": 0,
+        "cx": null,
+        "cy": null,
+        "hash": 4125924805
+      },
+      "status": "failed-empty-capture"
+    },
+    {
+      "fixture": "rml-feather",
+      "offscreen": false,
+      "pixels": {
+        "count": 0,
+        "cx": null,
+        "cy": null,
+        "hash": 4125924805
+      },
+      "status": "failed-empty-capture"
+    },
+    {
+      "fixture": "rml-feather",
+      "offscreen": true,
+      "pixels": {
+        "count": 0,
+        "cx": null,
+        "cy": null,
+        "hash": 4125924805
+      },
+      "status": "failed-empty-capture"
+    }
+  ]
+}

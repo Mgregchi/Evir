@@ -1,0 +1,262 @@
+{
+  "major": 7,
+  "minor": 0,
+  "file_id": 0,
+  "toc": {},
+  "objects": [
+    {
+      "type": 23,
+      "properties": []
+    },
+    {
+      "type": 1,
+      "properties": [
+        {
+          "key": 4,
+          "wire": "string",
+          "value": "Winding"
+        },
+        {
+          "key": 7,
+          "wire": "float",
+          "value": 256
+        },
+        {
+          "key": 8,
+          "wire": "float",
+          "value": 256
+        }
+      ]
+    },
+    {
+      "type": 3,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "type": 16,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 1
+        },
+        {
+          "key": 32,
+          "wire": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "type": 5,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 2
+        },
+        {
+          "key": 24,
+          "wire": "float",
+          "value": 48
+        },
+        {
+          "key": 25,
+          "wire": "float",
+          "value": 48
+        }
+      ]
+    },
+    {
+      "type": 5,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 2
+        },
+        {
+          "key": 24,
+          "wire": "float",
+          "value": 208
+        },
+        {
+          "key": 25,
+          "wire": "float",
+          "value": 48
+        }
+      ]
+    },
+    {
+      "type": 5,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 2
+        },
+        {
+          "key": 24,
+          "wire": "float",
+          "value": 208
+        },
+        {
+          "key": 25,
+          "wire": "float",
+          "value": 208
+        }
+      ]
+    },
+    {
+      "type": 5,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 2
+        },
+        {
+          "key": 24,
+          "wire": "float",
+          "value": 48
+        },
+        {
+          "key": 25,
+          "wire": "float",
+          "value": 208
+        }
+      ]
+    },
+    {
+      "type": 16,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 1
+        },
+        {
+          "key": 32,
+          "wire": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "type": 5,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 7
+        },
+        {
+          "key": 24,
+          "wire": "float",
+          "value": 96
+        },
+        {
+          "key": 25,
+          "wire": "float",
+          "value": 96
+        }
+      ]
+    },
+    {
+      "type": 5,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 7
+        },
+        {
+          "key": 24,
+          "wire": "float",
+          "value": 160
+        },
+        {
+          "key": 25,
+          "wire": "float",
+          "value": 96
+        }
+      ]
+    },
+    {
+      "type": 5,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 7
+        },
+        {
+          "key": 24,
+          "wire": "float",
+          "value": 160
+        },
+        {
+          "key": 25,
+          "wire": "float",
+          "value": 160
+        }
+      ]
+    },
+    {
+      "type": 5,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 7
+        },
+        {
+          "key": 24,
+          "wire": "float",
+          "value": 96
+        },
+        {
+          "key": 25,
+          "wire": "float",
+          "value": 160
+        }
+      ]
+    },
+    {
+      "type": 20,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 1
+        },
+        {
+          "key": 40,
+          "wire": "uint",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "type": 18,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 12
+        },
+        {
+          "key": 37,
+          "wire": "color",
+          "value": 4280837340
+        }
+      ]
+    }
+  ]
+}

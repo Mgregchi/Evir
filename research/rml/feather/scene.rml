@@ -3,7 +3,7 @@
     <LayoutComponentStyle id="0:2"/>
     <Shape name="Box" x="64" y="128">
       <Rectangle width="48" height="48"/>
-      <Fill><SolidColor colorValue="FF2864DC"/><Feather strength="12"/></Fill>
+      <Fill fillRule="clockwise"><SolidColor colorValue="FF2864DC"/><Feather strength="12"/></Fill>
     </Shape>
   </Artboard>
 </Rive>

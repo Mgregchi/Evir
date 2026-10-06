@@ -7,7 +7,7 @@
   },
   "defaultArtboard": {
     "id": "0:1",
-    "name": "Static"
+    "name": "Winding"
   },
   "artboards": [
     {
@@ -39,7 +39,7 @@
       "scaleX": 1,
       "scaleY": 1,
       "opacity": 1,
-      "name": "Static",
+      "name": "Winding",
       "enums": {
         "blendModeValue": "srcOver"
       },
@@ -169,8 +169,8 @@
           "blendModeValue": 3,
           "additiveAmount": 255,
           "drawableFlags": 0,
-          "x": 64,
-          "y": 128,
+          "x": 0,
+          "y": 0,
           "computedLocalX": 0,
           "computedLocalY": 0,
           "computedWorldX": 0,
@@ -183,23 +183,15 @@
           "scaleX": 1,
           "scaleY": 1,
           "opacity": 1,
-          "name": "Box",
+          "name": "Ring",
           "enums": {
             "blendModeValue": "srcOver"
           },
           "children": [
             {
-              "type": "Rectangle",
+              "type": "PointsPath",
               "line": 5,
-              "linkCornerRadius": true,
-              "cornerRadiusTL": 0,
-              "cornerRadiusTR": 0,
-              "cornerRadiusBL": 0,
-              "cornerRadiusBR": 0,
-              "width": 48,
-              "height": 48,
-              "originX": 0.5,
-              "originY": 0.5,
+              "isClosed": true,
               "pathFlags": 0,
               "isHole": false,
               "x": 0,
@@ -216,43 +208,120 @@
               "scaleX": 1,
               "scaleY": 1,
               "opacity": 1,
-              "name": ""
+              "name": "",
+              "children": [
+                {
+                  "type": "StraightVertex",
+                  "line": 6,
+                  "radius": 0,
+                  "x": 48,
+                  "y": 48,
+                  "name": ""
+                },
+                {
+                  "type": "StraightVertex",
+                  "line": 6,
+                  "radius": 0,
+                  "x": 208,
+                  "y": 48,
+                  "name": ""
+                },
+                {
+                  "type": "StraightVertex",
+                  "line": 7,
+                  "radius": 0,
+                  "x": 208,
+                  "y": 208,
+                  "name": ""
+                },
+                {
+                  "type": "StraightVertex",
+                  "line": 7,
+                  "radius": 0,
+                  "x": 48,
+                  "y": 208,
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "type": "PointsPath",
+              "line": 9,
+              "isClosed": true,
+              "pathFlags": 0,
+              "isHole": false,
+              "x": 0,
+              "y": 0,
+              "computedLocalX": 0,
+              "computedLocalY": 0,
+              "computedWorldX": 0,
+              "computedWorldY": 0,
+              "computedRootX": 0,
+              "computedRootY": 0,
+              "computedWidth": 0,
+              "computedHeight": 0,
+              "rotation": 0,
+              "scaleX": 1,
+              "scaleY": 1,
+              "opacity": 1,
+              "name": "",
+              "children": [
+                {
+                  "type": "StraightVertex",
+                  "line": 10,
+                  "radius": 0,
+                  "x": 96,
+                  "y": 96,
+                  "name": ""
+                },
+                {
+                  "type": "StraightVertex",
+                  "line": 10,
+                  "radius": 0,
+                  "x": 160,
+                  "y": 96,
+                  "name": ""
+                },
+                {
+                  "type": "StraightVertex",
+                  "line": 11,
+                  "radius": 0,
+                  "x": 160,
+                  "y": 160,
+                  "name": ""
+                },
+                {
+                  "type": "StraightVertex",
+                  "line": 11,
+                  "radius": 0,
+                  "x": 96,
+                  "y": 160,
+                  "name": ""
+                }
+              ]
             },
             {
               "type": "Fill",
-              "line": 6,
-              "fillRule": 2,
+              "line": 13,
+              "fillRule": 1,
               "isVisible": true,
               "blendModeValue": 127,
               "additiveAmount": 255,
               "name": "",
               "enums": {
-                "fillRule": "clockwise",
+                "fillRule": "evenOdd",
                 "blendModeValue": "inherit"
               },
               "children": [
                 {
                   "type": "SolidColor",
-                  "line": 6,
+                  "line": 13,
                   "colorValue": "FF2864DC",
                   "colorRed": 0,
                   "colorGreen": 0,
                   "colorBlue": 0,
                   "colorAlpha": 0,
                   "name": ""
-                },
-                {
-                  "type": "Feather",
-                  "line": 6,
-                  "spaceValue": 0,
-                  "strength": 12,
-                  "offsetX": 0,
-                  "offsetY": 0,
-                  "inner": false,
-                  "name": "",
-                  "enums": {
-                    "spaceValue": "world"
-                  }
                 }
               ]
             }

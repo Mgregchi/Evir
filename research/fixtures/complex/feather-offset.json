@@ -14,7 +14,7 @@
         {
           "key": 4,
           "wire": "string",
-          "value": "Feather"
+          "value": "FeatherControl"
         },
         {
           "key": 7,
@@ -115,6 +115,11 @@
           "key": 749,
           "wire": "float",
           "value": 12
+        },
+        {
+          "key": 750,
+          "wire": "float",
+          "value": 16
         }
       ]
     }

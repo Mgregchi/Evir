@@ -14,7 +14,7 @@
         {
           "key": 4,
           "wire": "string",
-          "value": "Feather"
+          "value": "FeatherClip"
         },
         {
           "key": 7,
@@ -29,6 +29,16 @@
       ]
     },
     {
+      "type": 2,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 0
+        }
+      ]
+    },
+    {
       "type": 3,
       "properties": [
         {
@@ -39,7 +49,7 @@
         {
           "key": 5,
           "wire": "uint",
-          "value": 0
+          "value": 1
         },
         {
           "key": 13,
@@ -59,7 +69,7 @@
         {
           "key": 5,
           "wire": "uint",
-          "value": 1
+          "value": 2
         },
         {
           "key": 20,
@@ -79,7 +89,7 @@
         {
           "key": 5,
           "wire": "uint",
-          "value": 1
+          "value": 2
         },
         {
           "key": 40,
@@ -94,7 +104,7 @@
         {
           "key": 5,
           "wire": "uint",
-          "value": 3
+          "value": 4
         },
         {
           "key": 37,
@@ -104,12 +114,67 @@
       ]
     },
     {
+      "type": 3,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "type": 7,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 6
+        },
+        {
+          "key": 13,
+          "wire": "float",
+          "value": 128
+        },
+        {
+          "key": 14,
+          "wire": "float",
+          "value": 128
+        },
+        {
+          "key": 20,
+          "wire": "float",
+          "value": 64
+        },
+        {
+          "key": 21,
+          "wire": "float",
+          "value": 64
+        }
+      ]
+    },
+    {
+      "type": 42,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 1
+        },
+        {
+          "key": 92,
+          "wire": "uint",
+          "value": 6
+        }
+      ]
+    },
+    {
       "type": 533,
       "properties": [
         {
           "key": 5,
           "wire": "uint",
-          "value": 3
+          "value": 4
         },
         {
           "key": 749,
