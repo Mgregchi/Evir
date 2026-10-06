@@ -15,6 +15,7 @@ function stats(v) {
 }
 run(async (page, browser) => {
   const { capture } = require("./pixels.cjs");
+  let deviceProfile = null;
   if (process.env.EVIR_REQUIRE_HARDWARE === "1") {
     if (process.env.RIVE_RENDERER !== "webgl2")
       throw Error("Hardware checks require RIVE_RENDERER=webgl2");
@@ -26,36 +27,84 @@ run(async (page, browser) => {
     );
     await page.waitForTimeout(100);
     gpu.requireHardware(await gpu.collect(page));
+    if (!process.env.EVIR_DEVICE_PROFILE)
+      throw Error("Set EVIR_DEVICE_PROFILE to physical-device provenance JSON");
+    deviceProfile = JSON.parse(
+      fs.readFileSync(process.env.EVIR_DEVICE_PROFILE, "utf8"),
+    );
+    for (const field of [
+      "model",
+      "os",
+      "gpu",
+      "driver",
+      "powerMode",
+      "runNotes",
+    ]) {
+      if (
+        typeof deviceProfile[field] !== "string" ||
+        !deviceProfile[field].trim() ||
+        /REPLACE/i.test(deviceProfile[field])
+      )
+        throw Error("Missing device provenance: " + field);
+    }
+    if (
+      !(deviceProfile.displayHz > 0) ||
+      !["desktop", "android", "ios"].includes(deviceProfile.deviceClass)
+    )
+      throw Error("Invalid device class or refresh rate");
   }
-  const fixtures = [
-    "static",
-    "static-explicit-defaults",
-    "animated",
-    "bones",
-    "state-machine",
-    "characters-25",
-    "stress-100",
-    "states-2",
-    "states-8",
-    "states-32",
-    "states-128",
-  ];
+  const fixtures = process.env.EVIR_BENCHMARK_FIXTURES
+    ? process.env.EVIR_BENCHMARK_FIXTURES.split(",")
+    : [
+        "static",
+        "static-explicit-defaults",
+        "animated",
+        "bones",
+        "state-machine",
+        "characters-25",
+        "stress-100",
+        "states-2",
+        "states-8",
+        "states-32",
+        "states-128",
+      ];
+  if (
+    process.env.EVIR_REQUIRE_HARDWARE === "1" &&
+    !process.env.EVIR_BENCHMARK_FIXTURES
+  )
+    fixtures.push(
+      "closure/weighted-mesh",
+      "closure/data-binding",
+      "closure/timed-transition",
+    );
   const rows = [];
   const system = await browser.newBrowserCDPSession();
   const cdp = await page.context().newCDPSession(page);
   await cdp.send("Performance.enable");
   for (const name of fixtures) {
-    const opts = name.startsWith("states-")
-      ? { stateMachines: "Selector" }
-      : ["state-machine", "characters-25"].includes(name)
-        ? { stateMachines: "Controller" }
-        : name === "bones"
-          ? { animations: ["Wave", "Bend"] }
-          : name === "stress-100"
-            ? { animations: Array.from({ length: 100 }, (_, i) => "Move" + i) }
-            : name === "animated"
-              ? { animations: "Move" }
-              : {};
+    const opts =
+      name === "closure/weighted-mesh"
+        ? { animations: ["Bone0", "Bone1", "Bone2", "Bone3"] }
+        : name === "closure/data-binding"
+          ? { stateMachines: "Controller", autoBind: true }
+          : name === "closure/timed-transition"
+            ? { stateMachines: "Controller" }
+            : name.startsWith("states-")
+              ? { stateMachines: "Selector" }
+              : ["state-machine", "characters-25"].includes(name)
+                ? { stateMachines: "Controller" }
+                : name === "bones"
+                  ? { animations: ["Wave", "Bend"] }
+                  : name === "stress-100"
+                    ? {
+                        animations: Array.from(
+                          { length: 100 },
+                          (_, i) => "Move" + i,
+                        ),
+                      }
+                    : name === "animated"
+                      ? { animations: "Move" }
+                      : {};
     const cold = [];
     for (let i = 0; i < 3; i++) {
       const coldPage = await page.context().newPage();
@@ -97,6 +146,15 @@ run(async (page, browser) => {
           const dt = [];
           let last, start;
           function tick(t) {
+            if (name === "closure/data-binding") {
+              player.viewModelInstance.number("positionX").value =
+                128 + 48 * Math.sin(t / 300);
+              player.viewModelInstance.boolean("active").value =
+                Math.floor(t / 500) % 2 === 0;
+            } else if (name === "closure/timed-transition") {
+              player.stateMachineInputs("Controller")[0].value =
+                Math.floor(t / 500) % 2 === 0;
+            }
             if (name.startsWith("states-")) {
               const n = Number(name.split("-")[1]);
               player.stateMachineInputs("Selector")[0].value = dt.length % n;
@@ -127,9 +185,11 @@ run(async (page, browser) => {
     const taskMs =
       (get(endMetrics, "TaskDuration") - get(startMetrics, "TaskDuration")) *
       1000;
-    const proc = (
-      await system.send("SystemInfo.getProcessInfo")
-    ).processInfo.filter((p) => p.type === "renderer");
+    const proc = process.env.EVIR_CDP_URL
+      ? []
+      : (await system.send("SystemInfo.getProcessInfo")).processInfo.filter(
+          (p) => p.type === "renderer",
+        );
     const rss = proc.map((p) => {
       try {
         const s = fs.readFileSync(`/proc/${p.id}/status`, "utf8");
@@ -142,11 +202,25 @@ run(async (page, browser) => {
       }
     });
     if (
-      ["animated", "bones", "characters-25", "stress-100"].includes(name) &&
+      [
+        "animated",
+        "bones",
+        "characters-25",
+        "stress-100",
+        "closure/weighted-mesh",
+        "closure/data-binding",
+        "closure/timed-transition",
+      ].includes(name) &&
       before.hash === after.pixels.hash
     ) {
       // An integer number of loop periods may coincide; check a non-loop-aligned interval.
-      await page.waitForTimeout(137);
+      if (name === "closure/timed-transition")
+        await page.evaluate(() => {
+          player.stateMachineInputs("Controller")[0].value = true;
+        });
+      await page.waitForTimeout(
+        name === "closure/timed-transition" ? 200 : 137,
+      );
       if (before.hash === (await capture(page)).hash)
         throw Error(name + " animation did not change");
     }
@@ -199,12 +273,27 @@ run(async (page, browser) => {
       playwright: require("playwright/package.json").version,
       chromium: version,
       node: process.version,
-      platform: os.platform(),
-      arch: os.arch(),
-      cpus: os.cpus().length,
-      memory_bytes: os.totalmem(),
+      platform: process.env.EVIR_CDP_URL ? null : os.platform(),
+      arch: process.env.EVIR_CDP_URL ? null : os.arch(),
+      cpus: process.env.EVIR_CDP_URL ? null : os.cpus().length,
+      memory_bytes: process.env.EVIR_CDP_URL ? null : os.totalmem(),
+      controllerHost: process.env.EVIR_CDP_URL
+        ? { platform: os.platform(), arch: os.arch() }
+        : null,
       viewport: "256x256 canvas",
-      headless: true,
+      headless: process.env.EVIR_CDP_URL ? null : true,
+      browserConnection: process.env.EVIR_CDP_URL
+        ? "remote-cdp"
+        : "local-launched",
+      deviceProfile,
+      deviceBrowser: await page.evaluate(() => ({
+        userAgent: navigator.userAgent,
+        devicePixelRatio,
+        viewportWidth: innerWidth,
+        viewportHeight: innerHeight,
+        canvasWidth: document.getElementById("canvas").width,
+        canvasHeight: document.getElementById("canvas").height,
+      })),
       graphics,
       renderer: process.env.RIVE_RENDERER || "canvas",
     },
@@ -214,9 +303,11 @@ run(async (page, browser) => {
   };
   fs.writeFileSync(
     process.env.EVIR_BENCHMARK_OUTPUT ||
-      "research/results/runtime-benchmark-" +
-        (process.env.RIVE_RENDERER || "canvas") +
-        ".json",
+      (process.env.EVIR_REQUIRE_HARDWARE === "1"
+        ? "research/results/runtime-benchmark-hardware.json"
+        : "research/results/runtime-benchmark-" +
+          (process.env.RIVE_RENDERER || "canvas") +
+          ".json"),
     JSON.stringify(out, null, 2) + "\n",
   );
 }).catch((e) => {

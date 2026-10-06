@@ -1,0 +1,104 @@
+{
+  "scope": "Targeted runtime/format research before editor research; not full Rive feature parity or an independent production renderer.",
+  "status": "open-external-evidence",
+  "softwareChecks": "passed",
+  "structuralRoundtripFiles": 66,
+  "positiveRuntimeValidations": 98,
+  "validations": [
+    {
+      "phase": "runtime",
+      "backend": "canvas",
+      "outcomes": {
+        "passed": 11
+      },
+      "evidence": "research/results/runtime-validation-canvas.json"
+    },
+    {
+      "phase": "advanced",
+      "backend": "canvas",
+      "outcomes": {
+        "passed": 8
+      },
+      "evidence": "research/results/advanced-validation-canvas.json"
+    },
+    {
+      "phase": "complex",
+      "backend": "canvas",
+      "outcomes": {
+        "passed": 14
+      },
+      "evidence": "research/results/complex-validation-canvas.json"
+    },
+    {
+      "phase": "closure",
+      "backend": "canvas",
+      "outcomes": {
+        "passed": 14,
+        "unrun-unsupported-backend": 4,
+        "confirmed-rejected-invalid-index": 1
+      },
+      "evidence": "research/results/closure-validation-canvas.json"
+    },
+    {
+      "phase": "runtime",
+      "backend": "webgl2",
+      "outcomes": {
+        "passed": 11
+      },
+      "evidence": "research/results/runtime-validation-webgl2.json"
+    },
+    {
+      "phase": "advanced",
+      "backend": "webgl2",
+      "outcomes": {
+        "passed": 8
+      },
+      "evidence": "research/results/advanced-validation-webgl2.json"
+    },
+    {
+      "phase": "complex",
+      "backend": "webgl2",
+      "outcomes": {
+        "passed": 14
+      },
+      "evidence": "research/results/complex-validation-webgl2.json"
+    },
+    {
+      "phase": "closure",
+      "backend": "webgl2",
+      "outcomes": {
+        "passed": 18,
+        "confirmed-rejected-invalid-index": 1
+      },
+      "evidence": "research/results/closure-validation-webgl2.json"
+    }
+  ],
+  "featherOutcomes": {
+    "passed-soft-edge-checks": 12,
+    "passed-zero-strength-control": 2,
+    "confirmed-skipped-invalid-fill-rule": 4
+  },
+  "officialCliProjects": 6,
+  "blockers": [
+    {
+      "item": "physical GPU and mobile measurements",
+      "status": "blocked-external-device",
+      "reason": "Six valid hardware trials (three desktop, three physical Android) with device provenance are required. Cloud software rendering and the local CDP smoke do not satisfy this item.",
+      "instructions": "research/device-measurements/README.md",
+      "acceptedTrials": []
+    },
+    {
+      "item": "equivalent official Editor exports",
+      "status": "blocked-external-editor-export",
+      "reason": "Actual Editor exports, provenance and a passing six-pose WebGL2 comparison are required; official CLI exports cannot substitute.",
+      "instructions": "research/editor-comparison/README.md"
+    }
+  ],
+  "limitations": [
+    "No claim of complete Rive compatibility.",
+    "No isolated GPU-completion or GPU-memory measurement.",
+    "No physical iOS validation.",
+    "Independent triangle lab is not a production renderer.",
+    "Physical-device identity and Editor export provenance are operator assertions, not independent attestation."
+  ]
+}

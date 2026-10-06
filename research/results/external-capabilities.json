@@ -1,0 +1,17 @@
+{
+  "checkedAtUtc": "2026-10-06T23:12:27.529775+00:00",
+  "graphicsDeviceDirectoryPresent": false,
+  "usbDeviceDirectoryPresent": false,
+  "adbInstalled": false,
+  "riveCliAuth": {
+    "available": false,
+    "check": "read-only-whoami",
+    "exitCode": 3
+  },
+  "editorEndpoint": {
+    "url": "https://editor.rive.app",
+    "accountSessionVerified": false,
+    "httpStatus": 200
+  },
+  "note": "Endpoint reachability does not establish authenticated Editor access or a real Editor export."
+}

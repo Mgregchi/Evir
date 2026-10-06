@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "transport": "local CDP connection",
+  "physicalDevice": false,
+  "checks": [
+    "static scene renders through remote runner",
+    "disconnect leaves owner browser/page usable"
+  ]
+}

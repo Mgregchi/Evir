@@ -662,11 +662,34 @@
       },
       "source": "include/rive/generated/animation/transition_number_condition_base.hpp"
     },
+    "496": {
+      "name": "TransitionPropertyArtboardComparator",
+      "parent": "TransitionPropertyComparator",
+      "properties": {
+        "propertyType": 677
+      },
+      "source": "include/rive/generated/animation/transition_property_artboard_comparator_base.hpp"
+    },
     "478": {
       "name": "TransitionPropertyComparator",
       "parent": "TransitionComparator",
       "properties": {},
       "source": "include/rive/generated/animation/transition_property_comparator_base.hpp"
+    },
+    "667": {
+      "name": "TransitionPropertyComponentComparator",
+      "parent": "TransitionPropertyComparator",
+      "properties": {
+        "objectId": 977,
+        "propertyKey": 978
+      },
+      "source": "include/rive/generated/animation/transition_property_component_comparator_base.hpp"
+    },
+    "479": {
+      "name": "TransitionPropertyViewModelComparator",
+      "parent": "TransitionPropertyComparator",
+      "properties": {},
+      "source": "include/rive/generated/animation/transition_property_viewmodel_comparator_base.hpp"
     },
     "593": {
       "name": "TransitionSelfComparator",
@@ -3360,6 +3383,18 @@
     "157": {
       "name": "value",
       "wire": "float"
+    },
+    "677": {
+      "name": "propertyType",
+      "wire": "uint"
+    },
+    "977": {
+      "name": "objectId",
+      "wire": "uint"
+    },
+    "978": {
+      "name": "propertyKey",
+      "wire": "uint"
     },
     "647": {
       "name": "value",

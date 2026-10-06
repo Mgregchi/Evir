@@ -1,0 +1,38 @@
+<Rive version="1" kind="fragment">
+<ImageAsset file="quadrants.png" name="Quadrants" id="0:60"/>
+<Artboard name="Mesh" width="256" height="256" id="0:1" styleId="0:2" defaultStateMachineId="0:70">
+<LayoutComponentStyle id="0:2"/>
+<RootBone name="Bone0" id="0:3"/>
+<RootBone name="Bone1" id="0:4"/>
+<RootBone name="Bone2" id="0:5"/>
+<RootBone name="Bone3" id="0:6"/>
+<Image name="Image" assetId="0:60">
+<Mesh triangleIndexBytes="AAEIAQIIAgMIAwQIBAUIBQYIBgcIBwAI">
+<ContourMeshVertex x="64" y="64" u="0.0" v="0.0"><Weight indices="1" values="255"/></ContourMeshVertex>
+<ContourMeshVertex x="128" y="64" u="0.5" v="0.0"><Weight indices="513" values="32640"/></ContourMeshVertex>
+<ContourMeshVertex x="192" y="64" u="1.0" v="0.0"><Weight indices="2" values="255"/></ContourMeshVertex>
+<ContourMeshVertex x="192" y="128" u="1.0" v="0.5"><Weight indices="770" values="32640"/></ContourMeshVertex>
+<ContourMeshVertex x="192" y="192" u="1.0" v="1.0"><Weight indices="3" values="255"/></ContourMeshVertex>
+<ContourMeshVertex x="128" y="192" u="0.5" v="1.0"><Weight indices="1027" values="32640"/></ContourMeshVertex>
+<ContourMeshVertex x="64" y="192" u="0.0" v="1.0"><Weight indices="4" values="255"/></ContourMeshVertex>
+<ContourMeshVertex x="64" y="128" u="0.0" v="0.5"><Weight indices="260" values="32640"/></ContourMeshVertex>
+<MeshVertex x="128" y="128" u="0.5" v="0.5"><Weight indices="67305985" values="1061175360"/></MeshVertex>
+<Skin xx="1" yy="1">
+<Tendon boneId="0:3" xx="1" yy="1"/>
+<Tendon boneId="0:4" xx="1" yy="1"/>
+<Tendon boneId="0:5" xx="1" yy="1"/>
+<Tendon boneId="0:6" xx="1" yy="1"/>
+</Skin></Mesh></Image>
+<LinearAnimation id="0:80" name="Bone0" duration="60" fps="60" loopValue="1"><KeyedObject objectId="0:3"><KeyedProperty propertyKey="91">
+<KeyFrameDouble frame="0" value="0" interpolationType="linear"/><KeyFrameDouble frame="30" value="0" interpolationType="linear"/><KeyFrameDouble frame="60" value="0" interpolationType="linear"/>
+</KeyedProperty></KeyedObject></LinearAnimation>
+<LinearAnimation id="0:81" name="Bone1" duration="60" fps="60" loopValue="1"><KeyedObject objectId="0:4"><KeyedProperty propertyKey="91">
+<KeyFrameDouble frame="0" value="0" interpolationType="linear"/><KeyFrameDouble frame="30" value="24" interpolationType="linear"/><KeyFrameDouble frame="60" value="0" interpolationType="linear"/>
+</KeyedProperty></KeyedObject></LinearAnimation>
+<LinearAnimation id="0:82" name="Bone2" duration="60" fps="60" loopValue="1"><KeyedObject objectId="0:5"><KeyedProperty propertyKey="91">
+<KeyFrameDouble frame="0" value="0" interpolationType="linear"/><KeyFrameDouble frame="30" value="48" interpolationType="linear"/><KeyFrameDouble frame="60" value="0" interpolationType="linear"/>
+</KeyedProperty></KeyedObject></LinearAnimation>
+<LinearAnimation id="0:83" name="Bone3" duration="60" fps="60" loopValue="1"><KeyedObject objectId="0:6"><KeyedProperty propertyKey="91">
+<KeyFrameDouble frame="0" value="0" interpolationType="linear"/><KeyFrameDouble frame="30" value="24" interpolationType="linear"/><KeyFrameDouble frame="60" value="0" interpolationType="linear"/>
+</KeyedProperty></KeyedObject></LinearAnimation>
+<StateMachine name="Controller" id="0:70"><StateMachineLayer name="Layer0"><EntryState x="0" y="0"><StateTransition stateToId="0:90"/></EntryState><AnyState x="200" y="-120"/><ExitState x="400" y="-120"/><AnimationState x="200" y="0" id="0:90" animationId="0:80"/></StateMachineLayer><StateMachineLayer name="Layer1"><EntryState x="0" y="0"><StateTransition stateToId="0:91"/></EntryState><AnyState x="200" y="-120"/><ExitState x="400" y="-120"/><AnimationState x="200" y="0" id="0:91" animationId="0:81"/></StateMachineLayer><StateMachineLayer name="Layer2"><EntryState x="0" y="0"><StateTransition stateToId="0:92"/></EntryState><AnyState x="200" y="-120"/><ExitState x="400" y="-120"/><AnimationState x="200" y="0" id="0:92" animationId="0:82"/></StateMachineLayer><StateMachineLayer name="Layer3"><EntryState x="0" y="0"><StateTransition stateToId="0:93"/></EntryState><AnyState x="200" y="-120"/><ExitState x="400" y="-120"/><AnimationState x="200" y="0" id="0:93" animationId="0:83"/></StateMachineLayer></StateMachine></Artboard></Rive>

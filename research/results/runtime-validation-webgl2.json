@@ -3,7 +3,7 @@
   "results": [
     {
       "fixture": "static",
-      "loadMs": 203.60000000009313,
+      "loadMs": 181.59999999962747,
       "animations": [],
       "machines": [
         "Auto Generated State Machine"
@@ -17,7 +17,7 @@
     },
     {
       "fixture": "static-explicit-defaults",
-      "loadMs": 58.700000000186265,
+      "loadMs": 50.700000000186265,
       "animations": [],
       "machines": [
         "Auto Generated State Machine"
@@ -31,7 +31,7 @@
     },
     {
       "fixture": "animated",
-      "loadMs": 54.39999999990687,
+      "loadMs": 48.10000000055879,
       "animations": [
         "Move"
       ],
@@ -59,7 +59,7 @@
     },
     {
       "fixture": "bones",
-      "loadMs": 47.60000000009313,
+      "loadMs": 47.200000000186265,
       "animations": [
         "Wave",
         "Bend"
@@ -88,7 +88,7 @@
     },
     {
       "fixture": "state-machine",
-      "loadMs": 50.5,
+      "loadMs": 49.60000000055879,
       "animations": [
         "Idle",
         "Active"
@@ -125,7 +125,7 @@
     },
     {
       "fixture": "stress-100",
-      "loadMs": 61.39999999990687,
+      "loadMs": 55,
       "animations": [
         "Move0",
         "Move1",
@@ -232,15 +232,15 @@
         "Controller"
       ],
       "pixels": {
-        "count": 14412,
-        "cx": 123.41007493755204,
-        "cy": 123.41007493755204,
-        "hash": 1370107333
+        "count": 14416,
+        "cx": 123.3801331853496,
+        "cy": 123.3801331853496,
+        "hash": 2442847589
       }
     },
     {
       "fixture": "states-2",
-      "loadMs": 50.800000000046566,
+      "loadMs": 43,
       "animations": [
         "Pose0",
         "Pose1"
@@ -280,7 +280,7 @@
     },
     {
       "fixture": "states-8",
-      "loadMs": 52.9000000001397,
+      "loadMs": 47.200000000186265,
       "animations": [
         "Pose0",
         "Pose1",
@@ -326,7 +326,7 @@
     },
     {
       "fixture": "states-32",
-      "loadMs": 50.799999999813735,
+      "loadMs": 45.700000000186265,
       "animations": [
         "Pose0",
         "Pose1",
@@ -396,7 +396,7 @@
     },
     {
       "fixture": "states-128",
-      "loadMs": 51.4000000001397,
+      "loadMs": 59.200000000186265,
       "animations": [
         "Pose0",
         "Pose1",
@@ -562,7 +562,7 @@
     },
     {
       "fixture": "characters-25",
-      "loadMs": 51.4000000001397,
+      "loadMs": 46.10000000055879,
       "animations": [
         "Idle",
         "Dance"
@@ -577,10 +577,10 @@
         "hash": 2115933893
       },
       "dance": {
-        "count": 4750,
-        "cx": 132.18421052631578,
-        "cy": 126.43157894736842,
-        "hash": 1483010841
+        "count": 4675,
+        "cx": 132.35828877005346,
+        "cy": 125.73262032085562,
+        "hash": 1158375960
       }
     }
   ]

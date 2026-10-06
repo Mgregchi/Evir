@@ -8,8 +8,19 @@
     "arch": "x64",
     "cpus": 5,
     "memory_bytes": 35743784960,
+    "controllerHost": null,
     "viewport": "256x256 canvas",
     "headless": true,
+    "browserConnection": "local-launched",
+    "deviceProfile": null,
+    "deviceBrowser": {
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+      "devicePixelRatio": 1,
+      "viewportWidth": 400,
+      "viewportHeight": 400,
+      "canvasWidth": 256,
+      "canvasHeight": 256
+    },
     "graphics": {
       "vendor": "Google Inc. (Google)",
       "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
@@ -22,50 +33,50 @@
       "fixture": "static",
       "bytes": 76,
       "cold_page_load_ms": {
-        "median": 69.5,
-        "p95": 81.60000000009313,
-        "min": 60.4000000001397,
-        "max": 81.60000000009313
+        "median": 62.59999999962747,
+        "p95": 64.09999999962747,
+        "min": 57.5,
+        "max": 64.09999999962747
       },
       "warm_load_ms": {
-        "median": 4.799999999930151,
-        "p95": 84.39999999990687,
-        "min": 2.8999999999068677,
-        "max": 84.39999999990687
+        "median": 2.8500000000931323,
+        "p95": 54.299999999813735,
+        "min": 2.099999999627471,
+        "max": 54.299999999813735
       },
       "cold_samples": 3,
       "warm_samples": 12,
-      "raf_fps": 59.99999999999999,
+      "raf_fps": 60.001983536645845,
       "raf_frame_ms": {
         "median": 16.699999999999818,
         "p95": 16.700000000000273,
-        "min": 16.59999999999991,
+        "min": 16.5,
         "max": 16.800000000000182
       },
-      "raf_frames": 120,
-      "runtime_frame_callbacks": 121,
+      "raf_frames": 121,
+      "runtime_frame_callbacks": 122,
       "runtime_callback_cpu_ms": {
-        "median": 0.09999999986030161,
-        "p95": 0.10000000009313226,
+        "median": 0.09999999962747097,
+        "p95": 0.10000000055879354,
         "min": 0,
-        "max": 0.20000000018626451
+        "max": 0.40000000037252903
       },
-      "runtime_callback_cpu_samples": 61,
-      "task_ms_over_observation": 56.701,
-      "js_heap_bytes": 3341173,
+      "runtime_callback_cpu_samples": 60,
+      "task_ms_over_observation": 39.341999999999985,
+      "js_heap_bytes": 3343973,
       "wasm_linear_capacity_bytes": 17367040,
       "renderer_process_rss": [
         {
-          "pid": 4877,
-          "rssKiB": 83916
+          "pid": 12343,
+          "rssKiB": 83596
         },
         {
-          "pid": 4932,
-          "rssKiB": 33828
+          "pid": 12395,
+          "rssKiB": 33832
         },
         {
-          "pid": 4867,
-          "rssKiB": 107952
+          "pid": 12333,
+          "rssKiB": 107776
         }
       ],
       "visible_pixels": 2304
@@ -74,50 +85,50 @@
       "fixture": "static-explicit-defaults",
       "bytes": 138,
       "cold_page_load_ms": {
-        "median": 72.5999999998603,
-        "p95": 74.10000000009313,
-        "min": 68.89999999990687,
-        "max": 74.10000000009313
+        "median": 53.90000000037253,
+        "p95": 55.59999999962747,
+        "min": 53.80000000074506,
+        "max": 55.59999999962747
       },
       "warm_load_ms": {
-        "median": 4.149999999906868,
-        "p95": 5.5,
-        "min": 2.8999999999068677,
-        "max": 5.5
+        "median": 1.900000000372529,
+        "p95": 4.5,
+        "min": 1.400000000372529,
+        "max": 4.5
       },
       "cold_samples": 3,
       "warm_samples": 12,
-      "raf_fps": 60.004959087527894,
+      "raf_fps": 60.001983536645845,
       "raf_frame_ms": {
         "median": 16.699999999999818,
-        "p95": 16.700000000000728,
+        "p95": 16.799999999999272,
         "min": 16.5,
         "max": 16.800000000000182
       },
       "raf_frames": 121,
       "runtime_frame_callbacks": 122,
       "runtime_callback_cpu_ms": {
-        "median": 0.09999999986030161,
-        "p95": 0.19999999995343387,
+        "median": 0,
+        "p95": 0.10000000055879354,
         "min": 0,
-        "max": 0.20000000018626451
+        "max": 0.2999999998137355
       },
-      "runtime_callback_cpu_samples": 61,
-      "task_ms_over_observation": 55.69099999999999,
-      "js_heap_bytes": 3369727,
+      "runtime_callback_cpu_samples": 60,
+      "task_ms_over_observation": 32.509999999999984,
+      "js_heap_bytes": 3372407,
       "wasm_linear_capacity_bytes": 17367040,
       "renderer_process_rss": [
         {
-          "pid": 4966,
-          "rssKiB": 33864
+          "pid": 12429,
+          "rssKiB": 33832
         },
         {
-          "pid": 4877,
-          "rssKiB": 84888
+          "pid": 12343,
+          "rssKiB": 84056
         },
         {
-          "pid": 4867,
-          "rssKiB": 108496
+          "pid": 12333,
+          "rssKiB": 108304
         }
       ],
       "visible_pixels": 2304
@@ -126,50 +137,50 @@
       "fixture": "animated",
       "bytes": 133,
       "cold_page_load_ms": {
-        "median": 61.300000000046566,
-        "p95": 67.60000000009313,
-        "min": 57.9000000001397,
-        "max": 67.60000000009313
+        "median": 54.90000000037253,
+        "p95": 59.39999999944121,
+        "min": 53.299999999813735,
+        "max": 59.39999999944121
       },
       "warm_load_ms": {
-        "median": 2.7999999998137355,
-        "p95": 25,
-        "min": 2.2999999998137355,
-        "max": 25
+        "median": 2.5500000002793968,
+        "p95": 7.2999999998137355,
+        "min": 1.8999999994412065,
+        "max": 7.2999999998137355
       },
       "cold_samples": 3,
       "warm_samples": 12,
-      "raf_fps": 60.004959087527894,
+      "raf_fps": 59.99999999999997,
       "raf_frame_ms": {
         "median": 16.699999999999818,
-        "p95": 16.700000000000728,
-        "min": 16.599999999999454,
-        "max": 16.799999999999272
+        "p95": 16.800000000000182,
+        "min": 16.5,
+        "max": 16.800000000000182
       },
-      "raf_frames": 121,
-      "runtime_frame_callbacks": 122,
+      "raf_frames": 120,
+      "runtime_frame_callbacks": 121,
       "runtime_callback_cpu_ms": {
-        "median": 0.19999999995343387,
-        "p95": 0.5999999998603016,
+        "median": 0.10000000055879354,
+        "p95": 0.20000000018626451,
         "min": 0,
-        "max": 3.1000000000931323
+        "max": 0.5
       },
-      "runtime_callback_cpu_samples": 61,
-      "task_ms_over_observation": 89.198,
-      "js_heap_bytes": 3403457,
+      "runtime_callback_cpu_samples": 60,
+      "task_ms_over_observation": 66.90899999999999,
+      "js_heap_bytes": 3392065,
       "wasm_linear_capacity_bytes": 17367040,
       "renderer_process_rss": [
         {
-          "pid": 5000,
-          "rssKiB": 33840
+          "pid": 12472,
+          "rssKiB": 33852
         },
         {
-          "pid": 4877,
-          "rssKiB": 87272
+          "pid": 12343,
+          "rssKiB": 86380
         },
         {
-          "pid": 4867,
-          "rssKiB": 108864
+          "pid": 12333,
+          "rssKiB": 108632
         }
       ],
       "visible_pixels": 2352
@@ -178,16 +189,68 @@
       "fixture": "bones",
       "bytes": 286,
       "cold_page_load_ms": {
-        "median": 72.39999999990687,
-        "p95": 74.89999999990687,
-        "min": 56.60000000009313,
-        "max": 74.89999999990687
+        "median": 55,
+        "p95": 55.09999999962747,
+        "min": 54.69999999925494,
+        "max": 55.09999999962747
       },
       "warm_load_ms": {
-        "median": 2.599999999976717,
-        "p95": 3.5,
-        "min": 1.8999999999068677,
-        "max": 3.5
+        "median": 2.2999999998137355,
+        "p95": 4.7999999998137355,
+        "min": 1.7000000001862645,
+        "max": 4.7999999998137355
+      },
+      "cold_samples": 3,
+      "warm_samples": 12,
+      "raf_fps": 60,
+      "raf_frame_ms": {
+        "median": 16.69999999999891,
+        "p95": 16.799999999999272,
+        "min": 16.5,
+        "max": 16.80000000000109
+      },
+      "raf_frames": 120,
+      "runtime_frame_callbacks": 121,
+      "runtime_callback_cpu_ms": {
+        "median": 0.19999999925494194,
+        "p95": 0.30000000074505806,
+        "min": 0,
+        "max": 1.599999999627471
+      },
+      "runtime_callback_cpu_samples": 61,
+      "task_ms_over_observation": 78.154,
+      "js_heap_bytes": 3527976,
+      "wasm_linear_capacity_bytes": 17367040,
+      "renderer_process_rss": [
+        {
+          "pid": 12506,
+          "rssKiB": 33828
+        },
+        {
+          "pid": 12343,
+          "rssKiB": 85892
+        },
+        {
+          "pid": 12333,
+          "rssKiB": 109020
+        }
+      ],
+      "visible_pixels": 2308
+    },
+    {
+      "fixture": "state-machine",
+      "bytes": 261,
+      "cold_page_load_ms": {
+        "median": 58.89999999944121,
+        "p95": 71.59999999962747,
+        "min": 58,
+        "max": 71.59999999962747
+      },
+      "warm_load_ms": {
+        "median": 2.599999999627471,
+        "p95": 5.2999999998137355,
+        "min": 1.7999999998137355,
+        "max": 5.2999999998137355
       },
       "cold_samples": 3,
       "warm_samples": 12,
@@ -201,79 +264,27 @@
       "raf_frames": 121,
       "runtime_frame_callbacks": 122,
       "runtime_callback_cpu_ms": {
-        "median": 0.19999999995343387,
-        "p95": 0.4000000001396984,
-        "min": 0.09999999986030161,
-        "max": 1.7999999998137355
+        "median": 0.09999999962747097,
+        "p95": 0.20000000018626451,
+        "min": 0,
+        "max": 0.2999999998137355
       },
       "runtime_callback_cpu_samples": 61,
-      "task_ms_over_observation": 122.6750000000001,
-      "js_heap_bytes": 3525236,
+      "task_ms_over_observation": 43.933,
+      "js_heap_bytes": 3528476,
       "wasm_linear_capacity_bytes": 17367040,
       "renderer_process_rss": [
         {
-          "pid": 5034,
-          "rssKiB": 33808
+          "pid": 12540,
+          "rssKiB": 33836
         },
         {
-          "pid": 4877,
-          "rssKiB": 86268
+          "pid": 12343,
+          "rssKiB": 84464
         },
         {
-          "pid": 4867,
-          "rssKiB": 109300
-        }
-      ],
-      "visible_pixels": 2305
-    },
-    {
-      "fixture": "state-machine",
-      "bytes": 261,
-      "cold_page_load_ms": {
-        "median": 69.9000000001397,
-        "p95": 76.60000000009313,
-        "min": 66.80000000004657,
-        "max": 76.60000000009313
-      },
-      "warm_load_ms": {
-        "median": 2.950000000069849,
-        "p95": 6.5,
-        "min": 2.199999999953434,
-        "max": 6.5
-      },
-      "cold_samples": 3,
-      "warm_samples": 12,
-      "raf_fps": 60,
-      "raf_frame_ms": {
-        "median": 16.69999999999891,
-        "p95": 16.700000000000728,
-        "min": 16.599999999998545,
-        "max": 16.80000000000109
-      },
-      "raf_frames": 120,
-      "runtime_frame_callbacks": 121,
-      "runtime_callback_cpu_ms": {
-        "median": 0.09999999986030161,
-        "p95": 0.19999999995343387,
-        "min": 0,
-        "max": 0.39999999990686774
-      },
-      "runtime_callback_cpu_samples": 60,
-      "task_ms_over_observation": 55.983000000000004,
-      "js_heap_bytes": 3525760,
-      "wasm_linear_capacity_bytes": 17367040,
-      "renderer_process_rss": [
-        {
-          "pid": 5068,
-          "rssKiB": 33916
-        },
-        {
-          "pid": 4877,
-          "rssKiB": 84812
-        },
-        {
-          "pid": 4867,
-          "rssKiB": 109644
+          "pid": 12333,
+          "rssKiB": 109440
         }
       ],
       "visible_pixels": 2304
@@ -282,224 +293,120 @@
       "fixture": "characters-25",
       "bytes": 7776,
       "cold_page_load_ms": {
-        "median": 82.9000000001397,
-        "p95": 84,
-        "min": 75.10000000009313,
-        "max": 84
+        "median": 72.5,
+        "p95": 81,
+        "min": 66.20000000018626,
+        "max": 81
       },
       "warm_load_ms": {
-        "median": 5.449999999953434,
-        "p95": 10.300000000046566,
-        "min": 4,
-        "max": 10.300000000046566
+        "median": 4.75,
+        "p95": 8.700000000186265,
+        "min": 3.8999999994412065,
+        "max": 8.700000000186265
       },
       "cold_samples": 3,
       "warm_samples": 12,
-      "raf_fps": 60.004959087527894,
+      "raf_fps": 59.99999999999994,
       "raf_frame_ms": {
         "median": 16.69999999999891,
         "p95": 16.700000000000728,
-        "min": 16.5,
+        "min": 16.599999999998545,
         "max": 16.80000000000109
       },
-      "raf_frames": 121,
-      "runtime_frame_callbacks": 122,
+      "raf_frames": 120,
+      "runtime_frame_callbacks": 121,
       "runtime_callback_cpu_ms": {
-        "median": 0.39999999990686774,
-        "p95": 0.7000000001862645,
-        "min": 0.19999999995343387,
-        "max": 1.5
+        "median": 0.2999999998137355,
+        "p95": 0.5,
+        "min": 0.10000000055879354,
+        "max": 1
       },
       "runtime_callback_cpu_samples": 60,
-      "task_ms_over_observation": 166.644,
-      "js_heap_bytes": 3795702,
+      "task_ms_over_observation": 125.20799999999998,
+      "js_heap_bytes": 3630522,
       "wasm_linear_capacity_bytes": 17367040,
       "renderer_process_rss": [
         {
-          "pid": 4877,
-          "rssKiB": 92084
+          "pid": 12343,
+          "rssKiB": 91476
         },
         {
-          "pid": 5103,
-          "rssKiB": 33836
+          "pid": 12574,
+          "rssKiB": 33856
         },
         {
-          "pid": 4867,
-          "rssKiB": 110068
+          "pid": 12333,
+          "rssKiB": 109884
         }
       ],
-      "visible_pixels": 5150
+      "visible_pixels": 5125
     },
     {
       "fixture": "stress-100",
       "bytes": 10872,
       "cold_page_load_ms": {
-        "median": 100.19999999995343,
-        "p95": 108,
-        "min": 87,
-        "max": 108
+        "median": 75.70000000018626,
+        "p95": 79.30000000074506,
+        "min": 73.6000000005588,
+        "max": 79.30000000074506
       },
       "warm_load_ms": {
-        "median": 7.349999999976717,
-        "p95": 16.199999999953434,
-        "min": 6.399999999906868,
-        "max": 16.199999999953434
-      },
-      "cold_samples": 3,
-      "warm_samples": 12,
-      "raf_fps": 60.00198353664588,
-      "raf_frame_ms": {
-        "median": 16.700000000000728,
-        "p95": 16.799999999999272,
-        "min": 16.5,
-        "max": 16.80000000000291
-      },
-      "raf_frames": 121,
-      "runtime_frame_callbacks": 122,
-      "runtime_callback_cpu_ms": {
-        "median": 0.5,
-        "p95": 0.7000000001862645,
-        "min": 0.30000000004656613,
-        "max": 2.199999999953434
-      },
-      "runtime_callback_cpu_samples": 61,
-      "task_ms_over_observation": 175.82199999999992,
-      "js_heap_bytes": 4037430,
-      "wasm_linear_capacity_bytes": 17367040,
-      "renderer_process_rss": [
-        {
-          "pid": 5138,
-          "rssKiB": 33868
-        },
-        {
-          "pid": 4877,
-          "rssKiB": 97184
-        },
-        {
-          "pid": 4867,
-          "rssKiB": 110480
-        }
-      ],
-      "visible_pixels": 17200
-    },
-    {
-      "fixture": "states-2",
-      "bytes": 264,
-      "cold_page_load_ms": {
-        "median": 55.699999999953434,
-        "p95": 58.5,
-        "min": 55.5,
-        "max": 58.5
-      },
-      "warm_load_ms": {
-        "median": 2.2500000001164153,
-        "p95": 7.5,
-        "min": 1.6999999999534339,
-        "max": 7.5
-      },
-      "cold_samples": 3,
-      "warm_samples": 12,
-      "raf_fps": 60,
-      "raf_frame_ms": {
-        "median": 16.700000000000728,
-        "p95": 16.799999999999272,
-        "min": 16.5,
-        "max": 16.80000000000291
-      },
-      "raf_frames": 120,
-      "runtime_frame_callbacks": 121,
-      "runtime_callback_cpu_ms": {
-        "median": 0.10000000009313226,
-        "p95": 0.30000000004656613,
-        "min": 0,
-        "max": 0.39999999990686774
-      },
-      "runtime_callback_cpu_samples": 60,
-      "task_ms_over_observation": 75.9470000000002,
-      "js_heap_bytes": 3529174,
-      "wasm_linear_capacity_bytes": 17367040,
-      "renderer_process_rss": [
-        {
-          "pid": 5173,
-          "rssKiB": 33816
-        },
-        {
-          "pid": 4877,
-          "rssKiB": 87488
-        },
-        {
-          "pid": 4867,
-          "rssKiB": 111144
-        }
-      ],
-      "visible_pixels": 2304
-    },
-    {
-      "fixture": "states-8",
-      "bytes": 678,
-      "cold_page_load_ms": {
-        "median": 59.89999999990687,
-        "p95": 64.80000000004657,
-        "min": 59.4000000001397,
-        "max": 64.80000000004657
-      },
-      "warm_load_ms": {
-        "median": 2.400000000023283,
-        "p95": 4.899999999906868,
-        "min": 1.6999999999534339,
-        "max": 4.899999999906868
+        "median": 6.5,
+        "p95": 10.599999999627471,
+        "min": 5.2000000001862645,
+        "max": 10.599999999627471
       },
       "cold_samples": 3,
       "warm_samples": 12,
       "raf_fps": 60.004959087527894,
       "raf_frame_ms": {
         "median": 16.69999999999709,
-        "p95": 16.700000000000728,
+        "p95": 16.799999999999272,
         "min": 16.5,
-        "max": 16.799999999999272
+        "max": 16.80000000000291
       },
       "raf_frames": 121,
       "runtime_frame_callbacks": 122,
       "runtime_callback_cpu_ms": {
-        "median": 0.19999999995343387,
-        "p95": 0.39999999990686774,
-        "min": 0,
-        "max": 0.6999999999534339
+        "median": 0.40000000037252903,
+        "p95": 0.5,
+        "min": 0.2999999998137355,
+        "max": 0.599999999627471
       },
       "runtime_callback_cpu_samples": 60,
-      "task_ms_over_observation": 109.51700000000008,
-      "js_heap_bytes": 3539184,
+      "task_ms_over_observation": 144.6820000000001,
+      "js_heap_bytes": 4038414,
       "wasm_linear_capacity_bytes": 17367040,
       "renderer_process_rss": [
         {
-          "pid": 5207,
-          "rssKiB": 33828
+          "pid": 12614,
+          "rssKiB": 33844
         },
         {
-          "pid": 4877,
-          "rssKiB": 88064
+          "pid": 12343,
+          "rssKiB": 96852
         },
         {
-          "pid": 4867,
-          "rssKiB": 111692
+          "pid": 12333,
+          "rssKiB": 110244
         }
       ],
-      "visible_pixels": 2304
+      "visible_pixels": 16900
     },
     {
-      "fixture": "states-32",
-      "bytes": 2357,
+      "fixture": "states-2",
+      "bytes": 264,
       "cold_page_load_ms": {
-        "median": 66.19999999995343,
-        "p95": 67.89999999990687,
-        "min": 65.10000000009313,
-        "max": 67.89999999990687
+        "median": 54.40000000037253,
+        "p95": 58,
+        "min": 54.10000000055879,
+        "max": 58
       },
       "warm_load_ms": {
-        "median": 2.6499999999068677,
-        "p95": 3.699999999953434,
-        "min": 1.5999999998603016,
-        "max": 3.699999999953434
+        "median": 2.0499999998137355,
+        "p95": 5.400000000372529,
+        "min": 1.8999999994412065,
+        "max": 5.400000000372529
       },
       "cold_samples": 3,
       "warm_samples": 12,
@@ -513,27 +420,131 @@
       "raf_frames": 121,
       "runtime_frame_callbacks": 122,
       "runtime_callback_cpu_ms": {
-        "median": 0.19999999995343387,
+        "median": 0.19999999925494194,
         "p95": 0.2999999998137355,
         "min": 0,
-        "max": 0.8000000000465661
+        "max": 0.2999999998137355
       },
-      "runtime_callback_cpu_samples": 61,
-      "task_ms_over_observation": 92.12100000000012,
-      "js_heap_bytes": 3543847,
+      "runtime_callback_cpu_samples": 60,
+      "task_ms_over_observation": 72.00300000000004,
+      "js_heap_bytes": 3531242,
       "wasm_linear_capacity_bytes": 17367040,
       "renderer_process_rss": [
         {
-          "pid": 5242,
-          "rssKiB": 33768
+          "pid": 12649,
+          "rssKiB": 33860
         },
         {
-          "pid": 4877,
-          "rssKiB": 88164
+          "pid": 12343,
+          "rssKiB": 87244
         },
         {
-          "pid": 4867,
-          "rssKiB": 112180
+          "pid": 12333,
+          "rssKiB": 110928
+        }
+      ],
+      "visible_pixels": 2304
+    },
+    {
+      "fixture": "states-8",
+      "bytes": 678,
+      "cold_page_load_ms": {
+        "median": 64.5,
+        "p95": 74.90000000037253,
+        "min": 60.299999999813735,
+        "max": 74.90000000037253
+      },
+      "warm_load_ms": {
+        "median": 2.1999999997206032,
+        "p95": 4,
+        "min": 1.7000000001862645,
+        "max": 4
+      },
+      "cold_samples": 3,
+      "warm_samples": 12,
+      "raf_fps": 60,
+      "raf_frame_ms": {
+        "median": 16.69999999999709,
+        "p95": 16.700000000000728,
+        "min": 16.599999999998545,
+        "max": 16.799999999999272
+      },
+      "raf_frames": 120,
+      "runtime_frame_callbacks": 121,
+      "runtime_callback_cpu_ms": {
+        "median": 0.09999999962747097,
+        "p95": 0.20000000018626451,
+        "min": 0,
+        "max": 0.599999999627471
+      },
+      "runtime_callback_cpu_samples": 61,
+      "task_ms_over_observation": 88.75100000000002,
+      "js_heap_bytes": 3534348,
+      "wasm_linear_capacity_bytes": 17367040,
+      "renderer_process_rss": [
+        {
+          "pid": 12683,
+          "rssKiB": 33864
+        },
+        {
+          "pid": 12343,
+          "rssKiB": 87852
+        },
+        {
+          "pid": 12333,
+          "rssKiB": 111520
+        }
+      ],
+      "visible_pixels": 2352
+    },
+    {
+      "fixture": "states-32",
+      "bytes": 2357,
+      "cold_page_load_ms": {
+        "median": 68.90000000037253,
+        "p95": 70.20000000018626,
+        "min": 58.299999999813735,
+        "max": 70.20000000018626
+      },
+      "warm_load_ms": {
+        "median": 2.5,
+        "p95": 4,
+        "min": 1.7000000001862645,
+        "max": 4
+      },
+      "cold_samples": 3,
+      "warm_samples": 12,
+      "raf_fps": 60,
+      "raf_frame_ms": {
+        "median": 16.700000000000728,
+        "p95": 16.700000000000728,
+        "min": 16.599999999998545,
+        "max": 16.799999999999272
+      },
+      "raf_frames": 120,
+      "runtime_frame_callbacks": 121,
+      "runtime_callback_cpu_ms": {
+        "median": 0.10000000055879354,
+        "p95": 0.20000000018626451,
+        "min": 0,
+        "max": 0.39999999944120646
+      },
+      "runtime_callback_cpu_samples": 60,
+      "task_ms_over_observation": 64.70700000000006,
+      "js_heap_bytes": 3547967,
+      "wasm_linear_capacity_bytes": 17367040,
+      "renderer_process_rss": [
+        {
+          "pid": 12718,
+          "rssKiB": 33856
+        },
+        {
+          "pid": 12343,
+          "rssKiB": 88020
+        },
+        {
+          "pid": 12333,
+          "rssKiB": 112004
         }
       ],
       "visible_pixels": 2352
@@ -542,50 +553,50 @@
       "fixture": "states-128",
       "bytes": 9109,
       "cold_page_load_ms": {
-        "median": 71.19999999995343,
-        "p95": 73.19999999995343,
-        "min": 62.39999999990687,
-        "max": 73.19999999995343
+        "median": 69.5,
+        "p95": 69.6000000005588,
+        "min": 59.09999999962747,
+        "max": 69.6000000005588
       },
       "warm_load_ms": {
-        "median": 2.700000000069849,
-        "p95": 5.199999999953434,
-        "min": 2.5,
-        "max": 5.199999999953434
+        "median": 2.2999999998137355,
+        "p95": 4.2999999998137355,
+        "min": 2,
+        "max": 4.2999999998137355
       },
       "cold_samples": 3,
       "warm_samples": 12,
-      "raf_fps": 60.004959087527894,
+      "raf_fps": 60,
       "raf_frame_ms": {
         "median": 16.700000000000728,
         "p95": 16.700000000000728,
-        "min": 16.5,
+        "min": 16.599999999998545,
         "max": 16.80000000000291
       },
-      "raf_frames": 121,
-      "runtime_frame_callbacks": 122,
+      "raf_frames": 120,
+      "runtime_frame_callbacks": 121,
       "runtime_callback_cpu_ms": {
-        "median": 0.10000000009313226,
+        "median": 0.10000000055879354,
         "p95": 0.20000000018626451,
         "min": 0,
-        "max": 0.5
+        "max": 0.20000000018626451
       },
-      "runtime_callback_cpu_samples": 61,
-      "task_ms_over_observation": 72.13599999999998,
-      "js_heap_bytes": 3550271,
+      "runtime_callback_cpu_samples": 60,
+      "task_ms_over_observation": 56.46799999999996,
+      "js_heap_bytes": 3560183,
       "wasm_linear_capacity_bytes": 17367040,
       "renderer_process_rss": [
         {
-          "pid": 4877,
-          "rssKiB": 88556
+          "pid": 12343,
+          "rssKiB": 88236
         },
         {
-          "pid": 5276,
-          "rssKiB": 33848
+          "pid": 12752,
+          "rssKiB": 33832
         },
         {
-          "pid": 4867,
-          "rssKiB": 98564
+          "pid": 12333,
+          "rssKiB": 99996
         }
       ],
       "visible_pixels": 2352

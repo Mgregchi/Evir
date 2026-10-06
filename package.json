@@ -25,7 +25,18 @@
     "validate:complex:webgl2": "RIVE_RENDERER=webgl2 node tools/validate_complex.cjs",
     "research:complex": "npm run generate:advanced && npm run generate:complex && npm test && npm run test:geometry && npm run validate:complex && npm run validate:complex:webgl2 && npm run probe:feather",
     "probe:hardware": "node tools/probe_hardware.cjs",
-    "benchmark:hardware": "RIVE_RENDERER=webgl2 EVIR_REQUIRE_HARDWARE=1 EVIR_BENCHMARK_OUTPUT=research/results/runtime-benchmark-hardware.json node tools/benchmark_runtime.cjs"
+    "benchmark:hardware": "RIVE_RENDERER=webgl2 EVIR_REQUIRE_HARDWARE=1 node tools/benchmark_runtime.cjs",
+    "generate:closure": "python3 tools/generate_closure.py",
+    "validate:closure": "node tools/validate_closure.cjs",
+    "validate:closure:webgl2": "RIVE_RENDERER=webgl2 node tools/validate_closure.cjs",
+    "test:device-runner": "node tools/test_remote_runner.cjs",
+    "compare:editor": "RIVE_RENDERER=webgl2 node tools/compare_editor.cjs",
+    "benchmark:closure": "EVIR_BENCHMARK_FIXTURES=closure/weighted-mesh,closure/data-binding,closure/timed-transition EVIR_BENCHMARK_OUTPUT=research/results/closure-benchmark-canvas.json node tools/benchmark_runtime.cjs",
+    "benchmark:closure:webgl2": "RIVE_RENDERER=webgl2 EVIR_BENCHMARK_FIXTURES=closure/weighted-mesh,closure/data-binding,closure/timed-transition EVIR_BENCHMARK_OUTPUT=research/results/closure-benchmark-webgl2.json node tools/benchmark_runtime.cjs",
+    "research:closure": "npm run generate:closure && npm test && npm run validate:closure && npm run validate:closure:webgl2 && npm run test:device-runner && npm run benchmark:closure && npm run benchmark:closure:webgl2",
+    "report:closure": "python3 tools/closure_report.py",
+    "check:closed": "python3 tools/closure_report.py --require-complete",
+    "research:all": "npm run research && npm run research:advanced && npm run research:complex && npm run research:closure && npm run report:closure"
   },
   "dependencies": {
     "@rive-app/canvas": "2.44.0",
