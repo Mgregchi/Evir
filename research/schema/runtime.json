@@ -1,0 +1,5633 @@
+{
+  "upstream": "https://github.com/rive-app/rive-runtime",
+  "commit": "7aa93402a27c800db8a36acc8672612c100ea9b1",
+  "types": {
+    "145": {
+      "name": "AdvanceableState",
+      "parent": "LayerState",
+      "properties": {
+        "speed": 292
+      },
+      "source": "include/rive/generated/animation/advanceable_state_base.hpp"
+    },
+    "27": {
+      "name": "Animation",
+      "parent": "Core",
+      "properties": {
+        "name": 55
+      },
+      "source": "include/rive/generated/animation/animation_base.hpp"
+    },
+    "61": {
+      "name": "AnimationState",
+      "parent": "AdvanceableState",
+      "properties": {
+        "animationId": 149
+      },
+      "source": "include/rive/generated/animation/animation_state_base.hpp"
+    },
+    "62": {
+      "name": "AnyState",
+      "parent": "LayerState",
+      "properties": {},
+      "source": "include/rive/generated/animation/any_state_base.hpp"
+    },
+    "75": {
+      "name": "BlendAnimation1D",
+      "parent": "BlendAnimation",
+      "properties": {
+        "value": 166
+      },
+      "source": "include/rive/generated/animation/blend_animation_1d_base.hpp"
+    },
+    "74": {
+      "name": "BlendAnimation",
+      "parent": "Core",
+      "properties": {
+        "animationId": 165
+      },
+      "source": "include/rive/generated/animation/blend_animation_base.hpp"
+    },
+    "77": {
+      "name": "BlendAnimationDirect",
+      "parent": "BlendAnimation",
+      "properties": {
+        "inputId": 168,
+        "mixValue": 297,
+        "blendSource": 298
+      },
+      "source": "include/rive/generated/animation/blend_animation_direct_base.hpp"
+    },
+    "527": {
+      "name": "BlendState1D",
+      "parent": "BlendState",
+      "properties": {},
+      "source": "include/rive/generated/animation/blend_state_1d_base.hpp"
+    },
+    "76": {
+      "name": "BlendState1DInput",
+      "parent": "BlendState1D",
+      "properties": {
+        "inputId": 167
+      },
+      "source": "include/rive/generated/animation/blend_state_1d_input_base.hpp"
+    },
+    "528": {
+      "name": "BlendState1DViewModel",
+      "parent": "BlendState1D",
+      "properties": {},
+      "source": "include/rive/generated/animation/blend_state_1d_viewmodel_base.hpp"
+    },
+    "72": {
+      "name": "BlendState",
+      "parent": "LayerState",
+      "properties": {},
+      "source": "include/rive/generated/animation/blend_state_base.hpp"
+    },
+    "73": {
+      "name": "BlendStateDirect",
+      "parent": "BlendState",
+      "properties": {},
+      "source": "include/rive/generated/animation/blend_state_direct_base.hpp"
+    },
+    "78": {
+      "name": "BlendStateTransition",
+      "parent": "StateTransition",
+      "properties": {
+        "exitBlendAnimationId": 171
+      },
+      "source": "include/rive/generated/animation/blend_state_transition_base.hpp"
+    },
+    "28": {
+      "name": "CubicEaseInterpolator",
+      "parent": "CubicInterpolator",
+      "properties": {},
+      "source": "include/rive/generated/animation/cubic_ease_interpolator_base.hpp"
+    },
+    "139": {
+      "name": "CubicInterpolator",
+      "parent": "KeyFrameInterpolator",
+      "properties": {
+        "x1": 63,
+        "y1": 64,
+        "x2": 65,
+        "y2": 66
+      },
+      "source": "include/rive/generated/animation/cubic_interpolator_base.hpp"
+    },
+    "163": {
+      "name": "CubicInterpolatorComponent",
+      "parent": "Component",
+      "properties": {
+        "x1": 337,
+        "y1": 338,
+        "x2": 339,
+        "y2": 340
+      },
+      "source": "include/rive/generated/animation/cubic_interpolator_component_base.hpp"
+    },
+    "138": {
+      "name": "CubicValueInterpolator",
+      "parent": "CubicInterpolator",
+      "properties": {},
+      "source": "include/rive/generated/animation/cubic_value_interpolator_base.hpp"
+    },
+    "174": {
+      "name": "ElasticInterpolator",
+      "parent": "KeyFrameInterpolator",
+      "properties": {
+        "easingValue": 405,
+        "amplitude": 406,
+        "period": 407
+      },
+      "source": "include/rive/generated/animation/elastic_interpolator_base.hpp"
+    },
+    "63": {
+      "name": "EntryState",
+      "parent": "LayerState",
+      "properties": {},
+      "source": "include/rive/generated/animation/entry_state_base.hpp"
+    },
+    "64": {
+      "name": "ExitState",
+      "parent": "LayerState",
+      "properties": {},
+      "source": "include/rive/generated/animation/exit_state_base.hpp"
+    },
+    "671": {
+      "name": "FocusAction",
+      "parent": "ListenerAction",
+      "properties": {},
+      "source": "include/rive/generated/animation/focus_action_base.hpp"
+    },
+    "1037": {
+      "name": "FocusActionClear",
+      "parent": "FocusAction",
+      "properties": {},
+      "source": "include/rive/generated/animation/focus_action_clear_base.hpp"
+    },
+    "652": {
+      "name": "FocusActionTarget",
+      "parent": "FocusAction",
+      "properties": {
+        "targetId": 952
+      },
+      "source": "include/rive/generated/animation/focus_action_target_base.hpp"
+    },
+    "672": {
+      "name": "FocusActionTraversal",
+      "parent": "FocusAction",
+      "properties": {
+        "traversalKind": 1011
+      },
+      "source": "include/rive/generated/animation/focus_action_traversal_base.hpp"
+    },
+    "170": {
+      "name": "InterpolatingKeyFrame",
+      "parent": "KeyFrame",
+      "properties": {
+        "interpolationType": 68,
+        "interpolatorId": 69
+      },
+      "source": "include/rive/generated/animation/interpolating_keyframe_base.hpp"
+    },
+    "25": {
+      "name": "KeyedObject",
+      "parent": "Core",
+      "properties": {
+        "objectId": 51
+      },
+      "source": "include/rive/generated/animation/keyed_object_base.hpp"
+    },
+    "26": {
+      "name": "KeyedProperty",
+      "parent": "Core",
+      "properties": {
+        "propertyKey": 53
+      },
+      "source": "include/rive/generated/animation/keyed_property_base.hpp"
+    },
+    "29": {
+      "name": "KeyFrame",
+      "parent": "Core",
+      "properties": {
+        "frame": 67
+      },
+      "source": "include/rive/generated/animation/keyframe_base.hpp"
+    },
+    "84": {
+      "name": "KeyFrameBool",
+      "parent": "InterpolatingKeyFrame",
+      "properties": {
+        "value": 181
+      },
+      "source": "include/rive/generated/animation/keyframe_bool_base.hpp"
+    },
+    "171": {
+      "name": "KeyFrameCallback",
+      "parent": "KeyFrame",
+      "properties": {},
+      "source": "include/rive/generated/animation/keyframe_callback_base.hpp"
+    },
+    "37": {
+      "name": "KeyFrameColor",
+      "parent": "InterpolatingKeyFrame",
+      "properties": {
+        "value": 88
+      },
+      "source": "include/rive/generated/animation/keyframe_color_base.hpp"
+    },
+    "30": {
+      "name": "KeyFrameDouble",
+      "parent": "InterpolatingKeyFrame",
+      "properties": {
+        "value": 70
+      },
+      "source": "include/rive/generated/animation/keyframe_double_base.hpp"
+    },
+    "50": {
+      "name": "KeyFrameId",
+      "parent": "InterpolatingKeyFrame",
+      "properties": {
+        "value": 122
+      },
+      "source": "include/rive/generated/animation/keyframe_id_base.hpp"
+    },
+    "1067": {
+      "name": "KeyFrameInt",
+      "parent": "InterpolatingKeyFrame",
+      "properties": {
+        "value": 1068
+      },
+      "source": "include/rive/generated/animation/keyframe_int_base.hpp"
+    },
+    "175": {
+      "name": "KeyFrameInterpolator",
+      "parent": "Core",
+      "properties": {},
+      "source": "include/rive/generated/animation/keyframe_interpolator_base.hpp"
+    },
+    "142": {
+      "name": "KeyFrameString",
+      "parent": "InterpolatingKeyFrame",
+      "properties": {
+        "value": 280
+      },
+      "source": "include/rive/generated/animation/keyframe_string_base.hpp"
+    },
+    "450": {
+      "name": "KeyFrameUint",
+      "parent": "InterpolatingKeyFrame",
+      "properties": {
+        "value": 631
+      },
+      "source": "include/rive/generated/animation/keyframe_uint_base.hpp"
+    },
+    "60": {
+      "name": "LayerState",
+      "parent": "StateMachineLayerComponent",
+      "properties": {
+        "flags": 536
+      },
+      "source": "include/rive/generated/animation/layer_state_base.hpp"
+    },
+    "31": {
+      "name": "LinearAnimation",
+      "parent": "Animation",
+      "properties": {
+        "fps": 56,
+        "duration": 57,
+        "speed": 58,
+        "loopValue": 59,
+        "workStart": 60,
+        "workEnd": 61,
+        "enableWorkArea": 62,
+        "quantize": 376
+      },
+      "source": "include/rive/generated/animation/linear_animation_base.hpp"
+    },
+    "125": {
+      "name": "ListenerAction",
+      "parent": "Core",
+      "properties": {
+        "flags": 980
+      },
+      "source": "include/rive/generated/animation/listener_action_base.hpp"
+    },
+    "126": {
+      "name": "ListenerAlignTarget",
+      "parent": "ListenerAction",
+      "properties": {
+        "targetId": 240,
+        "preserveOffset": 541
+      },
+      "source": "include/rive/generated/animation/listener_align_target_base.hpp"
+    },
+    "117": {
+      "name": "ListenerBoolChange",
+      "parent": "ListenerInputChange",
+      "properties": {
+        "value": 228
+      },
+      "source": "include/rive/generated/animation/listener_bool_change_base.hpp"
+    },
+    "168": {
+      "name": "ListenerFireEvent",
+      "parent": "ListenerAction",
+      "properties": {
+        "eventId": 389
+      },
+      "source": "include/rive/generated/animation/listener_fire_event_base.hpp"
+    },
+    "116": {
+      "name": "ListenerInputChange",
+      "parent": "ListenerAction",
+      "properties": {
+        "inputId": 227,
+        "nestedInputId": 400
+      },
+      "source": "include/rive/generated/animation/listener_input_change_base.hpp"
+    },
+    "118": {
+      "name": "ListenerNumberChange",
+      "parent": "ListenerInputChange",
+      "properties": {
+        "value": 229
+      },
+      "source": "include/rive/generated/animation/listener_number_change_base.hpp"
+    },
+    "115": {
+      "name": "ListenerTriggerChange",
+      "parent": "ListenerInputChange",
+      "properties": {},
+      "source": "include/rive/generated/animation/listener_trigger_change_base.hpp"
+    },
+    "658": {
+      "name": "ListenerInputType",
+      "parent": "Core",
+      "properties": {
+        "listenerTypeValue": 965
+      },
+      "source": "include/rive/generated/animation/listener_types/listener_input_type_base.hpp"
+    },
+    "659": {
+      "name": "ListenerInputTypeEvent",
+      "parent": "ListenerInputType",
+      "properties": {
+        "eventId": 962
+      },
+      "source": "include/rive/generated/animation/listener_types/listener_input_type_event_base.hpp"
+    },
+    "973": {
+      "name": "ListenerInputTypeGamepad",
+      "parent": "ListenerInputType",
+      "properties": {},
+      "source": "include/rive/generated/animation/listener_types/listener_input_type_gamepad_base.hpp"
+    },
+    "665": {
+      "name": "ListenerInputTypeKeyboard",
+      "parent": "ListenerInputType",
+      "properties": {},
+      "source": "include/rive/generated/animation/listener_types/listener_input_type_keyboard_base.hpp"
+    },
+    "155": {
+      "name": "ListenerInputTypePointerButton",
+      "parent": "ListenerInputType",
+      "properties": {
+        "pointerButtonValue": 468
+      },
+      "source": "include/rive/generated/animation/listener_types/listener_input_type_pointer_button_base.hpp"
+    },
+    "669": {
+      "name": "ListenerInputTypeSemantic",
+      "parent": "ListenerInputType",
+      "properties": {},
+      "source": "include/rive/generated/animation/listener_types/listener_input_type_semantic_base.hpp"
+    },
+    "666": {
+      "name": "ListenerInputTypeText",
+      "parent": "ListenerInputType",
+      "properties": {},
+      "source": "include/rive/generated/animation/listener_types/listener_input_type_text_base.hpp"
+    },
+    "660": {
+      "name": "ListenerInputTypeViewModel",
+      "parent": "ListenerInputType",
+      "properties": {
+        "viewModelPathIds": 963
+      },
+      "source": "include/rive/generated/animation/listener_types/listener_input_type_viewmodel_base.hpp"
+    },
+    "487": {
+      "name": "ListenerViewModelChange",
+      "parent": "ListenerAction",
+      "properties": {
+        "inputValue": 453,
+        "inputValueIndex": 454
+      },
+      "source": "include/rive/generated/animation/listener_viewmodel_change_base.hpp"
+    },
+    "123": {
+      "name": "NestedBool",
+      "parent": "NestedInput",
+      "properties": {
+        "nestedValue": 238
+      },
+      "source": "include/rive/generated/animation/nested_bool_base.hpp"
+    },
+    "121": {
+      "name": "NestedInput",
+      "parent": "Component",
+      "properties": {
+        "inputId": 237
+      },
+      "source": "include/rive/generated/animation/nested_input_base.hpp"
+    },
+    "97": {
+      "name": "NestedLinearAnimation",
+      "parent": "NestedAnimation",
+      "properties": {
+        "mix": 200
+      },
+      "source": "include/rive/generated/animation/nested_linear_animation_base.hpp"
+    },
+    "124": {
+      "name": "NestedNumber",
+      "parent": "NestedInput",
+      "properties": {
+        "nestedValue": 239
+      },
+      "source": "include/rive/generated/animation/nested_number_base.hpp"
+    },
+    "98": {
+      "name": "NestedRemapAnimation",
+      "parent": "NestedLinearAnimation",
+      "properties": {
+        "time": 202
+      },
+      "source": "include/rive/generated/animation/nested_remap_animation_base.hpp"
+    },
+    "96": {
+      "name": "NestedSimpleAnimation",
+      "parent": "NestedLinearAnimation",
+      "properties": {
+        "speed": 199,
+        "isPlaying": 201
+      },
+      "source": "include/rive/generated/animation/nested_simple_animation_base.hpp"
+    },
+    "95": {
+      "name": "NestedStateMachine",
+      "parent": "NestedAnimation",
+      "properties": {},
+      "source": "include/rive/generated/animation/nested_state_machine_base.hpp"
+    },
+    "122": {
+      "name": "NestedTrigger",
+      "parent": "NestedInput",
+      "properties": {
+        "fire": 401
+      },
+      "source": "include/rive/generated/animation/nested_trigger_base.hpp"
+    },
+    "646": {
+      "name": "ScriptedListenerAction",
+      "parent": "ListenerAction",
+      "properties": {
+        "scriptAssetId": 930
+      },
+      "source": "include/rive/generated/animation/scripted_listener_action_base.hpp"
+    },
+    "647": {
+      "name": "ScriptedTransitionCondition",
+      "parent": "TransitionCondition",
+      "properties": {
+        "scriptAssetId": 931
+      },
+      "source": "include/rive/generated/animation/scripted_transition_condition_base.hpp"
+    },
+    "53": {
+      "name": "StateMachine",
+      "parent": "Animation",
+      "properties": {},
+      "source": "include/rive/generated/animation/state_machine_base.hpp"
+    },
+    "59": {
+      "name": "StateMachineBool",
+      "parent": "StateMachineInput",
+      "properties": {
+        "value": 141
+      },
+      "source": "include/rive/generated/animation/state_machine_bool_base.hpp"
+    },
+    "54": {
+      "name": "StateMachineComponent",
+      "parent": "Core",
+      "properties": {
+        "name": 138
+      },
+      "source": "include/rive/generated/animation/state_machine_component_base.hpp"
+    },
+    "615": {
+      "name": "StateMachineFireAction",
+      "parent": "Core",
+      "properties": {
+        "occursValue": 393
+      },
+      "source": "include/rive/generated/animation/state_machine_fire_action_base.hpp"
+    },
+    "169": {
+      "name": "StateMachineFireEvent",
+      "parent": "StateMachineFireAction",
+      "properties": {
+        "eventId": 392
+      },
+      "source": "include/rive/generated/animation/state_machine_fire_event_base.hpp"
+    },
+    "614": {
+      "name": "StateMachineFireTrigger",
+      "parent": "StateMachineFireAction",
+      "properties": {
+        "viewModelPathIds": 871
+      },
+      "source": "include/rive/generated/animation/state_machine_fire_trigger_base.hpp"
+    },
+    "55": {
+      "name": "StateMachineInput",
+      "parent": "StateMachineComponent",
+      "properties": {},
+      "source": "include/rive/generated/animation/state_machine_input_base.hpp"
+    },
+    "57": {
+      "name": "StateMachineLayer",
+      "parent": "StateMachineComponent",
+      "properties": {},
+      "source": "include/rive/generated/animation/state_machine_layer_base.hpp"
+    },
+    "66": {
+      "name": "StateMachineLayerComponent",
+      "parent": "Core",
+      "properties": {},
+      "source": "include/rive/generated/animation/state_machine_layer_component_base.hpp"
+    },
+    "654": {
+      "name": "StateMachineListener",
+      "parent": "StateMachineComponent",
+      "properties": {
+        "targetId": 224
+      },
+      "source": "include/rive/generated/animation/state_machine_listener_base.hpp"
+    },
+    "114": {
+      "name": "StateMachineListenerSingle",
+      "parent": "StateMachineListener",
+      "properties": {
+        "listenerTypeValue": 225,
+        "eventId": 399,
+        "viewModelPathIds": 868
+      },
+      "source": "include/rive/generated/animation/state_machine_listener_single_base.hpp"
+    },
+    "56": {
+      "name": "StateMachineNumber",
+      "parent": "StateMachineInput",
+      "properties": {
+        "value": 140
+      },
+      "source": "include/rive/generated/animation/state_machine_number_base.hpp"
+    },
+    "58": {
+      "name": "StateMachineTrigger",
+      "parent": "StateMachineInput",
+      "properties": {},
+      "source": "include/rive/generated/animation/state_machine_trigger_base.hpp"
+    },
+    "65": {
+      "name": "StateTransition",
+      "parent": "StateMachineLayerComponent",
+      "properties": {
+        "stateToId": 151,
+        "flags": 152,
+        "duration": 158,
+        "exitTime": 160,
+        "interpolationType": 349,
+        "interpolatorId": 350,
+        "randomWeight": 537
+      },
+      "source": "include/rive/generated/animation/state_transition_base.hpp"
+    },
+    "497": {
+      "name": "TransitionArtboardCondition",
+      "parent": "TransitionViewModelCondition",
+      "properties": {},
+      "source": "include/rive/generated/animation/transition_artboard_condition_base.hpp"
+    },
+    "71": {
+      "name": "TransitionBoolCondition",
+      "parent": "TransitionValueCondition",
+      "properties": {},
+      "source": "include/rive/generated/animation/transition_bool_condition_base.hpp"
+    },
+    "477": {
+      "name": "TransitionComparator",
+      "parent": "Core",
+      "properties": {},
+      "source": "include/rive/generated/animation/transition_comparator_base.hpp"
+    },
+    "476": {
+      "name": "TransitionCondition",
+      "parent": "Core",
+      "properties": {},
+      "source": "include/rive/generated/animation/transition_condition_base.hpp"
+    },
+    "1038": {
+      "name": "TransitionFocusCondition",
+      "parent": "TransitionViewModelCondition",
+      "properties": {},
+      "source": "include/rive/generated/animation/transition_focus_condition_base.hpp"
+    },
+    "67": {
+      "name": "TransitionInputCondition",
+      "parent": "TransitionCondition",
+      "properties": {
+        "inputId": 155
+      },
+      "source": "include/rive/generated/animation/transition_input_condition_base.hpp"
+    },
+    "70": {
+      "name": "TransitionNumberCondition",
+      "parent": "TransitionValueCondition",
+      "properties": {
+        "value": 157
+      },
+      "source": "include/rive/generated/animation/transition_number_condition_base.hpp"
+    },
+    "478": {
+      "name": "TransitionPropertyComparator",
+      "parent": "TransitionComparator",
+      "properties": {},
+      "source": "include/rive/generated/animation/transition_property_comparator_base.hpp"
+    },
+    "593": {
+      "name": "TransitionSelfComparator",
+      "parent": "TransitionComparator",
+      "properties": {},
+      "source": "include/rive/generated/animation/transition_self_comparator_base.hpp"
+    },
+    "68": {
+      "name": "TransitionTriggerCondition",
+      "parent": "TransitionInputCondition",
+      "properties": {},
+      "source": "include/rive/generated/animation/transition_trigger_condition_base.hpp"
+    },
+    "630": {
+      "name": "TransitionValueArtboardComparator",
+      "parent": "TransitionValueIdComparator",
+      "properties": {},
+      "source": "include/rive/generated/animation/transition_value_artboard_comparator_base.hpp"
+    },
+    "602": {
+      "name": "TransitionValueAssetComparator",
+      "parent": "TransitionValueIdComparator",
+      "properties": {},
+      "source": "include/rive/generated/animation/transition_value_asset_comparator_base.hpp"
+    },
+    "481": {
+      "name": "TransitionValueBooleanComparator",
+      "parent": "TransitionValueComparator",
+      "properties": {
+        "value": 647
+      },
+      "source": "include/rive/generated/animation/transition_value_boolean_comparator_base.hpp"
+    },
+    "483": {
+      "name": "TransitionValueColorComparator",
+      "parent": "TransitionValueComparator",
+      "properties": {
+        "value": 651
+      },
+      "source": "include/rive/generated/animation/transition_value_color_comparator_base.hpp"
+    },
+    "480": {
+      "name": "TransitionValueComparator",
+      "parent": "TransitionComparator",
+      "properties": {},
+      "source": "include/rive/generated/animation/transition_value_comparator_base.hpp"
+    },
+    "69": {
+      "name": "TransitionValueCondition",
+      "parent": "TransitionInputCondition",
+      "properties": {
+        "opValue": 156
+      },
+      "source": "include/rive/generated/animation/transition_value_condition_base.hpp"
+    },
+    "485": {
+      "name": "TransitionValueEnumComparator",
+      "parent": "TransitionValueIdComparator",
+      "properties": {},
+      "source": "include/rive/generated/animation/transition_value_enum_comparator_base.hpp"
+    },
+    "601": {
+      "name": "TransitionValueIdComparator",
+      "parent": "TransitionValueComparator",
+      "properties": {
+        "value": 653
+      },
+      "source": "include/rive/generated/animation/transition_value_id_comparator_base.hpp"
+    },
+    "484": {
+      "name": "TransitionValueNumberComparator",
+      "parent": "TransitionValueComparator",
+      "properties": {
+        "value": 652
+      },
+      "source": "include/rive/generated/animation/transition_value_number_comparator_base.hpp"
+    },
+    "486": {
+      "name": "TransitionValueStringComparator",
+      "parent": "TransitionValueComparator",
+      "properties": {
+        "value": 654
+      },
+      "source": "include/rive/generated/animation/transition_value_string_comparator_base.hpp"
+    },
+    "505": {
+      "name": "TransitionValueTriggerComparator",
+      "parent": "TransitionValueComparator",
+      "properties": {
+        "value": 689
+      },
+      "source": "include/rive/generated/animation/transition_value_trigger_comparator_base.hpp"
+    },
+    "482": {
+      "name": "TransitionViewModelCondition",
+      "parent": "TransitionCondition",
+      "properties": {
+        "opValue": 650
+      },
+      "source": "include/rive/generated/animation/transition_viewmodel_condition_base.hpp"
+    },
+    "1": {
+      "name": "Artboard",
+      "parent": "LayoutComponent",
+      "properties": {
+        "originX": 11,
+        "originY": 12,
+        "defaultStateMachineId": 236,
+        "viewModelId": 583
+      },
+      "source": "include/rive/generated/artboard_base.hpp"
+    },
+    "559": {
+      "name": "ArtboardComponentList",
+      "parent": "Drawable",
+      "properties": {
+        "listSource": 800
+      },
+      "source": "include/rive/generated/artboard_component_list_base.hpp"
+    },
+    "648": {
+      "name": "ArtboardListMapRule",
+      "parent": "Component",
+      "properties": {
+        "artboardId": 934,
+        "viewModelId": 935
+      },
+      "source": "include/rive/generated/artboard_list_map_rule_base.hpp"
+    },
+    "99": {
+      "name": "Asset",
+      "parent": "Core",
+      "properties": {
+        "name": 203
+      },
+      "source": "include/rive/generated/assets/asset_base.hpp"
+    },
+    "406": {
+      "name": "AudioAsset",
+      "parent": "ExportAudio",
+      "properties": {},
+      "source": "include/rive/generated/assets/audio_asset_base.hpp"
+    },
+    "649": {
+      "name": "BlobAsset",
+      "parent": "FileAsset",
+      "properties": {},
+      "source": "include/rive/generated/assets/blob_asset_base.hpp"
+    },
+    "104": {
+      "name": "DrawableAsset",
+      "parent": "FileAsset",
+      "properties": {
+        "height": 207,
+        "width": 208
+      },
+      "source": "include/rive/generated/assets/drawable_asset_base.hpp"
+    },
+    "422": {
+      "name": "ExportAudio",
+      "parent": "FileAsset",
+      "properties": {
+        "volume": 530
+      },
+      "source": "include/rive/generated/assets/export_audio_base.hpp"
+    },
+    "103": {
+      "name": "FileAsset",
+      "parent": "Asset",
+      "properties": {
+        "assetId": 204,
+        "cdnUuid": 359,
+        "cdnBaseUrl": 362
+      },
+      "source": "include/rive/generated/assets/file_asset_base.hpp"
+    },
+    "106": {
+      "name": "FileAssetContents",
+      "parent": "Core",
+      "properties": {
+        "bytes": 212,
+        "signature": 911
+      },
+      "source": "include/rive/generated/assets/file_asset_contents_base.hpp"
+    },
+    "141": {
+      "name": "FontAsset",
+      "parent": "FileAsset",
+      "properties": {},
+      "source": "include/rive/generated/assets/font_asset_base.hpp"
+    },
+    "105": {
+      "name": "ImageAsset",
+      "parent": "DrawableAsset",
+      "properties": {
+        "samplerFilter": 1073,
+        "samplerWrapX": 1074,
+        "samplerWrapY": 1075
+      },
+      "source": "include/rive/generated/assets/image_asset_base.hpp"
+    },
+    "642": {
+      "name": "ManifestAsset",
+      "parent": "FileAsset",
+      "properties": {},
+      "source": "include/rive/generated/assets/manifest_asset_base.hpp"
+    },
+    "529": {
+      "name": "ScriptAsset",
+      "parent": "TextAsset",
+      "properties": {
+        "generatorFunctionRef": 893,
+        "isModule": 914,
+        "serializedImplementedMethods": 1022
+      },
+      "source": "include/rive/generated/assets/script_asset_base.hpp"
+    },
+    "1071": {
+      "name": "ScriptModuleAsset",
+      "parent": "FileAsset",
+      "properties": {
+        "language": 1087
+      },
+      "source": "include/rive/generated/assets/script_module_asset_base.hpp"
+    },
+    "970": {
+      "name": "ShaderAsset",
+      "parent": "TextAsset",
+      "properties": {},
+      "source": "include/rive/generated/assets/shader_asset_base.hpp"
+    },
+    "971": {
+      "name": "TextAsset",
+      "parent": "FileAsset",
+      "properties": {
+        "folderPath": 926
+      },
+      "source": "include/rive/generated/assets/text_asset_base.hpp"
+    },
+    "407": {
+      "name": "AudioEvent",
+      "parent": "Event",
+      "properties": {
+        "assetId": 408
+      },
+      "source": "include/rive/generated/audio_event_base.hpp"
+    },
+    "23": {
+      "name": "Backboard",
+      "parent": "Core",
+      "properties": {},
+      "source": "include/rive/generated/backboard_base.hpp"
+    },
+    "136": {
+      "name": "BitmapCache",
+      "parent": "Component",
+      "properties": {
+        "resolution": 417,
+        "cacheFlags": 418,
+        "cacheEnabled": 419,
+        "dither": 420
+      },
+      "source": "include/rive/generated/bitmap_cache_base.hpp"
+    },
+    "40": {
+      "name": "Bone",
+      "parent": "SkeletalComponent",
+      "properties": {
+        "length": 89
+      },
+      "source": "include/rive/generated/bones/bone_base.hpp"
+    },
+    "46": {
+      "name": "CubicWeight",
+      "parent": "Weight",
+      "properties": {
+        "inValues": 110,
+        "inIndices": 111,
+        "outValues": 112,
+        "outIndices": 113
+      },
+      "source": "include/rive/generated/bones/cubic_weight_base.hpp"
+    },
+    "41": {
+      "name": "RootBone",
+      "parent": "Bone",
+      "properties": {
+        "x": 90,
+        "y": 91
+      },
+      "source": "include/rive/generated/bones/root_bone_base.hpp"
+    },
+    "39": {
+      "name": "SkeletalComponent",
+      "parent": "TransformComponent",
+      "properties": {},
+      "source": "include/rive/generated/bones/skeletal_component_base.hpp"
+    },
+    "43": {
+      "name": "Skin",
+      "parent": "ContainerComponent",
+      "properties": {
+        "xx": 104,
+        "yx": 105,
+        "xy": 106,
+        "yy": 107,
+        "tx": 108,
+        "ty": 109
+      },
+      "source": "include/rive/generated/bones/skin_base.hpp"
+    },
+    "44": {
+      "name": "Tendon",
+      "parent": "Component",
+      "properties": {
+        "boneId": 95,
+        "xx": 96,
+        "yx": 97,
+        "xy": 98,
+        "yy": 99,
+        "tx": 100,
+        "ty": 101
+      },
+      "source": "include/rive/generated/bones/tendon_base.hpp"
+    },
+    "45": {
+      "name": "Weight",
+      "parent": "Component",
+      "properties": {
+        "values": 102,
+        "indices": 103
+      },
+      "source": "include/rive/generated/bones/weight_base.hpp"
+    },
+    "10": {
+      "name": "Component",
+      "parent": "Core",
+      "properties": {
+        "name": 4,
+        "parentId": 5
+      },
+      "source": "include/rive/generated/component_base.hpp"
+    },
+    "1039": {
+      "name": "ComponentOrigin",
+      "parent": "Component",
+      "properties": {
+        "originX": 1040,
+        "originY": 1041
+      },
+      "source": "include/rive/generated/component_origin_base.hpp"
+    },
+    "79": {
+      "name": "Constraint",
+      "parent": "Component",
+      "properties": {
+        "strength": 172
+      },
+      "source": "include/rive/generated/constraints/constraint_base.hpp"
+    },
+    "82": {
+      "name": "DistanceConstraint",
+      "parent": "TargetedConstraint",
+      "properties": {
+        "distance": 177,
+        "modeValue": 178
+      },
+      "source": "include/rive/generated/constraints/distance_constraint_base.hpp"
+    },
+    "520": {
+      "name": "DraggableConstraint",
+      "parent": "Constraint",
+      "properties": {
+        "directionValue": 722
+      },
+      "source": "include/rive/generated/constraints/draggable_constraint_base.hpp"
+    },
+    "165": {
+      "name": "FollowPathConstraint",
+      "parent": "TransformSpaceConstraint",
+      "properties": {
+        "distance": 363,
+        "orient": 364,
+        "offset": 365
+      },
+      "source": "include/rive/generated/constraints/follow_path_constraint_base.hpp"
+    },
+    "81": {
+      "name": "IKConstraint",
+      "parent": "TargetedConstraint",
+      "properties": {
+        "invertDirection": 174,
+        "parentBoneCount": 175
+      },
+      "source": "include/rive/generated/constraints/ik_constraint_base.hpp"
+    },
+    "625": {
+      "name": "ListFollowPathConstraint",
+      "parent": "FollowPathConstraint",
+      "properties": {
+        "distanceEnd": 888,
+        "distanceOffset": 889
+      },
+      "source": "include/rive/generated/constraints/list_follow_path_constraint_base.hpp"
+    },
+    "89": {
+      "name": "RotationConstraint",
+      "parent": "TransformComponentConstraint",
+      "properties": {},
+      "source": "include/rive/generated/constraints/rotation_constraint_base.hpp"
+    },
+    "88": {
+      "name": "ScaleConstraint",
+      "parent": "TransformComponentConstraintY",
+      "properties": {},
+      "source": "include/rive/generated/constraints/scale_constraint_base.hpp"
+    },
+    "524": {
+      "name": "ClampedScrollPhysics",
+      "parent": "ScrollPhysics",
+      "properties": {},
+      "source": "include/rive/generated/constraints/scrolling/clamped_scroll_physics_base.hpp"
+    },
+    "525": {
+      "name": "ElasticScrollPhysics",
+      "parent": "ScrollPhysics",
+      "properties": {
+        "friction": 728,
+        "speedMultiplier": 729,
+        "elasticFactor": 730
+      },
+      "source": "include/rive/generated/constraints/scrolling/elastic_scroll_physics_base.hpp"
+    },
+    "522": {
+      "name": "ScrollBarConstraint",
+      "parent": "DraggableConstraint",
+      "properties": {
+        "scrollConstraintId": 725,
+        "autoSize": 734
+      },
+      "source": "include/rive/generated/constraints/scrolling/scroll_bar_constraint_base.hpp"
+    },
+    "521": {
+      "name": "ScrollConstraint",
+      "parent": "DraggableConstraint",
+      "properties": {
+        "scrollOffsetX": 759,
+        "scrollOffsetY": 760,
+        "scrollPercentX": 761,
+        "scrollPercentY": 762,
+        "scrollIndex": 763,
+        "snap": 724,
+        "physicsTypeValue": 727,
+        "physicsId": 726,
+        "virtualize": 850,
+        "virtualizeBuffer": 221,
+        "infinite": 851,
+        "interactive": 891,
+        "threshold": 894,
+        "velocityX": 1023,
+        "velocityY": 1024,
+        "scrollActive": 1025,
+        "dragMultiplier": 1029,
+        "computedContentWidth": 1069,
+        "computedContentHeight": 1070,
+        "scrollFlags": 466,
+        "wheelInteractive": 467
+      },
+      "source": "include/rive/generated/constraints/scrolling/scroll_constraint_base.hpp"
+    },
+    "523": {
+      "name": "ScrollPhysics",
+      "parent": "Component",
+      "properties": {
+        "constraintId": 731
+      },
+      "source": "include/rive/generated/constraints/scrolling/scroll_physics_base.hpp"
+    },
+    "80": {
+      "name": "TargetedConstraint",
+      "parent": "Constraint",
+      "properties": {
+        "targetId": 173
+      },
+      "source": "include/rive/generated/constraints/targeted_constraint_base.hpp"
+    },
+    "85": {
+      "name": "TransformComponentConstraint",
+      "parent": "TransformSpaceConstraint",
+      "properties": {
+        "minMaxSpaceValue": 195,
+        "copyFactor": 182,
+        "minValue": 183,
+        "maxValue": 184,
+        "offset": 188,
+        "doesCopy": 189,
+        "min": 190,
+        "max": 191
+      },
+      "source": "include/rive/generated/constraints/transform_component_constraint_base.hpp"
+    },
+    "86": {
+      "name": "TransformComponentConstraintY",
+      "parent": "TransformComponentConstraint",
+      "properties": {
+        "copyFactorY": 185,
+        "minValueY": 186,
+        "maxValueY": 187,
+        "doesCopyY": 192,
+        "minY": 193,
+        "maxY": 194
+      },
+      "source": "include/rive/generated/constraints/transform_component_constraint_y_base.hpp"
+    },
+    "83": {
+      "name": "TransformConstraint",
+      "parent": "TransformSpaceConstraint",
+      "properties": {
+        "originX": 372,
+        "originY": 373
+      },
+      "source": "include/rive/generated/constraints/transform_constraint_base.hpp"
+    },
+    "90": {
+      "name": "TransformSpaceConstraint",
+      "parent": "TargetedConstraint",
+      "properties": {
+        "sourceSpaceValue": 179,
+        "destSpaceValue": 180
+      },
+      "source": "include/rive/generated/constraints/transform_space_constraint_base.hpp"
+    },
+    "87": {
+      "name": "TranslationConstraint",
+      "parent": "TransformComponentConstraintY",
+      "properties": {},
+      "source": "include/rive/generated/constraints/translation_constraint_base.hpp"
+    },
+    "11": {
+      "name": "ContainerComponent",
+      "parent": "Component",
+      "properties": {},
+      "source": "include/rive/generated/container_component_base.hpp"
+    },
+    "167": {
+      "name": "CustomProperty",
+      "parent": "Component",
+      "properties": {
+        "nameId": 449
+      },
+      "source": "include/rive/generated/custom_property_base.hpp"
+    },
+    "129": {
+      "name": "CustomPropertyBoolean",
+      "parent": "CustomProperty",
+      "properties": {
+        "propertyValue": 245
+      },
+      "source": "include/rive/generated/custom_property_boolean_base.hpp"
+    },
+    "592": {
+      "name": "CustomPropertyColor",
+      "parent": "CustomProperty",
+      "properties": {
+        "propertyValue": 836
+      },
+      "source": "include/rive/generated/custom_property_color_base.hpp"
+    },
+    "616": {
+      "name": "CustomPropertyEnum",
+      "parent": "CustomProperty",
+      "properties": {
+        "propertyValue": 872,
+        "enumId": 873
+      },
+      "source": "include/rive/generated/custom_property_enum_base.hpp"
+    },
+    "548": {
+      "name": "CustomPropertyGroup",
+      "parent": "ContainerComponent",
+      "properties": {},
+      "source": "include/rive/generated/custom_property_group_base.hpp"
+    },
+    "127": {
+      "name": "CustomPropertyNumber",
+      "parent": "CustomProperty",
+      "properties": {
+        "propertyValue": 243
+      },
+      "source": "include/rive/generated/custom_property_number_base.hpp"
+    },
+    "130": {
+      "name": "CustomPropertyString",
+      "parent": "CustomProperty",
+      "properties": {
+        "propertyValue": 246
+      },
+      "source": "include/rive/generated/custom_property_string_base.hpp"
+    },
+    "613": {
+      "name": "CustomPropertyTrigger",
+      "parent": "CustomProperty",
+      "properties": {
+        "fire": 869,
+        "propertyValue": 870
+      },
+      "source": "include/rive/generated/custom_property_trigger_base.hpp"
+    },
+    "597": {
+      "name": "BindablePropertyArtboard",
+      "parent": "BindablePropertyId",
+      "properties": {},
+      "source": "include/rive/generated/data_bind/bindable_property_artboard_base.hpp"
+    },
+    "588": {
+      "name": "BindablePropertyAsset",
+      "parent": "BindablePropertyId",
+      "properties": {},
+      "source": "include/rive/generated/data_bind/bindable_property_asset_base.hpp"
+    },
+    "9": {
+      "name": "BindableProperty",
+      "parent": "Core",
+      "properties": {},
+      "source": "include/rive/generated/data_bind/bindable_property_base.hpp"
+    },
+    "472": {
+      "name": "BindablePropertyBoolean",
+      "parent": "BindableProperty",
+      "properties": {
+        "propertyValue": 634
+      },
+      "source": "include/rive/generated/data_bind/bindable_property_boolean_base.hpp"
+    },
+    "475": {
+      "name": "BindablePropertyColor",
+      "parent": "BindableProperty",
+      "properties": {
+        "propertyValue": 638
+      },
+      "source": "include/rive/generated/data_bind/bindable_property_color_base.hpp"
+    },
+    "474": {
+      "name": "BindablePropertyEnum",
+      "parent": "BindableProperty",
+      "properties": {
+        "propertyValue": 637
+      },
+      "source": "include/rive/generated/data_bind/bindable_property_enum_base.hpp"
+    },
+    "596": {
+      "name": "BindablePropertyId",
+      "parent": "BindableProperty",
+      "properties": {
+        "propertyValue": 823
+      },
+      "source": "include/rive/generated/data_bind/bindable_property_id_base.hpp"
+    },
+    "567": {
+      "name": "BindablePropertyInteger",
+      "parent": "BindableProperty",
+      "properties": {
+        "propertyValue": 686
+      },
+      "source": "include/rive/generated/data_bind/bindable_property_integer_base.hpp"
+    },
+    "590": {
+      "name": "BindablePropertyList",
+      "parent": "BindableProperty",
+      "properties": {
+        "propertyValue": 835
+      },
+      "source": "include/rive/generated/data_bind/bindable_property_list_base.hpp"
+    },
+    "473": {
+      "name": "BindablePropertyNumber",
+      "parent": "BindableProperty",
+      "properties": {
+        "propertyValue": 636
+      },
+      "source": "include/rive/generated/data_bind/bindable_property_number_base.hpp"
+    },
+    "471": {
+      "name": "BindablePropertyString",
+      "parent": "BindableProperty",
+      "properties": {
+        "propertyValue": 635
+      },
+      "source": "include/rive/generated/data_bind/bindable_property_string_base.hpp"
+    },
+    "503": {
+      "name": "BindablePropertyTrigger",
+      "parent": "BindablePropertyInteger",
+      "properties": {},
+      "source": "include/rive/generated/data_bind/bindable_property_trigger_base.hpp"
+    },
+    "662": {
+      "name": "BindablePropertyViewModel",
+      "parent": "BindablePropertyId",
+      "properties": {},
+      "source": "include/rive/generated/data_bind/bindable_property_viewmodel_base.hpp"
+    },
+    "488": {
+      "name": "DataConverter",
+      "parent": "Core",
+      "properties": {
+        "name": 662
+      },
+      "source": "include/rive/generated/data_bind/converters/data_converter_base.hpp"
+    },
+    "535": {
+      "name": "DataConverterBooleanNegate",
+      "parent": "DataConverter",
+      "properties": {},
+      "source": "include/rive/generated/data_bind/converters/data_converter_boolean_negate_base.hpp"
+    },
+    "536": {
+      "name": "DataConverterFormula",
+      "parent": "DataConverter",
+      "properties": {
+        "randomModeValue": 887
+      },
+      "source": "include/rive/generated/data_bind/converters/data_converter_formula_base.hpp"
+    },
+    "499": {
+      "name": "DataConverterGroup",
+      "parent": "DataConverter",
+      "properties": {},
+      "source": "include/rive/generated/data_bind/converters/data_converter_group_base.hpp"
+    },
+    "498": {
+      "name": "DataConverterGroupItem",
+      "parent": "Core",
+      "properties": {
+        "converterId": 679
+      },
+      "source": "include/rive/generated/data_bind/converters/data_converter_group_item_base.hpp"
+    },
+    "534": {
+      "name": "DataConverterInterpolator",
+      "parent": "DataConverter",
+      "properties": {
+        "interpolationType": 757,
+        "interpolatorId": 758,
+        "duration": 756
+      },
+      "source": "include/rive/generated/data_bind/converters/data_converter_interpolator_base.hpp"
+    },
+    "591": {
+      "name": "DataConverterListToLength",
+      "parent": "DataConverter",
+      "properties": {},
+      "source": "include/rive/generated/data_bind/converters/data_converter_list_to_length_base.hpp"
+    },
+    "568": {
+      "name": "DataConverterNumberToList",
+      "parent": "DataConverter",
+      "properties": {
+        "viewModelId": 816
+      },
+      "source": "include/rive/generated/data_bind/converters/data_converter_number_to_list_base.hpp"
+    },
+    "516": {
+      "name": "DataConverterOperation",
+      "parent": "DataConverter",
+      "properties": {
+        "operationType": 682
+      },
+      "source": "include/rive/generated/data_bind/converters/data_converter_operation_base.hpp"
+    },
+    "500": {
+      "name": "DataConverterOperationValue",
+      "parent": "DataConverterOperation",
+      "properties": {
+        "operationValue": 681
+      },
+      "source": "include/rive/generated/data_bind/converters/data_converter_operation_value_base.hpp"
+    },
+    "517": {
+      "name": "DataConverterOperationViewModel",
+      "parent": "DataConverterOperation",
+      "properties": {
+        "sourcePathIds": 711
+      },
+      "source": "include/rive/generated/data_bind/converters/data_converter_operation_viewmodel_base.hpp"
+    },
+    "519": {
+      "name": "DataConverterRangeMapper",
+      "parent": "DataConverter",
+      "properties": {
+        "interpolationType": 713,
+        "interpolatorId": 714,
+        "flags": 715,
+        "minInput": 716,
+        "maxInput": 717,
+        "minOutput": 718,
+        "maxOutput": 719
+      },
+      "source": "include/rive/generated/data_bind/converters/data_converter_range_mapper_base.hpp"
+    },
+    "489": {
+      "name": "DataConverterRounder",
+      "parent": "DataConverter",
+      "properties": {
+        "decimals": 669
+      },
+      "source": "include/rive/generated/data_bind/converters/data_converter_rounder_base.hpp"
+    },
+    "530": {
+      "name": "DataConverterStringPad",
+      "parent": "DataConverter",
+      "properties": {
+        "length": 743,
+        "text": 744,
+        "padType": 745
+      },
+      "source": "include/rive/generated/data_bind/converters/data_converter_string_pad_base.hpp"
+    },
+    "531": {
+      "name": "DataConverterStringRemoveZeros",
+      "parent": "DataConverter",
+      "properties": {},
+      "source": "include/rive/generated/data_bind/converters/data_converter_string_remove_zeros_base.hpp"
+    },
+    "532": {
+      "name": "DataConverterStringTrim",
+      "parent": "DataConverter",
+      "properties": {
+        "trimType": 746
+      },
+      "source": "include/rive/generated/data_bind/converters/data_converter_string_trim_base.hpp"
+    },
+    "514": {
+      "name": "DataConverterSystemDegsToRads",
+      "parent": "DataConverterOperationValue",
+      "properties": {},
+      "source": "include/rive/generated/data_bind/converters/data_converter_system_degs_to_rads_base.hpp"
+    },
+    "515": {
+      "name": "DataConverterSystemNormalizer",
+      "parent": "DataConverterOperationValue",
+      "properties": {},
+      "source": "include/rive/generated/data_bind/converters/data_converter_system_normalizer_base.hpp"
+    },
+    "617": {
+      "name": "DataConverterToNumber",
+      "parent": "DataConverter",
+      "properties": {},
+      "source": "include/rive/generated/data_bind/converters/data_converter_to_number_base.hpp"
+    },
+    "490": {
+      "name": "DataConverterToString",
+      "parent": "DataConverter",
+      "properties": {
+        "flags": 764,
+        "decimals": 765,
+        "colorFormat": 766
+      },
+      "source": "include/rive/generated/data_bind/converters/data_converter_to_string_base.hpp"
+    },
+    "504": {
+      "name": "DataConverterTrigger",
+      "parent": "DataConverter",
+      "properties": {},
+      "source": "include/rive/generated/data_bind/converters/data_converter_trigger_base.hpp"
+    },
+    "538": {
+      "name": "FormulaTokenArgumentSeparator",
+      "parent": "FormulaToken",
+      "properties": {},
+      "source": "include/rive/generated/data_bind/converters/formula/formula_token_argument_separator_base.hpp"
+    },
+    "537": {
+      "name": "FormulaToken",
+      "parent": "Core",
+      "properties": {},
+      "source": "include/rive/generated/data_bind/converters/formula/formula_token_base.hpp"
+    },
+    "542": {
+      "name": "FormulaTokenFunction",
+      "parent": "FormulaTokenParenthesis",
+      "properties": {
+        "functionType": 776
+      },
+      "source": "include/rive/generated/data_bind/converters/formula/formula_token_function_base.hpp"
+    },
+    "545": {
+      "name": "FormulaTokenInput",
+      "parent": "FormulaToken",
+      "properties": {},
+      "source": "include/rive/generated/data_bind/converters/formula/formula_token_input_base.hpp"
+    },
+    "541": {
+      "name": "FormulaTokenOperation",
+      "parent": "FormulaToken",
+      "properties": {
+        "operationType": 775
+      },
+      "source": "include/rive/generated/data_bind/converters/formula/formula_token_operation_base.hpp"
+    },
+    "539": {
+      "name": "FormulaTokenParenthesis",
+      "parent": "FormulaToken",
+      "properties": {},
+      "source": "include/rive/generated/data_bind/converters/formula/formula_token_parenthesis_base.hpp"
+    },
+    "540": {
+      "name": "FormulaTokenParenthesisClose",
+      "parent": "FormulaTokenParenthesis",
+      "properties": {},
+      "source": "include/rive/generated/data_bind/converters/formula/formula_token_parenthesis_close_base.hpp"
+    },
+    "544": {
+      "name": "FormulaTokenParenthesisOpen",
+      "parent": "FormulaTokenParenthesis",
+      "properties": {},
+      "source": "include/rive/generated/data_bind/converters/formula/formula_token_parenthesis_open_base.hpp"
+    },
+    "543": {
+      "name": "FormulaTokenValue",
+      "parent": "FormulaToken",
+      "properties": {
+        "operationValue": 777
+      },
+      "source": "include/rive/generated/data_bind/converters/formula/formula_token_value_base.hpp"
+    },
+    "446": {
+      "name": "DataBind",
+      "parent": "Core",
+      "properties": {
+        "propertyKey": 586,
+        "flags": 587,
+        "converterId": 660
+      },
+      "source": "include/rive/generated/data_bind/data_bind_base.hpp"
+    },
+    "447": {
+      "name": "DataBindContext",
+      "parent": "DataBind",
+      "properties": {
+        "sourcePathIds": 588
+      },
+      "source": "include/rive/generated/data_bind/data_bind_context_base.hpp"
+    },
+    "643": {
+      "name": "DataBindPath",
+      "parent": "Core",
+      "properties": {
+        "path": 920,
+        "isRelative": 921
+      },
+      "source": "include/rive/generated/data_bind/data_bind_path_base.hpp"
+    },
+    "49": {
+      "name": "DrawRules",
+      "parent": "ContainerComponent",
+      "properties": {
+        "drawTargetId": 121
+      },
+      "source": "include/rive/generated/draw_rules_base.hpp"
+    },
+    "48": {
+      "name": "DrawTarget",
+      "parent": "Component",
+      "properties": {
+        "drawableId": 119,
+        "placementValue": 120
+      },
+      "source": "include/rive/generated/draw_target_base.hpp"
+    },
+    "13": {
+      "name": "Drawable",
+      "parent": "Node",
+      "properties": {
+        "blendModeValue": 23,
+        "additiveAmount": 450,
+        "drawableFlags": 129
+      },
+      "source": "include/rive/generated/drawable_base.hpp"
+    },
+    "128": {
+      "name": "Event",
+      "parent": "CustomPropertyGroup",
+      "properties": {
+        "trigger": 395
+      },
+      "source": "include/rive/generated/event_base.hpp"
+    },
+    "653": {
+      "name": "FocusData",
+      "parent": "Component",
+      "properties": {
+        "focusFlags": 1033,
+        "canFocus": 953,
+        "canTouch": 954,
+        "canTraverse": 955,
+        "edgeBehaviorValue": 956
+      },
+      "source": "include/rive/generated/focus_data_base.hpp"
+    },
+    "513": {
+      "name": "ForegroundLayoutDrawable",
+      "parent": "Drawable",
+      "properties": {},
+      "source": "include/rive/generated/foreground_layout_drawable_base.hpp"
+    },
+    "974": {
+      "name": "GamepadInput",
+      "parent": "UserInput",
+      "properties": {
+        "kind": 1021,
+        "mapping": 1018,
+        "inputIndex": 1019,
+        "buttonPhase": 1020
+      },
+      "source": "include/rive/generated/inputs/gamepad_input_base.hpp"
+    },
+    "664": {
+      "name": "KeyboardInput",
+      "parent": "UserInput",
+      "properties": {
+        "keyType": 971,
+        "keyPhase": 972,
+        "modifiers": 973
+      },
+      "source": "include/rive/generated/inputs/keyboard_input_base.hpp"
+    },
+    "670": {
+      "name": "SemanticInput",
+      "parent": "UserInput",
+      "properties": {
+        "actionType": 1010
+      },
+      "source": "include/rive/generated/inputs/semantic_input_base.hpp"
+    },
+    "663": {
+      "name": "UserInput",
+      "parent": "Core",
+      "properties": {},
+      "source": "include/rive/generated/inputs/user_input_base.hpp"
+    },
+    "148": {
+      "name": "Joystick",
+      "parent": "Component",
+      "properties": {
+        "x": 299,
+        "y": 300,
+        "posX": 303,
+        "posY": 304,
+        "originX": 307,
+        "originY": 308,
+        "width": 305,
+        "height": 306,
+        "xId": 301,
+        "yId": 302,
+        "joystickFlags": 312,
+        "handleSourceId": 313
+      },
+      "source": "include/rive/generated/joystick_base.hpp"
+    },
+    "154": {
+      "name": "LayerMask",
+      "parent": "Component",
+      "properties": {
+        "sourceId": 459,
+        "maskFlags": 460,
+        "maskModeValue": 455,
+        "isVisible": 456,
+        "sourceDraws": 457,
+        "useCustomBounds": 461,
+        "resolution": 458,
+        "boundsX": 462,
+        "boundsY": 463,
+        "boundsWidth": 464,
+        "boundsHeight": 465
+      },
+      "source": "include/rive/generated/layer_mask_base.hpp"
+    },
+    "606": {
+      "name": "ArtboardComponentListOverride",
+      "parent": "Component",
+      "properties": {
+        "artboardId": 858,
+        "instanceWidth": 859,
+        "instanceHeight": 860,
+        "instanceWidthUnitsValue": 856,
+        "instanceHeightUnitsValue": 861,
+        "instanceWidthScaleType": 862,
+        "instanceHeightScaleType": 863
+      },
+      "source": "include/rive/generated/layout/artboard_component_list_override_base.hpp"
+    },
+    "492": {
+      "name": "Axis",
+      "parent": "Component",
+      "properties": {
+        "offset": 675,
+        "normalized": 676
+      },
+      "source": "include/rive/generated/layout/axis_base.hpp"
+    },
+    "495": {
+      "name": "AxisX",
+      "parent": "Axis",
+      "properties": {},
+      "source": "include/rive/generated/layout/axis_x_base.hpp"
+    },
+    "494": {
+      "name": "AxisY",
+      "parent": "Axis",
+      "properties": {},
+      "source": "include/rive/generated/layout/axis_y_base.hpp"
+    },
+    "1068": {
+      "name": "GridItemPlacement",
+      "parent": "Component",
+      "properties": {
+        "gridColumn": 1047,
+        "gridRow": 1048,
+        "gridColumnSpan": 1049,
+        "gridRowSpan": 1050
+      },
+      "source": "include/rive/generated/layout/grid_item_placement_base.hpp"
+    },
+    "1058": {
+      "name": "GridTrack",
+      "parent": "Component",
+      "properties": {
+        "trackValue": 1063,
+        "trackMaxValue": 1065,
+        "collection": 1061,
+        "trackType": 1062,
+        "trackMaxType": 1064
+      },
+      "source": "include/rive/generated/layout/grid_track_base.hpp"
+    },
+    "420": {
+      "name": "LayoutComponentStyle",
+      "parent": "LayoutSizingStyle",
+      "properties": {
+        "gapHorizontal": 498,
+        "gapVertical": 499,
+        "borderLeft": 504,
+        "borderRight": 505,
+        "borderTop": 506,
+        "borderBottom": 507,
+        "marginLeft": 508,
+        "marginRight": 509,
+        "marginTop": 510,
+        "marginBottom": 511,
+        "paddingLeft": 512,
+        "paddingRight": 513,
+        "paddingTop": 514,
+        "paddingBottom": 515,
+        "positionLeft": 516,
+        "positionRight": 517,
+        "positionTop": 518,
+        "positionBottom": 519,
+        "positionLeftUnitsValue": 621,
+        "positionRightUnitsValue": 622,
+        "positionTopUnitsValue": 623,
+        "positionBottomUnitsValue": 624,
+        "flexBasis": 523,
+        "aspectRatio": 524,
+        "interpolatorId": 591,
+        "interpolationTime": 592,
+        "flexBasisUnitsValue": 705,
+        "layoutAlignmentType": 632,
+        "animationStyleType": 589,
+        "interpolationType": 590,
+        "positionTypeValue": 597,
+        "flexDirectionValue": 598,
+        "directionValue": 599,
+        "flexWrapValue": 604,
+        "overflowValue": 605,
+        "intrinsicallySizedValue": 606,
+        "borderLeftUnitsValue": 609,
+        "borderRightUnitsValue": 610,
+        "borderTopUnitsValue": 611,
+        "borderBottomUnitsValue": 612,
+        "marginLeftUnitsValue": 613,
+        "marginRightUnitsValue": 614,
+        "marginTopUnitsValue": 615,
+        "marginBottomUnitsValue": 616,
+        "paddingLeftUnitsValue": 617,
+        "paddingRightUnitsValue": 618,
+        "paddingTopUnitsValue": 619,
+        "paddingBottomUnitsValue": 620,
+        "gapHorizontalUnitsValue": 625,
+        "gapVerticalUnitsValue": 626,
+        "justifyItemsValue": 1045,
+        "layoutTypeValue": 1059,
+        "linkCornerRadius": 639,
+        "cornerRadiusTL": 640,
+        "cornerRadiusTR": 641,
+        "cornerRadiusBL": 642,
+        "cornerRadiusBR": 643
+      },
+      "source": "include/rive/generated/layout/layout_component_style_base.hpp"
+    },
+    "1057": {
+      "name": "LayoutNodeStyle",
+      "parent": "LayoutSizingStyle",
+      "properties": {
+        "width": 1066,
+        "height": 1067,
+        "fractionalWidth": 1057,
+        "fractionalHeight": 1058
+      },
+      "source": "include/rive/generated/layout/layout_node_style_base.hpp"
+    },
+    "1066": {
+      "name": "LayoutParticipant",
+      "parent": "LayoutNodeStyle",
+      "properties": {},
+      "source": "include/rive/generated/layout/layout_participant_base.hpp"
+    },
+    "1056": {
+      "name": "LayoutSizingStyle",
+      "parent": "Component",
+      "properties": {
+        "minWidth": 502,
+        "maxWidth": 500,
+        "minHeight": 503,
+        "maxHeight": 501,
+        "minWidthUnitsValue": 627,
+        "maxWidthUnitsValue": 629,
+        "minHeightUnitsValue": 628,
+        "maxHeightUnitsValue": 630,
+        "layoutWidthScaleType": 655,
+        "layoutHeightScaleType": 656,
+        "hugUnbounded": 451,
+        "widthUnitsValue": 607,
+        "heightUnitsValue": 608,
+        "justifySelfValue": 1046,
+        "displayValue": 596
+      },
+      "source": "include/rive/generated/layout/layout_sizing_style_base.hpp"
+    },
+    "508": {
+      "name": "NSlicedNode",
+      "parent": "Node",
+      "properties": {
+        "initialWidth": 697,
+        "initialHeight": 698,
+        "width": 699,
+        "height": 700
+      },
+      "source": "include/rive/generated/layout/n_sliced_node_base.hpp"
+    },
+    "493": {
+      "name": "NSlicer",
+      "parent": "ContainerComponent",
+      "properties": {},
+      "source": "include/rive/generated/layout/n_slicer_base.hpp"
+    },
+    "491": {
+      "name": "NSlicerTileMode",
+      "parent": "Component",
+      "properties": {
+        "patchIndex": 672,
+        "style": 673
+      },
+      "source": "include/rive/generated/layout/n_slicer_tile_mode_base.hpp"
+    },
+    "409": {
+      "name": "LayoutComponent",
+      "parent": "Drawable",
+      "properties": {
+        "clip": 196,
+        "width": 7,
+        "height": 8,
+        "styleId": 494,
+        "fractionalWidth": 706,
+        "fractionalHeight": 707
+      },
+      "source": "include/rive/generated/layout_component_base.hpp"
+    },
+    "93": {
+      "name": "NestedAnimation",
+      "parent": "ContainerComponent",
+      "properties": {
+        "animationId": 198
+      },
+      "source": "include/rive/generated/nested_animation_base.hpp"
+    },
+    "92": {
+      "name": "NestedArtboard",
+      "parent": "Drawable",
+      "properties": {
+        "artboardId": 197,
+        "dataBindPathIds": 582,
+        "isPaused": 895,
+        "speed": 907,
+        "quantize": 908,
+        "isStateful": 1014
+      },
+      "source": "include/rive/generated/nested_artboard_base.hpp"
+    },
+    "452": {
+      "name": "NestedArtboardLayout",
+      "parent": "NestedArtboard",
+      "properties": {
+        "instanceWidth": 663,
+        "instanceHeight": 664,
+        "instanceWidthUnitsValue": 665,
+        "instanceHeightUnitsValue": 666,
+        "instanceWidthScaleType": 667,
+        "instanceHeightScaleType": 668
+      },
+      "source": "include/rive/generated/nested_artboard_layout_base.hpp"
+    },
+    "451": {
+      "name": "NestedArtboardLeaf",
+      "parent": "NestedArtboard",
+      "properties": {
+        "fit": 538,
+        "fitToLayoutParent": 1098,
+        "alignmentX": 644,
+        "alignmentY": 645
+      },
+      "source": "include/rive/generated/nested_artboard_leaf_base.hpp"
+    },
+    "2": {
+      "name": "Node",
+      "parent": "TransformComponent",
+      "properties": {
+        "x": 13,
+        "xArtboard": 9,
+        "y": 14,
+        "yArtboard": 10,
+        "computedLocalX": 806,
+        "computedLocalY": 807,
+        "computedWorldX": 808,
+        "computedWorldY": 809,
+        "computedRootX": 864,
+        "computedRootY": 865,
+        "computedWidth": 810,
+        "computedHeight": 811
+      },
+      "source": "include/rive/generated/node_base.hpp"
+    },
+    "131": {
+      "name": "OpenUrlEvent",
+      "parent": "Event",
+      "properties": {
+        "url": 248,
+        "targetValue": 249
+      },
+      "source": "include/rive/generated/open_url_event_base.hpp"
+    },
+    "621": {
+      "name": "ScriptInputArtboard",
+      "parent": "CustomProperty",
+      "properties": {
+        "artboardId": 876
+      },
+      "source": "include/rive/generated/script_input_artboard_base.hpp"
+    },
+    "631": {
+      "name": "ScriptInputBoolean",
+      "parent": "CustomPropertyBoolean",
+      "properties": {},
+      "source": "include/rive/generated/script_input_boolean_base.hpp"
+    },
+    "626": {
+      "name": "ScriptInputColor",
+      "parent": "CustomPropertyColor",
+      "properties": {},
+      "source": "include/rive/generated/script_input_color_base.hpp"
+    },
+    "611": {
+      "name": "ScriptInputNumber",
+      "parent": "CustomPropertyNumber",
+      "properties": {},
+      "source": "include/rive/generated/script_input_number_base.hpp"
+    },
+    "627": {
+      "name": "ScriptInputString",
+      "parent": "CustomPropertyString",
+      "properties": {},
+      "source": "include/rive/generated/script_input_string_base.hpp"
+    },
+    "618": {
+      "name": "ScriptInputTrigger",
+      "parent": "CustomPropertyTrigger",
+      "properties": {},
+      "source": "include/rive/generated/script_input_trigger_base.hpp"
+    },
+    "612": {
+      "name": "ScriptInputViewModelProperty",
+      "parent": "CustomProperty",
+      "properties": {
+        "dataBindPathIds": 866
+      },
+      "source": "include/rive/generated/script_input_viewmodel_property_base.hpp"
+    },
+    "629": {
+      "name": "ScriptedDataConverter",
+      "parent": "DataConverter",
+      "properties": {
+        "scriptAssetId": 892
+      },
+      "source": "include/rive/generated/scripted/scripted_data_converter_base.hpp"
+    },
+    "603": {
+      "name": "ScriptedDrawable",
+      "parent": "Drawable",
+      "properties": {
+        "scriptAssetId": 848
+      },
+      "source": "include/rive/generated/scripted/scripted_drawable_base.hpp"
+    },
+    "972": {
+      "name": "ScriptedInterpolator",
+      "parent": "KeyFrameInterpolator",
+      "properties": {
+        "scriptAssetId": 1015
+      },
+      "source": "include/rive/generated/scripted/scripted_interpolator_base.hpp"
+    },
+    "637": {
+      "name": "ScriptedLayout",
+      "parent": "ScriptedDrawable",
+      "properties": {},
+      "source": "include/rive/generated/scripted/scripted_layout_base.hpp"
+    },
+    "640": {
+      "name": "ScriptedPathEffect",
+      "parent": "ContainerComponent",
+      "properties": {
+        "scriptAssetId": 912
+      },
+      "source": "include/rive/generated/scripted/scripted_path_effect_base.hpp"
+    },
+    "110": {
+      "name": "ScriptedTransition",
+      "parent": "ScriptedDrawable",
+      "properties": {
+        "activeComponentId": 273,
+        "listSource": 414
+      },
+      "source": "include/rive/generated/scripted/scripted_transition_base.hpp"
+    },
+    "153": {
+      "name": "SelectionStyle",
+      "parent": "Core",
+      "properties": {
+        "highlightColor": 447,
+        "cornerRadius": 448
+      },
+      "source": "include/rive/generated/selection_style_base.hpp"
+    },
+    "668": {
+      "name": "SemanticData",
+      "parent": "Component",
+      "properties": {
+        "role": 982,
+        "label": 983,
+        "value": 984,
+        "hint": 985,
+        "headingLevel": 986,
+        "traitFlags": 987,
+        "stateFlags": 988,
+        "isExpandable": 989,
+        "isSelectable": 990,
+        "isCheckable": 991,
+        "isToggleable": 992,
+        "isRequirable": 993,
+        "isEnablable": 994,
+        "isFocusable": 995,
+        "isExpanded": 996,
+        "isSelected": 997,
+        "isChecked": 998,
+        "isToggled": 1000,
+        "isRequired": 1001,
+        "isDisabled": 1002,
+        "isFocused": 1003,
+        "isHidden": 1004,
+        "isLiveRegion": 1005,
+        "isReadOnly": 1006,
+        "isModal": 1007,
+        "isObscured": 1008,
+        "isMultiline": 1009
+      },
+      "source": "include/rive/generated/semantic/semantic_data_base.hpp"
+    },
+    "42": {
+      "name": "ClippingShape",
+      "parent": "Component",
+      "properties": {
+        "sourceId": 92,
+        "fillRule": 93,
+        "isVisible": 94
+      },
+      "source": "include/rive/generated/shapes/clipping_shape_base.hpp"
+    },
+    "111": {
+      "name": "ContourMeshVertex",
+      "parent": "MeshVertex",
+      "properties": {},
+      "source": "include/rive/generated/shapes/contour_mesh_vertex_base.hpp"
+    },
+    "34": {
+      "name": "CubicAsymmetricVertex",
+      "parent": "CubicVertex",
+      "properties": {
+        "rotation": 79,
+        "inDistance": 80,
+        "outDistance": 81
+      },
+      "source": "include/rive/generated/shapes/cubic_asymmetric_vertex_base.hpp"
+    },
+    "6": {
+      "name": "CubicDetachedVertex",
+      "parent": "CubicVertex",
+      "properties": {
+        "inRotation": 84,
+        "inDistance": 85,
+        "outRotation": 86,
+        "outDistance": 87
+      },
+      "source": "include/rive/generated/shapes/cubic_detached_vertex_base.hpp"
+    },
+    "35": {
+      "name": "CubicMirroredVertex",
+      "parent": "CubicVertex",
+      "properties": {
+        "rotation": 82,
+        "distance": 83
+      },
+      "source": "include/rive/generated/shapes/cubic_mirrored_vertex_base.hpp"
+    },
+    "36": {
+      "name": "CubicVertex",
+      "parent": "PathVertex",
+      "properties": {},
+      "source": "include/rive/generated/shapes/cubic_vertex_base.hpp"
+    },
+    "4": {
+      "name": "Ellipse",
+      "parent": "ParametricPath",
+      "properties": {},
+      "source": "include/rive/generated/shapes/ellipse_base.hpp"
+    },
+    "100": {
+      "name": "Image",
+      "parent": "Drawable",
+      "properties": {
+        "assetId": 206,
+        "originX": 380,
+        "originY": 381,
+        "fit": 974,
+        "alignmentX": 975,
+        "alignmentY": 976,
+        "samplerFilter": 1076,
+        "samplerWrapX": 1077,
+        "samplerWrapY": 1078
+      },
+      "source": "include/rive/generated/shapes/image_base.hpp"
+    },
+    "619": {
+      "name": "ListPath",
+      "parent": "PointsCommonPath",
+      "properties": {
+        "listSource": 874
+      },
+      "source": "include/rive/generated/shapes/list_path_base.hpp"
+    },
+    "109": {
+      "name": "Mesh",
+      "parent": "ContainerComponent",
+      "properties": {
+        "triangleIndexBytes": 223
+      },
+      "source": "include/rive/generated/shapes/mesh_base.hpp"
+    },
+    "108": {
+      "name": "MeshVertex",
+      "parent": "Vertex",
+      "properties": {
+        "u": 215,
+        "v": 216
+      },
+      "source": "include/rive/generated/shapes/mesh_vertex_base.hpp"
+    },
+    "507": {
+      "name": "Dash",
+      "parent": "Component",
+      "properties": {
+        "length": 692,
+        "lengthIsPercentage": 693
+      },
+      "source": "include/rive/generated/shapes/paint/dash_base.hpp"
+    },
+    "506": {
+      "name": "DashPath",
+      "parent": "ContainerComponent",
+      "properties": {
+        "offset": 690,
+        "offsetIsPercentage": 691
+      },
+      "source": "include/rive/generated/shapes/paint/dash_path_base.hpp"
+    },
+    "533": {
+      "name": "Feather",
+      "parent": "ContainerComponent",
+      "properties": {
+        "spaceValue": 748,
+        "strength": 749,
+        "offsetX": 750,
+        "offsetY": 751,
+        "inner": 752
+      },
+      "source": "include/rive/generated/shapes/paint/feather_base.hpp"
+    },
+    "20": {
+      "name": "Fill",
+      "parent": "ShapePaint",
+      "properties": {
+        "fillRule": 40
+      },
+      "source": "include/rive/generated/shapes/paint/fill_base.hpp"
+    },
+    "19": {
+      "name": "GradientStop",
+      "parent": "Component",
+      "properties": {
+        "colorValue": 38,
+        "position": 39
+      },
+      "source": "include/rive/generated/shapes/paint/gradient_stop_base.hpp"
+    },
+    "645": {
+      "name": "GroupEffect",
+      "parent": "ContainerComponent",
+      "properties": {},
+      "source": "include/rive/generated/shapes/paint/group_effect_base.hpp"
+    },
+    "22": {
+      "name": "LinearGradient",
+      "parent": "ContainerComponent",
+      "properties": {
+        "startX": 42,
+        "startY": 33,
+        "endX": 34,
+        "endY": 35,
+        "opacity": 46
+      },
+      "source": "include/rive/generated/shapes/paint/linear_gradient_base.hpp"
+    },
+    "113": {
+      "name": "PaintImage",
+      "parent": "Component",
+      "properties": {
+        "imageAssetId": 415,
+        "imageSamplerFilter": 269,
+        "imageSamplerWrapX": 270,
+        "imageSamplerWrapY": 271,
+        "imageScaleX": 416,
+        "imageScaleY": 368,
+        "imageOffsetX": 369,
+        "imageOffsetY": 410,
+        "imageRotation": 411,
+        "imageSizeMode": 412
+      },
+      "source": "include/rive/generated/shapes/paint/paint_image_base.hpp"
+    },
+    "17": {
+      "name": "RadialGradient",
+      "parent": "LinearGradient",
+      "properties": {},
+      "source": "include/rive/generated/shapes/paint/radial_gradient_base.hpp"
+    },
+    "21": {
+      "name": "ShapePaint",
+      "parent": "ContainerComponent",
+      "properties": {
+        "isVisible": 41,
+        "blendModeValue": 747,
+        "additiveAmount": 452
+      },
+      "source": "include/rive/generated/shapes/paint/shape_paint_base.hpp"
+    },
+    "18": {
+      "name": "SolidColor",
+      "parent": "Component",
+      "properties": {
+        "colorValue": 37
+      },
+      "source": "include/rive/generated/shapes/paint/solid_color_base.hpp"
+    },
+    "24": {
+      "name": "Stroke",
+      "parent": "ShapePaint",
+      "properties": {
+        "thickness": 47,
+        "cap": 48,
+        "join": 49,
+        "transformAffectsStroke": 50,
+        "position": 470
+      },
+      "source": "include/rive/generated/shapes/paint/stroke_base.hpp"
+    },
+    "644": {
+      "name": "TargetEffect",
+      "parent": "Component",
+      "properties": {
+        "targetId": 922
+      },
+      "source": "include/rive/generated/shapes/paint/target_effect_base.hpp"
+    },
+    "47": {
+      "name": "TrimPath",
+      "parent": "Component",
+      "properties": {
+        "start": 114,
+        "end": 115,
+        "offset": 116,
+        "modeValue": 117
+      },
+      "source": "include/rive/generated/shapes/paint/trim_path_base.hpp"
+    },
+    "15": {
+      "name": "ParametricPath",
+      "parent": "Path",
+      "properties": {
+        "width": 20,
+        "height": 21,
+        "originX": 123,
+        "originY": 124
+      },
+      "source": "include/rive/generated/shapes/parametric_path_base.hpp"
+    },
+    "12": {
+      "name": "Path",
+      "parent": "Node",
+      "properties": {
+        "pathFlags": 128,
+        "isHole": 770
+      },
+      "source": "include/rive/generated/shapes/path_base.hpp"
+    },
+    "14": {
+      "name": "PathVertex",
+      "parent": "Vertex",
+      "properties": {},
+      "source": "include/rive/generated/shapes/path_vertex_base.hpp"
+    },
+    "620": {
+      "name": "PointsCommonPath",
+      "parent": "Path",
+      "properties": {
+        "isClosed": 32
+      },
+      "source": "include/rive/generated/shapes/points_common_path_base.hpp"
+    },
+    "16": {
+      "name": "PointsPath",
+      "parent": "PointsCommonPath",
+      "properties": {},
+      "source": "include/rive/generated/shapes/points_path_base.hpp"
+    },
+    "51": {
+      "name": "Polygon",
+      "parent": "ParametricPath",
+      "properties": {
+        "points": 125,
+        "cornerRadius": 126
+      },
+      "source": "include/rive/generated/shapes/polygon_base.hpp"
+    },
+    "7": {
+      "name": "Rectangle",
+      "parent": "ParametricPath",
+      "properties": {
+        "linkCornerRadius": 164,
+        "cornerRadiusTL": 31,
+        "cornerRadiusTR": 161,
+        "cornerRadiusBL": 162,
+        "cornerRadiusBR": 163
+      },
+      "source": "include/rive/generated/shapes/rectangle_base.hpp"
+    },
+    "3": {
+      "name": "Shape",
+      "parent": "Drawable",
+      "properties": {
+        "length": 781
+      },
+      "source": "include/rive/generated/shapes/shape_base.hpp"
+    },
+    "52": {
+      "name": "Star",
+      "parent": "Polygon",
+      "properties": {
+        "innerRadius": 127
+      },
+      "source": "include/rive/generated/shapes/star_base.hpp"
+    },
+    "5": {
+      "name": "StraightVertex",
+      "parent": "PathVertex",
+      "properties": {
+        "radius": 26
+      },
+      "source": "include/rive/generated/shapes/straight_vertex_base.hpp"
+    },
+    "8": {
+      "name": "Triangle",
+      "parent": "ParametricPath",
+      "properties": {},
+      "source": "include/rive/generated/shapes/triangle_base.hpp"
+    },
+    "107": {
+      "name": "Vertex",
+      "parent": "ContainerComponent",
+      "properties": {
+        "x": 24,
+        "y": 25
+      },
+      "source": "include/rive/generated/shapes/vertex_base.hpp"
+    },
+    "147": {
+      "name": "Solo",
+      "parent": "Node",
+      "properties": {
+        "activeComponentId": 296
+      },
+      "source": "include/rive/generated/solo_base.hpp"
+    },
+    "134": {
+      "name": "Text",
+      "parent": "Drawable",
+      "properties": {
+        "alignValue": 281,
+        "sizingValue": 284,
+        "overflowValue": 287,
+        "width": 285,
+        "height": 286,
+        "originX": 366,
+        "originY": 367,
+        "paragraphSpacing": 371,
+        "originValue": 377,
+        "wrapValue": 683,
+        "wordBreakValue": 446,
+        "verticalAlignValue": 685,
+        "fitFromBaseline": 703,
+        "fitFontSizeResizesBox": 315,
+        "textRunListSource": 932,
+        "verticalTrimValue": 1026,
+        "verticalTrimTopValue": 1027,
+        "verticalTrimBottomValue": 1028
+      },
+      "source": "include/rive/generated/text/text_base.hpp"
+    },
+    "547": {
+      "name": "TextFollowPathModifier",
+      "parent": "TextTargetModifier",
+      "properties": {
+        "radial": 779,
+        "orient": 782,
+        "start": 783,
+        "end": 784,
+        "strength": 785,
+        "offset": 786
+      },
+      "source": "include/rive/generated/text/text_follow_path_modifier_base.hpp"
+    },
+    "569": {
+      "name": "TextInput",
+      "parent": "Drawable",
+      "properties": {
+        "text": 817,
+        "selectionRadius": 818,
+        "multiline": 979,
+        "alignValue": 222,
+        "verticalAlignValue": 1094,
+        "obscured": 1095,
+        "selectAllOnFocus": 1099
+      },
+      "source": "include/rive/generated/text/text_input_base.hpp"
+    },
+    "571": {
+      "name": "TextInputCursor",
+      "parent": "TextInputDrawable",
+      "properties": {},
+      "source": "include/rive/generated/text/text_input_cursor_base.hpp"
+    },
+    "570": {
+      "name": "TextInputDrawable",
+      "parent": "Drawable",
+      "properties": {},
+      "source": "include/rive/generated/text/text_input_drawable_base.hpp"
+    },
+    "575": {
+      "name": "TextInputSelectedText",
+      "parent": "TextInputDrawable",
+      "properties": {},
+      "source": "include/rive/generated/text/text_input_selected_text_base.hpp"
+    },
+    "574": {
+      "name": "TextInputSelection",
+      "parent": "TextInputDrawable",
+      "properties": {},
+      "source": "include/rive/generated/text/text_input_selection_base.hpp"
+    },
+    "572": {
+      "name": "TextInputText",
+      "parent": "TextInputDrawable",
+      "properties": {},
+      "source": "include/rive/generated/text/text_input_text_base.hpp"
+    },
+    "160": {
+      "name": "TextModifier",
+      "parent": "Component",
+      "properties": {},
+      "source": "include/rive/generated/text/text_modifier_base.hpp"
+    },
+    "159": {
+      "name": "TextModifierGroup",
+      "parent": "ContainerComponent",
+      "properties": {
+        "modifierFlags": 335,
+        "originX": 328,
+        "originY": 329,
+        "opacity": 324,
+        "x": 322,
+        "y": 323,
+        "rotation": 332,
+        "scaleX": 330,
+        "scaleY": 331
+      },
+      "source": "include/rive/generated/text/text_modifier_group_base.hpp"
+    },
+    "158": {
+      "name": "TextModifierRange",
+      "parent": "ContainerComponent",
+      "properties": {
+        "modifyFrom": 327,
+        "modifyTo": 336,
+        "strength": 334,
+        "unitsValue": 316,
+        "typeValue": 325,
+        "modeValue": 326,
+        "clamp": 333,
+        "falloffFrom": 317,
+        "falloffTo": 318,
+        "offset": 319,
+        "runId": 378
+      },
+      "source": "include/rive/generated/text/text_modifier_range_base.hpp"
+    },
+    "161": {
+      "name": "TextShapeModifier",
+      "parent": "TextModifier",
+      "properties": {},
+      "source": "include/rive/generated/text/text_shape_modifier_base.hpp"
+    },
+    "144": {
+      "name": "TextStyleAxis",
+      "parent": "Component",
+      "properties": {
+        "tag": 289,
+        "axisValue": 288
+      },
+      "source": "include/rive/generated/text/text_style_axis_base.hpp"
+    },
+    "1069": {
+      "name": "TextStyleBackground",
+      "parent": "ContainerComponent",
+      "properties": {
+        "cornerRadius": 1071
+      },
+      "source": "include/rive/generated/text/text_style_background_base.hpp"
+    },
+    "573": {
+      "name": "TextStyle",
+      "parent": "ContainerComponent",
+      "properties": {
+        "fontSize": 274,
+        "lineHeight": 370,
+        "letterSpacing": 390,
+        "fontAssetId": 279
+      },
+      "source": "include/rive/generated/text/text_style_base.hpp"
+    },
+    "164": {
+      "name": "TextStyleFeature",
+      "parent": "Component",
+      "properties": {
+        "tag": 356,
+        "featureValue": 357
+      },
+      "source": "include/rive/generated/text/text_style_feature_base.hpp"
+    },
+    "137": {
+      "name": "TextStylePaint",
+      "parent": "TextStyle",
+      "properties": {},
+      "source": "include/rive/generated/text/text_style_paint_base.hpp"
+    },
+    "546": {
+      "name": "TextTargetModifier",
+      "parent": "TextModifier",
+      "properties": {
+        "targetId": 778
+      },
+      "source": "include/rive/generated/text/text_target_modifier_base.hpp"
+    },
+    "135": {
+      "name": "TextValueRun",
+      "parent": "Component",
+      "properties": {
+        "styleId": 272,
+        "text": 268
+      },
+      "source": "include/rive/generated/text/text_value_run_base.hpp"
+    },
+    "162": {
+      "name": "TextVariationModifier",
+      "parent": "TextShapeModifier",
+      "properties": {
+        "axisTag": 320,
+        "axisValue": 321
+      },
+      "source": "include/rive/generated/text/text_variation_modifier_base.hpp"
+    },
+    "38": {
+      "name": "TransformComponent",
+      "parent": "WorldTransformComponent",
+      "properties": {
+        "rotation": 15,
+        "scaleX": 16,
+        "scaleY": 17
+      },
+      "source": "include/rive/generated/transform_component_base.hpp"
+    },
+    "510": {
+      "name": "DataEnum",
+      "parent": "Core",
+      "properties": {},
+      "source": "include/rive/generated/viewmodel/data_enum_base.hpp"
+    },
+    "438": {
+      "name": "DataEnumCustom",
+      "parent": "DataEnum",
+      "properties": {
+        "name": 572
+      },
+      "source": "include/rive/generated/viewmodel/data_enum_custom_base.hpp"
+    },
+    "512": {
+      "name": "DataEnumSystem",
+      "parent": "DataEnum",
+      "properties": {
+        "enumType": 709
+      },
+      "source": "include/rive/generated/viewmodel/data_enum_system_base.hpp"
+    },
+    "445": {
+      "name": "DataEnumValue",
+      "parent": "Core",
+      "properties": {
+        "key": 578,
+        "value": 579
+      },
+      "source": "include/rive/generated/viewmodel/data_enum_value_base.hpp"
+    },
+    "435": {
+      "name": "ViewModel",
+      "parent": "ViewModelComponent",
+      "properties": {
+        "viewModelType": 981
+      },
+      "source": "include/rive/generated/viewmodel/viewmodel_base.hpp"
+    },
+    "429": {
+      "name": "ViewModelComponent",
+      "parent": "Core",
+      "properties": {
+        "name": 557
+      },
+      "source": "include/rive/generated/viewmodel/viewmodel_component_base.hpp"
+    },
+    "599": {
+      "name": "ViewModelInstanceArtboard",
+      "parent": "ViewModelInstanceValue",
+      "properties": {
+        "propertyValue": 846
+      },
+      "source": "include/rive/generated/viewmodel/viewmodel_instance_artboard_base.hpp"
+    },
+    "586": {
+      "name": "ViewModelInstanceAsset",
+      "parent": "ViewModelInstanceValue",
+      "properties": {
+        "propertyValue": 824
+      },
+      "source": "include/rive/generated/viewmodel/viewmodel_instance_asset_base.hpp"
+    },
+    "1044": {
+      "name": "ViewModelInstanceAssetBlob",
+      "parent": "ViewModelInstanceAsset",
+      "properties": {},
+      "source": "include/rive/generated/viewmodel/viewmodel_instance_asset_blob_base.hpp"
+    },
+    "1035": {
+      "name": "ViewModelInstanceAssetFont",
+      "parent": "ViewModelInstanceAsset",
+      "properties": {},
+      "source": "include/rive/generated/viewmodel/viewmodel_instance_asset_font_base.hpp"
+    },
+    "587": {
+      "name": "ViewModelInstanceAssetImage",
+      "parent": "ViewModelInstanceAsset",
+      "properties": {},
+      "source": "include/rive/generated/viewmodel/viewmodel_instance_asset_image_base.hpp"
+    },
+    "437": {
+      "name": "ViewModelInstance",
+      "parent": "ContainerComponent",
+      "properties": {
+        "viewModelId": 566
+      },
+      "source": "include/rive/generated/viewmodel/viewmodel_instance_base.hpp"
+    },
+    "449": {
+      "name": "ViewModelInstanceBoolean",
+      "parent": "ViewModelInstanceValue",
+      "properties": {
+        "propertyValue": 593
+      },
+      "source": "include/rive/generated/viewmodel/viewmodel_instance_boolean_base.hpp"
+    },
+    "426": {
+      "name": "ViewModelInstanceColor",
+      "parent": "ViewModelInstanceValue",
+      "properties": {
+        "propertyValue": 555
+      },
+      "source": "include/rive/generated/viewmodel/viewmodel_instance_color_base.hpp"
+    },
+    "432": {
+      "name": "ViewModelInstanceEnum",
+      "parent": "ViewModelInstanceValue",
+      "properties": {
+        "propertyValue": 560
+      },
+      "source": "include/rive/generated/viewmodel/viewmodel_instance_enum_base.hpp"
+    },
+    "441": {
+      "name": "ViewModelInstanceList",
+      "parent": "ViewModelInstanceValue",
+      "properties": {
+        "listSource": 966
+      },
+      "source": "include/rive/generated/viewmodel/viewmodel_instance_list_base.hpp"
+    },
+    "427": {
+      "name": "ViewModelInstanceListItem",
+      "parent": "Core",
+      "properties": {
+        "viewModelId": 549,
+        "viewModelInstanceId": 550
+      },
+      "source": "include/rive/generated/viewmodel/viewmodel_instance_list_item_base.hpp"
+    },
+    "442": {
+      "name": "ViewModelInstanceNumber",
+      "parent": "ViewModelInstanceValue",
+      "properties": {
+        "propertyValue": 575
+      },
+      "source": "include/rive/generated/viewmodel/viewmodel_instance_number_base.hpp"
+    },
+    "433": {
+      "name": "ViewModelInstanceString",
+      "parent": "ViewModelInstanceValue",
+      "properties": {
+        "propertyValue": 561
+      },
+      "source": "include/rive/generated/viewmodel/viewmodel_instance_string_base.hpp"
+    },
+    "565": {
+      "name": "ViewModelInstanceSymbol",
+      "parent": "ViewModelInstanceValue",
+      "properties": {},
+      "source": "include/rive/generated/viewmodel/viewmodel_instance_symbol_base.hpp"
+    },
+    "566": {
+      "name": "ViewModelInstanceSymbolListIndex",
+      "parent": "ViewModelInstanceSymbol",
+      "properties": {
+        "propertyValue": 814
+      },
+      "source": "include/rive/generated/viewmodel/viewmodel_instance_symbol_list_index_base.hpp"
+    },
+    "501": {
+      "name": "ViewModelInstanceTrigger",
+      "parent": "ViewModelInstanceValue",
+      "properties": {
+        "propertyValue": 687,
+        "fire": 1016
+      },
+      "source": "include/rive/generated/viewmodel/viewmodel_instance_trigger_base.hpp"
+    },
+    "428": {
+      "name": "ViewModelInstanceValue",
+      "parent": "Component",
+      "properties": {
+        "viewModelPropertyId": 554
+      },
+      "source": "include/rive/generated/viewmodel/viewmodel_instance_value_base.hpp"
+    },
+    "444": {
+      "name": "ViewModelInstanceViewModel",
+      "parent": "ViewModelInstanceValue",
+      "properties": {
+        "propertyValue": 577
+      },
+      "source": "include/rive/generated/viewmodel/viewmodel_instance_viewmodel_base.hpp"
+    },
+    "598": {
+      "name": "ViewModelPropertyArtboard",
+      "parent": "ViewModelProperty",
+      "properties": {},
+      "source": "include/rive/generated/viewmodel/viewmodel_property_artboard_base.hpp"
+    },
+    "584": {
+      "name": "ViewModelPropertyAsset",
+      "parent": "ViewModelProperty",
+      "properties": {},
+      "source": "include/rive/generated/viewmodel/viewmodel_property_asset_base.hpp"
+    },
+    "1043": {
+      "name": "ViewModelPropertyAssetBlob",
+      "parent": "ViewModelPropertyAsset",
+      "properties": {},
+      "source": "include/rive/generated/viewmodel/viewmodel_property_asset_blob_base.hpp"
+    },
+    "1034": {
+      "name": "ViewModelPropertyAssetFont",
+      "parent": "ViewModelPropertyAsset",
+      "properties": {},
+      "source": "include/rive/generated/viewmodel/viewmodel_property_asset_font_base.hpp"
+    },
+    "585": {
+      "name": "ViewModelPropertyAssetImage",
+      "parent": "ViewModelPropertyAsset",
+      "properties": {},
+      "source": "include/rive/generated/viewmodel/viewmodel_property_asset_image_base.hpp"
+    },
+    "430": {
+      "name": "ViewModelProperty",
+      "parent": "ViewModelComponent",
+      "properties": {
+        "symbolTypeValue": 875,
+        "componentProps": 957
+      },
+      "source": "include/rive/generated/viewmodel/viewmodel_property_base.hpp"
+    },
+    "448": {
+      "name": "ViewModelPropertyBoolean",
+      "parent": "ViewModelProperty",
+      "properties": {},
+      "source": "include/rive/generated/viewmodel/viewmodel_property_boolean_base.hpp"
+    },
+    "440": {
+      "name": "ViewModelPropertyColor",
+      "parent": "ViewModelProperty",
+      "properties": {},
+      "source": "include/rive/generated/viewmodel/viewmodel_property_color_base.hpp"
+    },
+    "509": {
+      "name": "ViewModelPropertyEnum",
+      "parent": "ViewModelProperty",
+      "properties": {},
+      "source": "include/rive/generated/viewmodel/viewmodel_property_enum_base.hpp"
+    },
+    "439": {
+      "name": "ViewModelPropertyEnumCustom",
+      "parent": "ViewModelPropertyEnum",
+      "properties": {
+        "enumId": 574
+      },
+      "source": "include/rive/generated/viewmodel/viewmodel_property_enum_custom_base.hpp"
+    },
+    "511": {
+      "name": "ViewModelPropertyEnumSystem",
+      "parent": "ViewModelPropertyEnum",
+      "properties": {
+        "enumType": 708
+      },
+      "source": "include/rive/generated/viewmodel/viewmodel_property_enum_system_base.hpp"
+    },
+    "434": {
+      "name": "ViewModelPropertyList",
+      "parent": "ViewModelProperty",
+      "properties": {},
+      "source": "include/rive/generated/viewmodel/viewmodel_property_list_base.hpp"
+    },
+    "431": {
+      "name": "ViewModelPropertyNumber",
+      "parent": "ViewModelProperty",
+      "properties": {},
+      "source": "include/rive/generated/viewmodel/viewmodel_property_number_base.hpp"
+    },
+    "443": {
+      "name": "ViewModelPropertyString",
+      "parent": "ViewModelProperty",
+      "properties": {},
+      "source": "include/rive/generated/viewmodel/viewmodel_property_string_base.hpp"
+    },
+    "563": {
+      "name": "ViewModelPropertySymbol",
+      "parent": "ViewModelProperty",
+      "properties": {},
+      "source": "include/rive/generated/viewmodel/viewmodel_property_symbol_base.hpp"
+    },
+    "564": {
+      "name": "ViewModelPropertySymbolListIndex",
+      "parent": "ViewModelPropertySymbol",
+      "properties": {},
+      "source": "include/rive/generated/viewmodel/viewmodel_property_symbol_list_index_base.hpp"
+    },
+    "502": {
+      "name": "ViewModelPropertyTrigger",
+      "parent": "ViewModelProperty",
+      "properties": {},
+      "source": "include/rive/generated/viewmodel/viewmodel_property_trigger_base.hpp"
+    },
+    "436": {
+      "name": "ViewModelPropertyViewModel",
+      "parent": "ViewModelProperty",
+      "properties": {
+        "viewModelReferenceId": 565
+      },
+      "source": "include/rive/generated/viewmodel/viewmodel_property_viewmodel_base.hpp"
+    },
+    "91": {
+      "name": "WorldTransformComponent",
+      "parent": "ContainerComponent",
+      "properties": {
+        "opacity": 18
+      },
+      "source": "include/rive/generated/world_transform_component_base.hpp"
+    }
+  },
+  "properties": {
+    "292": {
+      "name": "speed",
+      "wire": "float"
+    },
+    "55": {
+      "name": "name",
+      "wire": "string"
+    },
+    "149": {
+      "name": "animationId",
+      "wire": "uint"
+    },
+    "166": {
+      "name": "value",
+      "wire": "float"
+    },
+    "165": {
+      "name": "animationId",
+      "wire": "uint"
+    },
+    "168": {
+      "name": "inputId",
+      "wire": "uint"
+    },
+    "297": {
+      "name": "mixValue",
+      "wire": "float"
+    },
+    "298": {
+      "name": "blendSource",
+      "wire": "uint"
+    },
+    "167": {
+      "name": "inputId",
+      "wire": "uint"
+    },
+    "171": {
+      "name": "exitBlendAnimationId",
+      "wire": "uint"
+    },
+    "63": {
+      "name": "x1",
+      "wire": "float"
+    },
+    "64": {
+      "name": "y1",
+      "wire": "float"
+    },
+    "65": {
+      "name": "x2",
+      "wire": "float"
+    },
+    "66": {
+      "name": "y2",
+      "wire": "float"
+    },
+    "337": {
+      "name": "x1",
+      "wire": "float"
+    },
+    "338": {
+      "name": "y1",
+      "wire": "float"
+    },
+    "339": {
+      "name": "x2",
+      "wire": "float"
+    },
+    "340": {
+      "name": "y2",
+      "wire": "float"
+    },
+    "405": {
+      "name": "easingValue",
+      "wire": "uint"
+    },
+    "406": {
+      "name": "amplitude",
+      "wire": "float"
+    },
+    "407": {
+      "name": "period",
+      "wire": "float"
+    },
+    "952": {
+      "name": "targetId",
+      "wire": "uint"
+    },
+    "1011": {
+      "name": "traversalKind",
+      "wire": "uint"
+    },
+    "68": {
+      "name": "interpolationType",
+      "wire": "uint"
+    },
+    "69": {
+      "name": "interpolatorId",
+      "wire": "uint"
+    },
+    "51": {
+      "name": "objectId",
+      "wire": "uint"
+    },
+    "53": {
+      "name": "propertyKey",
+      "wire": "uint"
+    },
+    "67": {
+      "name": "frame",
+      "wire": "uint"
+    },
+    "181": {
+      "name": "value",
+      "wire": "bool"
+    },
+    "88": {
+      "name": "value",
+      "wire": "color"
+    },
+    "70": {
+      "name": "value",
+      "wire": "float"
+    },
+    "122": {
+      "name": "value",
+      "wire": "uint"
+    },
+    "1068": {
+      "name": "value",
+      "wire": "int"
+    },
+    "280": {
+      "name": "value",
+      "wire": "string"
+    },
+    "631": {
+      "name": "value",
+      "wire": "uint"
+    },
+    "536": {
+      "name": "flags",
+      "wire": "uint"
+    },
+    "56": {
+      "name": "fps",
+      "wire": "uint"
+    },
+    "57": {
+      "name": "duration",
+      "wire": "uint"
+    },
+    "58": {
+      "name": "speed",
+      "wire": "float"
+    },
+    "59": {
+      "name": "loopValue",
+      "wire": "uint"
+    },
+    "60": {
+      "name": "workStart",
+      "wire": "uint"
+    },
+    "61": {
+      "name": "workEnd",
+      "wire": "uint"
+    },
+    "62": {
+      "name": "enableWorkArea",
+      "wire": "bool"
+    },
+    "376": {
+      "name": "quantize",
+      "wire": "bool"
+    },
+    "980": {
+      "name": "flags",
+      "wire": "uint"
+    },
+    "240": {
+      "name": "targetId",
+      "wire": "uint"
+    },
+    "541": {
+      "name": "preserveOffset",
+      "wire": "bool"
+    },
+    "228": {
+      "name": "value",
+      "wire": "uint"
+    },
+    "389": {
+      "name": "eventId",
+      "wire": "uint"
+    },
+    "227": {
+      "name": "inputId",
+      "wire": "uint"
+    },
+    "400": {
+      "name": "nestedInputId",
+      "wire": "uint"
+    },
+    "229": {
+      "name": "value",
+      "wire": "float"
+    },
+    "965": {
+      "name": "listenerTypeValue",
+      "wire": "uint"
+    },
+    "962": {
+      "name": "eventId",
+      "wire": "uint"
+    },
+    "468": {
+      "name": "pointerButtonValue",
+      "wire": "uint"
+    },
+    "963": {
+      "name": "viewModelPathIds",
+      "wire": "bytes"
+    },
+    "453": {
+      "name": "inputValue",
+      "wire": "uint"
+    },
+    "454": {
+      "name": "inputValueIndex",
+      "wire": "uint"
+    },
+    "238": {
+      "name": "nestedValue",
+      "wire": "bool"
+    },
+    "237": {
+      "name": "inputId",
+      "wire": "uint"
+    },
+    "200": {
+      "name": "mix",
+      "wire": "float"
+    },
+    "239": {
+      "name": "nestedValue",
+      "wire": "float"
+    },
+    "202": {
+      "name": "time",
+      "wire": "float"
+    },
+    "199": {
+      "name": "speed",
+      "wire": "float"
+    },
+    "201": {
+      "name": "isPlaying",
+      "wire": "bool"
+    },
+    "930": {
+      "name": "scriptAssetId",
+      "wire": "uint"
+    },
+    "931": {
+      "name": "scriptAssetId",
+      "wire": "uint"
+    },
+    "141": {
+      "name": "value",
+      "wire": "bool"
+    },
+    "138": {
+      "name": "name",
+      "wire": "string"
+    },
+    "393": {
+      "name": "occursValue",
+      "wire": "uint"
+    },
+    "392": {
+      "name": "eventId",
+      "wire": "uint"
+    },
+    "871": {
+      "name": "viewModelPathIds",
+      "wire": "bytes"
+    },
+    "224": {
+      "name": "targetId",
+      "wire": "uint"
+    },
+    "225": {
+      "name": "listenerTypeValue",
+      "wire": "uint"
+    },
+    "399": {
+      "name": "eventId",
+      "wire": "uint"
+    },
+    "868": {
+      "name": "viewModelPathIds",
+      "wire": "bytes"
+    },
+    "140": {
+      "name": "value",
+      "wire": "float"
+    },
+    "151": {
+      "name": "stateToId",
+      "wire": "uint"
+    },
+    "152": {
+      "name": "flags",
+      "wire": "uint"
+    },
+    "158": {
+      "name": "duration",
+      "wire": "uint"
+    },
+    "160": {
+      "name": "exitTime",
+      "wire": "uint"
+    },
+    "349": {
+      "name": "interpolationType",
+      "wire": "uint"
+    },
+    "350": {
+      "name": "interpolatorId",
+      "wire": "uint"
+    },
+    "537": {
+      "name": "randomWeight",
+      "wire": "uint"
+    },
+    "155": {
+      "name": "inputId",
+      "wire": "uint"
+    },
+    "157": {
+      "name": "value",
+      "wire": "float"
+    },
+    "647": {
+      "name": "value",
+      "wire": "bool"
+    },
+    "651": {
+      "name": "value",
+      "wire": "color"
+    },
+    "156": {
+      "name": "opValue",
+      "wire": "uint"
+    },
+    "653": {
+      "name": "value",
+      "wire": "uint"
+    },
+    "652": {
+      "name": "value",
+      "wire": "float"
+    },
+    "654": {
+      "name": "value",
+      "wire": "string"
+    },
+    "689": {
+      "name": "value",
+      "wire": "uint"
+    },
+    "650": {
+      "name": "opValue",
+      "wire": "uint"
+    },
+    "11": {
+      "name": "originX",
+      "wire": "float"
+    },
+    "12": {
+      "name": "originY",
+      "wire": "float"
+    },
+    "236": {
+      "name": "defaultStateMachineId",
+      "wire": "uint"
+    },
+    "583": {
+      "name": "viewModelId",
+      "wire": "uint"
+    },
+    "800": {
+      "name": "listSource",
+      "wire": "uint"
+    },
+    "934": {
+      "name": "artboardId",
+      "wire": "uint"
+    },
+    "935": {
+      "name": "viewModelId",
+      "wire": "uint"
+    },
+    "203": {
+      "name": "name",
+      "wire": "string"
+    },
+    "207": {
+      "name": "height",
+      "wire": "float"
+    },
+    "208": {
+      "name": "width",
+      "wire": "float"
+    },
+    "530": {
+      "name": "volume",
+      "wire": "float"
+    },
+    "204": {
+      "name": "assetId",
+      "wire": "uint"
+    },
+    "359": {
+      "name": "cdnUuid",
+      "wire": "bytes"
+    },
+    "362": {
+      "name": "cdnBaseUrl",
+      "wire": "string"
+    },
+    "212": {
+      "name": "bytes",
+      "wire": "bytes"
+    },
+    "911": {
+      "name": "signature",
+      "wire": "bytes"
+    },
+    "1073": {
+      "name": "samplerFilter",
+      "wire": "uint"
+    },
+    "1074": {
+      "name": "samplerWrapX",
+      "wire": "uint"
+    },
+    "1075": {
+      "name": "samplerWrapY",
+      "wire": "uint"
+    },
+    "893": {
+      "name": "generatorFunctionRef",
+      "wire": "uint"
+    },
+    "914": {
+      "name": "isModule",
+      "wire": "bool"
+    },
+    "1022": {
+      "name": "serializedImplementedMethods",
+      "wire": "uint"
+    },
+    "1087": {
+      "name": "language",
+      "wire": "uint"
+    },
+    "926": {
+      "name": "folderPath",
+      "wire": "string"
+    },
+    "408": {
+      "name": "assetId",
+      "wire": "uint"
+    },
+    "417": {
+      "name": "resolution",
+      "wire": "float"
+    },
+    "418": {
+      "name": "cacheFlags",
+      "wire": "uint"
+    },
+    "89": {
+      "name": "length",
+      "wire": "float"
+    },
+    "110": {
+      "name": "inValues",
+      "wire": "uint"
+    },
+    "111": {
+      "name": "inIndices",
+      "wire": "uint"
+    },
+    "112": {
+      "name": "outValues",
+      "wire": "uint"
+    },
+    "113": {
+      "name": "outIndices",
+      "wire": "uint"
+    },
+    "90": {
+      "name": "x",
+      "wire": "float"
+    },
+    "91": {
+      "name": "y",
+      "wire": "float"
+    },
+    "104": {
+      "name": "xx",
+      "wire": "float"
+    },
+    "105": {
+      "name": "yx",
+      "wire": "float"
+    },
+    "106": {
+      "name": "xy",
+      "wire": "float"
+    },
+    "107": {
+      "name": "yy",
+      "wire": "float"
+    },
+    "108": {
+      "name": "tx",
+      "wire": "float"
+    },
+    "109": {
+      "name": "ty",
+      "wire": "float"
+    },
+    "95": {
+      "name": "boneId",
+      "wire": "uint"
+    },
+    "96": {
+      "name": "xx",
+      "wire": "float"
+    },
+    "97": {
+      "name": "yx",
+      "wire": "float"
+    },
+    "98": {
+      "name": "xy",
+      "wire": "float"
+    },
+    "99": {
+      "name": "yy",
+      "wire": "float"
+    },
+    "100": {
+      "name": "tx",
+      "wire": "float"
+    },
+    "101": {
+      "name": "ty",
+      "wire": "float"
+    },
+    "102": {
+      "name": "values",
+      "wire": "uint"
+    },
+    "103": {
+      "name": "indices",
+      "wire": "uint"
+    },
+    "4": {
+      "name": "name",
+      "wire": "string"
+    },
+    "5": {
+      "name": "parentId",
+      "wire": "uint"
+    },
+    "1040": {
+      "name": "originX",
+      "wire": "float"
+    },
+    "1041": {
+      "name": "originY",
+      "wire": "float"
+    },
+    "172": {
+      "name": "strength",
+      "wire": "float"
+    },
+    "177": {
+      "name": "distance",
+      "wire": "float"
+    },
+    "178": {
+      "name": "modeValue",
+      "wire": "uint"
+    },
+    "722": {
+      "name": "directionValue",
+      "wire": "uint"
+    },
+    "363": {
+      "name": "distance",
+      "wire": "float"
+    },
+    "364": {
+      "name": "orient",
+      "wire": "bool"
+    },
+    "365": {
+      "name": "offset",
+      "wire": "bool"
+    },
+    "174": {
+      "name": "invertDirection",
+      "wire": "bool"
+    },
+    "175": {
+      "name": "parentBoneCount",
+      "wire": "uint"
+    },
+    "888": {
+      "name": "distanceEnd",
+      "wire": "float"
+    },
+    "889": {
+      "name": "distanceOffset",
+      "wire": "float"
+    },
+    "728": {
+      "name": "friction",
+      "wire": "float"
+    },
+    "729": {
+      "name": "speedMultiplier",
+      "wire": "float"
+    },
+    "730": {
+      "name": "elasticFactor",
+      "wire": "float"
+    },
+    "725": {
+      "name": "scrollConstraintId",
+      "wire": "uint"
+    },
+    "734": {
+      "name": "autoSize",
+      "wire": "bool"
+    },
+    "759": {
+      "name": "scrollOffsetX",
+      "wire": "float"
+    },
+    "760": {
+      "name": "scrollOffsetY",
+      "wire": "float"
+    },
+    "724": {
+      "name": "snap",
+      "wire": "bool"
+    },
+    "727": {
+      "name": "physicsTypeValue",
+      "wire": "uint"
+    },
+    "726": {
+      "name": "physicsId",
+      "wire": "uint"
+    },
+    "850": {
+      "name": "virtualize",
+      "wire": "bool"
+    },
+    "221": {
+      "name": "virtualizeBuffer",
+      "wire": "uint"
+    },
+    "851": {
+      "name": "infinite",
+      "wire": "bool"
+    },
+    "891": {
+      "name": "interactive",
+      "wire": "bool"
+    },
+    "894": {
+      "name": "threshold",
+      "wire": "float"
+    },
+    "1029": {
+      "name": "dragMultiplier",
+      "wire": "float"
+    },
+    "466": {
+      "name": "scrollFlags",
+      "wire": "uint"
+    },
+    "731": {
+      "name": "constraintId",
+      "wire": "uint"
+    },
+    "173": {
+      "name": "targetId",
+      "wire": "uint"
+    },
+    "195": {
+      "name": "minMaxSpaceValue",
+      "wire": "uint"
+    },
+    "182": {
+      "name": "copyFactor",
+      "wire": "float"
+    },
+    "183": {
+      "name": "minValue",
+      "wire": "float"
+    },
+    "184": {
+      "name": "maxValue",
+      "wire": "float"
+    },
+    "188": {
+      "name": "offset",
+      "wire": "bool"
+    },
+    "189": {
+      "name": "doesCopy",
+      "wire": "bool"
+    },
+    "190": {
+      "name": "min",
+      "wire": "bool"
+    },
+    "191": {
+      "name": "max",
+      "wire": "bool"
+    },
+    "185": {
+      "name": "copyFactorY",
+      "wire": "float"
+    },
+    "186": {
+      "name": "minValueY",
+      "wire": "float"
+    },
+    "187": {
+      "name": "maxValueY",
+      "wire": "float"
+    },
+    "192": {
+      "name": "doesCopyY",
+      "wire": "bool"
+    },
+    "193": {
+      "name": "minY",
+      "wire": "bool"
+    },
+    "194": {
+      "name": "maxY",
+      "wire": "bool"
+    },
+    "372": {
+      "name": "originX",
+      "wire": "float"
+    },
+    "373": {
+      "name": "originY",
+      "wire": "float"
+    },
+    "179": {
+      "name": "sourceSpaceValue",
+      "wire": "uint"
+    },
+    "180": {
+      "name": "destSpaceValue",
+      "wire": "uint"
+    },
+    "449": {
+      "name": "nameId",
+      "wire": "uint"
+    },
+    "245": {
+      "name": "propertyValue",
+      "wire": "bool"
+    },
+    "836": {
+      "name": "propertyValue",
+      "wire": "color"
+    },
+    "872": {
+      "name": "propertyValue",
+      "wire": "uint"
+    },
+    "873": {
+      "name": "enumId",
+      "wire": "uint"
+    },
+    "243": {
+      "name": "propertyValue",
+      "wire": "float"
+    },
+    "246": {
+      "name": "propertyValue",
+      "wire": "string"
+    },
+    "870": {
+      "name": "propertyValue",
+      "wire": "uint"
+    },
+    "634": {
+      "name": "propertyValue",
+      "wire": "bool"
+    },
+    "638": {
+      "name": "propertyValue",
+      "wire": "color"
+    },
+    "637": {
+      "name": "propertyValue",
+      "wire": "uint"
+    },
+    "823": {
+      "name": "propertyValue",
+      "wire": "uint"
+    },
+    "686": {
+      "name": "propertyValue",
+      "wire": "uint"
+    },
+    "835": {
+      "name": "propertyValue",
+      "wire": "uint"
+    },
+    "636": {
+      "name": "propertyValue",
+      "wire": "float"
+    },
+    "635": {
+      "name": "propertyValue",
+      "wire": "string"
+    },
+    "662": {
+      "name": "name",
+      "wire": "string"
+    },
+    "887": {
+      "name": "randomModeValue",
+      "wire": "uint"
+    },
+    "679": {
+      "name": "converterId",
+      "wire": "uint"
+    },
+    "757": {
+      "name": "interpolationType",
+      "wire": "uint"
+    },
+    "758": {
+      "name": "interpolatorId",
+      "wire": "uint"
+    },
+    "756": {
+      "name": "duration",
+      "wire": "float"
+    },
+    "816": {
+      "name": "viewModelId",
+      "wire": "uint"
+    },
+    "682": {
+      "name": "operationType",
+      "wire": "uint"
+    },
+    "681": {
+      "name": "operationValue",
+      "wire": "float"
+    },
+    "711": {
+      "name": "sourcePathIds",
+      "wire": "bytes"
+    },
+    "713": {
+      "name": "interpolationType",
+      "wire": "uint"
+    },
+    "714": {
+      "name": "interpolatorId",
+      "wire": "uint"
+    },
+    "715": {
+      "name": "flags",
+      "wire": "uint"
+    },
+    "716": {
+      "name": "minInput",
+      "wire": "float"
+    },
+    "717": {
+      "name": "maxInput",
+      "wire": "float"
+    },
+    "718": {
+      "name": "minOutput",
+      "wire": "float"
+    },
+    "719": {
+      "name": "maxOutput",
+      "wire": "float"
+    },
+    "669": {
+      "name": "decimals",
+      "wire": "uint"
+    },
+    "743": {
+      "name": "length",
+      "wire": "uint"
+    },
+    "744": {
+      "name": "text",
+      "wire": "string"
+    },
+    "745": {
+      "name": "padType",
+      "wire": "uint"
+    },
+    "746": {
+      "name": "trimType",
+      "wire": "uint"
+    },
+    "764": {
+      "name": "flags",
+      "wire": "uint"
+    },
+    "765": {
+      "name": "decimals",
+      "wire": "uint"
+    },
+    "766": {
+      "name": "colorFormat",
+      "wire": "string"
+    },
+    "776": {
+      "name": "functionType",
+      "wire": "uint"
+    },
+    "775": {
+      "name": "operationType",
+      "wire": "uint"
+    },
+    "777": {
+      "name": "operationValue",
+      "wire": "float"
+    },
+    "586": {
+      "name": "propertyKey",
+      "wire": "uint"
+    },
+    "587": {
+      "name": "flags",
+      "wire": "uint"
+    },
+    "660": {
+      "name": "converterId",
+      "wire": "uint"
+    },
+    "588": {
+      "name": "sourcePathIds",
+      "wire": "bytes"
+    },
+    "920": {
+      "name": "path",
+      "wire": "bytes"
+    },
+    "921": {
+      "name": "isRelative",
+      "wire": "bool"
+    },
+    "121": {
+      "name": "drawTargetId",
+      "wire": "uint"
+    },
+    "119": {
+      "name": "drawableId",
+      "wire": "uint"
+    },
+    "120": {
+      "name": "placementValue",
+      "wire": "uint"
+    },
+    "23": {
+      "name": "blendModeValue",
+      "wire": "uint"
+    },
+    "450": {
+      "name": "additiveAmount",
+      "wire": "uint"
+    },
+    "129": {
+      "name": "drawableFlags",
+      "wire": "uint"
+    },
+    "1033": {
+      "name": "focusFlags",
+      "wire": "uint"
+    },
+    "956": {
+      "name": "edgeBehaviorValue",
+      "wire": "uint"
+    },
+    "1021": {
+      "name": "kind",
+      "wire": "uint"
+    },
+    "1018": {
+      "name": "mapping",
+      "wire": "uint"
+    },
+    "1019": {
+      "name": "inputIndex",
+      "wire": "uint"
+    },
+    "1020": {
+      "name": "buttonPhase",
+      "wire": "uint"
+    },
+    "971": {
+      "name": "keyType",
+      "wire": "uint"
+    },
+    "972": {
+      "name": "keyPhase",
+      "wire": "uint"
+    },
+    "973": {
+      "name": "modifiers",
+      "wire": "uint"
+    },
+    "1010": {
+      "name": "actionType",
+      "wire": "uint"
+    },
+    "299": {
+      "name": "x",
+      "wire": "float"
+    },
+    "300": {
+      "name": "y",
+      "wire": "float"
+    },
+    "303": {
+      "name": "posX",
+      "wire": "float"
+    },
+    "304": {
+      "name": "posY",
+      "wire": "float"
+    },
+    "307": {
+      "name": "originX",
+      "wire": "float"
+    },
+    "308": {
+      "name": "originY",
+      "wire": "float"
+    },
+    "305": {
+      "name": "width",
+      "wire": "float"
+    },
+    "306": {
+      "name": "height",
+      "wire": "float"
+    },
+    "301": {
+      "name": "xId",
+      "wire": "uint"
+    },
+    "302": {
+      "name": "yId",
+      "wire": "uint"
+    },
+    "312": {
+      "name": "joystickFlags",
+      "wire": "uint"
+    },
+    "313": {
+      "name": "handleSourceId",
+      "wire": "uint"
+    },
+    "459": {
+      "name": "sourceId",
+      "wire": "uint"
+    },
+    "460": {
+      "name": "maskFlags",
+      "wire": "uint"
+    },
+    "458": {
+      "name": "resolution",
+      "wire": "float"
+    },
+    "462": {
+      "name": "boundsX",
+      "wire": "float"
+    },
+    "463": {
+      "name": "boundsY",
+      "wire": "float"
+    },
+    "464": {
+      "name": "boundsWidth",
+      "wire": "float"
+    },
+    "465": {
+      "name": "boundsHeight",
+      "wire": "float"
+    },
+    "858": {
+      "name": "artboardId",
+      "wire": "uint"
+    },
+    "859": {
+      "name": "instanceWidth",
+      "wire": "float"
+    },
+    "860": {
+      "name": "instanceHeight",
+      "wire": "float"
+    },
+    "856": {
+      "name": "instanceWidthUnitsValue",
+      "wire": "uint"
+    },
+    "861": {
+      "name": "instanceHeightUnitsValue",
+      "wire": "uint"
+    },
+    "862": {
+      "name": "instanceWidthScaleType",
+      "wire": "uint"
+    },
+    "863": {
+      "name": "instanceHeightScaleType",
+      "wire": "uint"
+    },
+    "675": {
+      "name": "offset",
+      "wire": "float"
+    },
+    "676": {
+      "name": "normalized",
+      "wire": "bool"
+    },
+    "1047": {
+      "name": "gridColumn",
+      "wire": "int"
+    },
+    "1048": {
+      "name": "gridRow",
+      "wire": "int"
+    },
+    "1049": {
+      "name": "gridColumnSpan",
+      "wire": "uint"
+    },
+    "1050": {
+      "name": "gridRowSpan",
+      "wire": "uint"
+    },
+    "1063": {
+      "name": "trackValue",
+      "wire": "float"
+    },
+    "1065": {
+      "name": "trackMaxValue",
+      "wire": "float"
+    },
+    "1061": {
+      "name": "collection",
+      "wire": "uint"
+    },
+    "1062": {
+      "name": "trackType",
+      "wire": "uint"
+    },
+    "1064": {
+      "name": "trackMaxType",
+      "wire": "uint"
+    },
+    "498": {
+      "name": "gapHorizontal",
+      "wire": "float"
+    },
+    "499": {
+      "name": "gapVertical",
+      "wire": "float"
+    },
+    "504": {
+      "name": "borderLeft",
+      "wire": "float"
+    },
+    "505": {
+      "name": "borderRight",
+      "wire": "float"
+    },
+    "506": {
+      "name": "borderTop",
+      "wire": "float"
+    },
+    "507": {
+      "name": "borderBottom",
+      "wire": "float"
+    },
+    "508": {
+      "name": "marginLeft",
+      "wire": "float"
+    },
+    "509": {
+      "name": "marginRight",
+      "wire": "float"
+    },
+    "510": {
+      "name": "marginTop",
+      "wire": "float"
+    },
+    "511": {
+      "name": "marginBottom",
+      "wire": "float"
+    },
+    "512": {
+      "name": "paddingLeft",
+      "wire": "float"
+    },
+    "513": {
+      "name": "paddingRight",
+      "wire": "float"
+    },
+    "514": {
+      "name": "paddingTop",
+      "wire": "float"
+    },
+    "515": {
+      "name": "paddingBottom",
+      "wire": "float"
+    },
+    "516": {
+      "name": "positionLeft",
+      "wire": "float"
+    },
+    "517": {
+      "name": "positionRight",
+      "wire": "float"
+    },
+    "518": {
+      "name": "positionTop",
+      "wire": "float"
+    },
+    "519": {
+      "name": "positionBottom",
+      "wire": "float"
+    },
+    "621": {
+      "name": "positionLeftUnitsValue",
+      "wire": "uint"
+    },
+    "622": {
+      "name": "positionRightUnitsValue",
+      "wire": "uint"
+    },
+    "623": {
+      "name": "positionTopUnitsValue",
+      "wire": "uint"
+    },
+    "624": {
+      "name": "positionBottomUnitsValue",
+      "wire": "uint"
+    },
+    "523": {
+      "name": "flexBasis",
+      "wire": "float"
+    },
+    "524": {
+      "name": "aspectRatio",
+      "wire": "float"
+    },
+    "591": {
+      "name": "interpolatorId",
+      "wire": "uint"
+    },
+    "592": {
+      "name": "interpolationTime",
+      "wire": "float"
+    },
+    "705": {
+      "name": "flexBasisUnitsValue",
+      "wire": "uint"
+    },
+    "632": {
+      "name": "layoutAlignmentType",
+      "wire": "uint"
+    },
+    "589": {
+      "name": "animationStyleType",
+      "wire": "uint"
+    },
+    "590": {
+      "name": "interpolationType",
+      "wire": "uint"
+    },
+    "597": {
+      "name": "positionTypeValue",
+      "wire": "uint"
+    },
+    "598": {
+      "name": "flexDirectionValue",
+      "wire": "uint"
+    },
+    "599": {
+      "name": "directionValue",
+      "wire": "uint"
+    },
+    "604": {
+      "name": "flexWrapValue",
+      "wire": "uint"
+    },
+    "605": {
+      "name": "overflowValue",
+      "wire": "uint"
+    },
+    "606": {
+      "name": "intrinsicallySizedValue",
+      "wire": "bool"
+    },
+    "609": {
+      "name": "borderLeftUnitsValue",
+      "wire": "uint"
+    },
+    "610": {
+      "name": "borderRightUnitsValue",
+      "wire": "uint"
+    },
+    "611": {
+      "name": "borderTopUnitsValue",
+      "wire": "uint"
+    },
+    "612": {
+      "name": "borderBottomUnitsValue",
+      "wire": "uint"
+    },
+    "613": {
+      "name": "marginLeftUnitsValue",
+      "wire": "uint"
+    },
+    "614": {
+      "name": "marginRightUnitsValue",
+      "wire": "uint"
+    },
+    "615": {
+      "name": "marginTopUnitsValue",
+      "wire": "uint"
+    },
+    "616": {
+      "name": "marginBottomUnitsValue",
+      "wire": "uint"
+    },
+    "617": {
+      "name": "paddingLeftUnitsValue",
+      "wire": "uint"
+    },
+    "618": {
+      "name": "paddingRightUnitsValue",
+      "wire": "uint"
+    },
+    "619": {
+      "name": "paddingTopUnitsValue",
+      "wire": "uint"
+    },
+    "620": {
+      "name": "paddingBottomUnitsValue",
+      "wire": "uint"
+    },
+    "625": {
+      "name": "gapHorizontalUnitsValue",
+      "wire": "uint"
+    },
+    "626": {
+      "name": "gapVerticalUnitsValue",
+      "wire": "uint"
+    },
+    "1045": {
+      "name": "justifyItemsValue",
+      "wire": "uint"
+    },
+    "1059": {
+      "name": "layoutTypeValue",
+      "wire": "uint"
+    },
+    "639": {
+      "name": "linkCornerRadius",
+      "wire": "bool"
+    },
+    "640": {
+      "name": "cornerRadiusTL",
+      "wire": "float"
+    },
+    "641": {
+      "name": "cornerRadiusTR",
+      "wire": "float"
+    },
+    "642": {
+      "name": "cornerRadiusBL",
+      "wire": "float"
+    },
+    "643": {
+      "name": "cornerRadiusBR",
+      "wire": "float"
+    },
+    "1066": {
+      "name": "width",
+      "wire": "float"
+    },
+    "1067": {
+      "name": "height",
+      "wire": "float"
+    },
+    "1057": {
+      "name": "fractionalWidth",
+      "wire": "float"
+    },
+    "1058": {
+      "name": "fractionalHeight",
+      "wire": "float"
+    },
+    "502": {
+      "name": "minWidth",
+      "wire": "float"
+    },
+    "500": {
+      "name": "maxWidth",
+      "wire": "float"
+    },
+    "503": {
+      "name": "minHeight",
+      "wire": "float"
+    },
+    "501": {
+      "name": "maxHeight",
+      "wire": "float"
+    },
+    "627": {
+      "name": "minWidthUnitsValue",
+      "wire": "uint"
+    },
+    "629": {
+      "name": "maxWidthUnitsValue",
+      "wire": "uint"
+    },
+    "628": {
+      "name": "minHeightUnitsValue",
+      "wire": "uint"
+    },
+    "630": {
+      "name": "maxHeightUnitsValue",
+      "wire": "uint"
+    },
+    "655": {
+      "name": "layoutWidthScaleType",
+      "wire": "uint"
+    },
+    "656": {
+      "name": "layoutHeightScaleType",
+      "wire": "uint"
+    },
+    "451": {
+      "name": "hugUnbounded",
+      "wire": "bool"
+    },
+    "607": {
+      "name": "widthUnitsValue",
+      "wire": "uint"
+    },
+    "608": {
+      "name": "heightUnitsValue",
+      "wire": "uint"
+    },
+    "1046": {
+      "name": "justifySelfValue",
+      "wire": "uint"
+    },
+    "596": {
+      "name": "displayValue",
+      "wire": "uint"
+    },
+    "697": {
+      "name": "initialWidth",
+      "wire": "float"
+    },
+    "698": {
+      "name": "initialHeight",
+      "wire": "float"
+    },
+    "699": {
+      "name": "width",
+      "wire": "float"
+    },
+    "700": {
+      "name": "height",
+      "wire": "float"
+    },
+    "672": {
+      "name": "patchIndex",
+      "wire": "uint"
+    },
+    "673": {
+      "name": "style",
+      "wire": "uint"
+    },
+    "196": {
+      "name": "clip",
+      "wire": "bool"
+    },
+    "7": {
+      "name": "width",
+      "wire": "float"
+    },
+    "8": {
+      "name": "height",
+      "wire": "float"
+    },
+    "494": {
+      "name": "styleId",
+      "wire": "uint"
+    },
+    "706": {
+      "name": "fractionalWidth",
+      "wire": "float"
+    },
+    "707": {
+      "name": "fractionalHeight",
+      "wire": "float"
+    },
+    "198": {
+      "name": "animationId",
+      "wire": "uint"
+    },
+    "197": {
+      "name": "artboardId",
+      "wire": "uint"
+    },
+    "582": {
+      "name": "dataBindPathIds",
+      "wire": "bytes"
+    },
+    "895": {
+      "name": "isPaused",
+      "wire": "bool"
+    },
+    "907": {
+      "name": "speed",
+      "wire": "float"
+    },
+    "908": {
+      "name": "quantize",
+      "wire": "float"
+    },
+    "1014": {
+      "name": "isStateful",
+      "wire": "bool"
+    },
+    "663": {
+      "name": "instanceWidth",
+      "wire": "float"
+    },
+    "664": {
+      "name": "instanceHeight",
+      "wire": "float"
+    },
+    "665": {
+      "name": "instanceWidthUnitsValue",
+      "wire": "uint"
+    },
+    "666": {
+      "name": "instanceHeightUnitsValue",
+      "wire": "uint"
+    },
+    "667": {
+      "name": "instanceWidthScaleType",
+      "wire": "uint"
+    },
+    "668": {
+      "name": "instanceHeightScaleType",
+      "wire": "uint"
+    },
+    "538": {
+      "name": "fit",
+      "wire": "uint"
+    },
+    "1098": {
+      "name": "fitToLayoutParent",
+      "wire": "bool"
+    },
+    "644": {
+      "name": "alignmentX",
+      "wire": "float"
+    },
+    "645": {
+      "name": "alignmentY",
+      "wire": "float"
+    },
+    "13": {
+      "name": "x",
+      "wire": "float"
+    },
+    "14": {
+      "name": "y",
+      "wire": "float"
+    },
+    "248": {
+      "name": "url",
+      "wire": "string"
+    },
+    "249": {
+      "name": "targetValue",
+      "wire": "uint"
+    },
+    "876": {
+      "name": "artboardId",
+      "wire": "uint"
+    },
+    "866": {
+      "name": "dataBindPathIds",
+      "wire": "bytes"
+    },
+    "892": {
+      "name": "scriptAssetId",
+      "wire": "uint"
+    },
+    "848": {
+      "name": "scriptAssetId",
+      "wire": "uint"
+    },
+    "1015": {
+      "name": "scriptAssetId",
+      "wire": "uint"
+    },
+    "912": {
+      "name": "scriptAssetId",
+      "wire": "uint"
+    },
+    "273": {
+      "name": "activeComponentId",
+      "wire": "uint"
+    },
+    "414": {
+      "name": "listSource",
+      "wire": "uint"
+    },
+    "447": {
+      "name": "highlightColor",
+      "wire": "color"
+    },
+    "448": {
+      "name": "cornerRadius",
+      "wire": "float"
+    },
+    "982": {
+      "name": "role",
+      "wire": "uint"
+    },
+    "983": {
+      "name": "label",
+      "wire": "string"
+    },
+    "984": {
+      "name": "value",
+      "wire": "string"
+    },
+    "985": {
+      "name": "hint",
+      "wire": "string"
+    },
+    "986": {
+      "name": "headingLevel",
+      "wire": "uint"
+    },
+    "987": {
+      "name": "traitFlags",
+      "wire": "uint"
+    },
+    "988": {
+      "name": "stateFlags",
+      "wire": "uint"
+    },
+    "92": {
+      "name": "sourceId",
+      "wire": "uint"
+    },
+    "93": {
+      "name": "fillRule",
+      "wire": "uint"
+    },
+    "94": {
+      "name": "isVisible",
+      "wire": "bool"
+    },
+    "79": {
+      "name": "rotation",
+      "wire": "float"
+    },
+    "80": {
+      "name": "inDistance",
+      "wire": "float"
+    },
+    "81": {
+      "name": "outDistance",
+      "wire": "float"
+    },
+    "84": {
+      "name": "inRotation",
+      "wire": "float"
+    },
+    "85": {
+      "name": "inDistance",
+      "wire": "float"
+    },
+    "86": {
+      "name": "outRotation",
+      "wire": "float"
+    },
+    "87": {
+      "name": "outDistance",
+      "wire": "float"
+    },
+    "82": {
+      "name": "rotation",
+      "wire": "float"
+    },
+    "83": {
+      "name": "distance",
+      "wire": "float"
+    },
+    "206": {
+      "name": "assetId",
+      "wire": "uint"
+    },
+    "380": {
+      "name": "originX",
+      "wire": "float"
+    },
+    "381": {
+      "name": "originY",
+      "wire": "float"
+    },
+    "974": {
+      "name": "fit",
+      "wire": "uint"
+    },
+    "975": {
+      "name": "alignmentX",
+      "wire": "float"
+    },
+    "976": {
+      "name": "alignmentY",
+      "wire": "float"
+    },
+    "1076": {
+      "name": "samplerFilter",
+      "wire": "uint"
+    },
+    "1077": {
+      "name": "samplerWrapX",
+      "wire": "uint"
+    },
+    "1078": {
+      "name": "samplerWrapY",
+      "wire": "uint"
+    },
+    "874": {
+      "name": "listSource",
+      "wire": "uint"
+    },
+    "223": {
+      "name": "triangleIndexBytes",
+      "wire": "bytes"
+    },
+    "215": {
+      "name": "u",
+      "wire": "float"
+    },
+    "216": {
+      "name": "v",
+      "wire": "float"
+    },
+    "692": {
+      "name": "length",
+      "wire": "float"
+    },
+    "693": {
+      "name": "lengthIsPercentage",
+      "wire": "bool"
+    },
+    "690": {
+      "name": "offset",
+      "wire": "float"
+    },
+    "691": {
+      "name": "offsetIsPercentage",
+      "wire": "bool"
+    },
+    "748": {
+      "name": "spaceValue",
+      "wire": "uint"
+    },
+    "749": {
+      "name": "strength",
+      "wire": "float"
+    },
+    "750": {
+      "name": "offsetX",
+      "wire": "float"
+    },
+    "751": {
+      "name": "offsetY",
+      "wire": "float"
+    },
+    "752": {
+      "name": "inner",
+      "wire": "bool"
+    },
+    "40": {
+      "name": "fillRule",
+      "wire": "uint"
+    },
+    "38": {
+      "name": "colorValue",
+      "wire": "color"
+    },
+    "39": {
+      "name": "position",
+      "wire": "float"
+    },
+    "42": {
+      "name": "startX",
+      "wire": "float"
+    },
+    "33": {
+      "name": "startY",
+      "wire": "float"
+    },
+    "34": {
+      "name": "endX",
+      "wire": "float"
+    },
+    "35": {
+      "name": "endY",
+      "wire": "float"
+    },
+    "46": {
+      "name": "opacity",
+      "wire": "float"
+    },
+    "415": {
+      "name": "imageAssetId",
+      "wire": "uint"
+    },
+    "269": {
+      "name": "imageSamplerFilter",
+      "wire": "uint"
+    },
+    "270": {
+      "name": "imageSamplerWrapX",
+      "wire": "uint"
+    },
+    "271": {
+      "name": "imageSamplerWrapY",
+      "wire": "uint"
+    },
+    "416": {
+      "name": "imageScaleX",
+      "wire": "float"
+    },
+    "368": {
+      "name": "imageScaleY",
+      "wire": "float"
+    },
+    "369": {
+      "name": "imageOffsetX",
+      "wire": "float"
+    },
+    "410": {
+      "name": "imageOffsetY",
+      "wire": "float"
+    },
+    "411": {
+      "name": "imageRotation",
+      "wire": "float"
+    },
+    "412": {
+      "name": "imageSizeMode",
+      "wire": "uint"
+    },
+    "41": {
+      "name": "isVisible",
+      "wire": "bool"
+    },
+    "747": {
+      "name": "blendModeValue",
+      "wire": "uint"
+    },
+    "452": {
+      "name": "additiveAmount",
+      "wire": "uint"
+    },
+    "37": {
+      "name": "colorValue",
+      "wire": "color"
+    },
+    "47": {
+      "name": "thickness",
+      "wire": "float"
+    },
+    "48": {
+      "name": "cap",
+      "wire": "uint"
+    },
+    "49": {
+      "name": "join",
+      "wire": "uint"
+    },
+    "50": {
+      "name": "transformAffectsStroke",
+      "wire": "bool"
+    },
+    "470": {
+      "name": "position",
+      "wire": "uint"
+    },
+    "922": {
+      "name": "targetId",
+      "wire": "uint"
+    },
+    "114": {
+      "name": "start",
+      "wire": "float"
+    },
+    "115": {
+      "name": "end",
+      "wire": "float"
+    },
+    "116": {
+      "name": "offset",
+      "wire": "float"
+    },
+    "117": {
+      "name": "modeValue",
+      "wire": "uint"
+    },
+    "20": {
+      "name": "width",
+      "wire": "float"
+    },
+    "21": {
+      "name": "height",
+      "wire": "float"
+    },
+    "123": {
+      "name": "originX",
+      "wire": "float"
+    },
+    "124": {
+      "name": "originY",
+      "wire": "float"
+    },
+    "128": {
+      "name": "pathFlags",
+      "wire": "uint"
+    },
+    "770": {
+      "name": "isHole",
+      "wire": "bool"
+    },
+    "32": {
+      "name": "isClosed",
+      "wire": "bool"
+    },
+    "125": {
+      "name": "points",
+      "wire": "uint"
+    },
+    "126": {
+      "name": "cornerRadius",
+      "wire": "float"
+    },
+    "164": {
+      "name": "linkCornerRadius",
+      "wire": "bool"
+    },
+    "31": {
+      "name": "cornerRadiusTL",
+      "wire": "float"
+    },
+    "161": {
+      "name": "cornerRadiusTR",
+      "wire": "float"
+    },
+    "162": {
+      "name": "cornerRadiusBL",
+      "wire": "float"
+    },
+    "163": {
+      "name": "cornerRadiusBR",
+      "wire": "float"
+    },
+    "127": {
+      "name": "innerRadius",
+      "wire": "float"
+    },
+    "26": {
+      "name": "radius",
+      "wire": "float"
+    },
+    "24": {
+      "name": "x",
+      "wire": "float"
+    },
+    "25": {
+      "name": "y",
+      "wire": "float"
+    },
+    "296": {
+      "name": "activeComponentId",
+      "wire": "uint"
+    },
+    "281": {
+      "name": "alignValue",
+      "wire": "uint"
+    },
+    "284": {
+      "name": "sizingValue",
+      "wire": "uint"
+    },
+    "287": {
+      "name": "overflowValue",
+      "wire": "uint"
+    },
+    "285": {
+      "name": "width",
+      "wire": "float"
+    },
+    "286": {
+      "name": "height",
+      "wire": "float"
+    },
+    "366": {
+      "name": "originX",
+      "wire": "float"
+    },
+    "367": {
+      "name": "originY",
+      "wire": "float"
+    },
+    "371": {
+      "name": "paragraphSpacing",
+      "wire": "float"
+    },
+    "377": {
+      "name": "originValue",
+      "wire": "uint"
+    },
+    "683": {
+      "name": "wrapValue",
+      "wire": "uint"
+    },
+    "446": {
+      "name": "wordBreakValue",
+      "wire": "uint"
+    },
+    "685": {
+      "name": "verticalAlignValue",
+      "wire": "uint"
+    },
+    "703": {
+      "name": "fitFromBaseline",
+      "wire": "bool"
+    },
+    "315": {
+      "name": "fitFontSizeResizesBox",
+      "wire": "bool"
+    },
+    "932": {
+      "name": "textRunListSource",
+      "wire": "uint"
+    },
+    "1026": {
+      "name": "verticalTrimValue",
+      "wire": "uint"
+    },
+    "779": {
+      "name": "radial",
+      "wire": "bool"
+    },
+    "782": {
+      "name": "orient",
+      "wire": "bool"
+    },
+    "783": {
+      "name": "start",
+      "wire": "float"
+    },
+    "784": {
+      "name": "end",
+      "wire": "float"
+    },
+    "785": {
+      "name": "strength",
+      "wire": "float"
+    },
+    "786": {
+      "name": "offset",
+      "wire": "float"
+    },
+    "817": {
+      "name": "text",
+      "wire": "string"
+    },
+    "818": {
+      "name": "selectionRadius",
+      "wire": "float"
+    },
+    "979": {
+      "name": "multiline",
+      "wire": "bool"
+    },
+    "222": {
+      "name": "alignValue",
+      "wire": "uint"
+    },
+    "1094": {
+      "name": "verticalAlignValue",
+      "wire": "uint"
+    },
+    "1095": {
+      "name": "obscured",
+      "wire": "bool"
+    },
+    "1099": {
+      "name": "selectAllOnFocus",
+      "wire": "bool"
+    },
+    "335": {
+      "name": "modifierFlags",
+      "wire": "uint"
+    },
+    "328": {
+      "name": "originX",
+      "wire": "float"
+    },
+    "329": {
+      "name": "originY",
+      "wire": "float"
+    },
+    "324": {
+      "name": "opacity",
+      "wire": "float"
+    },
+    "322": {
+      "name": "x",
+      "wire": "float"
+    },
+    "323": {
+      "name": "y",
+      "wire": "float"
+    },
+    "332": {
+      "name": "rotation",
+      "wire": "float"
+    },
+    "330": {
+      "name": "scaleX",
+      "wire": "float"
+    },
+    "331": {
+      "name": "scaleY",
+      "wire": "float"
+    },
+    "327": {
+      "name": "modifyFrom",
+      "wire": "float"
+    },
+    "336": {
+      "name": "modifyTo",
+      "wire": "float"
+    },
+    "334": {
+      "name": "strength",
+      "wire": "float"
+    },
+    "316": {
+      "name": "unitsValue",
+      "wire": "uint"
+    },
+    "325": {
+      "name": "typeValue",
+      "wire": "uint"
+    },
+    "326": {
+      "name": "modeValue",
+      "wire": "uint"
+    },
+    "333": {
+      "name": "clamp",
+      "wire": "bool"
+    },
+    "317": {
+      "name": "falloffFrom",
+      "wire": "float"
+    },
+    "318": {
+      "name": "falloffTo",
+      "wire": "float"
+    },
+    "319": {
+      "name": "offset",
+      "wire": "float"
+    },
+    "378": {
+      "name": "runId",
+      "wire": "uint"
+    },
+    "289": {
+      "name": "tag",
+      "wire": "uint"
+    },
+    "288": {
+      "name": "axisValue",
+      "wire": "float"
+    },
+    "1071": {
+      "name": "cornerRadius",
+      "wire": "float"
+    },
+    "274": {
+      "name": "fontSize",
+      "wire": "float"
+    },
+    "370": {
+      "name": "lineHeight",
+      "wire": "float"
+    },
+    "390": {
+      "name": "letterSpacing",
+      "wire": "float"
+    },
+    "279": {
+      "name": "fontAssetId",
+      "wire": "uint"
+    },
+    "356": {
+      "name": "tag",
+      "wire": "uint"
+    },
+    "357": {
+      "name": "featureValue",
+      "wire": "uint"
+    },
+    "778": {
+      "name": "targetId",
+      "wire": "uint"
+    },
+    "272": {
+      "name": "styleId",
+      "wire": "uint"
+    },
+    "268": {
+      "name": "text",
+      "wire": "string"
+    },
+    "320": {
+      "name": "axisTag",
+      "wire": "uint"
+    },
+    "321": {
+      "name": "axisValue",
+      "wire": "float"
+    },
+    "15": {
+      "name": "rotation",
+      "wire": "float"
+    },
+    "16": {
+      "name": "scaleX",
+      "wire": "float"
+    },
+    "17": {
+      "name": "scaleY",
+      "wire": "float"
+    },
+    "572": {
+      "name": "name",
+      "wire": "string"
+    },
+    "709": {
+      "name": "enumType",
+      "wire": "uint"
+    },
+    "578": {
+      "name": "key",
+      "wire": "string"
+    },
+    "579": {
+      "name": "value",
+      "wire": "string"
+    },
+    "981": {
+      "name": "viewModelType",
+      "wire": "uint"
+    },
+    "557": {
+      "name": "name",
+      "wire": "string"
+    },
+    "846": {
+      "name": "propertyValue",
+      "wire": "uint"
+    },
+    "824": {
+      "name": "propertyValue",
+      "wire": "uint"
+    },
+    "566": {
+      "name": "viewModelId",
+      "wire": "uint"
+    },
+    "593": {
+      "name": "propertyValue",
+      "wire": "bool"
+    },
+    "555": {
+      "name": "propertyValue",
+      "wire": "color"
+    },
+    "560": {
+      "name": "propertyValue",
+      "wire": "uint"
+    },
+    "966": {
+      "name": "listSource",
+      "wire": "uint"
+    },
+    "549": {
+      "name": "viewModelId",
+      "wire": "uint"
+    },
+    "550": {
+      "name": "viewModelInstanceId",
+      "wire": "uint"
+    },
+    "575": {
+      "name": "propertyValue",
+      "wire": "float"
+    },
+    "561": {
+      "name": "propertyValue",
+      "wire": "string"
+    },
+    "814": {
+      "name": "propertyValue",
+      "wire": "uint"
+    },
+    "687": {
+      "name": "propertyValue",
+      "wire": "uint"
+    },
+    "554": {
+      "name": "viewModelPropertyId",
+      "wire": "uint"
+    },
+    "577": {
+      "name": "propertyValue",
+      "wire": "uint"
+    },
+    "875": {
+      "name": "symbolTypeValue",
+      "wire": "uint"
+    },
+    "957": {
+      "name": "componentProps",
+      "wire": "uint"
+    },
+    "574": {
+      "name": "enumId",
+      "wire": "uint"
+    },
+    "708": {
+      "name": "enumType",
+      "wire": "uint"
+    },
+    "565": {
+      "name": "viewModelReferenceId",
+      "wire": "uint"
+    },
+    "18": {
+      "name": "opacity",
+      "wire": "float"
+    },
+    "455": {
+      "name": "maskModeValue",
+      "wire": "uint"
+    },
+    "998": {
+      "name": "isChecked",
+      "wire": "uint"
+    },
+    "1027": {
+      "name": "verticalTrimTopValue",
+      "wire": "uint"
+    },
+    "1028": {
+      "name": "verticalTrimBottomValue",
+      "wire": "uint"
+    },
+    "456": {
+      "name": "isVisible",
+      "wire": "bool"
+    },
+    "457": {
+      "name": "sourceDraws",
+      "wire": "bool"
+    },
+    "461": {
+      "name": "useCustomBounds",
+      "wire": "bool"
+    },
+    "1025": {
+      "name": "scrollActive",
+      "wire": "bool"
+    },
+    "467": {
+      "name": "wheelInteractive",
+      "wire": "bool"
+    },
+    "953": {
+      "name": "canFocus",
+      "wire": "bool"
+    },
+    "954": {
+      "name": "canTouch",
+      "wire": "bool"
+    },
+    "955": {
+      "name": "canTraverse",
+      "wire": "bool"
+    },
+    "989": {
+      "name": "isExpandable",
+      "wire": "bool"
+    },
+    "990": {
+      "name": "isSelectable",
+      "wire": "bool"
+    },
+    "991": {
+      "name": "isCheckable",
+      "wire": "bool"
+    },
+    "992": {
+      "name": "isToggleable",
+      "wire": "bool"
+    },
+    "993": {
+      "name": "isRequirable",
+      "wire": "bool"
+    },
+    "994": {
+      "name": "isEnablable",
+      "wire": "bool"
+    },
+    "995": {
+      "name": "isFocusable",
+      "wire": "bool"
+    },
+    "996": {
+      "name": "isExpanded",
+      "wire": "bool"
+    },
+    "997": {
+      "name": "isSelected",
+      "wire": "bool"
+    },
+    "1000": {
+      "name": "isToggled",
+      "wire": "bool"
+    },
+    "1001": {
+      "name": "isRequired",
+      "wire": "bool"
+    },
+    "1002": {
+      "name": "isDisabled",
+      "wire": "bool"
+    },
+    "1003": {
+      "name": "isFocused",
+      "wire": "bool"
+    },
+    "1004": {
+      "name": "isHidden",
+      "wire": "bool"
+    },
+    "1005": {
+      "name": "isLiveRegion",
+      "wire": "bool"
+    },
+    "1006": {
+      "name": "isReadOnly",
+      "wire": "bool"
+    },
+    "1007": {
+      "name": "isModal",
+      "wire": "bool"
+    },
+    "1008": {
+      "name": "isObscured",
+      "wire": "bool"
+    },
+    "1009": {
+      "name": "isMultiline",
+      "wire": "bool"
+    },
+    "419": {
+      "name": "cacheEnabled",
+      "wire": "bool"
+    },
+    "420": {
+      "name": "dither",
+      "wire": "bool"
+    },
+    "761": {
+      "name": "scrollPercentX",
+      "wire": "float"
+    },
+    "762": {
+      "name": "scrollPercentY",
+      "wire": "float"
+    },
+    "763": {
+      "name": "scrollIndex",
+      "wire": "float"
+    },
+    "1023": {
+      "name": "velocityX",
+      "wire": "float"
+    },
+    "1024": {
+      "name": "velocityY",
+      "wire": "float"
+    },
+    "1069": {
+      "name": "computedContentWidth",
+      "wire": "float"
+    },
+    "1070": {
+      "name": "computedContentHeight",
+      "wire": "float"
+    },
+    "9": {
+      "name": "xArtboard",
+      "wire": "float"
+    },
+    "10": {
+      "name": "yArtboard",
+      "wire": "float"
+    },
+    "806": {
+      "name": "computedLocalX",
+      "wire": "float"
+    },
+    "807": {
+      "name": "computedLocalY",
+      "wire": "float"
+    },
+    "808": {
+      "name": "computedWorldX",
+      "wire": "float"
+    },
+    "809": {
+      "name": "computedWorldY",
+      "wire": "float"
+    },
+    "864": {
+      "name": "computedRootX",
+      "wire": "float"
+    },
+    "865": {
+      "name": "computedRootY",
+      "wire": "float"
+    },
+    "810": {
+      "name": "computedWidth",
+      "wire": "float"
+    },
+    "811": {
+      "name": "computedHeight",
+      "wire": "float"
+    },
+    "781": {
+      "name": "length",
+      "wire": "float"
+    }
+  }
+}

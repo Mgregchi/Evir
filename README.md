@@ -119,3 +119,9 @@ TBD (likely MIT or Apache 2.0)
 
 Evir draws inspiration from tools like Rive, Spine, and modern game animation systems — while aiming to remain fully open and focused on practical interactive use cases.
 
+
+### Research implementation and evidence
+
+The first executable research slice includes a schema-driven `.riv` reader/writer, independently generated animation and articulated-bone fixtures, input-driven state machines, official Canvas2D/WebGL2 validation, and reproducible load, frame-time, memory and size measurements.
+
+Start with [the research workflow](research/README.md), [the Rive overview](docs/01-rive-overview.md), and [the compatibility decision](docs/05-synthesis.md). This establishes a tested export subset and a cloud baseline; full Evir engine parity and mobile performance remain unproven.
