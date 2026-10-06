@@ -1,0 +1,62 @@
+<!doctype html><meta charset="utf-8" /><title>Evir research runtime</title>
+<canvas id="canvas" width="256" height="256"></canvas>
+<script>
+  window.backend =
+    new URLSearchParams(location.search).get("renderer") === "webgl2"
+      ? "webgl2"
+      : "canvas";
+  document.write(
+    '<script src="/node_modules/@rive-app/' + backend + '/rive.js"><\/script>',
+  );
+</script>
+<script>
+  rive.RuntimeLoader.setWasmUrl(
+    "/node_modules/@rive-app/" + backend + "/rive.wasm",
+  );
+  window.loadFixture = async function (file, options = {}) {
+    if (window.player) player.cleanup();
+    const canvas = document.getElementById("canvas");
+    canvas.width = 256;
+    canvas.height = 256;
+    const start = performance.now();
+    const r = await new Promise((resolve, reject) => {
+      const instance = new rive.Rive({
+        src: "/research/fixtures/" + file + ".riv",
+        canvas,
+        autoplay: true,
+        layout: new rive.Layout({
+          fit: rive.Fit.contain,
+          alignment: rive.Alignment.center,
+        }),
+        ...options,
+        onLoad: () => resolve(instance),
+        onLoadError: (e) => reject(Error("Rive load error: " + e)),
+      });
+    });
+    window.player = r;
+    r.resizeDrawingSurfaceToCanvas();
+    return {
+      loadMs: performance.now() - start,
+      animations: r.animationNames,
+      machines: r.stateMachineNames,
+    };
+  };
+  window.pixels = function () {
+    const c = document.getElementById("canvas");
+    const data = c.getContext("2d").getImageData(0, 0, c.width, c.height).data;
+    let n = 0,
+      x = 0,
+      y = 0,
+      hash = 2166136261;
+    for (let i = 0; i < data.length; i += 4) {
+      if (data[i + 3]) {
+        n++;
+        x += (i / 4) % c.width;
+        y += Math.floor(i / 4 / c.width);
+      }
+      for (let j = 0; j < 4; j++)
+        hash = Math.imul(hash ^ data[i + j], 16777619);
+    }
+    return { count: n, cx: x / n, cy: y / n, hash: hash >>> 0 };
+  };
+</script>

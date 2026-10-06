@@ -1,0 +1,22 @@
+{
+  "name": "evir-research",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Evidence and tools for Evir's Rive compatibility research",
+  "scripts": {
+    "generate": "python3 tools/generate_fixtures.py",
+    "test": "python3 -m unittest discover -s tests -v",
+    "validate": "node tools/validate.cjs",
+    "benchmark": "python3 tools/benchmark_codec.py && node tools/benchmark_runtime.cjs",
+    "research": "npm run generate && npm test && npm run validate && npm run validate:webgl2 && npm run benchmark && npm run benchmark:webgl2 && npm run report",
+    "validate:webgl2": "RIVE_RENDERER=webgl2 node tools/validate.cjs",
+    "benchmark:webgl2": "RIVE_RENDERER=webgl2 node tools/benchmark_runtime.cjs",
+    "report": "python3 tools/report.py"
+  },
+  "dependencies": {
+    "@rive-app/canvas": "2.44.0",
+    "@rive-app/webgl2": "2.44.0",
+    "playwright": "1.63.0",
+    "pngjs": "7.0.0"
+  }
+}

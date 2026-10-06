@@ -1,0 +1,411 @@
+{
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "machine": "x86_64",
+    "cpu_count": 5
+  },
+  "method": "3 warmups, 25 sequential perf_counter_ns samples; p95 nearest rank; tracemalloc separately; Python structural parse only, not official import or render",
+  "results": [
+    {
+      "file": "research/fixtures/animated.riv",
+      "sha256": "4b93ce49ab4a73861c43fc12732b065d286fc6b04ad5b5730416541ee1489751",
+      "bytes": 133,
+      "gzip_bytes": 131,
+      "authored_pretty_json_bytes": 3335,
+      "objects": 12,
+      "properties": 28,
+      "bytes_per_object": 11.083333333333334,
+      "embedded_asset_bytes": 0,
+      "parse_ms": {
+        "median": 0.042484,
+        "p95": 0.110135,
+        "min": 0.040621,
+        "max": 0.175645
+      },
+      "write_preserving_raw_ms": {
+        "median": 0.01959,
+        "p95": 0.041793,
+        "min": 0.018648,
+        "max": 0.109345
+      },
+      "python_peak_alloc_bytes": 8056,
+      "samples": 25
+    },
+    {
+      "file": "research/fixtures/bones.riv",
+      "sha256": "653b13f9a9e430ddec4f8d41e05eb1fdaa6fe033d3d2359a79e67cd626c4fd3f",
+      "bytes": 286,
+      "gzip_bytes": 223,
+      "authored_pretty_json_bytes": 7062,
+      "objects": 24,
+      "properties": 61,
+      "bytes_per_object": 11.916666666666666,
+      "embedded_asset_bytes": 0,
+      "parse_ms": {
+        "median": 0.097827,
+        "p95": 0.345831,
+        "min": 0.091037,
+        "max": 0.346161
+      },
+      "write_preserving_raw_ms": {
+        "median": 0.040781,
+        "p95": 0.235896,
+        "min": 0.038748,
+        "max": 0.45215
+      },
+      "python_peak_alloc_bytes": 18364,
+      "samples": 25
+    },
+    {
+      "file": "research/fixtures/characters-25.riv",
+      "sha256": "1eac4f638d5e01158c1355dae6100afd57118204e27a4cd6aab311efb1248dfc",
+      "bytes": 7776,
+      "gzip_bytes": 1389,
+      "authored_pretty_json_bytes": 209022,
+      "objects": 767,
+      "properties": 1799,
+      "bytes_per_object": 10.138200782268578,
+      "embedded_asset_bytes": 0,
+      "parse_ms": {
+        "median": 3.362872,
+        "p95": 3.998769,
+        "min": 3.067988,
+        "max": 6.412943
+      },
+      "write_preserving_raw_ms": {
+        "median": 1.424424,
+        "p95": 2.0993,
+        "min": 1.198114,
+        "max": 2.299461
+      },
+      "python_peak_alloc_bytes": 946891,
+      "samples": 25
+    },
+    {
+      "file": "research/fixtures/state-machine.riv",
+      "sha256": "bddcde6291eef8068bc7d5711d57f63058fc919a3d28b98ba29ea701d9917534",
+      "bytes": 261,
+      "gzip_bytes": 209,
+      "authored_pretty_json_bytes": 6538,
+      "objects": 29,
+      "properties": 52,
+      "bytes_per_object": 9.0,
+      "embedded_asset_bytes": 0,
+      "parse_ms": {
+        "median": 0.090016,
+        "p95": 0.130817,
+        "min": 0.088123,
+        "max": 0.264488
+      },
+      "write_preserving_raw_ms": {
+        "median": 0.038528,
+        "p95": 0.070436,
+        "min": 0.037667,
+        "max": 0.090066
+      },
+      "python_peak_alloc_bytes": 15261,
+      "samples": 25
+    },
+    {
+      "file": "research/fixtures/states-128.riv",
+      "sha256": "8f107ed89ce00e2fbc594d78438b9088999e4fe4f62d6ad4804b05aeb7d39f35",
+      "bytes": 9109,
+      "gzip_bytes": 2359,
+      "authored_pretty_json_bytes": 265181,
+      "objects": 1037,
+      "properties": 2194,
+      "bytes_per_object": 8.783992285438766,
+      "embedded_asset_bytes": 0,
+      "parse_ms": {
+        "median": 4.303197,
+        "p95": 5.917147,
+        "min": 3.789804,
+        "max": 7.275812
+      },
+      "write_preserving_raw_ms": {
+        "median": 1.795953,
+        "p95": 2.656329,
+        "min": 1.470493,
+        "max": 3.547881
+      },
+      "python_peak_alloc_bytes": 1181709,
+      "samples": 25
+    },
+    {
+      "file": "research/fixtures/states-2.riv",
+      "sha256": "60d13d580e008d8e46a49e9ca79a75d0224e60a59b7d4d2663380932ff72444f",
+      "bytes": 264,
+      "gzip_bytes": 209,
+      "authored_pretty_json_bytes": 6543,
+      "objects": 29,
+      "properties": 52,
+      "bytes_per_object": 9.10344827586207,
+      "embedded_asset_bytes": 0,
+      "parse_ms": {
+        "median": 0.09317,
+        "p95": 0.178749,
+        "min": 0.090616,
+        "max": 0.502527
+      },
+      "write_preserving_raw_ms": {
+        "median": 0.039039,
+        "p95": 0.064838,
+        "min": 0.037696,
+        "max": 0.080472
+      },
+      "python_peak_alloc_bytes": 15357,
+      "samples": 25
+    },
+    {
+      "file": "research/fixtures/states-32.riv",
+      "sha256": "10eede050ec28df9985c685f2b435a328f005de4bf858d0d6cb7369a7acf5067",
+      "bytes": 2357,
+      "gzip_bytes": 750,
+      "authored_pretty_json_bytes": 68079,
+      "objects": 269,
+      "properties": 562,
+      "bytes_per_object": 8.762081784386616,
+      "embedded_asset_bytes": 0,
+      "parse_ms": {
+        "median": 1.03654,
+        "p95": 1.496722,
+        "min": 0.946354,
+        "max": 1.946179
+      },
+      "write_preserving_raw_ms": {
+        "median": 0.373141,
+        "p95": 0.537359,
+        "min": 0.358559,
+        "max": 0.603538
+      },
+      "python_peak_alloc_bytes": 284400,
+      "samples": 25
+    },
+    {
+      "file": "research/fixtures/states-8.riv",
+      "sha256": "d59523db92f97eff334dbaadef31a94b1a9f05dd90665355039fcb173e31e159",
+      "bytes": 678,
+      "gzip_bytes": 327,
+      "authored_pretty_json_bytes": 18834,
+      "objects": 77,
+      "properties": 154,
+      "bytes_per_object": 8.805194805194805,
+      "embedded_asset_bytes": 0,
+      "parse_ms": {
+        "median": 0.260312,
+        "p95": 0.348034,
+        "min": 0.254193,
+        "max": 0.527655
+      },
+      "write_preserving_raw_ms": {
+        "median": 0.105138,
+        "p95": 0.16663,
+        "min": 0.102404,
+        "max": 0.204848
+      },
+      "python_peak_alloc_bytes": 61947,
+      "samples": 25
+    },
+    {
+      "file": "research/fixtures/static-explicit-defaults.riv",
+      "sha256": "9bd4d42a420183adc9dc9492e3581e5856a76453862225b578d644748f82038b",
+      "bytes": 138,
+      "gzip_bytes": 120,
+      "authored_pretty_json_bytes": 2794,
+      "objects": 6,
+      "properties": 26,
+      "bytes_per_object": 23.0,
+      "embedded_asset_bytes": 0,
+      "parse_ms": {
+        "median": 0.033981,
+        "p95": 0.137918,
+        "min": 0.032389,
+        "max": 0.738141
+      },
+      "write_preserving_raw_ms": {
+        "median": 0.016795,
+        "p95": 0.023445,
+        "min": 0.015934,
+        "max": 0.043826
+      },
+      "python_peak_alloc_bytes": 7485,
+      "samples": 25
+    },
+    {
+      "file": "research/fixtures/static.riv",
+      "sha256": "900991b1f3248d7c9f5050fd4e5f5c92fcddda7f17f9fa3f3780cb666c5e0064",
+      "bytes": 76,
+      "gzip_bytes": 88,
+      "authored_pretty_json_bytes": 1619,
+      "objects": 6,
+      "properties": 13,
+      "bytes_per_object": 12.666666666666666,
+      "embedded_asset_bytes": 0,
+      "parse_ms": {
+        "median": 0.020491,
+        "p95": 0.022224,
+        "min": 0.02014,
+        "max": 0.080191
+      },
+      "write_preserving_raw_ms": {
+        "median": 0.010265,
+        "p95": 0.010876,
+        "min": 0.009734,
+        "max": 0.017166
+      },
+      "python_peak_alloc_bytes": 3958,
+      "samples": 25
+    },
+    {
+      "file": "research/fixtures/stress-100.riv",
+      "sha256": "582444fa598c327fa0a4d0d57fd01cd9b92e974ddacfd3d76f609488eaef86a7",
+      "bytes": 10872,
+      "gzip_bytes": 1792,
+      "authored_pretty_json_bytes": 290304,
+      "objects": 1015,
+      "properties": 2518,
+      "bytes_per_object": 10.711330049261084,
+      "embedded_asset_bytes": 0,
+      "parse_ms": {
+        "median": 4.455707,
+        "p95": 5.597215,
+        "min": 4.121554,
+        "max": 6.60336
+      },
+      "write_preserving_raw_ms": {
+        "median": 1.775773,
+        "p95": 2.15198,
+        "min": 1.580339,
+        "max": 2.305189
+      },
+      "python_peak_alloc_bytes": 1320028,
+      "samples": 25
+    },
+    {
+      "file": "research/fixtures/upstream/animation_reset_cases.riv",
+      "sha256": "722af52220a33a635810b1ee3dff28a90b42929cb39fb68586f629c440ea1f5c",
+      "bytes": 2105,
+      "gzip_bytes": 948,
+      "authored_pretty_json_bytes": null,
+      "objects": 265,
+      "properties": 398,
+      "bytes_per_object": 7.943396226415095,
+      "embedded_asset_bytes": 0,
+      "parse_ms": {
+        "median": 0.800896,
+        "p95": 0.932374,
+        "min": 0.768857,
+        "max": 1.091593
+      },
+      "write_preserving_raw_ms": {
+        "median": 0.295305,
+        "p95": 0.352601,
+        "min": 0.287302,
+        "max": 0.585912
+      },
+      "python_peak_alloc_bytes": 223848,
+      "samples": 25
+    },
+    {
+      "file": "research/fixtures/upstream/artboardclipping.riv",
+      "sha256": "c72d306cee2e9540674a85072cc97b45f4921279610a9c6a57ec4b423d354f6f",
+      "bytes": 195,
+      "gzip_bytes": 127,
+      "authored_pretty_json_bytes": null,
+      "objects": 13,
+      "properties": 32,
+      "bytes_per_object": 15.0,
+      "embedded_asset_bytes": 0,
+      "parse_ms": {
+        "median": 0.04657,
+        "p95": 0.049255,
+        "min": 0.045799,
+        "max": 0.063004
+      },
+      "write_preserving_raw_ms": {
+        "median": 0.022143,
+        "p95": 0.054452,
+        "min": 0.021492,
+        "max": 0.066671
+      },
+      "python_peak_alloc_bytes": 9477,
+      "samples": 25
+    },
+    {
+      "file": "research/fixtures/upstream/library_with_text_and_image.riv",
+      "sha256": "1e08aa8712f576519e8ee50257e395a0e5ed78dd51ed76a7ee30f448194dcfd4",
+      "bytes": 903438,
+      "gzip_bytes": 515689,
+      "authored_pretty_json_bytes": null,
+      "objects": 23,
+      "properties": 43,
+      "bytes_per_object": 39279.913043478264,
+      "embedded_asset_bytes": 903055,
+      "parse_ms": {
+        "median": 1.92657,
+        "p95": 2.365941,
+        "min": 1.752759,
+        "max": 2.984112
+      },
+      "write_preserving_raw_ms": {
+        "median": 1.334648,
+        "p95": 1.731106,
+        "min": 1.226306,
+        "max": 2.819174
+      },
+      "python_peak_alloc_bytes": 4033556,
+      "samples": 25
+    },
+    {
+      "file": "research/fixtures/upstream/state_machine_transition.riv",
+      "sha256": "65fc100a82b1c2015cdd6267e5b3f3dea0d7a772c1710a7e9c4a09c883e26e3e",
+      "bytes": 1415,
+      "gzip_bytes": 1088,
+      "authored_pretty_json_bytes": null,
+      "objects": 85,
+      "properties": 277,
+      "bytes_per_object": 16.647058823529413,
+      "embedded_asset_bytes": 0,
+      "parse_ms": {
+        "median": 0.403337,
+        "p95": 0.491951,
+        "min": 0.386261,
+        "max": 0.512732
+      },
+      "write_preserving_raw_ms": {
+        "median": 0.167292,
+        "p95": 0.321594,
+        "min": 0.163186,
+        "max": 0.329075
+      },
+      "python_peak_alloc_bytes": 116547,
+      "samples": 25
+    },
+    {
+      "file": "research/fixtures/upstream/two_bone_ik.riv",
+      "sha256": "c2ef8563c393c9f375338cd034d8298e72c4f910a449e929ef780348840457a7",
+      "bytes": 313,
+      "gzip_bytes": 288,
+      "authored_pretty_json_bytes": null,
+      "objects": 24,
+      "properties": 59,
+      "bytes_per_object": 13.041666666666666,
+      "embedded_asset_bytes": 0,
+      "parse_ms": {
+        "median": 0.092869,
+        "p95": 0.116025,
+        "min": 0.090586,
+        "max": 0.123917
+      },
+      "write_preserving_raw_ms": {
+        "median": 0.041633,
+        "p95": 0.047191,
+        "min": 0.040791,
+        "max": 0.13284
+      },
+      "python_peak_alloc_bytes": 18541,
+      "samples": 25
+    }
+  ]
+}

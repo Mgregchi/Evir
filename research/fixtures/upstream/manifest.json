@@ -1,0 +1,36 @@
+{
+  "repository": "https://github.com/rive-app/rive-runtime",
+  "commit": "7aa93402a27c800db8a36acc8672612c100ea9b1",
+  "files": [
+    {
+      "file": "research/fixtures/upstream/artboardclipping.riv",
+      "source": "tests/unit_tests/assets/artboardclipping.riv",
+      "sha256": "c72d306cee2e9540674a85072cc97b45f4921279610a9c6a57ec4b423d354f6f",
+      "bytes": 195
+    },
+    {
+      "file": "research/fixtures/upstream/two_bone_ik.riv",
+      "source": "tests/unit_tests/assets/two_bone_ik.riv",
+      "sha256": "c2ef8563c393c9f375338cd034d8298e72c4f910a449e929ef780348840457a7",
+      "bytes": 313
+    },
+    {
+      "file": "research/fixtures/upstream/state_machine_transition.riv",
+      "source": "tests/unit_tests/assets/state_machine_transition.riv",
+      "sha256": "65fc100a82b1c2015cdd6267e5b3f3dea0d7a772c1710a7e9c4a09c883e26e3e",
+      "bytes": 1415
+    },
+    {
+      "file": "research/fixtures/upstream/animation_reset_cases.riv",
+      "source": "tests/unit_tests/assets/animation_reset_cases.riv",
+      "sha256": "722af52220a33a635810b1ee3dff28a90b42929cb39fb68586f629c440ea1f5c",
+      "bytes": 2105
+    },
+    {
+      "file": "research/fixtures/upstream/library_with_text_and_image.riv",
+      "source": "tests/unit_tests/assets/library_with_text_and_image.riv",
+      "sha256": "1e08aa8712f576519e8ee50257e395a0e5ed78dd51ed76a7ee30f448194dcfd4",
+      "bytes": 903438
+    }
+  ]
+}

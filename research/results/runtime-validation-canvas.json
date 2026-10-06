@@ -1,0 +1,587 @@
+{
+  "runtime": "@rive-app/canvas 2.44.0",
+  "results": [
+    {
+      "fixture": "static",
+      "loadMs": 87.5,
+      "animations": [],
+      "machines": [
+        "Auto Generated State Machine"
+      ],
+      "pixels": {
+        "count": 2304,
+        "cx": 63.5,
+        "cy": 127.5,
+        "hash": 3545605573
+      }
+    },
+    {
+      "fixture": "static-explicit-defaults",
+      "loadMs": 4,
+      "animations": [],
+      "machines": [
+        "Auto Generated State Machine"
+      ],
+      "pixels": {
+        "count": 2304,
+        "cx": 63.5,
+        "cy": 127.5,
+        "hash": 3545605573
+      }
+    },
+    {
+      "fixture": "animated",
+      "loadMs": 6.199999999953434,
+      "animations": [
+        "Move"
+      ],
+      "machines": [],
+      "sampled": {
+        "start": {
+          "count": 2304,
+          "cx": 63.5,
+          "cy": 127.5,
+          "hash": 3545605573
+        },
+        "mid": {
+          "count": 2304,
+          "cx": 191.5,
+          "cy": 127.5,
+          "hash": 1360373189
+        }
+      },
+      "pixels": {
+        "count": 2352,
+        "cx": 132,
+        "cy": 127.5,
+        "hash": 744984837
+      }
+    },
+    {
+      "fixture": "bones",
+      "loadMs": 5.300000000046566,
+      "animations": [
+        "Wave",
+        "Bend"
+      ],
+      "machines": [],
+      "sampled": {
+        "start": {
+          "count": 2326,
+          "cx": 129.8993981083405,
+          "cy": 101.45958727429063,
+          "hash": 2655202466
+        },
+        "mid": {
+          "count": 2276,
+          "cx": 118.23462214411248,
+          "cy": 161.640158172232,
+          "hash": 1164136962
+        }
+      },
+      "pixels": {
+        "count": 2226,
+        "cx": 135.47753818508536,
+        "cy": 134.8674752920036,
+        "hash": 3915692221
+      }
+    },
+    {
+      "fixture": "state-machine",
+      "loadMs": 4.699999999953434,
+      "animations": [
+        "Idle",
+        "Active"
+      ],
+      "machines": [
+        "Controller"
+      ],
+      "transitions": {
+        "before": {
+          "count": 2304,
+          "cx": 63.5,
+          "cy": 127.5,
+          "hash": 3545605573
+        },
+        "after": {
+          "count": 2304,
+          "cx": 191.5,
+          "cy": 127.5,
+          "hash": 1360373189
+        },
+        "back": {
+          "count": 2304,
+          "cx": 63.5,
+          "cy": 127.5,
+          "hash": 3545605573
+        }
+      },
+      "pixels": {
+        "count": 2304,
+        "cx": 63.5,
+        "cy": 127.5,
+        "hash": 3545605573
+      }
+    },
+    {
+      "fixture": "stress-100",
+      "loadMs": 13.800000000046566,
+      "animations": [
+        "Move0",
+        "Move1",
+        "Move2",
+        "Move3",
+        "Move4",
+        "Move5",
+        "Move6",
+        "Move7",
+        "Move8",
+        "Move9",
+        "Move10",
+        "Move11",
+        "Move12",
+        "Move13",
+        "Move14",
+        "Move15",
+        "Move16",
+        "Move17",
+        "Move18",
+        "Move19",
+        "Move20",
+        "Move21",
+        "Move22",
+        "Move23",
+        "Move24",
+        "Move25",
+        "Move26",
+        "Move27",
+        "Move28",
+        "Move29",
+        "Move30",
+        "Move31",
+        "Move32",
+        "Move33",
+        "Move34",
+        "Move35",
+        "Move36",
+        "Move37",
+        "Move38",
+        "Move39",
+        "Move40",
+        "Move41",
+        "Move42",
+        "Move43",
+        "Move44",
+        "Move45",
+        "Move46",
+        "Move47",
+        "Move48",
+        "Move49",
+        "Move50",
+        "Move51",
+        "Move52",
+        "Move53",
+        "Move54",
+        "Move55",
+        "Move56",
+        "Move57",
+        "Move58",
+        "Move59",
+        "Move60",
+        "Move61",
+        "Move62",
+        "Move63",
+        "Move64",
+        "Move65",
+        "Move66",
+        "Move67",
+        "Move68",
+        "Move69",
+        "Move70",
+        "Move71",
+        "Move72",
+        "Move73",
+        "Move74",
+        "Move75",
+        "Move76",
+        "Move77",
+        "Move78",
+        "Move79",
+        "Move80",
+        "Move81",
+        "Move82",
+        "Move83",
+        "Move84",
+        "Move85",
+        "Move86",
+        "Move87",
+        "Move88",
+        "Move89",
+        "Move90",
+        "Move91",
+        "Move92",
+        "Move93",
+        "Move94",
+        "Move95",
+        "Move96",
+        "Move97",
+        "Move98",
+        "Move99"
+      ],
+      "machines": [
+        "Controller"
+      ],
+      "pixels": {
+        "count": 14423,
+        "cx": 123.32732441239686,
+        "cy": 123.32780974831866,
+        "hash": 1189231816
+      }
+    },
+    {
+      "fixture": "states-2",
+      "loadMs": 3.9000000001396984,
+      "animations": [
+        "Pose0",
+        "Pose1"
+      ],
+      "machines": [
+        "Selector"
+      ],
+      "samples": [
+        {
+          "target": 0,
+          "pixels": {
+            "count": 2304,
+            "cx": 31.5,
+            "cy": 127.5,
+            "hash": 1139123653
+          }
+        },
+        {
+          "target": 1,
+          "pixels": {
+            "count": 2304,
+            "cx": 223.5,
+            "cy": 127.5,
+            "hash": 2156242373
+          }
+        },
+        {
+          "target": 1,
+          "pixels": {
+            "count": 2304,
+            "cx": 223.5,
+            "cy": 127.5,
+            "hash": 2156242373
+          }
+        }
+      ]
+    },
+    {
+      "fixture": "states-8",
+      "loadMs": 4,
+      "animations": [
+        "Pose0",
+        "Pose1",
+        "Pose2",
+        "Pose3",
+        "Pose4",
+        "Pose5",
+        "Pose6",
+        "Pose7"
+      ],
+      "machines": [
+        "Selector"
+      ],
+      "samples": [
+        {
+          "target": 0,
+          "pixels": {
+            "count": 2304,
+            "cx": 31.5,
+            "cy": 127.5,
+            "hash": 1139123653
+          }
+        },
+        {
+          "target": 7,
+          "pixels": {
+            "count": 2304,
+            "cx": 223.5,
+            "cy": 127.5,
+            "hash": 2156242373
+          }
+        },
+        {
+          "target": 4,
+          "pixels": {
+            "count": 2352,
+            "cx": 141,
+            "cy": 127.5,
+            "hash": 144470981
+          }
+        }
+      ]
+    },
+    {
+      "fixture": "states-32",
+      "loadMs": 5.5,
+      "animations": [
+        "Pose0",
+        "Pose1",
+        "Pose2",
+        "Pose3",
+        "Pose4",
+        "Pose5",
+        "Pose6",
+        "Pose7",
+        "Pose8",
+        "Pose9",
+        "Pose10",
+        "Pose11",
+        "Pose12",
+        "Pose13",
+        "Pose14",
+        "Pose15",
+        "Pose16",
+        "Pose17",
+        "Pose18",
+        "Pose19",
+        "Pose20",
+        "Pose21",
+        "Pose22",
+        "Pose23",
+        "Pose24",
+        "Pose25",
+        "Pose26",
+        "Pose27",
+        "Pose28",
+        "Pose29",
+        "Pose30",
+        "Pose31"
+      ],
+      "machines": [
+        "Selector"
+      ],
+      "samples": [
+        {
+          "target": 0,
+          "pixels": {
+            "count": 2304,
+            "cx": 31.5,
+            "cy": 127.5,
+            "hash": 1139123653
+          }
+        },
+        {
+          "target": 31,
+          "pixels": {
+            "count": 2304,
+            "cx": 223.5,
+            "cy": 127.5,
+            "hash": 2156242373
+          }
+        },
+        {
+          "target": 16,
+          "pixels": {
+            "count": 2352,
+            "cx": 131,
+            "cy": 127.5,
+            "hash": 425004389
+          }
+        }
+      ]
+    },
+    {
+      "fixture": "states-128",
+      "loadMs": 5.199999999953434,
+      "animations": [
+        "Pose0",
+        "Pose1",
+        "Pose2",
+        "Pose3",
+        "Pose4",
+        "Pose5",
+        "Pose6",
+        "Pose7",
+        "Pose8",
+        "Pose9",
+        "Pose10",
+        "Pose11",
+        "Pose12",
+        "Pose13",
+        "Pose14",
+        "Pose15",
+        "Pose16",
+        "Pose17",
+        "Pose18",
+        "Pose19",
+        "Pose20",
+        "Pose21",
+        "Pose22",
+        "Pose23",
+        "Pose24",
+        "Pose25",
+        "Pose26",
+        "Pose27",
+        "Pose28",
+        "Pose29",
+        "Pose30",
+        "Pose31",
+        "Pose32",
+        "Pose33",
+        "Pose34",
+        "Pose35",
+        "Pose36",
+        "Pose37",
+        "Pose38",
+        "Pose39",
+        "Pose40",
+        "Pose41",
+        "Pose42",
+        "Pose43",
+        "Pose44",
+        "Pose45",
+        "Pose46",
+        "Pose47",
+        "Pose48",
+        "Pose49",
+        "Pose50",
+        "Pose51",
+        "Pose52",
+        "Pose53",
+        "Pose54",
+        "Pose55",
+        "Pose56",
+        "Pose57",
+        "Pose58",
+        "Pose59",
+        "Pose60",
+        "Pose61",
+        "Pose62",
+        "Pose63",
+        "Pose64",
+        "Pose65",
+        "Pose66",
+        "Pose67",
+        "Pose68",
+        "Pose69",
+        "Pose70",
+        "Pose71",
+        "Pose72",
+        "Pose73",
+        "Pose74",
+        "Pose75",
+        "Pose76",
+        "Pose77",
+        "Pose78",
+        "Pose79",
+        "Pose80",
+        "Pose81",
+        "Pose82",
+        "Pose83",
+        "Pose84",
+        "Pose85",
+        "Pose86",
+        "Pose87",
+        "Pose88",
+        "Pose89",
+        "Pose90",
+        "Pose91",
+        "Pose92",
+        "Pose93",
+        "Pose94",
+        "Pose95",
+        "Pose96",
+        "Pose97",
+        "Pose98",
+        "Pose99",
+        "Pose100",
+        "Pose101",
+        "Pose102",
+        "Pose103",
+        "Pose104",
+        "Pose105",
+        "Pose106",
+        "Pose107",
+        "Pose108",
+        "Pose109",
+        "Pose110",
+        "Pose111",
+        "Pose112",
+        "Pose113",
+        "Pose114",
+        "Pose115",
+        "Pose116",
+        "Pose117",
+        "Pose118",
+        "Pose119",
+        "Pose120",
+        "Pose121",
+        "Pose122",
+        "Pose123",
+        "Pose124",
+        "Pose125",
+        "Pose126",
+        "Pose127"
+      ],
+      "machines": [
+        "Selector"
+      ],
+      "samples": [
+        {
+          "target": 0,
+          "pixels": {
+            "count": 2304,
+            "cx": 31.5,
+            "cy": 127.5,
+            "hash": 1139123653
+          }
+        },
+        {
+          "target": 127,
+          "pixels": {
+            "count": 2304,
+            "cx": 223.5,
+            "cy": 127.5,
+            "hash": 2156242373
+          }
+        },
+        {
+          "target": 64,
+          "pixels": {
+            "count": 2352,
+            "cx": 128,
+            "cy": 127.5,
+            "hash": 1077056325
+          }
+        }
+      ]
+    },
+    {
+      "fixture": "characters-25",
+      "loadMs": 6.699999999953434,
+      "animations": [
+        "Idle",
+        "Dance"
+      ],
+      "machines": [
+        "Controller"
+      ],
+      "idle": {
+        "count": 4000,
+        "cx": 133.9,
+        "cy": 119.5,
+        "hash": 2115933893
+      },
+      "dance": {
+        "count": 5150,
+        "cx": 133.69417475728156,
+        "cy": 123.55339805825243,
+        "hash": 1708592597
+      }
+    }
+  ]
+}

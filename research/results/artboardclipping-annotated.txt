@@ -1,0 +1,48 @@
+artboardclipping.riv: RIVE 7.0; header ends at 0xa; 195 bytes
+52 49 56 45 07 00 87 85 0f 00 17 00 01 04 0e 46 61 72 42 6f 74 74 6f 6d 52 69 67 68 74 07 00 00 fa 43 08 00 00 fa 43 09 00 00 e1 44 0b 00 00 00 40 0c 00 00 00 40 00 12 05 02 25 31 31 31 ff 00 14 05 00 00 01 04 06 43 65 6e 74 65 72 07 00 00 fa 43 08 00 00 fa 43 0b 00 00 00 3f 0c 00 00 00 3f 00 12 05 02 25 31 31 31 ff 00 14 05 00 00 01 04 07 54 6f 70 4c 65 66 74 07 00 00 fa 43 08 00 00 fa 43 09 00 00 16 44 00 12 05 02 25 31 31 31 ff 00 14 05 00 00 01 04 08 54 6f 70 52 69 67 68 74 07 00 00 fa 43 08 00 00 fa 43 09 00 00 96 44 0b 00 00 80 3f 00 12 05 02 25 31 31 31 ff 00 14 05 00 00
+
+0x000a..0x000c: type 23 (Backboard)
+0x000c..0x0037: type 1 (Artboard)
+  0x000d..0x001d: property 4 name (string) = FarBottomRight
+  0x001d..0x0022: property 7 width (float) = 500.0
+  0x0022..0x0027: property 8 height (float) = 500.0
+  0x0027..0x002c: property 9 xArtboard (float) = 1800.0
+  0x002c..0x0031: property 11 originX (float) = 2.0
+  0x0031..0x0036: property 12 originY (float) = 2.0
+0x0037..0x0040: type 18 (SolidColor)
+  0x0038..0x003a: property 5 parentId (uint) = 2
+  0x003a..0x003f: property 37 colorValue (color) = 4281413937
+0x0040..0x0044: type 20 (Fill)
+  0x0041..0x0043: property 5 parentId (uint) = 0
+0x0044..0x0062: type 1 (Artboard)
+  0x0045..0x004d: property 4 name (string) = Center
+  0x004d..0x0052: property 7 width (float) = 500.0
+  0x0052..0x0057: property 8 height (float) = 500.0
+  0x0057..0x005c: property 11 originX (float) = 0.5
+  0x005c..0x0061: property 12 originY (float) = 0.5
+0x0062..0x006b: type 18 (SolidColor)
+  0x0063..0x0065: property 5 parentId (uint) = 2
+  0x0065..0x006a: property 37 colorValue (color) = 4281413937
+0x006b..0x006f: type 20 (Fill)
+  0x006c..0x006e: property 5 parentId (uint) = 0
+0x006f..0x0089: type 1 (Artboard)
+  0x0070..0x0079: property 4 name (string) = TopLeft
+  0x0079..0x007e: property 7 width (float) = 500.0
+  0x007e..0x0083: property 8 height (float) = 500.0
+  0x0083..0x0088: property 9 xArtboard (float) = 600.0
+0x0089..0x0092: type 18 (SolidColor)
+  0x008a..0x008c: property 5 parentId (uint) = 2
+  0x008c..0x0091: property 37 colorValue (color) = 4281413937
+0x0092..0x0096: type 20 (Fill)
+  0x0093..0x0095: property 5 parentId (uint) = 0
+0x0096..0x00b6: type 1 (Artboard)
+  0x0097..0x00a1: property 4 name (string) = TopRight
+  0x00a1..0x00a6: property 7 width (float) = 500.0
+  0x00a6..0x00ab: property 8 height (float) = 500.0
+  0x00ab..0x00b0: property 9 xArtboard (float) = 1200.0
+  0x00b0..0x00b5: property 11 originX (float) = 1.0
+0x00b6..0x00bf: type 18 (SolidColor)
+  0x00b7..0x00b9: property 5 parentId (uint) = 2
+  0x00b9..0x00be: property 37 colorValue (color) = 4281413937
+0x00bf..0x00c3: type 20 (Fill)
+  0x00c0..0x00c2: property 5 parentId (uint) = 0
