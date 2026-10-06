@@ -1,0 +1,227 @@
+<!doctype html><meta charset="utf-8" /><title>
+  Evir vector rendering experiment
+</title>
+<script src="vector_math.cjs"></script>
+<script>
+  window.experiment = () => {
+    const size = 256,
+      r = 73.3,
+      cx = 127.7,
+      cy = 128.2,
+      k = 0.5522847498 * r;
+    const curves = [
+      [
+        [cx + r, cy],
+        [cx + r, cy + k],
+        [cx + k, cy + r],
+        [cx, cy + r],
+      ],
+      [
+        [cx, cy + r],
+        [cx - k, cy + r],
+        [cx - r, cy + k],
+        [cx - r, cy],
+      ],
+      [
+        [cx - r, cy],
+        [cx - r, cy - k],
+        [cx - k, cy - r],
+        [cx, cy - r],
+      ],
+      [
+        [cx, cy - r],
+        [cx + k, cy - r],
+        [cx + r, cy - k],
+        [cx + r, cy],
+      ],
+    ];
+    const points = curves.flatMap((c) =>
+      vectorMath.flattenCubic(...c, 0.1).slice(0, -1),
+    );
+    const triangles = vectorMath.triangulate(points);
+    function reference(scale) {
+      const c = document.createElement("canvas");
+      c.width = c.height = size * scale;
+      const ctx = c.getContext("2d");
+      ctx.scale(scale, scale);
+      ctx.beginPath();
+      ctx.moveTo(...curves[0][0]);
+      for (const b of curves) ctx.bezierCurveTo(...b[1], ...b[2], ...b[3]);
+      ctx.closePath();
+      ctx.fill();
+      return down(ctx.getImageData(0, 0, c.width, c.height).data, scale, false);
+    }
+    function down(data, scale, flip) {
+      const alpha = new Float64Array(size * size);
+      for (let y = 0; y < size; y++)
+        for (let x = 0; x < size; x++) {
+          let sum = 0;
+          for (let j = 0; j < scale; j++)
+            for (let i = 0; i < scale; i++) {
+              const row = flip
+                ? size * scale - 1 - (y * scale + j)
+                : y * scale + j;
+              sum += data[(row * size * scale + x * scale + i) * 4 + 3] / 255;
+            }
+          alpha[y * size + x] = sum / (scale * scale);
+        }
+      return alpha;
+    }
+    function draw(scale, samples) {
+      const c = document.createElement("canvas");
+      c.width = c.height = size * scale;
+      const g = c.getContext("webgl2", {
+        antialias: false,
+        preserveDrawingBuffer: true,
+      });
+      if (!g) throw Error("WebGL2 unavailable");
+      const shader = (type, src) => {
+        const s = g.createShader(type);
+        g.shaderSource(s, src);
+        g.compileShader(s);
+        if (!g.getShaderParameter(s, g.COMPILE_STATUS))
+          throw Error(g.getShaderInfoLog(s));
+        return s;
+      };
+      const program = g.createProgram();
+      g.attachShader(
+        program,
+        shader(
+          g.VERTEX_SHADER,
+          "#version 300 es\nin vec2 p;void main(){gl_Position=vec4(p,0.,1.);}",
+        ),
+      );
+      g.attachShader(
+        program,
+        shader(
+          g.FRAGMENT_SHADER,
+          "#version 300 es\nprecision highp float;out vec4 color;void main(){color=vec4(0.,0.,1.,1.);}",
+        ),
+      );
+      g.linkProgram(program);
+      if (!g.getProgramParameter(program, g.LINK_STATUS))
+        throw Error(g.getProgramInfoLog(program));
+      g.useProgram(program);
+      const buf = g.createBuffer();
+      g.bindBuffer(g.ARRAY_BUFFER, buf);
+      g.bufferData(
+        g.ARRAY_BUFFER,
+        new Float32Array(
+          triangles.flatMap((p) => [
+            (p[0] / size) * 2 - 1,
+            1 - (p[1] / size) * 2,
+          ]),
+        ),
+        g.STATIC_DRAW,
+      );
+      const loc = g.getAttribLocation(program, "p");
+      g.enableVertexAttribArray(loc);
+      g.vertexAttribPointer(loc, 2, g.FLOAT, false, 0, 0);
+      const max = g.getParameter(g.MAX_SAMPLES);
+      let framebuffer;
+      if (samples) {
+        if (max < samples) throw Error("Requested MSAA unsupported");
+        framebuffer = g.createFramebuffer();
+        g.bindFramebuffer(g.FRAMEBUFFER, framebuffer);
+        const rb = g.createRenderbuffer();
+        g.bindRenderbuffer(g.RENDERBUFFER, rb);
+        g.renderbufferStorageMultisample(
+          g.RENDERBUFFER,
+          samples,
+          g.RGBA8,
+          c.width,
+          c.height,
+        );
+        g.framebufferRenderbuffer(
+          g.FRAMEBUFFER,
+          g.COLOR_ATTACHMENT0,
+          g.RENDERBUFFER,
+          rb,
+        );
+        if (g.checkFramebufferStatus(g.FRAMEBUFFER) !== g.FRAMEBUFFER_COMPLETE)
+          throw Error("Incomplete MSAA framebuffer");
+      }
+      g.viewport(0, 0, c.width, c.height);
+      g.clearColor(0, 0, 0, 0);
+      g.clear(g.COLOR_BUFFER_BIT);
+      const start = performance.now();
+      g.drawArrays(g.TRIANGLES, 0, triangles.length);
+      if (samples) {
+        g.bindFramebuffer(g.READ_FRAMEBUFFER, framebuffer);
+        g.bindFramebuffer(g.DRAW_FRAMEBUFFER, null);
+        g.blitFramebuffer(
+          0,
+          0,
+          c.width,
+          c.height,
+          0,
+          0,
+          c.width,
+          c.height,
+          g.COLOR_BUFFER_BIT,
+          g.NEAREST,
+        );
+        g.bindFramebuffer(g.FRAMEBUFFER, null);
+      }
+      const submissionMs = performance.now() - start;
+      const data = new Uint8Array(c.width * c.height * 4);
+      g.readPixels(0, 0, c.width, c.height, g.RGBA, g.UNSIGNED_BYTE, data);
+      if (g.getError() !== g.NO_ERROR) throw Error("WebGL error");
+      const ext = g.getExtension("WEBGL_debug_renderer_info");
+      const renderer = g.getParameter(
+        ext ? ext.UNMASKED_RENDERER_WEBGL : g.RENDERER,
+      );
+      g.getExtension("WEBGL_lose_context")?.loseContext();
+      return {
+        alpha: down(data, scale, true),
+        submissionMs,
+        renderer,
+        maxSamples: max,
+      };
+    }
+    const ref = reference(8),
+      results = [];
+    for (const [name, scale, samples] of [
+      ["aliased", 1, 0],
+      ["msaa4", 1, 4],
+      ["ssaa2", 2, 0],
+      ["ssaa4", 4, 0],
+      ["ssaa8", 8, 0],
+    ]) {
+      const d = draw(scale, samples);
+      let squared = 0,
+        edgeAbs = 0,
+        edges = 0,
+        total = 0;
+      for (let i = 0; i < ref.length; i++) {
+        const delta = d.alpha[i] - ref[i];
+        squared += delta * delta;
+        total += d.alpha[i];
+        if (ref[i] > 0 && ref[i] < 1) {
+          edgeAbs += Math.abs(delta);
+          edges++;
+        }
+      }
+      results.push({
+        name,
+        scale,
+        samples,
+        alphaArea: total,
+        coverageRmse: Math.sqrt(squared / ref.length),
+        edgeMeanAbsoluteError: edgeAbs / edges,
+        edgePixels: edges,
+        cpuSubmissionMs: d.submissionMs,
+        renderer: d.renderer,
+        maxSamples: d.maxSamples,
+      });
+    }
+    return {
+      method:
+        "One cubic-circle contour flattened at 0.1 output-pixel tolerance, ear-clipped on CPU, rendered as flat-color WebGL2 triangles; coverage reference is Canvas2D cubic rendering at 8x resolution box-averaged. Single CPU-submission sample excludes readback and GPU completion; not a throughput benchmark.",
+      vertices: points.length,
+      triangles: triangles.length / 3,
+      polygonArea: vectorMath.area(points),
+      results,
+    };
+  };
+</script>

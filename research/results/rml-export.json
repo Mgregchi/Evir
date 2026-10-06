@@ -1,0 +1,19 @@
+{
+  "cli": "rive 1.4.0",
+  "records": [
+    {
+      "source": "research/rml/static",
+      "output": "research/fixtures/advanced/rml-static.riv",
+      "bytes": 153,
+      "sha256": "a5483f91fa198613984d792504ad746d7a989aee7eabc07388e54244c423975e",
+      "inspect_problems": []
+    },
+    {
+      "source": "research/rml/feather",
+      "output": "research/fixtures/advanced/rml-feather.riv",
+      "bytes": 158,
+      "sha256": "8bc3eae5cea1bec12f158f13c029473b2bc9774e9bf4829505f567a5f32f87d3",
+      "inspect_problems": []
+    }
+  ]
+}

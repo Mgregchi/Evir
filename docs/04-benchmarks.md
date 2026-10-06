@@ -2,6 +2,8 @@
 
 These measurements exercise independently generated `.riv` files with official Rive runtimes. They establish an export-compatibility and performance baseline. There is no independent Evir renderer here, so these results do not establish an Evir-versus-Rive speedup or full engine parity. The Python codec is measured separately because it performs structural parsing, not complete runtime import.
 
+This report covers the original baseline. See [extended experiments](07-extended-experiments.md) for subsequent semantic probes, official RML exports and the independent triangle lab.
+
 ## Environment and method
 
 Python 3.12.14; Node v24.19.0; Chromium 151.0.7922.173; Playwright 1.63.0. Both official web packages are pinned at 2.44.0. The canvas is 256×256 on headless Linux x64.
@@ -86,22 +88,22 @@ Per-process RSS snapshots and timing spreads are retained in the raw runtime JSO
 
 | Fixture | Parse median / p95 ms | Preserve-write median ms | Peak traced parse allocation KiB |
 |---|---:|---:|---:|
-| animated | 0.042 / 0.110 | 0.020 | 7.9 |
-| bones | 0.098 / 0.346 | 0.041 | 17.9 |
-| characters-25 | 3.363 / 3.999 | 1.424 | 924.7 |
-| state-machine | 0.090 / 0.131 | 0.039 | 14.9 |
-| states-128 | 4.303 / 5.917 | 1.796 | 1154.0 |
-| states-2 | 0.093 / 0.179 | 0.039 | 15.0 |
-| states-32 | 1.037 / 1.497 | 0.373 | 277.7 |
-| states-8 | 0.260 / 0.348 | 0.105 | 60.5 |
-| static-explicit-defaults | 0.034 / 0.138 | 0.017 | 7.3 |
-| static | 0.020 / 0.022 | 0.010 | 3.9 |
-| stress-100 | 4.456 / 5.597 | 1.776 | 1289.1 |
-| animation_reset_cases | 0.801 / 0.932 | 0.295 | 218.6 |
-| artboardclipping | 0.047 / 0.049 | 0.022 | 9.3 |
-| library_with_text_and_image | 1.927 / 2.366 | 1.335 | 3939.0 |
-| state_machine_transition | 0.403 / 0.492 | 0.167 | 113.8 |
-| two_bone_ik | 0.093 / 0.116 | 0.042 | 18.1 |
+| animated | 0.041 / 0.050 | 0.019 | 7.9 |
+| bones | 0.089 / 0.140 | 0.039 | 17.9 |
+| characters-25 | 2.939 / 3.474 | 1.128 | 924.7 |
+| state-machine | 0.086 / 0.103 | 0.038 | 14.9 |
+| states-128 | 3.709 / 4.157 | 1.462 | 1154.0 |
+| states-2 | 0.090 / 0.101 | 0.038 | 15.0 |
+| states-32 | 0.950 / 1.047 | 0.373 | 277.7 |
+| states-8 | 0.255 / 0.468 | 0.103 | 60.5 |
+| static-explicit-defaults | 0.033 / 0.034 | 0.017 | 7.3 |
+| static | 0.020 / 0.021 | 0.010 | 3.9 |
+| stress-100 | 4.066 / 4.556 | 1.564 | 1289.1 |
+| animation_reset_cases | 0.771 / 0.874 | 0.308 | 218.6 |
+| artboardclipping | 0.046 / 0.054 | 0.022 | 9.3 |
+| library_with_text_and_image | 1.783 / 2.117 | 1.286 | 3939.0 |
+| state_machine_transition | 0.389 / 0.447 | 0.167 | 113.8 |
+| two_bone_ik | 0.093 / 0.103 | 0.042 | 18.1 |
 
 The reader builds Python dictionaries, per-field byte annotations and hexadecimal copies of opaque data. Its allocations and timing intentionally include that inspection representation. They are not directly comparable to C++/WASM runtime import, nor representative of a compact future production reader. The copied corpus and all generated fixtures pass structural round trips.
 

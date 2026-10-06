@@ -1,0 +1,253 @@
+{
+  "runtime": "@rive-app/webgl2 2.44.0",
+  "results": [
+    {
+      "fixture": "weighted-skin",
+      "loadMs": 177.79999999981374,
+      "animations": [
+        "Deform"
+      ],
+      "machines": [],
+      "first": {
+        "count": 8294,
+        "cx": 127.50361707258259,
+        "cy": 140.23510971786834,
+        "hash": 1230324973
+      },
+      "status": "passed",
+      "poses": {
+        "a": {
+          "count": 8192,
+          "cx": 127.5,
+          "cy": 127.5,
+          "hash": 3796213189
+        },
+        "b": {
+          "count": 8300,
+          "cx": 127.49831325301204,
+          "cy": 151.43686746987953,
+          "hash": 3152264477
+        },
+        "fixed": [
+          40,
+          100,
+          220,
+          255
+        ],
+        "moving": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "middle": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "fixture": "trigger",
+      "loadMs": 48.200000000186265,
+      "animations": [
+        "Left",
+        "Right"
+      ],
+      "machines": [
+        "Trigger"
+      ],
+      "first": {
+        "count": 2304,
+        "cx": 63.5,
+        "cy": 127.5,
+        "hash": 3545605573
+      },
+      "status": "passed",
+      "poses": [
+        {
+          "count": 2304,
+          "cx": 191.5,
+          "cy": 127.5,
+          "hash": 1360373189
+        },
+        {
+          "count": 2304,
+          "cx": 63.5,
+          "cy": 127.5,
+          "hash": 3545605573
+        }
+      ],
+      "reset": {
+        "count": 2304,
+        "cx": 63.5,
+        "cy": 127.5,
+        "hash": 3545605573
+      }
+    },
+    {
+      "fixture": "blend",
+      "loadMs": 47.200000000186265,
+      "animations": [
+        "Left",
+        "Right"
+      ],
+      "machines": [
+        "Blend"
+      ],
+      "first": {
+        "count": 2304,
+        "cx": 63.5,
+        "cy": 127.5,
+        "hash": 3545605573
+      },
+      "status": "passed",
+      "samples": [
+        {
+          "v": 0,
+          "pixels": {
+            "count": 2304,
+            "cx": 63.5,
+            "cy": 127.5,
+            "hash": 3545605573
+          }
+        },
+        {
+          "v": 0.25,
+          "pixels": {
+            "count": 2304,
+            "cx": 95.5,
+            "cy": 127.5,
+            "hash": 2193991109
+          }
+        },
+        {
+          "v": 0.5,
+          "pixels": {
+            "count": 2304,
+            "cx": 127.5,
+            "cy": 127.5,
+            "hash": 1379247557
+          }
+        },
+        {
+          "v": 0.75,
+          "pixels": {
+            "count": 2304,
+            "cx": 159.5,
+            "cy": 127.5,
+            "hash": 1101374917
+          }
+        },
+        {
+          "v": 1,
+          "pixels": {
+            "count": 2304,
+            "cx": 191.5,
+            "cy": 127.5,
+            "hash": 1360373189
+          }
+        }
+      ]
+    },
+    {
+      "fixture": "curve",
+      "loadMs": 46.10000000009313,
+      "animations": [],
+      "machines": [
+        "Auto Generated State Machine"
+      ],
+      "first": {
+        "count": 12976,
+        "cx": 127.5,
+        "cy": 127.5,
+        "hash": 2265896853
+      },
+      "status": "passed"
+    },
+    {
+      "fixture": "gradient",
+      "loadMs": 49.5,
+      "animations": [],
+      "machines": [
+        "Auto Generated State Machine"
+      ],
+      "first": {
+        "count": 8192,
+        "cx": 127.5,
+        "cy": 127.5,
+        "hash": 1918074788
+      },
+      "status": "passed",
+      "colors": {
+        "left": [
+          222,
+          0,
+          33,
+          255
+        ],
+        "right": [
+          31,
+          0,
+          224,
+          255
+        ]
+      }
+    },
+    {
+      "fixture": "clip",
+      "loadMs": 76.5,
+      "animations": [],
+      "machines": [
+        "Auto Generated State Machine"
+      ],
+      "first": {
+        "count": 4096,
+        "cx": 127.5,
+        "cy": 127.5,
+        "hash": 3961068997
+      },
+      "status": "passed"
+    },
+    {
+      "fixture": "listener",
+      "loadMs": 45.5,
+      "animations": [
+        "Left",
+        "Right"
+      ],
+      "machines": [
+        "Trigger"
+      ],
+      "first": {
+        "count": 2304,
+        "cx": 63.5,
+        "cy": 127.5,
+        "hash": 3545605573
+      },
+      "status": "passed",
+      "after": {
+        "count": 2304,
+        "cx": 191.5,
+        "cy": 127.5,
+        "hash": 1360373189
+      }
+    },
+    {
+      "fixture": "rml-static",
+      "loadMs": 47.60000000009313,
+      "animations": [],
+      "machines": [
+        "Auto Generated State Machine"
+      ],
+      "first": {
+        "count": 2304,
+        "cx": 63.5,
+        "cy": 127.5,
+        "hash": 3545605573
+      },
+      "status": "passed"
+    }
+  ]
+}

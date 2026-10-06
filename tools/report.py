@@ -50,6 +50,8 @@ def main():
         "",
         "These measurements exercise independently generated `.riv` files with official Rive runtimes. They establish an export-compatibility and performance baseline. There is no independent Evir renderer here, so these results do not establish an Evir-versus-Rive speedup or full engine parity. The Python codec is measured separately because it performs structural parsing, not complete runtime import.",
         "",
+        "This report covers the original baseline. See [extended experiments](07-extended-experiments.md) for subsequent semantic probes, official RML exports and the independent triangle lab.",
+        "",
         "## Environment and method",
         "",
         f"Python {codec['environment']['python']}; Node {runtimes['canvas']['environment']['node']}; Chromium {runtimes['canvas']['environment']['chromium']}; Playwright {runtimes['canvas']['environment']['playwright']}. Both official web packages are pinned at 2.44.0. The canvas is 256×256 on headless Linux {runtimes['canvas']['environment']['arch']}.",

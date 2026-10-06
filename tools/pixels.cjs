@@ -20,3 +20,23 @@ exports.capture = async (page) => {
   }
   return { count: n, cx: x / n, cy: y / n, hash: hash >>> 0 };
 };
+
+exports.sample = async (page, x, y) => {
+  if ((process.env.RIVE_RENDERER || "canvas") === "canvas")
+    return page.evaluate(
+      ([x, y]) =>
+        Array.from(
+          document
+            .getElementById("canvas")
+            .getContext("2d")
+            .getImageData(x, y, 1, 1).data,
+        ),
+      [x, y],
+    );
+  const im = PNG.sync.read(
+    await page.locator("#canvas").screenshot({ omitBackground: true }),
+  );
+  return Array.from(
+    im.data.subarray((y * im.width + x) * 4, (y * im.width + x) * 4 + 4),
+  );
+};

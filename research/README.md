@@ -56,3 +56,7 @@ Do not run the collector against a mutable branch and describe the resulting cor
 - [Pinned official sources](../docs/sources.md)
 
 The data supports a compatible export subset and an official-runtime cloud baseline. It does not assert full format support, an independent Evir renderer, mobile validation, actual official RML compilation or hardware-GPU performance.
+
+## Extended rendering and compatibility probes
+
+See [rendering foundations](../docs/06-rendering-foundations.md) and [extended experiment results](../docs/07-extended-experiments.md). `npm run research:advanced` runs the weighted deformation, triggers/blend/reset/listener, curve/gradient/clip, official RML static acceptance, and independent triangle quality checks. `npm run compile:rml` additionally needs the official CLI (set `RIVE_CLI` to its executable); retained CLI outputs allow validation without it. `npm run probe:feather` is a separate diagnostic that currently records failures and exits nonzero.

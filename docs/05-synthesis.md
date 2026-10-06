@@ -1,5 +1,7 @@
 # Compatibility decision for Evir
 
+This document describes the original research baseline. See [extended experiments](07-extended-experiments.md) for later weighted-deformation, interaction, rendering and official RML/CLI results.
+
 ## Decision
 
 Continue with a deliberately small `.riv` compatibility slice while retaining Rive as the rendering and behavioral reference. Defer a new `.evir` format and a replacement GPU renderer. The independent exporter now creates files that official runtimes accept and execute, so the next useful extension can be tested against an existing oracle rather than guessed.
