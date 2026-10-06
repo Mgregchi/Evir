@@ -1,0 +1,9 @@
+<Rive version="1" kind="fragment">
+  <Artboard name="Static" width="256" height="256" id="0:1" styleId="0:2">
+    <LayoutComponentStyle id="0:2"/>
+    <Shape name="Box" x="64" y="128">
+      <Rectangle width="48" height="48"/>
+      <Fill><SolidColor colorValue="FF2864DC"/><Feather strength="12"/></Fill>
+    </Shape>
+  </Artboard>
+</Rive>

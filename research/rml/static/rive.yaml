@@ -1,0 +1,5 @@
+name: rml-static
+logs:
+  file: build/rive.log
+  problems: build/problems.log
+main: Static

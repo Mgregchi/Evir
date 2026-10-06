@@ -1,5 +1,7 @@
 # Independent `.riv` creation and acceptance
 
+This document describes the original research baseline. See [extended experiments](07-extended-experiments.md) for later weighted-deformation, interaction, rendering and official RML/CLI results.
+
 ## Implemented capability
 
 `tools/riv.py` implements a standard-library Python structural reader and writer. It decodes headers, properties and records through a pinned inherited schema, reports offsets and preserves known and ToC-typed unknown fields. `tools/generate_fixtures.py` constructs scenes with explicit import contexts and index references. It never copies the scene records of an editor-exported file to make the generated fixtures pass.

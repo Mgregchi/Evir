@@ -1,0 +1,68 @@
+{
+  "method": "One cubic-circle contour flattened at 0.1 output-pixel tolerance, ear-clipped on CPU, rendered as flat-color WebGL2 triangles; coverage reference is Canvas2D cubic rendering at 8x resolution box-averaged. Single CPU-submission sample excludes readback and GPU completion; not a throughput benchmark.",
+  "vertices": 128,
+  "triangles": 126,
+  "polygonArea": 16877.36893900833,
+  "results": [
+    {
+      "name": "aliased",
+      "scale": 1,
+      "samples": 0,
+      "alphaArea": 16879,
+      "coverageRmse": 0.023596643434471452,
+      "edgeMeanAbsoluteError": 0.19436931779632277,
+      "edgePixels": 578,
+      "cpuSubmissionMs": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "maxSamples": 4
+    },
+    {
+      "name": "msaa4",
+      "scale": 1,
+      "samples": 4,
+      "alphaArea": 16871.627450980326,
+      "coverageRmse": 0.008787965342250825,
+      "edgeMeanAbsoluteError": 0.07176538435443379,
+      "edgePixels": 578,
+      "cpuSubmissionMs": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "maxSamples": 4
+    },
+    {
+      "name": "ssaa2",
+      "scale": 2,
+      "samples": 0,
+      "alphaArea": 16881,
+      "coverageRmse": 0.007951685913513579,
+      "edgeMeanAbsoluteError": 0.0658993571477034,
+      "edgePixels": 578,
+      "cpuSubmissionMs": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "maxSamples": 4
+    },
+    {
+      "name": "ssaa4",
+      "scale": 4,
+      "samples": 0,
+      "alphaArea": 16876.4375,
+      "coverageRmse": 0.0029622186185490245,
+      "edgeMeanAbsoluteError": 0.024187529683153536,
+      "edgePixels": 578,
+      "cpuSubmissionMs": 0.09999999986030161,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "maxSamples": 4
+    },
+    {
+      "name": "ssaa8",
+      "scale": 8,
+      "samples": 0,
+      "alphaArea": 16877.359375,
+      "coverageRmse": 0.001334484889304847,
+      "edgeMeanAbsoluteError": 0.010625402842798008,
+      "edgePixels": 578,
+      "cpuSubmissionMs": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "maxSamples": 4
+    }
+  ]
+}

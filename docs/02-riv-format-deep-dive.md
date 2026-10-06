@@ -1,5 +1,7 @@
 # `.riv` version 7: structural format and implementation
 
+This document describes the original research baseline. See [extended experiments](07-extended-experiments.md) for later weighted-deformation, interaction, rendering and official RML/CLI results.
+
 The executable reference for this investigation is the pinned runtime source listed in [Sources](sources.md). The current inspected C++ source declares format 7.4; generated fixtures deliberately use 7.0 features and are tested against web packages 2.44.0. Package versions and binary format versions are separate.
 
 ## Header and object stream

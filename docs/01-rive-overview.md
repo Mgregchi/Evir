@@ -1,5 +1,7 @@
 # Rive architecture: evidence for Evir
 
+This document describes the original research baseline. See [extended experiments](07-extended-experiments.md) for later weighted-deformation, interaction, rendering and official RML/CLI results.
+
 Research date: 2026-10-06. This document separates inspected implementation from behavior verified in a browser. The source revisions and reproduction commands are in [Sources](sources.md) and [Research workflow](../research/README.md).
 
 ## Findings

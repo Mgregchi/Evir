@@ -11,7 +11,15 @@
     "research": "npm run generate && npm test && npm run validate && npm run validate:webgl2 && npm run benchmark && npm run benchmark:webgl2 && npm run report",
     "validate:webgl2": "RIVE_RENDERER=webgl2 node tools/validate.cjs",
     "benchmark:webgl2": "RIVE_RENDERER=webgl2 node tools/benchmark_runtime.cjs",
-    "report": "python3 tools/report.py"
+    "report": "python3 tools/report.py",
+    "generate:advanced": "python3 tools/generate_advanced.py",
+    "test:geometry": "node tests/vector_math.cjs",
+    "validate:advanced": "node tools/validate_advanced.cjs",
+    "validate:advanced:webgl2": "RIVE_RENDERER=webgl2 node tools/validate_advanced.cjs",
+    "vector:lab": "node tools/vector_lab.cjs",
+    "probe:feather": "RIVE_RENDERER=webgl2 node tools/probe_feather.cjs",
+    "compile:rml": "python3 tools/compile_rml.py",
+    "research:advanced": "npm run generate:advanced && npm test && npm run test:geometry && npm run validate:advanced && npm run validate:advanced:webgl2 && npm run vector:lab"
   },
   "dependencies": {
     "@rive-app/canvas": "2.44.0",

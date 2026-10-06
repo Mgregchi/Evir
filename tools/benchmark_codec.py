@@ -20,7 +20,9 @@ def summary(v):
 
 
 rows = []
-for p in sorted((ROOT / "research/fixtures").rglob("*.riv")):
+for p in sorted((ROOT / "research/fixtures").glob("*.riv")) + sorted(
+    (ROOT / "research/fixtures/upstream").glob("*.riv")
+):
     data = p.read_bytes()
     doc = parse(data)
     assert write(doc, True) == data

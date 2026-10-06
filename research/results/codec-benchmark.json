@@ -18,16 +18,16 @@
       "bytes_per_object": 11.083333333333334,
       "embedded_asset_bytes": 0,
       "parse_ms": {
-        "median": 0.042484,
-        "p95": 0.110135,
-        "min": 0.040621,
-        "max": 0.175645
+        "median": 0.041493,
+        "p95": 0.049515,
+        "min": 0.040631,
+        "max": 0.064818
       },
       "write_preserving_raw_ms": {
-        "median": 0.01959,
-        "p95": 0.041793,
-        "min": 0.018648,
-        "max": 0.109345
+        "median": 0.0195,
+        "p95": 0.041022,
+        "min": 0.018829,
+        "max": 0.117147
       },
       "python_peak_alloc_bytes": 8056,
       "samples": 25
@@ -43,16 +43,16 @@
       "bytes_per_object": 11.916666666666666,
       "embedded_asset_bytes": 0,
       "parse_ms": {
-        "median": 0.097827,
-        "p95": 0.345831,
-        "min": 0.091037,
-        "max": 0.346161
+        "median": 0.089395,
+        "p95": 0.140181,
+        "min": 0.086931,
+        "max": 0.176707
       },
       "write_preserving_raw_ms": {
-        "median": 0.040781,
-        "p95": 0.235896,
-        "min": 0.038748,
-        "max": 0.45215
+        "median": 0.038758,
+        "p95": 0.054572,
+        "min": 0.037937,
+        "max": 0.060722
       },
       "python_peak_alloc_bytes": 18364,
       "samples": 25
@@ -68,16 +68,16 @@
       "bytes_per_object": 10.138200782268578,
       "embedded_asset_bytes": 0,
       "parse_ms": {
-        "median": 3.362872,
-        "p95": 3.998769,
-        "min": 3.067988,
-        "max": 6.412943
+        "median": 2.938671,
+        "p95": 3.473959,
+        "min": 2.819052,
+        "max": 5.224809
       },
       "write_preserving_raw_ms": {
-        "median": 1.424424,
-        "p95": 2.0993,
-        "min": 1.198114,
-        "max": 2.299461
+        "median": 1.12772,
+        "p95": 1.307743,
+        "min": 1.084946,
+        "max": 1.479571
       },
       "python_peak_alloc_bytes": 946891,
       "samples": 25
@@ -93,16 +93,16 @@
       "bytes_per_object": 9.0,
       "embedded_asset_bytes": 0,
       "parse_ms": {
-        "median": 0.090016,
-        "p95": 0.130817,
-        "min": 0.088123,
-        "max": 0.264488
+        "median": 0.086461,
+        "p95": 0.102515,
+        "min": 0.085069,
+        "max": 0.137717
       },
       "write_preserving_raw_ms": {
-        "median": 0.038528,
-        "p95": 0.070436,
-        "min": 0.037667,
-        "max": 0.090066
+        "median": 0.038108,
+        "p95": 0.04012,
+        "min": 0.037476,
+        "max": 0.040992
       },
       "python_peak_alloc_bytes": 15261,
       "samples": 25
@@ -118,16 +118,16 @@
       "bytes_per_object": 8.783992285438766,
       "embedded_asset_bytes": 0,
       "parse_ms": {
-        "median": 4.303197,
-        "p95": 5.917147,
-        "min": 3.789804,
-        "max": 7.275812
+        "median": 3.708995,
+        "p95": 4.156821,
+        "min": 3.627141,
+        "max": 5.960282
       },
       "write_preserving_raw_ms": {
-        "median": 1.795953,
-        "p95": 2.656329,
-        "min": 1.470493,
-        "max": 3.547881
+        "median": 1.462267,
+        "p95": 1.585662,
+        "min": 1.411018,
+        "max": 1.635858
       },
       "python_peak_alloc_bytes": 1181709,
       "samples": 25
@@ -143,16 +143,16 @@
       "bytes_per_object": 9.10344827586207,
       "embedded_asset_bytes": 0,
       "parse_ms": {
-        "median": 0.09317,
-        "p95": 0.178749,
-        "min": 0.090616,
-        "max": 0.502527
+        "median": 0.089656,
+        "p95": 0.101082,
+        "min": 0.08645,
+        "max": 0.108634
       },
       "write_preserving_raw_ms": {
-        "median": 0.039039,
-        "p95": 0.064838,
-        "min": 0.037696,
-        "max": 0.080472
+        "median": 0.037917,
+        "p95": 0.041302,
+        "min": 0.036905,
+        "max": 0.05313
       },
       "python_peak_alloc_bytes": 15357,
       "samples": 25
@@ -168,16 +168,16 @@
       "bytes_per_object": 8.762081784386616,
       "embedded_asset_bytes": 0,
       "parse_ms": {
-        "median": 1.03654,
-        "p95": 1.496722,
-        "min": 0.946354,
-        "max": 1.946179
+        "median": 0.950163,
+        "p95": 1.04711,
+        "min": 0.926007,
+        "max": 1.175183
       },
       "write_preserving_raw_ms": {
-        "median": 0.373141,
-        "p95": 0.537359,
-        "min": 0.358559,
-        "max": 0.603538
+        "median": 0.373223,
+        "p95": 0.405202,
+        "min": 0.360174,
+        "max": 0.429148
       },
       "python_peak_alloc_bytes": 284400,
       "samples": 25
@@ -193,16 +193,16 @@
       "bytes_per_object": 8.805194805194805,
       "embedded_asset_bytes": 0,
       "parse_ms": {
-        "median": 0.260312,
-        "p95": 0.348034,
-        "min": 0.254193,
-        "max": 0.527655
+        "median": 0.255165,
+        "p95": 0.467666,
+        "min": 0.249676,
+        "max": 0.599164
       },
       "write_preserving_raw_ms": {
-        "median": 0.105138,
-        "p95": 0.16663,
-        "min": 0.102404,
-        "max": 0.204848
+        "median": 0.103286,
+        "p95": 0.122064,
+        "min": 0.101583,
+        "max": 0.130517
       },
       "python_peak_alloc_bytes": 61947,
       "samples": 25
@@ -218,16 +218,16 @@
       "bytes_per_object": 23.0,
       "embedded_asset_bytes": 0,
       "parse_ms": {
-        "median": 0.033981,
-        "p95": 0.137918,
-        "min": 0.032389,
-        "max": 0.738141
+        "median": 0.03294,
+        "p95": 0.034091,
+        "min": 0.032339,
+        "max": 0.064498
       },
       "write_preserving_raw_ms": {
-        "median": 0.016795,
-        "p95": 0.023445,
-        "min": 0.015934,
-        "max": 0.043826
+        "median": 0.016525,
+        "p95": 0.017706,
+        "min": 0.016054,
+        "max": 0.018678
       },
       "python_peak_alloc_bytes": 7485,
       "samples": 25
@@ -243,16 +243,16 @@
       "bytes_per_object": 12.666666666666666,
       "embedded_asset_bytes": 0,
       "parse_ms": {
-        "median": 0.020491,
-        "p95": 0.022224,
-        "min": 0.02014,
-        "max": 0.080191
+        "median": 0.02038,
+        "p95": 0.021062,
+        "min": 0.019971,
+        "max": 0.021212
       },
       "write_preserving_raw_ms": {
-        "median": 0.010265,
-        "p95": 0.010876,
-        "min": 0.009734,
-        "max": 0.017166
+        "median": 0.009765,
+        "p95": 0.009985,
+        "min": 0.009534,
+        "max": 0.010245
       },
       "python_peak_alloc_bytes": 3958,
       "samples": 25
@@ -268,16 +268,16 @@
       "bytes_per_object": 10.711330049261084,
       "embedded_asset_bytes": 0,
       "parse_ms": {
-        "median": 4.455707,
-        "p95": 5.597215,
-        "min": 4.121554,
-        "max": 6.60336
+        "median": 4.066064,
+        "p95": 4.556113,
+        "min": 3.949799,
+        "max": 6.095936
       },
       "write_preserving_raw_ms": {
-        "median": 1.775773,
-        "p95": 2.15198,
-        "min": 1.580339,
-        "max": 2.305189
+        "median": 1.564279,
+        "p95": 1.74313,
+        "min": 1.529677,
+        "max": 1.841277
       },
       "python_peak_alloc_bytes": 1320028,
       "samples": 25
@@ -293,16 +293,16 @@
       "bytes_per_object": 7.943396226415095,
       "embedded_asset_bytes": 0,
       "parse_ms": {
-        "median": 0.800896,
-        "p95": 0.932374,
-        "min": 0.768857,
-        "max": 1.091593
+        "median": 0.771123,
+        "p95": 0.874349,
+        "min": 0.741709,
+        "max": 0.980039
       },
       "write_preserving_raw_ms": {
-        "median": 0.295305,
-        "p95": 0.352601,
-        "min": 0.287302,
-        "max": 0.585912
+        "median": 0.307945,
+        "p95": 0.507616,
+        "min": 0.281926,
+        "max": 0.523359
       },
       "python_peak_alloc_bytes": 223848,
       "samples": 25
@@ -318,16 +318,16 @@
       "bytes_per_object": 15.0,
       "embedded_asset_bytes": 0,
       "parse_ms": {
-        "median": 0.04657,
-        "p95": 0.049255,
-        "min": 0.045799,
-        "max": 0.063004
+        "median": 0.04617,
+        "p95": 0.053541,
+        "min": 0.044667,
+        "max": 0.067662
       },
       "write_preserving_raw_ms": {
-        "median": 0.022143,
-        "p95": 0.054452,
-        "min": 0.021492,
-        "max": 0.066671
+        "median": 0.022164,
+        "p95": 0.073291,
+        "min": 0.021562,
+        "max": 0.108213
       },
       "python_peak_alloc_bytes": 9477,
       "samples": 25
@@ -343,16 +343,16 @@
       "bytes_per_object": 39279.913043478264,
       "embedded_asset_bytes": 903055,
       "parse_ms": {
-        "median": 1.92657,
-        "p95": 2.365941,
-        "min": 1.752759,
-        "max": 2.984112
+        "median": 1.782539,
+        "p95": 2.117094,
+        "min": 1.74298,
+        "max": 2.528564
       },
       "write_preserving_raw_ms": {
-        "median": 1.334648,
-        "p95": 1.731106,
-        "min": 1.226306,
-        "max": 2.819174
+        "median": 1.28591,
+        "p95": 1.481295,
+        "min": 1.241653,
+        "max": 1.503848
       },
       "python_peak_alloc_bytes": 4033556,
       "samples": 25
@@ -368,16 +368,16 @@
       "bytes_per_object": 16.647058823529413,
       "embedded_asset_bytes": 0,
       "parse_ms": {
-        "median": 0.403337,
-        "p95": 0.491951,
-        "min": 0.386261,
-        "max": 0.512732
+        "median": 0.389268,
+        "p95": 0.447124,
+        "min": 0.382016,
+        "max": 0.521096
       },
       "write_preserving_raw_ms": {
-        "median": 0.167292,
-        "p95": 0.321594,
-        "min": 0.163186,
-        "max": 0.329075
+        "median": 0.167343,
+        "p95": 0.20521,
+        "min": 0.163256,
+        "max": 0.217138
       },
       "python_peak_alloc_bytes": 116547,
       "samples": 25
@@ -393,16 +393,16 @@
       "bytes_per_object": 13.041666666666666,
       "embedded_asset_bytes": 0,
       "parse_ms": {
-        "median": 0.092869,
-        "p95": 0.116025,
-        "min": 0.090586,
-        "max": 0.123917
+        "median": 0.09281,
+        "p95": 0.103256,
+        "min": 0.089325,
+        "max": 0.109064
       },
       "write_preserving_raw_ms": {
-        "median": 0.041633,
-        "p95": 0.047191,
-        "min": 0.040791,
-        "max": 0.13284
+        "median": 0.041763,
+        "p95": 0.084808,
+        "min": 0.039649,
+        "max": 0.100942
       },
       "python_peak_alloc_bytes": 18541,
       "samples": 25
