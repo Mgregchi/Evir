@@ -32,11 +32,13 @@ Public access allowed installation of official Rive CLI 1.4.0. Its installer ver
 
 The independent static `.riv` is **76 bytes**; the official RML/CLI version is **153 bytes** and matches its pixels on both web backends. The CLI export carries layout-style and skip-table metadata that the small independent scene omits. Equivalent visible pixels do not make the files equally capable as editor/authoring documents. This is an official **CLI export comparison**, not an Editor export comparison and not evidence that our writer is generally superior.
 
-## Feathering remains a failing probe
+## Original feathering failure (resolved in the following pass)
 
-Both an independently generated feather fixture and an official CLI feather export compile structurally, but yielded completely empty captures in the current WebGL2 cloud tests. Fresh pages avoid mixing incompatible 2D/WebGL canvas contexts; offscreen false/true and repeated draw requests were tried. All four combinations failed the visible-pixel check. The dedicated probe retains the observations and exits nonzero; the general advanced passing suite deliberately covers the eight supported cases and does not claim feathering passed.
+**Update:** [the following pass](08-complex-rendering-and-feathering.md) identified the missing clockwise fill rule and now validates soft edges. The paragraphs below describe the original observations, retained for context.
 
-The failures do not identify the root cause as either the format writer or the shader math. They establish that compilation/inspection alone does not validate feather output, and that the observed failure also occurs through the official authoring route. No claim is made about real GPU or native renderer behavior. Further debugging needs renderer diagnostics and a supported hardware execution path; the recorded failure is not silently converted into an expected pass.
+Both an independently generated feather fixture and an official CLI feather export compile structurally, but yielded completely empty captures in the current WebGL2 cloud tests. Fresh pages avoid mixing incompatible 2D/WebGL canvas contexts; offscreen false/true and repeated draw requests were tried. All four combinations failed the visible-pixel check. The original dedicated probe retained the observations and exited nonzero; the general advanced passing suite deliberately covers the eight supported cases and does not claim feathering passed.
+
+The failures do not identify the root cause as either the format writer or the shader math. They establish that compilation/inspection alone does not validate feather output, and that the observed failure also occurs through the official authoring route. No claim is made about real GPU or native renderer behavior. At that point further debugging was needed; the recorded failure is not silently converted into an expected pass.
 
 ## Independent triangle lab
 
@@ -62,14 +64,14 @@ After `npm ci`, run:
 npm run research:advanced
 ```
 
-This generates the eight independent probes (including the separate feather fixture), runs the original codec tests and geometry checks, validates the eight supported cases on both web backends, and runs the triangle lab. The official RML binary artifacts are retained, so a CLI is not required to repeat browser validation. The source CLI regeneration and failing feather probe are separate commands:
+This generates the eight independent probes (including the separate feather fixture), runs the original codec tests and geometry checks, validates the eight supported cases on both web backends, and runs the triangle lab. The official RML binary artifacts are retained, so a CLI is not required to repeat browser validation. CLI regeneration and the separate feather probe are additional commands:
 
 ```bash
 RIVE_CLI=/workspace/evir-research/rive-cli/run npm run compile:rml
 npm run probe:feather
 ```
 
-`probe:feather` currently exits 1 after writing its failing outcomes. Do not replace it with a trivial pass or describe it as validated support. The loader wrapper path above is specific to this workspace; on a machine with the required system libraries, set `RIVE_CLI` to its installed `rive` executable.
+`probe:feather` now checks corrected clockwise fills, inner/offset/clipped soft edges and explicit negative controls. It exits nonzero on unexpected outcomes. The original failures are retained separately, and the resolution is explained in the following pass. The loader wrapper path above is specific to this workspace; on a machine with the required system libraries, set `RIVE_CLI` to its installed `rive` executable.
 
 To reproduce CLI installation here, download and inspect the official installer from `https://releases.rive.app/cli/install.sh`, then run it with `RIVE_VERSION=1.4.0` and an installation directory under `RIVE_HOME`. The release archive is checksum-verified by that installer. Ensure the native library prerequisite is available, then use `tools/compile_rml.py`. No secret values are needed.
 
@@ -80,11 +82,11 @@ Raw evidence:
 - [CLI export provenance](../research/results/rml-export.json)
 - [Static CLI inspection](../research/results/rml-static-inspect.json)
 - [Feather CLI inspection](../research/results/rml-feather-inspect.json)
-- [Feather failures](../research/results/feather-probe.json)
+- [Original feather failures](../research/results/feather-probe-before-fill-rule.json)
 - [Triangle quality results](../research/results/vector-lab.json)
 
 ## Remaining gaps
 
-Real hardware GPU and physical mobile measurements remain absent. Device emulation or SwiftShader would not substitute for those observations. The web Editor comparison still needs an actual editor export of the same scene; local CLI compilation does not establish that result. Blend trees beyond the tested 1D case, general weighted meshes, listener families, winding/holes, overlapping transparency, richer clip stacks and a working feather path remain further compatibility work.
+Real hardware GPU and physical mobile measurements remain absent. Device emulation or SwiftShader would not substitute for those observations. The web Editor comparison still needs an actual editor export of the same scene; local CLI compilation does not establish that result. Blend trees beyond the tested 1D case, general weighted meshes, listener families, winding/holes, overlapping transparency, richer clip stacks and feathering were further compatibility work at this stage. The following pass adds coverage for winding, nested clips, compositing, direct blending and a working feather path.
 
 The original PR has been merged as [PR #1](https://github.com/Mgregchi/Evir/pull/1); these experiments extend its baseline. The decision remains to grow tested compatibility and measurement coverage before designing a new wire format or promising a replacement renderer.

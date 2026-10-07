@@ -1,0 +1,49 @@
+<Rive version="1" kind="fragment">
+  <Artboard name="Binding" width="256" height="256" id="0:1" styleId="0:2" viewModelId="0:40" viewModelInstanceId="0:50" defaultStateMachineId="0:10">
+    <LayoutComponentStyle id="0:2"/>
+    <Shape name="Box" x="64" y="128" id="0:3">
+      <DataBindContext sourcePathIds="0:40-0:41" propertyKey="13"/>
+      <Rectangle width="48" height="48"><DataBindContext sourcePathIds="0:40-0:42" propertyKey="20"/></Rectangle>
+      <Fill><SolidColor colorValue="FF2864DC"><DataBindContext sourcePathIds="0:40-0:43" propertyKey="37"/></SolidColor></Fill>
+    </Shape>
+    <StateMachine name="Controller" id="0:10">
+      <StateMachineLayer name="Main">
+        <EntryState x="0" y="0"><StateTransition stateToId="0:11"/></EntryState>
+        <AnyState x="200" y="-120"/><ExitState x="400" y="-120"/>
+        <AnimationState animationId="0:20" x="160" y="0" id="0:11">
+          <StateTransition stateToId="0:12">
+            <TransitionViewModelCondition>
+              <TransitionPropertyViewModelComparator><BindablePropertyBoolean><DataBindContext sourcePathIds="0:40-0:44" propertyKey="634"/></BindablePropertyBoolean></TransitionPropertyViewModelComparator>
+              <TransitionValueBooleanComparator value="true"/>
+            </TransitionViewModelCondition>
+          </StateTransition>
+        </AnimationState>
+        <AnimationState animationId="0:21" x="320" y="0" id="0:12">
+          <StateTransition stateToId="0:11">
+            <TransitionViewModelCondition>
+              <TransitionPropertyViewModelComparator><BindablePropertyBoolean><DataBindContext sourcePathIds="0:40-0:44" propertyKey="634"/></BindablePropertyBoolean></TransitionPropertyViewModelComparator>
+              <TransitionValueBooleanComparator value="false"/>
+            </TransitionViewModelCondition>
+          </StateTransition>
+        </AnimationState>
+      </StateMachineLayer>
+      <StateMachineListenerSingle targetId="0:3" listenerTypeValue="click" name="Click">
+        <ListenerViewModelChange><BindablePropertyBoolean propertyValue="true"><DataBindContext sourcePathIds="0:40-0:44" propertyKey="634" direction="true"/></BindablePropertyBoolean></ListenerViewModelChange>
+      </StateMachineListenerSingle>
+    </StateMachine>
+    <LinearAnimation name="Idle" duration="60" id="0:20"><KeyedObject objectId="0:3"><KeyedProperty propertyKey="14"><KeyFrameDouble frame="0" value="128"/></KeyedProperty></KeyedObject></LinearAnimation>
+    <LinearAnimation name="Active" duration="60" id="0:21"><KeyedObject objectId="0:3"><KeyedProperty propertyKey="14"><KeyFrameDouble frame="0" value="80"/></KeyedProperty></KeyedObject></LinearAnimation>
+  </Artboard>
+  <ViewModel name="Model" defaultInstanceId="0:50" id="0:40">
+    <ViewModelPropertyNumber name="positionX" id="0:41"/>
+    <ViewModelPropertyNumber name="width" id="0:42"/>
+    <ViewModelPropertyColor name="color" id="0:43"/>
+    <ViewModelPropertyBoolean name="active" id="0:44"/>
+    <ViewModelInstance name="Default" exports="true" id="0:50">
+      <ViewModelInstanceNumber viewModelPropertyId="0:41" propertyValue="64"/>
+      <ViewModelInstanceNumber viewModelPropertyId="0:42" propertyValue="48"/>
+      <ViewModelInstanceColor viewModelPropertyId="0:43" propertyValue="FF2864DC"/>
+      <ViewModelInstanceBoolean viewModelPropertyId="0:44" propertyValue="false"/>
+    </ViewModelInstance>
+  </ViewModel>
+</Rive>

@@ -1,0 +1,862 @@
+{
+  "runtime": "@rive-app/canvas 2.44.0",
+  "diagnostics": {
+    "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+    "contexts": [
+      {
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "unmaskedRendererAvailable": true,
+        "contextLost": false,
+        "errors": [],
+        "extensions": [
+          "EXT_clip_control",
+          "EXT_color_buffer_float",
+          "EXT_color_buffer_half_float",
+          "EXT_conservative_depth",
+          "EXT_depth_clamp",
+          "EXT_float_blend",
+          "EXT_polygon_offset_clamp",
+          "EXT_texture_compression_bptc",
+          "EXT_texture_compression_rgtc",
+          "EXT_texture_filter_anisotropic",
+          "EXT_texture_mirror_clamp_to_edge",
+          "NV_shader_noperspective_interpolation",
+          "OES_draw_buffers_indexed",
+          "OES_sample_variables",
+          "OES_shader_multisample_interpolation",
+          "OES_texture_float_linear",
+          "OVR_multiview2",
+          "WEBGL_clip_cull_distance",
+          "WEBGL_compressed_texture_astc",
+          "WEBGL_compressed_texture_etc",
+          "WEBGL_compressed_texture_etc1",
+          "WEBGL_compressed_texture_s3tc",
+          "WEBGL_compressed_texture_s3tc_srgb",
+          "WEBGL_debug_renderer_info",
+          "WEBGL_debug_shaders",
+          "WEBGL_lose_context",
+          "WEBGL_multi_draw",
+          "WEBGL_polygon_mode",
+          "WEBGL_stencil_texturing"
+        ]
+      }
+    ]
+  },
+  "results": [
+    {
+      "fixture": "plain-mesh",
+      "info": {
+        "loadMs": 103.1000000005588,
+        "animations": [],
+        "machines": [
+          "Auto Generated State Machine"
+        ]
+      },
+      "initial": {
+        "count": 16384,
+        "cx": 127.5,
+        "cy": 127.5,
+        "hash": 2798199776
+      },
+      "status": "passed",
+      "colors": [
+        {
+          "x": 80,
+          "y": 80,
+          "color": [
+            240,
+            40,
+            40,
+            255
+          ]
+        },
+        {
+          "x": 176,
+          "y": 80,
+          "color": [
+            40,
+            220,
+            60,
+            255
+          ]
+        },
+        {
+          "x": 80,
+          "y": 176,
+          "color": [
+            40,
+            80,
+            240,
+            255
+          ]
+        },
+        {
+          "x": 176,
+          "y": 176,
+          "color": [
+            240,
+            220,
+            40,
+            255
+          ]
+        }
+      ]
+    },
+    {
+      "fixture": "weighted-mesh",
+      "info": {
+        "loadMs": 17.399999999441206,
+        "animations": [
+          "Bone0",
+          "Bone1",
+          "Bone2",
+          "Bone3"
+        ],
+        "machines": []
+      },
+      "initial": {
+        "count": 16384,
+        "cx": 127.5,
+        "cy": 127.5,
+        "hash": 2798199776
+      },
+      "status": "passed",
+      "bind": {
+        "count": 16384,
+        "cx": 127.5,
+        "cy": 127.5,
+        "hash": 2798199776
+      },
+      "deformed": {
+        "count": 19464,
+        "cx": 127.5,
+        "cy": 151.5,
+        "hash": 1207282964
+      },
+      "samples": [
+        {
+          "x": 80,
+          "y": 80,
+          "color": [
+            240,
+            40,
+            40,
+            255
+          ]
+        },
+        {
+          "x": 180,
+          "y": 80,
+          "color": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "x": 120,
+          "y": 148,
+          "color": [
+            240,
+            40,
+            40,
+            255
+          ]
+        },
+        {
+          "x": 120,
+          "y": 156,
+          "color": [
+            40,
+            80,
+            240,
+            255
+          ]
+        },
+        {
+          "x": 190,
+          "y": 230,
+          "color": [
+            240,
+            220,
+            40,
+            255
+          ]
+        },
+        {
+          "x": 80,
+          "y": 208,
+          "color": [
+            40,
+            80,
+            240,
+            255
+          ]
+        }
+      ]
+    },
+    {
+      "fixture": "weighted-mesh-rotation",
+      "info": {
+        "loadMs": 10.400000000372529,
+        "animations": [
+          "Rotate"
+        ],
+        "machines": []
+      },
+      "initial": {
+        "count": 16384,
+        "cx": 127.5,
+        "cy": 127.5,
+        "hash": 2798199776
+      },
+      "status": "passed",
+      "bind": {
+        "count": 16384,
+        "cx": 127.5,
+        "cy": 127.5,
+        "hash": 2798199776
+      },
+      "deformed": {
+        "count": 15186,
+        "cx": 132.04681943895693,
+        "cy": 129.19478467009088,
+        "hash": 3075001445
+      },
+      "analytic": {
+        "area": 15184.309375740097,
+        "cx": 132.55956749829323,
+        "cy": 129.68882116972708
+      }
+    },
+    {
+      "fixture": "rml-weighted-mesh",
+      "info": {
+        "loadMs": 23.200000000186265,
+        "animations": [
+          "Bone0",
+          "Bone1",
+          "Bone2",
+          "Bone3"
+        ],
+        "machines": [
+          "Controller"
+        ]
+      },
+      "initial": {
+        "count": 16384,
+        "cx": 127.5,
+        "cy": 127.5,
+        "hash": 2798199776
+      },
+      "status": "passed",
+      "bind": {
+        "count": 16384,
+        "cx": 127.5,
+        "cy": 127.5,
+        "hash": 2798199776
+      },
+      "deformed": {
+        "count": 19464,
+        "cx": 127.5,
+        "cy": 151.5,
+        "hash": 1207282964
+      },
+      "samples": [
+        {
+          "x": 80,
+          "y": 80,
+          "color": [
+            240,
+            40,
+            40,
+            255
+          ]
+        },
+        {
+          "x": 180,
+          "y": 80,
+          "color": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "x": 120,
+          "y": 148,
+          "color": [
+            240,
+            40,
+            40,
+            255
+          ]
+        },
+        {
+          "x": 120,
+          "y": 156,
+          "color": [
+            40,
+            80,
+            240,
+            255
+          ]
+        },
+        {
+          "x": 190,
+          "y": 230,
+          "color": [
+            240,
+            220,
+            40,
+            255
+          ]
+        },
+        {
+          "x": 80,
+          "y": 208,
+          "color": [
+            40,
+            80,
+            240,
+            255
+          ]
+        }
+      ]
+    },
+    {
+      "fixture": "data-binding",
+      "info": {
+        "loadMs": 8.700000000186265,
+        "animations": [
+          "Idle",
+          "Active"
+        ],
+        "machines": [
+          "Controller"
+        ]
+      },
+      "initial": {
+        "count": 2304,
+        "cx": 63.5,
+        "cy": 127.5,
+        "hash": 3545605573
+      },
+      "status": "passed",
+      "changed": {
+        "count": 3840,
+        "cx": 159.5,
+        "cy": 79.5,
+        "hash": 3251743685
+      },
+      "returned": {
+        "count": 3840,
+        "cx": 159.5,
+        "cy": 127.5,
+        "hash": 2278665157
+      },
+      "listener": {
+        "count": 3840,
+        "cx": 159.5,
+        "cy": 79.5,
+        "hash": 3251743685
+      },
+      "freshInstance": {
+        "count": 2304,
+        "cx": 63.5,
+        "cy": 127.5,
+        "hash": 3545605573
+      }
+    },
+    {
+      "fixture": "rml-data-binding",
+      "info": {
+        "loadMs": 4.300000000745058,
+        "animations": [
+          "Idle",
+          "Active"
+        ],
+        "machines": [
+          "Controller"
+        ]
+      },
+      "initial": {
+        "count": 2304,
+        "cx": 63.5,
+        "cy": 127.5,
+        "hash": 3545605573
+      },
+      "status": "passed",
+      "changed": {
+        "count": 3840,
+        "cx": 159.5,
+        "cy": 79.5,
+        "hash": 3251743685
+      },
+      "returned": {
+        "count": 3840,
+        "cx": 159.5,
+        "cy": 127.5,
+        "hash": 2278665157
+      },
+      "listener": {
+        "count": 3840,
+        "cx": 159.5,
+        "cy": 79.5,
+        "hash": 3251743685
+      },
+      "freshInstance": {
+        "count": 2304,
+        "cx": 63.5,
+        "cy": 127.5,
+        "hash": 3545605573
+      }
+    },
+    {
+      "fixture": "timed-transition",
+      "info": {
+        "loadMs": 4.400000000372529,
+        "animations": [
+          "Left",
+          "Right"
+        ],
+        "machines": [
+          "Controller"
+        ]
+      },
+      "initial": {
+        "count": 2304,
+        "cx": 63.5,
+        "cy": 127.5,
+        "hash": 3545605573
+      },
+      "status": "passed",
+      "ticks": [
+        {
+          "elapsed": 0,
+          "pixels": {
+            "count": 2304,
+            "cx": 63.5,
+            "cy": 127.5,
+            "hash": 3545605573
+          }
+        },
+        {
+          "elapsed": 0.1,
+          "pixels": {
+            "count": 2304,
+            "cx": 95.5,
+            "cy": 127.5,
+            "hash": 2193991109
+          }
+        },
+        {
+          "elapsed": 0.2,
+          "pixels": {
+            "count": 2304,
+            "cx": 127.5,
+            "cy": 127.5,
+            "hash": 1379247557
+          }
+        },
+        {
+          "elapsed": 0.30000000000000004,
+          "pixels": {
+            "count": 2304,
+            "cx": 159.5,
+            "cy": 127.5,
+            "hash": 1101374917
+          }
+        },
+        {
+          "elapsed": 0.4,
+          "pixels": {
+            "count": 2304,
+            "cx": 191.5,
+            "cy": 127.5,
+            "hash": 1360373189
+          }
+        },
+        {
+          "elapsed": 0.6000000000000001,
+          "pixels": {
+            "count": 2304,
+            "cx": 191.5,
+            "cy": 127.5,
+            "hash": 1360373189
+          }
+        }
+      ]
+    },
+    {
+      "fixture": "exit-time",
+      "info": {
+        "loadMs": 6,
+        "animations": [
+          "Left",
+          "Right"
+        ],
+        "machines": [
+          "Controller"
+        ]
+      },
+      "initial": {
+        "count": 2304,
+        "cx": 63.5,
+        "cy": 127.5,
+        "hash": 3545605573
+      },
+      "status": "passed",
+      "ticks": [
+        {
+          "elapsed": 0,
+          "pixels": {
+            "count": 2304,
+            "cx": 63.5,
+            "cy": 127.5,
+            "hash": 3545605573
+          }
+        },
+        {
+          "elapsed": 0.1,
+          "pixels": {
+            "count": 2304,
+            "cx": 63.5,
+            "cy": 127.5,
+            "hash": 3545605573
+          }
+        },
+        {
+          "elapsed": 0.2,
+          "pixels": {
+            "count": 2304,
+            "cx": 63.5,
+            "cy": 127.5,
+            "hash": 3545605573
+          }
+        },
+        {
+          "elapsed": 0.30000000000000004,
+          "pixels": {
+            "count": 2304,
+            "cx": 63.5,
+            "cy": 127.5,
+            "hash": 3545605573
+          }
+        },
+        {
+          "elapsed": 0.4,
+          "pixels": {
+            "count": 2304,
+            "cx": 63.5,
+            "cy": 127.5,
+            "hash": 3545605573
+          }
+        },
+        {
+          "elapsed": 0.6000000000000001,
+          "pixels": {
+            "count": 2304,
+            "cx": 191.5,
+            "cy": 127.5,
+            "hash": 1360373189
+          }
+        }
+      ]
+    },
+    {
+      "fixture": "disabled-transition",
+      "info": {
+        "loadMs": 4.7000000001862645,
+        "animations": [
+          "Left",
+          "Right"
+        ],
+        "machines": [
+          "Controller"
+        ]
+      },
+      "initial": {
+        "count": 2304,
+        "cx": 63.5,
+        "cy": 127.5,
+        "hash": 3545605573
+      },
+      "status": "passed",
+      "ticks": [
+        {
+          "elapsed": 0,
+          "pixels": {
+            "count": 2304,
+            "cx": 63.5,
+            "cy": 127.5,
+            "hash": 3545605573
+          }
+        },
+        {
+          "elapsed": 0.1,
+          "pixels": {
+            "count": 2304,
+            "cx": 63.5,
+            "cy": 127.5,
+            "hash": 3545605573
+          }
+        },
+        {
+          "elapsed": 0.2,
+          "pixels": {
+            "count": 2304,
+            "cx": 63.5,
+            "cy": 127.5,
+            "hash": 3545605573
+          }
+        },
+        {
+          "elapsed": 0.30000000000000004,
+          "pixels": {
+            "count": 2304,
+            "cx": 63.5,
+            "cy": 127.5,
+            "hash": 3545605573
+          }
+        },
+        {
+          "elapsed": 0.4,
+          "pixels": {
+            "count": 2304,
+            "cx": 63.5,
+            "cy": 127.5,
+            "hash": 3545605573
+          }
+        },
+        {
+          "elapsed": 0.6000000000000001,
+          "pixels": {
+            "count": 2304,
+            "cx": 63.5,
+            "cy": 127.5,
+            "hash": 3545605573
+          }
+        }
+      ]
+    },
+    {
+      "fixture": "condition-conjunction",
+      "info": {
+        "loadMs": 4.699999999254942,
+        "animations": [
+          "Left",
+          "Right"
+        ],
+        "machines": [
+          "Controller"
+        ]
+      },
+      "initial": {
+        "count": 2304,
+        "cx": 63.5,
+        "cy": 127.5,
+        "hash": 3545605573
+      },
+      "status": "passed",
+      "ticks": [
+        {
+          "active": false,
+          "level": 75,
+          "pixels": {
+            "count": 2304,
+            "cx": 63.5,
+            "cy": 127.5,
+            "hash": 3545605573
+          }
+        },
+        {
+          "active": true,
+          "level": 50,
+          "pixels": {
+            "count": 2304,
+            "cx": 63.5,
+            "cy": 127.5,
+            "hash": 3545605573
+          }
+        },
+        {
+          "active": true,
+          "level": 49,
+          "pixels": {
+            "count": 2304,
+            "cx": 63.5,
+            "cy": 127.5,
+            "hash": 3545605573
+          }
+        },
+        {
+          "active": true,
+          "level": 51,
+          "pixels": {
+            "count": 2304,
+            "cx": 191.5,
+            "cy": 127.5,
+            "hash": 1360373189
+          }
+        }
+      ]
+    },
+    {
+      "fixture": "pointer-enter-exit",
+      "info": {
+        "loadMs": 4.900000000372529,
+        "animations": [
+          "Left",
+          "Right"
+        ],
+        "machines": [
+          "Controller"
+        ]
+      },
+      "initial": {
+        "count": 2304,
+        "cx": 63.5,
+        "cy": 127.5,
+        "hash": 3545605573
+      },
+      "status": "passed",
+      "entered": {
+        "count": 2304,
+        "cx": 191.5,
+        "cy": 127.5,
+        "hash": 1360373189
+      },
+      "exited": {
+        "count": 2304,
+        "cx": 63.5,
+        "cy": 127.5,
+        "hash": 3545605573
+      }
+    },
+    {
+      "fixture": "pointer-number",
+      "info": {
+        "loadMs": 4.7999999998137355,
+        "animations": [
+          "Left",
+          "Right"
+        ],
+        "machines": [
+          "Controller"
+        ]
+      },
+      "initial": {
+        "count": 2304,
+        "cx": 63.5,
+        "cy": 127.5,
+        "hash": 3545605573
+      },
+      "status": "passed",
+      "level": 75
+    },
+    {
+      "fixture": "reentry-reset-flag",
+      "info": {
+        "loadMs": 3.8999999994412065,
+        "animations": [
+          "Idle",
+          "Move"
+        ],
+        "machines": [
+          "Controller"
+        ]
+      },
+      "initial": {
+        "count": 2304,
+        "cx": 63.5,
+        "cy": 127.5,
+        "hash": 3545605573
+      },
+      "status": "passed",
+      "progress": {
+        "count": 2304,
+        "cx": 95.5,
+        "cy": 127.5,
+        "hash": 2193991109
+      },
+      "reentered": {
+        "count": 2304,
+        "cx": 63.5,
+        "cy": 127.5,
+        "hash": 3545605573
+      },
+      "progressAgain": {
+        "count": 2304,
+        "cx": 95.5,
+        "cy": 127.5,
+        "hash": 2193991109
+      }
+    },
+    {
+      "fixture": "reentry-default",
+      "info": {
+        "loadMs": 3.7000000001862645,
+        "animations": [
+          "Idle",
+          "Move"
+        ],
+        "machines": [
+          "Controller"
+        ]
+      },
+      "initial": {
+        "count": 2304,
+        "cx": 63.5,
+        "cy": 127.5,
+        "hash": 3545605573
+      },
+      "status": "passed",
+      "progress": {
+        "count": 2304,
+        "cx": 95.5,
+        "cy": 127.5,
+        "hash": 2193991109
+      },
+      "reentered": {
+        "count": 2304,
+        "cx": 63.5,
+        "cy": 127.5,
+        "hash": 3545605573
+      },
+      "progressAgain": {
+        "count": 2304,
+        "cx": 95.5,
+        "cy": 127.5,
+        "hash": 2193991109
+      }
+    },
+    {
+      "fixture": "feather-curve",
+      "status": "unrun-unsupported-backend",
+      "reason": "Vector feathering requires the Rive Renderer"
+    },
+    {
+      "fixture": "feather-hole",
+      "status": "unrun-unsupported-backend",
+      "reason": "Vector feathering requires the Rive Renderer"
+    },
+    {
+      "fixture": "feather-gradient",
+      "status": "unrun-unsupported-backend",
+      "reason": "Vector feathering requires the Rive Renderer"
+    },
+    {
+      "fixture": "feather-stroke",
+      "status": "unrun-unsupported-backend",
+      "reason": "Vector feathering requires the Rive Renderer"
+    },
+    {
+      "fixture": "invalid-mesh-index",
+      "status": "confirmed-rejected-invalid-index"
+    }
+  ]
+}

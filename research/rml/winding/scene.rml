@@ -1,0 +1,16 @@
+<Rive version="1" kind="fragment">
+  <Artboard name="Winding" width="256" height="256" id="0:1" styleId="0:2">
+    <LayoutComponentStyle id="0:2"/>
+    <Shape name="Ring">
+      <PointsPath isClosed="true">
+        <StraightVertex x="48" y="48"/><StraightVertex x="208" y="48"/>
+        <StraightVertex x="208" y="208"/><StraightVertex x="48" y="208"/>
+      </PointsPath>
+      <PointsPath isClosed="true">
+        <StraightVertex x="96" y="96"/><StraightVertex x="160" y="96"/>
+        <StraightVertex x="160" y="160"/><StraightVertex x="96" y="160"/>
+      </PointsPath>
+      <Fill fillRule="evenOdd"><SolidColor colorValue="FF2864DC"/></Fill>
+    </Shape>
+  </Artboard>
+</Rive>

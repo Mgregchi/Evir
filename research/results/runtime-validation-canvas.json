@@ -3,7 +3,7 @@
   "results": [
     {
       "fixture": "static",
-      "loadMs": 87.5,
+      "loadMs": 85.20000000018626,
       "animations": [],
       "machines": [
         "Auto Generated State Machine"
@@ -17,7 +17,7 @@
     },
     {
       "fixture": "static-explicit-defaults",
-      "loadMs": 4,
+      "loadMs": 4.5,
       "animations": [],
       "machines": [
         "Auto Generated State Machine"
@@ -31,7 +31,7 @@
     },
     {
       "fixture": "animated",
-      "loadMs": 6.199999999953434,
+      "loadMs": 9.300000000745058,
       "animations": [
         "Move"
       ],
@@ -51,15 +51,15 @@
         }
       },
       "pixels": {
-        "count": 2352,
-        "cx": 132,
+        "count": 2304,
+        "cx": 127.5,
         "cy": 127.5,
-        "hash": 744984837
+        "hash": 1379247557
       }
     },
     {
       "fixture": "bones",
-      "loadMs": 5.300000000046566,
+      "loadMs": 4.7000000001862645,
       "animations": [
         "Wave",
         "Bend"
@@ -80,15 +80,15 @@
         }
       },
       "pixels": {
-        "count": 2226,
-        "cx": 135.47753818508536,
-        "cy": 134.8674752920036,
-        "hash": 3915692221
+        "count": 2246,
+        "cx": 134.9746215494212,
+        "cy": 134.8018699910953,
+        "hash": 4230905079
       }
     },
     {
       "fixture": "state-machine",
-      "loadMs": 4.699999999953434,
+      "loadMs": 5.5,
       "animations": [
         "Idle",
         "Active"
@@ -125,7 +125,7 @@
     },
     {
       "fixture": "stress-100",
-      "loadMs": 13.800000000046566,
+      "loadMs": 9.900000000372529,
       "animations": [
         "Move0",
         "Move1",
@@ -240,7 +240,7 @@
     },
     {
       "fixture": "states-2",
-      "loadMs": 3.9000000001396984,
+      "loadMs": 4.5,
       "animations": [
         "Pose0",
         "Pose1"
@@ -280,7 +280,7 @@
     },
     {
       "fixture": "states-8",
-      "loadMs": 4,
+      "loadMs": 5.099999999627471,
       "animations": [
         "Pose0",
         "Pose1",
@@ -326,7 +326,7 @@
     },
     {
       "fixture": "states-32",
-      "loadMs": 5.5,
+      "loadMs": 5.400000000372529,
       "animations": [
         "Pose0",
         "Pose1",
@@ -396,7 +396,7 @@
     },
     {
       "fixture": "states-128",
-      "loadMs": 5.199999999953434,
+      "loadMs": 4.5,
       "animations": [
         "Pose0",
         "Pose1",
@@ -562,7 +562,7 @@
     },
     {
       "fixture": "characters-25",
-      "loadMs": 6.699999999953434,
+      "loadMs": 7.2999999998137355,
       "animations": [
         "Idle",
         "Dance"

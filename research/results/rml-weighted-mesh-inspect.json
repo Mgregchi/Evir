@@ -1,0 +1,1152 @@
+{
+  "schema": 1,
+  "problems": [],
+  "backboard": {
+    "type": "Backboard",
+    "line": 0
+  },
+  "defaultArtboard": {
+    "id": "0:1",
+    "name": "Mesh"
+  },
+  "artboards": [
+    {
+      "type": "Artboard",
+      "id": "0:1",
+      "line": 3,
+      "originX": 0,
+      "originY": 0,
+      "defaultStateMachineId": "0:70",
+      "clip": false,
+      "width": 256,
+      "height": 256,
+      "styleId": "0:2",
+      "fractionalWidth": 1,
+      "fractionalHeight": 1,
+      "blendModeValue": 3,
+      "additiveAmount": 255,
+      "drawableFlags": 0,
+      "x": 0,
+      "y": 0,
+      "computedLocalX": 0,
+      "computedLocalY": 0,
+      "computedWorldX": 0,
+      "computedWorldY": 0,
+      "computedRootX": 0,
+      "computedRootY": 0,
+      "computedWidth": 0,
+      "computedHeight": 0,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "opacity": 1,
+      "name": "Mesh",
+      "enums": {
+        "blendModeValue": "srcOver"
+      },
+      "children": [
+        {
+          "type": "LayoutComponentStyle",
+          "id": "0:2",
+          "line": 4,
+          "gapHorizontal": 0,
+          "gapVertical": 0,
+          "borderLeft": 0,
+          "borderRight": 0,
+          "borderTop": 0,
+          "borderBottom": 0,
+          "marginLeft": 0,
+          "marginRight": 0,
+          "marginTop": 0,
+          "marginBottom": 0,
+          "paddingLeft": 0,
+          "paddingRight": 0,
+          "paddingTop": 0,
+          "paddingBottom": 0,
+          "positionLeft": 0,
+          "positionRight": 0,
+          "positionTop": 0,
+          "positionBottom": 0,
+          "positionLeftUnitsValue": 0,
+          "positionRightUnitsValue": 0,
+          "positionTopUnitsValue": 0,
+          "positionBottomUnitsValue": 0,
+          "flexBasis": 0,
+          "aspectRatio": 0,
+          "interpolationTime": 0,
+          "flexBasisUnitsValue": 3,
+          "layoutAlignmentType": 0,
+          "animationStyleType": 0,
+          "interpolationType": 0,
+          "positionTypeValue": 1,
+          "flexDirectionValue": 2,
+          "directionValue": 0,
+          "flexWrapValue": 0,
+          "overflowValue": 0,
+          "intrinsicallySizedValue": false,
+          "borderLeftUnitsValue": 0,
+          "borderRightUnitsValue": 0,
+          "borderTopUnitsValue": 0,
+          "borderBottomUnitsValue": 0,
+          "marginLeftUnitsValue": 1,
+          "marginRightUnitsValue": 1,
+          "marginTopUnitsValue": 1,
+          "marginBottomUnitsValue": 1,
+          "paddingLeftUnitsValue": 1,
+          "paddingRightUnitsValue": 1,
+          "paddingTopUnitsValue": 1,
+          "paddingBottomUnitsValue": 1,
+          "gapHorizontalUnitsValue": 1,
+          "gapVerticalUnitsValue": 1,
+          "justifyItemsValue": 7,
+          "layoutTypeValue": 0,
+          "linkCornerRadius": true,
+          "cornerRadiusTL": 0,
+          "cornerRadiusTR": 0,
+          "cornerRadiusBL": 0,
+          "cornerRadiusBR": 0,
+          "minWidth": 0,
+          "maxWidth": 0,
+          "minHeight": 0,
+          "maxHeight": 0,
+          "minWidthUnitsValue": 0,
+          "maxWidthUnitsValue": 0,
+          "minHeightUnitsValue": 0,
+          "maxHeightUnitsValue": 0,
+          "layoutWidthScaleType": 0,
+          "layoutHeightScaleType": 0,
+          "hugUnbounded": false,
+          "widthUnitsValue": 1,
+          "heightUnitsValue": 1,
+          "justifySelfValue": 6,
+          "displayValue": 0,
+          "name": "",
+          "enums": {
+            "positionLeftUnitsValue": "undefined",
+            "positionRightUnitsValue": "undefined",
+            "positionTopUnitsValue": "undefined",
+            "positionBottomUnitsValue": "undefined",
+            "flexBasisUnitsValue": "auto",
+            "layoutAlignmentType": "topLeft",
+            "animationStyleType": "none",
+            "interpolationType": "hold",
+            "positionTypeValue": "relative",
+            "flexDirectionValue": "row",
+            "directionValue": "inherit",
+            "flexWrapValue": "noWrap",
+            "overflowValue": "visible",
+            "borderLeftUnitsValue": "undefined",
+            "borderRightUnitsValue": "undefined",
+            "borderTopUnitsValue": "undefined",
+            "borderBottomUnitsValue": "undefined",
+            "marginLeftUnitsValue": "points",
+            "marginRightUnitsValue": "points",
+            "marginTopUnitsValue": "points",
+            "marginBottomUnitsValue": "points",
+            "paddingLeftUnitsValue": "points",
+            "paddingRightUnitsValue": "points",
+            "paddingTopUnitsValue": "points",
+            "paddingBottomUnitsValue": "points",
+            "gapHorizontalUnitsValue": "points",
+            "gapVerticalUnitsValue": "points",
+            "justifyItemsValue": "stretch",
+            "layoutTypeValue": "flex",
+            "minWidthUnitsValue": "undefined",
+            "maxWidthUnitsValue": "undefined",
+            "minHeightUnitsValue": "undefined",
+            "maxHeightUnitsValue": "undefined",
+            "layoutWidthScaleType": "fixed",
+            "layoutHeightScaleType": "fixed",
+            "widthUnitsValue": "points",
+            "heightUnitsValue": "points",
+            "justifySelfValue": "auto",
+            "displayValue": "flex"
+          }
+        },
+        {
+          "type": "RootBone",
+          "id": "0:3",
+          "line": 5,
+          "x": 0,
+          "y": 0,
+          "length": 0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "opacity": 1,
+          "name": "Bone0"
+        },
+        {
+          "type": "RootBone",
+          "id": "0:4",
+          "line": 6,
+          "x": 0,
+          "y": 0,
+          "length": 0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "opacity": 1,
+          "name": "Bone1"
+        },
+        {
+          "type": "RootBone",
+          "id": "0:5",
+          "line": 7,
+          "x": 0,
+          "y": 0,
+          "length": 0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "opacity": 1,
+          "name": "Bone2"
+        },
+        {
+          "type": "RootBone",
+          "id": "0:6",
+          "line": 8,
+          "x": 0,
+          "y": 0,
+          "length": 0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "opacity": 1,
+          "name": "Bone3"
+        },
+        {
+          "type": "Image",
+          "line": 9,
+          "assetId": "0:60",
+          "originX": 0.5,
+          "originY": 0.5,
+          "fit": 0,
+          "alignmentX": 0,
+          "alignmentY": 0,
+          "samplerFilter": 0,
+          "samplerWrapX": 0,
+          "samplerWrapY": 0,
+          "blendModeValue": 3,
+          "additiveAmount": 255,
+          "drawableFlags": 0,
+          "x": 0,
+          "y": 0,
+          "computedLocalX": 0,
+          "computedLocalY": 0,
+          "computedWorldX": 0,
+          "computedWorldY": 0,
+          "computedRootX": 0,
+          "computedRootY": 0,
+          "computedWidth": 0,
+          "computedHeight": 0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "opacity": 1,
+          "name": "Image",
+          "enums": {
+            "fit": "resize",
+            "samplerFilter": "inherit",
+            "samplerWrapX": "inherit",
+            "samplerWrapY": "inherit",
+            "blendModeValue": "srcOver"
+          },
+          "children": [
+            {
+              "type": "Mesh",
+              "line": 10,
+              "name": "",
+              "rig": {
+                "vertices": 9,
+                "triangles": [
+                  [
+                    0,
+                    1,
+                    8
+                  ],
+                  [
+                    1,
+                    2,
+                    8
+                  ],
+                  [
+                    2,
+                    3,
+                    8
+                  ],
+                  [
+                    3,
+                    4,
+                    8
+                  ],
+                  [
+                    4,
+                    5,
+                    8
+                  ],
+                  [
+                    5,
+                    6,
+                    8
+                  ],
+                  [
+                    6,
+                    7,
+                    8
+                  ],
+                  [
+                    7,
+                    0,
+                    8
+                  ]
+                ]
+              },
+              "children": [
+                {
+                  "type": "ContourMeshVertex",
+                  "line": 11,
+                  "u": 0,
+                  "v": 0,
+                  "x": 64,
+                  "y": 64,
+                  "name": "",
+                  "children": [
+                    {
+                      "type": "Weight",
+                      "line": 11,
+                      "values": 255,
+                      "indices": 1,
+                      "name": "",
+                      "rig": {
+                        "influences": [
+                          {
+                            "tendon": 1,
+                            "weight": 1
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "ContourMeshVertex",
+                  "line": 12,
+                  "u": 0.5,
+                  "v": 0,
+                  "x": 128,
+                  "y": 64,
+                  "name": "",
+                  "children": [
+                    {
+                      "type": "Weight",
+                      "line": 12,
+                      "values": 32640,
+                      "indices": 513,
+                      "name": "",
+                      "rig": {
+                        "influences": [
+                          {
+                            "tendon": 1,
+                            "weight": 0.501960814
+                          },
+                          {
+                            "tendon": 2,
+                            "weight": 0.498039216
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "ContourMeshVertex",
+                  "line": 13,
+                  "u": 1,
+                  "v": 0,
+                  "x": 192,
+                  "y": 64,
+                  "name": "",
+                  "children": [
+                    {
+                      "type": "Weight",
+                      "line": 13,
+                      "values": 255,
+                      "indices": 2,
+                      "name": "",
+                      "rig": {
+                        "influences": [
+                          {
+                            "tendon": 2,
+                            "weight": 1
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "ContourMeshVertex",
+                  "line": 14,
+                  "u": 1,
+                  "v": 0.5,
+                  "x": 192,
+                  "y": 128,
+                  "name": "",
+                  "children": [
+                    {
+                      "type": "Weight",
+                      "line": 14,
+                      "values": 32640,
+                      "indices": 770,
+                      "name": "",
+                      "rig": {
+                        "influences": [
+                          {
+                            "tendon": 2,
+                            "weight": 0.501960814
+                          },
+                          {
+                            "tendon": 3,
+                            "weight": 0.498039216
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "ContourMeshVertex",
+                  "line": 15,
+                  "u": 1,
+                  "v": 1,
+                  "x": 192,
+                  "y": 192,
+                  "name": "",
+                  "children": [
+                    {
+                      "type": "Weight",
+                      "line": 15,
+                      "values": 255,
+                      "indices": 3,
+                      "name": "",
+                      "rig": {
+                        "influences": [
+                          {
+                            "tendon": 3,
+                            "weight": 1
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "ContourMeshVertex",
+                  "line": 16,
+                  "u": 0.5,
+                  "v": 1,
+                  "x": 128,
+                  "y": 192,
+                  "name": "",
+                  "children": [
+                    {
+                      "type": "Weight",
+                      "line": 16,
+                      "values": 32640,
+                      "indices": 1027,
+                      "name": "",
+                      "rig": {
+                        "influences": [
+                          {
+                            "tendon": 3,
+                            "weight": 0.501960814
+                          },
+                          {
+                            "tendon": 4,
+                            "weight": 0.498039216
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "ContourMeshVertex",
+                  "line": 17,
+                  "u": 0,
+                  "v": 1,
+                  "x": 64,
+                  "y": 192,
+                  "name": "",
+                  "children": [
+                    {
+                      "type": "Weight",
+                      "line": 17,
+                      "values": 255,
+                      "indices": 4,
+                      "name": "",
+                      "rig": {
+                        "influences": [
+                          {
+                            "tendon": 4,
+                            "weight": 1
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "ContourMeshVertex",
+                  "line": 18,
+                  "u": 0,
+                  "v": 0.5,
+                  "x": 64,
+                  "y": 128,
+                  "name": "",
+                  "children": [
+                    {
+                      "type": "Weight",
+                      "line": 18,
+                      "values": 32640,
+                      "indices": 260,
+                      "name": "",
+                      "rig": {
+                        "influences": [
+                          {
+                            "tendon": 4,
+                            "weight": 0.501960814
+                          },
+                          {
+                            "tendon": 1,
+                            "weight": 0.498039216
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "MeshVertex",
+                  "line": 19,
+                  "u": 0.5,
+                  "v": 0.5,
+                  "x": 128,
+                  "y": 128,
+                  "name": "",
+                  "children": [
+                    {
+                      "type": "Weight",
+                      "line": 19,
+                      "values": 1061175360,
+                      "indices": 67305985,
+                      "name": "",
+                      "rig": {
+                        "influences": [
+                          {
+                            "tendon": 1,
+                            "weight": 0.250980407
+                          },
+                          {
+                            "tendon": 2,
+                            "weight": 0.250980407
+                          },
+                          {
+                            "tendon": 3,
+                            "weight": 0.250980407
+                          },
+                          {
+                            "tendon": 4,
+                            "weight": 0.247058824
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Skin",
+                  "line": 20,
+                  "xx": 1,
+                  "yx": 0,
+                  "xy": 0,
+                  "yy": 1,
+                  "tx": 0,
+                  "ty": 0,
+                  "name": "",
+                  "rig": {
+                    "tendons": [
+                      {
+                        "index": 1,
+                        "boneId": "0:3",
+                        "bind": [
+                          1,
+                          0,
+                          0,
+                          1,
+                          0,
+                          0
+                        ]
+                      },
+                      {
+                        "index": 2,
+                        "boneId": "0:4",
+                        "bind": [
+                          1,
+                          0,
+                          0,
+                          1,
+                          0,
+                          0
+                        ]
+                      },
+                      {
+                        "index": 3,
+                        "boneId": "0:5",
+                        "bind": [
+                          1,
+                          0,
+                          0,
+                          1,
+                          0,
+                          0
+                        ]
+                      },
+                      {
+                        "index": 4,
+                        "boneId": "0:6",
+                        "bind": [
+                          1,
+                          0,
+                          0,
+                          1,
+                          0,
+                          0
+                        ]
+                      }
+                    ]
+                  },
+                  "children": [
+                    {
+                      "type": "Tendon",
+                      "line": 21,
+                      "boneId": "0:3",
+                      "xx": 1,
+                      "yx": 0,
+                      "xy": 0,
+                      "yy": 1,
+                      "tx": 0,
+                      "ty": 0,
+                      "name": ""
+                    },
+                    {
+                      "type": "Tendon",
+                      "line": 22,
+                      "boneId": "0:4",
+                      "xx": 1,
+                      "yx": 0,
+                      "xy": 0,
+                      "yy": 1,
+                      "tx": 0,
+                      "ty": 0,
+                      "name": ""
+                    },
+                    {
+                      "type": "Tendon",
+                      "line": 23,
+                      "boneId": "0:5",
+                      "xx": 1,
+                      "yx": 0,
+                      "xy": 0,
+                      "yy": 1,
+                      "tx": 0,
+                      "ty": 0,
+                      "name": ""
+                    },
+                    {
+                      "type": "Tendon",
+                      "line": 24,
+                      "boneId": "0:6",
+                      "xx": 1,
+                      "yx": 0,
+                      "xy": 0,
+                      "yy": 1,
+                      "tx": 0,
+                      "ty": 0,
+                      "name": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "LinearAnimation",
+          "id": "0:80",
+          "line": 26,
+          "fps": 60,
+          "duration": 60,
+          "speed": 1,
+          "loopValue": 1,
+          "workStart": 4294967295,
+          "workEnd": 4294967295,
+          "enableWorkArea": false,
+          "quantize": false,
+          "name": "Bone0",
+          "enums": {
+            "loopValue": "loop"
+          },
+          "children": [
+            {
+              "type": "KeyedObject",
+              "line": 26,
+              "objectId": "0:3",
+              "children": [
+                {
+                  "type": "KeyedProperty",
+                  "line": 26,
+                  "propertyKey": 91,
+                  "children": [
+                    {
+                      "type": "KeyFrameDouble",
+                      "line": 27,
+                      "value": 0,
+                      "interpolationType": 1,
+                      "frame": 0,
+                      "enums": {
+                        "interpolationType": "linear"
+                      }
+                    },
+                    {
+                      "type": "KeyFrameDouble",
+                      "line": 27,
+                      "value": 0,
+                      "interpolationType": 1,
+                      "frame": 30,
+                      "enums": {
+                        "interpolationType": "linear"
+                      }
+                    },
+                    {
+                      "type": "KeyFrameDouble",
+                      "line": 27,
+                      "value": 0,
+                      "interpolationType": 1,
+                      "frame": 60,
+                      "enums": {
+                        "interpolationType": "linear"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "LinearAnimation",
+          "id": "0:81",
+          "line": 29,
+          "fps": 60,
+          "duration": 60,
+          "speed": 1,
+          "loopValue": 1,
+          "workStart": 4294967295,
+          "workEnd": 4294967295,
+          "enableWorkArea": false,
+          "quantize": false,
+          "name": "Bone1",
+          "enums": {
+            "loopValue": "loop"
+          },
+          "children": [
+            {
+              "type": "KeyedObject",
+              "line": 29,
+              "objectId": "0:4",
+              "children": [
+                {
+                  "type": "KeyedProperty",
+                  "line": 29,
+                  "propertyKey": 91,
+                  "children": [
+                    {
+                      "type": "KeyFrameDouble",
+                      "line": 30,
+                      "value": 0,
+                      "interpolationType": 1,
+                      "frame": 0,
+                      "enums": {
+                        "interpolationType": "linear"
+                      }
+                    },
+                    {
+                      "type": "KeyFrameDouble",
+                      "line": 30,
+                      "value": 24,
+                      "interpolationType": 1,
+                      "frame": 30,
+                      "enums": {
+                        "interpolationType": "linear"
+                      }
+                    },
+                    {
+                      "type": "KeyFrameDouble",
+                      "line": 30,
+                      "value": 0,
+                      "interpolationType": 1,
+                      "frame": 60,
+                      "enums": {
+                        "interpolationType": "linear"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "LinearAnimation",
+          "id": "0:82",
+          "line": 32,
+          "fps": 60,
+          "duration": 60,
+          "speed": 1,
+          "loopValue": 1,
+          "workStart": 4294967295,
+          "workEnd": 4294967295,
+          "enableWorkArea": false,
+          "quantize": false,
+          "name": "Bone2",
+          "enums": {
+            "loopValue": "loop"
+          },
+          "children": [
+            {
+              "type": "KeyedObject",
+              "line": 32,
+              "objectId": "0:5",
+              "children": [
+                {
+                  "type": "KeyedProperty",
+                  "line": 32,
+                  "propertyKey": 91,
+                  "children": [
+                    {
+                      "type": "KeyFrameDouble",
+                      "line": 33,
+                      "value": 0,
+                      "interpolationType": 1,
+                      "frame": 0,
+                      "enums": {
+                        "interpolationType": "linear"
+                      }
+                    },
+                    {
+                      "type": "KeyFrameDouble",
+                      "line": 33,
+                      "value": 48,
+                      "interpolationType": 1,
+                      "frame": 30,
+                      "enums": {
+                        "interpolationType": "linear"
+                      }
+                    },
+                    {
+                      "type": "KeyFrameDouble",
+                      "line": 33,
+                      "value": 0,
+                      "interpolationType": 1,
+                      "frame": 60,
+                      "enums": {
+                        "interpolationType": "linear"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "LinearAnimation",
+          "id": "0:83",
+          "line": 35,
+          "fps": 60,
+          "duration": 60,
+          "speed": 1,
+          "loopValue": 1,
+          "workStart": 4294967295,
+          "workEnd": 4294967295,
+          "enableWorkArea": false,
+          "quantize": false,
+          "name": "Bone3",
+          "enums": {
+            "loopValue": "loop"
+          },
+          "children": [
+            {
+              "type": "KeyedObject",
+              "line": 35,
+              "objectId": "0:6",
+              "children": [
+                {
+                  "type": "KeyedProperty",
+                  "line": 35,
+                  "propertyKey": 91,
+                  "children": [
+                    {
+                      "type": "KeyFrameDouble",
+                      "line": 36,
+                      "value": 0,
+                      "interpolationType": 1,
+                      "frame": 0,
+                      "enums": {
+                        "interpolationType": "linear"
+                      }
+                    },
+                    {
+                      "type": "KeyFrameDouble",
+                      "line": 36,
+                      "value": 24,
+                      "interpolationType": 1,
+                      "frame": 30,
+                      "enums": {
+                        "interpolationType": "linear"
+                      }
+                    },
+                    {
+                      "type": "KeyFrameDouble",
+                      "line": 36,
+                      "value": 0,
+                      "interpolationType": 1,
+                      "frame": 60,
+                      "enums": {
+                        "interpolationType": "linear"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "StateMachine",
+          "id": "0:70",
+          "line": 38,
+          "name": "Controller",
+          "children": [
+            {
+              "type": "StateMachineLayer",
+              "line": 38,
+              "name": "Layer0",
+              "children": [
+                {
+                  "type": "EntryState",
+                  "line": 38,
+                  "flags": 0,
+                  "children": [
+                    {
+                      "type": "StateTransition",
+                      "line": 38,
+                      "stateToId": "0:90",
+                      "flags": 0,
+                      "duration": 0,
+                      "exitTime": 0,
+                      "interpolationType": 1,
+                      "randomWeight": 1,
+                      "enums": {
+                        "interpolationType": "linear"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "AnyState",
+                  "line": 38,
+                  "flags": 0
+                },
+                {
+                  "type": "ExitState",
+                  "line": 38,
+                  "flags": 0
+                },
+                {
+                  "type": "AnimationState",
+                  "id": "0:90",
+                  "line": 38,
+                  "animationId": "0:80",
+                  "speed": 1,
+                  "flags": 0
+                }
+              ]
+            },
+            {
+              "type": "StateMachineLayer",
+              "line": 38,
+              "name": "Layer1",
+              "children": [
+                {
+                  "type": "EntryState",
+                  "line": 38,
+                  "flags": 0,
+                  "children": [
+                    {
+                      "type": "StateTransition",
+                      "line": 38,
+                      "stateToId": "0:91",
+                      "flags": 0,
+                      "duration": 0,
+                      "exitTime": 0,
+                      "interpolationType": 1,
+                      "randomWeight": 1,
+                      "enums": {
+                        "interpolationType": "linear"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "AnyState",
+                  "line": 38,
+                  "flags": 0
+                },
+                {
+                  "type": "ExitState",
+                  "line": 38,
+                  "flags": 0
+                },
+                {
+                  "type": "AnimationState",
+                  "id": "0:91",
+                  "line": 38,
+                  "animationId": "0:81",
+                  "speed": 1,
+                  "flags": 0
+                }
+              ]
+            },
+            {
+              "type": "StateMachineLayer",
+              "line": 38,
+              "name": "Layer2",
+              "children": [
+                {
+                  "type": "EntryState",
+                  "line": 38,
+                  "flags": 0,
+                  "children": [
+                    {
+                      "type": "StateTransition",
+                      "line": 38,
+                      "stateToId": "0:92",
+                      "flags": 0,
+                      "duration": 0,
+                      "exitTime": 0,
+                      "interpolationType": 1,
+                      "randomWeight": 1,
+                      "enums": {
+                        "interpolationType": "linear"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "AnyState",
+                  "line": 38,
+                  "flags": 0
+                },
+                {
+                  "type": "ExitState",
+                  "line": 38,
+                  "flags": 0
+                },
+                {
+                  "type": "AnimationState",
+                  "id": "0:92",
+                  "line": 38,
+                  "animationId": "0:82",
+                  "speed": 1,
+                  "flags": 0
+                }
+              ]
+            },
+            {
+              "type": "StateMachineLayer",
+              "line": 38,
+              "name": "Layer3",
+              "children": [
+                {
+                  "type": "EntryState",
+                  "line": 38,
+                  "flags": 0,
+                  "children": [
+                    {
+                      "type": "StateTransition",
+                      "line": 38,
+                      "stateToId": "0:93",
+                      "flags": 0,
+                      "duration": 0,
+                      "exitTime": 0,
+                      "interpolationType": 1,
+                      "randomWeight": 1,
+                      "enums": {
+                        "interpolationType": "linear"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "AnyState",
+                  "line": 38,
+                  "flags": 0
+                },
+                {
+                  "type": "ExitState",
+                  "line": 38,
+                  "flags": 0
+                },
+                {
+                  "type": "AnimationState",
+                  "id": "0:93",
+                  "line": 38,
+                  "animationId": "0:83",
+                  "speed": 1,
+                  "flags": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "roots": [
+    {
+      "type": "ImageAsset",
+      "id": "0:60",
+      "line": 2,
+      "samplerFilter": 0,
+      "samplerWrapX": 0,
+      "samplerWrapY": 0,
+      "height": 0,
+      "width": 0,
+      "assetId": 0,
+      "cdnBaseUrl": "https://public.rive.app/cdn/uuid",
+      "name": "Quadrants",
+      "enums": {
+        "samplerFilter": "bilinear",
+        "samplerWrapX": "clamp",
+        "samplerWrapY": "clamp"
+      }
+    },
+    {
+      "type": "Backboard",
+      "line": 0
+    }
+  ]
+}

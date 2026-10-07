@@ -56,7 +56,7 @@ The official article [How Rive reinvented feathering for the vectorian era](http
 
 This article is an explanatory account from Rive, not an independently reproduced performance study. No separately identified peer-reviewed 'Vector Feathering paper' was verified. The source header links renderer algorithm documents, but their mere presence is not evidence that we read or validated every derivation. A faithful reimplementation appears feasible in principle from the published code and descriptions, but a linear `smoothstep` around a distance edge would not establish equivalence to Rive's curved and overlapping feather behavior.
 
-Our feather probes currently fail to produce visible pixels in this cloud setup, including an official CLI export. That result is scoped to package 2.44.0, Chromium and the observed graphics implementation. It does not establish that Rive feathering generally fails, nor isolate the failure to its math. See the retained probe rather than treating successful file compilation as rendering validation.
+The original feather probes produced empty captures, including an official CLI export. [The following investigation](08-complex-rendering-and-feathering.md) identified a missing `clockwise` fill rule: Rive explicitly skips feathered fills under other rules, although the CLI accepts the combination. Corrected probes now pass soft-edge checks in this cloud setup. The original failure evidence is retained, and successful compilation alone remains insufficient rendering validation.
 
 ## Compare renderer families, not slogans
 

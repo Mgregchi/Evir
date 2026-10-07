@@ -19,11 +19,16 @@ wire = {
 }
 for p in sorted((root / "include/rive/generated").rglob("*_base.hpp")):
     s = p.read_text()
-    c = re.search(r"class (\w+)Base : public (\w+)", s)
+    c = re.search(r"class\s+(\w+)Base\s*:\s*public\s+(\w+)", s)
     t = re.search(r"typeKey = (\d+)", s)
     if not c or not t:
         continue
-    keys = dict((n, int(v)) for n, v in re.findall(r"(\w+)PropertyKey = (\d+)", s))
+    keys = dict(
+        (n, int(v))
+        for n, v in re.findall(
+            r"static\s+const\s+\w+\s+(\w+)PropertyKey\s*=\s*(\d+)", s
+        )
+    )
     types[t[1]] = {
         "name": c[1],
         "parent": c[2],

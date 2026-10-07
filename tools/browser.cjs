@@ -9,6 +9,8 @@ exports.run = async function (work) {
     { cwd: root, stdio: "ignore" },
   );
   let browser;
+  let page;
+  const remote = process.env.EVIR_CDP_URL;
   try {
     let ready = false;
     for (let i = 0; i < 50; i++) {
@@ -21,19 +23,24 @@ exports.run = async function (work) {
       await new Promise((r) => setTimeout(r, 100));
     }
     if (!ready) throw Error("research HTTP server did not start");
-    browser = await chromium.launch({
-      executablePath: process.env.CHROMIUM_PATH || "/usr/bin/chromium",
-      headless: true,
-      args: [
-        "--no-sandbox",
-        "--enable-precise-memory-info",
-        "--enable-unsafe-swiftshader",
-      ],
-    });
-    const context = await browser.newContext({
-      viewport: { width: 400, height: 400 },
-    });
-    const page = await context.newPage();
+    browser = remote
+      ? await chromium.connectOverCDP(remote)
+      : await chromium.launch({
+          executablePath: process.env.CHROMIUM_PATH || "/usr/bin/chromium",
+          headless: true,
+          args: [
+            "--no-sandbox",
+            "--enable-precise-memory-info",
+            "--enable-unsafe-swiftshader",
+          ],
+        });
+    const context = remote
+      ? browser.contexts()[0]
+      : await browser.newContext({
+          viewport: { width: 400, height: 400 },
+        });
+    if (!context) throw Error("Remote browser supplied no default context");
+    page = await context.newPage();
     const errors = [];
     page.on("pageerror", (e) => errors.push(e.message));
     await page.goto(
@@ -43,6 +50,7 @@ exports.run = async function (work) {
     await work(page, browser);
     if (errors.length) throw Error("Browser errors: " + errors.join("\n"));
   } finally {
+    if (remote && page) await page.close();
     if (browser) await browser.close();
     server.kill();
   }

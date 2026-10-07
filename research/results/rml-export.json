@@ -11,8 +11,36 @@
     {
       "source": "research/rml/feather",
       "output": "research/fixtures/advanced/rml-feather.riv",
-      "bytes": 158,
-      "sha256": "8bc3eae5cea1bec12f158f13c029473b2bc9774e9bf4829505f567a5f32f87d3",
+      "bytes": 160,
+      "sha256": "e237ee4af71a1bbcf4d4c9ef8bd360a6f8623f9f1651f2a07f5c9a2de97af443",
+      "inspect_problems": []
+    },
+    {
+      "source": "research/rml/winding",
+      "output": "research/fixtures/complex/rml-winding.riv",
+      "bytes": 257,
+      "sha256": "7708666397a32c17f9d5d409ffaff5f3ddf5c38f67dfb5139d6e81bafc41a7a3",
+      "inspect_problems": []
+    },
+    {
+      "source": "research/rml/direct-blend",
+      "output": "research/fixtures/complex/rml-direct-blend.riv",
+      "bytes": 321,
+      "sha256": "5d8e296edbb2a4f3b58c1bbe41ab2617051369227d25f258d6dcd6f25a535c22",
+      "inspect_problems": []
+    },
+    {
+      "source": "research/rml/weighted-mesh",
+      "output": "research/fixtures/closure/rml-weighted-mesh.riv",
+      "bytes": 996,
+      "sha256": "813cd742d20c1d81c7b3787748c8f49825eb573c011fe32ce7685eeb1406534c",
+      "inspect_problems": []
+    },
+    {
+      "source": "research/rml/data-binding",
+      "output": "research/fixtures/closure/rml-data-binding.riv",
+      "bytes": 547,
+      "sha256": "b6d4fdd6ed90a6572fd11c16703a86ffed94b33a1225527c2cbc24e0a54bb92f",
       "inspect_problems": []
     }
   ]

@@ -1,0 +1,912 @@
+{
+  "major": 7,
+  "minor": 0,
+  "file_id": 0,
+  "toc": {},
+  "objects": [
+    {
+      "type": 23,
+      "properties": []
+    },
+    {
+      "type": 105,
+      "properties": [
+        {
+          "key": 203,
+          "wire": "string",
+          "value": "Quadrants"
+        },
+        {
+          "key": 204,
+          "wire": "uint",
+          "value": 1
+        },
+        {
+          "key": 208,
+          "wire": "float",
+          "value": 64
+        },
+        {
+          "key": 207,
+          "wire": "float",
+          "value": 64
+        }
+      ]
+    },
+    {
+      "type": 106,
+      "properties": [
+        {
+          "key": 212,
+          "wire": "bytes",
+          "value": "89504e470d0a1a0a0000000d4948445200000040000000400806000000aa6971de000000744944415478daedd0311100200c0430e4bc0844e0ff10510720a34333c4405625af53ee6eb504081020408000010204081020408000010204081020408000010204081020408080010139f53ad54d2b0102040810204080000102040810204080000102040810204080000102040810206040c007bd3a624a6e53237d0000000049454e44ae426082"
+        }
+      ]
+    },
+    {
+      "type": 1,
+      "properties": [
+        {
+          "key": 4,
+          "wire": "string",
+          "value": "Mesh"
+        },
+        {
+          "key": 7,
+          "wire": "float",
+          "value": 256
+        },
+        {
+          "key": 8,
+          "wire": "float",
+          "value": 256
+        }
+      ]
+    },
+    {
+      "type": 41,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 0
+        },
+        {
+          "key": 4,
+          "wire": "string",
+          "value": "Bone0"
+        },
+        {
+          "key": 90,
+          "wire": "float",
+          "value": 128
+        },
+        {
+          "key": 91,
+          "wire": "float",
+          "value": 128
+        }
+      ]
+    },
+    {
+      "type": 41,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 0
+        },
+        {
+          "key": 4,
+          "wire": "string",
+          "value": "Bone1"
+        },
+        {
+          "key": 90,
+          "wire": "float",
+          "value": 128
+        },
+        {
+          "key": 91,
+          "wire": "float",
+          "value": 128
+        }
+      ]
+    },
+    {
+      "type": 41,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 0
+        },
+        {
+          "key": 4,
+          "wire": "string",
+          "value": "Bone2"
+        },
+        {
+          "key": 90,
+          "wire": "float",
+          "value": 128
+        },
+        {
+          "key": 91,
+          "wire": "float",
+          "value": 128
+        }
+      ]
+    },
+    {
+      "type": 41,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 0
+        },
+        {
+          "key": 4,
+          "wire": "string",
+          "value": "Bone3"
+        },
+        {
+          "key": 90,
+          "wire": "float",
+          "value": 128
+        },
+        {
+          "key": 91,
+          "wire": "float",
+          "value": 128
+        }
+      ]
+    },
+    {
+      "type": 100,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 0
+        },
+        {
+          "key": 206,
+          "wire": "uint",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "type": 109,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 5
+        },
+        {
+          "key": 223,
+          "wire": "bytes",
+          "value": "000108010208020308030408040508050608060708070008"
+        }
+      ]
+    },
+    {
+      "type": 111,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 6
+        },
+        {
+          "key": 24,
+          "wire": "float",
+          "value": 64
+        },
+        {
+          "key": 25,
+          "wire": "float",
+          "value": 64
+        },
+        {
+          "key": 215,
+          "wire": "float",
+          "value": 0.0
+        },
+        {
+          "key": 216,
+          "wire": "float",
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "type": 45,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 7
+        },
+        {
+          "key": 103,
+          "wire": "uint",
+          "value": 1
+        },
+        {
+          "key": 102,
+          "wire": "uint",
+          "value": 255
+        }
+      ]
+    },
+    {
+      "type": 111,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 6
+        },
+        {
+          "key": 24,
+          "wire": "float",
+          "value": 128
+        },
+        {
+          "key": 25,
+          "wire": "float",
+          "value": 64
+        },
+        {
+          "key": 215,
+          "wire": "float",
+          "value": 0.5
+        },
+        {
+          "key": 216,
+          "wire": "float",
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "type": 45,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 9
+        },
+        {
+          "key": 103,
+          "wire": "uint",
+          "value": 513
+        },
+        {
+          "key": 102,
+          "wire": "uint",
+          "value": 32640
+        }
+      ]
+    },
+    {
+      "type": 111,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 6
+        },
+        {
+          "key": 24,
+          "wire": "float",
+          "value": 192
+        },
+        {
+          "key": 25,
+          "wire": "float",
+          "value": 64
+        },
+        {
+          "key": 215,
+          "wire": "float",
+          "value": 1.0
+        },
+        {
+          "key": 216,
+          "wire": "float",
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "type": 45,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 11
+        },
+        {
+          "key": 103,
+          "wire": "uint",
+          "value": 2
+        },
+        {
+          "key": 102,
+          "wire": "uint",
+          "value": 255
+        }
+      ]
+    },
+    {
+      "type": 111,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 6
+        },
+        {
+          "key": 24,
+          "wire": "float",
+          "value": 192
+        },
+        {
+          "key": 25,
+          "wire": "float",
+          "value": 128
+        },
+        {
+          "key": 215,
+          "wire": "float",
+          "value": 1.0
+        },
+        {
+          "key": 216,
+          "wire": "float",
+          "value": 0.5
+        }
+      ]
+    },
+    {
+      "type": 45,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 13
+        },
+        {
+          "key": 103,
+          "wire": "uint",
+          "value": 770
+        },
+        {
+          "key": 102,
+          "wire": "uint",
+          "value": 32640
+        }
+      ]
+    },
+    {
+      "type": 111,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 6
+        },
+        {
+          "key": 24,
+          "wire": "float",
+          "value": 192
+        },
+        {
+          "key": 25,
+          "wire": "float",
+          "value": 192
+        },
+        {
+          "key": 215,
+          "wire": "float",
+          "value": 1.0
+        },
+        {
+          "key": 216,
+          "wire": "float",
+          "value": 1.0
+        }
+      ]
+    },
+    {
+      "type": 45,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 15
+        },
+        {
+          "key": 103,
+          "wire": "uint",
+          "value": 3
+        },
+        {
+          "key": 102,
+          "wire": "uint",
+          "value": 255
+        }
+      ]
+    },
+    {
+      "type": 111,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 6
+        },
+        {
+          "key": 24,
+          "wire": "float",
+          "value": 128
+        },
+        {
+          "key": 25,
+          "wire": "float",
+          "value": 192
+        },
+        {
+          "key": 215,
+          "wire": "float",
+          "value": 0.5
+        },
+        {
+          "key": 216,
+          "wire": "float",
+          "value": 1.0
+        }
+      ]
+    },
+    {
+      "type": 45,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 17
+        },
+        {
+          "key": 103,
+          "wire": "uint",
+          "value": 1027
+        },
+        {
+          "key": 102,
+          "wire": "uint",
+          "value": 32640
+        }
+      ]
+    },
+    {
+      "type": 111,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 6
+        },
+        {
+          "key": 24,
+          "wire": "float",
+          "value": 64
+        },
+        {
+          "key": 25,
+          "wire": "float",
+          "value": 192
+        },
+        {
+          "key": 215,
+          "wire": "float",
+          "value": 0.0
+        },
+        {
+          "key": 216,
+          "wire": "float",
+          "value": 1.0
+        }
+      ]
+    },
+    {
+      "type": 45,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 19
+        },
+        {
+          "key": 103,
+          "wire": "uint",
+          "value": 4
+        },
+        {
+          "key": 102,
+          "wire": "uint",
+          "value": 255
+        }
+      ]
+    },
+    {
+      "type": 111,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 6
+        },
+        {
+          "key": 24,
+          "wire": "float",
+          "value": 64
+        },
+        {
+          "key": 25,
+          "wire": "float",
+          "value": 128
+        },
+        {
+          "key": 215,
+          "wire": "float",
+          "value": 0.0
+        },
+        {
+          "key": 216,
+          "wire": "float",
+          "value": 0.5
+        }
+      ]
+    },
+    {
+      "type": 45,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 21
+        },
+        {
+          "key": 103,
+          "wire": "uint",
+          "value": 260
+        },
+        {
+          "key": 102,
+          "wire": "uint",
+          "value": 32640
+        }
+      ]
+    },
+    {
+      "type": 108,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 6
+        },
+        {
+          "key": 24,
+          "wire": "float",
+          "value": 128
+        },
+        {
+          "key": 25,
+          "wire": "float",
+          "value": 128
+        },
+        {
+          "key": 215,
+          "wire": "float",
+          "value": 0.5
+        },
+        {
+          "key": 216,
+          "wire": "float",
+          "value": 0.5
+        }
+      ]
+    },
+    {
+      "type": 45,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 23
+        },
+        {
+          "key": 103,
+          "wire": "uint",
+          "value": 67305985
+        },
+        {
+          "key": 102,
+          "wire": "uint",
+          "value": 1061175360
+        }
+      ]
+    },
+    {
+      "type": 43,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 6
+        },
+        {
+          "key": 104,
+          "wire": "float",
+          "value": 1
+        },
+        {
+          "key": 107,
+          "wire": "float",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "type": 44,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 25
+        },
+        {
+          "key": 95,
+          "wire": "uint",
+          "value": 1
+        },
+        {
+          "key": 96,
+          "wire": "float",
+          "value": 1
+        },
+        {
+          "key": 99,
+          "wire": "float",
+          "value": 1
+        },
+        {
+          "key": 100,
+          "wire": "float",
+          "value": 128
+        },
+        {
+          "key": 101,
+          "wire": "float",
+          "value": 128
+        }
+      ]
+    },
+    {
+      "type": 44,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 25
+        },
+        {
+          "key": 95,
+          "wire": "uint",
+          "value": 2
+        },
+        {
+          "key": 96,
+          "wire": "float",
+          "value": 1
+        },
+        {
+          "key": 99,
+          "wire": "float",
+          "value": 1
+        },
+        {
+          "key": 100,
+          "wire": "float",
+          "value": 128
+        },
+        {
+          "key": 101,
+          "wire": "float",
+          "value": 128
+        }
+      ]
+    },
+    {
+      "type": 44,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 25
+        },
+        {
+          "key": 95,
+          "wire": "uint",
+          "value": 3
+        },
+        {
+          "key": 96,
+          "wire": "float",
+          "value": 1
+        },
+        {
+          "key": 99,
+          "wire": "float",
+          "value": 1
+        },
+        {
+          "key": 100,
+          "wire": "float",
+          "value": 128
+        },
+        {
+          "key": 101,
+          "wire": "float",
+          "value": 128
+        }
+      ]
+    },
+    {
+      "type": 44,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 25
+        },
+        {
+          "key": 95,
+          "wire": "uint",
+          "value": 4
+        },
+        {
+          "key": 96,
+          "wire": "float",
+          "value": 1
+        },
+        {
+          "key": 99,
+          "wire": "float",
+          "value": 1
+        },
+        {
+          "key": 100,
+          "wire": "float",
+          "value": 128
+        },
+        {
+          "key": 101,
+          "wire": "float",
+          "value": 128
+        }
+      ]
+    },
+    {
+      "type": 31,
+      "properties": [
+        {
+          "key": 55,
+          "wire": "string",
+          "value": "Rotate"
+        },
+        {
+          "key": 56,
+          "wire": "uint",
+          "value": 60
+        },
+        {
+          "key": 57,
+          "wire": "uint",
+          "value": 60
+        },
+        {
+          "key": 59,
+          "wire": "uint",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "type": 25,
+      "properties": [
+        {
+          "key": 51,
+          "wire": "uint",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "type": 26,
+      "properties": [
+        {
+          "key": 53,
+          "wire": "uint",
+          "value": 15
+        }
+      ]
+    },
+    {
+      "type": 30,
+      "properties": [
+        {
+          "key": 67,
+          "wire": "uint",
+          "value": 0
+        },
+        {
+          "key": 68,
+          "wire": "uint",
+          "value": 1
+        },
+        {
+          "key": 70,
+          "wire": "float",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "type": 30,
+      "properties": [
+        {
+          "key": 67,
+          "wire": "uint",
+          "value": 30
+        },
+        {
+          "key": 68,
+          "wire": "uint",
+          "value": 1
+        },
+        {
+          "key": 70,
+          "wire": "float",
+          "value": 0.7853981633974483
+        }
+      ]
+    },
+    {
+      "type": 30,
+      "properties": [
+        {
+          "key": 67,
+          "wire": "uint",
+          "value": 60
+        },
+        {
+          "key": 68,
+          "wire": "uint",
+          "value": 1
+        },
+        {
+          "key": 70,
+          "wire": "float",
+          "value": 0
+        }
+      ]
+    }
+  ]
+}

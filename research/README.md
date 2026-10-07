@@ -55,8 +55,16 @@ Do not run the collector against a mutable branch and describe the resulting cor
 - [Compatibility decision](../docs/05-synthesis.md)
 - [Pinned official sources](../docs/sources.md)
 
-The data supports a compatible export subset and an official-runtime cloud baseline. It does not assert full format support, an independent Evir renderer, mobile validation, actual official RML compilation or hardware-GPU performance.
+The data supports a compatible export subset and an official-runtime cloud baseline. It does not assert full format support, an independent Evir renderer, mobile validation or hardware-GPU performance. Official RML compilation is covered by the later experiments below.
 
 ## Extended rendering and compatibility probes
 
-See [rendering foundations](../docs/06-rendering-foundations.md) and [extended experiment results](../docs/07-extended-experiments.md). `npm run research:advanced` runs the weighted deformation, triggers/blend/reset/listener, curve/gradient/clip, official RML static acceptance, and independent triangle quality checks. `npm run compile:rml` additionally needs the official CLI (set `RIVE_CLI` to its executable); retained CLI outputs allow validation without it. `npm run probe:feather` is a separate diagnostic that currently records failures and exits nonzero.
+See [rendering foundations](../docs/06-rendering-foundations.md) and [extended experiment results](../docs/07-extended-experiments.md). `npm run research:advanced` runs the weighted deformation, triggers/blend/reset/listener, curve/gradient/clip, official RML static acceptance, and independent triangle quality checks. `npm run compile:rml` additionally needs the official CLI (set `RIVE_CLI` to its executable); retained CLI outputs allow validation without it. `npm run probe:feather` now checks clockwise feathered fills, inner/offset/clipped edges and negative controls; the original failures are retained separately.
+
+## Complex rendering and direct blends
+
+See [the next experiment results](../docs/08-complex-rendering-and-feathering.md). `npm run research:complex` validates 14 cases per backend and 18 feather/control configurations. `npm run compile:rml` now builds all six retained projects, including the final mesh and data-binding cases. `npm run probe:hardware` reports actual runtime contexts and exits nonzero when hardware is unavailable. `npm run benchmark:hardware` uses the same guard and writes a separate hardware result file, preserving the cloud baseline. Physical device provenance and mobile measurements remain required.
+
+## Final runtime/format audit
+
+[The closure audit](../docs/09-runtime-research-closure.md) records completed software experiments and the two external evidence gaps. `npm run research:closure` covers image meshes, timed/conditional transitions, listener/re-entry cases, typed data binding, complex feathered rendering, remote browser transport and additional cloud benchmarks. `npm run research:all` runs every software pass and regenerates the audit. `npm run check:closed` exits nonzero until physical desktop/mobile trials and equivalent Editor exports are supplied and validated. Follow the [device protocol](device-measurements/README.md) and [Editor comparison protocol](editor-comparison/README.md); CLI/cloud artifacts do not satisfy those external checks.

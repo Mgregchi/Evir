@@ -221,13 +221,13 @@
             {
               "type": "Fill",
               "line": 6,
-              "fillRule": 0,
+              "fillRule": 2,
               "isVisible": true,
               "blendModeValue": 127,
               "additiveAmount": 255,
               "name": "",
               "enums": {
-                "fillRule": "nonZero",
+                "fillRule": "clockwise",
                 "blendModeValue": "inherit"
               },
               "children": [

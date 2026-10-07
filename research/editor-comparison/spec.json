@@ -1,0 +1,42 @@
+{
+  "status": "awaiting-actual-editor-exports",
+  "runtime": "2.44.0",
+  "cases": [
+    {
+      "name": "static",
+      "reference": "static",
+      "source": "research/rml/static",
+      "options": {}
+    },
+    {
+      "name": "weighted-mesh",
+      "reference": "closure/weighted-mesh",
+      "source": "research/rml/weighted-mesh",
+      "options": {
+        "animations": [
+          "Bone0",
+          "Bone1",
+          "Bone2",
+          "Bone3"
+        ],
+        "autoplay": false
+      }
+    },
+    {
+      "name": "data-binding",
+      "reference": "closure/data-binding",
+      "source": "research/rml/data-binding",
+      "options": {
+        "stateMachines": "Controller",
+        "autoBind": true
+      }
+    },
+    {
+      "name": "feather",
+      "reference": "advanced/feather",
+      "source": null,
+      "options": {},
+      "scene": "256x256 artboard; clockwise blue fill FF2864DC; 64x64 rectangle centered at 128,128; outer feather strength12"
+    }
+  ]
+}

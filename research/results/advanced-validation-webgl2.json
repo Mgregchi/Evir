@@ -3,16 +3,16 @@
   "results": [
     {
       "fixture": "weighted-skin",
-      "loadMs": 177.79999999981374,
+      "loadMs": 181.70000000018626,
       "animations": [
         "Deform"
       ],
       "machines": [],
       "first": {
         "count": 8294,
-        "cx": 127.50361707258259,
-        "cy": 140.23510971786834,
-        "hash": 1230324973
+        "cx": 127.50012056908609,
+        "cy": 139.46877260670365,
+        "hash": 4223841041
       },
       "status": "passed",
       "poses": {
@@ -50,7 +50,7 @@
     },
     {
       "fixture": "trigger",
-      "loadMs": 48.200000000186265,
+      "loadMs": 51,
       "animations": [
         "Left",
         "Right"
@@ -88,7 +88,7 @@
     },
     {
       "fixture": "blend",
-      "loadMs": 47.200000000186265,
+      "loadMs": 51.200000000186265,
       "animations": [
         "Left",
         "Right"
@@ -153,7 +153,7 @@
     },
     {
       "fixture": "curve",
-      "loadMs": 46.10000000009313,
+      "loadMs": 44.59999999962747,
       "animations": [],
       "machines": [
         "Auto Generated State Machine"
@@ -168,7 +168,7 @@
     },
     {
       "fixture": "gradient",
-      "loadMs": 49.5,
+      "loadMs": 51.200000000186265,
       "animations": [],
       "machines": [
         "Auto Generated State Machine"
@@ -197,7 +197,7 @@
     },
     {
       "fixture": "clip",
-      "loadMs": 76.5,
+      "loadMs": 70.70000000018626,
       "animations": [],
       "machines": [
         "Auto Generated State Machine"
@@ -212,7 +212,7 @@
     },
     {
       "fixture": "listener",
-      "loadMs": 45.5,
+      "loadMs": 47.69999999925494,
       "animations": [
         "Left",
         "Right"
@@ -236,7 +236,7 @@
     },
     {
       "fixture": "rml-static",
-      "loadMs": 47.60000000009313,
+      "loadMs": 57.5,
       "animations": [],
       "machines": [
         "Auto Generated State Machine"

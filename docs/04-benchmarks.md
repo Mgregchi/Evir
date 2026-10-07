@@ -44,28 +44,28 @@ The compact static export is 76 bytes; the same scene with explicitly serialized
 
 | Backend | Fixture | Fresh-page median ms | Warm median / p95 ms | Callback CPU median / p95 ms | rAF Hz |
 |---|---|---:|---:|---:|---:|
-| canvas | static | 69.500 | 4.800 / 84.400 | 0.100 / 0.100 | 60.00 |
-| canvas | static-explicit-defaults | 72.600 | 4.150 / 5.500 | 0.100 / 0.200 | 60.00 |
-| canvas | animated | 61.300 | 2.800 / 25.000 | 0.200 / 0.600 | 60.00 |
-| canvas | bones | 72.400 | 2.600 / 3.500 | 0.200 / 0.400 | 60.00 |
-| canvas | state-machine | 69.900 | 2.950 / 6.500 | 0.100 / 0.200 | 60.00 |
-| canvas | characters-25 | 82.900 | 5.450 / 10.300 | 0.400 / 0.700 | 60.00 |
-| canvas | stress-100 | 100.200 | 7.350 / 16.200 | 0.500 / 0.700 | 60.00 |
-| canvas | states-2 | 55.700 | 2.250 / 7.500 | 0.100 / 0.300 | 60.00 |
-| canvas | states-8 | 59.900 | 2.400 / 4.900 | 0.200 / 0.400 | 60.00 |
-| canvas | states-32 | 66.200 | 2.650 / 3.700 | 0.200 / 0.300 | 60.00 |
-| canvas | states-128 | 71.200 | 2.700 / 5.200 | 0.100 / 0.200 | 60.00 |
-| webgl2 | static | 137.700 | 48.650 / 144.200 | 0.100 / 0.200 | 60.00 |
-| webgl2 | static-explicit-defaults | 158.800 | 46.850 / 58.200 | 0.100 / 0.200 | 60.00 |
-| webgl2 | animated | 149.700 | 47.500 / 80.300 | 0.300 / 0.500 | 60.00 |
-| webgl2 | bones | 186.100 | 46.350 / 51.300 | 0.300 / 0.400 | 60.00 |
-| webgl2 | state-machine | 194.800 | 44.700 / 49.500 | 0.100 / 0.100 | 60.00 |
-| webgl2 | characters-25 | 156.500 | 45.900 / 59.700 | 0.300 / 0.500 | 60.00 |
-| webgl2 | stress-100 | 262.200 | 58.600 / 84.100 | 0.600 / 0.900 | 60.00 |
-| webgl2 | states-2 | 207.400 | 48.000 / 56.000 | 0.300 / 0.400 | 60.00 |
-| webgl2 | states-8 | 184.600 | 58.700 / 64.200 | 0.200 / 0.400 | 60.00 |
-| webgl2 | states-32 | 160.300 | 49.000 / 54.300 | 0.300 / 0.400 | 59.51 |
-| webgl2 | states-128 | 172.700 | 57.550 / 64.400 | 0.300 / 0.500 | 60.00 |
+| canvas | static | 62.600 | 2.850 / 54.300 | 0.100 / 0.100 | 60.00 |
+| canvas | static-explicit-defaults | 53.900 | 1.900 / 4.500 | 0.000 / 0.100 | 60.00 |
+| canvas | animated | 54.900 | 2.550 / 7.300 | 0.100 / 0.200 | 60.00 |
+| canvas | bones | 55.000 | 2.300 / 4.800 | 0.200 / 0.300 | 60.00 |
+| canvas | state-machine | 58.900 | 2.600 / 5.300 | 0.100 / 0.200 | 60.00 |
+| canvas | characters-25 | 72.500 | 4.750 / 8.700 | 0.300 / 0.500 | 60.00 |
+| canvas | stress-100 | 75.700 | 6.500 / 10.600 | 0.400 / 0.500 | 60.00 |
+| canvas | states-2 | 54.400 | 2.050 / 5.400 | 0.200 / 0.300 | 60.00 |
+| canvas | states-8 | 64.500 | 2.200 / 4.000 | 0.100 / 0.200 | 60.00 |
+| canvas | states-32 | 68.900 | 2.500 / 4.000 | 0.100 / 0.200 | 60.00 |
+| canvas | states-128 | 69.500 | 2.300 / 4.300 | 0.100 / 0.200 | 60.00 |
+| webgl2 | static | 140.400 | 45.500 / 138.500 | 0.100 / 0.200 | 60.00 |
+| webgl2 | static-explicit-defaults | 139.800 | 43.350 / 61.300 | 0.000 / 0.100 | 60.00 |
+| webgl2 | animated | 133.700 | 45.150 / 52.600 | 0.300 / 0.600 | 60.00 |
+| webgl2 | bones | 183.300 | 43.350 / 53.600 | 0.300 / 0.500 | 60.00 |
+| webgl2 | state-machine | 179.100 | 44.650 / 51.900 | 0.100 / 0.200 | 60.00 |
+| webgl2 | characters-25 | 148.100 | 46.300 / 62.700 | 0.300 / 0.400 | 60.00 |
+| webgl2 | stress-100 | 202.100 | 44.200 / 52.400 | 0.500 / 0.700 | 60.00 |
+| webgl2 | states-2 | 233.600 | 42.000 / 47.400 | 0.300 / 0.500 | 60.00 |
+| webgl2 | states-8 | 148.000 | 47.250 / 49.700 | 0.200 / 0.400 | 60.00 |
+| webgl2 | states-32 | 139.400 | 42.400 / 65.100 | 0.200 / 0.300 | 60.00 |
+| webgl2 | states-128 | 147.800 | 43.700 / 48.000 | 0.300 / 1.000 | 60.00 |
 
 The observed ~60 Hz cadence is consistent with this browser’s frame scheduler; it does not establish maximum throughput or mobile 60 FPS. A static scene or settled controller can skip actual drawing while callbacks continue. Our checks establish that the animated workloads visibly change, but GPU-completion latency is not measured. Software WebGL2 initialization and shader/renderer state can dominate warm loads for these small scenes. A different backend or hardware GPU can reverse that comparison.
 
@@ -74,12 +74,12 @@ The observed ~60 Hz cadence is consistent with this browser’s frame scheduler;
 | Backend | Fixture | JS used heap MiB | WASM capacity MiB |
 |---|---|---:|---:|
 | canvas | static | 3.19 | 16.56 |
-| canvas | characters-25 | 3.62 | 16.56 |
+| canvas | characters-25 | 3.46 | 16.56 |
 | canvas | stress-100 | 3.85 | 16.56 |
-| canvas | states-128 | 3.39 | 16.56 |
-| webgl2 | static | 4.34 | 16.62 |
-| webgl2 | characters-25 | 4.81 | 16.62 |
-| webgl2 | stress-100 | 5.13 | 16.62 |
+| canvas | states-128 | 3.40 | 16.56 |
+| webgl2 | static | 4.33 | 16.62 |
+| webgl2 | characters-25 | 4.82 | 16.62 |
+| webgl2 | stress-100 | 5.17 | 16.62 |
 | webgl2 | states-128 | 5.04 | 16.62 |
 
 Per-process RSS snapshots and timing spreads are retained in the raw runtime JSON. These are cloud-browser observations, not mobile memory budgets or isolated file memory requirements. The browser/renderer/runtime baseline can dwarf a 76-byte scene.
@@ -88,22 +88,22 @@ Per-process RSS snapshots and timing spreads are retained in the raw runtime JSO
 
 | Fixture | Parse median / p95 ms | Preserve-write median ms | Peak traced parse allocation KiB |
 |---|---:|---:|---:|
-| animated | 0.041 / 0.050 | 0.019 | 7.9 |
-| bones | 0.089 / 0.140 | 0.039 | 17.9 |
-| characters-25 | 2.939 / 3.474 | 1.128 | 924.7 |
-| state-machine | 0.086 / 0.103 | 0.038 | 14.9 |
-| states-128 | 3.709 / 4.157 | 1.462 | 1154.0 |
-| states-2 | 0.090 / 0.101 | 0.038 | 15.0 |
-| states-32 | 0.950 / 1.047 | 0.373 | 277.7 |
-| states-8 | 0.255 / 0.468 | 0.103 | 60.5 |
-| static-explicit-defaults | 0.033 / 0.034 | 0.017 | 7.3 |
-| static | 0.020 / 0.021 | 0.010 | 3.9 |
-| stress-100 | 4.066 / 4.556 | 1.564 | 1289.1 |
-| animation_reset_cases | 0.771 / 0.874 | 0.308 | 218.6 |
-| artboardclipping | 0.046 / 0.054 | 0.022 | 9.3 |
-| library_with_text_and_image | 1.783 / 2.117 | 1.286 | 3939.0 |
-| state_machine_transition | 0.389 / 0.447 | 0.167 | 113.8 |
-| two_bone_ik | 0.093 / 0.103 | 0.042 | 18.1 |
+| animated | 0.042 / 0.044 | 0.019 | 7.9 |
+| bones | 0.093 / 0.226 | 0.039 | 17.9 |
+| characters-25 | 3.072 / 3.601 | 1.175 | 924.7 |
+| state-machine | 0.091 / 0.355 | 0.039 | 14.9 |
+| states-128 | 3.835 / 4.316 | 1.497 | 1154.0 |
+| states-2 | 0.090 / 0.102 | 0.038 | 15.0 |
+| states-32 | 0.983 / 1.202 | 0.368 | 277.7 |
+| states-8 | 0.264 / 0.382 | 0.103 | 60.5 |
+| static-explicit-defaults | 0.034 / 0.058 | 0.017 | 7.3 |
+| static | 0.021 / 0.024 | 0.010 | 3.9 |
+| stress-100 | 4.270 / 4.771 | 1.693 | 1289.1 |
+| animation_reset_cases | 0.791 / 0.879 | 0.305 | 218.6 |
+| artboardclipping | 0.048 / 0.066 | 0.022 | 9.3 |
+| library_with_text_and_image | 1.799 / 2.273 | 1.326 | 3939.0 |
+| state_machine_transition | 0.397 / 0.484 | 0.169 | 113.8 |
+| two_bone_ik | 0.094 / 0.108 | 0.042 | 18.1 |
 
 The reader builds Python dictionaries, per-field byte annotations and hexadecimal copies of opaque data. Its allocations and timing intentionally include that inspection representation. They are not directly comparable to C++/WASM runtime import, nor representative of a compact future production reader. The copied corpus and all generated fixtures pass structural round trips.
 

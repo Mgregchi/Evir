@@ -80,6 +80,11 @@
           "key": 5,
           "wire": "uint",
           "value": 1
+        },
+        {
+          "key": 40,
+          "wire": "uint",
+          "value": 2
         }
       ]
     },

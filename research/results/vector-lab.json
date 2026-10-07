@@ -36,7 +36,7 @@
       "coverageRmse": 0.007951685913513579,
       "edgeMeanAbsoluteError": 0.0658993571477034,
       "edgePixels": 578,
-      "cpuSubmissionMs": 0,
+      "cpuSubmissionMs": 0.10000000055879354,
       "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
       "maxSamples": 4
     },
@@ -48,7 +48,7 @@
       "coverageRmse": 0.0029622186185490245,
       "edgeMeanAbsoluteError": 0.024187529683153536,
       "edgePixels": 578,
-      "cpuSubmissionMs": 0.09999999986030161,
+      "cpuSubmissionMs": 0,
       "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
       "maxSamples": 4
     },

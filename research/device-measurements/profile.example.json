@@ -1,0 +1,10 @@
+{
+  "model": "REPLACE: physical device model",
+  "deviceClass": "android",
+  "os": "REPLACE: OS and version",
+  "gpu": "REPLACE: GPU model",
+  "driver": "REPLACE: graphics driver/version or OS build supplying it",
+  "displayHz": 60,
+  "powerMode": "REPLACE: battery/plugged in and power-saving setting",
+  "runNotes": "REPLACE: temperature, foreground browser, browser version, and run conditions"
+}

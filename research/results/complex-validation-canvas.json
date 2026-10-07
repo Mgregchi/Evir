@@ -1,0 +1,1014 @@
+{
+  "runtime": "@rive-app/canvas 2.44.0",
+  "diagnostics": {
+    "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+    "contexts": [
+      {
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "unmaskedRendererAvailable": true,
+        "contextLost": false,
+        "errors": [],
+        "extensions": [
+          "EXT_clip_control",
+          "EXT_color_buffer_float",
+          "EXT_color_buffer_half_float",
+          "EXT_conservative_depth",
+          "EXT_depth_clamp",
+          "EXT_float_blend",
+          "EXT_polygon_offset_clamp",
+          "EXT_texture_compression_bptc",
+          "EXT_texture_compression_rgtc",
+          "EXT_texture_filter_anisotropic",
+          "EXT_texture_mirror_clamp_to_edge",
+          "NV_shader_noperspective_interpolation",
+          "OES_draw_buffers_indexed",
+          "OES_sample_variables",
+          "OES_shader_multisample_interpolation",
+          "OES_texture_float_linear",
+          "OVR_multiview2",
+          "WEBGL_clip_cull_distance",
+          "WEBGL_compressed_texture_astc",
+          "WEBGL_compressed_texture_etc",
+          "WEBGL_compressed_texture_etc1",
+          "WEBGL_compressed_texture_s3tc",
+          "WEBGL_compressed_texture_s3tc_srgb",
+          "WEBGL_debug_renderer_info",
+          "WEBGL_debug_shaders",
+          "WEBGL_lose_context",
+          "WEBGL_multi_draw",
+          "WEBGL_polygon_mode",
+          "WEBGL_stencil_texturing"
+        ]
+      }
+    ]
+  },
+  "results": [
+    {
+      "fixture": "nonzero-same",
+      "pixels": {
+        "count": 25600,
+        "cx": 127.5,
+        "cy": 127.5,
+        "hash": 679656901
+      },
+      "status": "passed"
+    },
+    {
+      "fixture": "nonzero-opposite",
+      "pixels": {
+        "count": 21504,
+        "cx": 127.5,
+        "cy": 127.5,
+        "hash": 2287353285
+      },
+      "status": "passed"
+    },
+    {
+      "fixture": "evenodd-same",
+      "pixels": {
+        "count": 21504,
+        "cx": 127.5,
+        "cy": 127.5,
+        "hash": 2287353285
+      },
+      "status": "passed"
+    },
+    {
+      "fixture": "evenodd-opposite",
+      "pixels": {
+        "count": 21504,
+        "cx": 127.5,
+        "cy": 127.5,
+        "hash": 2287353285
+      },
+      "status": "passed"
+    },
+    {
+      "fixture": "self-intersection",
+      "pixels": {
+        "count": 8320,
+        "cx": 127.5,
+        "cy": 127.5,
+        "hash": 3378653653
+      },
+      "status": "passed"
+    },
+    {
+      "fixture": "overlap-red-blue",
+      "pixels": {
+        "count": 13824,
+        "cx": 127.5,
+        "cy": 127.5,
+        "hash": 1764720069
+      },
+      "status": "passed",
+      "colors": {
+        "center": [
+          170,
+          0,
+          85,
+          192
+        ],
+        "left": [
+          255,
+          0,
+          0,
+          128
+        ],
+        "right": [
+          0,
+          0,
+          255,
+          128
+        ]
+      }
+    },
+    {
+      "fixture": "overlap-blue-red",
+      "pixels": {
+        "count": 13824,
+        "cx": 127.5,
+        "cy": 127.5,
+        "hash": 764083653
+      },
+      "status": "passed",
+      "colors": {
+        "center": [
+          85,
+          0,
+          170,
+          192
+        ],
+        "left": [
+          0,
+          0,
+          255,
+          128
+        ],
+        "right": [
+          255,
+          0,
+          0,
+          128
+        ]
+      }
+    },
+    {
+      "fixture": "nested-clip",
+      "pixels": {
+        "count": 6144,
+        "cx": 127.5,
+        "cy": 127.5,
+        "hash": 2268028357
+      },
+      "status": "passed"
+    },
+    {
+      "fixture": "round-stroke",
+      "pixels": {
+        "count": 2272,
+        "cx": 127.5,
+        "cy": 127.5,
+        "hash": 2206579983
+      },
+      "status": "passed"
+    },
+    {
+      "fixture": "radial-gradient",
+      "pixels": {
+        "count": 16384,
+        "cx": 127.5,
+        "cy": 127.5,
+        "hash": 1336958477
+      },
+      "status": "passed",
+      "colors": {
+        "center": [
+          252,
+          0,
+          2,
+          255
+        ],
+        "edge": [
+          22,
+          0,
+          233,
+          255
+        ]
+      }
+    },
+    {
+      "fixture": "direct-blend",
+      "pixels": {
+        "count": 2304,
+        "cx": 63.5,
+        "cy": 127.5,
+        "hash": 3545605573
+      },
+      "status": "passed",
+      "sequences": [
+        {
+          "inputs": [
+            100,
+            0
+          ],
+          "ticks": [
+            {
+              "tick": 1,
+              "expectedX": 64,
+              "pixels": {
+                "count": 2304,
+                "cx": 63.5,
+                "cy": 127.5,
+                "hash": 3545605573
+              }
+            },
+            {
+              "tick": 2,
+              "expectedX": 64,
+              "pixels": {
+                "count": 2304,
+                "cx": 63.5,
+                "cy": 127.5,
+                "hash": 3545605573
+              }
+            },
+            {
+              "tick": 3,
+              "expectedX": 64,
+              "pixels": {
+                "count": 2304,
+                "cx": 63.5,
+                "cy": 127.5,
+                "hash": 3545605573
+              }
+            },
+            {
+              "tick": 4,
+              "expectedX": 64,
+              "pixels": {
+                "count": 2304,
+                "cx": 63.5,
+                "cy": 127.5,
+                "hash": 3545605573
+              }
+            }
+          ]
+        },
+        {
+          "inputs": [
+            75,
+            25
+          ],
+          "ticks": [
+            {
+              "tick": 1,
+              "expectedX": 96,
+              "pixels": {
+                "count": 2304,
+                "cx": 95.5,
+                "cy": 127.5,
+                "hash": 2193991109
+              }
+            },
+            {
+              "tick": 2,
+              "expectedX": 102,
+              "pixels": {
+                "count": 2304,
+                "cx": 101.5,
+                "cy": 127.5,
+                "hash": 3924993477
+              }
+            },
+            {
+              "tick": 3,
+              "expectedX": 103.125,
+              "pixels": {
+                "count": 2352,
+                "cx": 103,
+                "cy": 127.5,
+                "hash": 2167685413
+              }
+            },
+            {
+              "tick": 4,
+              "expectedX": 103.3359375,
+              "pixels": {
+                "count": 2352,
+                "cx": 103,
+                "cy": 127.5,
+                "hash": 3319256037
+              }
+            }
+          ]
+        },
+        {
+          "inputs": [
+            50,
+            50
+          ],
+          "ticks": [
+            {
+              "tick": 1,
+              "expectedX": 128,
+              "pixels": {
+                "count": 2304,
+                "cx": 127.5,
+                "cy": 127.5,
+                "hash": 1379247557
+              }
+            },
+            {
+              "tick": 2,
+              "expectedX": 144,
+              "pixels": {
+                "count": 2304,
+                "cx": 143.5,
+                "cy": 127.5,
+                "hash": 99460549
+              }
+            },
+            {
+              "tick": 3,
+              "expectedX": 148,
+              "pixels": {
+                "count": 2304,
+                "cx": 147.5,
+                "cy": 127.5,
+                "hash": 2273551813
+              }
+            },
+            {
+              "tick": 4,
+              "expectedX": 149,
+              "pixels": {
+                "count": 2304,
+                "cx": 148.5,
+                "cy": 127.5,
+                "hash": 3853460933
+              }
+            }
+          ]
+        },
+        {
+          "inputs": [
+            25,
+            75
+          ],
+          "ticks": [
+            {
+              "tick": 1,
+              "expectedX": 160,
+              "pixels": {
+                "count": 2304,
+                "cx": 159.5,
+                "cy": 127.5,
+                "hash": 1101374917
+              }
+            },
+            {
+              "tick": 2,
+              "expectedX": 178,
+              "pixels": {
+                "count": 2304,
+                "cx": 177.5,
+                "cy": 127.5,
+                "hash": 1541711301
+              }
+            },
+            {
+              "tick": 3,
+              "expectedX": 181.375,
+              "pixels": {
+                "count": 2352,
+                "cx": 181,
+                "cy": 127.5,
+                "hash": 4163153029
+              }
+            },
+            {
+              "tick": 4,
+              "expectedX": 182.0078125,
+              "pixels": {
+                "count": 2352,
+                "cx": 182,
+                "cy": 127.5,
+                "hash": 1163576837
+              }
+            }
+          ]
+        },
+        {
+          "inputs": [
+            0,
+            100
+          ],
+          "ticks": [
+            {
+              "tick": 1,
+              "expectedX": 192,
+              "pixels": {
+                "count": 2304,
+                "cx": 191.5,
+                "cy": 127.5,
+                "hash": 1360373189
+              }
+            },
+            {
+              "tick": 2,
+              "expectedX": 192,
+              "pixels": {
+                "count": 2304,
+                "cx": 191.5,
+                "cy": 127.5,
+                "hash": 1360373189
+              }
+            },
+            {
+              "tick": 3,
+              "expectedX": 192,
+              "pixels": {
+                "count": 2304,
+                "cx": 191.5,
+                "cy": 127.5,
+                "hash": 1360373189
+              }
+            },
+            {
+              "tick": 4,
+              "expectedX": 192,
+              "pixels": {
+                "count": 2304,
+                "cx": 191.5,
+                "cy": 127.5,
+                "hash": 1360373189
+              }
+            }
+          ]
+        },
+        {
+          "inputs": [
+            200,
+            -50
+          ],
+          "ticks": [
+            {
+              "tick": 1,
+              "expectedX": 64,
+              "pixels": {
+                "count": 2304,
+                "cx": 63.5,
+                "cy": 127.5,
+                "hash": 3545605573
+              }
+            },
+            {
+              "tick": 2,
+              "expectedX": 64,
+              "pixels": {
+                "count": 2304,
+                "cx": 63.5,
+                "cy": 127.5,
+                "hash": 3545605573
+              }
+            },
+            {
+              "tick": 3,
+              "expectedX": 64,
+              "pixels": {
+                "count": 2304,
+                "cx": 63.5,
+                "cy": 127.5,
+                "hash": 3545605573
+              }
+            },
+            {
+              "tick": 4,
+              "expectedX": 64,
+              "pixels": {
+                "count": 2304,
+                "cx": 63.5,
+                "cy": 127.5,
+                "hash": 3545605573
+              }
+            }
+          ]
+        },
+        {
+          "inputs": [
+            0,
+            0
+          ],
+          "ticks": [
+            {
+              "tick": 1,
+              "expectedX": 64,
+              "pixels": {
+                "count": 2304,
+                "cx": 63.5,
+                "cy": 127.5,
+                "hash": 3545605573
+              }
+            },
+            {
+              "tick": 2,
+              "expectedX": 64,
+              "pixels": {
+                "count": 2304,
+                "cx": 63.5,
+                "cy": 127.5,
+                "hash": 3545605573
+              }
+            },
+            {
+              "tick": 3,
+              "expectedX": 64,
+              "pixels": {
+                "count": 2304,
+                "cx": 63.5,
+                "cy": 127.5,
+                "hash": 3545605573
+              }
+            },
+            {
+              "tick": 4,
+              "expectedX": 64,
+              "pixels": {
+                "count": 2304,
+                "cx": 63.5,
+                "cy": 127.5,
+                "hash": 3545605573
+              }
+            }
+          ]
+        },
+        {
+          "inputs": [
+            100,
+            100
+          ],
+          "ticks": [
+            {
+              "tick": 1,
+              "expectedX": 192,
+              "pixels": {
+                "count": 2304,
+                "cx": 191.5,
+                "cy": 127.5,
+                "hash": 1360373189
+              }
+            },
+            {
+              "tick": 2,
+              "expectedX": 192,
+              "pixels": {
+                "count": 2304,
+                "cx": 191.5,
+                "cy": 127.5,
+                "hash": 1360373189
+              }
+            },
+            {
+              "tick": 3,
+              "expectedX": 192,
+              "pixels": {
+                "count": 2304,
+                "cx": 191.5,
+                "cy": 127.5,
+                "hash": 1360373189
+              }
+            },
+            {
+              "tick": 4,
+              "expectedX": 192,
+              "pixels": {
+                "count": 2304,
+                "cx": 191.5,
+                "cy": 127.5,
+                "hash": 1360373189
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fixture": "layers",
+      "pixels": {
+        "count": 2304,
+        "cx": 159.5,
+        "cy": 79.5,
+        "hash": 430286277
+      },
+      "status": "passed"
+    },
+    {
+      "fixture": "rml-winding",
+      "pixels": {
+        "count": 21504,
+        "cx": 127.5,
+        "cy": 127.5,
+        "hash": 2287353285
+      },
+      "status": "passed"
+    },
+    {
+      "fixture": "rml-direct-blend",
+      "pixels": {
+        "count": 2304,
+        "cx": 63.5,
+        "cy": 127.5,
+        "hash": 3545605573
+      },
+      "status": "passed",
+      "sequences": [
+        {
+          "inputs": [
+            100,
+            0
+          ],
+          "ticks": [
+            {
+              "tick": 1,
+              "expectedX": 64,
+              "pixels": {
+                "count": 2304,
+                "cx": 63.5,
+                "cy": 127.5,
+                "hash": 3545605573
+              }
+            },
+            {
+              "tick": 2,
+              "expectedX": 64,
+              "pixels": {
+                "count": 2304,
+                "cx": 63.5,
+                "cy": 127.5,
+                "hash": 3545605573
+              }
+            },
+            {
+              "tick": 3,
+              "expectedX": 64,
+              "pixels": {
+                "count": 2304,
+                "cx": 63.5,
+                "cy": 127.5,
+                "hash": 3545605573
+              }
+            },
+            {
+              "tick": 4,
+              "expectedX": 64,
+              "pixels": {
+                "count": 2304,
+                "cx": 63.5,
+                "cy": 127.5,
+                "hash": 3545605573
+              }
+            }
+          ]
+        },
+        {
+          "inputs": [
+            75,
+            25
+          ],
+          "ticks": [
+            {
+              "tick": 1,
+              "expectedX": 96,
+              "pixels": {
+                "count": 2304,
+                "cx": 95.5,
+                "cy": 127.5,
+                "hash": 2193991109
+              }
+            },
+            {
+              "tick": 2,
+              "expectedX": 102,
+              "pixels": {
+                "count": 2304,
+                "cx": 101.5,
+                "cy": 127.5,
+                "hash": 3924993477
+              }
+            },
+            {
+              "tick": 3,
+              "expectedX": 103.125,
+              "pixels": {
+                "count": 2352,
+                "cx": 103,
+                "cy": 127.5,
+                "hash": 2167685413
+              }
+            },
+            {
+              "tick": 4,
+              "expectedX": 103.3359375,
+              "pixels": {
+                "count": 2352,
+                "cx": 103,
+                "cy": 127.5,
+                "hash": 3319256037
+              }
+            }
+          ]
+        },
+        {
+          "inputs": [
+            50,
+            50
+          ],
+          "ticks": [
+            {
+              "tick": 1,
+              "expectedX": 128,
+              "pixels": {
+                "count": 2304,
+                "cx": 127.5,
+                "cy": 127.5,
+                "hash": 1379247557
+              }
+            },
+            {
+              "tick": 2,
+              "expectedX": 144,
+              "pixels": {
+                "count": 2304,
+                "cx": 143.5,
+                "cy": 127.5,
+                "hash": 99460549
+              }
+            },
+            {
+              "tick": 3,
+              "expectedX": 148,
+              "pixels": {
+                "count": 2304,
+                "cx": 147.5,
+                "cy": 127.5,
+                "hash": 2273551813
+              }
+            },
+            {
+              "tick": 4,
+              "expectedX": 149,
+              "pixels": {
+                "count": 2304,
+                "cx": 148.5,
+                "cy": 127.5,
+                "hash": 3853460933
+              }
+            }
+          ]
+        },
+        {
+          "inputs": [
+            25,
+            75
+          ],
+          "ticks": [
+            {
+              "tick": 1,
+              "expectedX": 160,
+              "pixels": {
+                "count": 2304,
+                "cx": 159.5,
+                "cy": 127.5,
+                "hash": 1101374917
+              }
+            },
+            {
+              "tick": 2,
+              "expectedX": 178,
+              "pixels": {
+                "count": 2304,
+                "cx": 177.5,
+                "cy": 127.5,
+                "hash": 1541711301
+              }
+            },
+            {
+              "tick": 3,
+              "expectedX": 181.375,
+              "pixels": {
+                "count": 2352,
+                "cx": 181,
+                "cy": 127.5,
+                "hash": 4163153029
+              }
+            },
+            {
+              "tick": 4,
+              "expectedX": 182.0078125,
+              "pixels": {
+                "count": 2352,
+                "cx": 182,
+                "cy": 127.5,
+                "hash": 1163576837
+              }
+            }
+          ]
+        },
+        {
+          "inputs": [
+            0,
+            100
+          ],
+          "ticks": [
+            {
+              "tick": 1,
+              "expectedX": 192,
+              "pixels": {
+                "count": 2304,
+                "cx": 191.5,
+                "cy": 127.5,
+                "hash": 1360373189
+              }
+            },
+            {
+              "tick": 2,
+              "expectedX": 192,
+              "pixels": {
+                "count": 2304,
+                "cx": 191.5,
+                "cy": 127.5,
+                "hash": 1360373189
+              }
+            },
+            {
+              "tick": 3,
+              "expectedX": 192,
+              "pixels": {
+                "count": 2304,
+                "cx": 191.5,
+                "cy": 127.5,
+                "hash": 1360373189
+              }
+            },
+            {
+              "tick": 4,
+              "expectedX": 192,
+              "pixels": {
+                "count": 2304,
+                "cx": 191.5,
+                "cy": 127.5,
+                "hash": 1360373189
+              }
+            }
+          ]
+        },
+        {
+          "inputs": [
+            200,
+            -50
+          ],
+          "ticks": [
+            {
+              "tick": 1,
+              "expectedX": 64,
+              "pixels": {
+                "count": 2304,
+                "cx": 63.5,
+                "cy": 127.5,
+                "hash": 3545605573
+              }
+            },
+            {
+              "tick": 2,
+              "expectedX": 64,
+              "pixels": {
+                "count": 2304,
+                "cx": 63.5,
+                "cy": 127.5,
+                "hash": 3545605573
+              }
+            },
+            {
+              "tick": 3,
+              "expectedX": 64,
+              "pixels": {
+                "count": 2304,
+                "cx": 63.5,
+                "cy": 127.5,
+                "hash": 3545605573
+              }
+            },
+            {
+              "tick": 4,
+              "expectedX": 64,
+              "pixels": {
+                "count": 2304,
+                "cx": 63.5,
+                "cy": 127.5,
+                "hash": 3545605573
+              }
+            }
+          ]
+        },
+        {
+          "inputs": [
+            0,
+            0
+          ],
+          "ticks": [
+            {
+              "tick": 1,
+              "expectedX": 64,
+              "pixels": {
+                "count": 2304,
+                "cx": 63.5,
+                "cy": 127.5,
+                "hash": 3545605573
+              }
+            },
+            {
+              "tick": 2,
+              "expectedX": 64,
+              "pixels": {
+                "count": 2304,
+                "cx": 63.5,
+                "cy": 127.5,
+                "hash": 3545605573
+              }
+            },
+            {
+              "tick": 3,
+              "expectedX": 64,
+              "pixels": {
+                "count": 2304,
+                "cx": 63.5,
+                "cy": 127.5,
+                "hash": 3545605573
+              }
+            },
+            {
+              "tick": 4,
+              "expectedX": 64,
+              "pixels": {
+                "count": 2304,
+                "cx": 63.5,
+                "cy": 127.5,
+                "hash": 3545605573
+              }
+            }
+          ]
+        },
+        {
+          "inputs": [
+            100,
+            100
+          ],
+          "ticks": [
+            {
+              "tick": 1,
+              "expectedX": 192,
+              "pixels": {
+                "count": 2304,
+                "cx": 191.5,
+                "cy": 127.5,
+                "hash": 1360373189
+              }
+            },
+            {
+              "tick": 2,
+              "expectedX": 192,
+              "pixels": {
+                "count": 2304,
+                "cx": 191.5,
+                "cy": 127.5,
+                "hash": 1360373189
+              }
+            },
+            {
+              "tick": 3,
+              "expectedX": 192,
+              "pixels": {
+                "count": 2304,
+                "cx": 191.5,
+                "cy": 127.5,
+                "hash": 1360373189
+              }
+            },
+            {
+              "tick": 4,
+              "expectedX": 192,
+              "pixels": {
+                "count": 2304,
+                "cx": 191.5,
+                "cy": 127.5,
+                "hash": 1360373189
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

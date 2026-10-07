@@ -1,0 +1,189 @@
+{
+  "environment": {
+    "runtime": "@rive-app/webgl2 2.44.0",
+    "playwright": "1.63.0",
+    "chromium": "151.0.7922.173",
+    "node": "v24.19.0",
+    "platform": "linux",
+    "arch": "x64",
+    "cpus": 5,
+    "memory_bytes": 35743784960,
+    "controllerHost": null,
+    "viewport": "256x256 canvas",
+    "headless": true,
+    "browserConnection": "local-launched",
+    "deviceProfile": null,
+    "deviceBrowser": {
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+      "devicePixelRatio": 1,
+      "viewportWidth": 400,
+      "viewportHeight": 400,
+      "canvasWidth": 256,
+      "canvasHeight": 256
+    },
+    "graphics": {
+      "vendor": "Google Inc. (Google)",
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "renderer": "webgl2"
+  },
+  "method": "3 fresh-page loads (HTTP cache may be warm), 12 warm loads in shared WASM runtime; 2-second rAF observation after 250 ms warmup. FPS is scheduler cadence, not isolated GPU throughput. State selectors change target every rAF. Runtime callback CPU timings come from the pinned runtime private rolling one-second durations array, include advance and submitted rendering work (or draw-skip), and exclude asynchronous GPU completion. Memory after GC; JS heap, WASM capacity and renderer RSS overlap and must not be summed. RSS includes shared pages.",
+  "results": [
+    {
+      "fixture": "closure/weighted-mesh",
+      "bytes": 949,
+      "cold_page_load_ms": {
+        "median": 101.09999999962747,
+        "p95": 140.29999999981374,
+        "min": 95.5,
+        "max": 140.29999999981374
+      },
+      "warm_load_ms": {
+        "median": 7.349999999627471,
+        "p95": 106.80000000074506,
+        "min": 5.2000000001862645,
+        "max": 106.80000000074506
+      },
+      "cold_samples": 3,
+      "warm_samples": 12,
+      "raf_fps": 60.001983536645845,
+      "raf_frame_ms": {
+        "median": 16.699999999999818,
+        "p95": 16.700000000000273,
+        "min": 16.5,
+        "max": 16.800000000000182
+      },
+      "raf_frames": 121,
+      "runtime_frame_callbacks": 122,
+      "runtime_callback_cpu_ms": {
+        "median": 0.2999999998137355,
+        "p95": 0.40000000037252903,
+        "min": 0.10000000055879354,
+        "max": 1
+      },
+      "runtime_callback_cpu_samples": 61,
+      "task_ms_over_observation": 304.68899999999996,
+      "js_heap_bytes": 5164888,
+      "wasm_linear_capacity_bytes": 17432576,
+      "renderer_process_rss": [
+        {
+          "pid": 15923,
+          "rssKiB": 92104
+        },
+        {
+          "pid": 15981,
+          "rssKiB": 33828
+        },
+        {
+          "pid": 15913,
+          "rssKiB": 109596
+        }
+      ],
+      "visible_pixels": 19456
+    },
+    {
+      "fixture": "closure/data-binding",
+      "bytes": 456,
+      "cold_page_load_ms": {
+        "median": 186.79999999981374,
+        "p95": 201.90000000037253,
+        "min": 186.40000000037253,
+        "max": 201.90000000037253
+      },
+      "warm_load_ms": {
+        "median": 43.75,
+        "p95": 52.40000000037253,
+        "min": 40.60000000055879,
+        "max": 52.40000000037253
+      },
+      "cold_samples": 3,
+      "warm_samples": 12,
+      "raf_fps": 60.004959087527894,
+      "raf_frame_ms": {
+        "median": 16.699999999999818,
+        "p95": 16.799999999999272,
+        "min": 16.5,
+        "max": 16.800000000000182
+      },
+      "raf_frames": 121,
+      "runtime_frame_callbacks": 122,
+      "runtime_callback_cpu_ms": {
+        "median": 0.30000000074505806,
+        "p95": 0.40000000037252903,
+        "min": 0.19999999925494194,
+        "max": 1
+      },
+      "runtime_callback_cpu_samples": 61,
+      "task_ms_over_observation": 311.54400000000004,
+      "js_heap_bytes": 5107655,
+      "wasm_linear_capacity_bytes": 17432576,
+      "renderer_process_rss": [
+        {
+          "pid": 16017,
+          "rssKiB": 33856
+        },
+        {
+          "pid": 15923,
+          "rssKiB": 93744
+        },
+        {
+          "pid": 15913,
+          "rssKiB": 110112
+        }
+      ],
+      "visible_pixels": 2304
+    },
+    {
+      "fixture": "closure/timed-transition",
+      "bytes": 269,
+      "cold_page_load_ms": {
+        "median": 138.20000000018626,
+        "p95": 140.20000000018626,
+        "min": 131.1000000005588,
+        "max": 140.20000000018626
+      },
+      "warm_load_ms": {
+        "median": 43,
+        "p95": 51,
+        "min": 41.5,
+        "max": 51
+      },
+      "cold_samples": 3,
+      "warm_samples": 12,
+      "raf_fps": 60,
+      "raf_frame_ms": {
+        "median": 16.69999999999891,
+        "p95": 16.799999999999272,
+        "min": 16.599999999998545,
+        "max": 16.80000000000109
+      },
+      "raf_frames": 120,
+      "runtime_frame_callbacks": 121,
+      "runtime_callback_cpu_ms": {
+        "median": 0.10000000055879354,
+        "p95": 0.2999999998137355,
+        "min": 0,
+        "max": 0.40000000037252903
+      },
+      "runtime_callback_cpu_samples": 61,
+      "task_ms_over_observation": 148.4199999999998,
+      "js_heap_bytes": 4986748,
+      "wasm_linear_capacity_bytes": 17432576,
+      "renderer_process_rss": [
+        {
+          "pid": 16051,
+          "rssKiB": 33852
+        },
+        {
+          "pid": 15923,
+          "rssKiB": 93112
+        },
+        {
+          "pid": 15913,
+          "rssKiB": 110516
+        }
+      ],
+      "visible_pixels": 2352
+    }
+  ]
+}

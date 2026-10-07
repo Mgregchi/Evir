@@ -1,0 +1,127 @@
+{
+  "major": 7,
+  "minor": 0,
+  "file_id": 0,
+  "toc": {},
+  "objects": [
+    {
+      "type": 23,
+      "properties": []
+    },
+    {
+      "type": 1,
+      "properties": [
+        {
+          "key": 4,
+          "wire": "string",
+          "value": "FeatherControl"
+        },
+        {
+          "key": 7,
+          "wire": "float",
+          "value": 256
+        },
+        {
+          "key": 8,
+          "wire": "float",
+          "value": 256
+        }
+      ]
+    },
+    {
+      "type": 3,
+      "properties": [
+        {
+          "key": 4,
+          "wire": "string",
+          "value": "Box"
+        },
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 0
+        },
+        {
+          "key": 13,
+          "wire": "float",
+          "value": 128
+        },
+        {
+          "key": 14,
+          "wire": "float",
+          "value": 128
+        }
+      ]
+    },
+    {
+      "type": 7,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 1
+        },
+        {
+          "key": 20,
+          "wire": "float",
+          "value": 64
+        },
+        {
+          "key": 21,
+          "wire": "float",
+          "value": 64
+        }
+      ]
+    },
+    {
+      "type": 20,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 1
+        },
+        {
+          "key": 40,
+          "wire": "uint",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "type": 18,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 3
+        },
+        {
+          "key": 37,
+          "wire": "color",
+          "value": 4280837340
+        }
+      ]
+    },
+    {
+      "type": 533,
+      "properties": [
+        {
+          "key": 5,
+          "wire": "uint",
+          "value": 3
+        },
+        {
+          "key": 749,
+          "wire": "float",
+          "value": 12
+        },
+        {
+          "key": 750,
+          "wire": "float",
+          "value": 16
+        }
+      ]
+    }
+  ]
+}
