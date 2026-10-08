@@ -188,10 +188,48 @@ def main():
                 "instructions": "research/editor-comparison/README.md",
             }
         )
+    supplied_editor = None
+    if (RESULTS / "editor-export-inventory.json").exists():
+        inventory = load("editor-export-inventory.json")
+        source = ROOT / "research/fixtures/editor-corpus/sobo.riv"
+        assert hashlib.sha256(source.read_bytes()).hexdigest() == inventory["sha256"]
+        assert inventory["roundtrips"] == {"raw": True, "encoded": True}
+        expected_artboards = {a["name"] for a in inventory["artboards"]}
+        expected_machines = {
+            (a["name"], m) for a in inventory["artboards"] for m in a["machines"]
+        }
+        for backend in ["canvas", "webgl2"]:
+            smoke = load(f"editor-export-{backend}.json")
+            assert smoke["sourceSha256"] == inventory["sha256"]
+            assert {r["artboard"] for r in smoke["records"]} == expected_artboards
+            assert len(smoke["records"]) == len(expected_artboards)
+            assert {
+                (r["artboard"], r["machine"]) for r in smoke["machines"]
+            } == expected_machines
+            assert len(smoke["machines"]) == len(expected_machines)
+            assert all(
+                r["status"] == "passed" and r["initial"]["count"] > 0
+                for r in smoke["records"]
+            )
+            assert all(
+                r["status"] == "passed"
+                and r["pixels"]["count"] > 0
+                and r["machine"] in r["playing"]
+                for r in smoke["machines"]
+            )
+        supplied_editor = {
+            "sha256": inventory["sha256"],
+            "artboardsPerBackend": len(expected_artboards),
+            "stateMachinesPerBackend": len(expected_machines),
+            "status": "passed-structural-and-rendering-smoke",
+            "satisfiesEquivalentSceneComparison": False,
+        }
     report = {
-        "scope": "Targeted runtime/format research before editor research; not full Rive feature parity or an independent production renderer.",
+        "scope": "Targeted runtime/format research; not full Rive feature parity or an independent production renderer.",
         "status": "open-external-evidence" if blockers else "closed-for-declared-scope",
         "softwareChecks": "passed",
+        "editorResearch": "started; user deferred device audit on 2026-10-08",
+        "suppliedEditorExport": supplied_editor,
         "structuralRoundtripFiles": len(files),
         "positiveRuntimeValidations": sum(
             v["outcomes"].get("passed", 0) for v in validations

@@ -1,0 +1,786 @@
+{
+  "source": "User-supplied Rive Editor runtime export",
+  "originalFilename": "28761-54484-sobo.riv",
+  "receivedDate": "2026-10-08",
+  "editorVersion": null,
+  "exportedAt": null,
+  "ownershipOrLicense": "Not supplied; this fixture retains its original ownership.",
+  "sha256": "bd15378a5fae9ab5f0f166be36df10e775a5ccee15200234d41f947098e4e29e",
+  "bytes": 2744286,
+  "format": {
+    "major": 7,
+    "minor": 3
+  },
+  "objects": 35206,
+  "types": {
+    "AnimationState": 142,
+    "AnyState": 77,
+    "Artboard": 13,
+    "Backboard": 1,
+    "BindablePropertyNumber": 42,
+    "BindablePropertyTrigger": 91,
+    "Bone": 39,
+    "ClippingShape": 208,
+    "CubicAsymmetricVertex": 412,
+    "CubicDetachedVertex": 913,
+    "CubicEaseInterpolator": 224,
+    "CubicMirroredVertex": 842,
+    "CubicWeight": 632,
+    "DataBindContext": 147,
+    "DataConverterSystemDegsToRads": 1,
+    "DataConverterSystemNormalizer": 1,
+    "DataConverterTrigger": 1,
+    "DrawRules": 8,
+    "DrawTarget": 8,
+    "ElasticInterpolator": 7,
+    "Ellipse": 360,
+    "EntryState": 77,
+    "ExitState": 77,
+    "Feather": 780,
+    "FileAssetContents": 2,
+    "Fill": 1347,
+    "FontAsset": 1,
+    "GradientStop": 1212,
+    "IKConstraint": 35,
+    "Image": 3,
+    "ImageAsset": 1,
+    "KeyFrameBool": 49,
+    "KeyFrameDouble": 15955,
+    "KeyFrameId": 35,
+    "KeyFrameString": 35,
+    "KeyedObject": 1878,
+    "KeyedProperty": 5392,
+    "LayoutComponentStyle": 13,
+    "LinearAnimation": 78,
+    "LinearGradient": 469,
+    "ListenerViewModelChange": 14,
+    "NestedArtboard": 3,
+    "NestedStateMachine": 3,
+    "Node": 399,
+    "PointsPath": 349,
+    "RadialGradient": 118,
+    "Rectangle": 6,
+    "RootBone": 135,
+    "Shape": 649,
+    "Skin": 95,
+    "SolidColor": 820,
+    "Solo": 7,
+    "StateMachine": 20,
+    "StateMachineLayer": 77,
+    "StateMachineListenerSingle": 14,
+    "StateTransition": 196,
+    "Stroke": 60,
+    "Tendon": 184,
+    "Text": 7,
+    "TextStyleAxis": 14,
+    "TextStylePaint": 7,
+    "TextValueRun": 7,
+    "TransformConstraint": 42,
+    "TransitionPropertyViewModelComparator": 119,
+    "TransitionValueNumberComparator": 42,
+    "TransitionValueTriggerComparator": 77,
+    "TransitionViewModelCondition": 119,
+    "TranslationConstraint": 7,
+    "ViewModel": 1,
+    "ViewModelInstance": 1,
+    "ViewModelInstanceNumber": 2,
+    "ViewModelInstanceTrigger": 1,
+    "ViewModelPropertyNumber": 2,
+    "ViewModelPropertyTrigger": 1
+  },
+  "unknownTypes": [],
+  "unknownPropertyKeys": [],
+  "roundtrips": {
+    "raw": true,
+    "encoded": true
+  },
+  "artboards": [
+    {
+      "name": "SOBO-Marketplace",
+      "width": 1600.0,
+      "height": 1200.0,
+      "animations": [
+        {
+          "name": "Timeline 1"
+        }
+      ],
+      "machines": [
+        "State Machine 1"
+      ]
+    },
+    {
+      "name": "SOBO-Talk",
+      "width": 1080.0,
+      "height": 1080.0,
+      "animations": [
+        {
+          "name": "NoBump"
+        },
+        {
+          "name": "Bump",
+          "duration": 30
+        },
+        {
+          "name": "Talk",
+          "fps": 30,
+          "duration": 540,
+          "loopValue": 1,
+          "workStart": 120,
+          "workEnd": 300,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Yes",
+          "fps": 30,
+          "duration": 360,
+          "loopValue": 1,
+          "workStart": 120,
+          "workEnd": 210,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Hello",
+          "fps": 30,
+          "duration": 360,
+          "loopValue": 1,
+          "workStart": 120,
+          "workEnd": 210,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Listen",
+          "fps": 30,
+          "duration": 360,
+          "loopValue": 1,
+          "workStart": 120,
+          "workEnd": 210,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Idle",
+          "fps": 30,
+          "duration": 360,
+          "loopValue": 1,
+          "workStart": 135,
+          "workEnd": 225,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Shine",
+          "fps": 30,
+          "duration": 270,
+          "loopValue": 1,
+          "workStart": 90,
+          "workEnd": 180,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Sparkles",
+          "fps": 30,
+          "duration": 270,
+          "loopValue": 1,
+          "workStart": 90,
+          "workEnd": 120,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Blink",
+          "duration": 180,
+          "loopValue": 1
+        }
+      ],
+      "machines": [
+        "State Machine",
+        "State Machine Test"
+      ]
+    },
+    {
+      "name": "SOBO-Portrait",
+      "width": 1080.0,
+      "height": 1920.0,
+      "animations": [
+        {
+          "name": "Timeline 1"
+        }
+      ],
+      "machines": [
+        "State Machine 1"
+      ]
+    },
+    {
+      "name": "SOBO-Motion-V01",
+      "width": 1080.0,
+      "height": 1080.0,
+      "animations": [
+        {
+          "name": "NoBump"
+        },
+        {
+          "name": "Bump",
+          "duration": 30
+        },
+        {
+          "name": "Talk",
+          "fps": 30,
+          "duration": 540,
+          "loopValue": 1,
+          "workStart": 120,
+          "workEnd": 300,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Yes",
+          "fps": 30,
+          "duration": 360,
+          "loopValue": 1,
+          "workStart": 120,
+          "workEnd": 210,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Hello",
+          "fps": 30,
+          "duration": 360,
+          "loopValue": 1,
+          "workStart": 120,
+          "workEnd": 210,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Listen",
+          "fps": 30,
+          "duration": 360,
+          "loopValue": 1,
+          "workStart": 120,
+          "workEnd": 210,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Idle",
+          "fps": 30,
+          "duration": 360,
+          "loopValue": 1,
+          "workStart": 135,
+          "workEnd": 225,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Shine",
+          "fps": 30,
+          "duration": 270,
+          "loopValue": 1,
+          "workStart": 90,
+          "workEnd": 180,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Sparkles",
+          "fps": 30,
+          "duration": 270,
+          "loopValue": 1,
+          "workStart": 90,
+          "workEnd": 120,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Blink",
+          "duration": 180,
+          "loopValue": 1
+        }
+      ],
+      "machines": [
+        "State Machine",
+        "State Machine Test"
+      ]
+    },
+    {
+      "name": "SOBO-Hello",
+      "width": 1080.0,
+      "height": 1080.0,
+      "animations": [
+        {
+          "name": "NoBump"
+        },
+        {
+          "name": "Bump",
+          "duration": 30
+        },
+        {
+          "name": "Talk",
+          "fps": 30,
+          "duration": 540,
+          "loopValue": 1,
+          "workStart": 120,
+          "workEnd": 300,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Yes",
+          "fps": 30,
+          "duration": 360,
+          "loopValue": 1,
+          "workStart": 120,
+          "workEnd": 210,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Hello",
+          "fps": 30,
+          "duration": 360,
+          "loopValue": 1,
+          "workStart": 120,
+          "workEnd": 210,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Listen",
+          "fps": 30,
+          "duration": 360,
+          "loopValue": 1,
+          "workStart": 120,
+          "workEnd": 210,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Idle",
+          "fps": 30,
+          "duration": 360,
+          "loopValue": 1,
+          "workStart": 135,
+          "workEnd": 225,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Shine",
+          "fps": 30,
+          "duration": 270,
+          "loopValue": 1,
+          "workStart": 90,
+          "workEnd": 180,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Sparkles",
+          "fps": 30,
+          "duration": 270,
+          "loopValue": 1,
+          "workStart": 90,
+          "workEnd": 120,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Blink",
+          "duration": 180,
+          "loopValue": 1
+        }
+      ],
+      "machines": [
+        "State Machine",
+        "State Machine Test"
+      ]
+    },
+    {
+      "name": "SOBO-Motion-V02",
+      "width": 1080.0,
+      "height": 1080.0,
+      "animations": [
+        {
+          "name": "Idle",
+          "fps": 30,
+          "duration": 360,
+          "loopValue": 1,
+          "workStart": 135,
+          "workEnd": 225,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Listen",
+          "fps": 30,
+          "duration": 360,
+          "loopValue": 1,
+          "workStart": 120,
+          "workEnd": 210,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Blink",
+          "duration": 180,
+          "loopValue": 1
+        },
+        {
+          "name": "Hello",
+          "fps": 30,
+          "duration": 360,
+          "loopValue": 1,
+          "workStart": 120,
+          "workEnd": 210,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Sparkles",
+          "fps": 30,
+          "duration": 270,
+          "loopValue": 1,
+          "workStart": 90,
+          "workEnd": 120,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Yes",
+          "fps": 30,
+          "duration": 360,
+          "loopValue": 1,
+          "workStart": 120,
+          "workEnd": 210,
+          "enableWorkArea": true
+        },
+        {
+          "name": "MouthOpen"
+        },
+        {
+          "name": "MouthClosed"
+        },
+        {
+          "name": "NoBump"
+        },
+        {
+          "name": "Bump",
+          "duration": 30
+        },
+        {
+          "name": "Shine",
+          "fps": 30,
+          "duration": 270,
+          "loopValue": 1,
+          "workStart": 90,
+          "workEnd": 180,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Talk",
+          "fps": 30,
+          "duration": 540,
+          "loopValue": 1,
+          "workStart": 120,
+          "workEnd": 300,
+          "enableWorkArea": true
+        }
+      ],
+      "machines": [
+        "State Machine",
+        "State Machine Test"
+      ]
+    },
+    {
+      "name": "SOBO-Yes",
+      "width": 1080.0,
+      "height": 1080.0,
+      "animations": [
+        {
+          "name": "NoBump"
+        },
+        {
+          "name": "Bump",
+          "duration": 30
+        },
+        {
+          "name": "Talk",
+          "fps": 30,
+          "duration": 540,
+          "loopValue": 1,
+          "workStart": 120,
+          "workEnd": 300,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Yes",
+          "fps": 30,
+          "duration": 360,
+          "loopValue": 1,
+          "workStart": 120,
+          "workEnd": 210,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Hello",
+          "fps": 30,
+          "duration": 360,
+          "loopValue": 1,
+          "workStart": 120,
+          "workEnd": 210,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Listen",
+          "fps": 30,
+          "duration": 360,
+          "loopValue": 1,
+          "workStart": 120,
+          "workEnd": 210,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Idle",
+          "fps": 30,
+          "duration": 360,
+          "loopValue": 1,
+          "workStart": 135,
+          "workEnd": 225,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Shine",
+          "fps": 30,
+          "duration": 270,
+          "loopValue": 1,
+          "workStart": 90,
+          "workEnd": 180,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Sparkles",
+          "fps": 30,
+          "duration": 270,
+          "loopValue": 1,
+          "workStart": 90,
+          "workEnd": 120,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Blink",
+          "duration": 180,
+          "loopValue": 1
+        }
+      ],
+      "machines": [
+        "State Machine",
+        "State Machine Test"
+      ]
+    },
+    {
+      "name": "SOBO-Rig-V01",
+      "width": 1080.0,
+      "height": 1080.0,
+      "animations": [
+        {
+          "name": "Timeline 1"
+        }
+      ],
+      "machines": [
+        "State Machine 1"
+      ]
+    },
+    {
+      "name": "SOBO-Screen",
+      "width": 1200.0,
+      "height": 630.0,
+      "animations": [
+        {
+          "name": "Timeline 1"
+        }
+      ],
+      "machines": [
+        "State Machine 1"
+      ]
+    },
+    {
+      "name": "SOBO-Listen",
+      "width": 1080.0,
+      "height": 1080.0,
+      "animations": [
+        {
+          "name": "NoBump"
+        },
+        {
+          "name": "Bump",
+          "duration": 30
+        },
+        {
+          "name": "Talk",
+          "fps": 30,
+          "duration": 540,
+          "loopValue": 1,
+          "workStart": 120,
+          "workEnd": 300,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Yes",
+          "fps": 30,
+          "duration": 360,
+          "loopValue": 1,
+          "workStart": 120,
+          "workEnd": 210,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Hello",
+          "fps": 30,
+          "duration": 360,
+          "loopValue": 1,
+          "workStart": 120,
+          "workEnd": 210,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Listen",
+          "fps": 30,
+          "duration": 360,
+          "loopValue": 1,
+          "workStart": 120,
+          "workEnd": 210,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Idle",
+          "fps": 30,
+          "duration": 360,
+          "loopValue": 1,
+          "workStart": 135,
+          "workEnd": 225,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Shine",
+          "fps": 30,
+          "duration": 270,
+          "loopValue": 1,
+          "workStart": 90,
+          "workEnd": 180,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Sparkles",
+          "fps": 30,
+          "duration": 270,
+          "loopValue": 1,
+          "workStart": 90,
+          "workEnd": 120,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Blink",
+          "duration": 180,
+          "loopValue": 1
+        }
+      ],
+      "machines": [
+        "State Machine",
+        "State Machine Test"
+      ]
+    },
+    {
+      "name": "SOBO-Idle",
+      "width": 1080.0,
+      "height": 1080.0,
+      "animations": [
+        {
+          "name": "NoBump"
+        },
+        {
+          "name": "Bump",
+          "duration": 30
+        },
+        {
+          "name": "Talk",
+          "fps": 30,
+          "duration": 540,
+          "loopValue": 1,
+          "workStart": 120,
+          "workEnd": 300,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Yes",
+          "fps": 30,
+          "duration": 360,
+          "loopValue": 1,
+          "workStart": 120,
+          "workEnd": 210,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Hello",
+          "fps": 30,
+          "duration": 360,
+          "loopValue": 1,
+          "workStart": 120,
+          "workEnd": 210,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Listen",
+          "fps": 30,
+          "duration": 360,
+          "loopValue": 1,
+          "workStart": 120,
+          "workEnd": 210,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Idle",
+          "fps": 30,
+          "duration": 360,
+          "loopValue": 1,
+          "workStart": 135,
+          "workEnd": 225,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Shine",
+          "fps": 30,
+          "duration": 270,
+          "loopValue": 1,
+          "workStart": 90,
+          "workEnd": 180,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Sparkles",
+          "fps": 30,
+          "duration": 270,
+          "loopValue": 1,
+          "workStart": 90,
+          "workEnd": 120,
+          "enableWorkArea": true
+        },
+        {
+          "name": "Blink",
+          "duration": 180,
+          "loopValue": 1
+        }
+      ],
+      "machines": [
+        "State Machine",
+        "State Machine Test"
+      ]
+    },
+    {
+      "name": "SOBO-Design-V02",
+      "width": 1080.0,
+      "height": 1080.0,
+      "animations": [
+        {
+          "name": "Timeline 1"
+        }
+      ],
+      "machines": [
+        "State Machine 1"
+      ]
+    },
+    {
+      "name": "SOBO-Design-V01",
+      "width": 1080.0,
+      "height": 1080.0,
+      "animations": [
+        {
+          "name": "Timeline 1"
+        }
+      ],
+      "machines": [
+        "State Machine 1"
+      ]
+    }
+  ],
+  "interpretation": "Structural fidelity only; not full editable-project recovery or an independently authored equivalent scene."
+}

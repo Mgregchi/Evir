@@ -1,8 +1,16 @@
 {
-  "scope": "Targeted runtime/format research before editor research; not full Rive feature parity or an independent production renderer.",
+  "scope": "Targeted runtime/format research; not full Rive feature parity or an independent production renderer.",
   "status": "open-external-evidence",
   "softwareChecks": "passed",
-  "structuralRoundtripFiles": 66,
+  "editorResearch": "started; user deferred device audit on 2026-10-08",
+  "suppliedEditorExport": {
+    "sha256": "bd15378a5fae9ab5f0f166be36df10e775a5ccee15200234d41f947098e4e29e",
+    "artboardsPerBackend": 13,
+    "stateMachinesPerBackend": 20,
+    "status": "passed-structural-and-rendering-smoke",
+    "satisfiesEquivalentSceneComparison": false
+  },
+  "structuralRoundtripFiles": 67,
   "positiveRuntimeValidations": 98,
   "validations": [
     {

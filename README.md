@@ -126,4 +126,6 @@ The first executable research slice includes a schema-driven `.riv` reader/write
 
 Start with [the research workflow](research/README.md), [the Rive overview](docs/01-rive-overview.md), and [the compatibility decision](docs/05-synthesis.md). This establishes a tested export subset and a cloud baseline; full Evir engine parity and mobile performance remain unproven.
 
-The [runtime research closure audit](docs/09-runtime-research-closure.md) covers the extended experiments and distinguishes completed software checks from physical-device and Editor-export evidence still required before closing the research phase.
+The [runtime research closure audit](docs/09-runtime-research-closure.md) covers the extended experiments and distinguishes completed software checks from physical-device and Editor-export evidence still required for complete runtime validation. Device auditing is deferred while the user tests it.
+
+[Editor foundations](docs/10-editor-foundations.md) starts the next research phase with the supplied SOBO Editor export, a proposed editable project architecture, and implementation acceptance criteria. Run `npm run research:editor-export` to reproduce its structural and official-runtime checks.
