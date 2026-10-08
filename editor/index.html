@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Evir — Character studio</title>
+    <link rel="stylesheet" href="studio.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="Evir character studio"
+        ><span class="brand-mark">e</span>Evir<span class="badge"
+          >STUDIO</span
+        ></a
+      >
+      <div class="project-heading">
+        <input id="project-name" aria-label="Project name" /><span
+          id="save-status"
+          role="status"
+          >Local project</span
+        >
+      </div>
+      <nav aria-label="Project actions">
+        <button id="new">New</button><button id="open">Open project</button
+        ><button id="save" class="primary">
+          Save project
+          <span data-icon="download" aria-hidden="true"></span></button
+        ><input
+          id="file"
+          type="file"
+          accept=".json,.evir-project,application/json"
+          hidden
+        />
+      </nav>
+    </header>
+    <div class="toolbar" role="toolbar" aria-label="Design tools">
+      <div class="toolbar-group">
+        <button id="select-tool" aria-pressed="true" title="Select · V">
+          <span data-icon="cursor" aria-hidden="true"></span> Select</button
+        ><button
+          id="pan-tool"
+          aria-pressed="false"
+          title="Pan · H or hold Space"
+        >
+          <span data-icon="pan" aria-hidden="true"></span> Pan
+        </button>
+      </div>
+      <div class="toolbar-group">
+        <button id="add-rectangle" title="Add rectangle · R">
+          <span data-icon="rectangle" aria-hidden="true"></span>
+          Rectangle</button
+        ><button id="add-group" title="Add group">
+          <span data-icon="group" aria-hidden="true"></span> Group
+        </button>
+      </div>
+      <div class="toolbar-group">
+        <button id="undo" title="Undo · Ctrl/⌘ Z">↶ Undo</button
+        ><button id="redo" title="Redo · Ctrl/⌘ Shift Z">↷ Redo</button>
+      </div>
+      <span class="mode"><span class="mode-dot"></span>Design</span>
+    </div>
+    <main class="workspace">
+      <aside class="layers panel" aria-label="Layers panel">
+        <div class="panel-title">
+          <h1>Layers</h1>
+          <span id="layer-count"></span>
+        </div>
+        <label class="search"
+          ><span data-icon="search" aria-hidden="true"></span
+          ><input
+            id="search"
+            type="search"
+            placeholder="Find a layer"
+            aria-label="Find a layer"
+        /></label>
+        <label class="artboard-picker"
+          >Artboard<select id="artboard" aria-label="Active artboard"></select
+        ></label>
+        <div id="layers" class="layer-list" aria-label="Scene layers"></div>
+        <div class="panel-note">
+          Build a character, one shape at a time.<br />Groups keep its parts
+          together.
+        </div>
+      </aside>
+      <section class="stage-area" aria-label="Design workspace">
+        <div class="stage-heading">
+          <span id="artboard-title"></span>
+          <div>
+            <button id="fit" title="Fit artboard · F">Fit</button
+            ><button id="zoom-out" aria-label="Zoom out">−</button
+            ><output id="zoom">100%</output
+            ><button id="zoom-in" aria-label="Zoom in">+</button>
+          </div>
+        </div>
+        <div
+          id="stage"
+          tabindex="0"
+          aria-label="Character stage. Drag to move a shape. Hold Space to pan."
+        >
+          <canvas id="scene" aria-hidden="true"></canvas>
+          <div id="empty-stage" hidden>
+            <h2>A little character starts here.</h2>
+            <p>Add a rectangle or a group to begin.</p>
+            <button id="empty-add" class="primary">Add a rectangle</button>
+          </div>
+        </div>
+        <div class="stage-footer">
+          <span id="selection-status">Select a layer to edit</span
+          ><button id="shortcuts">Keyboard shortcuts <kbd>?</kbd></button>
+        </div>
+      </section>
+      <aside class="inspector panel" aria-label="Properties inspector">
+        <div class="panel-title">
+          <h2>Properties</h2>
+          <span id="kind-label">ARTBOARD</span>
+        </div>
+        <div id="properties"></div>
+      </aside>
+    </main>
+    <div id="notice" role="alert" hidden>
+      <span></span><button aria-label="Dismiss message">×</button>
+    </div>
+    <dialog id="help">
+      <h2>Stay in your flow</h2>
+      <p>
+        Tool shortcuts work outside text fields. Save also works while you’re
+        typing.
+      </p>
+      <dl>
+        <dt>Select / Pan</dt>
+        <dd>V / H</dd>
+        <dt>Temporary pan</dt>
+        <dd>Hold Space + drag</dd>
+        <dt>Add rectangle</dt>
+        <dd>R</dd>
+        <dt>Fit artboard</dt>
+        <dd>F</dd>
+        <dt>Undo / Redo</dt>
+        <dd>Ctrl or ⌘ Z / Shift Z</dd>
+        <dt>Save project</dt>
+        <dd>Ctrl or ⌘ S</dd>
+        <dt>Cancel drag / deselect</dt>
+        <dd>Esc</dd>
+        <dt>Delete selected subtree</dt>
+        <dd>Delete / Backspace</dd>
+        <dt>Zoom at cursor</dt>
+        <dd>Ctrl or ⌘ + scroll</dd>
+      </dl>
+      <button id="close-help" class="primary">Back to creating</button>
+    </dialog>
+    <dialog id="replace-project">
+      <h2 id="replace-title">Open another project?</h2>
+      <p>
+        Your current canvas will be replaced. Save a copy if you want to keep
+        it.
+      </p>
+      <button type="button" id="save-before-replace">
+        Save a project copy
+      </button>
+      <form method="dialog" class="dialog-actions">
+        <button value="cancel" autofocus>Keep editing</button
+        ><button id="replace-confirm" value="replace" class="primary">
+          Open project
+        </button>
+      </form>
+    </dialog>
+    <script type="module" src="studio.mjs"></script>
+  </body>
+</html>

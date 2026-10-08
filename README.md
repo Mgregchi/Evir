@@ -129,3 +129,7 @@ Start with [the research workflow](research/README.md), [the Rive overview](docs
 The [runtime research closure audit](docs/09-runtime-research-closure.md) covers the extended experiments and distinguishes completed software checks from physical-device and Editor-export evidence still required for complete runtime validation. Device auditing is deferred while the user tests it.
 
 [Editor foundations](docs/10-editor-foundations.md) starts the next research phase with the supplied SOBO Editor export, a proposed editable project architecture, and implementation acceptance criteria. Run `npm run research:editor-export` to reproduce its structural and official-runtime checks.
+
+### Editor prototype
+
+The first [Evir Studio workspace](editor/README.md) implements editable projects, validated save/open, transaction history and a Design canvas for groups and rectangles. Run `npm run editor:serve` and open `http://127.0.0.1:8080/editor/`. [UI and workflow research](docs/11-editor-ux-research.md) compares Rive, Penpot, SVGator and Lottie Creator and records the decisions guiding the prototype. Animation, rigging and compatible runtime export are subsequent milestones.
