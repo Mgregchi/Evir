@@ -1,0 +1,718 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 2,
+  "id": "project-73b97463-aae8-46e3-ab50-60785f8483af",
+  "name": "Little explorer",
+  "artboards": [
+    {
+      "id": "artboard-5b0f0f0e-be38-42ae-870e-6f8260bf833b",
+      "name": "Artboard 1",
+      "width": 640,
+      "height": 480
+    }
+  ],
+  "nodes": [
+    {
+      "id": "node-40350cf2-b996-4c4a-a2ee-76672dd4901d",
+      "name": "Explorer",
+      "kind": "group",
+      "artboardId": "artboard-5b0f0f0e-be38-42ae-870e-6f8260bf833b",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        220,
+        105
+      ],
+      "geometry": null
+    },
+    {
+      "id": "node-9e158597-e029-4eff-a3e4-c52246997296",
+      "name": "Left boot",
+      "kind": "rectangle",
+      "artboardId": "artboard-5b0f0f0e-be38-42ae-870e-6f8260bf833b",
+      "parentId": "node-40350cf2-b996-4c4a-a2ee-76672dd4901d",
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        15,
+        205
+      ],
+      "geometry": {
+        "width": 58,
+        "height": 28,
+        "fill": "#54777b"
+      }
+    },
+    {
+      "id": "node-6bef7d84-fe91-4d72-918a-6597b8995281",
+      "name": "Right boot",
+      "kind": "rectangle",
+      "artboardId": "artboard-5b0f0f0e-be38-42ae-870e-6f8260bf833b",
+      "parentId": "node-40350cf2-b996-4c4a-a2ee-76672dd4901d",
+      "order": 1,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        109,
+        205
+      ],
+      "geometry": {
+        "width": 58,
+        "height": 28,
+        "fill": "#54777b"
+      }
+    },
+    {
+      "id": "node-0e2ea9a0-f808-48b1-af4c-f1afe10da7c2",
+      "name": "Left arm",
+      "kind": "rectangle",
+      "artboardId": "artboard-5b0f0f0e-be38-42ae-870e-6f8260bf833b",
+      "parentId": "node-40350cf2-b996-4c4a-a2ee-76672dd4901d",
+      "order": 2,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -20,
+        113
+      ],
+      "geometry": {
+        "width": 27,
+        "height": 74,
+        "fill": "#82bea9"
+      }
+    },
+    {
+      "id": "node-14af52b1-9db4-40a8-8821-e2a739983e22",
+      "name": "Right arm",
+      "kind": "rectangle",
+      "artboardId": "artboard-5b0f0f0e-be38-42ae-870e-6f8260bf833b",
+      "parentId": "node-40350cf2-b996-4c4a-a2ee-76672dd4901d",
+      "order": 3,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        177,
+        113
+      ],
+      "geometry": {
+        "width": 27,
+        "height": 74,
+        "fill": "#82bea9"
+      }
+    },
+    {
+      "id": "node-6f4c5715-22c1-4c93-af70-13c84747a49e",
+      "name": "Body",
+      "kind": "rectangle",
+      "artboardId": "artboard-5b0f0f0e-be38-42ae-870e-6f8260bf833b",
+      "parentId": "node-40350cf2-b996-4c4a-a2ee-76672dd4901d",
+      "order": 4,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        10,
+        105
+      ],
+      "geometry": {
+        "width": 162,
+        "height": 105,
+        "fill": "#a0d7bd"
+      }
+    },
+    {
+      "id": "node-6f80a71f-cf38-4ef5-8236-08aff14572e7",
+      "name": "Chest light",
+      "kind": "rectangle",
+      "artboardId": "artboard-5b0f0f0e-be38-42ae-870e-6f8260bf833b",
+      "parentId": "node-40350cf2-b996-4c4a-a2ee-76672dd4901d",
+      "order": 5,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        69,
+        129
+      ],
+      "geometry": {
+        "width": 44,
+        "height": 37,
+        "fill": "#edb75f"
+      }
+    },
+    {
+      "id": "node-cf66f0f0-8999-48bf-9282-f68d0827bce3",
+      "name": "Antenna",
+      "kind": "rectangle",
+      "artboardId": "artboard-5b0f0f0e-be38-42ae-870e-6f8260bf833b",
+      "parentId": "node-40350cf2-b996-4c4a-a2ee-76672dd4901d",
+      "order": 6,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        85,
+        -17
+      ],
+      "geometry": {
+        "width": 12,
+        "height": 30,
+        "fill": "#54777b"
+      }
+    },
+    {
+      "id": "node-9ae56ff3-7397-4859-b9f4-0f32385ad7c7",
+      "name": "Antenna light",
+      "kind": "rectangle",
+      "artboardId": "artboard-5b0f0f0e-be38-42ae-870e-6f8260bf833b",
+      "parentId": "node-40350cf2-b996-4c4a-a2ee-76672dd4901d",
+      "order": 7,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        78,
+        -28
+      ],
+      "geometry": {
+        "width": 26,
+        "height": 18,
+        "fill": "#edb75f"
+      }
+    },
+    {
+      "id": "node-2713bc82-a43a-4bdf-9192-4ea311e3efd7",
+      "name": "Head",
+      "kind": "rectangle",
+      "artboardId": "artboard-5b0f0f0e-be38-42ae-870e-6f8260bf833b",
+      "parentId": "node-40350cf2-b996-4c4a-a2ee-76672dd4901d",
+      "order": 8,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "width": 182,
+        "height": 102,
+        "fill": "#b9e6cd"
+      }
+    },
+    {
+      "id": "node-29e25abb-34ec-4c9e-877e-4e4093bcfb2b",
+      "name": "Left eye",
+      "kind": "rectangle",
+      "artboardId": "artboard-5b0f0f0e-be38-42ae-870e-6f8260bf833b",
+      "parentId": "node-40350cf2-b996-4c4a-a2ee-76672dd4901d",
+      "order": 9,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        39,
+        34
+      ],
+      "geometry": {
+        "width": 20,
+        "height": 26,
+        "fill": "#233e3c"
+      }
+    },
+    {
+      "id": "node-e1a3d2a1-8fbc-4b02-8989-6c30f48a03ae",
+      "name": "Right eye",
+      "kind": "rectangle",
+      "artboardId": "artboard-5b0f0f0e-be38-42ae-870e-6f8260bf833b",
+      "parentId": "node-40350cf2-b996-4c4a-a2ee-76672dd4901d",
+      "order": 10,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        123,
+        34
+      ],
+      "geometry": {
+        "width": 20,
+        "height": 26,
+        "fill": "#233e3c"
+      }
+    },
+    {
+      "id": "node-704357f9-a52b-4475-977f-d5b5735c2078",
+      "name": "Smile",
+      "kind": "rectangle",
+      "artboardId": "artboard-5b0f0f0e-be38-42ae-870e-6f8260bf833b",
+      "parentId": "node-40350cf2-b996-4c4a-a2ee-76672dd4901d",
+      "order": 11,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        72,
+        72
+      ],
+      "geometry": {
+        "width": 38,
+        "height": 7,
+        "fill": "#54777b"
+      }
+    },
+    {
+      "id": "node-f5cd4e4c-47dc-4262-b8ae-5111ffa1e392",
+      "name": "Path",
+      "kind": "path",
+      "artboardId": "artboard-5b0f0f0e-be38-42ae-870e-6f8260bf833b",
+      "parentId": null,
+      "order": 1,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        260,
+        190
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#64d9ad",
+        "skin": {
+          "bindWorld": [
+            1,
+            0,
+            0,
+            1,
+            260,
+            190
+          ],
+          "bones": [
+            {
+              "boneId": "node-1beed2f3-8d88-4898-bd76-3b7ec4b0b03d",
+              "bind": [
+                1,
+                0,
+                0,
+                1,
+                260,
+                190
+              ]
+            },
+            {
+              "boneId": "node-cccb5f92-c82b-4cb6-afa6-9dc2b9951d8b",
+              "bind": [
+                1,
+                0,
+                0,
+                1,
+                340,
+                190
+              ]
+            }
+          ],
+          "weights": [
+            {
+              "pointId": "point-537c6fcc-c5c2-483e-a0cb-e114d90a9607",
+              "anchor": [
+                [
+                  "node-1beed2f3-8d88-4898-bd76-3b7ec4b0b03d",
+                  0
+                ],
+                [
+                  "node-cccb5f92-c82b-4cb6-afa6-9dc2b9951d8b",
+                  1
+                ]
+              ],
+              "in": [
+                [
+                  "node-1beed2f3-8d88-4898-bd76-3b7ec4b0b03d",
+                  0.5019607843137255
+                ],
+                [
+                  "node-cccb5f92-c82b-4cb6-afa6-9dc2b9951d8b",
+                  0.4980392156862745
+                ]
+              ],
+              "out": [
+                [
+                  "node-1beed2f3-8d88-4898-bd76-3b7ec4b0b03d",
+                  0.5019607843137255
+                ],
+                [
+                  "node-cccb5f92-c82b-4cb6-afa6-9dc2b9951d8b",
+                  0.4980392156862745
+                ]
+              ]
+            },
+            {
+              "pointId": "point-4096637e-d8de-4123-8688-2fabd25f7680",
+              "anchor": [
+                [
+                  "node-1beed2f3-8d88-4898-bd76-3b7ec4b0b03d",
+                  0.5019607843137255
+                ],
+                [
+                  "node-cccb5f92-c82b-4cb6-afa6-9dc2b9951d8b",
+                  0.4980392156862745
+                ]
+              ],
+              "in": [
+                [
+                  "node-1beed2f3-8d88-4898-bd76-3b7ec4b0b03d",
+                  0.5019607843137255
+                ],
+                [
+                  "node-cccb5f92-c82b-4cb6-afa6-9dc2b9951d8b",
+                  0.4980392156862745
+                ]
+              ],
+              "out": [
+                [
+                  "node-1beed2f3-8d88-4898-bd76-3b7ec4b0b03d",
+                  0.5019607843137255
+                ],
+                [
+                  "node-cccb5f92-c82b-4cb6-afa6-9dc2b9951d8b",
+                  0.4980392156862745
+                ]
+              ]
+            },
+            {
+              "pointId": "point-f8a138c5-f222-4396-9b66-41b645e6ee18",
+              "anchor": [
+                [
+                  "node-1beed2f3-8d88-4898-bd76-3b7ec4b0b03d",
+                  0.5019607843137255
+                ],
+                [
+                  "node-cccb5f92-c82b-4cb6-afa6-9dc2b9951d8b",
+                  0.4980392156862745
+                ]
+              ],
+              "in": [
+                [
+                  "node-1beed2f3-8d88-4898-bd76-3b7ec4b0b03d",
+                  0.5019607843137255
+                ],
+                [
+                  "node-cccb5f92-c82b-4cb6-afa6-9dc2b9951d8b",
+                  0.4980392156862745
+                ]
+              ],
+              "out": [
+                [
+                  "node-1beed2f3-8d88-4898-bd76-3b7ec4b0b03d",
+                  0.5019607843137255
+                ],
+                [
+                  "node-cccb5f92-c82b-4cb6-afa6-9dc2b9951d8b",
+                  0.4980392156862745
+                ]
+              ]
+            },
+            {
+              "pointId": "point-ff414c00-2b2c-4d6f-b9bc-b516606a90a5",
+              "anchor": [
+                [
+                  "node-1beed2f3-8d88-4898-bd76-3b7ec4b0b03d",
+                  0.5019607843137255
+                ],
+                [
+                  "node-cccb5f92-c82b-4cb6-afa6-9dc2b9951d8b",
+                  0.4980392156862745
+                ]
+              ],
+              "in": [
+                [
+                  "node-1beed2f3-8d88-4898-bd76-3b7ec4b0b03d",
+                  0.5019607843137255
+                ],
+                [
+                  "node-cccb5f92-c82b-4cb6-afa6-9dc2b9951d8b",
+                  0.4980392156862745
+                ]
+              ],
+              "out": [
+                [
+                  "node-1beed2f3-8d88-4898-bd76-3b7ec4b0b03d",
+                  0.5019607843137255
+                ],
+                [
+                  "node-cccb5f92-c82b-4cb6-afa6-9dc2b9951d8b",
+                  0.4980392156862745
+                ]
+              ]
+            }
+          ]
+        },
+        "points": [
+          {
+            "id": "point-537c6fcc-c5c2-483e-a0cb-e114d90a9607",
+            "anchor": [
+              145,
+              60
+            ],
+            "in": [
+              145,
+              26.862915012000002
+            ],
+            "out": [
+              145,
+              76.568542494
+            ]
+          },
+          {
+            "id": "point-4096637e-d8de-4123-8688-2fabd25f7680",
+            "anchor": [
+              60,
+              120
+            ],
+            "in": [
+              76.568542494,
+              120
+            ],
+            "out": [
+              26.862915012000002,
+              120
+            ]
+          },
+          {
+            "id": "point-f8a138c5-f222-4396-9b66-41b645e6ee18",
+            "anchor": [
+              0,
+              60
+            ],
+            "in": [
+              0,
+              93.137084988
+            ],
+            "out": [
+              0,
+              26.862915012000002
+            ]
+          },
+          {
+            "id": "point-ff414c00-2b2c-4d6f-b9bc-b516606a90a5",
+            "anchor": [
+              60,
+              0
+            ],
+            "in": [
+              26.862915012000002,
+              0
+            ],
+            "out": [
+              93.137084988,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "node-1beed2f3-8d88-4898-bd76-3b7ec4b0b03d",
+      "name": "Shoulder",
+      "kind": "bone",
+      "artboardId": "artboard-5b0f0f0e-be38-42ae-870e-6f8260bf833b",
+      "parentId": null,
+      "order": 2,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        260,
+        190
+      ],
+      "geometry": {
+        "length": 80
+      }
+    },
+    {
+      "id": "node-cccb5f92-c82b-4cb6-afa6-9dc2b9951d8b",
+      "name": "Elbow",
+      "kind": "bone",
+      "artboardId": "artboard-5b0f0f0e-be38-42ae-870e-6f8260bf833b",
+      "parentId": "node-1beed2f3-8d88-4898-bd76-3b7ec4b0b03d",
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "length": 80
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [
+    {
+      "id": "animation-ac7e3a48-f1c0-4df0-a2cc-0b3ac4d0e838",
+      "name": "Animation 1",
+      "artboardId": "artboard-5b0f0f0e-be38-42ae-870e-6f8260bf833b",
+      "fps": 60,
+      "duration": 120,
+      "loop": true,
+      "tracks": [
+        {
+          "targetId": "node-cccb5f92-c82b-4cb6-afa6-9dc2b9951d8b",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 60,
+              "value": 1.5707963267948966,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.3,
+                  0,
+                  0.58,
+                  1
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "animation-2c4f3f73-4aeb-41b6-b495-aee63e614020",
+      "name": "Active",
+      "artboardId": "artboard-5b0f0f0e-be38-42ae-870e-6f8260bf833b",
+      "fps": 60,
+      "duration": 120,
+      "loop": true,
+      "tracks": [
+        {
+          "targetId": "node-cccb5f92-c82b-4cb6-afa6-9dc2b9951d8b",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": -0.5235987755982988,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "machines": [
+    {
+      "id": "machine-18ce845f-78fc-4cd1-8dec-9c584bc00052",
+      "name": "Machine 1",
+      "artboardId": "artboard-5b0f0f0e-be38-42ae-870e-6f8260bf833b",
+      "inputs": [
+        {
+          "id": "input-ebe1d256-b929-43eb-a1ae-f158d4e87c89",
+          "name": "go",
+          "type": "trigger",
+          "value": false
+        },
+        {
+          "id": "input-22174c68-51a2-4070-8353-e7d68719584c",
+          "name": "amount",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "states": [
+        {
+          "id": "state-bd361506-5acf-4526-b053-1a4c3ad0b490",
+          "name": "Animation 1",
+          "animationId": "animation-ac7e3a48-f1c0-4df0-a2cc-0b3ac4d0e838",
+          "position": [
+            30,
+            50
+          ]
+        },
+        {
+          "id": "state-4dcb2c02-9722-4d21-b2e6-d6376b5976b0",
+          "name": "Active",
+          "animationId": "animation-2c4f3f73-4aeb-41b6-b495-aee63e614020",
+          "position": [
+            190,
+            50
+          ]
+        }
+      ],
+      "entryStateId": "state-bd361506-5acf-4526-b053-1a4c3ad0b490",
+      "transitions": [
+        {
+          "id": "transition-dcf31b86-1e71-4b6e-8cc9-d841af1c8f56",
+          "fromId": "state-bd361506-5acf-4526-b053-1a4c3ad0b490",
+          "toId": "state-4dcb2c02-9722-4d21-b2e6-d6376b5976b0",
+          "conditions": [
+            {
+              "inputId": "input-ebe1d256-b929-43eb-a1ae-f158d4e87c89",
+              "op": "fire",
+              "value": null
+            },
+            {
+              "inputId": "input-22174c68-51a2-4070-8353-e7d68719584c",
+              "op": "ge",
+              "value": 2
+            }
+          ]
+        }
+      ],
+      "listeners": [
+        {
+          "id": "listener-c63fdbe1-8a71-4722-8d07-2572c12a9eb8",
+          "targetId": "node-f5cd4e4c-47dc-4262-b8ae-5111ffa1e392",
+          "event": "click",
+          "inputId": "input-ebe1d256-b929-43eb-a1ae-f158d4e87c89",
+          "value": null
+        }
+      ]
+    }
+  ],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "artboard-5b0f0f0e-be38-42ae-870e-6f8260bf833b": {
+        "zoom": 1.31875,
+        "x": 50,
+        "y": 84.5
+      }
+    }
+  }
+}

@@ -58,7 +58,7 @@ For later animation/interaction milestones, repeat the study with setting a key,
 
 ## Remaining work
 
-This prototype establishes project persistence, transaction history and a Design workspace for groups and rectangles. Bézier paths, rigging, animation, state-machine authoring and `.riv` export remain separate acceptance milestones. Before claiming a polished usable editor, add resizable/collapsible panels, hierarchical expand/collapse, multiselection and marquee, snapping and guides, drag-and-drop layer organization, resize handles, keyboard navigation of the scene tree, and representative user testing. Desktop widths below 850 pixels currently use horizontal overflow rather than a mobile editing experience.
+This prototype establishes project persistence, transaction history and a Design workspace for groups and rectangles. The subsequent path, rigging, animation/state-machine and `.riv` export milestones are now implemented for the [declared tested subset](13-editor-milestone-acceptance.md). Before claiming a polished usable editor, add resizable/collapsible panels, hierarchical expand/collapse, multiselection and marquee, snapping and guides, drag-and-drop layer organization, resize handles, keyboard navigation of the scene tree, and representative user testing. Desktop widths below 850 pixels currently use horizontal overflow rather than a mobile editing experience.
 
 ## Primary references
 

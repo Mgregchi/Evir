@@ -1,3 +1,4 @@
+import { validateFeatures, pathGeometry } from "./motion.mjs";
 // Editable authoring data. This module does not import or export .riv.
 export class ProjectError extends Error {
   constructor(issues) {
@@ -38,7 +39,7 @@ export function createProject() {
   const artboardId = id("artboard");
   return {
     format: "evir-project",
-    schemaVersion: 1,
+    schemaVersion: 2,
     id: id("project"),
     name: "Untitled character",
     artboards: [
@@ -46,6 +47,8 @@ export function createProject() {
     ],
     nodes: [],
     assets: [],
+    animations: [],
+    machines: [],
     editor: {
       locked: [],
       hidden: [],
@@ -93,12 +96,13 @@ export function validateProject(p) {
       "nodes",
       "assets",
       "editor",
+      ...(p.schemaVersion === 2 ? ["animations", "machines"] : []),
     ])
   )
     throw new ProjectError(issues);
   if (p.format !== "evir-project")
     problem("project.format", "expected evir-project");
-  if (p.schemaVersion !== 1)
+  if (![1, 2].includes(p.schemaVersion))
     problem(
       "project.schemaVersion",
       "unsupported version; no implicit migration",
@@ -146,11 +150,8 @@ export function validateProject(p) {
       if (!parent) problem(`${path}.parentId`, "missing parent");
       else if (parent.artboardId !== n.artboardId)
         problem(`${path}.parentId`, "parent belongs to another artboard");
-      else if (parent.kind !== "group")
-        problem(
-          `${path}.parentId`,
-          "only groups can own children in version 1",
-        );
+      else if (!["group", "bone"].includes(parent.kind))
+        problem(`${path}.parentId`, "only groups or bones can own children");
     }
     if (!Number.isInteger(n.order) || n.order < 0)
       problem(`${path}.order`, "expected nonnegative integer");
@@ -177,7 +178,8 @@ export function validateProject(p) {
     } else if (n.kind === "group") {
       if (n.geometry !== null)
         problem(`${path}.geometry`, "group geometry must be null");
-    } else problem(`${path}.kind`, "unsupported node type");
+    } else if (!(p.schemaVersion === 2 && ["path", "bone"].includes(n.kind)))
+      problem(`${path}.kind`, "unsupported node type");
     const chain = new Set([n.id]);
     let parent = nodes.get(n.parentId);
     while (parent) {
@@ -236,6 +238,8 @@ export function validateProject(p) {
       }
     }
   }
+  if (!issues.length && p.schemaVersion === 2)
+    validateFeatures(p, problem, identifier);
   if (issues.length) throw new ProjectError(issues);
   return p;
 }
@@ -264,14 +268,22 @@ export async function openProject(text) {
   }
   validateProject(p);
   await verifyAssets(p);
+  if (p.schemaVersion === 1)
+    p = { ...p, schemaVersion: 2, animations: [], machines: [] };
   return copy(p);
 }
 export function worldTransform(p, nodeId) {
   const n = p.nodes.find((n) => n.id === nodeId);
   if (!n) throw new ProjectError([`node ${nodeId}: not found`]);
+  const local = [...n.transform];
+  const parent = p.nodes.find((v) => v.id === n.parentId);
+  if (n.kind === "bone" && parent?.kind === "bone") {
+    local[4] = parent.geometry.length;
+    local[5] = 0;
+  }
   return n.parentId === null
-    ? [...n.transform]
-    : multiply(worldTransform(p, n.parentId), n.transform);
+    ? local
+    : multiply(worldTransform(p, n.parentId), local);
 }
 export function addNode(
   p,
@@ -286,7 +298,12 @@ export function addNode(
   );
   const n = {
     id: id("node"),
-    name: kind === "group" ? "Group" : "Rectangle",
+    name: {
+      group: "Group",
+      rectangle: "Rectangle",
+      path: "Path",
+      bone: "Bone",
+    }[kind],
     kind,
     artboardId,
     parentId,
@@ -295,7 +312,11 @@ export function addNode(
     geometry:
       kind === "rectangle"
         ? { width: 120, height: 100, fill: "#64d9ad" }
-        : null,
+        : kind === "path"
+          ? pathGeometry()
+          : kind === "bone"
+            ? { length: 80 }
+            : null,
   };
   p.nodes.push(n);
   return n.id;
@@ -306,7 +327,11 @@ export function reparent(p, nodeId, parentId) {
   if (!n) throw new ProjectError(["reparent: missing node"]);
   if (parentId !== null && !parent)
     throw new ProjectError(["reparent: missing parent"]);
-  if (parent && (parent.artboardId !== n.artboardId || parent.kind !== "group"))
+  if (
+    parent &&
+    (parent.artboardId !== n.artboardId ||
+      !["group", "bone"].includes(parent.kind))
+  )
     throw new ProjectError([
       "reparent: target must be a group in the same artboard",
     ]);
@@ -323,6 +348,17 @@ export function reparent(p, nodeId, parentId) {
     : before;
   if (!local.every(Number.isFinite))
     throw new ProjectError(["reparent: resulting transform is not finite"]);
+  if (n.kind === "bone" && parent?.kind === "bone") {
+    if (
+      Math.abs(local[4] - parent.geometry.length) > 1e-6 ||
+      Math.abs(local[5]) > 1e-6
+    )
+      throw new ProjectError([
+        "reparent: a child bone must meet its parent tip; place the root at that tip first",
+      ]);
+    local[4] = 0;
+    local[5] = 0;
+  }
   n.transform = local;
   n.parentId = parentId;
   n.order =
@@ -351,6 +387,20 @@ export function removeSubtree(p, nodeId) {
         changed = true;
       }
   }
+  for (const n of p.nodes)
+    if (
+      !removed.has(n.id) &&
+      n.geometry?.skin?.bones.some((b) => removed.has(b.boneId))
+    )
+      throw new ProjectError([
+        `delete: unbind ${n.name} before deleting its influencing bone`,
+      ]);
+  if (p.animations)
+    for (const a of p.animations)
+      a.tracks = a.tracks.filter((t) => !removed.has(t.targetId));
+  if (p.machines)
+    for (const m of p.machines)
+      m.listeners = m.listeners.filter((l) => !removed.has(l.targetId));
   p.nodes = p.nodes.filter((n) => !removed.has(n.id));
   for (const k of ["locked", "hidden"])
     p.editor[k] = p.editor[k].filter((v) => !removed.has(v));
