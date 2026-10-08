@@ -1,0 +1,786 @@
+{
+  "sourceSha256": "bd15378a5fae9ab5f0f166be36df10e775a5ccee15200234d41f947098e4e29e",
+  "backend": "webgl2",
+  "runtimeVersion": "2.44.0",
+  "scope": "Every artboard loads and has nonempty authored/sampled pixels. Scrub uses the pinned deprecated API. No assertion of full visual equivalence, state-machine transition correctness, or hardware performance.",
+  "diagnostics": {
+    "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+    "contexts": [
+      {
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "unmaskedRendererAvailable": true,
+        "contextLost": false,
+        "errors": [],
+        "extensions": [
+          "EXT_clip_control",
+          "EXT_color_buffer_float",
+          "EXT_color_buffer_half_float",
+          "EXT_conservative_depth",
+          "EXT_depth_clamp",
+          "EXT_float_blend",
+          "EXT_polygon_offset_clamp",
+          "EXT_texture_compression_bptc",
+          "EXT_texture_compression_rgtc",
+          "EXT_texture_filter_anisotropic",
+          "EXT_texture_mirror_clamp_to_edge",
+          "NV_shader_noperspective_interpolation",
+          "OES_draw_buffers_indexed",
+          "OES_sample_variables",
+          "OES_shader_multisample_interpolation",
+          "OES_texture_float_linear",
+          "OVR_multiview2",
+          "WEBGL_clip_cull_distance",
+          "WEBGL_compressed_texture_astc",
+          "WEBGL_compressed_texture_etc",
+          "WEBGL_compressed_texture_etc1",
+          "WEBGL_compressed_texture_s3tc",
+          "WEBGL_compressed_texture_s3tc_srgb",
+          "WEBGL_debug_renderer_info",
+          "WEBGL_debug_shaders",
+          "WEBGL_lose_context",
+          "WEBGL_multi_draw",
+          "WEBGL_polygon_mode",
+          "WEBGL_stencil_texturing"
+        ]
+      },
+      {
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "unmaskedRendererAvailable": true,
+        "contextLost": false,
+        "errors": [],
+        "extensions": [
+          "EXT_clip_control",
+          "EXT_color_buffer_float",
+          "EXT_color_buffer_half_float",
+          "EXT_conservative_depth",
+          "EXT_depth_clamp",
+          "EXT_float_blend",
+          "EXT_polygon_offset_clamp",
+          "EXT_texture_compression_bptc",
+          "EXT_texture_compression_rgtc",
+          "EXT_texture_filter_anisotropic",
+          "EXT_texture_mirror_clamp_to_edge",
+          "NV_shader_noperspective_interpolation",
+          "OES_draw_buffers_indexed",
+          "OES_sample_variables",
+          "OES_shader_multisample_interpolation",
+          "OES_texture_float_linear",
+          "OVR_multiview2",
+          "WEBGL_clip_cull_distance",
+          "WEBGL_compressed_texture_astc",
+          "WEBGL_compressed_texture_etc",
+          "WEBGL_compressed_texture_etc1",
+          "WEBGL_compressed_texture_s3tc",
+          "WEBGL_compressed_texture_s3tc_srgb",
+          "WEBGL_debug_renderer_info",
+          "WEBGL_debug_shaders",
+          "WEBGL_lose_context",
+          "WEBGL_multi_draw",
+          "WEBGL_polygon_mode",
+          "WEBGL_stencil_texturing"
+        ]
+      }
+    ]
+  },
+  "records": [
+    {
+      "artboard": "SOBO-Marketplace",
+      "loaded": {
+        "loadMs": 402.6000000089407,
+        "animations": [
+          "Timeline 1"
+        ],
+        "machines": [
+          "State Machine 1"
+        ]
+      },
+      "initial": {
+        "count": 49152,
+        "cx": 127.5,
+        "cy": 127.5,
+        "hash": 4065996798
+      },
+      "sampled": null,
+      "status": "passed"
+    },
+    {
+      "artboard": "SOBO-Talk",
+      "loaded": {
+        "loadMs": 157,
+        "animations": [
+          "NoBump",
+          "Bump",
+          "Talk",
+          "Yes",
+          "Hello",
+          "Listen",
+          "Idle",
+          "Shine",
+          "Sparkles",
+          "Blink"
+        ],
+        "machines": [
+          "State Machine",
+          "State Machine Test"
+        ]
+      },
+      "initial": {
+        "count": 14018,
+        "cx": 136.13953488372093,
+        "cy": 140.11399629048367,
+        "hash": 2796930246
+      },
+      "sampled": {
+        "animation": "Idle",
+        "seconds": 0.5,
+        "pixels": {
+          "count": 14018,
+          "cx": 136.13953488372093,
+          "cy": 140.11399629048367,
+          "hash": 2796930246
+        }
+      },
+      "status": "passed"
+    },
+    {
+      "artboard": "SOBO-Portrait",
+      "loaded": {
+        "loadMs": 210.3999999910593,
+        "animations": [
+          "Timeline 1"
+        ],
+        "machines": [
+          "State Machine 1"
+        ]
+      },
+      "initial": {
+        "count": 36864,
+        "cx": 127.5,
+        "cy": 127.5,
+        "hash": 104551854
+      },
+      "sampled": null,
+      "status": "passed"
+    },
+    {
+      "artboard": "SOBO-Motion-V01",
+      "loaded": {
+        "loadMs": 169.09999999403954,
+        "animations": [
+          "NoBump",
+          "Bump",
+          "Talk",
+          "Yes",
+          "Hello",
+          "Listen",
+          "Idle",
+          "Shine",
+          "Sparkles",
+          "Blink"
+        ],
+        "machines": [
+          "State Machine",
+          "State Machine Test"
+        ]
+      },
+      "initial": {
+        "count": 14018,
+        "cx": 136.13953488372093,
+        "cy": 140.11399629048367,
+        "hash": 2796930246
+      },
+      "sampled": {
+        "animation": "Idle",
+        "seconds": 0.5,
+        "pixels": {
+          "count": 14018,
+          "cx": 136.13953488372093,
+          "cy": 140.11399629048367,
+          "hash": 2796930246
+        }
+      },
+      "status": "passed"
+    },
+    {
+      "artboard": "SOBO-Hello",
+      "loaded": {
+        "loadMs": 169.6000000089407,
+        "animations": [
+          "NoBump",
+          "Bump",
+          "Talk",
+          "Yes",
+          "Hello",
+          "Listen",
+          "Idle",
+          "Shine",
+          "Sparkles",
+          "Blink"
+        ],
+        "machines": [
+          "State Machine",
+          "State Machine Test"
+        ]
+      },
+      "initial": {
+        "count": 14018,
+        "cx": 136.13953488372093,
+        "cy": 140.11399629048367,
+        "hash": 2796930246
+      },
+      "sampled": {
+        "animation": "Idle",
+        "seconds": 0.5,
+        "pixels": {
+          "count": 14018,
+          "cx": 136.13953488372093,
+          "cy": 140.11399629048367,
+          "hash": 2796930246
+        }
+      },
+      "status": "passed"
+    },
+    {
+      "artboard": "SOBO-Motion-V02",
+      "loaded": {
+        "loadMs": 218.59999999403954,
+        "animations": [
+          "Idle",
+          "Listen",
+          "Blink",
+          "Hello",
+          "Sparkles",
+          "Yes",
+          "MouthOpen",
+          "MouthClosed",
+          "NoBump",
+          "Bump",
+          "Shine",
+          "Talk"
+        ],
+        "machines": [
+          "State Machine",
+          "State Machine Test"
+        ]
+      },
+      "initial": {
+        "count": 14018,
+        "cx": 136.03310029961477,
+        "cy": 140.2471821943216,
+        "hash": 914607119
+      },
+      "sampled": {
+        "animation": "Idle",
+        "seconds": 0.5,
+        "pixels": {
+          "count": 13891,
+          "cx": 134.5085307033331,
+          "cy": 140.13476351594556,
+          "hash": 1754756762
+        }
+      },
+      "status": "passed"
+    },
+    {
+      "artboard": "SOBO-Yes",
+      "loaded": {
+        "loadMs": 184.79999999701977,
+        "animations": [
+          "NoBump",
+          "Bump",
+          "Talk",
+          "Yes",
+          "Hello",
+          "Listen",
+          "Idle",
+          "Shine",
+          "Sparkles",
+          "Blink"
+        ],
+        "machines": [
+          "State Machine",
+          "State Machine Test"
+        ]
+      },
+      "initial": {
+        "count": 14018,
+        "cx": 136.13953488372093,
+        "cy": 140.11399629048367,
+        "hash": 2796930246
+      },
+      "sampled": {
+        "animation": "Idle",
+        "seconds": 0.5,
+        "pixels": {
+          "count": 14018,
+          "cx": 136.13953488372093,
+          "cy": 140.11399629048367,
+          "hash": 2796930246
+        }
+      },
+      "status": "passed"
+    },
+    {
+      "artboard": "SOBO-Rig-V01",
+      "loaded": {
+        "loadMs": 221.29999999701977,
+        "animations": [
+          "Timeline 1"
+        ],
+        "machines": [
+          "State Machine 1"
+        ]
+      },
+      "initial": {
+        "count": 14297,
+        "cx": 136.45624956284536,
+        "cy": 139.59606910540674,
+        "hash": 1957173028
+      },
+      "sampled": null,
+      "status": "passed"
+    },
+    {
+      "artboard": "SOBO-Screen",
+      "loaded": {
+        "loadMs": 195,
+        "animations": [
+          "Timeline 1"
+        ],
+        "machines": [
+          "State Machine 1"
+        ]
+      },
+      "initial": {
+        "count": 34816,
+        "cx": 127.5,
+        "cy": 127.5,
+        "hash": 2332158343
+      },
+      "sampled": null,
+      "status": "passed"
+    },
+    {
+      "artboard": "SOBO-Listen",
+      "loaded": {
+        "loadMs": 163.40000000596046,
+        "animations": [
+          "NoBump",
+          "Bump",
+          "Talk",
+          "Yes",
+          "Hello",
+          "Listen",
+          "Idle",
+          "Shine",
+          "Sparkles",
+          "Blink"
+        ],
+        "machines": [
+          "State Machine",
+          "State Machine Test"
+        ]
+      },
+      "initial": {
+        "count": 14018,
+        "cx": 136.13953488372093,
+        "cy": 140.11399629048367,
+        "hash": 2796930246
+      },
+      "sampled": {
+        "animation": "Idle",
+        "seconds": 0.5,
+        "pixels": {
+          "count": 14018,
+          "cx": 136.13953488372093,
+          "cy": 140.11399629048367,
+          "hash": 2796930246
+        }
+      },
+      "status": "passed"
+    },
+    {
+      "artboard": "SOBO-Idle",
+      "loaded": {
+        "loadMs": 197.90000000596046,
+        "animations": [
+          "NoBump",
+          "Bump",
+          "Talk",
+          "Yes",
+          "Hello",
+          "Listen",
+          "Idle",
+          "Shine",
+          "Sparkles",
+          "Blink"
+        ],
+        "machines": [
+          "State Machine",
+          "State Machine Test"
+        ]
+      },
+      "initial": {
+        "count": 14018,
+        "cx": 136.13953488372093,
+        "cy": 140.11399629048367,
+        "hash": 2796930246
+      },
+      "sampled": {
+        "animation": "Idle",
+        "seconds": 0.5,
+        "pixels": {
+          "count": 14018,
+          "cx": 136.13953488372093,
+          "cy": 140.11399629048367,
+          "hash": 2796930246
+        }
+      },
+      "status": "passed"
+    },
+    {
+      "artboard": "SOBO-Design-V02",
+      "loaded": {
+        "loadMs": 215.1000000089407,
+        "animations": [
+          "Timeline 1"
+        ],
+        "machines": [
+          "State Machine 1"
+        ]
+      },
+      "initial": {
+        "count": 14481,
+        "cx": 135.3924452731165,
+        "cy": 139.36219874318073,
+        "hash": 309932934
+      },
+      "sampled": null,
+      "status": "passed"
+    },
+    {
+      "artboard": "SOBO-Design-V01",
+      "loaded": {
+        "loadMs": 216.1000000089407,
+        "animations": [
+          "Timeline 1"
+        ],
+        "machines": [
+          "State Machine 1"
+        ]
+      },
+      "initial": {
+        "count": 13850,
+        "cx": 136.7065703971119,
+        "cy": 141.3638989169675,
+        "hash": 3578296920
+      },
+      "sampled": null,
+      "status": "passed"
+    }
+  ],
+  "machines": [
+    {
+      "artboard": "SOBO-Marketplace",
+      "machine": "State Machine 1",
+      "loadMs": 250.3999999910593,
+      "playing": [
+        "State Machine 1"
+      ],
+      "pixels": {
+        "count": 49152,
+        "cx": 127.5,
+        "cy": 127.5,
+        "hash": 2071342800
+      },
+      "status": "passed"
+    },
+    {
+      "artboard": "SOBO-Talk",
+      "machine": "State Machine",
+      "loadMs": 240.59999999403954,
+      "playing": [
+        "State Machine"
+      ],
+      "pixels": {
+        "count": 14235,
+        "cx": 133.93572181243414,
+        "cy": 138.09855988760097,
+        "hash": 4157582066
+      },
+      "status": "passed"
+    },
+    {
+      "artboard": "SOBO-Talk",
+      "machine": "State Machine Test",
+      "loadMs": 229.5,
+      "playing": [
+        "State Machine Test"
+      ],
+      "pixels": {
+        "count": 13877,
+        "cx": 135.47539093464005,
+        "cy": 140.10758809540968,
+        "hash": 60739099
+      },
+      "status": "passed"
+    },
+    {
+      "artboard": "SOBO-Portrait",
+      "machine": "State Machine 1",
+      "loadMs": 370.69999998807907,
+      "playing": [
+        "State Machine 1"
+      ],
+      "pixels": {
+        "count": 36864,
+        "cx": 127.5,
+        "cy": 127.5,
+        "hash": 2007778837
+      },
+      "status": "passed"
+    },
+    {
+      "artboard": "SOBO-Motion-V01",
+      "machine": "State Machine",
+      "loadMs": 196.3999999910593,
+      "playing": [
+        "State Machine"
+      ],
+      "pixels": {
+        "count": 13815,
+        "cx": 135.3825551936301,
+        "cy": 140.36626854867896,
+        "hash": 2675075765
+      },
+      "status": "passed"
+    },
+    {
+      "artboard": "SOBO-Motion-V01",
+      "machine": "State Machine Test",
+      "loadMs": 195.3999999910593,
+      "playing": [
+        "State Machine Test"
+      ],
+      "pixels": {
+        "count": 13849,
+        "cx": 135.55383060148748,
+        "cy": 140.2672395118781,
+        "hash": 1027368736
+      },
+      "status": "passed"
+    },
+    {
+      "artboard": "SOBO-Hello",
+      "machine": "State Machine",
+      "loadMs": 178.3999999910593,
+      "playing": [
+        "State Machine"
+      ],
+      "pixels": {
+        "count": 13865,
+        "cx": 138.22271907681213,
+        "cy": 140.28250991705733,
+        "hash": 3936202704
+      },
+      "status": "passed"
+    },
+    {
+      "artboard": "SOBO-Hello",
+      "machine": "State Machine Test",
+      "loadMs": 188.70000000298023,
+      "playing": [
+        "State Machine Test"
+      ],
+      "pixels": {
+        "count": 13859,
+        "cx": 135.5606465112923,
+        "cy": 140.24323544267264,
+        "hash": 956215223
+      },
+      "status": "passed"
+    },
+    {
+      "artboard": "SOBO-Motion-V02",
+      "machine": "State Machine",
+      "loadMs": 188.29999999701977,
+      "playing": [
+        "State Machine"
+      ],
+      "pixels": {
+        "count": 13845,
+        "cx": 135.56431924882628,
+        "cy": 140.2936800288913,
+        "hash": 318111947
+      },
+      "status": "passed"
+    },
+    {
+      "artboard": "SOBO-Motion-V02",
+      "machine": "State Machine Test",
+      "loadMs": 196.6000000089407,
+      "playing": [
+        "State Machine Test"
+      ],
+      "pixels": {
+        "count": 13807,
+        "cx": 135.37640327370175,
+        "cy": 140.37618599261245,
+        "hash": 57440520
+      },
+      "status": "passed"
+    },
+    {
+      "artboard": "SOBO-Yes",
+      "machine": "State Machine",
+      "loadMs": 201.20000000298023,
+      "playing": [
+        "State Machine"
+      ],
+      "pixels": {
+        "count": 13846,
+        "cx": 135.50700563339592,
+        "cy": 140.26722519139102,
+        "hash": 3440900240
+      },
+      "status": "passed"
+    },
+    {
+      "artboard": "SOBO-Yes",
+      "machine": "State Machine Test",
+      "loadMs": 200.30000001192093,
+      "playing": [
+        "State Machine Test"
+      ],
+      "pixels": {
+        "count": 13862,
+        "cx": 135.3940268359544,
+        "cy": 140.14896840282788,
+        "hash": 810380291
+      },
+      "status": "passed"
+    },
+    {
+      "artboard": "SOBO-Rig-V01",
+      "machine": "State Machine 1",
+      "loadMs": 219.19999998807907,
+      "playing": [
+        "State Machine 1"
+      ],
+      "pixels": {
+        "count": 14297,
+        "cx": 136.45624956284536,
+        "cy": 139.59606910540674,
+        "hash": 1957173028
+      },
+      "status": "passed"
+    },
+    {
+      "artboard": "SOBO-Screen",
+      "machine": "State Machine 1",
+      "loadMs": 182.20000000298023,
+      "playing": [
+        "State Machine 1"
+      ],
+      "pixels": {
+        "count": 34816,
+        "cx": 127.5,
+        "cy": 127.5,
+        "hash": 854059215
+      },
+      "status": "passed"
+    },
+    {
+      "artboard": "SOBO-Listen",
+      "machine": "State Machine",
+      "loadMs": 182.40000000596046,
+      "playing": [
+        "State Machine"
+      ],
+      "pixels": {
+        "count": 13829,
+        "cx": 131.50878588473498,
+        "cy": 140.45086412611178,
+        "hash": 3566591420
+      },
+      "status": "passed"
+    },
+    {
+      "artboard": "SOBO-Listen",
+      "machine": "State Machine Test",
+      "loadMs": 181.20000000298023,
+      "playing": [
+        "State Machine Test"
+      ],
+      "pixels": {
+        "count": 13800,
+        "cx": 135.30847826086958,
+        "cy": 140.3836231884058,
+        "hash": 2837297295
+      },
+      "status": "passed"
+    },
+    {
+      "artboard": "SOBO-Idle",
+      "machine": "State Machine",
+      "loadMs": 192.90000000596046,
+      "playing": [
+        "State Machine"
+      ],
+      "pixels": {
+        "count": 13823,
+        "cx": 135.45843883382767,
+        "cy": 140.34464298632713,
+        "hash": 3989285973
+      },
+      "status": "passed"
+    },
+    {
+      "artboard": "SOBO-Idle",
+      "machine": "State Machine Test",
+      "loadMs": 179.40000000596046,
+      "playing": [
+        "State Machine Test"
+      ],
+      "pixels": {
+        "count": 13800,
+        "cx": 135.2800724637681,
+        "cy": 140.40746376811595,
+        "hash": 3305682173
+      },
+      "status": "passed"
+    },
+    {
+      "artboard": "SOBO-Design-V02",
+      "machine": "State Machine 1",
+      "loadMs": 229.70000000298023,
+      "playing": [
+        "State Machine 1"
+      ],
+      "pixels": {
+        "count": 14481,
+        "cx": 135.3924452731165,
+        "cy": 139.36219874318073,
+        "hash": 309932934
+      },
+      "status": "passed"
+    },
+    {
+      "artboard": "SOBO-Design-V01",
+      "machine": "State Machine 1",
+      "loadMs": 220.70000000298023,
+      "playing": [
+        "State Machine 1"
+      ],
+      "pixels": {
+        "count": 13850,
+        "cx": 136.7065703971119,
+        "cy": 141.3638989169675,
+        "hash": 3578296920
+      },
+      "status": "passed"
+    }
+  ]
+}

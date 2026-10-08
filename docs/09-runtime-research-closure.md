@@ -1,6 +1,6 @@
 # Runtime and format research: closure audit
 
-The software experiments now cover the remaining targeted runtime/format topics. **The overall research is still open** because equivalent web Editor exports and physical GPU/mobile measurements are missing. `npm run check:closed` refuses to report completion until those inputs are present and pass the prepared checks. This audit precedes editor research and does not replace the missing evidence with a new scope definition.
+The software experiments now cover the remaining targeted runtime/format topics. **The overall research is still open** because equivalent web Editor exports and physical GPU/mobile measurements are missing. `npm run check:closed` refuses to report completion until those inputs are present and pass the prepared checks. On 2026-10-08 the user deferred the device audit and authorized moving on. [Editor research](10-editor-foundations.md) has therefore started; the missing evidence remains explicitly pending. The supplied SOBO export adds a real Editor corpus but does not substitute for the four equivalent controlled scenes.
 
 ## What the final software pass adds
 
@@ -46,18 +46,19 @@ Together with the previous outer/inner/offset/clipped rectangle probes, this clo
 
 `npm run research:all` runs the original workflow, advanced and complex experiments, this final software pass, its additional benchmarks, and the closure audit. Current evidence includes:
 
-| Check                                             | Outcome                                                                                          |
-| ------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| Python codec and mesh-export unit tests           | 22 passed                                                                                        |
-| Geometry assertions                               | Passed                                                                                           |
-| Positive runtime cases across all passes/backends | 98 passed                                                                                        |
-| Malformed image-mesh index                        | Rejected by both official runtimes, recorded separately                                          |
-| Complex feather scenes on Canvas2D                | 4 explicitly unrun                                                                               |
-| Earlier feather diagnostic                        | 12 soft-edge and 2 zero-strength checks passed; 4 invalid-rule controls confirmed renderer skips |
-| Original upstream/generated/CLI binary corpus     | 66 structural lossless round trips                                                               |
-| Official local CLI source projects                | 6 verified/inspected/compiled                                                                    |
-| Remote browser transport                          | Local CDP smoke passed; owner browser remained usable                                            |
-| Physical-device and Editor comparisons            | Open; external prerequisites absent                                                              |
+| Check                                                | Outcome                                                                                          |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| Python codec and mesh-export unit tests              | 22 passed                                                                                        |
+| Geometry assertions                                  | Passed                                                                                           |
+| Positive runtime cases across all passes/backends    | 98 passed                                                                                        |
+| Malformed image-mesh index                           | Rejected by both official runtimes, recorded separately                                          |
+| Complex feather scenes on Canvas2D                   | 4 explicitly unrun                                                                               |
+| Earlier feather diagnostic                           | 12 soft-edge and 2 zero-strength checks passed; 4 invalid-rule controls confirmed renderer skips |
+| Upstream/generated/CLI/supplied Editor binary corpus | 67 structural lossless round trips                                                               |
+| Official local CLI source projects                   | 6 verified/inspected/compiled                                                                    |
+| Remote browser transport                             | Local CDP smoke passed; owner browser remained usable                                            |
+| Supplied SOBO Editor export                          | 13 artboards and 20 machines smoke-tested per backend; not equivalent-scene comparison           |
+| Physical-device and equivalent Editor comparisons    | Pending; device audit deferred by user                                                           |
 
 The added cloud benchmarks cover weighted meshes, live data binding and timed transitions, using three fresh-page and twelve warm loads and two-second frame observations per scenario/backend. They retain file size, scheduler cadence, callback CPU duration, JS heap, available WASM capacity and local renderer RSS. Dynamic model/input writes run during the observation; pose changes are also checked. See [Canvas measurements](../research/results/closure-benchmark-canvas.json) and [WebGL2 measurements](../research/results/closure-benchmark-webgl2.json) for actual results.
 
