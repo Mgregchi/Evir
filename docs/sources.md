@@ -2,6 +2,8 @@
 
 Inspected on 2026-10-06. All Git-based evidence uses immutable commits. Direct `rive.app` documentation and `releases.rive.app` installer retrieval returned proxy HTTP 403; official docs were read from their public Git repository instead. No login or credential was required for the evidence or the generated web-runtime checks.
 
+The later [platform/AI audit](14-platform-context-and-shipped-features.md), reviewed on 9 October 2026, successfully retrieved public Rive pages and uses newer documentation commit `18744eb41501f7014b2fb7c1c4a7b6719120e507`. Its [separate source register](../research/platform-context/sources.json) records current access, release/pricing conflicts and other platforms. The earlier failed retrievals and pinned runtime results below remain historical evidence, rather than current access or feature-status claims.
+
 ## Official documentation
 
 Repository: [rive-app/rive-docs](https://github.com/rive-app/rive-docs/tree/8879acbbefbf676c8d68d66c2ddfe56c6ee50914), commit `8879acbbefbf676c8d68d66c2ddfe56c6ee50914`.

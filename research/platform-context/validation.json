@@ -1,0 +1,35 @@
+{
+  "checked_at": "2026-10-08T23:11:39.826582+00:00",
+  "status": "passed",
+  "sources": 78,
+  "usable_sources": 76,
+  "source_hashes_checked_against_retrieved_bytes": 78,
+  "claims_with_valid_source_ids": 43,
+  "documents": [
+    {
+      "path": "docs/14-platform-context-and-shipped-features.md",
+      "source_references": 72,
+      "status": "passed"
+    },
+    {
+      "path": "docs/15-ai-agent-authoring-research.md",
+      "source_references": 33,
+      "status": "passed"
+    }
+  ],
+  "unique_cited_sources": 72,
+  "local_cli_checks": 4,
+  "checks": [
+    "Unique source/claim identifiers",
+    "Recomputed response and immutable Git-blob SHA-256/byte counts",
+    "Usable evidence required for verified claims/citations",
+    "Citation URLs match register",
+    "Local report links exist",
+    "Markdown tables have consistent column counts",
+    "Local CLI successful exits and no-error RML verification"
+  ],
+  "limitations": [
+    "No application tests rerun for this documentation-only change.",
+    "No authenticated vendor/agent sessions or hardware/device tests."
+  ]
+}
