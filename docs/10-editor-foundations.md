@@ -30,7 +30,7 @@ The cited documents are pinned to the previously studied official docs revision.
 
 ## Proposed Evir architecture
 
-This is a design recommendation for the first implementation, not an implemented editor or a claim about Rive's internals.
+This is the target architecture, not a claim about Rive's internals. The initial [Studio foundation](../editor/README.md) now implements the project model, transaction history and a Design workspace for groups and rectangles. Timeline, rigging, state-machine authoring and export compiler remain subsequent milestones. The [UX study](11-editor-ux-research.md) guides the workspace decisions.
 
 ```mermaid
 flowchart TD

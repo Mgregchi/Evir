@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "width": 1100,
+      "height": 760
+    }
+  ],
+  "checks": [
+    "search and nested selection",
+    "inspector edit and undo/redo",
+    "text-field shortcut isolation",
+    "drag cancellation",
+    "single-step drag undo",
+    "download fidelity",
+    "save shortcut commits focused field",
+    "invalid import preserves project",
+    "valid open and local recovery",
+    "keyboard-help dialog",
+    "laptop layout",
+    "modifier deep selection",
+    "Space activates focused controls",
+    "locked inspector",
+    "hide/show",
+    "replacement cancellation",
+    "empty-state creation",
+    "storage failure and recovery"
+  ],
+  "scope": "Functional prototype checks, not representative user usability testing."
+}

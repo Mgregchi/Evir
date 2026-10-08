@@ -1,0 +1,57 @@
+[
+  {
+    "name": "penpot",
+    "url": "https://help.penpot.app/user-guide/the-interface/",
+    "finalUrl": "https://help.penpot.app/user-guide/first-steps/the-interface/",
+    "status": 200,
+    "sha256": "5d626e5212832d6a94ea3641debe9f1acd84e81c76adde498e839a5e4304ee07",
+    "reviewedOn": "2026-10-08"
+  },
+  {
+    "name": "svgator",
+    "url": "https://www.svgator.com/help/getting-started/svgator-interface",
+    "error": "HTTP Error 404: Not Found",
+    "reviewedOn": "2026-10-08"
+  },
+  {
+    "name": "lottie",
+    "url": "https://lottiefiles.com/lottie-creator",
+    "finalUrl": "https://lottiefiles.com/lottie-creator",
+    "status": 200,
+    "sha256": "15449b87c41fb5d5c08d8ee27f0b875d6437e344e3321a0c3300be3c40fc89d8",
+    "reviewedOn": "2026-10-08"
+  },
+  {
+    "name": "figma",
+    "url": "https://help.figma.com/hc/en-us/articles/360041065034-Guide-to-the-Figma-editor",
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+    "reviewedOn": "2026-10-08"
+  },
+  {
+    "name": "svgator-interface",
+    "url": "https://www.svgator.com/help/getting-started/parts-of-the-svgator-app-interface",
+    "status": 200,
+    "sha256": "501e2ce91c30f01811a9962cd131747393c1f610a0eddf23da9f00e6e6e9d5e8",
+    "reviewedOn": "2026-10-08"
+  },
+  {
+    "name": "rive-editor-docs",
+    "repository": "https://github.com/rive-app/rive-docs",
+    "commit": "8879acbbefbf676c8d68d66c2ddfe56c6ee50914",
+    "reviewedOn": "2026-10-08",
+    "paths": [
+      "editor/interface-overview/hierarchy.mdx",
+      "editor/interface-overview/selection-and-navigation.mdx",
+      "editor/interface-overview/inspector.mdx",
+      "editor/interface-overview/stage.mdx",
+      "editor/fundamentals/design-vs-animate-mode.mdx",
+      "editor/animate-mode/timeline.mdx",
+      "editor/animate-mode/keys.mdx"
+    ],
+    "visualReferences": [
+      "images/interface/stage.png",
+      "https://help.penpot.app/img/interface/workspace-dark.webp",
+      "https://framerusercontent.com/images/HX8N4eaeokodYUgpvqS1Umdsgo.png?width=2560&height=1440"
+    ]
+  }
+]
