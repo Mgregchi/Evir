@@ -39,7 +39,8 @@
     "research:all": "npm run research && npm run research:advanced && npm run research:complex && npm run research:closure && npm run research:editor-export && npm run report:closure",
     "research:editor-export": "python3 tools/inspect_editor_export.py && node tools/validate_editor_export.cjs && RIVE_RENDERER=webgl2 node tools/validate_editor_export.cjs",
     "editor:serve": "python3 -m http.server 8080 --bind 127.0.0.1",
-    "test:editor": "node --test tests/editor/model.test.mjs && node tests/editor/browser.cjs"
+    "test:editor": "node --test tests/editor/*.test.mjs && node tests/editor/browser.cjs && node tests/editor/authoring-browser.cjs",
+    "validate:editor": "node tools/validate_editor_authoring.cjs && RIVE_RENDERER=webgl2 node tools/validate_editor_authoring.cjs"
   },
   "dependencies": {
     "@rive-app/canvas": "2.44.0",

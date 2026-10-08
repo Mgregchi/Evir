@@ -57,7 +57,7 @@ test("save/open retains IDs, affine transforms, authoring controls and verified 
 test("opening rejects unknown versions, future fields, broken ownership, cycles and nonfinite transforms", async () => {
   const { p, a, b, child } = scene();
   for (const [change, pattern] of [
-    [(q) => (q.schemaVersion = 2), /unsupported version/],
+    [(q) => (q.schemaVersion = 99), /unsupported version/],
     [(q) => (q.timelines = []), /unsupported field/],
     [(q) => (q.nodes[0].parentId = b), /parent cycle/],
     [

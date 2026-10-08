@@ -1,0 +1,124 @@
+{
+  "artboards": {
+    "artboard-5b0f0f0e-be38-42ae-870e-6f8260bf833b": 0
+  },
+  "nodes": {
+    "node-1beed2f3-8d88-4898-bd76-3b7ec4b0b03d": {
+      "artboard": 0,
+      "component": 1,
+      "type": "RootBone"
+    },
+    "node-cccb5f92-c82b-4cb6-afa6-9dc2b9951d8b": {
+      "artboard": 0,
+      "component": 2,
+      "type": "Bone"
+    },
+    "node-f5cd4e4c-47dc-4262-b8ae-5111ffa1e392": {
+      "artboard": 0,
+      "component": 3,
+      "type": "Shape"
+    },
+    "node-40350cf2-b996-4c4a-a2ee-76672dd4901d": {
+      "artboard": 0,
+      "component": 18,
+      "type": "Node"
+    },
+    "node-704357f9-a52b-4475-977f-d5b5735c2078": {
+      "artboard": 0,
+      "component": 19,
+      "type": "Shape"
+    },
+    "node-e1a3d2a1-8fbc-4b02-8989-6c30f48a03ae": {
+      "artboard": 0,
+      "component": 23,
+      "type": "Shape"
+    },
+    "node-29e25abb-34ec-4c9e-877e-4e4093bcfb2b": {
+      "artboard": 0,
+      "component": 27,
+      "type": "Shape"
+    },
+    "node-2713bc82-a43a-4bdf-9192-4ea311e3efd7": {
+      "artboard": 0,
+      "component": 31,
+      "type": "Shape"
+    },
+    "node-9ae56ff3-7397-4859-b9f4-0f32385ad7c7": {
+      "artboard": 0,
+      "component": 35,
+      "type": "Shape"
+    },
+    "node-cf66f0f0-8999-48bf-9282-f68d0827bce3": {
+      "artboard": 0,
+      "component": 39,
+      "type": "Shape"
+    },
+    "node-6f80a71f-cf38-4ef5-8236-08aff14572e7": {
+      "artboard": 0,
+      "component": 43,
+      "type": "Shape"
+    },
+    "node-6f4c5715-22c1-4c93-af70-13c84747a49e": {
+      "artboard": 0,
+      "component": 47,
+      "type": "Shape"
+    },
+    "node-14af52b1-9db4-40a8-8821-e2a739983e22": {
+      "artboard": 0,
+      "component": 51,
+      "type": "Shape"
+    },
+    "node-0e2ea9a0-f808-48b1-af4c-f1afe10da7c2": {
+      "artboard": 0,
+      "component": 55,
+      "type": "Shape"
+    },
+    "node-6bef7d84-fe91-4d72-918a-6597b8995281": {
+      "artboard": 0,
+      "component": 59,
+      "type": "Shape"
+    },
+    "node-9e158597-e029-4eff-a3e4-c52246997296": {
+      "artboard": 0,
+      "component": 63,
+      "type": "Shape"
+    }
+  },
+  "points": {
+    "point-537c6fcc-c5c2-483e-a0cb-e114d90a9607": {
+      "artboard": 0,
+      "component": 5
+    },
+    "point-4096637e-d8de-4123-8688-2fabd25f7680": {
+      "artboard": 0,
+      "component": 7
+    },
+    "point-f8a138c5-f222-4396-9b66-41b645e6ee18": {
+      "artboard": 0,
+      "component": 9
+    },
+    "point-ff414c00-2b2c-4d6f-b9bc-b516606a90a5": {
+      "artboard": 0,
+      "component": 11
+    }
+  },
+  "animations": {
+    "animation-ac7e3a48-f1c0-4df0-a2cc-0b3ac4d0e838": {
+      "artboard": 0,
+      "index": 0,
+      "name": "Animation 1"
+    },
+    "animation-2c4f3f73-4aeb-41b6-b495-aee63e614020": {
+      "artboard": 0,
+      "index": 1,
+      "name": "Active"
+    }
+  },
+  "machines": {
+    "machine-18ce845f-78fc-4cd1-8dec-9c584bc00052": {
+      "artboard": 0,
+      "index": 0,
+      "name": "Machine 1"
+    }
+  }
+}

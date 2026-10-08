@@ -1,0 +1,64 @@
+{
+  "artboards": {
+    "artboard-df19c889-f61f-4258-aa94-c04bce4ff2ab": 0
+  },
+  "nodes": {
+    "node-16c5c152-830b-43df-ae4e-d68165260def": {
+      "artboard": 0,
+      "component": 1,
+      "type": "Shape"
+    },
+    "node-5f245f9a-57b2-487b-82aa-9dc136c4e56f": {
+      "artboard": 0,
+      "component": 5,
+      "type": "Shape"
+    },
+    "node-55b76595-13f9-4c48-aeaa-c4ea6381af5d": {
+      "artboard": 0,
+      "component": 20,
+      "type": "RootBone"
+    },
+    "node-fde59a72-d022-4128-882e-c51457819de5": {
+      "artboard": 0,
+      "component": 21,
+      "type": "Bone"
+    }
+  },
+  "points": {
+    "point-36e6a6a9-b625-46bd-99f3-e22708c85407": {
+      "artboard": 0,
+      "component": 7
+    },
+    "point-5045d7b2-704b-4949-9fc5-25a7f299e592": {
+      "artboard": 0,
+      "component": 9
+    },
+    "point-3724e1a6-68a2-4b53-9b0d-2e59a27b8325": {
+      "artboard": 0,
+      "component": 11
+    },
+    "point-198fe724-8018-41ac-9bcd-ae61815c4a58": {
+      "artboard": 0,
+      "component": 13
+    }
+  },
+  "animations": {
+    "animation-b728e1dd-9347-4b17-8abb-5c42598a67ec": {
+      "artboard": 0,
+      "index": 0,
+      "name": "Bend"
+    },
+    "animation-b81b7170-996e-4333-bbce-78b5d73b66cf": {
+      "artboard": 0,
+      "index": 1,
+      "name": "Active"
+    }
+  },
+  "machines": {
+    "machine-2ce51e6b-f967-4ea2-9aeb-944c9decf5ea": {
+      "artboard": 0,
+      "index": 0,
+      "name": "Controller"
+    }
+  }
+}

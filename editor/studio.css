@@ -119,18 +119,7 @@ a {
   font-weight: 720;
   letter-spacing: -0.7px;
 }
-.brand-mark {
-  display: grid;
-  place-items: center;
-  width: 29px;
-  height: 29px;
-  border-radius: 9px;
-  background: var(--accent);
-  color: #1a3a2c;
-  font-size: 27px;
-  font-style: italic;
-  font-weight: 800;
-}
+
 .badge {
   font-size: 9px;
   letter-spacing: 1.3px;
@@ -563,4 +552,134 @@ dd {
 .layer-row .small {
   min-width: 26px;
   min-height: 28px;
+}
+/* Authoring workspaces keep the stage usable while their controls scroll. */
+.toolbar {
+  overflow-x: auto;
+  flex-shrink: 0;
+}
+.mode-buttons {
+  display: flex;
+  margin-left: auto;
+  gap: 3px;
+}
+#authoring-panel {
+  border-top: 1px solid var(--line);
+  background: var(--panel);
+  padding: 12px 16px;
+  max-height: 42vh;
+  min-height: 170px;
+  overflow: auto;
+  flex-shrink: 0;
+}
+#authoring-panel[hidden] {
+  display: none;
+}
+.authoring-controls {
+  display: flex;
+  gap: 10px;
+  align-items: end;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.authoring-controls .field {
+  margin: 0;
+  max-width: 160px;
+}
+#authoring-panel [type="range"] {
+  width: calc(100% - 60px);
+  vertical-align: middle;
+  accent-color: var(--accent);
+}
+.track-list {
+  display: grid;
+  gap: 6px;
+  margin-top: 10px;
+}
+.track-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-wrap: wrap;
+  padding: 5px;
+  background: var(--bg);
+  border-radius: 6px;
+}
+.track-row > span {
+  min-width: 160px;
+}
+.track-row button {
+  border-color: var(--line);
+  padding: 3px 7px;
+}
+.machine-graph {
+  min-width: 350px;
+  overflow: auto;
+  background: var(--bg);
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+.machine-graph svg {
+  width: 100%;
+  min-width: 600px;
+  min-height: 160px;
+}
+.transition-line {
+  fill: none;
+  stroke: #8a9da9;
+  stroke-width: 2px;
+}
+.state-node {
+  fill: #28353c;
+  stroke: #71808b;
+}
+.state-active {
+  fill: #235c48;
+  stroke: var(--accent);
+}
+.machine-graph text {
+  fill: var(--text);
+  font-size: 11px;
+}
+.machine-forms {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(160px, 1fr));
+  gap: 15px;
+}
+.machine-forms .field {
+  margin-bottom: 7px;
+}
+.check-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 0;
+}
+#properties > button {
+  border-color: var(--line);
+  margin: 8px 0;
+}
+@media (max-width: 1100px) {
+  .machine-forms {
+    grid-template-columns: 1fr;
+  }
+  .topbar {
+    gap: 15px;
+    padding: 0 12px;
+  }
+  .topbar nav button {
+    padding: 6px 8px;
+  }
+}
+
+#notice[data-kind="success"] {
+  background: #203b31;
+  color: #cff8e6;
+  border-color: #487b64;
+}
+
+.brand-wordmark {
+  width: 105px;
+  height: auto;
+  display: block;
 }
