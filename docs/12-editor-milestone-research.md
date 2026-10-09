@@ -23,7 +23,7 @@ Official documentation revision `8879acbbefbf676c8d68d66c2ddfe56c6ee50914`:
 
 Runtime revision `7aa93402a27c800db8a36acc8672612c100ea9b1`: `src/bones/{bone,skin,tendon,weight}.cpp`, `src/shapes/{cubic_vertex,cubic_detached_vertex}.cpp`, `src/animation/keyframe_double.cpp`, and the generated property registry. Official CLI 1.4.0 bundled `rigging.md` documents packed slots, matrix conventions and cubic weights. The existing weighted-path, weighted-mesh rotation, triggers, listeners and state-machine probes supply tested examples. Prebuilt official web runtimes remain pinned to 2.44.0; new compiler output must be validated against those actual binaries.
 
-Brand usage preserves the supplied visual appearance. The user subsequently permitted crops, resizing, conversion and background removal. The earlier improvised mark has been removed; prepared raster renditions and their provenance are documented in [the asset notes](../editor/assets/README.md).
+Brand usage preserves the supplied visual appearance. The user subsequently permitted crops, resizing, conversion and background removal. The earlier improvised mark has been removed; prepared raster renditions and their provenance are documented in [the asset notes](../assets/brand/README.md).
 
 ## Findings during official-runtime validation
 

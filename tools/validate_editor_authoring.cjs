@@ -5,10 +5,11 @@ const { createHash } = require("node:crypto"),
   gpu = require("./gpu_diagnostics.cjs");
 const { run } = require("./browser.cjs");
 (async () => {
+  await require('./prepare-oracle.cjs').prepare();
   const { scenes } = await import("../tests/editor/scenes.mjs"),
-    { compileProject } = await import("../editor/export-riv.mjs");
+    { compileProject } = await import("@evir/format");
   const { p, a, b } = scenes(),
-    schema = JSON.parse(fs.readFileSync("research/schema/runtime.json"));
+    schema = JSON.parse(fs.readFileSync("packages/format/schema/runtime.json"));
   const compiled = compileProject(p, schema);
   fs.mkdirSync("research/fixtures/editor-authoring", { recursive: true });
   fs.writeFileSync(
@@ -47,8 +48,8 @@ const { run } = require("./browser.cjs");
     async function compare(label, animationId, frame, source = p) {
       const expected = await page.evaluate(
         async ({ p, id, frame }) => {
-          const { evaluate } = await import("/editor/motion.mjs"),
-            { drawScene } = await import("/editor/render-scene.mjs");
+          const { evaluate } = await import("/tools/.test-build/oracle.mjs"),
+            { drawScene } = await import("/tools/.test-build/oracle.mjs");
           const pose = id ? evaluate(p, id, frame) : p,
             canvas = document.createElement("canvas");
           canvas.width = canvas.height = 256;

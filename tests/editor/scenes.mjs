@@ -1,13 +1,7 @@
-import { createProject, addNode } from "../../editor/model.mjs";
-import {
-  convertRectangle,
-  bindPath,
-  setWeight,
-  createAnimation,
-  setKey,
-  createMachine,
-  newId,
-} from "../../editor/motion.mjs";
+import { createProject } from "@evir/project-model";
+import { addNode } from "@evir/authoring";
+import { convertRectangle, bindPath, setWeight, createAnimation, setKey, createMachine } from "@evir/authoring";
+import { newId } from "@evir/project-model";
 export function scenes() {
   const p = createProject();
   p.name = "Authoring oracle";

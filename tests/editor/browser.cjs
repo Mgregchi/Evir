@@ -3,7 +3,7 @@ const fs = require("node:fs");
 const { run } = require("../../tools/browser.cjs");
 run(async (page) => {
   await page.setViewportSize({ width: 1440, height: 900 });
-  await page.goto("http://127.0.0.1:8776/editor/");
+  await page.goto("http://127.0.0.1:8776/apps/editor/dist/");
   await page.waitForFunction(() => window.evirStudio);
   await page
     .getByRole("status")

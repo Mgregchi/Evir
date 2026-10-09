@@ -1,6 +1,7 @@
 const { chromium } = require("playwright");
 const { spawn } = require("node:child_process");
 const path = require("node:path");
+const fs = require("node:fs");
 const root = path.resolve(__dirname, "..");
 exports.run = async function (work) {
   const server = spawn(
@@ -26,7 +27,7 @@ exports.run = async function (work) {
     browser = remote
       ? await chromium.connectOverCDP(remote)
       : await chromium.launch({
-          executablePath: process.env.CHROMIUM_PATH || "/usr/bin/chromium",
+          executablePath: process.env.CHROMIUM_PATH || (fs.existsSync('/usr/bin/chromium') ? '/usr/bin/chromium' : chromium.executablePath()),
           headless: true,
           args: [
             "--no-sandbox",

@@ -1,0 +1,3 @@
+# @evir/renderer-canvas
+
+Canvas2D backend for Evir scene poses. `CanvasRenderer(context).draw(pose, artboardId)` clears and clips the drawing surface, fits the artboard and draws runtime artwork. Hosts own the canvas and schedule playback. Low-level `drawScene`, `world`-geometry bounds and path-context helpers also support Studio's authoring overlays. Solid rectangles, cubic fills and skinned path controls are supported; gradients, clipping authoring, raster/text assets and a custom GPU backend remain future work. See [the shared-package guide](https://github.com/Mgregchi/Evir/blob/main/packages/README.md).

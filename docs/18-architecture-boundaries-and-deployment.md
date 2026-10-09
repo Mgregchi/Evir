@@ -19,37 +19,40 @@ The exact domain is configurable. The important boundary is that `/editor` is a 
 
 ## Current state
 
-The current prototype is intentionally in one repository but already has recognizable seams:
+The separation was implemented on 9 October 2026. See [the migration and verification record](19-workspace-migration.md) for commands, package contracts and hosting precautions. The monorepo now has these actual ownership boundaries:
 
-- `site/` is the public static site. It owns page content, branding, SEO, navigation, configurable external links and public examples.
-- `editor/` contains Evir Studio's browser UI and the first implementation of the project model, authoring operations, motion/state-machine evaluation, Canvas2D preview and `.riv` export.
-- `tools/` and `research/` contain the structural `.riv` codec, schema, official-runtime probes, benchmarks and evidence. They are not production application code.
-- `site/build.mjs` currently copies selected editor modules into the public build so the prototype can be demonstrated. That generated copy is a distribution convenience, not the desired long-term ownership model.
+- `apps/site/` owns public content, branding, SEO, navigation, configurable external links and examples. It builds without copying the editor.
+- `apps/editor/` owns Studio's browser UI and consumes shared packages.
+- `packages/` owns the validated model, playback engine, Canvas2D renderer, authoring operations and explicit `.riv` compiler. Applications bundle their declared package dependencies, rather than copying source from another application.
+- `tools/` and `research/` contain the structural `.riv` codec, official-runtime probes, benchmarks and evidence. The pinned compiler schema lives with `packages/format/` and retains its upstream license.
 - `@rive-app/canvas` and `@rive-app/webgl2` validate exported files and supplied `.riv` inputs. They are official Rive runtimes, not Evir's own runtime.
 
-The current editor implementation is therefore the closest thing to an Evir core, but it is not yet a standalone runtime package. The Canvas2D renderer is an authoring preview, and the `.riv` compiler covers a declared subset. Full semantic `.riv` import, an independent GPU renderer and device-proven runtime performance remain separate work.
+`packages/runtime/` is now the standalone Evir playback core; `packages/renderer-canvas/` provides its Canvas2D host adapter. The `.riv` compiler still covers a declared subset. Full semantic `.riv` import, an independent GPU renderer and device-proven runtime performance remain separate work. No backend service has been introduced.
 
 ## Target repository shape
 
-The eventual ownership model should move toward:
+The implemented shape, with future boundaries explicitly marked:
 
 ```text
 apps/
-  public-site/       # product pages, /, /product, /editor landing
-  editor-web/        # studio.evir.example authoring application
+  site/              # product pages, /, /product, /editor landing
+  editor/            # separately hosted authoring application
+assets/brand/        # supplied artwork renditions
 packages/
   project-model/     # validated editable Evir project contracts
   runtime/           # platform-neutral loading, motion and state machines
   renderer-canvas/   # Canvas2D backend
-  renderer-gpu/      # later GPU backend
-  format/            # .evir format and explicit .riv compatibility layer
+  authoring/         # editing operations and history
+  format/            # explicit .riv compatibility compiler and schema
 research/
 tools/
 ```
 
-This is a destination, not an instruction to move everything in one change. Until the runtime contracts are stable, the existing `editor/*.mjs` modules remain the source of truth. Generated copies under `site/dist` must never become a second hand-edited implementation.
+Package source is now the source of truth. Generated app/package artifacts must never become a second hand-edited implementation. A future GPU renderer and backend services should add their own boundaries when the corresponding research and product requirements justify them.
 
 ## Migration order
+
+The original sequence below is implemented for the existing web/Canvas2D subset. GPU/mobile targets and a finalized Evir binary format are not part of this migration.
 
 1. Define a small runtime-facing contract for loading a validated project, advancing time, applying inputs and drawing a frame.
 2. Extract pure code from `editor/model.mjs`, `editor/motion.mjs` and `editor/render-scene.mjs` into tested runtime packages without changing editor behavior.
@@ -69,4 +72,4 @@ The separation should be measured by ownership and release boundaries, not by fo
 - The runtime must not depend on the public site, its environment variables or its analytics/community integrations.
 - Backend services, if introduced later for accounts, collaboration, asset storage or agent jobs, should sit behind explicit APIs. The local runtime and editor must remain usable without those services where the product promises local authoring.
 
-This decision is compatible with the current site and editor and gives the next engine-extraction milestone a clear destination.
+This decision now governs the implemented workspace boundaries and future engine/frontend work.

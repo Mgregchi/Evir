@@ -1,0 +1,8 @@
+{
+  "name": "@evir/runtime", "version": "0.1.0", "type": "module", "license": "MIT",
+  "description": "Evir scene playback, skinning and conditional state machines",
+  "exports": {".": "./index.mjs", "./motion": "./motion.mjs", "./geometry": "./geometry.mjs", "./standalone": "./dist/index.mjs"},
+  "files": ["*.mjs", "dist", "README.md", "LICENSE"],
+  "dependencies": {"@evir/project-model": "0.1.0"},
+  "scripts": {"build": "node ../../tools/build-package.mjs"}
+}

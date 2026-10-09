@@ -1,31 +1,16 @@
-name: Public site
+name: Public site validation
 on:
   pull_request:
-    paths: ['site/**', 'editor/**', 'tests/site/**', 'tools/capture_site_assets.cjs', 'tools/browser.cjs', 'tools/gpu_diagnostics.cjs', 'package*.json', 'research/schema/**', '.github/workflows/public-site.yml']
+    paths: ['apps/site/**', 'assets/brand/**', 'packages/project-model/**', 'packages/runtime/**', 'packages/renderer-canvas/**', 'tests/site/**', 'tools/build-support.mjs', 'tools/static-server.mjs', 'tools/runtime-oracle.mjs', 'tools/prepare-oracle.cjs', 'tools/browser.cjs', 'tools/gpu_diagnostics.cjs', 'package*.json', '.github/workflows/public-site.yml']
   push:
     branches: [main]
-    paths: ['site/**', 'editor/**', 'tests/site/**', 'tools/capture_site_assets.cjs', 'tools/browser.cjs', 'tools/gpu_diagnostics.cjs', 'package*.json', 'research/schema/**', '.github/workflows/public-site.yml']
+    paths: ['apps/site/**', 'assets/brand/**', 'packages/project-model/**', 'packages/runtime/**', 'packages/renderer-canvas/**', 'tests/site/**', 'tools/build-support.mjs', 'tools/static-server.mjs', 'tools/runtime-oracle.mjs', 'tools/prepare-oracle.cjs', 'tools/browser.cjs', 'tools/gpu_diagnostics.cjs', 'package*.json', '.github/workflows/public-site.yml']
   workflow_dispatch:
 permissions:
   contents: read
-concurrency:
-  group: public-site-${{ github.ref }}
-  cancel-in-progress: true
 jobs:
-  build:
+  validate:
     runs-on: ubuntu-latest
-    env:
-      PUBLIC_SITE_URL: ${{ vars.PUBLIC_SITE_URL }}
-      PUBLIC_BASE_PATH: ${{ vars.PUBLIC_BASE_PATH }}
-      PUBLIC_REPOSITORY_URL: ${{ vars.PUBLIC_REPOSITORY_URL }}
-      PUBLIC_DOCS_URL: ${{ vars.PUBLIC_DOCS_URL }}
-      PUBLIC_COMMUNITY_URL: ${{ vars.PUBLIC_COMMUNITY_URL }}
-      PUBLIC_FEEDBACK_URL: ${{ vars.PUBLIC_FEEDBACK_URL }}
-      PUBLIC_NEWSLETTER_URL: ${{ vars.PUBLIC_NEWSLETTER_URL }}
-      PUBLIC_SOCIAL_X_URL: ${{ vars.PUBLIC_SOCIAL_X_URL }}
-      PUBLIC_SOCIAL_LINKEDIN_URL: ${{ vars.PUBLIC_SOCIAL_LINKEDIN_URL }}
-      PUBLIC_SOCIAL_MASTODON_URL: ${{ vars.PUBLIC_SOCIAL_MASTODON_URL }}
-      PUBLIC_CONTACT_URL: ${{ vars.PUBLIC_CONTACT_URL }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -35,26 +20,7 @@ jobs:
       - run: npm ci
       - run: npx playwright install --with-deps chromium
       - run: npm run test:site
-      - run: npm run site:build
       - uses: actions/upload-artifact@v4
         with:
           name: public-site-validation
           path: research/results/public-site/
-      - uses: actions/upload-pages-artifact@v3
-        if: github.event_name == 'workflow_dispatch'
-        with:
-          path: site/dist
-  deploy:
-    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4

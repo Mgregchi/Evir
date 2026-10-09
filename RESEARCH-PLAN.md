@@ -122,6 +122,6 @@ Only after completing Phases 1–4 do we decide:
 
 ### Architecture follow-up
 
-After the current editor subset and compatibility evidence are stable, extract the reusable project model, motion/state-machine evaluator and renderer behind a runtime-facing contract. Keep the public site, editor application and runtime/backend as separate ownership and deployment boundaries. The target product surface is a public `/product` page and `/editor` landing page, with the full editor available at a separately deployable studio subdomain when hosting is configured. See [Product boundaries and deployment architecture](docs/18-architecture-boundaries-and-deployment.md).
+The reusable project model, motion/state-machine evaluator, Canvas2D renderer, authoring operations and `.riv` compiler have now been extracted into versioned npm packages. Public site and editor application build independently; `/product` and `/editor` are public pages, while the full editor launches through a configurable URL suitable for a studio subdomain. See [the completed workspace migration](docs/19-workspace-migration.md) and [package contracts](packages/README.md). Physical-device and equivalent Editor-scene research gates are still pending; organization does not close them or finalize a new binary format.
 
 ---

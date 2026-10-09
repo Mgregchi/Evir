@@ -1,30 +1,11 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import {
-  createProject,
-  addNode,
-  validateProject,
-  History,
-  worldTransform,
-  serializeProject,
-  openProject,
-  removeSubtree,
-} from "../../editor/model.mjs";
-import {
-  convertRectangle,
-  insertPoint,
-  bindPath,
-  setWeight,
-  worldPoints,
-  quantize,
-  createAnimation,
-  setKey,
-  evaluate,
-  createMachine,
-  newId,
-  MachinePlayer,
-  easingValue,
-} from "../../editor/motion.mjs";
+import { createProject, validateProject, worldTransform, serializeProject, openProject } from "@evir/project-model";
+import { addNode, History, removeSubtree } from "@evir/authoring";
+import { convertRectangle, insertPoint, bindPath, setWeight, createAnimation, setKey, createMachine } from "@evir/authoring";
+import { worldPoints, quantize } from "@evir/runtime/geometry";
+import { evaluate, MachinePlayer, easingValue } from "@evir/runtime";
+import { newId } from "@evir/project-model";
 export function rigScene() {
   const p = createProject();
   p.artboards[0].width = 256;
