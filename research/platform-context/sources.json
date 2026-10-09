@@ -1,0 +1,2010 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-10-09",
+  "review_timezone": "Africa/Lagos",
+  "retrieval_time_zone": "UTC",
+  "scope": "Public primary-source platform and AI/agent context; vendor claims are not authenticated acceptance tests.",
+  "rive_docs_revision": "18744eb41501f7014b2fb7c1c4a7b6719120e507",
+  "evir_baseline": "8f39c8b",
+  "sources": [
+    {
+      "id": "R01",
+      "publisher": "Rive",
+      "kind": "product_page",
+      "url": "https://rive.app/features",
+      "final_url": "https://rive.app/features",
+      "title": "Rive Features",
+      "retrieved_at": "2026-10-08T16:31:34.406114+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "3cf1b8853a06c2ddc02481b7352b6ae44fae1fdb043e0fb06695ff5575fb06bb",
+      "bytes": 667166,
+      "metadata": {
+        "description": "Rive combines an interactive design tool, a new stateful graphics format, a lightweight multi-platform runtime, and a blazing-fast renderer. This pipeline brings interfaces to life with motion across apps, games, websites, products, and vehicles.",
+        "og:title": "Rive Features"
+      },
+      "note": "Contains older Early Access badges; not definitive release status."
+    },
+    {
+      "id": "R02",
+      "publisher": "Rive",
+      "kind": "pricing",
+      "url": "https://rive.app/pricing",
+      "final_url": "https://rive.app/pricing",
+      "title": "Rive Pricing",
+      "retrieved_at": "2026-10-08T16:30:30.550481+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "92bbe6d8a5f59077e8b26729da9dae99c2a90775068138e2acb76d6bab6aad63",
+      "bytes": 1565573,
+      "metadata": {
+        "description": "Rive pricing starts free to build in the editor. Upgrade to ship your projects to the web, iOS, Android, Unity, Unreal, C++, React Native, Flutter, and more. Plans include Free, Cadet ($9/mo), Voyager ($32/mo), or Enterprise ($120/mo).",
+        "og:title": "Rive Pricing"
+      },
+      "note": "Current displayed plans. Toggle-dependent sticker prices are not normalized."
+    },
+    {
+      "id": "R03",
+      "publisher": "Rive",
+      "kind": "dated_announcement",
+      "url": "https://rive.app/blog/free-rive-ai-agent",
+      "final_url": "https://rive.app/blog/free-rive-ai-agent",
+      "title": "Free Rive AI Agent",
+      "retrieved_at": "2026-10-08T16:31:34.404010+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "f59520282bd5a254ec81fd8450e3dfb249be190634441e9116903ee5276bb609",
+      "bytes": 348738,
+      "metadata": {
+        "description": "Starting today, the Rive Agent is available to everyone, including Free users. AI should make it easier for anyone to learn and build in Rive, regardless of plan.",
+        "og:title": "Free Rive AI Agent"
+      },
+      "note": "Published 2026-04-30. Supersedes older paid-only access statements."
+    },
+    {
+      "id": "R04",
+      "publisher": "Rive",
+      "kind": "documentation",
+      "url": "https://rive.app/docs/editor/ai-agent/ai-agent",
+      "final_url": "https://rive.app/docs/editor/ai-agent/ai-agent",
+      "title": "AI Agent - Rive",
+      "retrieved_at": "2026-10-08T16:30:30.550916+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "bea1abbcf660812fcfa3c260f3ce0d67682a3d703b4de2f994be67096c0c22e2",
+      "bytes": 313876,
+      "metadata": {
+        "description": "Rive's AI agent helps you write code, design, and animate.",
+        "og:title": "AI Agent - Rive"
+      },
+      "note": "Access note conflicts with newer pricing and April announcement."
+    },
+    {
+      "id": "R05",
+      "publisher": "Rive",
+      "kind": "dated_announcement",
+      "url": "https://rive.app/blog/rive-ai-coding-agent-faq",
+      "final_url": "https://rive.app/blog/rive-ai-coding-agent-faq",
+      "title": "FAQ: Rive AI Coding Agent",
+      "retrieved_at": "2026-10-08T16:31:34.405321+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "a5a606eb1a5179103137d0c96e56746243e1479da5bfdb7e1fb520c8e92b53f6",
+      "bytes": 352932,
+      "metadata": {
+        "description": "Rive combines an interactive design tool, a new stateful graphics format, a lightweight multi-platform runtime, and a blazing-fast renderer. This pipeline brings interfaces to life with motion across apps, games, websites, products, and vehicles.",
+        "og:title": "FAQ: Rive AI Coding Agent "
+      },
+      "note": "Published 2026-01-12. Access and top-up availability statements are historical."
+    },
+    {
+      "id": "R06",
+      "publisher": "Rive",
+      "kind": "dated_announcement",
+      "url": "https://rive.app/blog/scripting-is-live-in-rive",
+      "final_url": "https://rive.app/blog/scripting-is-live-in-rive",
+      "title": "Scripting is live in Rive",
+      "retrieved_at": "2026-10-08T16:31:34.404873+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "bf37deb928bb11ff96cbdbc795f4e263117f26c314ce57b8dfd447955abbc26c",
+      "bytes": 372868,
+      "metadata": {
+        "description": "A professional programming environment inside a professional design tool.",
+        "og:title": "Scripting is live in Rive"
+      },
+      "note": "Published 2026-01-13. Paid script marketplace described as future."
+    },
+    {
+      "id": "R07",
+      "publisher": "Rive",
+      "kind": "documentation",
+      "url": "https://rive.app/docs/editor/ai/mcp",
+      "final_url": "https://rive.app/docs/editor/ai/mcp",
+      "title": "Rive MCP Integration - Rive",
+      "retrieved_at": "2026-10-08T16:30:30.551425+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "408e9a8408f8e23d95ebf6d3e91471d1506f56b2c5cfae033fc45d796e75c758",
+      "bytes": 363992,
+      "metadata": {
+        "og:title": "Rive MCP Integration - Rive"
+      },
+      "note": "Windows/macOS only; setup verification mentions Early Access."
+    },
+    {
+      "id": "R08",
+      "publisher": "Rive",
+      "kind": "documentation",
+      "url": "https://rive.app/docs/cli/overview",
+      "final_url": "https://rive.app/docs/cli/overview",
+      "title": "Rive CLI - Rive",
+      "retrieved_at": "2026-10-08T16:31:34.406497+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "ad47930bf2058de289637b3e6c021ac68e21009e7812c54b5a21d1dc0c40d3f7",
+      "bytes": 263672,
+      "metadata": {
+        "description": "Create, preview, inspect, and publish Rive graphics from the command line, without opening the Editor.",
+        "og:title": "Rive CLI - Rive"
+      },
+      "note": "CLI authoring/export integration; account actions not exercised."
+    },
+    {
+      "id": "R09",
+      "publisher": "Rive",
+      "kind": "documentation",
+      "url": "https://rive.app/docs/cli/agents",
+      "final_url": "https://rive.app/docs/cli/agents",
+      "title": "Working with AI Agents - Rive",
+      "retrieved_at": "2026-10-08T16:31:34.407800+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "392369f0bc23f254872ed6aac1536f6c9a91af064b972f97713a6ac8c5df0eda",
+      "bytes": 272009,
+      "metadata": {
+        "description": "Pair the Rive CLI with Claude Code, Cursor, or your agent of preference.",
+        "og:title": "Working with AI Agents - Rive"
+      },
+      "note": "Agent RML authoring, schema, verify, inspect, screenshot feedback loop."
+    },
+    {
+      "id": "R10",
+      "publisher": "Rive",
+      "kind": "documentation",
+      "url": "https://rive.app/docs/editor/interface-overview/debug-panel",
+      "final_url": "https://rive.app/docs/editor/interface-overview/debug-panel",
+      "title": "Debug Panel - Rive",
+      "retrieved_at": "2026-10-08T16:31:35.281281+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "a8ce590a347e106df7ae1b91034ad599be3d9d09575283ca2ef99daac8ccd67a",
+      "bytes": 321719,
+      "metadata": {
+        "description": "Inspect logs, problems, AI changes, tests, and audio while working in Rive.",
+        "og:title": "Debug Panel - Rive"
+      },
+      "note": ""
+    },
+    {
+      "id": "R11",
+      "publisher": "Rive",
+      "kind": "documentation",
+      "url": "https://rive.app/docs/feature-support",
+      "final_url": "https://rive.app/docs/feature-support",
+      "title": "Feature Support - Rive",
+      "retrieved_at": "2026-10-08T23:03:40.506066+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "3a26611dde061cb47e98405931a52a0739e486482aa43ed799bf679ebdd920ca",
+      "bytes": 354377,
+      "metadata": {
+        "og:title": "Feature Support - Rive"
+      },
+      "note": "Read renderer source as well: generated tables are not all in extracted HTML."
+    },
+    {
+      "id": "F01",
+      "publisher": "Framer",
+      "kind": "product_page",
+      "url": "https://www.framer.com/agents/",
+      "final_url": "https://www.framer.com/agents/",
+      "title": "Framer: Agents",
+      "retrieved_at": "2026-10-08T16:31:35.502787+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "bb79c9fe6858a9780008630af618d4349d3e4a3e4c380cd6a8b8276bb149a68f",
+      "bytes": 1779544,
+      "metadata": {
+        "description": "Use AI agents in Framer to update pages, style sections, improve SEO, manage content, and keep every change editable on the canvas.",
+        "og:title": "Framer: Agents"
+      },
+      "note": ""
+    },
+    {
+      "id": "F02",
+      "publisher": "Framer",
+      "kind": "documentation",
+      "url": "https://www.framer.com/agents/external/",
+      "final_url": "https://www.framer.com/agents/external/",
+      "title": "Framer: Connect Claude, Cursor, Codex, Grok, and more to Framer",
+      "retrieved_at": "2026-10-08T16:31:35.523582+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "7c77e8b536e93e36934dc0a668f1adc476c64960093b7ecc36e1c70605c05119",
+      "bytes": 1079212,
+      "metadata": {
+        "description": "Use Framer with Claude Code, Cursor, Codex in ChatGPT, and other AI tools. Connect directly to build and update sites. No MCP setup required.",
+        "og:title": "Framer: Connect Claude, Cursor, Codex, Grok, and more to Framer"
+      },
+      "note": ""
+    },
+    {
+      "id": "F03",
+      "publisher": "Framer",
+      "kind": "documentation",
+      "url": "https://www.framer.com/help/articles/use-external-agents-with-framer/",
+      "final_url": "https://www.framer.com/help/articles/use-external-agents-with-framer/",
+      "title": "Framer Help: Use external agents with Framer",
+      "retrieved_at": "2026-10-08T16:31:35.668177+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "30dc4ed930d7b39503742928e5bc57e6b418dc8a6115c0f7701d2ca576ab0a65",
+      "bytes": 961315,
+      "metadata": {
+        "description": "Learn how to use Claude Code, Codex in ChatGPT, Gemini, and other external agents to interact with your Framer project.",
+        "og:title": "Framer Help: Use external agents with Framer"
+      },
+      "note": ""
+    },
+    {
+      "id": "F04",
+      "publisher": "Framer",
+      "kind": "dated_engineering_article",
+      "url": "https://www.framer.com/blog/building-framer-agents/",
+      "final_url": "https://www.framer.com/blog/building-framer-agents/",
+      "title": "Building Agents for Framer",
+      "retrieved_at": "2026-10-08T16:35:48.329021+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "3a6d24adcd5c9c9918458e520b6ca89757a8efdfe8335b5cbcb17cb773b92002",
+      "bytes": 1081259,
+      "metadata": {
+        "description": "A detailed look at what we learned while building design agents, from canvas-native workflows and CMS to quality, collaboration, speed, cost, community, and external agents. ",
+        "og:title": "Building Agents for Framer"
+      },
+      "note": "Published 2026-06-16; technical vendor account, not independent benchmark."
+    },
+    {
+      "id": "F05",
+      "publisher": "Framer",
+      "kind": "legal",
+      "url": "https://www.framer.com/legal/ai-notice",
+      "final_url": "https://www.framer.com/legal/ai-notice",
+      "title": "Framer: AI notice",
+      "retrieved_at": "2026-10-08T16:31:36.195706+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "9e56d1a9f1f19c8a8467a63c3fc1e2219d157fd930c5214c920517e058e1ee20",
+      "bytes": 885306,
+      "metadata": {
+        "description": "Go from idea to launch with an agent that designs and builds on the canvas. Keep each change editable, with hosting, security, analytics, CMS, and SEO built in.",
+        "og:title": "Framer: AI notice"
+      },
+      "note": "Version 1.2 dated 2026-09-18 distinguishes provider and Framer model training."
+    },
+    {
+      "id": "P01",
+      "publisher": "Penpot",
+      "kind": "product_page",
+      "url": "https://penpot.app/features",
+      "final_url": "https://penpot.app/features",
+      "title": "Penpot: Design and Code Features to collaborate at scale.",
+      "retrieved_at": "2026-10-08T16:31:35.393566+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "19dacf8576c666cbd131becb99f57a520198fd1986a1fc77b9c780ca96714b17",
+      "bytes": 1775238,
+      "metadata": {
+        "og:title": "Penpot: Design and Code Features to collaborate at scale.",
+        "description": "Designers and developers can now finally work in unison to build beautifully designed software experiences that can truly scale up. "
+      },
+      "note": ""
+    },
+    {
+      "id": "P02",
+      "publisher": "Penpot",
+      "kind": "product_page",
+      "url": "https://penpot.app/ai/mcp-server",
+      "final_url": "https://penpot.app/ai/mcp-server",
+      "title": "Penpot MCP server",
+      "retrieved_at": "2026-10-08T16:31:35.331972+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "e04084cb7dfa7dd0054ff9fac7c8dd809a01a089b422b078de170932ad317a0b",
+      "bytes": 1677370,
+      "metadata": {
+        "og:title": "Penpot MCP server",
+        "description": " Connect Penpot with any AI agent, any LLM. Penpot MCP server is agnostic and enables high-quality multi-directional workflows."
+      },
+      "note": ""
+    },
+    {
+      "id": "P03",
+      "publisher": "Penpot",
+      "kind": "documentation",
+      "url": "https://help.penpot.app/mcp/",
+      "final_url": "https://help.penpot.app/mcp/",
+      "title": "Penpot MCP server",
+      "retrieved_at": "2026-10-08T16:35:47.434966+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "7500e256ccf72bca93dd0ae846836cf1c53a04b0e9a47e42369b5b97dcab652c",
+      "bytes": 59870,
+      "metadata": {
+        "description": "Installing and using the Penpot MCP server with any AI agent or LLM you trust.",
+        "og:title": "Penpot MCP server"
+      },
+      "note": ""
+    },
+    {
+      "id": "P04",
+      "publisher": "Penpot",
+      "kind": "documentation_source",
+      "url": "https://raw.githubusercontent.com/penpot/penpot/2c08a065bbbb12fa3036a7c9ae8526d43bec4f49/mcp/README.md",
+      "final_url": "https://raw.githubusercontent.com/penpot/penpot/2c08a065bbbb12fa3036a7c9ae8526d43bec4f49/mcp/README.md",
+      "title": "Pinned develop commit; not a released-version parity guarantee.",
+      "retrieved_at": "2026-10-08T23:02:50.569789+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "f34970a33134b7abb995791c08d04beebea724f05799fa16e9fb11b9e7d20984",
+      "bytes": 19739,
+      "metadata": {},
+      "note": "Pinned develop commit; not a released-version parity guarantee."
+    },
+    {
+      "id": "G01",
+      "publisher": "Figma",
+      "kind": "documentation_source",
+      "url": "https://raw.githubusercontent.com/figma/mcp-server-guide/f0493295acf5f7cbdebcbcc483c06de814420cb1/README.md",
+      "final_url": "https://raw.githubusercontent.com/figma/mcp-server-guide/f0493295acf5f7cbdebcbcc483c06de814420cb1/README.md",
+      "title": "Pinned official guide: remote write tools/skills beta; webpage capture rolling out.",
+      "retrieved_at": "2026-10-08T23:02:50.568949+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "83c01782db56e60fc29842ab7ccb469f2732564faa9f0120b7bdbe463e1729d7",
+      "bytes": 18025,
+      "metadata": {},
+      "note": "Pinned official guide: remote write tools/skills beta; webpage capture rolling out."
+    },
+    {
+      "id": "S01",
+      "publisher": "Spline",
+      "kind": "product_page",
+      "url": "https://spline.design/hana",
+      "final_url": "https://spline.design/hana",
+      "title": "Spline Hana - A design canvas powered by AI agents",
+      "retrieved_at": "2026-10-08T16:35:47.436354+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "1788d22050fba24845f34cb19c7c41a2cd7ba36a40008533971b2775ea73f57b",
+      "bytes": 69645,
+      "metadata": {
+        "description": "Hana is Spline's 2D design canvas: GPU-accelerated vector editing, states and animations, and AI agents — its own or yours over MCP — designing with your team.",
+        "og:title": "Spline Hana - A design canvas powered by AI agents"
+      },
+      "note": ""
+    },
+    {
+      "id": "S02",
+      "publisher": "Spline",
+      "kind": "product_page",
+      "url": "https://spline.design/solutions/design-with-ai-agents-mcp-3d",
+      "final_url": "https://spline.design/solutions/design-with-ai-agents-mcp-3d",
+      "title": "Design with AI Agents - Spline",
+      "retrieved_at": "2026-10-08T16:31:36.454733+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "731324bfac7a0d4154ff92435697c5c5ad58e7bbe099955835ac3802263d07b6",
+      "bytes": 57479,
+      "metadata": {
+        "description": "Connect AI agents to Spline through the MCP server and AI Agent to create, edit, and ship interactive 3D scenes from natural language.",
+        "og:title": "Design with AI Agents - Spline"
+      },
+      "note": ""
+    },
+    {
+      "id": "S03",
+      "publisher": "Spline",
+      "kind": "pricing",
+      "url": "https://spline.design/pricing",
+      "final_url": "https://spline.design/pricing",
+      "title": "Spline Pricing - Interactive 3D experiences in real-time in the browser",
+      "retrieved_at": "2026-10-08T16:31:36.616519+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "296f4d7150bd7a3d447b73b16d4ff9dba58fc9ded3e40dd02760baa9921ca29c",
+      "bytes": 111784,
+      "metadata": {
+        "description": "Create and collaborate on 3D designs for free. Real-time collaboration, animations, textures and more. Upgrade your Spline subscription for extra features and collaboration with your team.",
+        "og:title": "Spline Pricing - Interactive 3D experiences in real-time in the browser"
+      },
+      "note": "Plan table includes credits, MCP limits and export/hosting entitlements."
+    },
+    {
+      "id": "S04",
+      "publisher": "Spline",
+      "kind": "product_page",
+      "url": "https://spline.design/ai-generate",
+      "final_url": "https://spline.design/ai-generate",
+      "title": "Spline AI 3D Generation – The power of AI for the 3rd dimension.",
+      "retrieved_at": "2026-10-08T16:31:36.496589+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "b62a9434d1d757e29be21c8d41b02b43f0bc8df4c176ead79be9dc66838126c9",
+      "bytes": 174318,
+      "metadata": {
+        "description": "Generate 3D models from a text prompt or an image. Pick from four looks, choose the engine, and open the textured result straight in Spline.",
+        "og:title": "Spline AI 3D Generation – The power of AI for the 3rd dimension."
+      },
+      "note": ""
+    },
+    {
+      "id": "S05",
+      "publisher": "Spline",
+      "kind": "product_page",
+      "url": "https://spline.design/ai-style-transfer",
+      "final_url": "https://spline.design/ai-style-transfer",
+      "title": "Spline AI Style Transfer - 3D Design with AI.",
+      "retrieved_at": "2026-10-08T16:31:36.582988+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "2cf451a3034867bc4e9049976d183c3d507dec586f984a89371280ebee383adf",
+      "bytes": 39661,
+      "metadata": {
+        "description": "Spline AI Style Transfer is a new way to visualize your 3d designs. Use 3D to generate images with a variety of styles and explore new ways of presenting your designs with AI.",
+        "og:title": "Spline AI Style Transfer - 3D Design with AI."
+      },
+      "note": ""
+    },
+    {
+      "id": "L01",
+      "publisher": "LottieFiles",
+      "kind": "product_page",
+      "url": "https://lottiefiles.com/lottie-creator",
+      "final_url": "https://lottiefiles.com/lottie-creator",
+      "title": "Lottie Creator: Make Lottie Animations in Your Browser",
+      "retrieved_at": "2026-10-08T16:31:36.811035+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "15449b87c41fb5d5c08d8ee27f0b875d6437e344e3321a0c3300be3c40fc89d8",
+      "bytes": 764742,
+      "metadata": {
+        "description": "Create production-ready Lottie and dotLottie animations in your browser with AI, State Machines and Motion Tokens. No After Effects required. Free to start.",
+        "og:title": "Lottie Creator: Make Lottie Animations in Your Browser"
+      },
+      "note": ""
+    },
+    {
+      "id": "L02",
+      "publisher": "LottieFiles",
+      "kind": "product_page",
+      "url": "https://lottiefiles.com/mcp",
+      "final_url": "https://lottiefiles.com/mcp",
+      "title": "LottieFiles MCP — Create motion with ChatGPT, Claude, Cursor",
+      "retrieved_at": "2026-10-08T16:31:36.749888+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "3e65c0c8641f5b44fae74668caae4da35f341a000012b3d45b6ef7a68bff3a49",
+      "bytes": 441507,
+      "metadata": {
+        "description": "Paste a prompt into ChatGPT, Claude, Cursor, or your browser. It opens Creator and draws on a real canvas — no Node, free. Or search 100,000+ free animations.",
+        "og:title": "LottieFiles MCP — Create motion with ChatGPT, Claude, Cursor"
+      },
+      "note": "Marketing Chrome-only statement differs from newer compatibility-qualified guide."
+    },
+    {
+      "id": "L03",
+      "publisher": "LottieFiles",
+      "kind": "documentation",
+      "url": "https://docs.lottiefiles.com/en/creator/13_ai-tools/lottie-creator-mcp",
+      "final_url": "https://docs.lottiefiles.com/en/creator/13_ai-tools/lottie-creator-mcp",
+      "title": "Lottie Creator MCP",
+      "retrieved_at": "2026-10-08T16:35:48.192088+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "81940f44da2b0f87d74aa1c0338d7373f566aab474cca72e81518971f88eb357",
+      "bytes": 189156,
+      "metadata": {
+        "description": "Connect an AI assistant to Lottie Creator through the local MCP bridge to create, edit, and animate using prompts.",
+        "og:title": "Lottie Creator MCP",
+        "article:published_time": "2026-10-08T10:45:52.000Z",
+        "article:modified_time": "2026-10-08T10:45:52.000Z"
+      },
+      "note": ""
+    },
+    {
+      "id": "L04",
+      "publisher": "LottieFiles",
+      "kind": "documentation",
+      "url": "https://docs.lottiefiles.com/en/creator/13_ai-tools/lottie-creator-webmcp",
+      "final_url": "https://docs.lottiefiles.com/en/creator/13_ai-tools/lottie-creator-webmcp",
+      "title": "Lottie Creator WebMCP",
+      "retrieved_at": "2026-10-08T23:02:20.718760+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "c63c4108833b7e492da0ebf1d437b44dcbed6b4bd3ead5bdd70f5c8a1cf7b1b5",
+      "bytes": 149690,
+      "metadata": {
+        "description": "Use a browser-connected AI assistant to inspect your scene, edit layers, and create animations in Lottie Creator with natural language.",
+        "og:title": "Lottie Creator WebMCP",
+        "article:published_time": "2026-10-08T10:45:52.000Z",
+        "article:modified_time": "2026-10-08T10:45:52.000Z"
+      },
+      "note": "Updated 2026-10-08. Browser AND assistant tool-discovery support required."
+    },
+    {
+      "id": "L05",
+      "publisher": "LottieFiles",
+      "kind": "documentation",
+      "url": "https://docs.lottiefiles.com/en/creator/13_ai-tools/motion-copilot",
+      "final_url": "https://docs.lottiefiles.com/en/creator/13_ai-tools/motion-copilot",
+      "title": "Motion Copilot",
+      "retrieved_at": "2026-10-08T23:02:20.719643+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "9d902a7b26bf99e1e661fde3dc9e95fb704aec9e3a159fe4aba69b5abdf1cefc",
+      "bytes": 116587,
+      "metadata": {
+        "description": "Create and edit scenes, artwork, animation, themes, and interactivity with Motion Copilot inside Lottie Creator.",
+        "og:title": "Motion Copilot",
+        "article:published_time": "2026-10-08T10:45:52.000Z",
+        "article:modified_time": "2026-10-08T10:45:52.000Z"
+      },
+      "note": ""
+    },
+    {
+      "id": "L06",
+      "publisher": "LottieFiles",
+      "kind": "documentation",
+      "url": "https://docs.lottiefiles.com/en/platform/mcp/tools",
+      "final_url": "https://docs.lottiefiles.com/en/platform/mcp/tools",
+      "title": "Tools and Workflow",
+      "retrieved_at": "2026-10-08T16:35:48.291830+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "7c1e71d31320f54f929705c931b76901391740fb852b849ed941247a6e5675ec",
+      "bytes": 89363,
+      "metadata": {
+        "description": "Complete reference for the four LottieFiles MCP workbench tools, plus resources, prompts, example usage, and rate limits.",
+        "og:title": "Tools and Workflow",
+        "article:published_time": "2026-10-08T10:45:52.000Z",
+        "article:modified_time": "2026-10-08T10:45:52.000Z"
+      },
+      "note": ""
+    },
+    {
+      "id": "L07",
+      "publisher": "LottieFiles",
+      "kind": "documentation",
+      "url": "https://docs.lottiefiles.com/en/platform/mcp/security",
+      "final_url": "https://docs.lottiefiles.com/en/platform/mcp/security",
+      "title": "Auth, Security, and FAQ",
+      "retrieved_at": "2026-10-08T16:35:48.215336+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "9cb31f9e46f3d8507805dccf8d3936770dd8f41f58f50fcebd145728b268f697",
+      "bytes": 79794,
+      "metadata": {
+        "description": "How the LottieFiles MCP server authenticates with OAuth, how to revoke access, security guidance, and fixes for common connection issues.",
+        "og:title": "Auth, Security, and FAQ",
+        "article:published_time": "2026-10-08T10:45:52.000Z",
+        "article:modified_time": "2026-10-08T10:45:52.000Z"
+      },
+      "note": "Applies to hosted Platform MCP, not automatically to local Creator bridge."
+    },
+    {
+      "id": "L08",
+      "publisher": "LottieFiles",
+      "kind": "product_page",
+      "url": "https://lottiefiles.com/tools/lottie-accessibility-analyzer",
+      "final_url": "https://lottiefiles.com/tools/lottie-accessibility-analyzer",
+      "title": "Free Lottie Accessibility Analyzer - LottieFiles",
+      "retrieved_at": "2026-10-08T16:31:37.206238+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "1e74c3d24616f67060c47e7a85bdf95df01a78ba57e830d6e6264f437906436f",
+      "bytes": 449632,
+      "metadata": {
+        "description": "Analyze your Lottie animations with the Lottie Accessibility Analyzer. Ensure WCAG/ADA compliance with optimized color contrast, motion & speed for inclusivity.",
+        "og:title": "Free Lottie Accessibility Analyzer - LottieFiles"
+      },
+      "note": "Analyzer availability does not establish WCAG compliance."
+    },
+    {
+      "id": "V01",
+      "publisher": "SVGator",
+      "kind": "documentation",
+      "url": "https://www.svgator.com/help/svgator-mcp/what-is-the-svgator-mcp-server",
+      "final_url": "https://www.svgator.com/help/svgator-mcp/what-is-the-svgator-mcp-server",
+      "title": "What is the SVGator MCP server?",
+      "retrieved_at": "2026-10-08T16:35:47.436883+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "eb80265410efc8e6b78b62ac066e5065e9566efe4dbad632ec538d57d40dbce6",
+      "bytes": 452498,
+      "metadata": {
+        "description": "The SVGator MCP server connects any AI assistant straight to your SVGator account. Once it's set up, you can edit animations, create motion, and export files in multiple formats by describing what you want, and the assistant does the work using SVGator's own tools.",
+        "og:title": "What is the SVGator MCP server?"
+      },
+      "note": ""
+    },
+    {
+      "id": "V02",
+      "publisher": "SVGator",
+      "kind": "documentation",
+      "url": "https://www.svgator.com/help/svgator-mcp/static-vs-animated-the-one-rule-to-know",
+      "final_url": "https://www.svgator.com/help/svgator-mcp/static-vs-animated-the-one-rule-to-know",
+      "title": "Static vs. animated: the one rule to know",
+      "retrieved_at": "2026-10-08T16:35:47.437961+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "cc73f4dfb3cf083644e76f16a19cd7e64aad8ea2d935e4d8e6b5bbdf6359e0dc",
+      "bytes": 451524,
+      "metadata": {
+        "description": "When you edit a project through an AI assistant, an edit can be reported as successful without changing anything you can see. This happens when the property you changed is animated, and it is the most common source of confusion.",
+        "og:title": "Static vs. animated: the one rule to know"
+      },
+      "note": ""
+    },
+    {
+      "id": "V03",
+      "publisher": "SVGator",
+      "kind": "documentation",
+      "url": "https://www.svgator.com/help/svgator-mcp/previews-and-verifying-changes",
+      "final_url": "https://www.svgator.com/help/svgator-mcp/previews-and-verifying-changes",
+      "title": "Previews and verifying changes",
+      "retrieved_at": "2026-10-08T16:35:47.441803+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "c0bbaff3a3cd51e373f944b894da8b2344e71ebe0daf90af9d9a6e5695457f77",
+      "bytes": 450901,
+      "metadata": {
+        "description": null,
+        "og:title": "Previews and verifying changes"
+      },
+      "note": ""
+    },
+    {
+      "id": "V04",
+      "publisher": "SVGator",
+      "kind": "documentation",
+      "url": "https://www.svgator.com/help/svgator-mcp/limitations-good-practices",
+      "final_url": "https://www.svgator.com/help/svgator-mcp/limitations-good-practices",
+      "title": "Limitations & good practices",
+      "retrieved_at": "2026-10-08T16:35:47.446330+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "e31a244aa24f6e666c700c85ba2377b0a522c16691e42142d57476f353e0522e",
+      "bytes": 453059,
+      "metadata": {
+        "description": "Knowing where the connector stops, and how it likes to be worked with, saves a lot of back and forth. Here is what to expect and what to steer clear of.",
+        "og:title": "Limitations & good practices"
+      },
+      "note": ""
+    },
+    {
+      "id": "V05",
+      "publisher": "SVGator",
+      "kind": "documentation",
+      "url": "https://www.svgator.com/help/svgator-mcp/export-and-deliver-your-animation",
+      "final_url": "https://www.svgator.com/help/svgator-mcp/export-and-deliver-your-animation",
+      "title": "Export and deliver your animation",
+      "retrieved_at": "2026-10-08T16:35:47.447142+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "cc8195ff74432a17650262a66c74737c76c48451959a67bef8a7c440de028a30",
+      "bytes": 453293,
+      "metadata": {
+        "description": "When a project is ready, you can ask the assistant to export it in the format you need. There are several formats to choose from, and a couple of things worth knowing about how the files reach you.",
+        "og:title": "Export and deliver your animation"
+      },
+      "note": ""
+    },
+    {
+      "id": "V06",
+      "publisher": "SVGator",
+      "kind": "documentation",
+      "url": "https://www.svgator.com/help/export-and-file-formats/lottie-support-in-svgator",
+      "final_url": "https://www.svgator.com/help/export-and-file-formats/lottie-support-in-svgator",
+      "title": "Lottie Support in SVGator | SVGator",
+      "retrieved_at": "2026-10-08T23:04:33.816588+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "6d15ce968fac56e82789ed56b31ff3303e9ce8508535ed0d53f41825ad403d5c",
+      "bytes": 453782,
+      "metadata": {
+        "description": "We've created the Beta version of Lottie support which is still undergoing final testing before its official release. Check it out to learn more.",
+        "og:title": "Lottie Support in SVGator | SVGator"
+      },
+      "note": "Help page still labels Lottie support Beta; product/export pages present it as available."
+    },
+    {
+      "id": "C01",
+      "publisher": "Canva",
+      "kind": "documentation",
+      "url": "https://www.canva.dev/docs/connect/mcp-server/",
+      "final_url": "https://www.canva.dev/docs/apps/dev-mcp-server/",
+      "title": "Dev MCP server - Canva Developers SDK Documentation",
+      "retrieved_at": "2026-10-08T16:31:37.611021+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "a0c4c6301dda337b3cde010bcb79066c696263734ac00501bcabe152ba6ebbe6",
+      "bytes": 90598,
+      "metadata": {
+        "description": "How to configure the Canva Dev MCP server for an AI-assisted developer experience.",
+        "og:title": "Dev MCP server - Canva Developers SDK Documentation"
+      },
+      "note": "Redirects to Apps Dev MCP documentation. Developer assistant, not design-account connector."
+    },
+    {
+      "id": "C02",
+      "publisher": "Canva",
+      "kind": "access_gate",
+      "url": "https://www.canva.com/ai/",
+      "final_url": "https://www.canva.com/login/?redirect=%2Fai%2F",
+      "title": "Unsupported client – Canva",
+      "retrieved_at": "2026-10-08T16:30:31.499319+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": false,
+      "sha256": "bcd69f0705be88aa465df4c903b90b7e03b9d3577f45ced087cd533f684ba7d6",
+      "bytes": 8377,
+      "metadata": {
+        "description": "Unsupported client – Canva",
+        "og:title": ""
+      },
+      "note": "HTTP 200 serves Unsupported client rather than product evidence."
+    },
+    {
+      "id": "C03",
+      "publisher": "Canva",
+      "kind": "access_gate",
+      "url": "https://www.canva.com/help/mcp-agent-setup/",
+      "final_url": "https://www.canva.com/help/mcp-agent-setup/",
+      "title": "Unsupported client – Canva",
+      "retrieved_at": "2026-10-08T16:35:48.327720+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": false,
+      "sha256": "bcd69f0705be88aa465df4c903b90b7e03b9d3577f45ced087cd533f684ba7d6",
+      "bytes": 8377,
+      "metadata": {
+        "description": "Unsupported client – Canva",
+        "og:title": ""
+      },
+      "note": "HTTP 200 serves Unsupported client rather than connector documentation."
+    },
+    {
+      "id": "A01",
+      "publisher": "Adobe",
+      "kind": "documentation",
+      "url": "https://developer.adobe.com/firefly-services/docs/firefly-api/",
+      "final_url": "https://developer.adobe.com/firefly-services/docs/firefly-api/",
+      "title": "Overview - Adobe Firefly API",
+      "retrieved_at": "2026-10-08T16:30:31.587005+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "59a14a35e0ca9305167eb892ccc2cde61234cb61ca76887cbfb37ee4a6c06602",
+      "bytes": 15347,
+      "metadata": {
+        "description": "An overview of the Adobe Firefly API",
+        "og:title": "Overview - Adobe Firefly API"
+      },
+      "note": "Image/custom-model/compositing APIs; not proof of native animation document authoring."
+    },
+    {
+      "id": "B01",
+      "publisher": "Esoteric Software",
+      "kind": "documentation",
+      "url": "https://esotericsoftware.com/spine-meshes",
+      "final_url": "https://esotericsoftware.com/spine-meshes",
+      "title": "Mesh attachments - Spine User Guide",
+      "retrieved_at": "2026-10-08T23:04:03.170763+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "5270da4d54c08dad90c833696bcd6465df84e26c10bde853540d69a8066ffe76",
+      "bytes": 33012,
+      "metadata": {},
+      "note": "Mesh feature excluded from Essential in the documentation."
+    },
+    {
+      "id": "B02",
+      "publisher": "Esoteric Software",
+      "kind": "documentation",
+      "url": "https://esotericsoftware.com/spine-weights",
+      "final_url": "https://esotericsoftware.com/spine-weights",
+      "title": "Weights view - Spine User Guide",
+      "retrieved_at": "2026-10-08T23:04:33.815615+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "bdd282ad82172e29457337b7cfcb6e812c4132156cd50d27d42e1987b4c3a8cf",
+      "bytes": 25764,
+      "metadata": {},
+      "note": ""
+    },
+    {
+      "id": "B03",
+      "publisher": "Esoteric Software",
+      "kind": "legal",
+      "url": "https://esotericsoftware.com/spine-runtimes-license",
+      "final_url": "https://esotericsoftware.com/spine-runtimes-license",
+      "title": "Spine Runtimes License Agreement",
+      "retrieved_at": "2026-10-08T23:03:40.504780+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "7560fd3343e842ab10ca563c51d4493068c7152114038b7a6167e603a68cef5d",
+      "bytes": 8238,
+      "metadata": {},
+      "note": "Published license is conditional, not interchangeable with MIT runtime licensing."
+    },
+    {
+      "id": "Q01",
+      "publisher": "Cavalry",
+      "kind": "documentation",
+      "url": "https://docs.cavalry.scenegroup.co/",
+      "final_url": "https://cavalry.studio/docs/",
+      "title": "Welcome | Cavalry",
+      "retrieved_at": "2026-10-08T23:03:40.505155+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "a200be3c35bf587678e7c6b61a4b270b866e12c877174dd3721b0990fdc26ecd",
+      "bytes": 19524,
+      "metadata": {
+        "og:title": "Welcome | Cavalry",
+        "description": "Cavalry is a powerful 2D Animation software for macOS and Windows making waves in the worlds of animation, motion design, creative coding, film, generative art, data visualisation, experiential and advertising."
+      },
+      "note": "Redirects to cavalry.studio/docs; procedural motion research reference only."
+    },
+    {
+      "id": "Q02",
+      "publisher": "Cavalry",
+      "kind": "documentation",
+      "url": "https://cavalry.studio/docs/user-interface/menus/file-menu/",
+      "final_url": "https://cavalry.studio/docs/user-interface/menus/file-menu/",
+      "title": "File menu | Cavalry",
+      "retrieved_at": "2026-10-08T23:04:33.816193+00:00",
+      "acquisition": "https",
+      "http_status": 200,
+      "usable": true,
+      "sha256": "d70fb8afa1570b75500fcf46fac956fdc4b479e555937b5e9fba3d260c64e470",
+      "bytes": 27460,
+      "metadata": {
+        "og:title": "File menu | Cavalry",
+        "description": "New Scene - Create a new empty Scene."
+      },
+      "note": ""
+    },
+    {
+      "id": "R12",
+      "publisher": "Rive",
+      "kind": "documentation_source",
+      "url": "https://github.com/rive-app/rive-docs/blob/18744eb41501f7014b2fb7c1c4a7b6719120e507/snippets/feature-support.jsx",
+      "title": "snippets/feature-support.jsx",
+      "retrieved_at": "2026-10-08T23:05:31.589983+00:00",
+      "acquisition": "git_blob",
+      "revision": "18744eb41501f7014b2fb7c1c4a7b6719120e507",
+      "path": "snippets/feature-support.jsx",
+      "usable": true,
+      "sha256": "fdbb324c545cf4f7dbd05a9ce9c2b3870d17032d21235004ada8d964e395c5b0",
+      "bytes": 36330,
+      "note": "Actual per-feature/per-runtime values; extracted HTML alone omits these."
+    },
+    {
+      "id": "R13",
+      "publisher": "Rive",
+      "kind": "documentation_source",
+      "url": "https://github.com/rive-app/rive-docs/blob/18744eb41501f7014b2fb7c1c4a7b6719120e507/feature-support.mdx",
+      "title": "Feature Support",
+      "retrieved_at": "2026-10-08T23:05:31.589983+00:00",
+      "acquisition": "git_blob",
+      "revision": "18744eb41501f7014b2fb7c1c4a7b6719120e507",
+      "path": "feature-support.mdx",
+      "usable": true,
+      "sha256": "48f86abeee7a8e788a311b21d37b9309f5689b2baee59e7974fdc2a51082735f",
+      "bytes": 8649,
+      "note": "Includes React Native GPU Canvas 0.5.3 opt-in and legacy API removals."
+    },
+    {
+      "id": "R14",
+      "publisher": "Rive",
+      "kind": "documentation_source",
+      "url": "https://github.com/rive-app/rive-docs/blob/18744eb41501f7014b2fb7c1c4a7b6719120e507/editor/accessibility/semantics.mdx",
+      "title": "Semantics",
+      "retrieved_at": "2026-10-08T23:05:31.589983+00:00",
+      "acquisition": "git_blob",
+      "revision": "18744eb41501f7014b2fb7c1c4a7b6719120e507",
+      "path": "editor/accessibility/semantics.mdx",
+      "usable": true,
+      "sha256": "c4d1e910749f905a01c019e9f14c5e22615fb9346bce4c5c43a5afcb4c946f46",
+      "bytes": 7919,
+      "note": "Explicit runtime in-development/experimental qualification."
+    },
+    {
+      "id": "R15",
+      "publisher": "Rive",
+      "kind": "documentation_source",
+      "url": "https://github.com/rive-app/rive-docs/blob/18744eb41501f7014b2fb7c1c4a7b6719120e507/editor/accessibility/reduced-motion.mdx",
+      "title": "Reduced Motion",
+      "retrieved_at": "2026-10-08T23:05:31.589983+00:00",
+      "acquisition": "git_blob",
+      "revision": "18744eb41501f7014b2fb7c1c4a7b6719120e507",
+      "path": "editor/accessibility/reduced-motion.mdx",
+      "usable": true,
+      "sha256": "5b0cd201e5817747a9d029eebf3760665efc5047575cb058184d65f2710e09cf",
+      "bytes": 4438,
+      "note": "Host supplies preference; authors design reduced-motion behavior."
+    },
+    {
+      "id": "R16",
+      "publisher": "Rive",
+      "kind": "documentation_source",
+      "url": "https://github.com/rive-app/rive-docs/blob/18744eb41501f7014b2fb7c1c4a7b6719120e507/editor/data-binding/overview.mdx",
+      "title": "Data Binding Overview",
+      "retrieved_at": "2026-10-08T23:05:31.589983+00:00",
+      "acquisition": "git_blob",
+      "revision": "18744eb41501f7014b2fb7c1c4a7b6719120e507",
+      "path": "editor/data-binding/overview.mdx",
+      "usable": true,
+      "sha256": "16f75104e24718c77fe7433ae2ac3994b79125bbb39ea68fb86d8b303b7f0424",
+      "bytes": 1700,
+      "note": ""
+    },
+    {
+      "id": "R17",
+      "publisher": "Rive",
+      "kind": "documentation_source",
+      "url": "https://github.com/rive-app/rive-docs/blob/18744eb41501f7014b2fb7c1c4a7b6719120e507/editor/data-binding/stateful-components.mdx",
+      "title": "Stateful Components",
+      "retrieved_at": "2026-10-08T23:05:31.589983+00:00",
+      "acquisition": "git_blob",
+      "revision": "18744eb41501f7014b2fb7c1c4a7b6719120e507",
+      "path": "editor/data-binding/stateful-components.mdx",
+      "usable": true,
+      "sha256": "4bfe99e0946781af7e44d57078a0bcfa1612b543eb57fca6256dcb1c81fa9e8c",
+      "bytes": 3476,
+      "note": ""
+    },
+    {
+      "id": "R18",
+      "publisher": "Rive",
+      "kind": "documentation_source",
+      "url": "https://github.com/rive-app/rive-docs/blob/18744eb41501f7014b2fb7c1c4a7b6719120e507/editor/data-binding/property-types.mdx",
+      "title": "View Model Properties",
+      "retrieved_at": "2026-10-08T23:05:31.589983+00:00",
+      "acquisition": "git_blob",
+      "revision": "18744eb41501f7014b2fb7c1c4a7b6719120e507",
+      "path": "editor/data-binding/property-types.mdx",
+      "usable": true,
+      "sha256": "1308312b8682bdf6063003672882cd13211160a3f4c735a7c63e21866176ec26",
+      "bytes": 5177,
+      "note": ""
+    },
+    {
+      "id": "R19",
+      "publisher": "Rive",
+      "kind": "documentation_source",
+      "url": "https://github.com/rive-app/rive-docs/blob/18744eb41501f7014b2fb7c1c4a7b6719120e507/editor/data-binding/converters.mdx",
+      "title": "Converters",
+      "retrieved_at": "2026-10-08T23:05:31.589983+00:00",
+      "acquisition": "git_blob",
+      "revision": "18744eb41501f7014b2fb7c1c4a7b6719120e507",
+      "path": "editor/data-binding/converters.mdx",
+      "usable": true,
+      "sha256": "01001f72406682330900cfb623a1e0adc6102581009c62c675283a367157499b",
+      "bytes": 6683,
+      "note": ""
+    },
+    {
+      "id": "R20",
+      "publisher": "Rive",
+      "kind": "documentation_source",
+      "url": "https://github.com/rive-app/rive-docs/blob/18744eb41501f7014b2fb7c1c4a7b6719120e507/editor/data-binding/lists.mdx",
+      "title": "Lists",
+      "retrieved_at": "2026-10-08T23:05:31.589983+00:00",
+      "acquisition": "git_blob",
+      "revision": "18744eb41501f7014b2fb7c1c4a7b6719120e507",
+      "path": "editor/data-binding/lists.mdx",
+      "usable": true,
+      "sha256": "1e0eae81e19e9d898eb57267607d73c05accd37f0c93418d569b5fc0ccdefb38",
+      "bytes": 8952,
+      "note": ""
+    },
+    {
+      "id": "R21",
+      "publisher": "Rive",
+      "kind": "documentation_source",
+      "url": "https://github.com/rive-app/rive-docs/blob/18744eb41501f7014b2fb7c1c4a7b6719120e507/editor/layouts/layouts-overview.mdx",
+      "title": "Overview",
+      "retrieved_at": "2026-10-08T23:05:31.589983+00:00",
+      "acquisition": "git_blob",
+      "revision": "18744eb41501f7014b2fb7c1c4a7b6719120e507",
+      "path": "editor/layouts/layouts-overview.mdx",
+      "usable": true,
+      "sha256": "156406d6e6a7ca2f079e6ada5e51d6d5d5ee2bfa8fed1e1877126e599e226168",
+      "bytes": 7295,
+      "note": ""
+    },
+    {
+      "id": "R22",
+      "publisher": "Rive",
+      "kind": "documentation_source",
+      "url": "https://github.com/rive-app/rive-docs/blob/18744eb41501f7014b2fb7c1c4a7b6719120e507/editor/layouts/n-slicing.mdx",
+      "title": "N-Slicing",
+      "retrieved_at": "2026-10-08T23:05:31.589983+00:00",
+      "acquisition": "git_blob",
+      "revision": "18744eb41501f7014b2fb7c1c4a7b6719120e507",
+      "path": "editor/layouts/n-slicing.mdx",
+      "usable": true,
+      "sha256": "629561343d385321a18827037a53617580c7f83be1bd1b371902ccfaee916a2d",
+      "bytes": 5322,
+      "note": ""
+    },
+    {
+      "id": "R23",
+      "publisher": "Rive",
+      "kind": "documentation_source",
+      "url": "https://github.com/rive-app/rive-docs/blob/18744eb41501f7014b2fb7c1c4a7b6719120e507/editor/constraints/scroll-constraint.mdx",
+      "title": "Scroll Constraints",
+      "retrieved_at": "2026-10-08T23:05:31.589983+00:00",
+      "acquisition": "git_blob",
+      "revision": "18744eb41501f7014b2fb7c1c4a7b6719120e507",
+      "path": "editor/constraints/scroll-constraint.mdx",
+      "usable": true,
+      "sha256": "e20b6007608bbf1e9fbc178c1bb3c3d1ad7c94565edab8878b211d74213df062",
+      "bytes": 4805,
+      "note": ""
+    },
+    {
+      "id": "R24",
+      "publisher": "Rive",
+      "kind": "documentation_source",
+      "url": "https://github.com/rive-app/rive-docs/blob/18744eb41501f7014b2fb7c1c4a7b6719120e507/scripting/protocols/overview.mdx",
+      "title": "Protocols",
+      "retrieved_at": "2026-10-08T23:05:31.589983+00:00",
+      "acquisition": "git_blob",
+      "revision": "18744eb41501f7014b2fb7c1c4a7b6719120e507",
+      "path": "scripting/protocols/overview.mdx",
+      "usable": true,
+      "sha256": "ce415ccddd3adbcc47d37e6a4d966a21c8e22256658d84b80d8a288e805fd2c7",
+      "bytes": 1564,
+      "note": ""
+    },
+    {
+      "id": "R25",
+      "publisher": "Rive",
+      "kind": "documentation_source",
+      "url": "https://github.com/rive-app/rive-docs/blob/18744eb41501f7014b2fb7c1c4a7b6719120e507/scripting/wgsl-shaders.mdx",
+      "title": "WGSL Shaders",
+      "retrieved_at": "2026-10-08T23:05:31.589983+00:00",
+      "acquisition": "git_blob",
+      "revision": "18744eb41501f7014b2fb7c1c4a7b6719120e507",
+      "path": "scripting/wgsl-shaders.mdx",
+      "usable": true,
+      "sha256": "840f7dd44f7757cd1b4da6668bbef8e1f0bb8fe1ab8549c2007d34afdfedc713",
+      "bytes": 8755,
+      "note": ""
+    },
+    {
+      "id": "R26",
+      "publisher": "Rive",
+      "kind": "documentation_source",
+      "url": "https://github.com/rive-app/rive-docs/blob/18744eb41501f7014b2fb7c1c4a7b6719120e507/scripting/debugging/unit-testing.mdx",
+      "title": "Unit Testing",
+      "retrieved_at": "2026-10-08T23:05:31.589983+00:00",
+      "acquisition": "git_blob",
+      "revision": "18744eb41501f7014b2fb7c1c4a7b6719120e507",
+      "path": "scripting/debugging/unit-testing.mdx",
+      "usable": true,
+      "sha256": "eced07a1ea692d101c364ee24d8d96995fbc2b1c260486dea2058bec83719d48",
+      "bytes": 3359,
+      "note": ""
+    },
+    {
+      "id": "R27",
+      "publisher": "Rive",
+      "kind": "documentation_source",
+      "url": "https://github.com/rive-app/rive-docs/blob/18744eb41501f7014b2fb7c1c4a7b6719120e507/editor/libraries.mdx",
+      "title": "Libraries",
+      "retrieved_at": "2026-10-08T23:05:31.589983+00:00",
+      "acquisition": "git_blob",
+      "revision": "18744eb41501f7014b2fb7c1c4a7b6719120e507",
+      "path": "editor/libraries.mdx",
+      "usable": true,
+      "sha256": "5f058cd13c112d9e11709848d26400275fc06b95be8d3df0f2c8e1b4181ee440",
+      "bytes": 7338,
+      "note": "Same-project library access; cross-project and public library scope still roadmap."
+    },
+    {
+      "id": "R28",
+      "publisher": "Rive",
+      "kind": "documentation_source",
+      "url": "https://github.com/rive-app/rive-docs/blob/18744eb41501f7014b2fb7c1c4a7b6719120e507/editor/fundamentals/revision-history.mdx",
+      "title": "Revision History",
+      "retrieved_at": "2026-10-08T23:05:31.589983+00:00",
+      "acquisition": "git_blob",
+      "revision": "18744eb41501f7014b2fb7c1c4a7b6719120e507",
+      "path": "editor/fundamentals/revision-history.mdx",
+      "usable": true,
+      "sha256": "89e141ad89fdb98dfcd162b519672410245160a9ca92a9e489af585e614f89c6",
+      "bytes": 1120,
+      "note": ""
+    },
+    {
+      "id": "R29",
+      "publisher": "Rive",
+      "kind": "documentation_source",
+      "url": "https://github.com/rive-app/rive-docs/blob/18744eb41501f7014b2fb7c1c4a7b6719120e507/editor/exporting/exporting-for-runtime.mdx",
+      "title": "Exporting for Runtime",
+      "retrieved_at": "2026-10-08T23:05:31.589983+00:00",
+      "acquisition": "git_blob",
+      "revision": "18744eb41501f7014b2fb7c1c4a7b6719120e507",
+      "path": "editor/exporting/exporting-for-runtime.mdx",
+      "usable": true,
+      "sha256": "a3b0bde20a26a8a884f6256448f77babde3fef83a6222b91bdf738a103f6df69",
+      "bytes": 1415,
+      "note": "Paid-only export note conflicts with current free splash-screen export pricing."
+    },
+    {
+      "id": "R30",
+      "publisher": "Rive",
+      "kind": "documentation_source",
+      "url": "https://github.com/rive-app/rive-docs/blob/18744eb41501f7014b2fb7c1c4a7b6719120e507/editor/exporting/exporting-for-backup.mdx",
+      "title": "Exporting for Backup",
+      "retrieved_at": "2026-10-08T23:05:31.589983+00:00",
+      "acquisition": "git_blob",
+      "revision": "18744eb41501f7014b2fb7c1c4a7b6719120e507",
+      "path": "editor/exporting/exporting-for-backup.mdx",
+      "usable": true,
+      "sha256": "3c7a0afaab47d64f319deb845d62943a8b12f2c5066d5763c01761cd017ce90a",
+      "bytes": 1304,
+      "note": ".rev contains information stripped from runtime .riv."
+    },
+    {
+      "id": "R31",
+      "publisher": "Rive",
+      "kind": "documentation_source",
+      "url": "https://github.com/rive-app/rive-docs/blob/18744eb41501f7014b2fb7c1c4a7b6719120e507/editor/state-machine/states.mdx",
+      "title": "States",
+      "retrieved_at": "2026-10-08T23:05:31.589983+00:00",
+      "acquisition": "git_blob",
+      "revision": "18744eb41501f7014b2fb7c1c4a7b6719120e507",
+      "path": "editor/state-machine/states.mdx",
+      "usable": true,
+      "sha256": "72a01e2feb2fe135eb14be77e74a8dff79e9e00f70b7ada5aa04fc3e1b9f02c9",
+      "bytes": 9461,
+      "note": ""
+    },
+    {
+      "id": "R32",
+      "publisher": "Rive",
+      "kind": "documentation_source",
+      "url": "https://github.com/rive-app/rive-docs/blob/18744eb41501f7014b2fb7c1c4a7b6719120e507/editor/state-machine/transitions.mdx",
+      "title": "Transitions",
+      "retrieved_at": "2026-10-08T23:05:31.589983+00:00",
+      "acquisition": "git_blob",
+      "revision": "18744eb41501f7014b2fb7c1c4a7b6719120e507",
+      "path": "editor/state-machine/transitions.mdx",
+      "usable": true,
+      "sha256": "23189a2420475f600556a85fbc533243b6a5f1c38364e9bee8bffc1843b51a8c",
+      "bytes": 9352,
+      "note": ""
+    },
+    {
+      "id": "R33",
+      "publisher": "Rive",
+      "kind": "documentation_source",
+      "url": "https://github.com/rive-app/rive-docs/blob/18744eb41501f7014b2fb7c1c4a7b6719120e507/editor/state-machine/listeners.mdx",
+      "title": "Listeners",
+      "retrieved_at": "2026-10-08T23:05:31.589983+00:00",
+      "acquisition": "git_blob",
+      "revision": "18744eb41501f7014b2fb7c1c4a7b6719120e507",
+      "path": "editor/state-machine/listeners.mdx",
+      "usable": true,
+      "sha256": "3b3b9fe6c56033502d810ca0533d139f0775c9dd4e04ac9e2ef49401fff8f591",
+      "bytes": 8675,
+      "note": ""
+    },
+    {
+      "id": "R34",
+      "publisher": "Rive",
+      "kind": "documentation_source",
+      "url": "https://github.com/rive-app/rive-docs/blob/18744eb41501f7014b2fb7c1c4a7b6719120e507/editor/manipulating-shapes/bones.mdx",
+      "title": "Bones",
+      "retrieved_at": "2026-10-08T23:05:31.589983+00:00",
+      "acquisition": "git_blob",
+      "revision": "18744eb41501f7014b2fb7c1c4a7b6719120e507",
+      "path": "editor/manipulating-shapes/bones.mdx",
+      "usable": true,
+      "sha256": "296d46082ec3f7d90c86b63d337f30087ab22a9e806d5820176a4c4e522ca470",
+      "bytes": 7749,
+      "note": ""
+    },
+    {
+      "id": "R35",
+      "publisher": "Rive",
+      "kind": "documentation_source",
+      "url": "https://github.com/rive-app/rive-docs/blob/18744eb41501f7014b2fb7c1c4a7b6719120e507/editor/manipulating-shapes/meshes.mdx",
+      "title": "Meshes",
+      "retrieved_at": "2026-10-08T23:05:31.589983+00:00",
+      "acquisition": "git_blob",
+      "revision": "18744eb41501f7014b2fb7c1c4a7b6719120e507",
+      "path": "editor/manipulating-shapes/meshes.mdx",
+      "usable": true,
+      "sha256": "3fd4b6091f4ec60b30754c390b75dcaf800466fdc064a94d1a79a0ed89d21a18",
+      "bytes": 7281,
+      "note": ""
+    },
+    {
+      "id": "R36",
+      "publisher": "Rive",
+      "kind": "documentation_source",
+      "url": "https://github.com/rive-app/rive-docs/blob/18744eb41501f7014b2fb7c1c4a7b6719120e507/editor/constraints/ik-constraint.mdx",
+      "title": "IK Constraint",
+      "retrieved_at": "2026-10-08T23:05:31.589983+00:00",
+      "acquisition": "git_blob",
+      "revision": "18744eb41501f7014b2fb7c1c4a7b6719120e507",
+      "path": "editor/constraints/ik-constraint.mdx",
+      "usable": true,
+      "sha256": "fc2842f1a29009ab826997c7a926194e40ce9ad84b79a9cc580a061e9ceae83d",
+      "bytes": 4104,
+      "note": ""
+    },
+    {
+      "id": "R37",
+      "publisher": "Rive",
+      "kind": "documentation_source",
+      "url": "https://github.com/rive-app/rive-docs/blob/18744eb41501f7014b2fb7c1c4a7b6719120e507/editor/text/text-overview.mdx",
+      "title": "Text",
+      "retrieved_at": "2026-10-08T23:05:31.589983+00:00",
+      "acquisition": "git_blob",
+      "revision": "18744eb41501f7014b2fb7c1c4a7b6719120e507",
+      "path": "editor/text/text-overview.mdx",
+      "usable": true,
+      "sha256": "e2537451170748a1cefc08a87cce0135d3bfad12cf96df421e0274cc6e909423",
+      "bytes": 3949,
+      "note": ""
+    },
+    {
+      "id": "R38",
+      "publisher": "Rive",
+      "kind": "documentation_source",
+      "url": "https://github.com/rive-app/rive-docs/blob/18744eb41501f7014b2fb7c1c4a7b6719120e507/editor/text/fonts.mdx",
+      "title": "Font Assets",
+      "retrieved_at": "2026-10-08T23:05:31.589983+00:00",
+      "acquisition": "git_blob",
+      "revision": "18744eb41501f7014b2fb7c1c4a7b6719120e507",
+      "path": "editor/text/fonts.mdx",
+      "usable": true,
+      "sha256": "be7ed299a950d0074de06cb34b118460e853a9bdfb67444c375e13af37ef470d",
+      "bytes": 1792,
+      "note": ""
+    },
+    {
+      "id": "R39",
+      "publisher": "Rive",
+      "kind": "documentation_source",
+      "url": "https://github.com/rive-app/rive-docs/blob/18744eb41501f7014b2fb7c1c4a7b6719120e507/editor/assets/audio.mdx",
+      "title": "Audio Assets",
+      "retrieved_at": "2026-10-08T23:05:31.589983+00:00",
+      "acquisition": "git_blob",
+      "revision": "18744eb41501f7014b2fb7c1c4a7b6719120e507",
+      "path": "editor/assets/audio.mdx",
+      "usable": true,
+      "sha256": "c51f94ee5fcbd9da2fee58f8174d1813b864adcb78e6b574bcf86329c3fcee9b",
+      "bytes": 2453,
+      "note": ""
+    },
+    {
+      "id": "R40",
+      "publisher": "Rive",
+      "kind": "documentation_source",
+      "url": "https://github.com/rive-app/rive-docs/blob/18744eb41501f7014b2fb7c1c4a7b6719120e507/runtimes/web/canvas-vs-webgl.mdx",
+      "title": "Canvas vs WebGL2",
+      "retrieved_at": "2026-10-08T23:05:31.589983+00:00",
+      "acquisition": "git_blob",
+      "revision": "18744eb41501f7014b2fb7c1c4a7b6719120e507",
+      "path": "runtimes/web/canvas-vs-webgl.mdx",
+      "usable": true,
+      "sha256": "9cbeb6ce95301b08f05e1d37f963a9d79386039b981e35b1ae75f0f5f3d36873",
+      "bytes": 5287,
+      "note": ""
+    }
+  ],
+  "request_log": [
+    {
+      "url": "https://esotericsoftware.com/",
+      "retrieved_at": "2026-10-08T23:04:03.169733+00:00",
+      "status": 200,
+      "final_url": "https://esotericsoftware.com/",
+      "title": "Spine: 2D skeletal animation for games",
+      "sha256": "95229e6ba6f38cd5f6464bb880b9e862981995b2c158a8d6d09891e110bfcad0"
+    },
+    {
+      "url": "https://penpot.app/features",
+      "retrieved_at": "2026-10-08T16:31:35.393566+00:00",
+      "status": 200,
+      "final_url": "https://penpot.app/features",
+      "title": "Penpot: Design and Code Features to collaborate at scale.",
+      "sha256": "19dacf8576c666cbd131becb99f57a520198fd1986a1fc77b9c780ca96714b17"
+    },
+    {
+      "url": "https://www.svgator.com/help/export-and-file-formats/lottie-support-in-svgator",
+      "retrieved_at": "2026-10-08T23:04:33.816588+00:00",
+      "status": 200,
+      "final_url": "https://www.svgator.com/help/export-and-file-formats/lottie-support-in-svgator",
+      "title": "Lottie Support in SVGator | SVGator",
+      "sha256": "6d15ce968fac56e82789ed56b31ff3303e9ce8508535ed0d53f41825ad403d5c"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/penpot/penpot/2c08a065bbbb12fa3036a7c9ae8526d43bec4f49/mcp/README.md",
+      "retrieved_at": "2026-10-08T23:02:50.569789+00:00",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/penpot/penpot/2c08a065bbbb12fa3036a7c9ae8526d43bec4f49/mcp/README.md",
+      "title": "",
+      "sha256": "f34970a33134b7abb995791c08d04beebea724f05799fa16e9fb11b9e7d20984"
+    },
+    {
+      "url": "https://rive.app/docs/scripting/wgsl-shaders",
+      "retrieved_at": "2026-10-08T23:03:40.505509+00:00",
+      "status": 200,
+      "final_url": "https://rive.app/docs/scripting/wgsl-shaders",
+      "title": "WGSL Shaders - Rive",
+      "sha256": "3927c491500922bdd6abd3cd40c9ffd55e968c8980cbe0da768a4aaf894d0608"
+    },
+    {
+      "url": "https://rive.app/blog/rive-ai-coding-agent-faq",
+      "retrieved_at": "2026-10-08T16:31:34.405321+00:00",
+      "status": 200,
+      "final_url": "https://rive.app/blog/rive-ai-coding-agent-faq",
+      "title": "FAQ: Rive AI Coding Agent",
+      "sha256": "a5a606eb1a5179103137d0c96e56746243e1479da5bfdb7e1fb520c8e92b53f6"
+    },
+    {
+      "url": "https://www.canva.com/help/mcp-agent-setup/",
+      "retrieved_at": "2026-10-08T16:35:48.327720+00:00",
+      "status": 200,
+      "final_url": "https://www.canva.com/help/mcp-agent-setup/",
+      "title": "Unsupported client – Canva",
+      "sha256": "bcd69f0705be88aa465df4c903b90b7e03b9d3577f45ced087cd533f684ba7d6"
+    },
+    {
+      "url": "https://www.svgator.com/help/svgator-mcp/previews-and-verifying-changes",
+      "retrieved_at": "2026-10-08T16:35:47.441803+00:00",
+      "status": 200,
+      "final_url": "https://www.svgator.com/help/svgator-mcp/previews-and-verifying-changes",
+      "title": "Previews and verifying changes",
+      "sha256": "c0bbaff3a3cd51e373f944b894da8b2344e71ebe0daf90af9d9a6e5695457f77"
+    },
+    {
+      "url": "https://rive.app/docs/cli/agents",
+      "retrieved_at": "2026-10-08T16:31:34.407800+00:00",
+      "status": 200,
+      "final_url": "https://rive.app/docs/cli/agents",
+      "title": "Working with AI Agents - Rive",
+      "sha256": "392369f0bc23f254872ed6aac1536f6c9a91af064b972f97713a6ac8c5df0eda"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/figma/mcp-server-guide/main/README.md",
+      "retrieved_at": "2026-10-08T16:31:37.420637+00:00",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/figma/mcp-server-guide/main/README.md",
+      "title": "",
+      "sha256": "83c01782db56e60fc29842ab7ccb469f2732564faa9f0120b7bdbe463e1729d7"
+    },
+    {
+      "url": "https://www.canva.dev/docs/connect/mcp-server/",
+      "retrieved_at": "2026-10-08T16:31:37.611021+00:00",
+      "status": 200,
+      "final_url": "https://www.canva.dev/docs/apps/dev-mcp-server/",
+      "title": "Dev MCP server - Canva Developers SDK Documentation",
+      "sha256": "a0c4c6301dda337b3cde010bcb79066c696263734ac00501bcabe152ba6ebbe6"
+    },
+    {
+      "url": "https://spline.design/solutions/design-with-ai-agents-mcp-3d",
+      "retrieved_at": "2026-10-08T16:31:36.454733+00:00",
+      "status": 200,
+      "final_url": "https://spline.design/solutions/design-with-ai-agents-mcp-3d",
+      "title": "Design with AI Agents - Spline",
+      "sha256": "731324bfac7a0d4154ff92435697c5c5ad58e7bbe099955835ac3802263d07b6"
+    },
+    {
+      "url": "https://spline.design/hana",
+      "retrieved_at": "2026-10-08T16:35:47.436354+00:00",
+      "status": 200,
+      "final_url": "https://spline.design/hana",
+      "title": "Spline Hana - A design canvas powered by AI agents",
+      "sha256": "1788d22050fba24845f34cb19c7c41a2cd7ba36a40008533971b2775ea73f57b"
+    },
+    {
+      "url": "https://esotericsoftware.com/spine-features",
+      "retrieved_at": "2026-10-08T23:03:40.503830+00:00",
+      "status": 404,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://rive.app/docs/editor/interface-overview/debug-panel",
+      "retrieved_at": "2026-10-08T16:31:35.281281+00:00",
+      "status": 200,
+      "final_url": "https://rive.app/docs/editor/interface-overview/debug-panel",
+      "title": "Debug Panel - Rive",
+      "sha256": "a8ce590a347e106df7ae1b91034ad599be3d9d09575283ca2ef99daac8ccd67a"
+    },
+    {
+      "url": "https://spline.design/solutions/interactive-2d-design",
+      "retrieved_at": "2026-10-08T23:02:20.722638+00:00",
+      "status": 200,
+      "final_url": "https://spline.design/solutions/interactive-2d-design",
+      "title": "Interactive 2D Design - Spline",
+      "sha256": "cb2b4b27e1f431aebde38e4e1b378fafe211ef4c4d39df46e867be8d7619cf50"
+    },
+    {
+      "url": "https://www.canva.com/ai/",
+      "retrieved_at": "2026-10-08T16:30:31.499319+00:00",
+      "status": 200,
+      "final_url": "https://www.canva.com/login/?redirect=%2Fai%2F",
+      "title": "Unsupported client – Canva",
+      "sha256": "bcd69f0705be88aa465df4c903b90b7e03b9d3577f45ced087cd533f684ba7d6"
+    },
+    {
+      "url": "https://rive.app/docs/feature-support",
+      "retrieved_at": "2026-10-08T23:03:40.506066+00:00",
+      "status": 200,
+      "final_url": "https://rive.app/docs/feature-support",
+      "title": "Feature Support - Rive",
+      "sha256": "3a26611dde061cb47e98405931a52a0739e486482aa43ed799bf679ebdd920ca"
+    },
+    {
+      "url": "https://spline.design/ai-style-transfer",
+      "retrieved_at": "2026-10-08T16:31:36.582988+00:00",
+      "status": 200,
+      "final_url": "https://spline.design/ai-style-transfer",
+      "title": "Spline AI Style Transfer - 3D Design with AI.",
+      "sha256": "2cf451a3034867bc4e9049976d183c3d507dec586f984a89371280ebee383adf"
+    },
+    {
+      "url": "https://www.svgator.com/help/svgator-mcp/static-vs-animated-the-one-rule-to-know",
+      "retrieved_at": "2026-10-08T16:35:47.437961+00:00",
+      "status": 200,
+      "final_url": "https://www.svgator.com/help/svgator-mcp/static-vs-animated-the-one-rule-to-know",
+      "title": "Static vs. animated: the one rule to know",
+      "sha256": "cc73f4dfb3cf083644e76f16a19cd7e64aad8ea2d935e4d8e6b5bbdf6359e0dc"
+    },
+    {
+      "url": "https://spline.design/sitemap.xml",
+      "retrieved_at": "2026-10-08T16:30:30.552675+00:00",
+      "status": 200,
+      "final_url": "https://spline.design/sitemap.xml",
+      "title": "",
+      "sha256": "0180729e3d64c5c8f886d50bb6ee14eaee467cb0122d82b442545efa1b9440e9"
+    },
+    {
+      "url": "https://rive.app/changelog",
+      "retrieved_at": "2026-10-08T16:31:34.405756+00:00",
+      "status": 200,
+      "final_url": "https://rive.app/changelog",
+      "title": "Rive Changelog",
+      "sha256": "013bae45614d168ed7cd7f1dbd422237dd32795dc6bbf8542d5797f442a5462c"
+    },
+    {
+      "url": "https://www.framer.com/agents/",
+      "retrieved_at": "2026-10-08T16:31:35.502787+00:00",
+      "status": 200,
+      "final_url": "https://www.framer.com/agents/",
+      "title": "Framer: Agents",
+      "sha256": "bb79c9fe6858a9780008630af618d4349d3e4a3e4c380cd6a8b8276bb149a68f"
+    },
+    {
+      "url": "https://www.svgator.com/blog/sitemap.xml",
+      "retrieved_at": "2026-10-08T16:31:37.410768+00:00",
+      "status": 200,
+      "final_url": "https://www.svgator.com/blog/sitemap.xml",
+      "title": "",
+      "sha256": "277db903311f713043778a73e54e4f0e54878bd316625b6b43a5f5d4cd36844b"
+    },
+    {
+      "url": "https://rive.app/docs/cli/overview",
+      "retrieved_at": "2026-10-08T16:31:34.406497+00:00",
+      "status": 200,
+      "final_url": "https://rive.app/docs/cli/overview",
+      "title": "Rive CLI - Rive",
+      "sha256": "ad47930bf2058de289637b3e6c021ac68e21009e7812c54b5a21d1dc0c40d3f7"
+    },
+    {
+      "url": "https://lottiefiles.com/tools/ai-to-svg",
+      "retrieved_at": "2026-10-08T16:31:37.198666+00:00",
+      "status": 200,
+      "final_url": "https://lottiefiles.com/tools/ai-to-svg",
+      "title": "Adobe Illustrator to SVG Convertor | LottieFiles",
+      "sha256": "02fe608d385fb017f00681e12a31a4d7438f6ca0332f34e22a605ff9e92aeaa2"
+    },
+    {
+      "url": "https://penpot.app/ai/mcp-server",
+      "retrieved_at": "2026-10-08T16:31:35.331972+00:00",
+      "status": 200,
+      "final_url": "https://penpot.app/ai/mcp-server",
+      "title": "Penpot MCP server",
+      "sha256": "e04084cb7dfa7dd0054ff9fac7c8dd809a01a089b422b078de170932ad317a0b"
+    },
+    {
+      "url": "https://api.github.com/repos/figma/mcp-server-guide/commits/main",
+      "retrieved_at": "2026-10-08T23:02:32.313302+00:00",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/figma/mcp-server-guide/commits/main",
+      "title": "",
+      "sha256": "ef876e97aefd1bc016fd73f324cd8af59e345a66396fda37721b4462a70f49a7"
+    },
+    {
+      "url": "https://docs.lottiefiles.com/en/creator/13_ai-tools/lottie-creator-mcp",
+      "retrieved_at": "2026-10-08T16:35:48.192088+00:00",
+      "status": 200,
+      "final_url": "https://docs.lottiefiles.com/en/creator/13_ai-tools/lottie-creator-mcp",
+      "title": "Lottie Creator MCP",
+      "sha256": "81940f44da2b0f87d74aa1c0338d7373f566aab474cca72e81518971f88eb357"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/figma/mcp-server-guide/f0493295acf5f7cbdebcbcc483c06de814420cb1/README.md",
+      "retrieved_at": "2026-10-08T23:02:50.568949+00:00",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/figma/mcp-server-guide/f0493295acf5f7cbdebcbcc483c06de814420cb1/README.md",
+      "title": "",
+      "sha256": "83c01782db56e60fc29842ab7ccb469f2732564faa9f0120b7bdbe463e1729d7"
+    },
+    {
+      "url": "https://rive.app/sitemap.xml",
+      "retrieved_at": "2026-10-08T16:30:30.549327+00:00",
+      "status": 200,
+      "final_url": "https://rive.app/sitemap.xml",
+      "title": "",
+      "sha256": "79bc0e9d17e9307f466660458fb20105c7ff7acdad3aa273028775083036f736"
+    },
+    {
+      "url": "https://www.svgator.com/sitemap/sitemap-0.xml",
+      "retrieved_at": "2026-10-08T16:31:37.282078+00:00",
+      "status": 200,
+      "final_url": "https://www.svgator.com/sitemap/sitemap-0.xml",
+      "title": "",
+      "sha256": "9515065cf6b09547c05407cf8c89799830ef86e0daee3f7e6869bb81a58efe5c"
+    },
+    {
+      "url": "https://rive.app/docs/editor/ai/mcp",
+      "retrieved_at": "2026-10-08T16:30:30.551425+00:00",
+      "status": 200,
+      "final_url": "https://rive.app/docs/editor/ai/mcp",
+      "title": "Rive MCP Integration - Rive",
+      "sha256": "408e9a8408f8e23d95ebf6d3e91471d1506f56b2c5cfae033fc45d796e75c758"
+    },
+    {
+      "url": "https://www.svgator.com/sitemap.xml",
+      "retrieved_at": "2026-10-08T16:30:31.356326+00:00",
+      "status": 200,
+      "final_url": "https://www.svgator.com/sitemap.xml",
+      "title": "",
+      "sha256": "8f77e6b16b40fcf99abcb0fdf3bd63dc2f4019196e6ce192a6b22ee40f0329e6"
+    },
+    {
+      "url": "https://docs.lottiefiles.com/en/platform/mcp/security",
+      "retrieved_at": "2026-10-08T16:35:48.215336+00:00",
+      "status": 200,
+      "final_url": "https://docs.lottiefiles.com/en/platform/mcp/security",
+      "title": "Auth, Security, and FAQ",
+      "sha256": "9cb31f9e46f3d8507805dccf8d3936770dd8f41f58f50fcebd145728b268f697"
+    },
+    {
+      "url": "https://help.penpot.app/mcp/",
+      "retrieved_at": "2026-10-08T16:35:47.434966+00:00",
+      "status": 200,
+      "final_url": "https://help.penpot.app/mcp/",
+      "title": "Penpot MCP server",
+      "sha256": "7500e256ccf72bca93dd0ae846836cf1c53a04b0e9a47e42369b5b97dcab652c"
+    },
+    {
+      "url": "https://docs.cavalry.scenegroup.co/",
+      "retrieved_at": "2026-10-08T23:03:40.505155+00:00",
+      "status": 200,
+      "final_url": "https://cavalry.studio/docs/",
+      "title": "Welcome | Cavalry",
+      "sha256": "a200be3c35bf587678e7c6b61a4b270b866e12c877174dd3721b0990fdc26ecd"
+    },
+    {
+      "url": "https://lottiefiles.com/ai-vector-generator",
+      "retrieved_at": "2026-10-08T16:31:36.865886+00:00",
+      "status": 200,
+      "final_url": "https://lottiefiles.com/ai-vector-generator",
+      "title": "LottieFiles: Download Free lightweight animations for website & apps.",
+      "sha256": "6a6536b6cbb6013c473c94f93aa2ac1de174edf27f3c91bb35b03c59e6d2584c"
+    },
+    {
+      "url": "https://esotericsoftware.com/spine-runtimes-license",
+      "retrieved_at": "2026-10-08T23:03:40.504780+00:00",
+      "status": 200,
+      "final_url": "https://esotericsoftware.com/spine-runtimes-license",
+      "title": "Spine Runtimes License Agreement",
+      "sha256": "7560fd3343e842ab10ca563c51d4493068c7152114038b7a6167e603a68cef5d"
+    },
+    {
+      "url": "https://developers.figma.com/docs/figma-mcp-server/",
+      "retrieved_at": "2026-10-08T16:30:31.584135+00:00",
+      "status": null,
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://api.github.com/repos/penpot/penpot/commits/develop",
+      "retrieved_at": "2026-10-08T23:02:32.314056+00:00",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/penpot/penpot/commits/develop",
+      "title": "",
+      "sha256": "cfb2e0f728bbc9b90a516bf0cdb5e353b3b553f2b21f922bd36519d611049341"
+    },
+    {
+      "url": "https://lottiefiles.com/sitemap/static-routes.xml",
+      "retrieved_at": "2026-10-08T16:30:31.321489+00:00",
+      "status": 200,
+      "final_url": "https://lottiefiles.com/sitemap/static-routes.xml",
+      "title": "",
+      "sha256": "bab6217e03b99f3dc2607c430e61766ef7505d17cd00ae152d94b2ab0c45b73f"
+    },
+    {
+      "url": "https://cavalry.studio/docs/user-interface/menus/file-menu/",
+      "retrieved_at": "2026-10-08T23:04:33.816193+00:00",
+      "status": 200,
+      "final_url": "https://cavalry.studio/docs/user-interface/menus/file-menu/",
+      "title": "File menu | Cavalry",
+      "sha256": "d70fb8afa1570b75500fcf46fac956fdc4b479e555937b5e9fba3d260c64e470"
+    },
+    {
+      "url": "https://api.github.com/repos/rive-app/rive-docs/commits/main",
+      "retrieved_at": "2026-10-08T23:02:32.314806+00:00",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/rive-app/rive-docs/commits/main",
+      "title": "",
+      "sha256": "c59f39cef347133780f1dc56327f9a1b0b800678e1443d2e84481889c98720aa"
+    },
+    {
+      "url": "https://cavalry.studio/docs/scripting/",
+      "retrieved_at": "2026-10-08T23:04:03.171965+00:00",
+      "status": 404,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://esotericsoftware.com/spine-weights",
+      "retrieved_at": "2026-10-08T23:04:33.815615+00:00",
+      "status": 200,
+      "final_url": "https://esotericsoftware.com/spine-weights",
+      "title": "Weights view - Spine User Guide",
+      "sha256": "bdd282ad82172e29457337b7cfcb6e812c4132156cd50d27d42e1987b4c3a8cf"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/penpot/penpot/develop/mcp/README.md",
+      "retrieved_at": "2026-10-08T16:35:47.435777+00:00",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/penpot/penpot/develop/mcp/README.md",
+      "title": "",
+      "sha256": "f34970a33134b7abb995791c08d04beebea724f05799fa16e9fb11b9e7d20984"
+    },
+    {
+      "url": "https://esotericsoftware.com/spine-editor-meshes",
+      "retrieved_at": "2026-10-08T23:03:40.504387+00:00",
+      "status": 404,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://lottiefiles.com/mcp",
+      "retrieved_at": "2026-10-08T16:31:36.749888+00:00",
+      "status": 200,
+      "final_url": "https://lottiefiles.com/mcp",
+      "title": "LottieFiles MCP — Create motion with ChatGPT, Claude, Cursor",
+      "sha256": "3e65c0c8641f5b44fae74668caae4da35f341a000012b3d45b6ef7a68bff3a49"
+    },
+    {
+      "url": "https://rive.app/blog/free-rive-ai-agent",
+      "retrieved_at": "2026-10-08T16:31:34.404010+00:00",
+      "status": 200,
+      "final_url": "https://rive.app/blog/free-rive-ai-agent",
+      "title": "Free Rive AI Agent",
+      "sha256": "f59520282bd5a254ec81fd8450e3dfb249be190634441e9116903ee5276bb609"
+    },
+    {
+      "url": "https://www.svgator.com/help/svgator-mcp/limitations-good-practices",
+      "retrieved_at": "2026-10-08T16:35:47.446330+00:00",
+      "status": 200,
+      "final_url": "https://www.svgator.com/help/svgator-mcp/limitations-good-practices",
+      "title": "Limitations & good practices",
+      "sha256": "e31a244aa24f6e666c700c85ba2377b0a522c16691e42142d57476f353e0522e"
+    },
+    {
+      "url": "https://spline.design/ai-generate",
+      "retrieved_at": "2026-10-08T16:31:36.496589+00:00",
+      "status": 200,
+      "final_url": "https://spline.design/ai-generate",
+      "title": "Spline AI 3D Generation – The power of AI for the 3rd dimension.",
+      "sha256": "b62a9434d1d757e29be21c8d41b02b43f0bc8df4c176ead79be9dc66838126c9"
+    },
+    {
+      "url": "https://penpot.app/sitemap.xml",
+      "retrieved_at": "2026-10-08T16:30:30.558643+00:00",
+      "status": 200,
+      "final_url": "https://penpot.app/sitemap.xml",
+      "title": "",
+      "sha256": "a5219a8f98fc2865b2d95329feba0e9dc4b7a8d27f3fb4028b88072d8af9c309"
+    },
+    {
+      "url": "https://www.framer.com/sitemap_en.xml",
+      "retrieved_at": "2026-10-08T16:30:30.552152+00:00",
+      "status": 200,
+      "final_url": "https://www.framer.com/sitemap_en.xml",
+      "title": "",
+      "sha256": "3320276bed67dc98b58bc2cdf15995d247a81348071640adb3393f6c1aa53c75"
+    },
+    {
+      "url": "https://docs.lottiefiles.com/en/platform/mcp/tools",
+      "retrieved_at": "2026-10-08T16:35:48.291830+00:00",
+      "status": 200,
+      "final_url": "https://docs.lottiefiles.com/en/platform/mcp/tools",
+      "title": "Tools and Workflow",
+      "sha256": "7c1e71d31320f54f929705c931b76901391740fb852b849ed941247a6e5675ec"
+    },
+    {
+      "url": "https://spline.design/pricing",
+      "retrieved_at": "2026-10-08T16:31:36.616519+00:00",
+      "status": 200,
+      "final_url": "https://spline.design/pricing",
+      "title": "Spline Pricing - Interactive 3D experiences in real-time in the browser",
+      "sha256": "296f4d7150bd7a3d447b73b16d4ff9dba58fc9ded3e40dd02760baa9921ca29c"
+    },
+    {
+      "url": "https://www.framer.com/agents/external/",
+      "retrieved_at": "2026-10-08T16:31:35.523582+00:00",
+      "status": 200,
+      "final_url": "https://www.framer.com/agents/external/",
+      "title": "Framer: Connect Claude, Cursor, Codex, Grok, and more to Framer",
+      "sha256": "7c77e8b536e93e36934dc0a668f1adc476c64960093b7ecc36e1c70605c05119"
+    },
+    {
+      "url": "https://www.framer.com/legal/ai-notice",
+      "retrieved_at": "2026-10-08T16:31:36.195706+00:00",
+      "status": 200,
+      "final_url": "https://www.framer.com/legal/ai-notice",
+      "title": "Framer: AI notice",
+      "sha256": "9e56d1a9f1f19c8a8467a63c3fc1e2219d157fd930c5214c920517e058e1ee20"
+    },
+    {
+      "url": "https://developer.adobe.com/firefly-services/docs/firefly-api/",
+      "retrieved_at": "2026-10-08T16:30:31.587005+00:00",
+      "status": 200,
+      "final_url": "https://developer.adobe.com/firefly-services/docs/firefly-api/",
+      "title": "Overview - Adobe Firefly API",
+      "sha256": "59a14a35e0ca9305167eb892ccc2cde61234cb61ca76887cbfb37ee4a6c06602"
+    },
+    {
+      "url": "https://rive.app/features",
+      "retrieved_at": "2026-10-08T16:31:34.406114+00:00",
+      "status": 200,
+      "final_url": "https://rive.app/features",
+      "title": "Rive Features",
+      "sha256": "3cf1b8853a06c2ddc02481b7352b6ae44fae1fdb043e0fb06695ff5575fb06bb"
+    },
+    {
+      "url": "https://www.framer.com/updates/agents",
+      "retrieved_at": "2026-10-08T23:02:20.721279+00:00",
+      "status": 404,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://rive.app/pricing",
+      "retrieved_at": "2026-10-08T16:30:30.550481+00:00",
+      "status": 200,
+      "final_url": "https://rive.app/pricing",
+      "title": "Rive Pricing",
+      "sha256": "92bbe6d8a5f59077e8b26729da9dae99c2a90775068138e2acb76d6bab6aad63"
+    },
+    {
+      "url": "https://www.svgator.com/help/svgator-mcp/export-and-deliver-your-animation",
+      "retrieved_at": "2026-10-08T16:35:47.447142+00:00",
+      "status": 200,
+      "final_url": "https://www.svgator.com/help/svgator-mcp/export-and-deliver-your-animation",
+      "title": "Export and deliver your animation",
+      "sha256": "cc8195ff74432a17650262a66c74737c76c48451959a67bef8a7c440de028a30"
+    },
+    {
+      "url": "https://www.framer.com/help/articles/use-external-agents-with-framer/",
+      "retrieved_at": "2026-10-08T16:31:35.668177+00:00",
+      "status": 200,
+      "final_url": "https://www.framer.com/help/articles/use-external-agents-with-framer/",
+      "title": "Framer Help: Use external agents with Framer",
+      "sha256": "30dc4ed930d7b39503742928e5bc57e6b418dc8a6115c0f7701d2ca576ab0a65"
+    },
+    {
+      "url": "https://help.figma.com/hc/en-us/articles/31304485164695-Figma-Make-overview",
+      "retrieved_at": "2026-10-08T16:30:31.580558+00:00",
+      "status": null,
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://cavalry.studio/docs/user-interface/",
+      "retrieved_at": "2026-10-08T23:04:03.171552+00:00",
+      "status": 404,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.framer.com/blog/building-framer-agents/",
+      "retrieved_at": "2026-10-08T16:35:48.329021+00:00",
+      "status": 200,
+      "final_url": "https://www.framer.com/blog/building-framer-agents/",
+      "title": "Building Agents for Framer",
+      "sha256": "3a6d24adcd5c9c9918458e520b6ca89757a8efdfe8335b5cbcb17cb773b92002"
+    },
+    {
+      "url": "https://rive.app/blog",
+      "retrieved_at": "2026-10-08T16:30:30.550068+00:00",
+      "status": 200,
+      "final_url": "https://rive.app/blog",
+      "title": "Rive Blog",
+      "sha256": "7d08a335128d44e463d137c4699deb0eed95a466d1a6fd250adb659ca3de1c7b"
+    },
+    {
+      "url": "https://www.svgator.com/help/svgator-mcp/what-is-the-svgator-mcp-server",
+      "retrieved_at": "2026-10-08T16:35:47.436883+00:00",
+      "status": 200,
+      "final_url": "https://www.svgator.com/help/svgator-mcp/what-is-the-svgator-mcp-server",
+      "title": "What is the SVGator MCP server?",
+      "sha256": "eb80265410efc8e6b78b62ac066e5065e9566efe4dbad632ec538d57d40dbce6"
+    },
+    {
+      "url": "https://docs.lottiefiles.com/en/creator/13_ai-tools/motion-copilot",
+      "retrieved_at": "2026-10-08T23:02:20.719643+00:00",
+      "status": 200,
+      "final_url": "https://docs.lottiefiles.com/en/creator/13_ai-tools/motion-copilot",
+      "title": "Motion Copilot",
+      "sha256": "9d902a7b26bf99e1e661fde3dc9e95fb704aec9e3a159fe4aba69b5abdf1cefc"
+    },
+    {
+      "url": "https://www.framer.com/pricing",
+      "retrieved_at": "2026-10-08T16:31:36.344198+00:00",
+      "status": 200,
+      "final_url": "https://www.framer.com/pricing",
+      "title": "Framer: Pricing",
+      "sha256": "1b1b74a7af9fc9be4566d88fa90f3ba56892349380b8aa044eea0866f79c8d6c"
+    },
+    {
+      "url": "https://esotericsoftware.com/spine-user-guide",
+      "retrieved_at": "2026-10-08T23:04:03.170325+00:00",
+      "status": 200,
+      "final_url": "https://esotericsoftware.com/spine-user-guide",
+      "title": "Spine User Guide",
+      "sha256": "ae40560717efd4d6f73bb3157f3961623a3d9bae71c1d59212444f2ca78299be"
+    },
+    {
+      "url": "https://esotericsoftware.com/spine-features-overview",
+      "retrieved_at": "2026-10-08T23:04:03.171121+00:00",
+      "status": 404,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://penpot.app/ai/ai-workflows",
+      "retrieved_at": "2026-10-08T16:31:35.357587+00:00",
+      "status": 200,
+      "final_url": "https://penpot.app/ai/ai-workflows",
+      "title": "Penpot AI Workflows",
+      "sha256": "abe2c87092233687a31d173db3737bbda7f20cfee5c340cb52021be1cf778228"
+    },
+    {
+      "url": "https://lottiefiles.com/tools/lottie-accessibility-analyzer",
+      "retrieved_at": "2026-10-08T16:31:37.206238+00:00",
+      "status": 200,
+      "final_url": "https://lottiefiles.com/tools/lottie-accessibility-analyzer",
+      "title": "Free Lottie Accessibility Analyzer - LottieFiles",
+      "sha256": "1e74c3d24616f67060c47e7a85bdf95df01a78ba57e830d6e6264f437906436f"
+    },
+    {
+      "url": "https://docs.lottiefiles.com/en/creator/13_ai-tools/lottie-creator-webmcp",
+      "retrieved_at": "2026-10-08T23:02:20.718760+00:00",
+      "status": 200,
+      "final_url": "https://docs.lottiefiles.com/en/creator/13_ai-tools/lottie-creator-webmcp",
+      "title": "Lottie Creator WebMCP",
+      "sha256": "c63c4108833b7e492da0ebf1d437b44dcbed6b4bd3ead5bdd70f5c8a1cf7b1b5"
+    },
+    {
+      "url": "https://www.framer.com/updates",
+      "retrieved_at": "2026-10-08T16:31:35.524622+00:00",
+      "status": 200,
+      "final_url": "https://www.framer.com/updates",
+      "title": "Framer Updates: Features and improvements",
+      "sha256": "70cc9d65ed9e040b696904053c2cd58c687da13281adce86a251b92ee0eef46a"
+    },
+    {
+      "url": "https://esotericsoftware.com/spine-meshes",
+      "retrieved_at": "2026-10-08T23:04:03.170763+00:00",
+      "status": 200,
+      "final_url": "https://esotericsoftware.com/spine-meshes",
+      "title": "Mesh attachments - Spine User Guide",
+      "sha256": "5270da4d54c08dad90c833696bcd6465df84e26c10bde853540d69a8066ffe76"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/figma/mcp-server-guide/main/skills/write-to-canvas/SKILL.md",
+      "retrieved_at": "2026-10-08T23:02:20.720351+00:00",
+      "status": 404,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://rive.app/blog/scripting-is-live-in-rive",
+      "retrieved_at": "2026-10-08T16:31:34.404873+00:00",
+      "status": 200,
+      "final_url": "https://rive.app/blog/scripting-is-live-in-rive",
+      "title": "Scripting is live in Rive",
+      "sha256": "bf37deb928bb11ff96cbdbc795f4e263117f26c314ce57b8dfd447955abbc26c"
+    },
+    {
+      "url": "https://rive.app/docs/editor/ai-agent/ai-agent",
+      "retrieved_at": "2026-10-08T16:30:30.550916+00:00",
+      "status": 200,
+      "final_url": "https://rive.app/docs/editor/ai-agent/ai-agent",
+      "title": "AI Agent - Rive",
+      "sha256": "bea1abbcf660812fcfa3c260f3ce0d67682a3d703b4de2f994be67096c0c22e2"
+    },
+    {
+      "url": "https://lottiefiles.com/lottie-creator",
+      "retrieved_at": "2026-10-08T16:31:36.811035+00:00",
+      "status": 200,
+      "final_url": "https://lottiefiles.com/lottie-creator",
+      "title": "Lottie Creator: Make Lottie Animations in Your Browser",
+      "sha256": "15449b87c41fb5d5c08d8ee27f0b875d6437e344e3321a0c3300be3c40fc89d8"
+    }
+  ]
+}

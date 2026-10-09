@@ -12,7 +12,7 @@ Inspired by the performance and interactivity of Rive, but fully open and indepe
 
 Most animation tools force a painful choice:
 
-- **Lottie** → Easy, but limited interactivity and heavier files
+- **Lottie** → Broad animation delivery ecosystem; interactive authoring and runtime capabilities vary by tool and format
 - **Rive** → Excellent performance + state machines, but the editor is closed-source
 - Traditional tools → Too heavy or not designed for real-time interaction
 
@@ -133,3 +133,7 @@ The [runtime research closure audit](docs/09-runtime-research-closure.md) covers
 ### Editor prototype
 
 The [Evir Studio workspace](editor/README.md) implements editable cubic paths, bone chains and control skinning, typed timelines, conditional state machines and a tested `.riv` export subset, alongside validated project persistence and transaction history. Run `npm run editor:serve` and open `http://127.0.0.1:8080/editor/`. [UI and workflow research](docs/11-editor-ux-research.md) compares Rive, Penpot, SVGator and Lottie Creator and records the decisions guiding the prototype. Run `npm run test:editor` followed by `npm run validate:editor` to exercise browser authoring and both official runtimes. [Milestone acceptance](docs/13-editor-milestone-acceptance.md) defines the completed subset and remaining scope.
+
+### Current platform and AI context
+
+The [feature audit](docs/14-platform-context-and-shipped-features.md) and [AI/agent authoring study](docs/15-ai-agent-authoring-research.md), reviewed on 9 October 2026, cover Rive and comparable platforms before further implementation. They distinguish documented availability, beta/experimental features, roadmap, runtime support and Evir's remaining gaps. The [evidence register](research/platform-context/README.md) records 78 primary sources, 43 structured claims, conflicting/outdated documentation and local CLI verification. No AI provider or agent transport is selected by this research.

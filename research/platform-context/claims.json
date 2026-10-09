@@ -1,0 +1,575 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-10-09",
+  "review_timezone": "Africa/Lagos",
+  "evir_baseline": "8f39c8b",
+  "classification_note": "documented/product_claim are not authenticated acceptance results or guarantees of general availability.",
+  "claims": [
+    {
+      "id": "rive-agent-free",
+      "publisher": "Rive",
+      "claim": "Native Agent on Free/Cadet with usage limits; premium plan capacity differs.",
+      "availability": "announced_available",
+      "source_ids": [
+        "R02",
+        "R03",
+        "R04",
+        "R05"
+      ],
+      "evir_coverage": "absent",
+      "limitations": "Older guides conflict with April announcement/current pricing.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "rive-free-export",
+      "publisher": "Rive",
+      "claim": "Free .riv exports with splash screen are advertised.",
+      "availability": "documented_with_conflict",
+      "source_ids": [
+        "R02",
+        "R29"
+      ],
+      "evir_coverage": "partial",
+      "limitations": "Evir writes a tested subset; account signing and splash behavior not exercised.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "rive-scripting",
+      "publisher": "Rive",
+      "claim": "Luau scripting launched as a core platform feature.",
+      "availability": "announced_available",
+      "source_ids": [
+        "R06",
+        "R24",
+        "R12"
+      ],
+      "evir_coverage": "absent",
+      "limitations": "Landing page retains Early Access badge; protocol/runtime support is separate.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "rive-agent-review",
+      "publisher": "Rive",
+      "claim": "Code diffs/accept-reject and pending Agent Changes review are documented.",
+      "availability": "documented",
+      "source_ids": [
+        "R06",
+        "R10"
+      ],
+      "evir_coverage": "absent",
+      "limitations": "Not proof every scene operation has identical granular rollback.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "rive-mcp",
+      "publisher": "Rive",
+      "claim": "Desktop scene/data/animation/script/shader MCP editing.",
+      "availability": "early_access_qualification",
+      "source_ids": [
+        "R07"
+      ],
+      "evir_coverage": "absent",
+      "limitations": "Windows/macOS; verification step mentions Early Access app; unexercised here.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "rive-cli",
+      "publisher": "Rive",
+      "claim": "RML file-agent authoring, schema lookup, verification and preview.",
+      "availability": "documented",
+      "source_ids": [
+        "R08",
+        "R09"
+      ],
+      "evir_coverage": "research_only",
+      "limitations": "Installed CLI 1.4.0 local verification exercised; account/remote workflows unrun.",
+      "execution": "local_verify_only"
+    },
+    {
+      "id": "rive-vector",
+      "publisher": "Rive",
+      "claim": "Vector paths, gradients, clipping, trim and feathering are listed.",
+      "availability": "documented",
+      "source_ids": [
+        "R01",
+        "R12",
+        "R40"
+      ],
+      "evir_coverage": "partial",
+      "limitations": "Studio solid rectangles/cubic paths only; feathering needs Rive Renderer.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "rive-character",
+      "publisher": "Rive",
+      "claim": "Bones, weighted meshes and IK authoring.",
+      "availability": "documented",
+      "source_ids": [
+        "R34",
+        "R35",
+        "R36"
+      ],
+      "evir_coverage": "partial",
+      "limitations": "Studio has chains/path-control skinning; mesh/IK authoring absent.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "rive-machines",
+      "publisher": "Rive",
+      "claim": "Layered state machines, blend states and state/transition actions.",
+      "availability": "documented",
+      "source_ids": [
+        "R31",
+        "R32",
+        "R33"
+      ],
+      "evir_coverage": "partial",
+      "limitations": "Studio supports one-layer conditional machines and click actions.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "rive-data-binding",
+      "publisher": "Rive",
+      "claim": "Typed view models, converters and list binding.",
+      "availability": "documented",
+      "source_ids": [
+        "R16",
+        "R18",
+        "R19",
+        "R20"
+      ],
+      "evir_coverage": "absent",
+      "limitations": "Runtime support differs by property family/version.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "rive-stateful-components",
+      "publisher": "Rive",
+      "claim": "Per-instance exposed inputs/read-only outputs; keyable inputs.",
+      "availability": "documented",
+      "source_ids": [
+        "R17",
+        "R12"
+      ],
+      "evir_coverage": "absent",
+      "limitations": "Requires component/instance and data models, not just groups.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "rive-layout",
+      "publisher": "Rive",
+      "claim": "Responsive layouts, n-slicing and scrolling constraints.",
+      "availability": "documented",
+      "source_ids": [
+        "R21",
+        "R22",
+        "R23"
+      ],
+      "evir_coverage": "absent",
+      "limitations": "Studio fixed artboard/TRS is not responsive layout authoring.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "rive-text-assets",
+      "publisher": "Rive",
+      "claim": "Text/font and image/audio workflows.",
+      "availability": "documented",
+      "source_ids": [
+        "R37",
+        "R38",
+        "R39",
+        "R01"
+      ],
+      "evir_coverage": "absent",
+      "limitations": "Stored assets are not rendered/exported; runtime delivery must be checked.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "rive-wgsl",
+      "publisher": "Rive",
+      "claim": "WGSL vertex/fragment programs render to GPU Canvas.",
+      "availability": "documented",
+      "source_ids": [
+        "R25",
+        "R12",
+        "R13"
+      ],
+      "evir_coverage": "absent",
+      "limitations": "No compute shaders; backend shader variants exported; no hardware measurement.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "rive-gpu-rn",
+      "publisher": "Rive",
+      "claim": "Nitro RN GPU Canvas 0.5.3+ with opt-in before file loading.",
+      "availability": "documented",
+      "source_ids": [
+        "R12",
+        "R13"
+      ],
+      "evir_coverage": "absent",
+      "limitations": "Native override floors Apple 6.25.0+/Android 11.12.0+; standalone Android row says coming soon.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "rive-semantics",
+      "publisher": "Rive",
+      "claim": "Semantic roles/properties/states/actions with runtime-specific support.",
+      "availability": "experimental",
+      "source_ids": [
+        "R14",
+        "R12",
+        "R13"
+      ],
+      "evir_coverage": "absent",
+      "limitations": "Experimental/development note remains; RN documented support iOS-only.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "rive-reduced-motion",
+      "publisher": "Rive",
+      "claim": "Host-passed preference and authored reduced-motion behavior.",
+      "availability": "documented",
+      "source_ids": [
+        "R15"
+      ],
+      "evir_coverage": "absent",
+      "limitations": "Not automatically applied by Rive.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "rive-text-input",
+      "publisher": "Rive",
+      "claim": "Text input matrix rows are coming soon or not applicable.",
+      "availability": "roadmap",
+      "source_ids": [
+        "R12"
+      ],
+      "evir_coverage": "absent",
+      "limitations": "Do not conflate dynamic text with text-entry input.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "rive-gamepad",
+      "publisher": "Rive",
+      "claim": "C++ gamepad support; other listed runtimes coming soon.",
+      "availability": "documented",
+      "source_ids": [
+        "R12"
+      ],
+      "evir_coverage": "absent",
+      "limitations": "Target-specific support, not universal availability.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "rive-libraries",
+      "publisher": "Rive",
+      "claim": "Same-project reusable component/view-model libraries.",
+      "availability": "documented",
+      "source_ids": [
+        "R27",
+        "R02"
+      ],
+      "evir_coverage": "absent",
+      "limitations": "Voyager/Enterprise; cross-project/workspace/public libraries described as planned.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "rive-library-roadmap",
+      "publisher": "Rive",
+      "claim": "Cross-project/workspace and public libraries are planned.",
+      "availability": "roadmap",
+      "source_ids": [
+        "R27"
+      ],
+      "evir_coverage": "absent",
+      "limitations": "Do not count the roadmap as shipped.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "rive-history",
+      "publisher": "Rive",
+      "claim": "Non-destructive revision restoration and collaboration.",
+      "availability": "documented",
+      "source_ids": [
+        "R28",
+        "R02"
+      ],
+      "evir_coverage": "partial",
+      "limitations": "Studio local persistence/undo, no cloud/team service.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "rive-backup",
+      "publisher": "Rive",
+      "claim": ".rev contains editor data stripped from runtime .riv.",
+      "availability": "documented",
+      "source_ids": [
+        "R30"
+      ],
+      "evir_coverage": "partial",
+      "limitations": "Evir saves own project source; full semantic .riv reconstruction absent.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "rive-legacy",
+      "publisher": "Rive",
+      "claim": "Legacy WebGL/RN and old event/text-run APIs are deprecated or removed.",
+      "availability": "documented",
+      "source_ids": [
+        "R13"
+      ],
+      "evir_coverage": "partial",
+      "limitations": "Current web oracles use 2.44.0; native migration not exercised.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "framer-native",
+      "publisher": "Framer",
+      "claim": "Native canvas agents with branch/rollback and verification feedback.",
+      "availability": "documented",
+      "source_ids": [
+        "F01",
+        "F02",
+        "F04"
+      ],
+      "evir_coverage": "absent",
+      "limitations": "Vendor engineering account, not independently benchmarked.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "framer-external",
+      "publisher": "Framer",
+      "claim": "External agent bridge accesses connected canvas/components/CMS and can publish when instructed.",
+      "availability": "documented",
+      "source_ids": [
+        "F02",
+        "F03"
+      ],
+      "evir_coverage": "absent",
+      "limitations": "Separate branch editing, merge and publishing authority.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "framer-training",
+      "publisher": "Framer",
+      "claim": "Training policy distinguishes third-party models, Enterprise and non-Enterprise opt-out.",
+      "availability": "documented",
+      "source_ids": [
+        "F05"
+      ],
+      "evir_coverage": "not_applicable",
+      "limitations": "Do not summarize as blanket no-training.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "figma-write",
+      "publisher": "Figma",
+      "claim": "Remote write-to-canvas and agent skills are beta.",
+      "availability": "beta",
+      "source_ids": [
+        "G01"
+      ],
+      "evir_coverage": "absent",
+      "limitations": "Read limits and write beta pricing differ; product hosts blocked.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "figma-capture",
+      "publisher": "Figma",
+      "claim": "Webpage capture into design is rolling out.",
+      "availability": "rollout",
+      "source_ids": [
+        "G01"
+      ],
+      "evir_coverage": "absent",
+      "limitations": "Not universal access.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "penpot-mcp",
+      "publisher": "Penpot",
+      "claim": "Official hosted/local MCP edits native documents through a focused-page plugin.",
+      "availability": "documented",
+      "source_ids": [
+        "P02",
+        "P03",
+        "P04"
+      ],
+      "evir_coverage": "absent",
+      "limitations": "Tab must remain connected/active; local and hosted tools differ.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "hana-agents",
+      "publisher": "Spline",
+      "claim": "Hana interactive 2D canvas with native agent and desktop external MCP.",
+      "availability": "product_claim",
+      "source_ids": [
+        "S01",
+        "S03"
+      ],
+      "evir_coverage": "absent",
+      "limitations": "No authenticated scene/undo/provider tests.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "spline-agents",
+      "publisher": "Spline",
+      "claim": "Agent-native 3D editing is advertised; generation/style transfer are separate.",
+      "availability": "product_claim",
+      "source_ids": [
+        "S02",
+        "S04",
+        "S05"
+      ],
+      "evir_coverage": "absent",
+      "limitations": "3D scope not silently adopted for character-first Evir.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "creator-agent",
+      "publisher": "LottieFiles",
+      "claim": "Motion Copilot, local MCP and WebMCP expose shared native editing capabilities.",
+      "availability": "documented",
+      "source_ids": [
+        "L03",
+        "L04",
+        "L05"
+      ],
+      "evir_coverage": "absent",
+      "limitations": "Includes keys/themes/segments/state machines; partial progress possible on failure.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "creator-webmcp",
+      "publisher": "LottieFiles",
+      "claim": "WebMCP needs compatible browser AND assistant page-tool support.",
+      "availability": "documented",
+      "source_ids": [
+        "L04",
+        "L02"
+      ],
+      "evir_coverage": "absent",
+      "limitations": "Specific October guide supersedes broad Chrome-only product text.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "lottiefiles-platform",
+      "publisher": "LottieFiles",
+      "claim": "Hosted Platform MCP is a schema-guided GraphQL account workbench.",
+      "availability": "documented",
+      "source_ids": [
+        "L06",
+        "L07"
+      ],
+      "evir_coverage": "absent",
+      "limitations": "Not the local Creator editing server; OAuth scope mcp:full.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "svgator-mcp",
+      "publisher": "SVGator",
+      "claim": "Account MCP supports inspection, edits, animation, preview and export.",
+      "availability": "documented",
+      "source_ids": [
+        "V01",
+        "V02",
+        "V03",
+        "V04",
+        "V05"
+      ],
+      "evir_coverage": "absent",
+      "limitations": "Validated edits; static/animated overrides flagged; whole rewrites last-writer-wins.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "svgator-lottie",
+      "publisher": "SVGator",
+      "claim": "Lottie support is available in export materials but help still labels it Beta.",
+      "availability": "beta_qualification",
+      "source_ids": [
+        "V06",
+        "V05"
+      ],
+      "evir_coverage": "not_applicable",
+      "limitations": "Current public maturity conflict; no universal export fidelity claim.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "canva-dev",
+      "publisher": "Canva",
+      "claim": "Dev MCP supports app development, not proof of end-user design editing.",
+      "availability": "documented",
+      "source_ids": [
+        "C01"
+      ],
+      "evir_coverage": "not_applicable",
+      "limitations": "Redirect destination matters.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "canva-product-ai",
+      "publisher": "Canva",
+      "claim": "End-user AI/connector scope could not be verified from gated pages.",
+      "availability": "not_verified",
+      "source_ids": [
+        "C02",
+        "C03"
+      ],
+      "evir_coverage": "not_applicable",
+      "limitations": "HTTP 200 returned Unsupported client, not usable documentation.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "firefly-media",
+      "publisher": "Adobe",
+      "claim": "Image/custom-model/compositing/upscale APIs are documented.",
+      "availability": "documented",
+      "source_ids": [
+        "A01"
+      ],
+      "evir_coverage": "absent",
+      "limitations": "Does not establish editable animation graph/rig/state-machine authoring.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "spine-mesh",
+      "publisher": "Esoteric Software",
+      "claim": "Mesh topology, weighted deformation and keyed vertices.",
+      "availability": "documented",
+      "source_ids": [
+        "B01",
+        "B02"
+      ],
+      "evir_coverage": "partial",
+      "limitations": "Meshes excluded from Essential; research reference only.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "spine-license",
+      "publisher": "Esoteric Software",
+      "claim": "Spine runtime integration has conditional license terms.",
+      "availability": "documented",
+      "source_ids": [
+        "B03"
+      ],
+      "evir_coverage": "not_applicable",
+      "limitations": "Not interchangeable with MIT or automatically reusable by an open editor.",
+      "execution": "vendor_evidence_only"
+    },
+    {
+      "id": "cavalry-reference",
+      "publisher": "Cavalry",
+      "claim": "Desktop 2D motion application and source/file workflows.",
+      "availability": "documented",
+      "source_ids": [
+        "Q01",
+        "Q02"
+      ],
+      "evir_coverage": "not_applicable",
+      "limitations": "AI/agent availability unestablished by reviewed sources.",
+      "execution": "vendor_evidence_only"
+    }
+  ]
+}

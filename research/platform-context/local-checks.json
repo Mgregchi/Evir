@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "binary": "/workspace/evir-research/rive-cli/bin/rive",
+  "resolved_binary": "/workspace/evir-research/rive-cli/bin/rive",
+  "binary_sha256": "0745363c424aa7b567a9da9da7befda6204fa5da809189a8dfb06f09418475b7",
+  "environment_override": {
+    "LD_LIBRARY_PATH": "/workspace/evir-research/native/root/usr/lib/x86_64-linux-gnu"
+  },
+  "checks": [
+    {
+      "name": "version",
+      "command": [
+        "/workspace/evir-research/rive-cli/bin/rive",
+        "--version"
+      ],
+      "cwd": "/workspace/Evir",
+      "started_at": "2026-10-08T23:10:03.037642+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "dbbfcd7c570ec865c521c862d98cfd0868ad818d16c3f74b9eab668379099bbd",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout": "rive 1.4.0\n"
+    },
+    {
+      "name": "help",
+      "command": [
+        "/workspace/evir-research/rive-cli/bin/rive",
+        "--help"
+      ],
+      "cwd": "/workspace/Evir",
+      "started_at": "2026-10-08T23:10:03.047924+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "a8e403c51d42a1557313d2eec070ccb612c766f49f421635124943859f5507bd",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "observed_flags": [
+        "--verify",
+        "--once",
+        "--test",
+        "--screenshot",
+        "--data-dump",
+        "--semantics",
+        "--bench",
+        "--publish",
+        "--from-rev"
+      ]
+    },
+    {
+      "name": "schema",
+      "command": [
+        "/workspace/evir-research/rive-cli/bin/rive",
+        "schema",
+        "Artboard"
+      ],
+      "cwd": "/workspace/Evir",
+      "started_at": "2026-10-08T23:10:03.056468+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "922f4998ea3db5d606bb389f76fc3fae785df839a15af742acd8dd26d5ce87ac",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "observations": [
+        "Artboard typeKey 1",
+        "30 properties",
+        "Animatable/bindable/derived distinctions",
+        "Editor-only properties hidden by default"
+      ]
+    },
+    {
+      "name": "existing_rml_verify",
+      "command": [
+        "/workspace/evir-research/rive-cli/bin/rive",
+        "research/rml/static",
+        "--verify",
+        "--format=json"
+      ],
+      "cwd": "/workspace/Evir",
+      "started_at": "2026-10-08T23:10:03.064628+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "19ca8db1be03b2e614673b7ccff9fada1cde9dfd34ed3d336c62756acd771b7d",
+      "stderr_sha256": "f49be99199042f51237cfab88face4f8964217d5032f83b082cf711110270125",
+      "stdout": "{\"success\": true, \"command\": \"verify\", \"data\": {\"riv\": null, \"bytes\": 0, \"buildMs\": 2.2, \"problems\": []}, \"errors\": [], \"warnings\": []}\n",
+      "stderr": "[23:10:03.107] rive  verified (0 bytes, 2ms, 0 errors, 0 warnings)\n",
+      "result": {
+        "success": true,
+        "command": "verify",
+        "data": {
+          "riv": null,
+          "bytes": 0,
+          "buildMs": 2.2,
+          "problems": []
+        },
+        "errors": [],
+        "warnings": []
+      }
+    }
+  ],
+  "limitations": [
+    "Existing RML compile validation only; verify writes no .riv.",
+    "No new renderer/pixel/performance test.",
+    "No login, account write, AI provider call, MCP session or publication.",
+    "Physical-device and equal-editor-scene audits remain pending."
+  ]
+}

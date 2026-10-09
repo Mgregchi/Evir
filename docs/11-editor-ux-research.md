@@ -2,6 +2,8 @@
 
 Evir's editor must make building and animating an interactive character understandable, predictable and pleasant. The user explicitly prioritized a clean interface and good user experience on 2026-10-08. This pass studies public primary documentation and visual references before implementing the first workspace. It does not claim that aesthetic similarity guarantees usability.
 
+The subsequent [platform feature audit](14-platform-context-and-shipped-features.md) and [AI/agent study](15-ai-agent-authoring-research.md) expand this context to current native agents, external editing tools, data/components, runtime support and availability conflicts. They supersede broad feature-availability assumptions without changing this prototype's recorded acceptance results.
+
 ## Platforms and evidence
 
 | Platform       | Material reviewed                                                                                                                | Useful patterns for Evir                                                                                                                         | Evidence limits                                                                                                                 |
