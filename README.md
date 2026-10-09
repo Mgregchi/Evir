@@ -38,13 +38,13 @@ Evir aims to close this gap by providing:
 
 ### Project Status
 
-**Early research & architecture phase**
+**Early research and working editor prototype**
 
 We are currently:
 
 - Designing the core architecture
 - Exploring the optimal file format
-- Planning the editor + runtime split
+- Developing the path, rigging, timeline and interaction editor subset
 - Studying high-performance vector rendering approaches
 
 ---
@@ -104,14 +104,13 @@ Compatibility layers can be considered later if valuable.
 
 ### Contributing
 
-This project is in very early stages.  
-If you're interested in high-performance animation, vector rendering, or building tools for interactive characters, feel free to open an issue or reach out.
+Start with [the contributor guide](CONTRIBUTING.md). Reproducible editing feedback, focused fixes, documentation and rendering experiments are welcome through the repository issues and pull requests.
 
 ---
 
 ### License
 
-TBD (likely MIT or Apache 2.0)
+[MIT](LICENSE) for project code. Third-party material and brand artwork retain their recorded provenance.
 
 ---
 
@@ -137,3 +136,9 @@ The [Evir Studio workspace](editor/README.md) implements editable cubic paths, b
 ### Current platform and AI context
 
 The [feature audit](docs/14-platform-context-and-shipped-features.md) and [AI/agent authoring study](docs/15-ai-agent-authoring-research.md), reviewed on 9 October 2026, cover Rive and comparable platforms before further implementation. They distinguish documented availability, beta/experimental features, roadmap, runtime support and Evir's remaining gaps. The [evidence register](research/platform-context/README.md) records 78 primary sources, 43 structured claims, conflicting/outdated documentation and local CLI verification. No AI provider or agent transport is selected by this research.
+
+### Public site and additional scene research
+
+The [public site](site/README.md) provides ten pages, original editable examples, actual Studio screenshots, contributor entry points and reviewable feedback drafting. Populate [the frontend environment settings](site/.env.example), run `npm run site:build`, then `npm run site:serve`. Hosting and optional community channels are configurable. The included Pages workflow deploys only when manually dispatched on main.
+
+[Public-page research](docs/16-public-site-research.md) records the Rive/Penpot/Framer observations and Evir's distinct design decisions. [The additional export study](docs/17-supplied-corpus-exploration.md) inventories four supplied `.riv` files and probes representative artboards in the official runtime; the fifth attachment exceeds the download tool's 32 MiB limit. These inputs do not replace controlled equivalent scenes or the deferred physical-device audit.

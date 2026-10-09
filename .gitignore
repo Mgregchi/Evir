@@ -2,3 +2,8 @@ node_modules/
 __pycache__/
 *.pyc
 research/results/*.png
+site/dist/
+site/.test-build/
+site/.env
+site/.env.*
+!site/.env.example

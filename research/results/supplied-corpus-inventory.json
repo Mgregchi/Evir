@@ -1,0 +1,3125 @@
+{
+  "receivedDate": "2026-10-09",
+  "source": "User-supplied runtime exports; no editable .rev backups supplied.",
+  "reuse": "Research inputs only. Public-site assets use independently authored Evir projects; no ownership or redistribution license inferred.",
+  "scope": "Structural inventory and exact codec roundtrips, not semantic import, equal-scene parity or physical-device performance.",
+  "files": [
+    {
+      "filename": "28745-54500-character-poses.riv",
+      "bytes": 5998357,
+      "sha256": "60439694ed44eabfd80177303a92e6876c3fab205bc906ef888c91bf6ddf6965",
+      "status": "inspected",
+      "format": {
+        "major": 7,
+        "minor": 3
+      },
+      "objects": 428293,
+      "types": {
+        "AnimationState": 20,
+        "AnyState": 3,
+        "Artboard": 2,
+        "Backboard": 1,
+        "BindablePropertyNumber": 34,
+        "ClippingShape": 65,
+        "CubicDetachedVertex": 3549,
+        "CubicEaseInterpolator": 69,
+        "DataBindContext": 34,
+        "DataConverterSystemNormalizer": 1,
+        "Ellipse": 35,
+        "EntryState": 3,
+        "ExitState": 3,
+        "Feather": 8,
+        "Fill": 396,
+        "FollowPathConstraint": 30,
+        "KeyFrameColor": 56,
+        "KeyFrameDouble": 404236,
+        "KeyedObject": 2937,
+        "KeyedProperty": 12939,
+        "LayoutComponent": 11,
+        "LayoutComponentStyle": 13,
+        "LinearAnimation": 18,
+        "ListenerViewModelChange": 8,
+        "NestedArtboard": 1,
+        "NestedStateMachine": 1,
+        "Node": 1066,
+        "PointsPath": 553,
+        "Shape": 588,
+        "SolidColor": 666,
+        "StateMachine": 2,
+        "StateMachineLayer": 3,
+        "StateMachineListenerSingle": 8,
+        "StateTransition": 29,
+        "StraightVertex": 498,
+        "Stroke": 270,
+        "TransformConstraint": 55,
+        "TransitionPropertyViewModelComparator": 26,
+        "TransitionSelfComparator": 2,
+        "TransitionValueNumberComparator": 24,
+        "TransitionViewModelCondition": 26,
+        "ViewModel": 1,
+        "ViewModelInstance": 1,
+        "ViewModelInstanceNumber": 1,
+        "ViewModelPropertyNumber": 1
+      },
+      "unknownTypes": [],
+      "unknownPropertyKeys": [],
+      "roundtrips": {
+        "raw": true,
+        "encoded": true
+      },
+      "artboards": [
+        {
+          "name": "new_JSON",
+          "width": 1080.0,
+          "height": 1920.0,
+          "animations": [
+            {
+              "name": "FEAR",
+              "fps": null,
+              "duration": 1980,
+              "loopValue": 1
+            },
+            {
+              "name": "CRY",
+              "fps": null,
+              "duration": 2020,
+              "loopValue": 1
+            },
+            {
+              "name": "SHY",
+              "fps": null,
+              "duration": 2020,
+              "loopValue": 1
+            },
+            {
+              "name": "BOO",
+              "fps": null,
+              "duration": 2020,
+              "loopValue": 1
+            },
+            {
+              "name": "FLYING",
+              "fps": null,
+              "duration": 2020,
+              "loopValue": 1
+            },
+            {
+              "name": "SAD",
+              "fps": null,
+              "duration": 2020,
+              "loopValue": 1
+            },
+            {
+              "name": "HAPPY",
+              "fps": null,
+              "duration": 2020,
+              "loopValue": 1
+            },
+            {
+              "name": "IDLE",
+              "fps": null,
+              "duration": 600,
+              "loopValue": 1
+            },
+            {
+              "name": "Scale_POP",
+              "fps": null,
+              "duration": 600,
+              "loopValue": null
+            }
+          ],
+          "machines": [
+            "State Machine 1"
+          ]
+        },
+        {
+          "name": "Artboard",
+          "width": 1351.0,
+          "height": 585.0,
+          "animations": [
+            {
+              "name": "Scale_FEAR",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Scale_CRY",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Scale_SHY",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Scale_BOO",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Scale_FLY",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Scale_SAD",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Scale_HAPPY",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Scale_IDLE",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Reset",
+              "fps": null,
+              "duration": null,
+              "loopValue": 1
+            }
+          ],
+          "machines": [
+            "State Machine 1"
+          ]
+        }
+      ]
+    },
+    {
+      "filename": "28334-53514-interactive-character-follow.riv",
+      "bytes": 81042,
+      "sha256": "f064f4cfa73bcabaff7a6970cf0032792018c4b7a237f1f320822bc09066e030",
+      "status": "inspected",
+      "format": {
+        "major": 7,
+        "minor": 2
+      },
+      "objects": 2796,
+      "types": {
+        "AnimationState": 4,
+        "AnyState": 3,
+        "Artboard": 2,
+        "Backboard": 1,
+        "ClippingShape": 6,
+        "CubicDetachedVertex": 91,
+        "CubicEaseInterpolator": 3,
+        "CubicMirroredVertex": 26,
+        "ElasticInterpolator": 1,
+        "EntryState": 3,
+        "ExitState": 3,
+        "FileAssetContents": 3,
+        "Fill": 25,
+        "IKConstraint": 1,
+        "Image": 3,
+        "ImageAsset": 3,
+        "Joystick": 1,
+        "KeyFrameDouble": 1526,
+        "KeyFrameId": 4,
+        "KeyedObject": 160,
+        "KeyedProperty": 741,
+        "LayoutComponentStyle": 2,
+        "LinearAnimation": 5,
+        "ListenerAlignTarget": 1,
+        "ListenerBoolChange": 4,
+        "NestedArtboard": 1,
+        "NestedBool": 2,
+        "NestedStateMachine": 1,
+        "Node": 7,
+        "PointsPath": 30,
+        "Rectangle": 5,
+        "RootBone": 1,
+        "Shape": 35,
+        "SolidColor": 42,
+        "Solo": 3,
+        "StateMachine": 2,
+        "StateMachineBool": 2,
+        "StateMachineLayer": 3,
+        "StateMachineListenerSingle": 5,
+        "StateTransition": 4,
+        "StraightVertex": 10,
+        "Stroke": 17,
+        "TransitionBoolCondition": 2,
+        "ViewModel": 1,
+        "ViewModelInstance": 1
+      },
+      "unknownTypes": [],
+      "unknownPropertyKeys": [],
+      "roundtrips": {
+        "raw": true,
+        "encoded": true
+      },
+      "artboards": [
+        {
+          "name": "Main artboard",
+          "width": 1600.0,
+          "height": 1200.0,
+          "animations": [
+            {
+              "name": "Timeline 1",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            }
+          ],
+          "machines": [
+            "State Machine 1"
+          ]
+        },
+        {
+          "name": "Artboard",
+          "width": 1000.0,
+          "height": 1000.0,
+          "animations": [
+            {
+              "name": "Blinking",
+              "fps": null,
+              "duration": null,
+              "loopValue": 1
+            },
+            {
+              "name": "Top down",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Right left",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Left right",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            }
+          ],
+          "machines": [
+            "State Machine 1"
+          ]
+        }
+      ]
+    },
+    {
+      "filename": "27773-52471-maasai-inspired-event-hero-banner-concept.riv",
+      "bytes": 1550988,
+      "sha256": "c3dccec305f4c35c3a9ffde7955e8850696c8ec631172ee86c354c16faed1f35",
+      "status": "inspected",
+      "format": {
+        "major": 7,
+        "minor": 1
+      },
+      "objects": 2330,
+      "types": {
+        "AnimationState": 8,
+        "AnyState": 6,
+        "Artboard": 6,
+        "Backboard": 1,
+        "Bone": 22,
+        "ClippingShape": 4,
+        "CubicDetachedVertex": 2,
+        "CubicEaseInterpolator": 14,
+        "CubicMirroredVertex": 237,
+        "CubicWeight": 79,
+        "EntryState": 6,
+        "ExitState": 6,
+        "Feather": 6,
+        "FileAssetContents": 8,
+        "Fill": 89,
+        "FontAsset": 5,
+        "GradientStop": 9,
+        "IKConstraint": 10,
+        "Image": 5,
+        "ImageAsset": 3,
+        "KeyFrameDouble": 204,
+        "KeyedObject": 37,
+        "KeyedProperty": 60,
+        "LayoutComponent": 21,
+        "LayoutComponentStyle": 27,
+        "LinearAnimation": 8,
+        "LinearGradient": 4,
+        "ListenerTriggerChange": 4,
+        "NestedArtboard": 15,
+        "NestedStateMachine": 15,
+        "NestedTrigger": 4,
+        "Node": 41,
+        "PointsPath": 71,
+        "Rectangle": 10,
+        "RootBone": 18,
+        "Shape": 81,
+        "Skin": 48,
+        "SolidColor": 93,
+        "StateMachine": 6,
+        "StateMachineLayer": 6,
+        "StateMachineListenerSingle": 4,
+        "StateMachineTrigger": 2,
+        "StateTransition": 10,
+        "StraightVertex": 566,
+        "Stroke": 8,
+        "Tendon": 70,
+        "Text": 12,
+        "TextStyleAxis": 7,
+        "TextStylePaint": 12,
+        "TextValueRun": 12,
+        "TransformConstraint": 1,
+        "TransitionTriggerCondition": 2,
+        "TranslationConstraint": 1,
+        "TrimPath": 1,
+        "ViewModel": 1,
+        "ViewModelInstance": 1,
+        "Weight": 321
+      },
+      "unknownTypes": [],
+      "unknownPropertyKeys": [],
+      "roundtrips": {
+        "raw": true,
+        "encoded": true
+      },
+      "artboards": [
+        {
+          "name": "bg",
+          "width": 1672.0,
+          "height": 940.0,
+          "animations": [
+            {
+              "name": "Timeline 1",
+              "fps": null,
+              "duration": 600,
+              "loopValue": 1
+            }
+          ],
+          "machines": [
+            "State Machine 1"
+          ]
+        },
+        {
+          "name": "WARRIOR_2",
+          "width": 1546.0,
+          "height": 1144.0,
+          "animations": [
+            {
+              "name": "Timeline 2",
+              "fps": null,
+              "duration": 120,
+              "loopValue": null
+            },
+            {
+              "name": "Timeline 1",
+              "fps": null,
+              "duration": 30,
+              "loopValue": 1
+            }
+          ],
+          "machines": [
+            "State Machine 1"
+          ]
+        },
+        {
+          "name": "grass",
+          "width": 472.0,
+          "height": 453.0,
+          "animations": [
+            {
+              "name": "Timeline 1",
+              "fps": null,
+              "duration": 120,
+              "loopValue": 2
+            }
+          ],
+          "machines": [
+            "State Machine 1"
+          ]
+        },
+        {
+          "name": "bird",
+          "width": 333.0,
+          "height": 315.0,
+          "animations": [
+            {
+              "name": "Timeline 1",
+              "fps": null,
+              "duration": 40,
+              "loopValue": 1
+            }
+          ],
+          "machines": [
+            "State Machine 1"
+          ]
+        },
+        {
+          "name": "WARRIOR_1",
+          "width": 800.0,
+          "height": 1155.0,
+          "animations": [
+            {
+              "name": "jump",
+              "fps": null,
+              "duration": 120,
+              "loopValue": null
+            },
+            {
+              "name": "idle",
+              "fps": null,
+              "duration": null,
+              "loopValue": 1
+            }
+          ],
+          "machines": [
+            "State Machine 1"
+          ]
+        },
+        {
+          "name": "bird 2",
+          "width": 333.0,
+          "height": 315.0,
+          "animations": [
+            {
+              "name": "Timeline 1",
+              "fps": null,
+              "duration": 40,
+              "loopValue": 1
+            }
+          ],
+          "machines": [
+            "State Machine 1"
+          ]
+        }
+      ]
+    },
+    {
+      "filename": "26133-49002-studiorun-a-cosmic-game-by-thelittlelabs.riv",
+      "bytes": 13363082,
+      "sha256": "bc87386bba331c03854ebbc92c34723c0d565a8b4ab0914669e2f2104b1d5889",
+      "status": "inspected",
+      "format": {
+        "major": 7,
+        "minor": 0
+      },
+      "objects": 102020,
+      "types": {
+        "AnimationState": 457,
+        "AnyState": 135,
+        "Artboard": 17,
+        "AudioAsset": 40,
+        "AudioEvent": 44,
+        "Backboard": 1,
+        "BlendAnimation1D": 10,
+        "BlendState1DInput": 1,
+        "Bone": 7,
+        "ClippingShape": 59,
+        "CubicAsymmetricVertex": 10,
+        "CubicDetachedVertex": 12742,
+        "CubicEaseInterpolator": 54,
+        "CubicMirroredVertex": 11,
+        "CubicValueInterpolator": 980,
+        "DrawRules": 13,
+        "DrawTarget": 13,
+        "Ellipse": 412,
+        "EntryState": 135,
+        "Event": 71,
+        "ExitState": 135,
+        "Feather": 178,
+        "FileAssetContents": 48,
+        "Fill": 2161,
+        "FontAsset": 2,
+        "GradientStop": 1150,
+        "Image": 6,
+        "ImageAsset": 6,
+        "Joystick": 16,
+        "KeyFrameBool": 2,
+        "KeyFrameCallback": 153,
+        "KeyFrameColor": 4137,
+        "KeyFrameDouble": 40438,
+        "KeyFrameId": 36,
+        "KeyFrameString": 48,
+        "KeyedObject": 6196,
+        "KeyedProperty": 12391,
+        "LayoutComponentStyle": 17,
+        "LinearAnimation": 391,
+        "LinearGradient": 412,
+        "ListenerBoolChange": 109,
+        "ListenerNumberChange": 70,
+        "ListenerTriggerChange": 82,
+        "NestedArtboard": 29,
+        "NestedBool": 20,
+        "NestedNumber": 35,
+        "NestedSimpleAnimation": 1,
+        "NestedStateMachine": 21,
+        "NestedTrigger": 34,
+        "Node": 817,
+        "OpenUrlEvent": 8,
+        "PointsPath": 2519,
+        "RadialGradient": 29,
+        "Rectangle": 182,
+        "RootBone": 4,
+        "Shape": 2485,
+        "SolidColor": 2099,
+        "Solo": 4,
+        "Star": 6,
+        "StateMachine": 17,
+        "StateMachineBool": 47,
+        "StateMachineFireEvent": 31,
+        "StateMachineLayer": 135,
+        "StateMachineListenerSingle": 172,
+        "StateMachineNumber": 39,
+        "StateMachineTrigger": 62,
+        "StateTransition": 786,
+        "StraightVertex": 7633,
+        "Stroke": 379,
+        "Text": 52,
+        "TextStyleAxis": 104,
+        "TextStylePaint": 52,
+        "TextValueRun": 52,
+        "TransitionBoolCondition": 104,
+        "TransitionNumberCondition": 112,
+        "TransitionTriggerCondition": 393,
+        "TrimPath": 159,
+        "ViewModel": 1,
+        "ViewModelInstance": 1
+      },
+      "unknownTypes": [],
+      "unknownPropertyKeys": [],
+      "roundtrips": {
+        "raw": true,
+        "encoded": true
+      },
+      "artboards": [
+        {
+          "name": "Control",
+          "width": 1920.0,
+          "height": 1080.0,
+          "animations": [
+            {
+              "name": "COVER",
+              "fps": null,
+              "duration": null,
+              "loopValue": 1
+            },
+            {
+              "name": "CH_Menu_ 2",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "CH_Menu_1",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "REFRESH",
+              "fps": null,
+              "duration": 10,
+              "loopValue": null
+            },
+            {
+              "name": "Timeline 10",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Timeline 9",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Timeline 8",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Timeline 7",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Timeline 6",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "CONGRATS_IDLE",
+              "fps": null,
+              "duration": 120,
+              "loopValue": null
+            },
+            {
+              "name": "RESET_Congrats",
+              "fps": null,
+              "duration": 120,
+              "loopValue": null
+            },
+            {
+              "name": "START BASE 2",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Stars_Profile",
+              "fps": null,
+              "duration": 600,
+              "loopValue": 1
+            },
+            {
+              "name": "Selection_EXIT Q",
+              "fps": null,
+              "duration": 261,
+              "loopValue": null
+            },
+            {
+              "name": "Selection_EXIT 2",
+              "fps": null,
+              "duration": 261,
+              "loopValue": null
+            },
+            {
+              "name": "#6",
+              "fps": null,
+              "duration": 120,
+              "loopValue": null
+            },
+            {
+              "name": "#5",
+              "fps": null,
+              "duration": 120,
+              "loopValue": null
+            },
+            {
+              "name": "Logo Animation HIDDEN",
+              "fps": null,
+              "duration": 84,
+              "loopValue": null
+            },
+            {
+              "name": "#4",
+              "fps": null,
+              "duration": 120,
+              "loopValue": null
+            },
+            {
+              "name": "#3",
+              "fps": null,
+              "duration": 120,
+              "loopValue": null
+            },
+            {
+              "name": "LOGO_Idle",
+              "fps": null,
+              "duration": 240,
+              "loopValue": 1
+            },
+            {
+              "name": "hover_T 1",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Logo Animation",
+              "fps": null,
+              "duration": 84,
+              "loopValue": null
+            },
+            {
+              "name": "#2",
+              "fps": null,
+              "duration": 120,
+              "loopValue": null
+            },
+            {
+              "name": "hover_F 1",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "CH 10 SANTA",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "hover_F 2",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "CH_Profile_IDLE 2",
+              "fps": null,
+              "duration": 840,
+              "loopValue": 1
+            },
+            {
+              "name": "BACKB_PRESS",
+              "fps": null,
+              "duration": 11,
+              "loopValue": null
+            },
+            {
+              "name": "#1",
+              "fps": null,
+              "duration": 120,
+              "loopValue": null
+            },
+            {
+              "name": "ring_rotation 2",
+              "fps": null,
+              "duration": 80,
+              "loopValue": 1
+            },
+            {
+              "name": "hover_T 2",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "BACKB__Hidden",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "CH_Profile_SWAP_Blink",
+              "fps": null,
+              "duration": 20,
+              "loopValue": null
+            },
+            {
+              "name": "Congrats C 6",
+              "fps": null,
+              "duration": 120,
+              "loopValue": null
+            },
+            {
+              "name": "hover_T 3",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "BACKB_Idle",
+              "fps": null,
+              "duration": null,
+              "loopValue": 1
+            },
+            {
+              "name": "Congrats C 5",
+              "fps": null,
+              "duration": 120,
+              "loopValue": null
+            },
+            {
+              "name": "CH_Profile_SWAP",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "CH_Profile_IDLE",
+              "fps": null,
+              "duration": 960,
+              "loopValue": 1
+            },
+            {
+              "name": "hover_F 3",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Congrats C 4",
+              "fps": null,
+              "duration": 120,
+              "loopValue": null
+            },
+            {
+              "name": "hover_F 4",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "CH_Profile_PICKED",
+              "fps": null,
+              "duration": null,
+              "loopValue": 1
+            },
+            {
+              "name": "PICK CH 10",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Q3",
+              "fps": null,
+              "duration": 7,
+              "loopValue": null
+            },
+            {
+              "name": "BG_2 blur",
+              "fps": null,
+              "duration": 90,
+              "loopValue": null
+            },
+            {
+              "name": "Congrats C 3",
+              "fps": null,
+              "duration": 120,
+              "loopValue": null
+            },
+            {
+              "name": "CH 9 TURKEY",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "PICK CH 9",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Q2",
+              "fps": null,
+              "duration": 7,
+              "loopValue": null
+            },
+            {
+              "name": "BG_2 blur intro",
+              "fps": null,
+              "duration": 66,
+              "loopValue": null
+            },
+            {
+              "name": "Congrats C 2",
+              "fps": null,
+              "duration": 120,
+              "loopValue": null
+            },
+            {
+              "name": "ring_rotation",
+              "fps": null,
+              "duration": 80,
+              "loopValue": 1
+            },
+            {
+              "name": "CH 1",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "hover_T 4",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "PICK CH 8",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Intro",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Congrats C",
+              "fps": null,
+              "duration": 120,
+              "loopValue": null
+            },
+            {
+              "name": "CH 2",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "shareCH 8",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "hover_T 5",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "shareCH 7",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "PICK CH 7",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "hover_F 5",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "ROT_Radial_Gameover",
+              "fps": null,
+              "duration": 600,
+              "loopValue": 1
+            },
+            {
+              "name": "CH 3",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Q1 B",
+              "fps": null,
+              "duration": 7,
+              "loopValue": null
+            },
+            {
+              "name": "hover_F 6",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "ROT_Radial_Congrats",
+              "fps": null,
+              "duration": 600,
+              "loopValue": 1
+            },
+            {
+              "name": "Congrats C1 v2",
+              "fps": null,
+              "duration": 120,
+              "loopValue": null
+            },
+            {
+              "name": "shareCH 6",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "CH 4",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Q EXIT back",
+              "fps": null,
+              "duration": 18,
+              "loopValue": null
+            },
+            {
+              "name": "PICK CH 6",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "BG_2_noblur",
+              "fps": null,
+              "duration": 90,
+              "loopValue": null
+            },
+            {
+              "name": "Congrats C2 v2",
+              "fps": null,
+              "duration": 120,
+              "loopValue": null
+            },
+            {
+              "name": "CH 5",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Timeline 1",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "shareCH 5",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "hover_T 6",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "hitbox_able",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Q EXIT",
+              "fps": null,
+              "duration": 151,
+              "loopValue": null
+            },
+            {
+              "name": "PICK CH 5",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "LOADING 2",
+              "fps": null,
+              "duration": 125,
+              "loopValue": null
+            },
+            {
+              "name": "Congrats C3 v2",
+              "fps": null,
+              "duration": 120,
+              "loopValue": null
+            },
+            {
+              "name": "CH 6",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "shareCH 4",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Timeline 2",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "AUDIO_ch1",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "CONGRATS_Display",
+              "fps": null,
+              "duration": 120,
+              "loopValue": null
+            },
+            {
+              "name": "hover_T 7",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "CH REVEAL",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Galaxies",
+              "fps": null,
+              "duration": 1200,
+              "loopValue": 1
+            },
+            {
+              "name": "PICK CH 4",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "UI",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "B_FT_Hover",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "SG_Q Pressed",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Share Pressed",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Congrats C4 v2",
+              "fps": null,
+              "duration": 120,
+              "loopValue": null
+            },
+            {
+              "name": "B_GO_Pressed",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "shareCH 3",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "GO_TRY_PRESSED",
+              "fps": null,
+              "duration": 24,
+              "loopValue": null
+            },
+            {
+              "name": "STARS",
+              "fps": null,
+              "duration": 606,
+              "loopValue": 1
+            },
+            {
+              "name": "CH 7",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "U_out",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "AUDIO_ch2",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "PICK CH 3",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "GO_BACK_Pressed",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Loading_Loop",
+              "fps": null,
+              "duration": 120,
+              "loopValue": 1
+            },
+            {
+              "name": "Timeline 3",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "myPerso_IDLE",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "CONGRATS_Imperfect",
+              "fps": null,
+              "duration": 120,
+              "loopValue": null
+            },
+            {
+              "name": "hover_F 7",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Q START",
+              "fps": null,
+              "duration": 7,
+              "loopValue": null
+            },
+            {
+              "name": "B_Ready_Idle",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "BG_3",
+              "fps": null,
+              "duration": 90,
+              "loopValue": null
+            },
+            {
+              "name": "BG_2",
+              "fps": null,
+              "duration": 90,
+              "loopValue": null
+            },
+            {
+              "name": "GO_TRY_HOVER",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "B_FT_Pressed",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Q_Intro",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "AUDIO_ch3",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Timeline 4",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Selection_EXIT",
+              "fps": null,
+              "duration": 261,
+              "loopValue": null
+            },
+            {
+              "name": "AUDIO_Menu",
+              "fps": null,
+              "duration": 540,
+              "loopValue": 1
+            },
+            {
+              "name": "B_Accept_hover",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Congrats C5 v2",
+              "fps": null,
+              "duration": 120,
+              "loopValue": null
+            },
+            {
+              "name": "shareCH 2",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "SG_Q Hover",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "PICK CH 2",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "CONGRATS_Perfect",
+              "fps": null,
+              "duration": 120,
+              "loopValue": null
+            },
+            {
+              "name": "hitbox_powerup",
+              "fps": null,
+              "duration": 94,
+              "loopValue": null
+            },
+            {
+              "name": "hover_T 8",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "GO_BACK_Hover",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "B_GO_Hover",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Share Hover",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "GUIDE",
+              "fps": null,
+              "duration": 5,
+              "loopValue": null
+            },
+            {
+              "name": "myPerso_HOVER",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "CH 8",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "B_Ready_Pressed",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "hitbox_zero",
+              "fps": null,
+              "duration": 180,
+              "loopValue": null
+            },
+            {
+              "name": "Buffer Try Again",
+              "fps": null,
+              "duration": 403,
+              "loopValue": null
+            },
+            {
+              "name": "Buffer",
+              "fps": null,
+              "duration": 403,
+              "loopValue": null
+            },
+            {
+              "name": "PICK CH 1",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "jump_delay",
+              "fps": null,
+              "duration": 35,
+              "loopValue": null
+            },
+            {
+              "name": "GO_BACK_Idle",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "BACKB__Appear",
+              "fps": null,
+              "duration": 27,
+              "loopValue": null
+            },
+            {
+              "name": "Selection_INTRO",
+              "fps": null,
+              "duration": 38,
+              "loopValue": null
+            },
+            {
+              "name": "B_GO_Idle",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "LOADING",
+              "fps": null,
+              "duration": 125,
+              "loopValue": null
+            },
+            {
+              "name": "myPerso_Pressed",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Avatar_Blink",
+              "fps": null,
+              "duration": 240,
+              "loopValue": 1
+            },
+            {
+              "name": "shareCH 1",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Timeline 5",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "GO_TRY_IDLE",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Congrats C6 v2",
+              "fps": null,
+              "duration": 120,
+              "loopValue": null
+            },
+            {
+              "name": "AUDIO_Game",
+              "fps": null,
+              "duration": 9540,
+              "loopValue": 1
+            },
+            {
+              "name": "hover_F 8",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Intro_Next",
+              "fps": null,
+              "duration": 21,
+              "loopValue": null
+            },
+            {
+              "name": "B_FT_Idle",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "CONGRATS_Hidden",
+              "fps": null,
+              "duration": 3,
+              "loopValue": null
+            },
+            {
+              "name": "Q_Skip",
+              "fps": null,
+              "duration": 26,
+              "loopValue": null
+            },
+            {
+              "name": "Share_IDLE",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "B_Accept_Pressed",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "AUDIO_ch4",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "B_Ready_hover",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "jump",
+              "fps": null,
+              "duration": 35,
+              "loopValue": null
+            },
+            {
+              "name": "BG_1",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "SG_Q",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "hover_T 9",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "hover_F 9",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "B_Accept_Idle",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "hover_F 10",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "hover_T 10",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            }
+          ],
+          "machines": [
+            "STATE MACHINE"
+          ]
+        },
+        {
+          "name": "Questionnarie",
+          "width": 1921.0,
+          "height": 1080.0,
+          "animations": [
+            {
+              "name": "HOVERS false",
+              "fps": null,
+              "duration": 3,
+              "loopValue": null
+            },
+            {
+              "name": "A1_HOVER",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "A1_IDLE",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "A2_HOVER",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "A2_IDLE",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "lights loop",
+              "fps": null,
+              "duration": 600,
+              "loopValue": 1
+            },
+            {
+              "name": "lights",
+              "fps": null,
+              "duration": 124,
+              "loopValue": null
+            },
+            {
+              "name": "DONE Q",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "START BASE Q 2",
+              "fps": null,
+              "duration": 10,
+              "loopValue": null
+            },
+            {
+              "name": "START BASE Q",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "RESET Q",
+              "fps": null,
+              "duration": 15,
+              "loopValue": null
+            },
+            {
+              "name": "qCH1",
+              "fps": null,
+              "duration": 180,
+              "loopValue": null
+            },
+            {
+              "name": "qCH2",
+              "fps": null,
+              "duration": 180,
+              "loopValue": null
+            },
+            {
+              "name": "qCH3",
+              "fps": null,
+              "duration": 180,
+              "loopValue": null
+            },
+            {
+              "name": "qCH4",
+              "fps": null,
+              "duration": 180,
+              "loopValue": null
+            },
+            {
+              "name": "qCH5",
+              "fps": null,
+              "duration": 180,
+              "loopValue": null
+            },
+            {
+              "name": "QA RESET",
+              "fps": null,
+              "duration": 3,
+              "loopValue": null
+            },
+            {
+              "name": "QA",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "QA-1 T",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "qCH6",
+              "fps": null,
+              "duration": 180,
+              "loopValue": null
+            },
+            {
+              "name": "B_Idle",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "qCH7",
+              "fps": null,
+              "duration": 180,
+              "loopValue": null
+            },
+            {
+              "name": "B_Idle_Hover",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "A3_HOVER",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "QA-2 T 2",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Question 3 - Maker B 3",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Question 3 - Maker A 2",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Question 2 - Maker",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Question 2 - Organizer",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Question 2 - Thinker",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "QA-3 T 3",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Question 1",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "B_Idle_Pressed",
+              "fps": null,
+              "duration": 21,
+              "loopValue": null
+            },
+            {
+              "name": "qCH8",
+              "fps": null,
+              "duration": 180,
+              "loopValue": null
+            },
+            {
+              "name": "A3_IDLE",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            }
+          ],
+          "machines": [
+            "State Machine 1"
+          ]
+        },
+        {
+          "name": "Q_Intro",
+          "width": 1921.0,
+          "height": 1080.0,
+          "animations": [
+            {
+              "name": "Timeline 1",
+              "fps": null,
+              "duration": 4800,
+              "loopValue": 1
+            },
+            {
+              "name": "Stars",
+              "fps": null,
+              "duration": 720,
+              "loopValue": 1
+            }
+          ],
+          "machines": [
+            "State Machine 1"
+          ]
+        },
+        {
+          "name": "Confetti",
+          "width": 1595.0,
+          "height": 1379.0,
+          "animations": [
+            {
+              "name": "Timeline 1",
+              "fps": null,
+              "duration": 180,
+              "loopValue": 1
+            }
+          ],
+          "machines": [
+            "State Machine 1"
+          ]
+        },
+        {
+          "name": "squares 2",
+          "width": 125.0,
+          "height": 672.0,
+          "animations": [
+            {
+              "name": "Timeline 1",
+              "fps": null,
+              "duration": 600,
+              "loopValue": 1
+            }
+          ],
+          "machines": [
+            "State Machine 1"
+          ]
+        },
+        {
+          "name": "Fireworks 2",
+          "width": 533.0,
+          "height": 955.0,
+          "animations": [
+            {
+              "name": "Timeline 1",
+              "fps": null,
+              "duration": 90,
+              "loopValue": 1
+            }
+          ],
+          "machines": [
+            "State Machine 1"
+          ]
+        },
+        {
+          "name": "firework_6",
+          "width": 533.0,
+          "height": 955.0,
+          "animations": [
+            {
+              "name": "Timeline 1",
+              "fps": null,
+              "duration": 150,
+              "loopValue": 1
+            }
+          ],
+          "machines": [
+            "State Machine 1"
+          ]
+        },
+        {
+          "name": "Artboard",
+          "width": 1920.0,
+          "height": 1080.0,
+          "animations": [
+            {
+              "name": "O_Start IDLE",
+              "fps": null,
+              "duration": 120,
+              "loopValue": 1
+            },
+            {
+              "name": "audio_jump4",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "PERFECT",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "ROOF_DEATH_RESTART",
+              "fps": null,
+              "duration": 1,
+              "loopValue": null
+            },
+            {
+              "name": "ROOF_DEATH",
+              "fps": null,
+              "duration": 300,
+              "loopValue": null
+            },
+            {
+              "name": "X_start",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Y_Start",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "X6",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Y6",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "X5",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Y5",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Y4",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "X4",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "CH_Celebration",
+              "fps": null,
+              "duration": 120,
+              "loopValue": 1
+            },
+            {
+              "name": "CONGRATS PERFECT",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "CONGRATS",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "WIN",
+              "fps": null,
+              "duration": 203,
+              "loopValue": null
+            },
+            {
+              "name": "Timer 2",
+              "fps": null,
+              "duration": 6000,
+              "loopValue": null
+            },
+            {
+              "name": "Timer",
+              "fps": null,
+              "duration": 4800,
+              "loopValue": null
+            },
+            {
+              "name": "O4_Hourglass",
+              "fps": null,
+              "duration": null,
+              "loopValue": 1
+            },
+            {
+              "name": "O4_Chemestry",
+              "fps": null,
+              "duration": null,
+              "loopValue": 1
+            },
+            {
+              "name": "O3_IDLE",
+              "fps": null,
+              "duration": null,
+              "loopValue": 1
+            },
+            {
+              "name": "O3_Loading",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "START_BASE",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "RESET",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "O6_LOOP WIN",
+              "fps": null,
+              "duration": 120,
+              "loopValue": null
+            },
+            {
+              "name": "O6_COFFEE",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "O5_LOOP WIN",
+              "fps": null,
+              "duration": 120,
+              "loopValue": null
+            },
+            {
+              "name": "Y3",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "O4_LOOP WIN",
+              "fps": null,
+              "duration": 180,
+              "loopValue": null
+            },
+            {
+              "name": "X3",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "XY_Zero",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "O3_LOOP WIN",
+              "fps": null,
+              "duration": 600,
+              "loopValue": null
+            },
+            {
+              "name": "O2_LOOP WIN",
+              "fps": null,
+              "duration": 180,
+              "loopValue": null
+            },
+            {
+              "name": "O1_LOOP_WIN",
+              "fps": null,
+              "duration": 180,
+              "loopValue": null
+            },
+            {
+              "name": "Y_ROOF",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "ROOF_DEATH",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "ROOF_delay",
+              "fps": null,
+              "duration": 120,
+              "loopValue": null
+            },
+            {
+              "name": "O6_LOOP",
+              "fps": null,
+              "duration": 960,
+              "loopValue": 1
+            },
+            {
+              "name": "O5_LOOP",
+              "fps": null,
+              "duration": 480,
+              "loopValue": 1
+            },
+            {
+              "name": "O4_LOOP",
+              "fps": null,
+              "duration": 240,
+              "loopValue": 1
+            },
+            {
+              "name": "O3_LOOP",
+              "fps": null,
+              "duration": 720,
+              "loopValue": 1
+            },
+            {
+              "name": "X_ROOF",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "O2_LOOP",
+              "fps": null,
+              "duration": 240,
+              "loopValue": 1
+            },
+            {
+              "name": "death_pose",
+              "fps": null,
+              "duration": 77,
+              "loopValue": null
+            },
+            {
+              "name": "rotate",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "X2",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "DEATH",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Y2",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Idle_Standing",
+              "fps": 24,
+              "duration": 48,
+              "loopValue": 1
+            },
+            {
+              "name": "TEST POWER",
+              "fps": null,
+              "duration": 4,
+              "loopValue": null
+            },
+            {
+              "name": "hitbox_powerup_exit",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "hitbox_powerup",
+              "fps": null,
+              "duration": 120,
+              "loopValue": null
+            },
+            {
+              "name": "CH",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "POWER ON",
+              "fps": null,
+              "duration": 300,
+              "loopValue": null
+            },
+            {
+              "name": "Meter",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "run_powerup",
+              "fps": null,
+              "duration": 480,
+              "loopValue": null
+            },
+            {
+              "name": "CH 2",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "O1_LOOP",
+              "fps": null,
+              "duration": 240,
+              "loopValue": 1
+            },
+            {
+              "name": "POWER OFF",
+              "fps": null,
+              "duration": 600,
+              "loopValue": null
+            },
+            {
+              "name": "CH 3",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Meter C1",
+              "fps": null,
+              "duration": 120,
+              "loopValue": null
+            },
+            {
+              "name": "ch_move",
+              "fps": null,
+              "duration": 30,
+              "loopValue": null
+            },
+            {
+              "name": "Y",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "POWERBLOCK",
+              "fps": null,
+              "duration": 10500,
+              "loopValue": null
+            },
+            {
+              "name": "BG_Gameplay",
+              "fps": null,
+              "duration": 2400,
+              "loopValue": 1
+            },
+            {
+              "name": "Meter C2",
+              "fps": null,
+              "duration": 120,
+              "loopValue": null
+            },
+            {
+              "name": "CH 4",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "X",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "1sec_delay_coin1 2",
+              "fps": null,
+              "duration": 900,
+              "loopValue": null
+            },
+            {
+              "name": "20sec_delay_PWR 2",
+              "fps": null,
+              "duration": 1200,
+              "loopValue": null
+            },
+            {
+              "name": "CH 5",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "O1_Barrier",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "1sec_delay_coin 6",
+              "fps": null,
+              "duration": 4110,
+              "loopValue": null
+            },
+            {
+              "name": "jump_pose",
+              "fps": null,
+              "duration": 240,
+              "loopValue": null
+            },
+            {
+              "name": "1sec_delay_coin 4",
+              "fps": null,
+              "duration": 2730,
+              "loopValue": null
+            },
+            {
+              "name": "1sec_delay_coin 3",
+              "fps": null,
+              "duration": 1920,
+              "loopValue": null
+            },
+            {
+              "name": "base_loop",
+              "fps": null,
+              "duration": 5700,
+              "loopValue": null
+            },
+            {
+              "name": "1sec_delay_coin1",
+              "fps": null,
+              "duration": 330,
+              "loopValue": null
+            },
+            {
+              "name": "PowerUp_1_Loop",
+              "fps": null,
+              "duration": 1290,
+              "loopValue": null
+            },
+            {
+              "name": "1sec_delay_coin 5",
+              "fps": null,
+              "duration": 3330,
+              "loopValue": null
+            },
+            {
+              "name": "O2_Micro",
+              "fps": null,
+              "duration": null,
+              "loopValue": 1
+            },
+            {
+              "name": "Meter C3",
+              "fps": null,
+              "duration": 120,
+              "loopValue": null
+            },
+            {
+              "name": "base_loop 2 BACKUP",
+              "fps": null,
+              "duration": 4800,
+              "loopValue": null
+            },
+            {
+              "name": "O_START",
+              "fps": null,
+              "duration": 120,
+              "loopValue": null
+            },
+            {
+              "name": "base_loop 2",
+              "fps": null,
+              "duration": 4800,
+              "loopValue": null
+            },
+            {
+              "name": "O1_Books",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "COIN_Y 6",
+              "fps": null,
+              "duration": 240,
+              "loopValue": 1
+            },
+            {
+              "name": "10sec_delay_PWR",
+              "fps": null,
+              "duration": 780,
+              "loopValue": null
+            },
+            {
+              "name": "PowerUp_PICKED",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "COIN_Y_3",
+              "fps": null,
+              "duration": 240,
+              "loopValue": 1
+            },
+            {
+              "name": "CH 6",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "audio_jump1",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "COIN_Y 5",
+              "fps": null,
+              "duration": 240,
+              "loopValue": 1
+            },
+            {
+              "name": "COIN_Y_2",
+              "fps": null,
+              "duration": 240,
+              "loopValue": 1
+            },
+            {
+              "name": "idle",
+              "fps": 24,
+              "duration": 5,
+              "loopValue": null
+            },
+            {
+              "name": "O2_Camera",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "COIN_Y 4",
+              "fps": null,
+              "duration": 240,
+              "loopValue": 1
+            },
+            {
+              "name": "Coin_1_Loop",
+              "fps": null,
+              "duration": 510,
+              "loopValue": null
+            },
+            {
+              "name": "Meter C4",
+              "fps": null,
+              "duration": 120,
+              "loopValue": null
+            },
+            {
+              "name": "1sec_delay",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "2sec_delay",
+              "fps": null,
+              "duration": 120,
+              "loopValue": null
+            },
+            {
+              "name": "run",
+              "fps": null,
+              "duration": 240,
+              "loopValue": 1
+            },
+            {
+              "name": "audio_jump2",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "CH 7",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "XC_WIN",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "XC5",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "XC1",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "COIN_Picked 4",
+              "fps": null,
+              "duration": 8,
+              "loopValue": null
+            },
+            {
+              "name": "O1_Pencils",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "YC6",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "COIN_Picked 2",
+              "fps": null,
+              "duration": 8,
+              "loopValue": null
+            },
+            {
+              "name": "COIN_Picked 5",
+              "fps": null,
+              "duration": 8,
+              "loopValue": null
+            },
+            {
+              "name": "XC4",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "base_loop 3",
+              "fps": null,
+              "duration": 6300,
+              "loopValue": null
+            },
+            {
+              "name": "COIN_Picked",
+              "fps": null,
+              "duration": 8,
+              "loopValue": null
+            },
+            {
+              "name": "COIN_Picked 6",
+              "fps": null,
+              "duration": 8,
+              "loopValue": null
+            },
+            {
+              "name": "XC2",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Meter C5",
+              "fps": null,
+              "duration": 120,
+              "loopValue": null
+            },
+            {
+              "name": "3Sec_delay",
+              "fps": null,
+              "duration": 180,
+              "loopValue": null
+            },
+            {
+              "name": "COIN_Picked 3",
+              "fps": null,
+              "duration": 8,
+              "loopValue": null
+            },
+            {
+              "name": "PowerUp_Idle",
+              "fps": null,
+              "duration": 180,
+              "loopValue": 1
+            },
+            {
+              "name": "Y_PWR",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "O2_Battery",
+              "fps": null,
+              "duration": null,
+              "loopValue": 1
+            },
+            {
+              "name": "XC3",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "YC_WIN",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "O1_Mouse",
+              "fps": null,
+              "duration": null,
+              "loopValue": 1
+            },
+            {
+              "name": "O4_Speaker",
+              "fps": null,
+              "duration": null,
+              "loopValue": 1
+            },
+            {
+              "name": "X_PWR",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "4,5sec_delay",
+              "fps": null,
+              "duration": 270,
+              "loopValue": null
+            },
+            {
+              "name": "Coin_1_Loop 2",
+              "fps": null,
+              "duration": 330,
+              "loopValue": null
+            },
+            {
+              "name": "YC1",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Coin_1_Loop 6",
+              "fps": null,
+              "duration": 330,
+              "loopValue": null
+            },
+            {
+              "name": "CH 8",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Coin_1_Loop 5",
+              "fps": null,
+              "duration": 330,
+              "loopValue": null
+            },
+            {
+              "name": "run 2",
+              "fps": null,
+              "duration": 480,
+              "loopValue": 1
+            },
+            {
+              "name": "Coin_1_Loop 3",
+              "fps": null,
+              "duration": 330,
+              "loopValue": null
+            },
+            {
+              "name": "O2_Wifi",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "O3_Mail",
+              "fps": null,
+              "duration": null,
+              "loopValue": 1
+            },
+            {
+              "name": "Meter C6",
+              "fps": null,
+              "duration": 120,
+              "loopValue": null
+            },
+            {
+              "name": "BG_Stars",
+              "fps": null,
+              "duration": 600,
+              "loopValue": 1
+            },
+            {
+              "name": "PU_Trail",
+              "fps": null,
+              "duration": 120,
+              "loopValue": 1
+            },
+            {
+              "name": "Coin_1_Loop 4",
+              "fps": null,
+              "duration": 330,
+              "loopValue": null
+            },
+            {
+              "name": "YC4",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "O5_Roof",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "COIN_Y",
+              "fps": null,
+              "duration": 240,
+              "loopValue": 1
+            },
+            {
+              "name": "YC5",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "XC6",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "audio_jump3",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "YC3",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "YC2",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "O6_BLOCK",
+              "fps": null,
+              "duration": 300,
+              "loopValue": 1
+            },
+            {
+              "name": "CH 9 turkey",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "CH 10 santa",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "4sec_delay",
+              "fps": null,
+              "duration": 240,
+              "loopValue": null
+            },
+            {
+              "name": "5sec_delay",
+              "fps": null,
+              "duration": 300,
+              "loopValue": null
+            }
+          ],
+          "machines": [
+            "STATE MACHINE"
+          ]
+        },
+        {
+          "name": "Fireworks 3",
+          "width": 533.0,
+          "height": 955.0,
+          "animations": [
+            {
+              "name": "Timeline 1",
+              "fps": null,
+              "duration": 90,
+              "loopValue": 1
+            }
+          ],
+          "machines": [
+            "State Machine 1"
+          ]
+        },
+        {
+          "name": "firework_5",
+          "width": 533.0,
+          "height": 955.0,
+          "animations": [
+            {
+              "name": "Timeline 1",
+              "fps": null,
+              "duration": 90,
+              "loopValue": 1
+            }
+          ],
+          "machines": [
+            "State Machine 1"
+          ]
+        },
+        {
+          "name": "firework_4",
+          "width": 533.0,
+          "height": 955.0,
+          "animations": [
+            {
+              "name": "Timeline 1",
+              "fps": null,
+              "duration": 150,
+              "loopValue": 1
+            }
+          ],
+          "machines": [
+            "State Machine 1"
+          ]
+        },
+        {
+          "name": "Fireworks_1",
+          "width": 533.0,
+          "height": 955.0,
+          "animations": [
+            {
+              "name": "Timeline 1",
+              "fps": null,
+              "duration": 90,
+              "loopValue": 1
+            }
+          ],
+          "machines": [
+            "State Machine 1"
+          ]
+        },
+        {
+          "name": "calculation",
+          "width": 1119.0,
+          "height": 930.0,
+          "animations": [
+            {
+              "name": "RESTART",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "resetCalculation_CHATGPT",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "START_BASE",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Coin 6 pickup 6",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Coin 5 pickup 5",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Coin 4 pickup 4",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Coin 3 pickup 3",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Coin 1 pickup 2",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "Coin 1 pickup",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "PowerUp event",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "CALC WIN",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            },
+            {
+              "name": "CALC DEATH",
+              "fps": null,
+              "duration": null,
+              "loopValue": null
+            }
+          ],
+          "machines": [
+            "State Machine 1"
+          ]
+        },
+        {
+          "name": "cube_rot",
+          "width": 342.0,
+          "height": 342.0,
+          "animations": [
+            {
+              "name": "Timeline 1",
+              "fps": null,
+              "duration": 240,
+              "loopValue": 1
+            }
+          ],
+          "machines": [
+            "State Machine 1"
+          ]
+        },
+        {
+          "name": "Stars BG",
+          "width": 6474.0,
+          "height": 1092.0,
+          "animations": [
+            {
+              "name": "Timeline 1",
+              "fps": null,
+              "duration": 720,
+              "loopValue": null
+            }
+          ],
+          "machines": [
+            "State Machine 1"
+          ]
+        },
+        {
+          "name": "squares",
+          "width": 125.0,
+          "height": 672.0,
+          "animations": [
+            {
+              "name": "Timeline 1",
+              "fps": null,
+              "duration": 600,
+              "loopValue": 1
+            }
+          ],
+          "machines": [
+            "State Machine 1"
+          ]
+        },
+        {
+          "name": "squares Over",
+          "width": 125.0,
+          "height": 672.0,
+          "animations": [
+            {
+              "name": "Timeline 1",
+              "fps": null,
+              "duration": 600,
+              "loopValue": 1
+            }
+          ],
+          "machines": [
+            "State Machine 1"
+          ]
+        }
+      ]
+    },
+    {
+      "filename": "25989-48561-room-decor-mini-game.riv",
+      "status": "blocked",
+      "reason": "Uploaded file exceeds the executor's 32 MiB transfer limit; no file content inspected."
+    }
+  ]
+}

@@ -1,0 +1,553 @@
+{
+  "checkedAt": "2026-10-09T11:02:55.901Z",
+  "runtimeVersion": "2.44.0",
+  "backend": "WebGL2 cloud software graphics",
+  "scope": "One representative artboard and its first state machine per downloaded file: inventory match, nonempty rendered pixels, startup and exploratory pointer/click input. No expected-pose, game-completion, universal feature, mobile or hardware-performance assertion.",
+  "records": [
+    {
+      "filename": "28745-54500-character-poses.riv",
+      "sha256": "60439694ed44eabfd80177303a92e6876c3fab205bc906ef888c91bf6ddf6965",
+      "artboard": "new_JSON",
+      "stateMachine": "State Machine 1",
+      "runtime": "@rive-app/webgl2@2.44.0",
+      "loaded": {
+        "loadMs": 533.9000000003725,
+        "animations": [
+          "FEAR",
+          "CRY",
+          "SHY",
+          "BOO",
+          "FLYING",
+          "SAD",
+          "HAPPY",
+          "IDLE",
+          "Scale_POP"
+        ],
+        "machines": [
+          "State Machine 1"
+        ],
+        "inputs": []
+      },
+      "initialCoverage": 129600,
+      "playing": [
+        "State Machine 1"
+      ],
+      "status": "passed",
+      "pageErrors": [],
+      "blockedExternalRequests": []
+    },
+    {
+      "filename": "28334-53514-interactive-character-follow.riv",
+      "sha256": "f064f4cfa73bcabaff7a6970cf0032792018c4b7a237f1f320822bc09066e030",
+      "artboard": "Main artboard",
+      "stateMachine": "State Machine 1",
+      "runtime": "@rive-app/webgl2@2.44.0",
+      "loaded": {
+        "loadMs": 284.09999999962747,
+        "animations": [
+          "Timeline 1"
+        ],
+        "machines": [
+          "State Machine 1"
+        ],
+        "inputs": []
+      },
+      "initialCoverage": 307200,
+      "playing": [
+        "State Machine 1"
+      ],
+      "status": "passed",
+      "pageErrors": [],
+      "blockedExternalRequests": []
+    },
+    {
+      "filename": "27773-52471-maasai-inspired-event-hero-banner-concept.riv",
+      "sha256": "c3dccec305f4c35c3a9ffde7955e8850696c8ec631172ee86c354c16faed1f35",
+      "artboard": "bg",
+      "stateMachine": "State Machine 1",
+      "runtime": "@rive-app/webgl2@2.44.0",
+      "loaded": {
+        "loadMs": 370.6000000005588,
+        "animations": [
+          "Timeline 1"
+        ],
+        "machines": [
+          "State Machine 1"
+        ],
+        "inputs": []
+      },
+      "initialCoverage": 233597,
+      "playing": [
+        "State Machine 1"
+      ],
+      "status": "passed",
+      "pageErrors": [],
+      "blockedExternalRequests": []
+    },
+    {
+      "filename": "26133-49002-studiorun-a-cosmic-game-by-thelittlelabs.riv",
+      "sha256": "bc87386bba331c03854ebbc92c34723c0d565a8b4ab0914669e2f2104b1d5889",
+      "artboard": "Control",
+      "stateMachine": "STATE MACHINE",
+      "runtime": "@rive-app/webgl2@2.44.0",
+      "loaded": {
+        "loadMs": 690.2000000001863,
+        "animations": [
+          "COVER",
+          "CH_Menu_ 2",
+          "CH_Menu_1",
+          "REFRESH",
+          "Timeline 10",
+          "Timeline 9",
+          "Timeline 8",
+          "Timeline 7",
+          "Timeline 6",
+          "CONGRATS_IDLE",
+          "RESET_Congrats",
+          "START BASE 2",
+          "Stars_Profile",
+          "Selection_EXIT Q",
+          "Selection_EXIT 2",
+          "#6",
+          "#5",
+          "Logo Animation HIDDEN",
+          "#4",
+          "#3",
+          "LOGO_Idle",
+          "hover_T 1",
+          "Logo Animation",
+          "#2",
+          "hover_F 1",
+          "CH 10 SANTA",
+          "hover_F 2",
+          "CH_Profile_IDLE 2",
+          "BACKB_PRESS",
+          "#1",
+          "ring_rotation 2",
+          "hover_T 2",
+          "BACKB__Hidden",
+          "CH_Profile_SWAP_Blink",
+          "Congrats C 6",
+          "hover_T 3",
+          "BACKB_Idle",
+          "Congrats C 5",
+          "CH_Profile_SWAP",
+          "CH_Profile_IDLE",
+          "hover_F 3",
+          "Congrats C 4",
+          "hover_F 4",
+          "CH_Profile_PICKED",
+          "PICK CH 10",
+          "Q3",
+          "BG_2 blur",
+          "Congrats C 3",
+          "CH 9 TURKEY",
+          "PICK CH 9",
+          "Q2",
+          "BG_2 blur intro",
+          "Congrats C 2",
+          "ring_rotation",
+          "CH 1",
+          "hover_T 4",
+          "PICK CH 8",
+          "Intro",
+          "Congrats C",
+          "CH 2",
+          "shareCH 8",
+          "hover_T 5",
+          "shareCH 7",
+          "PICK CH 7",
+          "hover_F 5",
+          "ROT_Radial_Gameover",
+          "CH 3",
+          "Q1 B",
+          "hover_F 6",
+          "ROT_Radial_Congrats",
+          "Congrats C1 v2",
+          "shareCH 6",
+          "CH 4",
+          "Q EXIT back",
+          "PICK CH 6",
+          "BG_2_noblur",
+          "Congrats C2 v2",
+          "CH 5",
+          "Timeline 1",
+          "shareCH 5",
+          "hover_T 6",
+          "hitbox_able",
+          "Q EXIT",
+          "PICK CH 5",
+          "LOADING 2",
+          "Congrats C3 v2",
+          "CH 6",
+          "shareCH 4",
+          "Timeline 2",
+          "AUDIO_ch1",
+          "CONGRATS_Display",
+          "hover_T 7",
+          "CH REVEAL",
+          "Galaxies",
+          "PICK CH 4",
+          "UI",
+          "B_FT_Hover",
+          "SG_Q Pressed",
+          "Share Pressed",
+          "Congrats C4 v2",
+          "B_GO_Pressed",
+          "shareCH 3",
+          "GO_TRY_PRESSED",
+          "STARS",
+          "CH 7",
+          "U_out",
+          "AUDIO_ch2",
+          "PICK CH 3",
+          "GO_BACK_Pressed",
+          "Loading_Loop",
+          "Timeline 3",
+          "myPerso_IDLE",
+          "CONGRATS_Imperfect",
+          "hover_F 7",
+          "Q START",
+          "B_Ready_Idle",
+          "BG_3",
+          "BG_2",
+          "GO_TRY_HOVER",
+          "B_FT_Pressed",
+          "Q_Intro",
+          "AUDIO_ch3",
+          "Timeline 4",
+          "Selection_EXIT",
+          "AUDIO_Menu",
+          "B_Accept_hover",
+          "Congrats C5 v2",
+          "shareCH 2",
+          "SG_Q Hover",
+          "PICK CH 2",
+          "CONGRATS_Perfect",
+          "hitbox_powerup",
+          "hover_T 8",
+          "GO_BACK_Hover",
+          "B_GO_Hover",
+          "Share Hover",
+          "GUIDE",
+          "myPerso_HOVER",
+          "CH 8",
+          "B_Ready_Pressed",
+          "hitbox_zero",
+          "Buffer Try Again",
+          "Buffer",
+          "PICK CH 1",
+          "jump_delay",
+          "GO_BACK_Idle",
+          "BACKB__Appear",
+          "Selection_INTRO",
+          "B_GO_Idle",
+          "LOADING",
+          "myPerso_Pressed",
+          "Avatar_Blink",
+          "shareCH 1",
+          "Timeline 5",
+          "GO_TRY_IDLE",
+          "Congrats C6 v2",
+          "AUDIO_Game",
+          "hover_F 8",
+          "Intro_Next",
+          "B_FT_Idle",
+          "CONGRATS_Hidden",
+          "Q_Skip",
+          "Share_IDLE",
+          "B_Accept_Pressed",
+          "AUDIO_ch4",
+          "B_Ready_hover",
+          "jump",
+          "BG_1",
+          "SG_Q",
+          "hover_T 9",
+          "hover_F 9",
+          "B_Accept_Idle",
+          "hover_F 10",
+          "hover_T 10"
+        ],
+        "machines": [
+          "STATE MACHINE"
+        ],
+        "inputs": [
+          {
+            "name": "MENU ON OFF",
+            "type": 59,
+            "value": false
+          },
+          {
+            "name": "CH_Menu_UP",
+            "type": 58
+          },
+          {
+            "name": "CH_Menu_DOWN",
+            "type": 58
+          },
+          {
+            "name": "shareMoment",
+            "type": 56,
+            "value": 0
+          },
+          {
+            "name": "GO_Back_Hover",
+            "type": 59,
+            "value": false
+          },
+          {
+            "name": "GO_Back_PRESSED",
+            "type": 58
+          },
+          {
+            "name": "Quest DONE",
+            "type": 58
+          },
+          {
+            "name": "CH Reveal",
+            "type": 58
+          },
+          {
+            "name": "Personality_Trigger",
+            "type": 58
+          },
+          {
+            "name": "B_perso",
+            "type": 58
+          },
+          {
+            "name": "B_perso Hover",
+            "type": 59,
+            "value": false
+          },
+          {
+            "name": "Q2 Done",
+            "type": 58
+          },
+          {
+            "name": "Q1 Done",
+            "type": 58
+          },
+          {
+            "name": "B_StartGame_Q Hover",
+            "type": 59,
+            "value": false
+          },
+          {
+            "name": "B_Share Hover",
+            "type": 59,
+            "value": false
+          },
+          {
+            "name": "B_StartGame_Q",
+            "type": 58
+          },
+          {
+            "name": "B_Share",
+            "type": 58
+          },
+          {
+            "name": "B_FineTaste_Hover",
+            "type": 59,
+            "value": false
+          },
+          {
+            "name": "B_TryAgain_PRESSED",
+            "type": 58
+          },
+          {
+            "name": "B_TryAgain_hover",
+            "type": 59,
+            "value": false
+          },
+          {
+            "name": "Q_Back",
+            "type": 58
+          },
+          {
+            "name": "FineTaste",
+            "type": 58
+          },
+          {
+            "name": "CoinCounter",
+            "type": 56,
+            "value": 0
+          },
+          {
+            "name": "PERFECT",
+            "type": 59,
+            "value": false
+          },
+          {
+            "name": "Coin Collected 6",
+            "type": 59,
+            "value": false
+          },
+          {
+            "name": "Coin Collected 5",
+            "type": 59,
+            "value": false
+          },
+          {
+            "name": "Coin Collected 4",
+            "type": 59,
+            "value": false
+          },
+          {
+            "name": "Coin Collected 3",
+            "type": 59,
+            "value": false
+          },
+          {
+            "name": "Coin Collected 2",
+            "type": 59,
+            "value": false
+          },
+          {
+            "name": "Coin Collected 1",
+            "type": 59,
+            "value": false
+          },
+          {
+            "name": "show coins trig",
+            "type": 58
+          },
+          {
+            "name": "CONGRATS DISPLAY",
+            "type": 58
+          },
+          {
+            "name": "CH SWAP",
+            "type": 58
+          },
+          {
+            "name": "B_GO_Hover",
+            "type": 59,
+            "value": false
+          },
+          {
+            "name": "Hover 10",
+            "type": 59,
+            "value": false
+          },
+          {
+            "name": "Hover 9",
+            "type": 59,
+            "value": false
+          },
+          {
+            "name": "Hover 8",
+            "type": 59,
+            "value": false
+          },
+          {
+            "name": "Hover 7",
+            "type": 59,
+            "value": false
+          },
+          {
+            "name": "Hover 6",
+            "type": 59,
+            "value": false
+          },
+          {
+            "name": "Hover 5",
+            "type": 59,
+            "value": false
+          },
+          {
+            "name": "Hover 4",
+            "type": 59,
+            "value": false
+          },
+          {
+            "name": "Hover 3",
+            "type": 59,
+            "value": false
+          },
+          {
+            "name": "Hover 2",
+            "type": 59,
+            "value": false
+          },
+          {
+            "name": "Hover 1",
+            "type": 59,
+            "value": false
+          },
+          {
+            "name": "CHARACTER",
+            "type": 56,
+            "value": 0
+          },
+          {
+            "name": "B_Accept_Hover",
+            "type": 59,
+            "value": false
+          },
+          {
+            "name": "CHANGE CH",
+            "type": 58
+          },
+          {
+            "name": "B_Ready_Hover",
+            "type": 59,
+            "value": false
+          },
+          {
+            "name": "RESET_B",
+            "type": 58
+          },
+          {
+            "name": "BACK_CH",
+            "type": 58
+          },
+          {
+            "name": "ACCEPT",
+            "type": 58
+          },
+          {
+            "name": "BACK_INTRO",
+            "type": 58
+          },
+          {
+            "name": "REFRESH",
+            "type": 58
+          },
+          {
+            "name": "Ready_INTRO",
+            "type": 58
+          },
+          {
+            "name": "START GAME",
+            "type": 58
+          },
+          {
+            "name": "PowerUpppp",
+            "type": 58
+          },
+          {
+            "name": "death triggg",
+            "type": 58
+          },
+          {
+            "name": "cooldown",
+            "type": 56,
+            "value": 0
+          },
+          {
+            "name": "jump trig",
+            "type": 58
+          }
+        ]
+      },
+      "initialCoverage": 230400,
+      "playing": [
+        "STATE MACHINE"
+      ],
+      "status": "passed",
+      "pageErrors": [],
+      "blockedExternalRequests": []
+    }
+  ]
+}

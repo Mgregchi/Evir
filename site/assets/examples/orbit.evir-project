@@ -1,0 +1,997 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 2,
+  "id": "orbit-project",
+  "name": "Orbit — motion in a loop",
+  "artboards": [
+    {
+      "id": "orbit-board",
+      "name": "Orbit — motion in a loop",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "orbit-outer-disc",
+      "name": "outer disc",
+      "kind": "path",
+      "artboardId": "orbit-board",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        256,
+        256
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#d5e5dc",
+        "skin": null,
+        "points": [
+          {
+            "id": "orbit-outer-disc-p0",
+            "anchor": [
+              181,
+              0
+            ],
+            "in": [
+              181,
+              -99.96353971379999
+            ],
+            "out": [
+              181,
+              99.96353971379999
+            ]
+          },
+          {
+            "id": "orbit-outer-disc-p1",
+            "anchor": [
+              0,
+              181
+            ],
+            "in": [
+              99.96353971379999,
+              181
+            ],
+            "out": [
+              -99.96353971379999,
+              181
+            ]
+          },
+          {
+            "id": "orbit-outer-disc-p2",
+            "anchor": [
+              -181,
+              0
+            ],
+            "in": [
+              -181,
+              99.96353971379999
+            ],
+            "out": [
+              -181,
+              -99.96353971379999
+            ]
+          },
+          {
+            "id": "orbit-outer-disc-p3",
+            "anchor": [
+              0,
+              -181
+            ],
+            "in": [
+              -99.96353971379999,
+              -181
+            ],
+            "out": [
+              99.96353971379999,
+              -181
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "orbit-inner-disc",
+      "name": "inner disc",
+      "kind": "path",
+      "artboardId": "orbit-board",
+      "parentId": null,
+      "order": 1,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        256,
+        256
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f1f3eb",
+        "skin": null,
+        "points": [
+          {
+            "id": "orbit-inner-disc-p0",
+            "anchor": [
+              165,
+              0
+            ],
+            "in": [
+              165,
+              -91.126983717
+            ],
+            "out": [
+              165,
+              91.126983717
+            ]
+          },
+          {
+            "id": "orbit-inner-disc-p1",
+            "anchor": [
+              0,
+              165
+            ],
+            "in": [
+              91.126983717,
+              165
+            ],
+            "out": [
+              -91.126983717,
+              165
+            ]
+          },
+          {
+            "id": "orbit-inner-disc-p2",
+            "anchor": [
+              -165,
+              0
+            ],
+            "in": [
+              -165,
+              91.126983717
+            ],
+            "out": [
+              -165,
+              -91.126983717
+            ]
+          },
+          {
+            "id": "orbit-inner-disc-p3",
+            "anchor": [
+              0,
+              -165
+            ],
+            "in": [
+              -91.126983717,
+              -165
+            ],
+            "out": [
+              91.126983717,
+              -165
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "orbit-orbit",
+      "name": "orbit",
+      "kind": "group",
+      "artboardId": "orbit-board",
+      "parentId": null,
+      "order": 2,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        256,
+        256
+      ],
+      "geometry": null
+    },
+    {
+      "id": "orbit-planet",
+      "name": "planet",
+      "kind": "path",
+      "artboardId": "orbit-board",
+      "parentId": "orbit-orbit",
+      "order": 3,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#243f33",
+        "skin": null,
+        "points": [
+          {
+            "id": "orbit-planet-p0",
+            "anchor": [
+              70,
+              0
+            ],
+            "in": [
+              70,
+              -38.659932485999995
+            ],
+            "out": [
+              70,
+              38.659932485999995
+            ]
+          },
+          {
+            "id": "orbit-planet-p1",
+            "anchor": [
+              0,
+              70
+            ],
+            "in": [
+              38.659932485999995,
+              70
+            ],
+            "out": [
+              -38.659932485999995,
+              70
+            ]
+          },
+          {
+            "id": "orbit-planet-p2",
+            "anchor": [
+              -70,
+              0
+            ],
+            "in": [
+              -70,
+              38.659932485999995
+            ],
+            "out": [
+              -70,
+              -38.659932485999995
+            ]
+          },
+          {
+            "id": "orbit-planet-p3",
+            "anchor": [
+              0,
+              -70
+            ],
+            "in": [
+              -38.659932485999995,
+              -70
+            ],
+            "out": [
+              38.659932485999995,
+              -70
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "orbit-planet-light",
+      "name": "planet light",
+      "kind": "path",
+      "artboardId": "orbit-board",
+      "parentId": "orbit-orbit",
+      "order": 4,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -8,
+        -9
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#a1dec0",
+        "skin": null,
+        "points": [
+          {
+            "id": "orbit-planet-light-p0",
+            "anchor": [
+              60,
+              0
+            ],
+            "in": [
+              60,
+              -33.137084988
+            ],
+            "out": [
+              60,
+              33.137084988
+            ]
+          },
+          {
+            "id": "orbit-planet-light-p1",
+            "anchor": [
+              0,
+              60
+            ],
+            "in": [
+              33.137084988,
+              60
+            ],
+            "out": [
+              -33.137084988,
+              60
+            ]
+          },
+          {
+            "id": "orbit-planet-light-p2",
+            "anchor": [
+              -60,
+              0
+            ],
+            "in": [
+              -60,
+              33.137084988
+            ],
+            "out": [
+              -60,
+              -33.137084988
+            ]
+          },
+          {
+            "id": "orbit-planet-light-p3",
+            "anchor": [
+              0,
+              -60
+            ],
+            "in": [
+              -33.137084988,
+              -60
+            ],
+            "out": [
+              33.137084988,
+              -60
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "orbit-crater-one",
+      "name": "crater one",
+      "kind": "path",
+      "artboardId": "orbit-board",
+      "parentId": "orbit-orbit",
+      "order": 5,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -30,
+        -21
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#6bad8a",
+        "skin": null,
+        "points": [
+          {
+            "id": "orbit-crater-one-p0",
+            "anchor": [
+              16,
+              0
+            ],
+            "in": [
+              16,
+              -7.731986497199999
+            ],
+            "out": [
+              16,
+              7.731986497199999
+            ]
+          },
+          {
+            "id": "orbit-crater-one-p1",
+            "anchor": [
+              0,
+              14
+            ],
+            "in": [
+              8.8365559968,
+              14
+            ],
+            "out": [
+              -8.8365559968,
+              14
+            ]
+          },
+          {
+            "id": "orbit-crater-one-p2",
+            "anchor": [
+              -16,
+              0
+            ],
+            "in": [
+              -16,
+              7.731986497199999
+            ],
+            "out": [
+              -16,
+              -7.731986497199999
+            ]
+          },
+          {
+            "id": "orbit-crater-one-p3",
+            "anchor": [
+              0,
+              -14
+            ],
+            "in": [
+              -8.8365559968,
+              -14
+            ],
+            "out": [
+              8.8365559968,
+              -14
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "orbit-crater-two",
+      "name": "crater two",
+      "kind": "path",
+      "artboardId": "orbit-board",
+      "parentId": "orbit-orbit",
+      "order": 6,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        14,
+        27
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#6bad8a",
+        "skin": null,
+        "points": [
+          {
+            "id": "orbit-crater-two-p0",
+            "anchor": [
+              24,
+              0
+            ],
+            "in": [
+              24,
+              -11.045694996
+            ],
+            "out": [
+              24,
+              11.045694996
+            ]
+          },
+          {
+            "id": "orbit-crater-two-p1",
+            "anchor": [
+              0,
+              20
+            ],
+            "in": [
+              13.254833995199998,
+              20
+            ],
+            "out": [
+              -13.254833995199998,
+              20
+            ]
+          },
+          {
+            "id": "orbit-crater-two-p2",
+            "anchor": [
+              -24,
+              0
+            ],
+            "in": [
+              -24,
+              11.045694996
+            ],
+            "out": [
+              -24,
+              -11.045694996
+            ]
+          },
+          {
+            "id": "orbit-crater-two-p3",
+            "anchor": [
+              0,
+              -20
+            ],
+            "in": [
+              -13.254833995199998,
+              -20
+            ],
+            "out": [
+              13.254833995199998,
+              -20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "orbit-crater-three",
+      "name": "crater three",
+      "kind": "path",
+      "artboardId": "orbit-board",
+      "parentId": "orbit-orbit",
+      "order": 7,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        27,
+        -28
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#c9eed6",
+        "skin": null,
+        "points": [
+          {
+            "id": "orbit-crater-three-p0",
+            "anchor": [
+              9,
+              0
+            ],
+            "in": [
+              9,
+              -4.4182779984
+            ],
+            "out": [
+              9,
+              4.4182779984
+            ]
+          },
+          {
+            "id": "orbit-crater-three-p1",
+            "anchor": [
+              0,
+              8
+            ],
+            "in": [
+              4.9705627482,
+              8
+            ],
+            "out": [
+              -4.9705627482,
+              8
+            ]
+          },
+          {
+            "id": "orbit-crater-three-p2",
+            "anchor": [
+              -9,
+              0
+            ],
+            "in": [
+              -9,
+              4.4182779984
+            ],
+            "out": [
+              -9,
+              -4.4182779984
+            ]
+          },
+          {
+            "id": "orbit-crater-three-p3",
+            "anchor": [
+              0,
+              -8
+            ],
+            "in": [
+              -4.9705627482,
+              -8
+            ],
+            "out": [
+              4.9705627482,
+              -8
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "orbit-satellite",
+      "name": "satellite",
+      "kind": "group",
+      "artboardId": "orbit-board",
+      "parentId": "orbit-orbit",
+      "order": 8,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": null
+    },
+    {
+      "id": "orbit-satellite-body",
+      "name": "satellite body",
+      "kind": "path",
+      "artboardId": "orbit-board",
+      "parentId": "orbit-satellite",
+      "order": 9,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        -174
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#253e33",
+        "skin": null,
+        "points": [
+          {
+            "id": "orbit-satellite-body-p0",
+            "anchor": [
+              31,
+              0
+            ],
+            "in": [
+              31,
+              -17.1208272438
+            ],
+            "out": [
+              31,
+              17.1208272438
+            ]
+          },
+          {
+            "id": "orbit-satellite-body-p1",
+            "anchor": [
+              0,
+              31
+            ],
+            "in": [
+              17.1208272438,
+              31
+            ],
+            "out": [
+              -17.1208272438,
+              31
+            ]
+          },
+          {
+            "id": "orbit-satellite-body-p2",
+            "anchor": [
+              -31,
+              0
+            ],
+            "in": [
+              -31,
+              17.1208272438
+            ],
+            "out": [
+              -31,
+              -17.1208272438
+            ]
+          },
+          {
+            "id": "orbit-satellite-body-p3",
+            "anchor": [
+              0,
+              -31
+            ],
+            "in": [
+              -17.1208272438,
+              -31
+            ],
+            "out": [
+              17.1208272438,
+              -31
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "orbit-satellite-core",
+      "name": "satellite core",
+      "kind": "path",
+      "artboardId": "orbit-board",
+      "parentId": "orbit-satellite",
+      "order": 10,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        -174
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e9c3a3",
+        "skin": null,
+        "points": [
+          {
+            "id": "orbit-satellite-core-p0",
+            "anchor": [
+              24,
+              0
+            ],
+            "in": [
+              24,
+              -13.254833995199998
+            ],
+            "out": [
+              24,
+              13.254833995199998
+            ]
+          },
+          {
+            "id": "orbit-satellite-core-p1",
+            "anchor": [
+              0,
+              24
+            ],
+            "in": [
+              13.254833995199998,
+              24
+            ],
+            "out": [
+              -13.254833995199998,
+              24
+            ]
+          },
+          {
+            "id": "orbit-satellite-core-p2",
+            "anchor": [
+              -24,
+              0
+            ],
+            "in": [
+              -24,
+              13.254833995199998
+            ],
+            "out": [
+              -24,
+              -13.254833995199998
+            ]
+          },
+          {
+            "id": "orbit-satellite-core-p3",
+            "anchor": [
+              0,
+              -24
+            ],
+            "in": [
+              -13.254833995199998,
+              -24
+            ],
+            "out": [
+              13.254833995199998,
+              -24
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "orbit-satellite-mark",
+      "name": "satellite mark",
+      "kind": "path",
+      "artboardId": "orbit-board",
+      "parentId": "orbit-satellite",
+      "order": 11,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -6,
+        -185
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#253e33",
+        "skin": null,
+        "points": [
+          {
+            "id": "orbit-satellite-mark-p0",
+            "anchor": [
+              6,
+              0
+            ],
+            "in": [
+              2.6862915012000004,
+              0
+            ],
+            "out": [
+              6,
+              0
+            ]
+          },
+          {
+            "id": "orbit-satellite-mark-p1",
+            "anchor": [
+              6,
+              0
+            ],
+            "in": [
+              6,
+              0
+            ],
+            "out": [
+              9.3137084988,
+              0
+            ]
+          },
+          {
+            "id": "orbit-satellite-mark-p2",
+            "anchor": [
+              12,
+              6
+            ],
+            "in": [
+              12,
+              2.6862915012000004
+            ],
+            "out": [
+              12,
+              6
+            ]
+          },
+          {
+            "id": "orbit-satellite-mark-p3",
+            "anchor": [
+              12,
+              16
+            ],
+            "in": [
+              12,
+              16
+            ],
+            "out": [
+              12,
+              19.3137084988
+            ]
+          },
+          {
+            "id": "orbit-satellite-mark-p4",
+            "anchor": [
+              6,
+              22
+            ],
+            "in": [
+              9.3137084988,
+              22
+            ],
+            "out": [
+              6,
+              22
+            ]
+          },
+          {
+            "id": "orbit-satellite-mark-p5",
+            "anchor": [
+              6,
+              22
+            ],
+            "in": [
+              6,
+              22
+            ],
+            "out": [
+              2.6862915012000004,
+              22
+            ]
+          },
+          {
+            "id": "orbit-satellite-mark-p6",
+            "anchor": [
+              0,
+              16
+            ],
+            "in": [
+              0,
+              19.3137084988
+            ],
+            "out": [
+              0,
+              16
+            ]
+          },
+          {
+            "id": "orbit-satellite-mark-p7",
+            "anchor": [
+              0,
+              6
+            ],
+            "in": [
+              0,
+              6
+            ],
+            "out": [
+              0,
+              2.6862915012000004
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [
+    {
+      "id": "orbit-loop",
+      "name": "Orbit",
+      "artboardId": "orbit-board",
+      "fps": 60,
+      "duration": 120,
+      "loop": true,
+      "tracks": [
+        {
+          "targetId": "orbit-satellite",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 6.283185307179586,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "orbit-board": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  }
+}
