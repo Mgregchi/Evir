@@ -8,6 +8,8 @@ For GitHub-connected deployment, follow [the Cloudflare/Netlify dashboard guide]
 
 Copy `.env.example` to `.env` in this directory to configure `EDITOR_BASE_PATH` (empty for a subdomain root, or a subdirectory such as `/studio/`) and `EDITOR_PUBLIC_SITE_URL` (the public home link). These are public build-time values. The site configures the matching destination through `PUBLIC_EDITOR_URL`. Build after changing settings. See [deployment and migration guidance](../../docs/19-workspace-migration.md).
 
+For `yourdomain.com/editor/studio/`, use `EDITOR_BASE_PATH=/editor/studio` and configure the public host to proxy that mount to this separate app. See [the path-hosting recipe](../../docs/20-github-connected-hosting.md#serve-studio-at-editorstudio-on-the-public-domain) for Netlify rules and Cloudflare routing. `/editor/` remains the public landing page; the output directory stays `apps/editor/dist`.
+
 The four editor milestones are implemented for a declared vector subset:
 
 | Workspace | Authoring controls |

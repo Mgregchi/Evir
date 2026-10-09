@@ -9,6 +9,8 @@ Create **two hosting projects connected to the same repository**:
 | Evir public site | `https://yourdomain.com` | Home, `/product/`, `/editor/` landing, examples and community pages |
 | Evir Studio | `https://studio.yourdomain.com` | The actual editor application |
 
+Studio can also be served at `https://yourdomain.com/editor/studio/` while retaining its separate project/build. Choose either the subdomain example above or [the same-domain path setup](#serve-studio-at-editorstudio-on-the-public-domain) below. The public `/editor/` page stays the editor landing page in both arrangements.
+
 Use `main` as the production branch for both. PR branches can have preview deployments. Cloudflare/Netlify run their own builds; GitHub Actions does not have to deploy to them. This connection does not publish runtime npm packages. You may host both apps with either provider, or one app with each; configure their actual URLs as described below.
 
 ## Settings shared by both providers
@@ -31,6 +33,8 @@ Use paths without a leading `/`. A root/base directory of `apps/site` or `apps/e
 Enter values in each hosting project's **build environment**, not only in a Worker runtime binding or a GitHub Actions variable. Evir reads them during the build; changing a value requires a new deployment. Local `.env` files are ignored by Git and are not present in a provider checkout.
 
 Replace the example URLs below with your real addresses. Provider-issued `*.pages.dev`, `*.workers.dev` or `*.netlify.app` HTTPS URLs work before you have a domain.
+
+The values in this table describe the subdomain arrangement. The same-domain section supplies the overrides for `/editor/studio/`.
 
 | Project | Variable | Example value |
 | --- | --- | --- |
@@ -103,6 +107,135 @@ For an existing Netlify project, use **Project configuration → Developer setti
 
 Each config also contains an `ignore` command scoped to its app and shared dependencies. Netlify's convention is **exit 0 skips**, **exit 1 builds**. Missing/unknown cached Git revisions proceed with a build. Equal current/cached revisions also build: Netlify supplies equal revisions for uncached builds, and rebuilding a commit must apply changed environment settings. This keeps public-only changes from rebuilding the editor; the first deployment still builds. Keep the base directory at repository root so those Git paths and publish paths resolve correctly.
 
+## Serve Studio at `/editor/studio/` on the public domain
+
+This is an alternative to a Studio subdomain. Keep the two GitHub-connected applications and their build/output settings from the earlier sections. The public host adds a routing layer for the editor path; site changes and editor changes still build and deploy independently.
+
+| Browser URL | Application |
+| --- | --- |
+| `https://yourdomain.com/` | Public home |
+| `https://yourdomain.com/product/` | Product overview |
+| `https://yourdomain.com/editor/` | Public editor landing |
+| `https://yourdomain.com/editor/studio/` | Full Studio workspace |
+
+Set these **build-time** values, then rebuild both apps:
+
+| Project | Variable | Value |
+| --- | --- | --- |
+| Public site | `PUBLIC_SITE_URL` | `https://yourdomain.com` |
+| Public site | `PUBLIC_BASE_PATH` | Empty |
+| Public site | `PUBLIC_EDITOR_URL` | `https://yourdomain.com/editor/studio/` |
+| Editor | `EDITOR_PUBLIC_SITE_URL` | `https://yourdomain.com/` |
+| Editor | `EDITOR_BASE_PATH` | `/editor/studio` |
+
+`EDITOR_BASE_PATH` describes the public mount; it does not move generated files into a nested `editor/studio` directory. Continue publishing `apps/editor/dist` as the editor project's root. The proxy must forward `/editor/studio/` to that root, `/editor/studio/studio.mjs` to `/studio.mjs`, and the remaining files the same way. Merely setting the URL variables does not create these routes.
+
+### Netlify public host
+
+1. Complete the two-project setup above and obtain the editor's actual HTTPS origin, such as `https://your-editor-project.netlify.app`. For two Netlify projects, both must belong to the same Netlify team; Netlify blocks proxies between teams and into separately password-protected sites.
+2. Add these blocks to **the public site's** `apps/site/netlify.toml`, replacing the example editor origin with the actual one. Keep the existing build settings. Commit/push the routing configuration and let GitHub-connected deployment rebuild the public project.
+
+```toml
+[[redirects]]
+from = "/editor/studio"
+to = "/editor/studio/"
+status = 301
+force = true
+
+[[redirects]]
+from = "/editor/studio/*"
+to = "https://your-editor-project.netlify.app/:splat"
+status = 200
+force = true
+```
+
+3. Apply the frontend variables in the table and rebuild the editor too. Visit the public `/editor/` landing and launch Studio.
+
+The first rule makes the trailing slash explicit so relative module/style URLs resolve under the Studio mount. The second is a proxy rewrite: the browser keeps the public domain while Netlify strips the mount and fetches the editor project. It covers modules, styles, icons and error responses, not just the editor HTML. Keep these specific rules before any broad redirect rules; no blanket SPA fallback is needed. Netlify's `to` is routing configuration with a literal upstream URL, not an interpolation of `PUBLIC_EDITOR_URL`.
+
+### Cloudflare Workers: use Add Domain and Add Route
+
+The **Domains** screen for a Worker exposes **Custom Domains and Routes → Add Route / Add Domain**. These controls support this arrangement with the two application Workers already described; a third router is not required when the editor Worker serves its own assets.
+
+| Application Worker | Domain/route |
+| --- | --- |
+| Public `evir` | **Add Domain:** `yourdomain.com` |
+| Editor `evir-studio` | **Add Route:** `yourdomain.com/editor/studio*`, zone `yourdomain.com` |
+
+The domain attaches a hostname to the public Worker. The more specific path route sends Studio requests to the editor Worker on that hostname. A route selects a Worker and preserves the requested path, so the editor Worker also needs a small handler to map `/editor/studio/studio.mjs` to its own `/studio.mjs` asset. This is hosting code; the editor and engine retain their existing ownership/build boundaries.
+
+1. Deploy the two GitHub-connected Workers using the earlier **Existing Cloudflare Workers integration** settings. Apply the same-domain frontend variables above and rebuild both. Use the public Worker's **Add Domain** button to attach the public hostname. Zone routes require a domain you manage in Cloudflare and its proxied hostname; `evir.mgregchi.workers.dev` is a provider address, not a zone you own for adding another Worker's path route.
+2. Add `apps/editor/cloudflare-worker.mjs` with the following module. This is a setup example to copy into the repository when configuring this hosting mode; the guide update itself does not install or deploy the handler.
+
+```js
+export default {
+  async fetch(request, env) {
+    const mount = '/editor/studio';
+    const url = new URL(request.url);
+    if (url.pathname === mount) {
+      return new Response(null, {
+        status: 308, headers: { Location: mount + '/' + url.search },
+      });
+    }
+    const mounted = url.pathname.startsWith(mount + '/');
+    if (!mounted && url.pathname.startsWith(mount)) {
+      return new Response('Not found', { status: 404 });
+    }
+    if (mounted) url.pathname = url.pathname.slice(mount.length);
+    const assetRequest = new Request(new Request(url, request), {
+      redirect: 'manual',
+    });
+    const response = await env.ASSETS.fetch(assetRequest);
+    const location = response.headers.get('Location');
+    if (!mounted || !location) return response;
+    const destination = new URL(location, url);
+    if (destination.origin !== url.origin) return response;
+    const headers = new Headers(response.headers);
+    headers.set('Location', mount + destination.pathname +
+      destination.search + destination.hash);
+    return new Response(response.body, {
+      status: response.status, statusText: response.statusText, headers,
+    });
+  },
+};
+```
+
+3. Update **the editor's** `apps/editor/wrangler.jsonc` to include the module, asset binding and route. Replace the example hostname/zone:
+
+```json
+{
+  "name": "evir-studio",
+  "main": "cloudflare-worker.mjs",
+  "compatibility_date": "2026-10-09",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "run_worker_first": true,
+    "not_found_handling": "404-page"
+  },
+  "routes": [
+    { "pattern": "yourdomain.com/editor/studio*", "zone_name": "yourdomain.com" }
+  ]
+}
+```
+
+`binding` exposes the editor's files as `env.ASSETS`; `run_worker_first` lets the handler remove the mount before the asset lookup. The handler also allows root requests on the editor's own provider URL for checking that deployment. Missing assets retain the editor's 404 response. The `routes` entry keeps the path route in GitHub so later deployments retain it.
+
+4. Commit/push these hosting changes and let the existing editor Git integration build/deploy them. The earlier root/build/deploy settings stay the same. On **the editor Worker's** Domains screen, **Add Route** uses the pattern/zone above; the equivalent route is declared in the file for ongoing GitHub deployments. **Do not assign the Studio route to the public `evir` Worker**, which contains the public-site assets. For `www.yourdomain.com`, change the route pattern's hostname while keeping the zone name `yourdomain.com`.
+5. Verify the complete path after deployment. Query strings are preserved, asset redirects stay under the public mount, and 404/status/MIME headers are retained. `/editor/` remains the public landing page. No extra frontend CORS setting is required: visitors load the files at the public hostname.
+
+If the public site is Cloudflare Pages on a custom hostname, an editor Worker can similarly use a route on that proxied hostname. If **both applications are Pages projects**, a routing Worker or Pages Function must proxy to the editor project instead: Pages `_redirects` cannot proxy another domain. On provider-issued `workers.dev` URLs without a custom zone, the public Worker can use a [service binding](https://developers.cloudflare.com/workers/runtime-apis/bindings/service-bindings/http/) to forward Studio paths to the editor Worker; that is a different handler from the zone-route recipe above. The provider-root subdomain arrangement remains available during initial setup.
+
+### Check the mounted application
+
+- `/editor/studio` redirects to `/editor/studio/`, including when a query string is present.
+- `/editor/` still shows the public landing; its launch link opens the mounted application.
+- The stage loads, including `studio.mjs`, `studio.css` and icons under `/editor/studio/`; a missing asset returns 404.
+- Save/open an editable example, export `.riv`, and confirm the editor's home link returns to `/`.
+- Rebuild either application independently and confirm the configured routing still reaches its current deployment.
+
+Use the public mounted URL consistently. Opening the editor's provider origin directly uses a different browser-storage origin. Before switching from a Studio subdomain/provider origin to the public domain, download existing projects and reopen them at the new address. Changing only the path on an unchanged origin retains that origin's local storage; moving origins does not.
+
 ## Previews, domains and deployment checks
 
 Production deploys follow pushes to `main`; provider preview settings control other branches/PRs. Give preview builds the required frontend variables too. Site previews use the explicitly configured `PUBLIC_EDITOR_URL`; they do not automatically discover or pair with the editor preview for the same PR. You can use the stable editor URL initially or set a matching preview URL deliberately.
@@ -122,6 +255,8 @@ The workspace can validate commands/configuration locally, but account authoriza
 
 Local verification for this guide: both app-root installation/build commands completed with the pinned lockfile and included the configured HTTPS URLs. Wrangler 4.149.0 dry runs resolved the correct static-assets directory for each app; no upload occurred. Both Netlify files parsed, and their ignore commands passed 18 real Git path-change cases plus 6 missing/unknown/equal-revision cases. Account connection, actual provider builds and DNS remain checks to perform after following the dashboard setup.
 
+The same-domain example was also checked with Wrangler 4.149.0's local Cloudflare runtime and a browser at `/editor/studio/`: module/style/icon MIME types, slash/query redirects, missing-file 404, stage loading, configured home link, project opening/saving and byte-identical `.riv` export passed. Focused handler checks covered redirect rewriting and response preservation. The documented Netlify proxy rules parsed correctly; they still require validation on the connected Netlify projects.
+
 ## Official references
 
 - [Cloudflare Pages GitHub integration](https://developers.cloudflare.com/pages/get-started/git-integration/)
@@ -129,3 +264,6 @@ Local verification for this guide: both app-root installation/build commands com
 - [Workers Git-connected builds](https://developers.cloudflare.com/workers/ci-cd/builds/), [build settings](https://developers.cloudflare.com/workers/ci-cd/builds/configuration/) and [build variables/image](https://developers.cloudflare.com/workers/ci-cd/builds/build-image/)
 - [Netlify Git workflows](https://docs.netlify.com/build/git-workflows/overview/), [monorepos](https://docs.netlify.com/build/configure-builds/monorepos/), [configuration files](https://docs.netlify.com/build/configure-builds/file-based-configuration/) and [Node/dependency installation](https://docs.netlify.com/build/configure-builds/manage-dependencies/)
 - [Netlify ignore-command behavior](https://docs.netlify.com/build/configure-builds/ignore-builds/) and [built-in Git revision variables](https://docs.netlify.com/build/configure-builds/environment-variables/)
+- [Netlify proxy rewrites](https://docs.netlify.com/manage/routing/redirects/rewrites-proxies/) and [redirect options](https://docs.netlify.com/manage/routing/redirects/redirect-options/)
+- [Cloudflare path routes](https://developers.cloudflare.com/workers/configuration/routing/routes/), [Pages rewrite limitations](https://developers.cloudflare.com/pages/configuration/redirects/) and [Worker service-binding fetch](https://developers.cloudflare.com/workers/runtime-apis/bindings/service-bindings/http/)
+- [Cloudflare custom domains](https://developers.cloudflare.com/workers/configuration/routing/custom-domains/), [static-asset bindings](https://developers.cloudflare.com/workers/static-assets/binding/) and [Worker-first asset routing](https://developers.cloudflare.com/workers/static-assets/routing/worker-script/)

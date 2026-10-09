@@ -58,6 +58,8 @@ Run `npm run site:serve` and `npm run editor:serve` in separate terminals. Their
 
 Populate [site settings](../apps/site/.env.example) and [editor settings](../apps/editor/.env.example) separately. For a domain/subdomain installation, set the site's `PUBLIC_EDITOR_URL` to the editor application's HTTPS origin, and the editor's `EDITOR_PUBLIC_SITE_URL` to the public site's HTTPS origin. `/product` describes the product; `/editor` is the public editor landing; its launch buttons open the configured application. The old public `/studio/` URL redirects to `/editor/`.
 
+An alternative is the same-domain mount `https://yourdomain.com/editor/studio/`. Set `PUBLIC_EDITOR_URL` to that address and `EDITOR_BASE_PATH=/editor/studio`, then add the hosting proxy described in [the path-hosting guide](20-github-connected-hosting.md#serve-studio-at-editorstudio-on-the-public-domain). The two apps retain their independent builds and output directories.
+
 Frontend values are public build-time settings, never secrets. The editor's setting controls its home link and is not an account/API credential. Custom URLs remain configurable rather than hardcoded to a proposed domain.
 
 Cloudflare Pages can build each application from the repository root using the commands/directories above, as two projects. Workers static-assets configurations are provided in each application directory; after a build, an authorized operator can use `npx wrangler deploy --config apps/site/wrangler.jsonc` or the editor equivalent. Existing hosting integrations need their dashboard build/output settings updated. No Cloudflare account, domain or deployment was provisioned by this migration.
