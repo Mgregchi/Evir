@@ -37,6 +37,8 @@ See [the package API and release guide](../packages/README.md). Playback accepts
 
 ## Development and hosting
 
+For hosting that automatically builds from GitHub, use [the Cloudflare and Netlify connection guide](20-github-connected-hosting.md). This section covers local development and output ownership; the connection guide lists dashboard fields, build environments, previews and custom domains.
+
 Use Node 24, Python 3 and the pinned lockfile:
 
 ```sh

@@ -143,6 +143,8 @@ The [feature audit](docs/14-platform-context-and-shipped-features.md) and [AI/ag
 
 The [public site](apps/site/README.md) provides eleven pages, original editable examples, actual Studio screenshots, contributor entry points and reviewable feedback drafting. Populate [the frontend environment settings](apps/site/.env.example), including `PUBLIC_EDITOR_URL`, run `npm run site:build`, then `npm run site:serve`. Hosting and optional community channels are configurable. The Pages workflow preserves automatic deployment on relevant main pushes and manual dispatch; editor deployment is separate.
 
+To connect the repository directly to Cloudflare or Netlify, follow [the GitHub-connected deployment guide](docs/20-github-connected-hosting.md). Both providers build from GitHub automatically; the public site and full editor use separate hosting projects and configurable URLs.
+
 [Public-page research](docs/16-public-site-research.md) records the Rive/Penpot/Framer observations and Evir's distinct design decisions. [The additional export study](docs/17-supplied-corpus-exploration.md) inventories four supplied `.riv` files and probes representative artboards in the official runtime; the fifth attachment exceeds the download tool's 32 MiB limit. These inputs do not replace controlled equivalent scenes or the deferred physical-device audit.
 
 [Product boundaries and deployment](docs/18-architecture-boundaries-and-deployment.md) records the separation decision. [The completed migration](docs/19-workspace-migration.md) describes actual ownership, independent builds, package contracts, hosting configuration and verification. Public-site changes no longer require an editor/runtime release.
