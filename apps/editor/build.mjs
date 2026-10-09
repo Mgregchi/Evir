@@ -1,0 +1,18 @@
+import path from 'node:path';
+import {readFile,writeFile,cp} from 'node:fs/promises';
+import {build} from 'esbuild';
+import {root,loadEnvironment,prepareOutput} from '../../tools/build-support.mjs';
+import {readEditorConfig} from './config.mjs';
+await loadEnvironment('editor');const config=readEditorConfig();
+const out=await prepareOutput('editor','EVIR_EDITOR_OUTPUT');
+await build({entryPoints:[path.join(root,'apps/editor/studio.mjs')],bundle:true,format:'esm',platform:'browser',target:'es2022',outfile:path.join(out,'studio.mjs')});
+await cp(path.join(root,'apps/editor/studio.css'),path.join(out,'studio.css'));
+await cp(path.join(root,'assets/brand'),path.join(out,'assets'),{recursive:true});
+await cp(path.join(root,'packages/format/schema/LICENSE.rive'),path.join(out,'assets/LICENSE.rive'));
+const source=await readFile(path.join(root,'apps/editor/index.html'),'utf8');
+const head=`<script id="editor-config" type="application/json">${JSON.stringify(config).replaceAll('<','\\u003c')}</script>`;
+const html=source.replace('</head>',head+'</head>').replace('href="./" aria-label="Evir character studio"',`href="${config.publicSiteUrl.replaceAll('&','&amp;').replaceAll('"','&quot;')}" aria-label="Evir home"`);
+await writeFile(path.join(out,'index.html'),html);
+await writeFile(path.join(out,'404.html'),'<!doctype html><html lang="en"><meta charset="utf-8"><title>Page not found — Evir Studio</title><main><h1>Page not found</h1><a href="'+config.basePath+'/">Open Evir Studio</a></main></html>');
+await writeFile(path.join(out,'build-info.json'),JSON.stringify({builtAt:new Date().toISOString(),basePath:config.basePath,application:'editor'},null,2)+'\n');
+await writeFile(path.join(out,'.nojekyll'),'');console.log(`Built standalone Evir Studio into ${path.relative(root,out)}`);

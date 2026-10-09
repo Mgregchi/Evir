@@ -1,0 +1,8 @@
+{
+  "name": "@evir/format", "version": "0.1.0", "type": "module", "license": "MIT",
+  "description": "Explicit Rive export adapter for the tested Evir project subset",
+  "exports": {".": "./index.mjs", "./standalone": "./dist/index.mjs"},
+  "files": ["*.mjs", "schema", "dist", "README.md", "LICENSE"],
+  "dependencies": {"@evir/project-model": "0.1.0", "@evir/runtime": "0.1.0"},
+  "scripts": {"build": "node ../../tools/build-package.mjs"}
+}

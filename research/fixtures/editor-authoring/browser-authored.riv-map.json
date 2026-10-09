@@ -1,121 +1,121 @@
 {
   "artboards": {
-    "artboard-5b0f0f0e-be38-42ae-870e-6f8260bf833b": 0
+    "artboard-8e3ce757-70dc-4cc3-9ef3-96ac4ddd3d08": 0
   },
   "nodes": {
-    "node-1beed2f3-8d88-4898-bd76-3b7ec4b0b03d": {
+    "node-467457a2-2d8e-4b49-8400-6e6ba5801953": {
       "artboard": 0,
       "component": 1,
       "type": "RootBone"
     },
-    "node-cccb5f92-c82b-4cb6-afa6-9dc2b9951d8b": {
+    "node-54fa13a1-c059-4920-a188-d7a16911c8eb": {
       "artboard": 0,
       "component": 2,
       "type": "Bone"
     },
-    "node-f5cd4e4c-47dc-4262-b8ae-5111ffa1e392": {
+    "node-a60a71dc-f089-4ba0-9e68-87e534251031": {
       "artboard": 0,
       "component": 3,
       "type": "Shape"
     },
-    "node-40350cf2-b996-4c4a-a2ee-76672dd4901d": {
+    "node-b6acb64a-03c9-4863-943f-15f1142625e0": {
       "artboard": 0,
       "component": 18,
       "type": "Node"
     },
-    "node-704357f9-a52b-4475-977f-d5b5735c2078": {
+    "node-af662bbf-2a2a-4e49-866e-a727f9e043e0": {
       "artboard": 0,
       "component": 19,
       "type": "Shape"
     },
-    "node-e1a3d2a1-8fbc-4b02-8989-6c30f48a03ae": {
+    "node-f07ee930-daac-47f2-b382-ddd357417347": {
       "artboard": 0,
       "component": 23,
       "type": "Shape"
     },
-    "node-29e25abb-34ec-4c9e-877e-4e4093bcfb2b": {
+    "node-6c024b7c-9d08-449f-bbd1-5f2e9be0ef95": {
       "artboard": 0,
       "component": 27,
       "type": "Shape"
     },
-    "node-2713bc82-a43a-4bdf-9192-4ea311e3efd7": {
+    "node-6b64e766-5cbe-4fe0-8007-48d326581f7e": {
       "artboard": 0,
       "component": 31,
       "type": "Shape"
     },
-    "node-9ae56ff3-7397-4859-b9f4-0f32385ad7c7": {
+    "node-7ad1f285-cb57-4b3f-8459-0dc2c0dd5ec4": {
       "artboard": 0,
       "component": 35,
       "type": "Shape"
     },
-    "node-cf66f0f0-8999-48bf-9282-f68d0827bce3": {
+    "node-fa06acfe-b448-4525-8cc6-118d886a53ba": {
       "artboard": 0,
       "component": 39,
       "type": "Shape"
     },
-    "node-6f80a71f-cf38-4ef5-8236-08aff14572e7": {
+    "node-434369e6-e3df-482f-af1c-0ad7898e8f23": {
       "artboard": 0,
       "component": 43,
       "type": "Shape"
     },
-    "node-6f4c5715-22c1-4c93-af70-13c84747a49e": {
+    "node-1fb674f5-e399-4be4-a0e8-0fba1f5abc7a": {
       "artboard": 0,
       "component": 47,
       "type": "Shape"
     },
-    "node-14af52b1-9db4-40a8-8821-e2a739983e22": {
+    "node-584dd2c9-7ba2-4fe1-b1b5-2c31ee5e9b5a": {
       "artboard": 0,
       "component": 51,
       "type": "Shape"
     },
-    "node-0e2ea9a0-f808-48b1-af4c-f1afe10da7c2": {
+    "node-f62a2985-3b89-4813-9a0c-38cbf25776ca": {
       "artboard": 0,
       "component": 55,
       "type": "Shape"
     },
-    "node-6bef7d84-fe91-4d72-918a-6597b8995281": {
+    "node-5b5b77dd-2d1f-42b4-8cb8-0f0f3ff0248b": {
       "artboard": 0,
       "component": 59,
       "type": "Shape"
     },
-    "node-9e158597-e029-4eff-a3e4-c52246997296": {
+    "node-d9ee1dd7-7b1f-4a9f-9756-731f3a1b4500": {
       "artboard": 0,
       "component": 63,
       "type": "Shape"
     }
   },
   "points": {
-    "point-537c6fcc-c5c2-483e-a0cb-e114d90a9607": {
+    "point-98ac6301-73e5-473f-8ee1-3ac6e1045633": {
       "artboard": 0,
       "component": 5
     },
-    "point-4096637e-d8de-4123-8688-2fabd25f7680": {
+    "point-f3e1f474-9b0d-4359-9f4f-56c0377a86b7": {
       "artboard": 0,
       "component": 7
     },
-    "point-f8a138c5-f222-4396-9b66-41b645e6ee18": {
+    "point-ee2ec18c-d946-445e-86d4-f86a651f918b": {
       "artboard": 0,
       "component": 9
     },
-    "point-ff414c00-2b2c-4d6f-b9bc-b516606a90a5": {
+    "point-1400f0ce-2df7-4752-9ff2-72ed9953ad24": {
       "artboard": 0,
       "component": 11
     }
   },
   "animations": {
-    "animation-ac7e3a48-f1c0-4df0-a2cc-0b3ac4d0e838": {
+    "animation-65c6f061-cef9-4a6f-97f6-e540f5134e3c": {
       "artboard": 0,
       "index": 0,
       "name": "Animation 1"
     },
-    "animation-2c4f3f73-4aeb-41b6-b495-aee63e614020": {
+    "animation-686ededf-c2f8-49a8-9579-720055ecc1f8": {
       "artboard": 0,
       "index": 1,
       "name": "Active"
     }
   },
   "machines": {
-    "machine-18ce845f-78fc-4cd1-8dec-9c584bc00052": {
+    "machine-5b7bf2ca-efd9-41bd-af5a-ebfd0876238f": {
       "artboard": 0,
       "index": 0,
       "name": "Machine 1"

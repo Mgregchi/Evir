@@ -1,12 +1,13 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import { compileProject } from "../../editor/export-riv.mjs";
-import { createProject, addNode } from "../../editor/model.mjs";
+import { compileProject } from "@evir/format";
+import { createProject } from "@evir/project-model";
+import { addNode } from "@evir/authoring";
 import { scenes } from "./scenes.mjs";
 const schema = JSON.parse(
   fs.readFileSync(
-    new URL("../../research/schema/runtime.json", import.meta.url),
+    new URL("../../packages/format/schema/runtime.json", import.meta.url),
   ),
 );
 test("compiler preserves source, produces stable bytes and explicit component/source namespaces", () => {

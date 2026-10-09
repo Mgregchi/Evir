@@ -1,17 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import {
-  createProject,
-  validateProject,
-  serializeProject,
-  openProject,
-  History,
-  addNode,
-  reparent,
-  removeSubtree,
-  reorder,
-  worldTransform,
-} from "../../editor/model.mjs";
+import { createProject, validateProject, serializeProject, openProject, worldTransform } from "@evir/project-model";
+import { History, addNode, reparent, removeSubtree, reorder } from "@evir/authoring";
 const clone = (p) => structuredClone(p);
 const close = (a, b) =>
   a.forEach((v, i) => assert(Math.abs(v - b[i]) < 1e-9, `${a} != ${b}`));

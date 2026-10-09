@@ -6,37 +6,28 @@ const {execFileSync} = require('node:child_process');
 const {chromium} = require('playwright');
 const root = path.resolve(__dirname, '../..');
 const evidence = path.join(root, 'research/results/public-site');
-const names = ['', 'studio/', 'examples/', 'learn/', 'community/', 'roadmap/', 'updates/', 'about/', 'contribute/', 'privacy/'];
-const publicKeys = ['SITE_URL','BASE_PATH','REPOSITORY_URL','DOCS_URL','COMMUNITY_URL','FEEDBACK_URL','NEWSLETTER_URL','SOCIAL_X_URL','SOCIAL_LINKEDIN_URL','SOCIAL_MASTODON_URL','CONTACT_URL'];
+const names = ['', 'product/', 'editor/', 'examples/', 'learn/', 'community/', 'roadmap/', 'updates/', 'about/', 'contribute/', 'privacy/'];
+const publicKeys = ['SITE_URL','BASE_PATH','EDITOR_URL','REPOSITORY_URL','DOCS_URL','COMMUNITY_URL','FEEDBACK_URL','NEWSLETTER_URL','SOCIAL_X_URL','SOCIAL_LINKEDIN_URL','SOCIAL_MASTODON_URL','CONTACT_URL'];
 const mime = {'.html':'text/html','.mjs':'text/javascript','.js':'text/javascript','.css':'text/css','.json':'application/json','.png':'image/png','.xml':'application/xml'};
 function build(name, values={}) {
   const env = {...process.env, ...Object.fromEntries(publicKeys.map(key=>['PUBLIC_'+key,''])),
-    EVIR_SITE_OUTPUT:`site/.test-build/${name}`, ...values, PRIVATE_TEST_SENTINEL:'never-expose-this-private-value'};
-  execFileSync(process.execPath, ['site/build.mjs'], {cwd:root, env, stdio:'pipe'});
+    EVIR_SITE_OUTPUT:`apps/site/.test-build/${name}`, ...values, PRIVATE_TEST_SENTINEL:'never-expose-this-private-value'};
+  execFileSync(process.execPath, ['apps/site/build.mjs'], {cwd:root, env, stdio:'pipe'});
   return path.join(root, env.EVIR_SITE_OUTPUT);
 }
 async function serve(dir, base='') {
-  const server = http.createServer((req,res)=>{
-    let target;
-    try {
-      const pathname = decodeURIComponent(new URL(req.url,'http://localhost').pathname);
-      if(base && !pathname.startsWith(base+'/')) {res.writeHead(404);return res.end();}
-      target = path.resolve(dir, '.'+pathname.slice(base.length));
-      if(target!==dir && !target.startsWith(dir+path.sep)) {res.writeHead(403);return res.end();}
-      if(fs.statSync(target).isDirectory()) target=path.join(target,'index.html');
-      const bytes=fs.readFileSync(target);res.writeHead(200,{'content-type':mime[path.extname(target)]||'application/octet-stream'});res.end(bytes);
-    } catch {res.writeHead(404);res.end('Missing');}
-  });
+  const {createStaticServer}=await import('../../tools/static-server.mjs');
+  const server=createStaticServer(dir,base);
   await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
   return {server, origin:`http://127.0.0.1:${server.address().port}`};
 }
 (async()=>{
-  const {readPublicConfig}=await import('../../site/config.mjs');
+  const {readPublicConfig}=await import('../../apps/site/config.mjs');
   for(const values of [{PUBLIC_SITE_URL:'javascript:alert(1)'},{PUBLIC_COMMUNITY_URL:'https://user:pass@example.org'},{PUBLIC_BASE_PATH:'/../'},{PUBLIC_BASE_PATH:'/Evir//'},{PUBLIC_SITE_URL:'https://example.org/Evir/'}])
     assert.throws(()=>readPublicConfig(values));
   assert.equal(readPublicConfig({}).community,'');
   assert.equal(readPublicConfig({PUBLIC_CONTACT_URL:'mailto:hello@example.org'}).contact,'mailto:hello@example.org');
-  assert.throws(()=>build('unsafe',{EVIR_SITE_OUTPUT:'site/assets'}));
+  assert.throws(()=>build('unsafe',{EVIR_SITE_OUTPUT:'apps/site/assets'}));
   const builds=[['root',{},''],['prefix',{
     PUBLIC_SITE_URL:'https://example.org', PUBLIC_BASE_PATH:'/Evir/',
     PUBLIC_COMMUNITY_URL:'https://chat.example.org/join',PUBLIC_DOCS_URL:'https://docs.example.org',
@@ -44,11 +35,19 @@ async function serve(dir, base='') {
     PUBLIC_SOCIAL_X_URL:'https://x.example.org/evir',PUBLIC_SOCIAL_LINKEDIN_URL:'https://linkedin.example.org/evir',
     PUBLIC_SOCIAL_MASTODON_URL:'https://social.example.org/@evir',PUBLIC_CONTACT_URL:'mailto:hello@example.org'},'/Evir']];
   const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH || (fs.existsSync('/usr/bin/chromium')?'/usr/bin/chromium':chromium.executablePath()),args:['--no-sandbox'],headless:true});
-  const report={checkedAt:new Date().toISOString(),scope:'Static public pages, configured links, reduced motion, feedback drafting and bundled desktop editor. Automated accessibility is not a user study.',pages:[],checks:[]};
+  const report={checkedAt:new Date().toISOString(),scope:'Independent public site and editor deployments, configured launch links, runtime previews, responsive layouts and feedback drafting. Automated accessibility is not a user study.',pages:[],checks:[]};
   fs.mkdirSync(evidence,{recursive:true});
   try {
     for(const [name,env,base] of builds) {
+      const editorBase=name==='prefix'?'/studio':'';
+      const editorDir=path.join(root,`apps/editor/.test-build/${name}`);
+      execFileSync(process.execPath,['apps/editor/build.mjs'],{cwd:root,stdio:'pipe',env:{...process.env,EVIR_EDITOR_OUTPUT:editorDir,EDITOR_BASE_PATH:editorBase,EDITOR_PUBLIC_SITE_URL:'https://example.org/Evir/',PRIVATE_TEST_SENTINEL:'never-expose-this-private-value'}});
+      const editor=await serve(editorDir,editorBase);
+      env.PUBLIC_EDITOR_URL=editor.origin+editorBase+'/';
       const dir=build(name,env),{server,origin}=await serve(dir,base);
+      assert(!fs.existsSync(path.join(dir,'studio.mjs')),'Site must not contain editor code');
+      assert(!fs.existsSync(path.join(dir,'assets/engine')),'Site must consume runtime API, not copied source');
+      assert(!fs.existsSync(path.join(editorDir,'product')),'Editor must not contain marketing pages');
       const context=await browser.newContext({reducedMotion:'reduce',viewport:{width:1440,height:1000}});
       const page=await context.newPage(),errors=[],requests=[];
       page.on('pageerror',e=>errors.push(e.message));
@@ -121,22 +120,31 @@ async function serve(dir, base='') {
         assert((await page.locator('#feedback-draft').textContent()).includes('<img src=x'));
         const destination=new URL(await page.locator('#feedback-link').getAttribute('href'));
         if(name==='root') {assert.equal(destination.hostname,'github.com');assert.equal(destination.searchParams.get('title'),'[Idea] Useful editor feedback');}
-        else {assert.equal(destination.href,env.PUBLIC_FEEDBACK_URL);for(const key of publicKeys.filter(k=>!['SITE_URL','BASE_PATH','REPOSITORY_URL','FEEDBACK_URL','NEWSLETTER_URL'].includes(k))) {
+        else {assert.equal(destination.href,env.PUBLIC_FEEDBACK_URL);for(const key of publicKeys.filter(k=>!['SITE_URL','BASE_PATH','EDITOR_URL','REPOSITORY_URL','FEEDBACK_URL','NEWSLETTER_URL'].includes(k))) {
           if(env['PUBLIC_'+key])assert(await page.locator(`a[href="${env['PUBLIC_'+key]}"]`).count()>0,`Configured ${key}`);
         }}
         assert.equal(requests.filter(r=>r.method!=='GET').length,0,'Feedback must never post');
+        await page.goto(`${origin}${base}/editor/`);
+        assert.equal(await page.locator('#stage').count(),0,'/editor is a public landing page');
+        assert.equal(await page.getByRole('link',{name:'Open Evir Studio'}).getAttribute('href'),env.PUBLIC_EDITOR_URL.replace(/\/$/,''));
+        await page.getByRole('link',{name:'Open Evir Studio'}).click();
+        await page.waitForFunction(()=>window.evirStudio);
+        assert(new URL(page.url()).origin===editor.origin,'Editor opens on a separate origin');
+        await page.locator('#file').setInputFiles(path.join(root,'apps/site/assets/examples/milo.evir-project'));
+        await page.locator('#replace-confirm').click();await page.waitForFunction(()=>evirStudio.snapshot().id==='milo-project');
+        assert.equal(await page.evaluate(()=>evirStudio.snapshot().nodes.length),24);
+        const download=page.waitForEvent('download');await page.getByRole('button',{name:'Export .riv',exact:true}).click();
+        const downloaded=await download;assert(downloaded.suggestedFilename().endsWith('.riv'));
+        assert.deepEqual(fs.readFileSync(await downloaded.path()),fs.readFileSync(path.join(root,'apps/site/assets/examples/milo.riv')),'Editor export is unchanged after extraction');
+        assert.equal(await page.locator('.brand-wordmark').locator('..').getAttribute('href'),'https://example.org/Evir/');
+        assert.equal(await page.locator('#editor-config').textContent().then(s=>s.includes('never-expose')),false);
+        report.checks.push(`${name}: separate editor origin, configured home link, project open and byte-identical export; independent artifacts`);
+        await page.goto(`${origin}${base}/studio/`);
+        await page.waitForURL(`${origin}${base}/editor/`);
+        report.checks.push(`${name}: legacy /studio/ route redirects to /editor/ landing`);
         if(name==='prefix') {
           await page.goto(`${origin}${base}/`);assert.equal(await page.locator('link[rel=canonical]').getAttribute('href'),'https://example.org/Evir/');
-          assert(fs.readFileSync(path.join(dir,'sitemap.xml'),'utf8').includes('https://example.org/Evir/studio/'));
-          await page.goto(`${origin}${base}/editor/`);await page.waitForFunction(()=>window.evirStudio);
-          await page.locator('#file').setInputFiles(path.join(root,'site/assets/examples/milo.evir-project'));
-          await page.locator('#replace-confirm').click();await page.waitForFunction(()=>evirStudio.snapshot().id==='milo-project');
-          assert.equal(await page.evaluate(()=>evirStudio.snapshot().nodes.length),24);
-          const download=page.waitForEvent('download');await page.getByRole('button',{name:'Export .riv',exact:true}).click();
-          const downloaded=await download;assert(downloaded.suggestedFilename().endsWith('.riv'));
-          const bytes=fs.readFileSync(await downloaded.path());assert.equal(bytes.subarray(0,4).toString(),'RIVE');
-          assert.equal(await page.locator('.brand-wordmark').locator('..').getAttribute('href'),'../');
-          report.checks.push('Configured /Evir/ deployment opens the editable Milo project and exports a RIVE file from bundled Studio');
+          assert(fs.readFileSync(path.join(dir,'sitemap.xml'),'utf8').includes('https://example.org/Evir/editor/'));
         } else {
           await page.goto(`${origin}/community/`);
           assert.equal(await page.getByRole('link',{name:'Join the community',exact:true}).count(),0);
@@ -156,7 +164,7 @@ async function serve(dir, base='') {
         }
         assert.deepEqual(errors,[]);
         report.checks.push(`${name}: internal links/assets/fragments, feedback escaped and never submitted, motion pause/play, mobile menu Escape/focus, optional configuration`);
-      } finally {await context.close();await new Promise(resolve=>server.close(resolve));}
+      } finally {await context.close();await new Promise(resolve=>server.close(resolve));await new Promise(resolve=>editor.server.close(resolve));}
     }
     report.checks.push('URL and output-directory validation; private environment values excluded');
     fs.writeFileSync(path.join(evidence,'browser.json'),JSON.stringify(report,null,2)+'\n');

@@ -39,7 +39,7 @@ The schema and upstream fixtures are already checked in, so the normal workflow 
 git clone https://github.com/rive-app/rive-runtime.git /tmp/evir-pinned-runtime
 git -C /tmp/evir-pinned-runtime checkout 7aa93402a27c800db8a36acc8672612c100ea9b1
 cd /workspace/Evir
-python3 tools/extract_schema.py /tmp/evir-pinned-runtime research/schema/runtime.json
+python3 tools/extract_schema.py /tmp/evir-pinned-runtime packages/format/schema/runtime.json
 python3 tools/collect_corpus.py /tmp/evir-pinned-runtime
 npm run research
 ```
@@ -75,4 +75,6 @@ The user supplied a complex SOBO Editor export on 2026-10-08 and deferred device
 
 [Public-site research](../docs/16-public-site-research.md) records the primary site/footer/community observations behind the ten-page public increment. [The supplied-export study](../docs/17-supplied-corpus-exploration.md) inventories four additional user files and performs representative official-runtime probes; the room-decor attachment exceeds the download tool limit. Runtime exports inform context but do not satisfy controlled equivalent-scene comparisons by themselves.
 
-`npm run test:site` checks the public pages, root/subdirectory configuration, responsive layouts, automated accessibility, motion controls, feedback drafting and the bundled editor. It also compares original showcase exports with source evaluation on the official Canvas2D and WebGL2 runtimes. Results are in `research/results/public-site/`; these cloud checks do not close hardware/mobile evidence gaps. [Frontend settings and hosting](../site/README.md) are separate from the main engine/editor work.
+`npm run test:site` checks the public pages, root/subdirectory configuration, responsive layouts, automated accessibility, motion controls, feedback drafting and navigation to the separately built editor on another origin. It also compares original showcase exports with source evaluation on the official Canvas2D and WebGL2 runtimes. Results are in `research/results/public-site/`; these cloud checks do not close hardware/mobile evidence gaps. [Frontend settings and hosting](../apps/site/README.md) are separate from the main engine/editor work.
+
+The [workspace migration](../docs/19-workspace-migration.md) adds `/product` to the initial ten-page public increment and extracts the reusable engine into `packages/`. Run `npm run test:runtime` for playback contracts and dependency isolation; `npm run runtime:build` prepares standalone package artifacts without building either application.

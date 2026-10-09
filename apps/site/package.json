@@ -1,0 +1,6 @@
+{
+  "name": "@evir/site", "version": "0.1.0", "private": true, "type": "module",
+  "scripts": {"build": "node build.mjs", "serve": "node serve.mjs"},
+  "dependencies": {"@evir/runtime": "0.1.0", "@evir/renderer-canvas": "0.1.0"},
+  "devDependencies": {"@evir/project-model": "0.1.0", "@evir/authoring": "0.1.0", "@evir/format": "0.1.0"}
+}

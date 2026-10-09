@@ -1,0 +1,8 @@
+{
+  "name": "@evir/renderer-canvas", "version": "0.1.0", "type": "module", "license": "MIT",
+  "description": "Evir Canvas2D rendering backend",
+  "exports": {".": "./index.mjs", "./standalone": "./dist/index.mjs"},
+  "files": ["*.mjs", "dist", "README.md", "LICENSE"],
+  "dependencies": {"@evir/project-model": "0.1.0", "@evir/runtime": "0.1.0"},
+  "scripts": {"build": "node ../../tools/build-package.mjs"}
+}

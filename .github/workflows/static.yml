@@ -1,43 +1,61 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
-
+name: Deploy public site to Pages
 on:
-  # Runs on pushes targeting the default branch
   push:
-    branches: ["main"]
-
-  # Allows you to run this workflow manually from the Actions tab
+    branches: [main]
+    paths: ['apps/site/**', 'assets/brand/**', 'packages/project-model/**', 'packages/runtime/**', 'packages/renderer-canvas/**', 'tools/build-support.mjs', 'package*.json', '.github/workflows/static.yml']
   workflow_dispatch:
-
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
-  pages: write
-  id-token: write
-
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: false
-
 jobs:
-  # Single deploy job since we're just deploying
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
+    env:
+      PUBLIC_SITE_URL: ${{ vars.PUBLIC_SITE_URL }}
+      PUBLIC_BASE_PATH: ${{ vars.PUBLIC_BASE_PATH }}
+      PUBLIC_EDITOR_URL: ${{ vars.PUBLIC_EDITOR_URL }}
+      PUBLIC_REPOSITORY_URL: ${{ vars.PUBLIC_REPOSITORY_URL }}
+      PUBLIC_DOCS_URL: ${{ vars.PUBLIC_DOCS_URL }}
+      PUBLIC_COMMUNITY_URL: ${{ vars.PUBLIC_COMMUNITY_URL }}
+      PUBLIC_FEEDBACK_URL: ${{ vars.PUBLIC_FEEDBACK_URL }}
+      PUBLIC_NEWSLETTER_URL: ${{ vars.PUBLIC_NEWSLETTER_URL }}
+      PUBLIC_SOCIAL_X_URL: ${{ vars.PUBLIC_SOCIAL_X_URL }}
+      PUBLIC_SOCIAL_LINKEDIN_URL: ${{ vars.PUBLIC_SOCIAL_LINKEDIN_URL }}
+      PUBLIC_SOCIAL_MASTODON_URL: ${{ vars.PUBLIC_SOCIAL_MASTODON_URL }}
+      PUBLIC_CONTACT_URL: ${{ vars.PUBLIC_CONTACT_URL }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - uses: actions/configure-pages@v5
+        id: pages
+      - run: npm ci
+      - run: npm run site:build
+        env:
+          PUBLIC_SITE_URL: ${{ vars.PUBLIC_SITE_URL || steps.pages.outputs.origin }}
+          PUBLIC_BASE_PATH: ${{ vars.PUBLIC_BASE_PATH || steps.pages.outputs.base_path }}
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: apps/site/dist
   deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Upload entire repository
-          path: '/site'
-      - name: Deploy to GitHub Pages
+      - uses: actions/configure-pages@v5
+      - name: Deploy
         id: deployment
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@v4

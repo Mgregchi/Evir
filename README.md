@@ -59,7 +59,7 @@ Evir Format (.evir)
 Runtime (Web, Mobile, etc.)
 ```
 
-The product will eventually be split into independently managed surfaces: public product pages (`/` and `/product`), an editor landing page (`/editor`), the editor application (which may live on a studio subdomain), and versioned runtime/format packages. The current prototype keeps these in one repository while the contracts are still changing. See [the product-boundary decision](docs/18-architecture-boundaries-and-deployment.md).
+The product now has independently built surfaces in one npm-workspace repository: public pages in `apps/site`, the full editor in `apps/editor`, and versioned engine packages in `packages`. `/product` is the product overview; `/editor` is the public landing page and launches the separately hosted editor. The reusable engine lives in `packages/runtime`, with its validated model and Canvas2D renderer alongside it. See [the API guide](packages/README.md) and [migration/hosting guide](docs/19-workspace-migration.md). GPU/native backends and backend services are not implemented by this separation.
 
 We are **not** forced to be compatible with `.riv`.  
 Instead, we will design our own efficient format optimized for:
@@ -133,7 +133,7 @@ The [runtime research closure audit](docs/09-runtime-research-closure.md) covers
 
 ### Editor prototype
 
-The [Evir Studio workspace](editor/README.md) implements editable cubic paths, bone chains and control skinning, typed timelines, conditional state machines and a tested `.riv` export subset, alongside validated project persistence and transaction history. Run `npm run editor:serve` and open `http://127.0.0.1:8080/editor/`. [UI and workflow research](docs/11-editor-ux-research.md) compares Rive, Penpot, SVGator and Lottie Creator and records the decisions guiding the prototype. Run `npm run test:editor` followed by `npm run validate:editor` to exercise browser authoring and both official runtimes. [Milestone acceptance](docs/13-editor-milestone-acceptance.md) defines the completed subset and remaining scope.
+The [Evir Studio workspace](apps/editor/README.md) implements editable cubic paths, bone chains and control skinning, typed timelines, conditional state machines and a tested `.riv` export subset, alongside validated project persistence and transaction history. Run `npm run editor:build`, then `npm run editor:serve`; the local default is port 8788. [UI and workflow research](docs/11-editor-ux-research.md) compares Rive, Penpot, SVGator and Lottie Creator and records the decisions guiding the prototype. Run `npm run test:editor` followed by `npm run validate:editor` to exercise browser authoring and both official runtimes. [Milestone acceptance](docs/13-editor-milestone-acceptance.md) defines the completed subset and remaining scope.
 
 ### Current platform and AI context
 
@@ -141,8 +141,8 @@ The [feature audit](docs/14-platform-context-and-shipped-features.md) and [AI/ag
 
 ### Public site and additional scene research
 
-The [public site](site/README.md) provides ten pages, original editable examples, actual Studio screenshots, contributor entry points and reviewable feedback drafting. Populate [the frontend environment settings](site/.env.example), run `npm run site:build`, then `npm run site:serve`. Hosting and optional community channels are configurable. The included Pages workflow deploys only when manually dispatched on main.
+The [public site](apps/site/README.md) provides eleven pages, original editable examples, actual Studio screenshots, contributor entry points and reviewable feedback drafting. Populate [the frontend environment settings](apps/site/.env.example), including `PUBLIC_EDITOR_URL`, run `npm run site:build`, then `npm run site:serve`. Hosting and optional community channels are configurable. The Pages workflow preserves automatic deployment on relevant main pushes and manual dispatch; editor deployment is separate.
 
 [Public-page research](docs/16-public-site-research.md) records the Rive/Penpot/Framer observations and Evir's distinct design decisions. [The additional export study](docs/17-supplied-corpus-exploration.md) inventories four supplied `.riv` files and probes representative artboards in the official runtime; the fifth attachment exceeds the download tool's 32 MiB limit. These inputs do not replace controlled equivalent scenes or the deferred physical-device audit.
 
-[Product boundaries and deployment](docs/18-architecture-boundaries-and-deployment.md) records the planned separation between public frontend, editor application and reusable runtime/backend packages. It also defines the migration order so user-facing changes can later ship independently from runtime changes.
+[Product boundaries and deployment](docs/18-architecture-boundaries-and-deployment.md) records the separation decision. [The completed migration](docs/19-workspace-migration.md) describes actual ownership, independent builds, package contracts, hosting configuration and verification. Public-site changes no longer require an editor/runtime release.

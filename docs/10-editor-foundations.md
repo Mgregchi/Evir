@@ -30,7 +30,7 @@ The cited documents are pinned to the previously studied official docs revision.
 
 ## Proposed Evir architecture
 
-This is the target architecture, not a claim about Rive's internals. The [Studio implementation](../editor/README.md) now includes the four subsequent path, rigging, animation/interaction and compatible-export milestones for the [tested subset](13-editor-milestone-acceptance.md). The [UX study](11-editor-ux-research.md) guides the workspace decisions.
+This is the target architecture, not a claim about Rive's internals. The [Studio implementation](../apps/editor/README.md) now includes the four subsequent path, rigging, animation/interaction and compatible-export milestones for the [tested subset](13-editor-milestone-acceptance.md). The [UX study](11-editor-ux-research.md) guides the workspace decisions.
 
 ```mermaid
 flowchart TD

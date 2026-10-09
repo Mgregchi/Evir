@@ -4,7 +4,7 @@ import argparse, json, math, struct
 from pathlib import Path
 
 SCHEMA = json.loads(
-    (Path(__file__).resolve().parents[1] / "research/schema/runtime.json").read_text()
+    (Path(__file__).resolve().parents[1] / "packages/format/schema/runtime.json").read_text()
 )
 TYPES = SCHEMA["types"]
 PROPS = SCHEMA["properties"]

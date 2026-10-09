@@ -2,8 +2,10 @@ node_modules/
 __pycache__/
 *.pyc
 research/results/*.png
-site/dist/
-site/.test-build/
-site/.env
-site/.env.*
-!site/.env.example
+apps/*/dist/
+apps/*/.test-build/
+apps/*/.env
+apps/*/.env.*
+!apps/*/.env.example
+packages/*/dist/
+tools/.test-build/

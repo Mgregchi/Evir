@@ -1,0 +1,3 @@
+# @evir/format
+
+Explicit compatibility adapter: `compileProject(project, schema = runtimeSchema)` emits the currently tested `.riv` subset and source-ID mapping. The pinned schema is embedded by app/package builds, so editor export requires no research-server request. It is independent of the renderer/editor UI. The upstream schema's license is retained in `schema/LICENSE.rive` and the standalone distribution. The structural Python reader/writer remains a research tool at `tools/riv.py`; full semantic `.riv` import is not implemented. See [package boundaries and release instructions](https://github.com/Mgregchi/Evir/blob/main/packages/README.md).

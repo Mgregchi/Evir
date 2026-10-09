@@ -1,35 +1,50 @@
 {
-  "checkedAt": "2026-10-09T11:03:47.200Z",
-  "scope": "Static public pages, configured links, reduced motion, feedback drafting and bundled desktop editor. Automated accessibility is not a user study.",
+  "checkedAt": "2026-10-09T13:54:29.062Z",
+  "scope": "Independent public site and editor deployments, configured launch links, runtime previews, responsive layouts and feedback drafting. Automated accessibility is not a user study.",
   "pages": [
     {
       "build": "root",
       "path": "/",
       "accessibilityViolations": 0,
       "accessibilityPasses": 18,
+      "accessibilityViewportWidths": [
+        1440,
+        390
+      ],
       "viewportWidths": [
         1440,
         390,
         320
-      ],
-      "accessibilityViewportWidths": [
-        1440,
-        390
       ]
     },
     {
       "build": "root",
-      "path": "studio/",
+      "path": "product/",
       "accessibilityViolations": 0,
       "accessibilityPasses": 17,
+      "accessibilityViewportWidths": [
+        1440,
+        390
+      ],
       "viewportWidths": [
         1440,
         390,
         320
-      ],
+      ]
+    },
+    {
+      "build": "root",
+      "path": "editor/",
+      "accessibilityViolations": 0,
+      "accessibilityPasses": 17,
       "accessibilityViewportWidths": [
         1440,
         390
+      ],
+      "viewportWidths": [
+        1440,
+        390,
+        320
       ]
     },
     {
@@ -37,14 +52,14 @@
       "path": "examples/",
       "accessibilityViolations": 0,
       "accessibilityPasses": 18,
+      "accessibilityViewportWidths": [
+        1440,
+        390
+      ],
       "viewportWidths": [
         1440,
         390,
         320
-      ],
-      "accessibilityViewportWidths": [
-        1440,
-        390
       ]
     },
     {
@@ -52,14 +67,14 @@
       "path": "learn/",
       "accessibilityViolations": 0,
       "accessibilityPasses": 17,
+      "accessibilityViewportWidths": [
+        1440,
+        390
+      ],
       "viewportWidths": [
         1440,
         390,
         320
-      ],
-      "accessibilityViewportWidths": [
-        1440,
-        390
       ]
     },
     {
@@ -67,14 +82,14 @@
       "path": "community/",
       "accessibilityViolations": 0,
       "accessibilityPasses": 21,
+      "accessibilityViewportWidths": [
+        1440,
+        390
+      ],
       "viewportWidths": [
         1440,
         390,
         320
-      ],
-      "accessibilityViewportWidths": [
-        1440,
-        390
       ]
     },
     {
@@ -82,14 +97,14 @@
       "path": "roadmap/",
       "accessibilityViolations": 0,
       "accessibilityPasses": 17,
+      "accessibilityViewportWidths": [
+        1440,
+        390
+      ],
       "viewportWidths": [
         1440,
         390,
         320
-      ],
-      "accessibilityViewportWidths": [
-        1440,
-        390
       ]
     },
     {
@@ -97,14 +112,14 @@
       "path": "updates/",
       "accessibilityViolations": 0,
       "accessibilityPasses": 17,
+      "accessibilityViewportWidths": [
+        1440,
+        390
+      ],
       "viewportWidths": [
         1440,
         390,
         320
-      ],
-      "accessibilityViewportWidths": [
-        1440,
-        390
       ]
     },
     {
@@ -112,14 +127,14 @@
       "path": "about/",
       "accessibilityViolations": 0,
       "accessibilityPasses": 17,
+      "accessibilityViewportWidths": [
+        1440,
+        390
+      ],
       "viewportWidths": [
         1440,
         390,
         320
-      ],
-      "accessibilityViewportWidths": [
-        1440,
-        390
       ]
     },
     {
@@ -127,14 +142,14 @@
       "path": "contribute/",
       "accessibilityViolations": 0,
       "accessibilityPasses": 23,
+      "accessibilityViewportWidths": [
+        1440,
+        390
+      ],
       "viewportWidths": [
         1440,
         390,
         320
-      ],
-      "accessibilityViewportWidths": [
-        1440,
-        390
       ]
     },
     {
@@ -142,14 +157,14 @@
       "path": "privacy/",
       "accessibilityViolations": 0,
       "accessibilityPasses": 17,
+      "accessibilityViewportWidths": [
+        1440,
+        390
+      ],
       "viewportWidths": [
         1440,
         390,
         320
-      ],
-      "accessibilityViewportWidths": [
-        1440,
-        390
       ]
     },
     {
@@ -157,29 +172,44 @@
       "path": "/",
       "accessibilityViolations": 0,
       "accessibilityPasses": 18,
+      "accessibilityViewportWidths": [
+        1440,
+        390
+      ],
       "viewportWidths": [
         1440,
         390,
         320
-      ],
-      "accessibilityViewportWidths": [
-        1440,
-        390
       ]
     },
     {
       "build": "prefix",
-      "path": "studio/",
+      "path": "product/",
       "accessibilityViolations": 0,
       "accessibilityPasses": 17,
+      "accessibilityViewportWidths": [
+        1440,
+        390
+      ],
       "viewportWidths": [
         1440,
         390,
         320
-      ],
+      ]
+    },
+    {
+      "build": "prefix",
+      "path": "editor/",
+      "accessibilityViolations": 0,
+      "accessibilityPasses": 17,
       "accessibilityViewportWidths": [
         1440,
         390
+      ],
+      "viewportWidths": [
+        1440,
+        390,
+        320
       ]
     },
     {
@@ -187,14 +217,14 @@
       "path": "examples/",
       "accessibilityViolations": 0,
       "accessibilityPasses": 18,
+      "accessibilityViewportWidths": [
+        1440,
+        390
+      ],
       "viewportWidths": [
         1440,
         390,
         320
-      ],
-      "accessibilityViewportWidths": [
-        1440,
-        390
       ]
     },
     {
@@ -202,14 +232,14 @@
       "path": "learn/",
       "accessibilityViolations": 0,
       "accessibilityPasses": 17,
+      "accessibilityViewportWidths": [
+        1440,
+        390
+      ],
       "viewportWidths": [
         1440,
         390,
         320
-      ],
-      "accessibilityViewportWidths": [
-        1440,
-        390
       ]
     },
     {
@@ -217,14 +247,14 @@
       "path": "community/",
       "accessibilityViolations": 0,
       "accessibilityPasses": 21,
+      "accessibilityViewportWidths": [
+        1440,
+        390
+      ],
       "viewportWidths": [
         1440,
         390,
         320
-      ],
-      "accessibilityViewportWidths": [
-        1440,
-        390
       ]
     },
     {
@@ -232,14 +262,14 @@
       "path": "roadmap/",
       "accessibilityViolations": 0,
       "accessibilityPasses": 17,
+      "accessibilityViewportWidths": [
+        1440,
+        390
+      ],
       "viewportWidths": [
         1440,
         390,
         320
-      ],
-      "accessibilityViewportWidths": [
-        1440,
-        390
       ]
     },
     {
@@ -247,14 +277,14 @@
       "path": "updates/",
       "accessibilityViolations": 0,
       "accessibilityPasses": 17,
+      "accessibilityViewportWidths": [
+        1440,
+        390
+      ],
       "viewportWidths": [
         1440,
         390,
         320
-      ],
-      "accessibilityViewportWidths": [
-        1440,
-        390
       ]
     },
     {
@@ -262,14 +292,14 @@
       "path": "about/",
       "accessibilityViolations": 0,
       "accessibilityPasses": 17,
+      "accessibilityViewportWidths": [
+        1440,
+        390
+      ],
       "viewportWidths": [
         1440,
         390,
         320
-      ],
-      "accessibilityViewportWidths": [
-        1440,
-        390
       ]
     },
     {
@@ -277,14 +307,14 @@
       "path": "contribute/",
       "accessibilityViolations": 0,
       "accessibilityPasses": 23,
+      "accessibilityViewportWidths": [
+        1440,
+        390
+      ],
       "viewportWidths": [
         1440,
         390,
         320
-      ],
-      "accessibilityViewportWidths": [
-        1440,
-        390
       ]
     },
     {
@@ -292,21 +322,24 @@
       "path": "privacy/",
       "accessibilityViolations": 0,
       "accessibilityPasses": 17,
+      "accessibilityViewportWidths": [
+        1440,
+        390
+      ],
       "viewportWidths": [
         1440,
         390,
         320
-      ],
-      "accessibilityViewportWidths": [
-        1440,
-        390
       ]
     }
   ],
   "checks": [
+    "root: separate editor origin, configured home link, project open and byte-identical export; independent artifacts",
+    "root: legacy /studio/ route redirects to /editor/ landing",
     "JavaScript disabled: mobile navigation/poster/links available; feedback cannot submit as a GET form",
     "root: internal links/assets/fragments, feedback escaped and never submitted, motion pause/play, mobile menu Escape/focus, optional configuration",
-    "Configured /Evir/ deployment opens the editable Milo project and exports a RIVE file from bundled Studio",
+    "prefix: separate editor origin, configured home link, project open and byte-identical export; independent artifacts",
+    "prefix: legacy /studio/ route redirects to /editor/ landing",
     "prefix: internal links/assets/fragments, feedback escaped and never submitted, motion pause/play, mobile menu Escape/focus, optional configuration",
     "URL and output-directory validation; private environment values excluded"
   ]

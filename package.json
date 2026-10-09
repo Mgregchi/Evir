@@ -1,8 +1,12 @@
 {
-  "name": "evir-research",
+  "name": "evir-workspace",
   "version": "0.1.0",
   "private": true,
-  "description": "Evidence and tools for Evir's Rive compatibility research",
+  "description": "Evir applications, shared runtime packages and compatibility research",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
     "generate": "python3 tools/generate_fixtures.py",
     "test": "python3 -m unittest discover -s tests -v",
@@ -38,13 +42,17 @@
     "check:closed": "python3 tools/closure_report.py --require-complete",
     "research:all": "npm run research && npm run research:advanced && npm run research:complex && npm run research:closure && npm run research:editor-export && npm run report:closure",
     "research:editor-export": "python3 tools/inspect_editor_export.py && node tools/validate_editor_export.cjs && RIVE_RENDERER=webgl2 node tools/validate_editor_export.cjs",
-    "editor:serve": "python3 -m http.server 8080 --bind 127.0.0.1",
-    "test:editor": "node --test tests/editor/*.test.mjs && node tests/editor/browser.cjs && node tests/editor/authoring-browser.cjs",
+    "editor:build": "npm run build --workspace @evir/editor",
+    "editor:serve": "npm run serve --workspace @evir/editor",
+    "test:editor": "npm run editor:build && node --test tests/editor/*.test.mjs && node tests/editor/browser.cjs && node tests/editor/authoring-browser.cjs",
     "validate:editor": "node tools/validate_editor_authoring.cjs && RIVE_RENDERER=webgl2 node tools/validate_editor_authoring.cjs",
-    "site:build": "node site/build.mjs",
-    "site:serve": "node site/serve.mjs",
-    "site:assets": "node site/generate-examples.mjs && node tools/capture_site_assets.cjs",
-    "test:site": "node tests/site/browser.cjs && node tests/site/examples.cjs"
+    "site:build": "npm run build --workspace @evir/site",
+    "site:serve": "npm run serve --workspace @evir/site",
+    "site:assets": "node apps/site/generate-examples.mjs && node tools/capture_site_assets.cjs",
+    "test:site": "node tests/site/browser.cjs && node tests/site/examples.cjs",
+    "runtime:build": "npm run build --workspace @evir/project-model --workspace @evir/runtime --workspace @evir/renderer-canvas --workspace @evir/authoring --workspace @evir/format",
+    "test:runtime": "node --test tests/runtime/*.test.mjs",
+    "build": "npm run site:build && npm run editor:build && npm run runtime:build"
   },
   "dependencies": {
     "@rive-app/canvas": "2.44.0",
@@ -53,6 +61,7 @@
     "pngjs": "7.0.0"
   },
   "devDependencies": {
-    "axe-core": "4.14.0"
+    "axe-core": "4.14.0",
+    "esbuild": "0.28.2"
   }
 }

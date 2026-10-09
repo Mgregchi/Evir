@@ -40,7 +40,7 @@ Small keys and references usually fit in one byte. Defaults can be omitted when 
 
 ## Schema and index spaces
 
-`research/schema/runtime.json` contains 353 type definitions and 653 property wire descriptions extracted from generated C++ headers and `CoreRegistry::propertyFieldId`. Extraction retains source paths and an upstream commit SHA. Inheritance supplies the property names for authoring. The global registry is also necessary: historical/deprecated fields can be skippable even when no current class deserializer stores them.
+`packages/format/schema/runtime.json` contains 353 type definitions and 653 property wire descriptions extracted from generated C++ headers and `CoreRegistry::propertyFieldId`. Extraction retains source paths and an upstream commit SHA. Inheritance supplies the property names for authoring. The global registry is also necessary: historical/deprecated fields can be skippable even when no current class deserializer stores them.
 
 | Concept                     |     Type key | Important keys / references                   |
 | --------------------------- | -----------: | --------------------------------------------- |
