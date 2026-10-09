@@ -4,6 +4,8 @@ From the repository root, run `npm ci`, `npm run editor:build`, then `npm run ed
 
 Studio is independently deployed from `apps/editor/dist`. Its browser UI lives here; project validation, authoring operations, motion, rendering and export live in [versioned shared packages](../../packages/README.md). The build bundles those package APIs and the `.riv` schema; runtime export makes no request to the research directory. The public site's `/editor/` page introduces Studio and launches this application at its configured address.
 
+For GitHub-connected deployment, follow [the Cloudflare/Netlify dashboard guide](../../docs/20-github-connected-hosting.md). Create a separate editor project from the same repository. Netlify uses **package directory** `apps/editor`, empty **base directory**, and this app's `netlify.toml`; Cloudflare Pages builds from repository root, while Workers uses the app-root commands given in the guide.
+
 Copy `.env.example` to `.env` in this directory to configure `EDITOR_BASE_PATH` (empty for a subdomain root, or a subdirectory such as `/studio/`) and `EDITOR_PUBLIC_SITE_URL` (the public home link). These are public build-time values. The site configures the matching destination through `PUBLIC_EDITOR_URL`. Build after changing settings. See [deployment and migration guidance](../../docs/19-workspace-migration.md).
 
 The four editor milestones are implemented for a declared vector subset:
