@@ -2,6 +2,8 @@
 
 Ten static public pages: home, Studio, examples, learn, community, roadmap, updates, about, contribute and privacy. The build also includes the working desktop editor at `/editor/`, its schema for `.riv` export, and two independently authored editable examples. No server, account, analytics service or AI provider is required.
 
+This site is the first public surface, not the long-term owner of the editor/runtime. The intended product structure is a public home and `/product` showcase, an `/editor` landing page, a separately deployed editor workspace (potentially on a studio subdomain), and independently versioned runtime packages. See [the boundary and deployment decision](../docs/18-architecture-boundaries-and-deployment.md).
+
 ## Build and preview
 
 Use Node.js 24 and the repository lockfile:

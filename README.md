@@ -59,6 +59,8 @@ Evir Format (.evir)
 Runtime (Web, Mobile, etc.)
 ```
 
+The product will eventually be split into independently managed surfaces: public product pages (`/` and `/product`), an editor landing page (`/editor`), the editor application (which may live on a studio subdomain), and versioned runtime/format packages. The current prototype keeps these in one repository while the contracts are still changing. See [the product-boundary decision](docs/18-architecture-boundaries-and-deployment.md).
+
 We are **not** forced to be compatible with `.riv`.  
 Instead, we will design our own efficient format optimized for:
 
@@ -142,3 +144,5 @@ The [feature audit](docs/14-platform-context-and-shipped-features.md) and [AI/ag
 The [public site](site/README.md) provides ten pages, original editable examples, actual Studio screenshots, contributor entry points and reviewable feedback drafting. Populate [the frontend environment settings](site/.env.example), run `npm run site:build`, then `npm run site:serve`. Hosting and optional community channels are configurable. The included Pages workflow deploys only when manually dispatched on main.
 
 [Public-page research](docs/16-public-site-research.md) records the Rive/Penpot/Framer observations and Evir's distinct design decisions. [The additional export study](docs/17-supplied-corpus-exploration.md) inventories four supplied `.riv` files and probes representative artboards in the official runtime; the fifth attachment exceeds the download tool's 32 MiB limit. These inputs do not replace controlled equivalent scenes or the deferred physical-device audit.
+
+[Product boundaries and deployment](docs/18-architecture-boundaries-and-deployment.md) records the planned separation between public frontend, editor application and reusable runtime/backend packages. It also defines the migration order so user-facing changes can later ship independently from runtime changes.
