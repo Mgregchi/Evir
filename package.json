@@ -49,6 +49,7 @@
     "site:build": "npm run build --workspace @evir/site",
     "site:serve": "npm run serve --workspace @evir/site",
     "site:assets": "node apps/site/generate-examples.mjs && node tools/capture_site_assets.cjs",
+    "test:frontend": "node --test tests/frontend/*.test.mjs",
     "test:site": "node tests/site/browser.cjs && node tests/site/examples.cjs",
     "runtime:build": "npm run build --workspace @evir/project-model --workspace @evir/runtime --workspace @evir/renderer-canvas --workspace @evir/authoring --workspace @evir/format",
     "test:runtime": "node --test tests/runtime/*.test.mjs",

@@ -10,34 +10,35 @@ Use Node.js 24 and the repository lockfile:
 
 ```sh
 npm ci
-cp apps/site/.env.example apps/site/.env
-# Populate the public settings below.
 npm run site:build
 npm run site:serve
 ```
 
-Open `http://127.0.0.1:8787/` (append your base path if configured). The production directory is `apps/site/dist`. Build and serve the separate editor with `npm run editor:build` and `npm run editor:serve`; it defaults to `http://127.0.0.1:8788/`. Committed screenshots and examples make an ordinary build independent of browser installation. To regenerate them, install Chromium with `npx playwright install chromium` and run `npm run site:assets`. Set `CHROMIUM_PATH` to use an existing browser.
+Open `http://127.0.0.1:8787/` (append the path from `SITE_URL` if you configured one). The production directory is `apps/site/dist`. Build and serve the separate editor with `npm run editor:build` and `npm run editor:serve`; it defaults to `http://127.0.0.1:8788/`. Committed screenshots and examples make an ordinary build independent of browser installation. To regenerate them, install Chromium with `npx playwright install chromium` and run `npm run site:assets`. Set `CHROMIUM_PATH` to use an existing browser.
 
 ## Frontend environment settings
 
-All settings are **public, compiled into the frontend at build time**. Edit `apps/site/.env` locally or set environment variables on your build host, then rebuild. Existing process variables take precedence over the local file. Never put credentials or provider keys in these variables. Only these named values are read; the build does not expose the rest of the environment.
+For hosting, use **`SITE_URL` and `STUDIO_URL` with the same values on both apps**. Each is a full address, including any path. See [the deployment guide](../../docs/20-github-connected-hosting.md#two-addresses-the-same-on-both-projects) for exact provider fields. Paths are derived automatically; no base-path variable is needed.
 
-| Variable | Meaning | Empty/default behavior |
+For local defaults, no environment file is needed. For custom addresses/links, copy [`.env.example`](.env.example) to `apps/site/.env` and edit it, or set variables on your build host. Process values take precedence over the local file. All named settings are public build-time values; rebuild after editing. Never put secrets here. Other environment values are not embedded in the app.
+
+### Optional public-site links
+
+These go **only on the public-site project**. None is needed by Studio.
+
+| Variable | Destination | If empty |
 | --- | --- | --- |
-| `PUBLIC_SITE_URL` | Production origin, e.g. `https://evir.example` | Omit canonical URLs, social image URL and sitemap until set |
-| `PUBLIC_BASE_PATH` | Optional subdirectory, e.g. `/Evir/` | Serve from the origin root |
-| `PUBLIC_EDITOR_URL` | Full editor application destination, e.g. `https://studio.evir.example/` | `http://127.0.0.1:8788/` for local development; set for production |
-| `PUBLIC_REPOSITORY_URL` | GitHub repository URL | `https://github.com/Mgregchi/Evir` |
-| `PUBLIC_DOCS_URL` | Documentation destination | Repository research guide |
-| `PUBLIC_COMMUNITY_URL` | Discord, forum or other community destination | Use the configured feedback channel; hide the dedicated join link |
-| `PUBLIC_FEEDBACK_URL` | Feedback destination | Repository new-issue page |
-| `PUBLIC_NEWSLETTER_URL` | External updates/subscription page | Follow the repository instead |
-| `PUBLIC_SOCIAL_X_URL` | X profile | Hide link |
-| `PUBLIC_SOCIAL_LINKEDIN_URL` | LinkedIn profile | Hide link |
-| `PUBLIC_SOCIAL_MASTODON_URL` | Mastodon profile | Hide link |
-| `PUBLIC_CONTACT_URL` | Contact HTTP(S) or `mailto:` destination | Hide link |
+| `REPOSITORY_URL` | GitHub repository | `https://github.com/Mgregchi/Evir` |
+| `DOCS_URL` | Documentation | Repository research guide |
+| `COMMUNITY_URL` | Discord/forum | Hide dedicated join link |
+| `FEEDBACK_URL` | Feedback | Repository new-issue page |
+| `NEWSLETTER_URL` | Updates/subscription page | Follow repository instead |
+| `SOCIAL_X_URL` | X profile | Hide link |
+| `SOCIAL_LINKEDIN_URL` | LinkedIn profile | Hide link |
+| `SOCIAL_MASTODON_URL` | Mastodon profile | Hide link |
+| `CONTACT_URL` | Contact page or `mailto:` address | Hide link |
 
-`PUBLIC_SITE_URL` is an origin, not a URL containing a path. A GitHub project site would use `https://mgregchi.github.io` plus `/Evir/`. For a custom domain served at its root, use that origin and leave `PUBLIC_BASE_PATH` empty. HTTP(S) settings reject executable URLs and credentials. Repository-derived issue and source links assume GitHub; override the docs/feedback URLs when appropriate.
+URL settings reject executable links and credentials. Repository-derived docs/feedback defaults assume GitHub; override them if you use another service. Without a configured `SITE_URL`, local builds omit canonical/social-image URLs and the sitemap.
 
 Community feedback creates an escaped, reviewable draft in the page. It prefills title/body only for GitHub `/issues/new`; other configured destinations open unchanged, and visitors can copy the draft. No message is posted automatically. Optional community/newsletter links open your external destination; the site does not create those services.
 
@@ -45,6 +46,7 @@ Community feedback creates an escaped, reviewable draft in the page. It prefills
 
 ```sh
 npx playwright install chromium
+npm run test:frontend
 npm run test:site
 ```
 
@@ -52,15 +54,9 @@ The browser checks cover every page with root and `/Evir/` configurations, inter
 
 ## Hosting
 
-For automatic deployments from GitHub, follow [Connect Evir to Cloudflare or Netlify](../../docs/20-github-connected-hosting.md). It gives dashboard steps for two separate projects, exact root/package/build/output settings, URL variables, domains and previews. Netlify reads this app's `netlify.toml` when its **package directory** is `apps/site` and **base directory** is the repository root. Cloudflare Pages and the existing Workers integration have separate instructions.
+Use [the GitHub-connected deployment guide](../../docs/20-github-connected-hosting.md) for Cloudflare Workers, Pages or Netlify. It is the single source for hosting fields and environment settings. The separate editor can use a subdomain or [the `/editor/studio/` path](../../docs/21-studio-path-hosting.md).
 
-The editor may also live at `yourdomain.com/editor/studio/`. Set `PUBLIC_EDITOR_URL` to that address and follow [the same-domain routing recipe](../../docs/20-github-connected-hosting.md#serve-studio-at-editorstudio-on-the-public-domain); the public `/editor/` landing and separate editor build remain intact.
-
-Upload the contents of `apps/site/dist` to a static host that serves directory `index.html` files and ES modules with a JavaScript MIME type. Use `404.html` as the missing-page document. Publish only this directory, not the repository or `node_modules`. If hosted beneath a subdirectory, configure `PUBLIC_BASE_PATH` before building. The editor's deployable directory is separately `apps/editor/dist`.
-
-`Public site validation` tests relevant PRs/pushes. The existing Pages deployment workflow now builds the site and uploads `apps/site/dist`, fixing the previous absolute `/site` artifact path; it preserves deployment on relevant main pushes and manual dispatch. Pages metadata supplies the origin/base path unless overridden by public **repository variables**. Enable Pages with the Actions source and populate `PUBLIC_EDITOR_URL` with the separately hosted editor, plus your optional channels, before publishing. Editor/runtime CI has separate triggers and artifacts. A site content change does not trigger editor/runtime releases. This migration itself does not deploy a domain.
-
-Cloudflare Pages can use build command `npm run site:build` and output directory `apps/site/dist`. The included Workers static-assets config can be used with `npx wrangler deploy --config apps/site/wrangler.jsonc` after building and configuring your account. Configure the editor as a separate project/service with its own build/output/settings. See [the hosting guide](../../docs/19-workspace-migration.md).
+This app publishes `apps/site/dist`. Static hosting must serve directory `index.html` files, JavaScript MIME types and `404.html` for missing pages. There is no blanket SPA fallback. GitHub Pages uses the supplied workflow; it derives `SITE_URL` from Pages metadata unless configured explicitly, and `STUDIO_URL` selects the separate editor.
 
 ## Scope and assets
 

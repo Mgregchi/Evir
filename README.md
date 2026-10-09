@@ -141,7 +141,7 @@ The [feature audit](docs/14-platform-context-and-shipped-features.md) and [AI/ag
 
 ### Public site and additional scene research
 
-The [public site](apps/site/README.md) provides eleven pages, original editable examples, actual Studio screenshots, contributor entry points and reviewable feedback drafting. Populate [the frontend environment settings](apps/site/.env.example), including `PUBLIC_EDITOR_URL`, run `npm run site:build`, then `npm run site:serve`. Hosting and optional community channels are configurable. The Pages workflow preserves automatic deployment on relevant main pushes and manual dispatch; editor deployment is separate.
+The [public site](apps/site/README.md) provides eleven pages, original editable examples, actual Studio screenshots, contributor entry points and reviewable feedback drafting. Populate [the frontend environment settings](apps/site/.env.example), using the same `SITE_URL` and `STUDIO_URL` as Studio, run `npm run site:build`, then `npm run site:serve`. Hosting and optional community channels are configurable. The Pages workflow preserves automatic deployment on relevant main pushes and manual dispatch; editor deployment is separate.
 
 To connect the repository directly to Cloudflare or Netlify, follow [the GitHub-connected deployment guide](docs/20-github-connected-hosting.md). Both providers build from GitHub automatically; the public site and full editor use separate hosting projects and configurable URLs.
 

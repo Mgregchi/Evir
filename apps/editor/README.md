@@ -4,11 +4,13 @@ From the repository root, run `npm ci`, `npm run editor:build`, then `npm run ed
 
 Studio is independently deployed from `apps/editor/dist`. Its browser UI lives here; project validation, authoring operations, motion, rendering and export live in [versioned shared packages](../../packages/README.md). The build bundles those package APIs and the `.riv` schema; runtime export makes no request to the research directory. The public site's `/editor/` page introduces Studio and launches this application at its configured address.
 
-For GitHub-connected deployment, follow [the Cloudflare/Netlify dashboard guide](../../docs/20-github-connected-hosting.md). Create a separate editor project from the same repository. Netlify uses **package directory** `apps/editor`, empty **base directory**, and this app's `netlify.toml`; Cloudflare Pages builds from repository root, while Workers uses the app-root commands given in the guide.
+## Hosting
 
-Copy `.env.example` to `.env` in this directory to configure `EDITOR_BASE_PATH` (empty for a subdomain root, or a subdirectory such as `/studio/`) and `EDITOR_PUBLIC_SITE_URL` (the public home link). These are public build-time values. The site configures the matching destination through `PUBLIC_EDITOR_URL`. Build after changing settings. See [deployment and migration guidance](../../docs/19-workspace-migration.md).
+Use [the GitHub-connected deployment guide](../../docs/20-github-connected-hosting.md). Set **the same `SITE_URL` and `STUDIO_URL` values as the public-site project**. Studio derives its home link from `SITE_URL` and its path from `STUDIO_URL`. No community/social settings are needed here.
 
-For `yourdomain.com/editor/studio/`, use `EDITOR_BASE_PATH=/editor/studio` and configure the public host to proxy that mount to this separate app. See [the path-hosting recipe](../../docs/20-github-connected-hosting.md#serve-studio-at-editorstudio-on-the-public-domain) for Netlify rules and Cloudflare routing. `/editor/` remains the public landing page; the output directory stays `apps/editor/dist`.
+Local builds work without an environment file. To customize them, copy [`.env.example`](.env.example) to `apps/editor/.env`; production values belong in your provider's build environment. All settings are public; rebuild after editing.
+
+The output stays `apps/editor/dist` whether Studio has a subdomain or uses [the `/editor/studio/` route](../../docs/21-studio-path-hosting.md). `/editor/` stays the public landing page.
 
 The four editor milestones are implemented for a declared vector subset:
 

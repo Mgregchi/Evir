@@ -1,10 +1,10 @@
 name: Public site validation
 on:
   pull_request:
-    paths: ['apps/site/**', 'assets/brand/**', 'packages/project-model/**', 'packages/runtime/**', 'packages/renderer-canvas/**', 'tests/site/**', 'tools/build-support.mjs', 'tools/static-server.mjs', 'tools/runtime-oracle.mjs', 'tools/prepare-oracle.cjs', 'tools/browser.cjs', 'tools/gpu_diagnostics.cjs', 'package*.json', '.github/workflows/public-site.yml']
+    paths: ['apps/site/**', 'assets/brand/**', 'packages/project-model/**', 'packages/runtime/**', 'packages/renderer-canvas/**', 'tests/site/**', 'tests/frontend/**', 'tools/build-support.mjs', 'tools/static-server.mjs', 'tools/runtime-oracle.mjs', 'tools/prepare-oracle.cjs', 'tools/browser.cjs', 'tools/gpu_diagnostics.cjs', 'package*.json', '.github/workflows/public-site.yml']
   push:
     branches: [main]
-    paths: ['apps/site/**', 'assets/brand/**', 'packages/project-model/**', 'packages/runtime/**', 'packages/renderer-canvas/**', 'tests/site/**', 'tools/build-support.mjs', 'tools/static-server.mjs', 'tools/runtime-oracle.mjs', 'tools/prepare-oracle.cjs', 'tools/browser.cjs', 'tools/gpu_diagnostics.cjs', 'package*.json', '.github/workflows/public-site.yml']
+    paths: ['apps/site/**', 'assets/brand/**', 'packages/project-model/**', 'packages/runtime/**', 'packages/renderer-canvas/**', 'tests/site/**', 'tests/frontend/**', 'tools/build-support.mjs', 'tools/static-server.mjs', 'tools/runtime-oracle.mjs', 'tools/prepare-oracle.cjs', 'tools/browser.cjs', 'tools/gpu_diagnostics.cjs', 'package*.json', '.github/workflows/public-site.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -19,6 +19,7 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npx playwright install --with-deps chromium
+      - run: npm run test:frontend
       - run: npm run test:site
       - uses: actions/upload-artifact@v4
         with:

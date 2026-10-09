@@ -11,7 +11,7 @@ Primary references consulted:
 - [npm workspaces](https://docs.npmjs.com/cli/v11/using-npm/workspaces): local package linking and workspace build commands.
 - [Node package exports](https://nodejs.org/api/packages.html): explicit package/subpath entry points.
 - [esbuild API](https://esbuild.github.io/api/): standalone bundles and application-specific ESM builds.
-- [Cloudflare static assets configuration](https://developers.cloudflare.com/workers/static-assets/configuration/): separate static asset directories and missing-page behavior.
+- [Cloudflare static assets configuration](https://developers.cloudflare.com/workers/static-assets/binding/): separate static asset directories and missing-page behavior.
 - [GitHub configure-pages action contract](https://github.com/actions/configure-pages/blob/v5/action.yml): origin/base-path metadata for project-site builds.
 
 Independent releases do not require separate repositories. This monorepo now has one owner for each shared implementation, separate application artifacts, and versioned package manifests. There is no backend service to relocate yet.
@@ -52,19 +52,15 @@ Run `npm run site:serve` and `npm run editor:serve` in separate terminals. Their
 
 | Surface | Build | Deploy directory | Public configuration |
 | --- | --- | --- | --- |
-| Public site | `npm run site:build` | `apps/site/dist` | `PUBLIC_SITE_URL`, `PUBLIC_BASE_PATH`, `PUBLIC_EDITOR_URL`, community/feedback/social URLs |
-| Full editor | `npm run editor:build` | `apps/editor/dist` | `EDITOR_BASE_PATH`, `EDITOR_PUBLIC_SITE_URL` |
+| Public site | `npm run site:build` | `apps/site/dist` | `SITE_URL`, `STUDIO_URL`; optional community links |
+| Full editor | `npm run editor:build` | `apps/editor/dist` | The same `SITE_URL`, `STUDIO_URL` |
 | Shared packages | `npm run runtime:build` | Each package's own `dist` and npm archive | Versioned API, no app environment variables |
 
-Populate [site settings](../apps/site/.env.example) and [editor settings](../apps/editor/.env.example) separately. For a domain/subdomain installation, set the site's `PUBLIC_EDITOR_URL` to the editor application's HTTPS origin, and the editor's `EDITOR_PUBLIC_SITE_URL` to the public site's HTTPS origin. `/product` describes the product; `/editor` is the public editor landing; its launch buttons open the configured application. The old public `/studio/` URL redirects to `/editor/`.
+The two apps use the same pair of full addresses: `SITE_URL` for the public website and `STUDIO_URL` for the editor workspace. Paths come from those URLs. Optional community/social links are read only by the public site. See [the deployment guide](20-github-connected-hosting.md) for provider settings and migration from older variable names.
 
-An alternative is the same-domain mount `https://yourdomain.com/editor/studio/`. Set `PUBLIC_EDITOR_URL` to that address and `EDITOR_BASE_PATH=/editor/studio`, then add the hosting proxy described in [the path-hosting guide](20-github-connected-hosting.md#serve-studio-at-editorstudio-on-the-public-domain). The two apps retain their independent builds and output directories.
+`/product/` is the product overview and `/editor/` is its public landing. Launch buttons open `STUDIO_URL`; the old public `/studio/` redirects to `/editor/`. Same-domain Studio hosting is documented in [the path recipe](21-studio-path-hosting.md).
 
-Frontend values are public build-time settings, never secrets. The editor's setting controls its home link and is not an account/API credential. Custom URLs remain configurable rather than hardcoded to a proposed domain.
-
-Cloudflare Pages can build each application from the repository root using the commands/directories above, as two projects. Workers static-assets configurations are provided in each application directory; after a build, an authorized operator can use `npx wrangler deploy --config apps/site/wrangler.jsonc` or the editor equivalent. Existing hosting integrations need their dashboard build/output settings updated. No Cloudflare account, domain or deployment was provisioned by this migration.
-
-The existing GitHub Pages workflow's automatic main trigger is preserved; its invalid absolute `/site` upload is replaced with an actual site build and `apps/site/dist` artifact. Pages metadata supplies the site's origin/base path unless explicitly overridden, including the existing `/Evir/` project path. Configure `PUBLIC_EDITOR_URL` to the separately hosted editor before publishing; the local-development default is not a production destination. Relevant PRs run public-site validation. Runtime/editor validation has separate path filters and artifacts; a site-only content change does not invoke the editor/runtime workflow. npm publication remains an explicit release operation, not an automatic workflow side effect.
+The GitHub Pages workflow builds `apps/site/dist` and derives the full website address from Pages metadata unless `SITE_URL` is configured. Configure `STUDIO_URL` before publishing. Public/editor/runtime validations and outputs remain separate; npm publication is an explicit release operation. No account or domain was provisioned by the migration.
 
 **Persistence migration:** editor browser storage is scoped to its origin. Before switching an existing hosted editor to a new subdomain, download/save projects from the old application and reopen them in the new one. This change does not automatically move local storage across origins. Keep the old application accessible during that transition if users already rely on it.
 
