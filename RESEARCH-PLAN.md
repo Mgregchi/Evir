@@ -120,4 +120,8 @@ Only after completing Phases 1–4 do we decide:
 3. Collect a set of simple → complex `.riv` sample files for analysis
 4. Set up a basic testing environment (official Rive web runtime)
 
+### Architecture follow-up
+
+After the current editor subset and compatibility evidence are stable, extract the reusable project model, motion/state-machine evaluator and renderer behind a runtime-facing contract. Keep the public site, editor application and runtime/backend as separate ownership and deployment boundaries. The target product surface is a public `/product` page and `/editor` landing page, with the full editor available at a separately deployable studio subdomain when hosting is configured. See [Product boundaries and deployment architecture](docs/18-architecture-boundaries-and-deployment.md).
+
 ---
