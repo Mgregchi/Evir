@@ -89,7 +89,7 @@ Keep the same two projects and set `STUDIO_URL=https://yourdomain.com/editor/stu
 
 Rebuild after changing environment values. Copy the required values into preview build environments too; public previews use the configured Studio address rather than automatically discovering a matching editor preview. Before moving Studio to a different domain, download existing projects: browser storage belongs to the old origin.
 
-If a provider build fails, open its build log first. The earlier `Workers Builds: evir` check exposed only a dashboard link, so its cause is still unconfirmed. Local checks do not establish provider-account authorization or DNS success.
+If a provider build fails, open its build log first. For Cloudflare's “This Worker does not exist on your account” error, check that the connected Worker exists in the selected account and its name matches `wrangler.jsonc`. Local checks do not establish provider-account authorization or DNS success.
 
 ## Existing settings
 
