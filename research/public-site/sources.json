@@ -1,0 +1,71 @@
+{
+  "reviewedDate": "2026-10-09",
+  "sources": [
+    {
+      "url": "https://community.penpot.app/",
+      "retrieved_at": "2026-10-09T10:31:55.056293+00:00",
+      "status": 200,
+      "final_url": "https://community.penpot.app/",
+      "sha256": "458d320e664837925aa796ea4a1312e14575c3b356c005c19b90ce6e84c8e881"
+    },
+    {
+      "url": "https://community.rive.app/",
+      "retrieved_at": "2026-10-09T10:31:54.585920+00:00",
+      "status": 200,
+      "final_url": "https://community.rive.app/c/start-here?post_login_redirect=https%3A%2F%2Fcommunity.rive.app%2F",
+      "sha256": "b3736da4b9cf1e012a0e2b145a901d781a34d6f88656700fbe8bf6dea6ed75c2"
+    },
+    {
+      "url": "https://github.com/Mgregchi/Evir",
+      "retrieved_at": "2026-10-09T10:28:05.477895+00:00",
+      "status": 200,
+      "final_url": "https://github.com/Mgregchi/Evir",
+      "sha256": "b73ce91f49111392057370f735bd6d1a4a028c92ae54376fc91f0eace52138da"
+    },
+    {
+      "url": "https://penpot.app/",
+      "retrieved_at": "2026-10-09T10:28:05.475649+00:00",
+      "status": 200,
+      "final_url": "https://penpot.app/",
+      "sha256": "2710a69ab0e5e4ba69ea9517124b2398f19d34f1a697055f64ef613a79aee1d6"
+    },
+    {
+      "url": "https://penpot.app/community",
+      "retrieved_at": "2026-10-09T10:28:05.476409+00:00",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://rive.app/",
+      "retrieved_at": "2026-10-09T10:28:05.473256+00:00",
+      "status": 200,
+      "final_url": "https://rive.app/",
+      "sha256": "c5b4a5fbe31efb9ec81f751c33d2ee2037a63ad7015310c74c76a21aa3ba1472"
+    },
+    {
+      "url": "https://rive.app/community/",
+      "retrieved_at": "2026-10-09T10:28:05.474930+00:00",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://rive.app/use-cases/film-tv",
+      "retrieved_at": "2026-10-09T10:28:05.474371+00:00",
+      "status": 200,
+      "final_url": "https://rive.app/use-cases/film-tv",
+      "sha256": "acea601055f1e96810e89db8783d8537d5d6c830808ffc59aa76aa938ba813e4"
+    },
+    {
+      "url": "https://www.framer.com/",
+      "retrieved_at": "2026-10-09T10:28:05.477253+00:00",
+      "status": 200,
+      "final_url": "https://www.framer.com/",
+      "sha256": "e7809297c1146bf08d244534b1caf58ef13779caad576551512970ea5bfdfcb2"
+    },
+    {
+      "url": "https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages",
+      "retrieved_at": "2026-10-09T11:04:19.966432+00:00",
+      "status": 200,
+      "sha256": "653a6d155ac56910ea915acf36cb4729dd2da290134762819f483d4f95bf3e00"
+    }
+  ],
+  "scope": "Primary public home/footer/use-case/community structure. Failed requests are not usable evidence. Screenshots and layout inform research; public site uses Evir artwork."
+}

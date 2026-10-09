@@ -1,0 +1,20 @@
+name: Feature or workflow idea
+description: Explain a workflow you would like Evir to support.
+title: "[Idea] "
+body:
+  - type: textarea
+    id: workflow
+    attributes:
+      label: The workflow or problem
+    validations:
+      required: true
+  - type: textarea
+    id: success
+    attributes:
+      label: What would a useful result look like?
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Examples, alternatives or research

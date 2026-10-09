@@ -1,0 +1,313 @@
+{
+  "checkedAt": "2026-10-09T11:03:47.200Z",
+  "scope": "Static public pages, configured links, reduced motion, feedback drafting and bundled desktop editor. Automated accessibility is not a user study.",
+  "pages": [
+    {
+      "build": "root",
+      "path": "/",
+      "accessibilityViolations": 0,
+      "accessibilityPasses": 18,
+      "viewportWidths": [
+        1440,
+        390,
+        320
+      ],
+      "accessibilityViewportWidths": [
+        1440,
+        390
+      ]
+    },
+    {
+      "build": "root",
+      "path": "studio/",
+      "accessibilityViolations": 0,
+      "accessibilityPasses": 17,
+      "viewportWidths": [
+        1440,
+        390,
+        320
+      ],
+      "accessibilityViewportWidths": [
+        1440,
+        390
+      ]
+    },
+    {
+      "build": "root",
+      "path": "examples/",
+      "accessibilityViolations": 0,
+      "accessibilityPasses": 18,
+      "viewportWidths": [
+        1440,
+        390,
+        320
+      ],
+      "accessibilityViewportWidths": [
+        1440,
+        390
+      ]
+    },
+    {
+      "build": "root",
+      "path": "learn/",
+      "accessibilityViolations": 0,
+      "accessibilityPasses": 17,
+      "viewportWidths": [
+        1440,
+        390,
+        320
+      ],
+      "accessibilityViewportWidths": [
+        1440,
+        390
+      ]
+    },
+    {
+      "build": "root",
+      "path": "community/",
+      "accessibilityViolations": 0,
+      "accessibilityPasses": 21,
+      "viewportWidths": [
+        1440,
+        390,
+        320
+      ],
+      "accessibilityViewportWidths": [
+        1440,
+        390
+      ]
+    },
+    {
+      "build": "root",
+      "path": "roadmap/",
+      "accessibilityViolations": 0,
+      "accessibilityPasses": 17,
+      "viewportWidths": [
+        1440,
+        390,
+        320
+      ],
+      "accessibilityViewportWidths": [
+        1440,
+        390
+      ]
+    },
+    {
+      "build": "root",
+      "path": "updates/",
+      "accessibilityViolations": 0,
+      "accessibilityPasses": 17,
+      "viewportWidths": [
+        1440,
+        390,
+        320
+      ],
+      "accessibilityViewportWidths": [
+        1440,
+        390
+      ]
+    },
+    {
+      "build": "root",
+      "path": "about/",
+      "accessibilityViolations": 0,
+      "accessibilityPasses": 17,
+      "viewportWidths": [
+        1440,
+        390,
+        320
+      ],
+      "accessibilityViewportWidths": [
+        1440,
+        390
+      ]
+    },
+    {
+      "build": "root",
+      "path": "contribute/",
+      "accessibilityViolations": 0,
+      "accessibilityPasses": 23,
+      "viewportWidths": [
+        1440,
+        390,
+        320
+      ],
+      "accessibilityViewportWidths": [
+        1440,
+        390
+      ]
+    },
+    {
+      "build": "root",
+      "path": "privacy/",
+      "accessibilityViolations": 0,
+      "accessibilityPasses": 17,
+      "viewportWidths": [
+        1440,
+        390,
+        320
+      ],
+      "accessibilityViewportWidths": [
+        1440,
+        390
+      ]
+    },
+    {
+      "build": "prefix",
+      "path": "/",
+      "accessibilityViolations": 0,
+      "accessibilityPasses": 18,
+      "viewportWidths": [
+        1440,
+        390,
+        320
+      ],
+      "accessibilityViewportWidths": [
+        1440,
+        390
+      ]
+    },
+    {
+      "build": "prefix",
+      "path": "studio/",
+      "accessibilityViolations": 0,
+      "accessibilityPasses": 17,
+      "viewportWidths": [
+        1440,
+        390,
+        320
+      ],
+      "accessibilityViewportWidths": [
+        1440,
+        390
+      ]
+    },
+    {
+      "build": "prefix",
+      "path": "examples/",
+      "accessibilityViolations": 0,
+      "accessibilityPasses": 18,
+      "viewportWidths": [
+        1440,
+        390,
+        320
+      ],
+      "accessibilityViewportWidths": [
+        1440,
+        390
+      ]
+    },
+    {
+      "build": "prefix",
+      "path": "learn/",
+      "accessibilityViolations": 0,
+      "accessibilityPasses": 17,
+      "viewportWidths": [
+        1440,
+        390,
+        320
+      ],
+      "accessibilityViewportWidths": [
+        1440,
+        390
+      ]
+    },
+    {
+      "build": "prefix",
+      "path": "community/",
+      "accessibilityViolations": 0,
+      "accessibilityPasses": 21,
+      "viewportWidths": [
+        1440,
+        390,
+        320
+      ],
+      "accessibilityViewportWidths": [
+        1440,
+        390
+      ]
+    },
+    {
+      "build": "prefix",
+      "path": "roadmap/",
+      "accessibilityViolations": 0,
+      "accessibilityPasses": 17,
+      "viewportWidths": [
+        1440,
+        390,
+        320
+      ],
+      "accessibilityViewportWidths": [
+        1440,
+        390
+      ]
+    },
+    {
+      "build": "prefix",
+      "path": "updates/",
+      "accessibilityViolations": 0,
+      "accessibilityPasses": 17,
+      "viewportWidths": [
+        1440,
+        390,
+        320
+      ],
+      "accessibilityViewportWidths": [
+        1440,
+        390
+      ]
+    },
+    {
+      "build": "prefix",
+      "path": "about/",
+      "accessibilityViolations": 0,
+      "accessibilityPasses": 17,
+      "viewportWidths": [
+        1440,
+        390,
+        320
+      ],
+      "accessibilityViewportWidths": [
+        1440,
+        390
+      ]
+    },
+    {
+      "build": "prefix",
+      "path": "contribute/",
+      "accessibilityViolations": 0,
+      "accessibilityPasses": 23,
+      "viewportWidths": [
+        1440,
+        390,
+        320
+      ],
+      "accessibilityViewportWidths": [
+        1440,
+        390
+      ]
+    },
+    {
+      "build": "prefix",
+      "path": "privacy/",
+      "accessibilityViolations": 0,
+      "accessibilityPasses": 17,
+      "viewportWidths": [
+        1440,
+        390,
+        320
+      ],
+      "accessibilityViewportWidths": [
+        1440,
+        390
+      ]
+    }
+  ],
+  "checks": [
+    "JavaScript disabled: mobile navigation/poster/links available; feedback cannot submit as a GET form",
+    "root: internal links/assets/fragments, feedback escaped and never submitted, motion pause/play, mobile menu Escape/focus, optional configuration",
+    "Configured /Evir/ deployment opens the editable Milo project and exports a RIVE file from bundled Studio",
+    "prefix: internal links/assets/fragments, feedback escaped and never submitted, motion pause/play, mobile menu Escape/focus, optional configuration",
+    "URL and output-directory validation; private environment values excluded"
+  ]
+}

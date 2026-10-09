@@ -1,0 +1,29 @@
+name: Bug report
+description: Report a reproducible editor, website or runtime problem.
+title: "[Bug] "
+body:
+  - type: textarea
+    id: task
+    attributes:
+      label: What were you trying to do?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include a small project you can share if it helps.
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Browser, operating system and Evir revision
+    validations:
+      required: true

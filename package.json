@@ -40,12 +40,19 @@
     "research:editor-export": "python3 tools/inspect_editor_export.py && node tools/validate_editor_export.cjs && RIVE_RENDERER=webgl2 node tools/validate_editor_export.cjs",
     "editor:serve": "python3 -m http.server 8080 --bind 127.0.0.1",
     "test:editor": "node --test tests/editor/*.test.mjs && node tests/editor/browser.cjs && node tests/editor/authoring-browser.cjs",
-    "validate:editor": "node tools/validate_editor_authoring.cjs && RIVE_RENDERER=webgl2 node tools/validate_editor_authoring.cjs"
+    "validate:editor": "node tools/validate_editor_authoring.cjs && RIVE_RENDERER=webgl2 node tools/validate_editor_authoring.cjs",
+    "site:build": "node site/build.mjs",
+    "site:serve": "node site/serve.mjs",
+    "site:assets": "node site/generate-examples.mjs && node tools/capture_site_assets.cjs",
+    "test:site": "node tests/site/browser.cjs && node tests/site/examples.cjs"
   },
   "dependencies": {
     "@rive-app/canvas": "2.44.0",
     "@rive-app/webgl2": "2.44.0",
     "playwright": "1.63.0",
     "pngjs": "7.0.0"
+  },
+  "devDependencies": {
+    "axe-core": "4.14.0"
   }
 }

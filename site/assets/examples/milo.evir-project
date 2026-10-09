@@ -1,0 +1,3352 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 2,
+  "id": "milo-project",
+  "name": "Milo — a little hello",
+  "artboards": [
+    {
+      "id": "milo-board",
+      "name": "Milo — a little hello",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "milo-shadow",
+      "name": "shadow",
+      "kind": "path",
+      "artboardId": "milo-board",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        256,
+        442
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#143b231a",
+        "skin": null,
+        "points": [
+          {
+            "id": "milo-shadow-p0",
+            "anchor": [
+              100,
+              0
+            ],
+            "in": [
+              100,
+              -7.179701747399999
+            ],
+            "out": [
+              100,
+              7.179701747399999
+            ]
+          },
+          {
+            "id": "milo-shadow-p1",
+            "anchor": [
+              0,
+              13
+            ],
+            "in": [
+              55.228474979999994,
+              13
+            ],
+            "out": [
+              -55.228474979999994,
+              13
+            ]
+          },
+          {
+            "id": "milo-shadow-p2",
+            "anchor": [
+              -100,
+              0
+            ],
+            "in": [
+              -100,
+              7.179701747399999
+            ],
+            "out": [
+              -100,
+              -7.179701747399999
+            ]
+          },
+          {
+            "id": "milo-shadow-p3",
+            "anchor": [
+              0,
+              -13
+            ],
+            "in": [
+              -55.228474979999994,
+              -13
+            ],
+            "out": [
+              55.228474979999994,
+              -13
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "milo-character",
+      "name": "character",
+      "kind": "group",
+      "artboardId": "milo-board",
+      "parentId": null,
+      "order": 1,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        250,
+        277
+      ],
+      "geometry": null
+    },
+    {
+      "id": "milo-left-foot",
+      "name": "left foot",
+      "kind": "path",
+      "artboardId": "milo-board",
+      "parentId": "milo-character",
+      "order": 2,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -69,
+        113
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#243f33",
+        "skin": null,
+        "points": [
+          {
+            "id": "milo-left-foot-p0",
+            "anchor": [
+              15,
+              0
+            ],
+            "in": [
+              6.7157287530000005,
+              0
+            ],
+            "out": [
+              15,
+              0
+            ]
+          },
+          {
+            "id": "milo-left-foot-p1",
+            "anchor": [
+              51,
+              0
+            ],
+            "in": [
+              51,
+              0
+            ],
+            "out": [
+              59.284271247,
+              0
+            ]
+          },
+          {
+            "id": "milo-left-foot-p2",
+            "anchor": [
+              66,
+              15
+            ],
+            "in": [
+              66,
+              6.7157287530000005
+            ],
+            "out": [
+              66,
+              15
+            ]
+          },
+          {
+            "id": "milo-left-foot-p3",
+            "anchor": [
+              66,
+              15
+            ],
+            "in": [
+              66,
+              15
+            ],
+            "out": [
+              66,
+              23.284271247
+            ]
+          },
+          {
+            "id": "milo-left-foot-p4",
+            "anchor": [
+              51,
+              30
+            ],
+            "in": [
+              59.284271247,
+              30
+            ],
+            "out": [
+              51,
+              30
+            ]
+          },
+          {
+            "id": "milo-left-foot-p5",
+            "anchor": [
+              15,
+              30
+            ],
+            "in": [
+              15,
+              30
+            ],
+            "out": [
+              6.7157287530000005,
+              30
+            ]
+          },
+          {
+            "id": "milo-left-foot-p6",
+            "anchor": [
+              0,
+              15
+            ],
+            "in": [
+              0,
+              23.284271247
+            ],
+            "out": [
+              0,
+              15
+            ]
+          },
+          {
+            "id": "milo-left-foot-p7",
+            "anchor": [
+              0,
+              15
+            ],
+            "in": [
+              0,
+              15
+            ],
+            "out": [
+              0,
+              6.7157287530000005
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "milo-right-foot",
+      "name": "right foot",
+      "kind": "path",
+      "artboardId": "milo-board",
+      "parentId": "milo-character",
+      "order": 3,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        11,
+        113
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#243f33",
+        "skin": null,
+        "points": [
+          {
+            "id": "milo-right-foot-p0",
+            "anchor": [
+              15,
+              0
+            ],
+            "in": [
+              6.7157287530000005,
+              0
+            ],
+            "out": [
+              15,
+              0
+            ]
+          },
+          {
+            "id": "milo-right-foot-p1",
+            "anchor": [
+              51,
+              0
+            ],
+            "in": [
+              51,
+              0
+            ],
+            "out": [
+              59.284271247,
+              0
+            ]
+          },
+          {
+            "id": "milo-right-foot-p2",
+            "anchor": [
+              66,
+              15
+            ],
+            "in": [
+              66,
+              6.7157287530000005
+            ],
+            "out": [
+              66,
+              15
+            ]
+          },
+          {
+            "id": "milo-right-foot-p3",
+            "anchor": [
+              66,
+              15
+            ],
+            "in": [
+              66,
+              15
+            ],
+            "out": [
+              66,
+              23.284271247
+            ]
+          },
+          {
+            "id": "milo-right-foot-p4",
+            "anchor": [
+              51,
+              30
+            ],
+            "in": [
+              59.284271247,
+              30
+            ],
+            "out": [
+              51,
+              30
+            ]
+          },
+          {
+            "id": "milo-right-foot-p5",
+            "anchor": [
+              15,
+              30
+            ],
+            "in": [
+              15,
+              30
+            ],
+            "out": [
+              6.7157287530000005,
+              30
+            ]
+          },
+          {
+            "id": "milo-right-foot-p6",
+            "anchor": [
+              0,
+              15
+            ],
+            "in": [
+              0,
+              23.284271247
+            ],
+            "out": [
+              0,
+              15
+            ]
+          },
+          {
+            "id": "milo-right-foot-p7",
+            "anchor": [
+              0,
+              15
+            ],
+            "in": [
+              0,
+              15
+            ],
+            "out": [
+              0,
+              6.7157287530000005
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "milo-shoulder",
+      "name": "shoulder",
+      "kind": "bone",
+      "artboardId": "milo-board",
+      "parentId": "milo-character",
+      "order": 4,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        80,
+        -28
+      ],
+      "geometry": {
+        "length": 40
+      }
+    },
+    {
+      "id": "milo-elbow",
+      "name": "elbow",
+      "kind": "bone",
+      "artboardId": "milo-board",
+      "parentId": "milo-shoulder",
+      "order": 5,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "length": 40
+      }
+    },
+    {
+      "id": "milo-wave-arm",
+      "name": "wave arm",
+      "kind": "path",
+      "artboardId": "milo-board",
+      "parentId": "milo-shoulder",
+      "order": 6,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -5,
+        -18
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#243f33",
+        "skin": {
+          "bindWorld": [
+            1,
+            0,
+            0,
+            1,
+            325,
+            231
+          ],
+          "bones": [
+            {
+              "boneId": "milo-shoulder",
+              "bind": [
+                1,
+                0,
+                0,
+                1,
+                330,
+                249
+              ]
+            },
+            {
+              "boneId": "milo-elbow",
+              "bind": [
+                1,
+                0,
+                0,
+                1,
+                370,
+                249
+              ]
+            }
+          ],
+          "weights": [
+            {
+              "pointId": "milo-wave-arm-p0",
+              "anchor": [
+                [
+                  "milo-shoulder",
+                  1
+                ],
+                [
+                  "milo-elbow",
+                  0
+                ]
+              ],
+              "in": [
+                [
+                  "milo-shoulder",
+                  1
+                ],
+                [
+                  "milo-elbow",
+                  0
+                ]
+              ],
+              "out": [
+                [
+                  "milo-shoulder",
+                  1
+                ],
+                [
+                  "milo-elbow",
+                  0
+                ]
+              ]
+            },
+            {
+              "pointId": "milo-wave-arm-p1",
+              "anchor": [
+                [
+                  "milo-shoulder",
+                  0.25098039215686274
+                ],
+                [
+                  "milo-elbow",
+                  0.7490196078431373
+                ]
+              ],
+              "in": [
+                [
+                  "milo-shoulder",
+                  0.25098039215686274
+                ],
+                [
+                  "milo-elbow",
+                  0.7490196078431373
+                ]
+              ],
+              "out": [
+                [
+                  "milo-shoulder",
+                  0.25098039215686274
+                ],
+                [
+                  "milo-elbow",
+                  0.7490196078431373
+                ]
+              ]
+            },
+            {
+              "pointId": "milo-wave-arm-p2",
+              "anchor": [
+                [
+                  "milo-shoulder",
+                  0.25098039215686274
+                ],
+                [
+                  "milo-elbow",
+                  0.7490196078431373
+                ]
+              ],
+              "in": [
+                [
+                  "milo-shoulder",
+                  0.25098039215686274
+                ],
+                [
+                  "milo-elbow",
+                  0.7490196078431373
+                ]
+              ],
+              "out": [
+                [
+                  "milo-shoulder",
+                  0.25098039215686274
+                ],
+                [
+                  "milo-elbow",
+                  0.7490196078431373
+                ]
+              ]
+            },
+            {
+              "pointId": "milo-wave-arm-p3",
+              "anchor": [
+                [
+                  "milo-shoulder",
+                  0.25098039215686274
+                ],
+                [
+                  "milo-elbow",
+                  0.7490196078431373
+                ]
+              ],
+              "in": [
+                [
+                  "milo-shoulder",
+                  0.25098039215686274
+                ],
+                [
+                  "milo-elbow",
+                  0.7490196078431373
+                ]
+              ],
+              "out": [
+                [
+                  "milo-shoulder",
+                  0.25098039215686274
+                ],
+                [
+                  "milo-elbow",
+                  0.7490196078431373
+                ]
+              ]
+            },
+            {
+              "pointId": "milo-wave-arm-p4",
+              "anchor": [
+                [
+                  "milo-shoulder",
+                  0.25098039215686274
+                ],
+                [
+                  "milo-elbow",
+                  0.7490196078431373
+                ]
+              ],
+              "in": [
+                [
+                  "milo-shoulder",
+                  0.25098039215686274
+                ],
+                [
+                  "milo-elbow",
+                  0.7490196078431373
+                ]
+              ],
+              "out": [
+                [
+                  "milo-shoulder",
+                  0.25098039215686274
+                ],
+                [
+                  "milo-elbow",
+                  0.7490196078431373
+                ]
+              ]
+            },
+            {
+              "pointId": "milo-wave-arm-p5",
+              "anchor": [
+                [
+                  "milo-shoulder",
+                  1
+                ],
+                [
+                  "milo-elbow",
+                  0
+                ]
+              ],
+              "in": [
+                [
+                  "milo-shoulder",
+                  1
+                ],
+                [
+                  "milo-elbow",
+                  0
+                ]
+              ],
+              "out": [
+                [
+                  "milo-shoulder",
+                  1
+                ],
+                [
+                  "milo-elbow",
+                  0
+                ]
+              ]
+            },
+            {
+              "pointId": "milo-wave-arm-p6",
+              "anchor": [
+                [
+                  "milo-shoulder",
+                  1
+                ],
+                [
+                  "milo-elbow",
+                  0
+                ]
+              ],
+              "in": [
+                [
+                  "milo-shoulder",
+                  1
+                ],
+                [
+                  "milo-elbow",
+                  0
+                ]
+              ],
+              "out": [
+                [
+                  "milo-shoulder",
+                  1
+                ],
+                [
+                  "milo-elbow",
+                  0
+                ]
+              ]
+            },
+            {
+              "pointId": "milo-wave-arm-p7",
+              "anchor": [
+                [
+                  "milo-shoulder",
+                  1
+                ],
+                [
+                  "milo-elbow",
+                  0
+                ]
+              ],
+              "in": [
+                [
+                  "milo-shoulder",
+                  1
+                ],
+                [
+                  "milo-elbow",
+                  0
+                ]
+              ],
+              "out": [
+                [
+                  "milo-shoulder",
+                  1
+                ],
+                [
+                  "milo-elbow",
+                  0
+                ]
+              ]
+            }
+          ]
+        },
+        "points": [
+          {
+            "id": "milo-wave-arm-p0",
+            "anchor": [
+              18,
+              0
+            ],
+            "in": [
+              8.0588745036,
+              0
+            ],
+            "out": [
+              18,
+              0
+            ]
+          },
+          {
+            "id": "milo-wave-arm-p1",
+            "anchor": [
+              72,
+              0
+            ],
+            "in": [
+              72,
+              0
+            ],
+            "out": [
+              81.9411254964,
+              0
+            ]
+          },
+          {
+            "id": "milo-wave-arm-p2",
+            "anchor": [
+              90,
+              18
+            ],
+            "in": [
+              90,
+              8.0588745036
+            ],
+            "out": [
+              90,
+              18
+            ]
+          },
+          {
+            "id": "milo-wave-arm-p3",
+            "anchor": [
+              90,
+              18
+            ],
+            "in": [
+              90,
+              18
+            ],
+            "out": [
+              90,
+              27.941125496399998
+            ]
+          },
+          {
+            "id": "milo-wave-arm-p4",
+            "anchor": [
+              72,
+              36
+            ],
+            "in": [
+              81.9411254964,
+              36
+            ],
+            "out": [
+              72,
+              36
+            ]
+          },
+          {
+            "id": "milo-wave-arm-p5",
+            "anchor": [
+              18,
+              36
+            ],
+            "in": [
+              18,
+              36
+            ],
+            "out": [
+              8.0588745036,
+              36
+            ]
+          },
+          {
+            "id": "milo-wave-arm-p6",
+            "anchor": [
+              0,
+              18
+            ],
+            "in": [
+              0,
+              27.941125496399998
+            ],
+            "out": [
+              0,
+              18
+            ]
+          },
+          {
+            "id": "milo-wave-arm-p7",
+            "anchor": [
+              0,
+              18
+            ],
+            "in": [
+              0,
+              18
+            ],
+            "out": [
+              0,
+              8.0588745036
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "milo-wave-arm-inner",
+      "name": "wave arm inner",
+      "kind": "path",
+      "artboardId": "milo-board",
+      "parentId": "milo-shoulder",
+      "order": 7,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        -12
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#8fd9af",
+        "skin": {
+          "bindWorld": [
+            1,
+            0,
+            0,
+            1,
+            330,
+            237
+          ],
+          "bones": [
+            {
+              "boneId": "milo-shoulder",
+              "bind": [
+                1,
+                0,
+                0,
+                1,
+                330,
+                249
+              ]
+            },
+            {
+              "boneId": "milo-elbow",
+              "bind": [
+                1,
+                0,
+                0,
+                1,
+                370,
+                249
+              ]
+            }
+          ],
+          "weights": [
+            {
+              "pointId": "milo-wave-arm-inner-p0",
+              "anchor": [
+                [
+                  "milo-shoulder",
+                  1
+                ],
+                [
+                  "milo-elbow",
+                  0
+                ]
+              ],
+              "in": [
+                [
+                  "milo-shoulder",
+                  1
+                ],
+                [
+                  "milo-elbow",
+                  0
+                ]
+              ],
+              "out": [
+                [
+                  "milo-shoulder",
+                  1
+                ],
+                [
+                  "milo-elbow",
+                  0
+                ]
+              ]
+            },
+            {
+              "pointId": "milo-wave-arm-inner-p1",
+              "anchor": [
+                [
+                  "milo-shoulder",
+                  0.25098039215686274
+                ],
+                [
+                  "milo-elbow",
+                  0.7490196078431373
+                ]
+              ],
+              "in": [
+                [
+                  "milo-shoulder",
+                  0.25098039215686274
+                ],
+                [
+                  "milo-elbow",
+                  0.7490196078431373
+                ]
+              ],
+              "out": [
+                [
+                  "milo-shoulder",
+                  0.25098039215686274
+                ],
+                [
+                  "milo-elbow",
+                  0.7490196078431373
+                ]
+              ]
+            },
+            {
+              "pointId": "milo-wave-arm-inner-p2",
+              "anchor": [
+                [
+                  "milo-shoulder",
+                  0.25098039215686274
+                ],
+                [
+                  "milo-elbow",
+                  0.7490196078431373
+                ]
+              ],
+              "in": [
+                [
+                  "milo-shoulder",
+                  0.25098039215686274
+                ],
+                [
+                  "milo-elbow",
+                  0.7490196078431373
+                ]
+              ],
+              "out": [
+                [
+                  "milo-shoulder",
+                  0.25098039215686274
+                ],
+                [
+                  "milo-elbow",
+                  0.7490196078431373
+                ]
+              ]
+            },
+            {
+              "pointId": "milo-wave-arm-inner-p3",
+              "anchor": [
+                [
+                  "milo-shoulder",
+                  0.25098039215686274
+                ],
+                [
+                  "milo-elbow",
+                  0.7490196078431373
+                ]
+              ],
+              "in": [
+                [
+                  "milo-shoulder",
+                  0.25098039215686274
+                ],
+                [
+                  "milo-elbow",
+                  0.7490196078431373
+                ]
+              ],
+              "out": [
+                [
+                  "milo-shoulder",
+                  0.25098039215686274
+                ],
+                [
+                  "milo-elbow",
+                  0.7490196078431373
+                ]
+              ]
+            },
+            {
+              "pointId": "milo-wave-arm-inner-p4",
+              "anchor": [
+                [
+                  "milo-shoulder",
+                  0.25098039215686274
+                ],
+                [
+                  "milo-elbow",
+                  0.7490196078431373
+                ]
+              ],
+              "in": [
+                [
+                  "milo-shoulder",
+                  0.25098039215686274
+                ],
+                [
+                  "milo-elbow",
+                  0.7490196078431373
+                ]
+              ],
+              "out": [
+                [
+                  "milo-shoulder",
+                  0.25098039215686274
+                ],
+                [
+                  "milo-elbow",
+                  0.7490196078431373
+                ]
+              ]
+            },
+            {
+              "pointId": "milo-wave-arm-inner-p5",
+              "anchor": [
+                [
+                  "milo-shoulder",
+                  1
+                ],
+                [
+                  "milo-elbow",
+                  0
+                ]
+              ],
+              "in": [
+                [
+                  "milo-shoulder",
+                  1
+                ],
+                [
+                  "milo-elbow",
+                  0
+                ]
+              ],
+              "out": [
+                [
+                  "milo-shoulder",
+                  1
+                ],
+                [
+                  "milo-elbow",
+                  0
+                ]
+              ]
+            },
+            {
+              "pointId": "milo-wave-arm-inner-p6",
+              "anchor": [
+                [
+                  "milo-shoulder",
+                  1
+                ],
+                [
+                  "milo-elbow",
+                  0
+                ]
+              ],
+              "in": [
+                [
+                  "milo-shoulder",
+                  1
+                ],
+                [
+                  "milo-elbow",
+                  0
+                ]
+              ],
+              "out": [
+                [
+                  "milo-shoulder",
+                  1
+                ],
+                [
+                  "milo-elbow",
+                  0
+                ]
+              ]
+            },
+            {
+              "pointId": "milo-wave-arm-inner-p7",
+              "anchor": [
+                [
+                  "milo-shoulder",
+                  1
+                ],
+                [
+                  "milo-elbow",
+                  0
+                ]
+              ],
+              "in": [
+                [
+                  "milo-shoulder",
+                  1
+                ],
+                [
+                  "milo-elbow",
+                  0
+                ]
+              ],
+              "out": [
+                [
+                  "milo-shoulder",
+                  1
+                ],
+                [
+                  "milo-elbow",
+                  0
+                ]
+              ]
+            }
+          ]
+        },
+        "points": [
+          {
+            "id": "milo-wave-arm-inner-p0",
+            "anchor": [
+              12,
+              0
+            ],
+            "in": [
+              5.372583002400001,
+              0
+            ],
+            "out": [
+              12,
+              0
+            ]
+          },
+          {
+            "id": "milo-wave-arm-inner-p1",
+            "anchor": [
+              68,
+              0
+            ],
+            "in": [
+              68,
+              0
+            ],
+            "out": [
+              74.6274169976,
+              0
+            ]
+          },
+          {
+            "id": "milo-wave-arm-inner-p2",
+            "anchor": [
+              80,
+              12
+            ],
+            "in": [
+              80,
+              5.372583002400001
+            ],
+            "out": [
+              80,
+              12
+            ]
+          },
+          {
+            "id": "milo-wave-arm-inner-p3",
+            "anchor": [
+              80,
+              12
+            ],
+            "in": [
+              80,
+              12
+            ],
+            "out": [
+              80,
+              18.6274169976
+            ]
+          },
+          {
+            "id": "milo-wave-arm-inner-p4",
+            "anchor": [
+              68,
+              24
+            ],
+            "in": [
+              74.6274169976,
+              24
+            ],
+            "out": [
+              68,
+              24
+            ]
+          },
+          {
+            "id": "milo-wave-arm-inner-p5",
+            "anchor": [
+              12,
+              24
+            ],
+            "in": [
+              12,
+              24
+            ],
+            "out": [
+              5.372583002400001,
+              24
+            ]
+          },
+          {
+            "id": "milo-wave-arm-inner-p6",
+            "anchor": [
+              0,
+              12
+            ],
+            "in": [
+              0,
+              18.6274169976
+            ],
+            "out": [
+              0,
+              12
+            ]
+          },
+          {
+            "id": "milo-wave-arm-inner-p7",
+            "anchor": [
+              0,
+              12
+            ],
+            "in": [
+              0,
+              12
+            ],
+            "out": [
+              0,
+              5.372583002400001
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "milo-left-arm",
+      "name": "left arm",
+      "kind": "path",
+      "artboardId": "milo-board",
+      "parentId": "milo-character",
+      "order": 8,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -136,
+        -29
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#243f33",
+        "skin": null,
+        "points": [
+          {
+            "id": "milo-left-arm-p0",
+            "anchor": [
+              17,
+              0
+            ],
+            "in": [
+              7.6111592534,
+              0
+            ],
+            "out": [
+              17,
+              0
+            ]
+          },
+          {
+            "id": "milo-left-arm-p1",
+            "anchor": [
+              58,
+              0
+            ],
+            "in": [
+              58,
+              0
+            ],
+            "out": [
+              67.3888407466,
+              0
+            ]
+          },
+          {
+            "id": "milo-left-arm-p2",
+            "anchor": [
+              75,
+              17
+            ],
+            "in": [
+              75,
+              7.6111592534
+            ],
+            "out": [
+              75,
+              17
+            ]
+          },
+          {
+            "id": "milo-left-arm-p3",
+            "anchor": [
+              75,
+              17
+            ],
+            "in": [
+              75,
+              17
+            ],
+            "out": [
+              75,
+              26.3888407466
+            ]
+          },
+          {
+            "id": "milo-left-arm-p4",
+            "anchor": [
+              58,
+              34
+            ],
+            "in": [
+              67.3888407466,
+              34
+            ],
+            "out": [
+              58,
+              34
+            ]
+          },
+          {
+            "id": "milo-left-arm-p5",
+            "anchor": [
+              17,
+              34
+            ],
+            "in": [
+              17,
+              34
+            ],
+            "out": [
+              7.6111592534,
+              34
+            ]
+          },
+          {
+            "id": "milo-left-arm-p6",
+            "anchor": [
+              0,
+              17
+            ],
+            "in": [
+              0,
+              26.3888407466
+            ],
+            "out": [
+              0,
+              17
+            ]
+          },
+          {
+            "id": "milo-left-arm-p7",
+            "anchor": [
+              0,
+              17
+            ],
+            "in": [
+              0,
+              17
+            ],
+            "out": [
+              0,
+              7.6111592534
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "milo-left-arm-inner",
+      "name": "left arm inner",
+      "kind": "path",
+      "artboardId": "milo-board",
+      "parentId": "milo-character",
+      "order": 9,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -130,
+        -23
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#8fd9af",
+        "skin": null,
+        "points": [
+          {
+            "id": "milo-left-arm-inner-p0",
+            "anchor": [
+              11,
+              0
+            ],
+            "in": [
+              4.9248677522,
+              0
+            ],
+            "out": [
+              11,
+              0
+            ]
+          },
+          {
+            "id": "milo-left-arm-inner-p1",
+            "anchor": [
+              51,
+              0
+            ],
+            "in": [
+              51,
+              0
+            ],
+            "out": [
+              57.0751322478,
+              0
+            ]
+          },
+          {
+            "id": "milo-left-arm-inner-p2",
+            "anchor": [
+              62,
+              11
+            ],
+            "in": [
+              62,
+              4.9248677522
+            ],
+            "out": [
+              62,
+              11
+            ]
+          },
+          {
+            "id": "milo-left-arm-inner-p3",
+            "anchor": [
+              62,
+              11
+            ],
+            "in": [
+              62,
+              11
+            ],
+            "out": [
+              62,
+              17.0751322478
+            ]
+          },
+          {
+            "id": "milo-left-arm-inner-p4",
+            "anchor": [
+              51,
+              22
+            ],
+            "in": [
+              57.0751322478,
+              22
+            ],
+            "out": [
+              51,
+              22
+            ]
+          },
+          {
+            "id": "milo-left-arm-inner-p5",
+            "anchor": [
+              11,
+              22
+            ],
+            "in": [
+              11,
+              22
+            ],
+            "out": [
+              4.9248677522,
+              22
+            ]
+          },
+          {
+            "id": "milo-left-arm-inner-p6",
+            "anchor": [
+              0,
+              11
+            ],
+            "in": [
+              0,
+              17.0751322478
+            ],
+            "out": [
+              0,
+              11
+            ]
+          },
+          {
+            "id": "milo-left-arm-inner-p7",
+            "anchor": [
+              0,
+              11
+            ],
+            "in": [
+              0,
+              11
+            ],
+            "out": [
+              0,
+              4.9248677522
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "milo-stem",
+      "name": "stem",
+      "kind": "path",
+      "artboardId": "milo-board",
+      "parentId": "milo-character",
+      "order": 10,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -3,
+        -150
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#243f33",
+        "skin": null,
+        "points": [
+          {
+            "id": "milo-stem-p0",
+            "anchor": [
+              3,
+              0
+            ],
+            "in": [
+              1.3431457506000002,
+              0
+            ],
+            "out": [
+              3,
+              0
+            ]
+          },
+          {
+            "id": "milo-stem-p1",
+            "anchor": [
+              4,
+              0
+            ],
+            "in": [
+              4,
+              0
+            ],
+            "out": [
+              5.6568542494,
+              0
+            ]
+          },
+          {
+            "id": "milo-stem-p2",
+            "anchor": [
+              7,
+              3
+            ],
+            "in": [
+              7,
+              1.3431457506000002
+            ],
+            "out": [
+              7,
+              3
+            ]
+          },
+          {
+            "id": "milo-stem-p3",
+            "anchor": [
+              7,
+              52
+            ],
+            "in": [
+              7,
+              52
+            ],
+            "out": [
+              7,
+              53.6568542494
+            ]
+          },
+          {
+            "id": "milo-stem-p4",
+            "anchor": [
+              4,
+              55
+            ],
+            "in": [
+              5.6568542494,
+              55
+            ],
+            "out": [
+              4,
+              55
+            ]
+          },
+          {
+            "id": "milo-stem-p5",
+            "anchor": [
+              3,
+              55
+            ],
+            "in": [
+              3,
+              55
+            ],
+            "out": [
+              1.3431457506000002,
+              55
+            ]
+          },
+          {
+            "id": "milo-stem-p6",
+            "anchor": [
+              0,
+              52
+            ],
+            "in": [
+              0,
+              53.6568542494
+            ],
+            "out": [
+              0,
+              52
+            ]
+          },
+          {
+            "id": "milo-stem-p7",
+            "anchor": [
+              0,
+              3
+            ],
+            "in": [
+              0,
+              3
+            ],
+            "out": [
+              0,
+              1.3431457506000002
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "milo-leaf",
+      "name": "leaf",
+      "kind": "path",
+      "artboardId": "milo-board",
+      "parentId": "milo-character",
+      "order": 11,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#56a878",
+        "skin": null,
+        "points": [
+          {
+            "id": "milo-leaf-p0",
+            "anchor": [
+              0,
+              -141
+            ],
+            "in": [
+              0,
+              -141
+            ],
+            "out": [
+              9,
+              -180
+            ]
+          },
+          {
+            "id": "milo-leaf-p1",
+            "anchor": [
+              57,
+              -182
+            ],
+            "in": [
+              38,
+              -193
+            ],
+            "out": [
+              54,
+              -145
+            ]
+          },
+          {
+            "id": "milo-leaf-p2",
+            "anchor": [
+              0,
+              -141
+            ],
+            "in": [
+              25,
+              -136
+            ],
+            "out": [
+              0,
+              -141
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "milo-body-outline",
+      "name": "body outline",
+      "kind": "path",
+      "artboardId": "milo-board",
+      "parentId": "milo-character",
+      "order": 12,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#243f33",
+        "skin": null,
+        "points": [
+          {
+            "id": "milo-body-outline-p0",
+            "anchor": [
+              94,
+              0
+            ],
+            "in": [
+              94,
+              -70.1401632246
+            ],
+            "out": [
+              94,
+              70.1401632246
+            ]
+          },
+          {
+            "id": "milo-body-outline-p1",
+            "anchor": [
+              0,
+              127
+            ],
+            "in": [
+              51.9147664812,
+              127
+            ],
+            "out": [
+              -51.9147664812,
+              127
+            ]
+          },
+          {
+            "id": "milo-body-outline-p2",
+            "anchor": [
+              -94,
+              0
+            ],
+            "in": [
+              -94,
+              70.1401632246
+            ],
+            "out": [
+              -94,
+              -70.1401632246
+            ]
+          },
+          {
+            "id": "milo-body-outline-p3",
+            "anchor": [
+              0,
+              -127
+            ],
+            "in": [
+              -51.9147664812,
+              -127
+            ],
+            "out": [
+              51.9147664812,
+              -127
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "milo-body",
+      "name": "body",
+      "kind": "path",
+      "artboardId": "milo-board",
+      "parentId": "milo-character",
+      "order": 13,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        -3
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#9cdeb9",
+        "skin": null,
+        "points": [
+          {
+            "id": "milo-body-p0",
+            "anchor": [
+              87,
+              0
+            ],
+            "in": [
+              87,
+              -65.7218852262
+            ],
+            "out": [
+              87,
+              65.7218852262
+            ]
+          },
+          {
+            "id": "milo-body-p1",
+            "anchor": [
+              0,
+              119
+            ],
+            "in": [
+              48.0487732326,
+              119
+            ],
+            "out": [
+              -48.0487732326,
+              119
+            ]
+          },
+          {
+            "id": "milo-body-p2",
+            "anchor": [
+              -87,
+              0
+            ],
+            "in": [
+              -87,
+              65.7218852262
+            ],
+            "out": [
+              -87,
+              -65.7218852262
+            ]
+          },
+          {
+            "id": "milo-body-p3",
+            "anchor": [
+              0,
+              -119
+            ],
+            "in": [
+              -48.0487732326,
+              -119
+            ],
+            "out": [
+              48.0487732326,
+              -119
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "milo-face",
+      "name": "face",
+      "kind": "path",
+      "artboardId": "milo-board",
+      "parentId": "milo-character",
+      "order": 14,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -75,
+        -81
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f5f3e7",
+        "skin": null,
+        "points": [
+          {
+            "id": "milo-face-p0",
+            "anchor": [
+              39,
+              0
+            ],
+            "in": [
+              17.460894757800002,
+              0
+            ],
+            "out": [
+              39,
+              0
+            ]
+          },
+          {
+            "id": "milo-face-p1",
+            "anchor": [
+              111,
+              0
+            ],
+            "in": [
+              111,
+              0
+            ],
+            "out": [
+              132.5391052422,
+              0
+            ]
+          },
+          {
+            "id": "milo-face-p2",
+            "anchor": [
+              150,
+              39
+            ],
+            "in": [
+              150,
+              17.460894757800002
+            ],
+            "out": [
+              150,
+              39
+            ]
+          },
+          {
+            "id": "milo-face-p3",
+            "anchor": [
+              150,
+              64
+            ],
+            "in": [
+              150,
+              64
+            ],
+            "out": [
+              150,
+              85.5391052422
+            ]
+          },
+          {
+            "id": "milo-face-p4",
+            "anchor": [
+              111,
+              103
+            ],
+            "in": [
+              132.5391052422,
+              103
+            ],
+            "out": [
+              111,
+              103
+            ]
+          },
+          {
+            "id": "milo-face-p5",
+            "anchor": [
+              39,
+              103
+            ],
+            "in": [
+              39,
+              103
+            ],
+            "out": [
+              17.460894757800002,
+              103
+            ]
+          },
+          {
+            "id": "milo-face-p6",
+            "anchor": [
+              0,
+              64
+            ],
+            "in": [
+              0,
+              85.5391052422
+            ],
+            "out": [
+              0,
+              64
+            ]
+          },
+          {
+            "id": "milo-face-p7",
+            "anchor": [
+              0,
+              39
+            ],
+            "in": [
+              0,
+              39
+            ],
+            "out": [
+              0,
+              17.460894757800002
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "milo-left-eye",
+      "name": "left eye",
+      "kind": "path",
+      "artboardId": "milo-board",
+      "parentId": "milo-character",
+      "order": 15,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -29,
+        -30
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#243f33",
+        "skin": null,
+        "points": [
+          {
+            "id": "milo-left-eye-p0",
+            "anchor": [
+              8,
+              0
+            ],
+            "in": [
+              8,
+              -6.627416997599999
+            ],
+            "out": [
+              8,
+              6.627416997599999
+            ]
+          },
+          {
+            "id": "milo-left-eye-p1",
+            "anchor": [
+              0,
+              12
+            ],
+            "in": [
+              4.4182779984,
+              12
+            ],
+            "out": [
+              -4.4182779984,
+              12
+            ]
+          },
+          {
+            "id": "milo-left-eye-p2",
+            "anchor": [
+              -8,
+              0
+            ],
+            "in": [
+              -8,
+              6.627416997599999
+            ],
+            "out": [
+              -8,
+              -6.627416997599999
+            ]
+          },
+          {
+            "id": "milo-left-eye-p3",
+            "anchor": [
+              0,
+              -12
+            ],
+            "in": [
+              -4.4182779984,
+              -12
+            ],
+            "out": [
+              4.4182779984,
+              -12
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "milo-right-eye",
+      "name": "right eye",
+      "kind": "path",
+      "artboardId": "milo-board",
+      "parentId": "milo-character",
+      "order": 16,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        29,
+        -30
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#243f33",
+        "skin": null,
+        "points": [
+          {
+            "id": "milo-right-eye-p0",
+            "anchor": [
+              8,
+              0
+            ],
+            "in": [
+              8,
+              -6.627416997599999
+            ],
+            "out": [
+              8,
+              6.627416997599999
+            ]
+          },
+          {
+            "id": "milo-right-eye-p1",
+            "anchor": [
+              0,
+              12
+            ],
+            "in": [
+              4.4182779984,
+              12
+            ],
+            "out": [
+              -4.4182779984,
+              12
+            ]
+          },
+          {
+            "id": "milo-right-eye-p2",
+            "anchor": [
+              -8,
+              0
+            ],
+            "in": [
+              -8,
+              6.627416997599999
+            ],
+            "out": [
+              -8,
+              -6.627416997599999
+            ]
+          },
+          {
+            "id": "milo-right-eye-p3",
+            "anchor": [
+              0,
+              -12
+            ],
+            "in": [
+              -4.4182779984,
+              -12
+            ],
+            "out": [
+              4.4182779984,
+              -12
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "milo-left-highlight",
+      "name": "left highlight",
+      "kind": "path",
+      "artboardId": "milo-board",
+      "parentId": "milo-character",
+      "order": 17,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -31,
+        -34
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#ffffff",
+        "skin": null,
+        "points": [
+          {
+            "id": "milo-left-highlight-p0",
+            "anchor": [
+              2.5,
+              0
+            ],
+            "in": [
+              2.5,
+              -1.6568542493999998
+            ],
+            "out": [
+              2.5,
+              1.6568542493999998
+            ]
+          },
+          {
+            "id": "milo-left-highlight-p1",
+            "anchor": [
+              0,
+              3
+            ],
+            "in": [
+              1.3807118745,
+              3
+            ],
+            "out": [
+              -1.3807118745,
+              3
+            ]
+          },
+          {
+            "id": "milo-left-highlight-p2",
+            "anchor": [
+              -2.5,
+              0
+            ],
+            "in": [
+              -2.5,
+              1.6568542493999998
+            ],
+            "out": [
+              -2.5,
+              -1.6568542493999998
+            ]
+          },
+          {
+            "id": "milo-left-highlight-p3",
+            "anchor": [
+              0,
+              -3
+            ],
+            "in": [
+              -1.3807118745,
+              -3
+            ],
+            "out": [
+              1.3807118745,
+              -3
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "milo-right-highlight",
+      "name": "right highlight",
+      "kind": "path",
+      "artboardId": "milo-board",
+      "parentId": "milo-character",
+      "order": 18,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        27,
+        -34
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#ffffff",
+        "skin": null,
+        "points": [
+          {
+            "id": "milo-right-highlight-p0",
+            "anchor": [
+              2.5,
+              0
+            ],
+            "in": [
+              2.5,
+              -1.6568542493999998
+            ],
+            "out": [
+              2.5,
+              1.6568542493999998
+            ]
+          },
+          {
+            "id": "milo-right-highlight-p1",
+            "anchor": [
+              0,
+              3
+            ],
+            "in": [
+              1.3807118745,
+              3
+            ],
+            "out": [
+              -1.3807118745,
+              3
+            ]
+          },
+          {
+            "id": "milo-right-highlight-p2",
+            "anchor": [
+              -2.5,
+              0
+            ],
+            "in": [
+              -2.5,
+              1.6568542493999998
+            ],
+            "out": [
+              -2.5,
+              -1.6568542493999998
+            ]
+          },
+          {
+            "id": "milo-right-highlight-p3",
+            "anchor": [
+              0,
+              -3
+            ],
+            "in": [
+              -1.3807118745,
+              -3
+            ],
+            "out": [
+              1.3807118745,
+              -3
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "milo-left-cheek",
+      "name": "left cheek",
+      "kind": "path",
+      "artboardId": "milo-board",
+      "parentId": "milo-character",
+      "order": 19,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -49,
+        -3
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e7b093",
+        "skin": null,
+        "points": [
+          {
+            "id": "milo-left-cheek-p0",
+            "anchor": [
+              10,
+              0
+            ],
+            "in": [
+              10,
+              -2.761423749
+            ],
+            "out": [
+              10,
+              2.761423749
+            ]
+          },
+          {
+            "id": "milo-left-cheek-p1",
+            "anchor": [
+              0,
+              5
+            ],
+            "in": [
+              5.522847498,
+              5
+            ],
+            "out": [
+              -5.522847498,
+              5
+            ]
+          },
+          {
+            "id": "milo-left-cheek-p2",
+            "anchor": [
+              -10,
+              0
+            ],
+            "in": [
+              -10,
+              2.761423749
+            ],
+            "out": [
+              -10,
+              -2.761423749
+            ]
+          },
+          {
+            "id": "milo-left-cheek-p3",
+            "anchor": [
+              0,
+              -5
+            ],
+            "in": [
+              -5.522847498,
+              -5
+            ],
+            "out": [
+              5.522847498,
+              -5
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "milo-right-cheek",
+      "name": "right cheek",
+      "kind": "path",
+      "artboardId": "milo-board",
+      "parentId": "milo-character",
+      "order": 20,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        49,
+        -3
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e7b093",
+        "skin": null,
+        "points": [
+          {
+            "id": "milo-right-cheek-p0",
+            "anchor": [
+              10,
+              0
+            ],
+            "in": [
+              10,
+              -2.761423749
+            ],
+            "out": [
+              10,
+              2.761423749
+            ]
+          },
+          {
+            "id": "milo-right-cheek-p1",
+            "anchor": [
+              0,
+              5
+            ],
+            "in": [
+              5.522847498,
+              5
+            ],
+            "out": [
+              -5.522847498,
+              5
+            ]
+          },
+          {
+            "id": "milo-right-cheek-p2",
+            "anchor": [
+              -10,
+              0
+            ],
+            "in": [
+              -10,
+              2.761423749
+            ],
+            "out": [
+              -10,
+              -2.761423749
+            ]
+          },
+          {
+            "id": "milo-right-cheek-p3",
+            "anchor": [
+              0,
+              -5
+            ],
+            "in": [
+              -5.522847498,
+              -5
+            ],
+            "out": [
+              5.522847498,
+              -5
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "milo-smile",
+      "name": "smile",
+      "kind": "path",
+      "artboardId": "milo-board",
+      "parentId": "milo-character",
+      "order": 21,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#243f33",
+        "skin": null,
+        "points": [
+          {
+            "id": "milo-smile-p0",
+            "anchor": [
+              -17,
+              -5
+            ],
+            "in": [
+              -17,
+              -5
+            ],
+            "out": [
+              -9,
+              6
+            ]
+          },
+          {
+            "id": "milo-smile-p1",
+            "anchor": [
+              17,
+              -5
+            ],
+            "in": [
+              9,
+              6
+            ],
+            "out": [
+              17,
+              14
+            ]
+          },
+          {
+            "id": "milo-smile-p2",
+            "anchor": [
+              0,
+              18
+            ],
+            "in": [
+              12,
+              18
+            ],
+            "out": [
+              -12,
+              18
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "milo-belly",
+      "name": "belly",
+      "kind": "path",
+      "artboardId": "milo-board",
+      "parentId": "milo-character",
+      "order": 22,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        72
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#c5ebd3",
+        "skin": null,
+        "points": [
+          {
+            "id": "milo-belly-p0",
+            "anchor": [
+              27,
+              0
+            ],
+            "in": [
+              27,
+              -14.359403494799999
+            ],
+            "out": [
+              27,
+              14.359403494799999
+            ]
+          },
+          {
+            "id": "milo-belly-p1",
+            "anchor": [
+              0,
+              26
+            ],
+            "in": [
+              14.911688244599999,
+              26
+            ],
+            "out": [
+              -14.911688244599999,
+              26
+            ]
+          },
+          {
+            "id": "milo-belly-p2",
+            "anchor": [
+              -27,
+              0
+            ],
+            "in": [
+              -27,
+              14.359403494799999
+            ],
+            "out": [
+              -27,
+              -14.359403494799999
+            ]
+          },
+          {
+            "id": "milo-belly-p3",
+            "anchor": [
+              0,
+              -26
+            ],
+            "in": [
+              -14.911688244599999,
+              -26
+            ],
+            "out": [
+              14.911688244599999,
+              -26
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "milo-belly-dot",
+      "name": "belly dot",
+      "kind": "path",
+      "artboardId": "milo-board",
+      "parentId": "milo-character",
+      "order": 23,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        72
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#5ba77e",
+        "skin": null,
+        "points": [
+          {
+            "id": "milo-belly-dot-p0",
+            "anchor": [
+              6,
+              0
+            ],
+            "in": [
+              6,
+              -3.3137084987999996
+            ],
+            "out": [
+              6,
+              3.3137084987999996
+            ]
+          },
+          {
+            "id": "milo-belly-dot-p1",
+            "anchor": [
+              0,
+              6
+            ],
+            "in": [
+              3.3137084987999996,
+              6
+            ],
+            "out": [
+              -3.3137084987999996,
+              6
+            ]
+          },
+          {
+            "id": "milo-belly-dot-p2",
+            "anchor": [
+              -6,
+              0
+            ],
+            "in": [
+              -6,
+              3.3137084987999996
+            ],
+            "out": [
+              -6,
+              -3.3137084987999996
+            ]
+          },
+          {
+            "id": "milo-belly-dot-p3",
+            "anchor": [
+              0,
+              -6
+            ],
+            "in": [
+              -3.3137084987999996,
+              -6
+            ],
+            "out": [
+              3.3137084987999996,
+              -6
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [
+    {
+      "id": "milo-idle",
+      "name": "Idle",
+      "artboardId": "milo-board",
+      "fps": 60,
+      "duration": 120,
+      "loop": true,
+      "tracks": [
+        {
+          "targetId": "milo-character",
+          "property": "y",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 277,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 266,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 277,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "milo-shoulder",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0.1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": -0.08,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0.1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "milo-left-eye",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 43,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 48,
+              "value": 0.12,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 53,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "milo-right-eye",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 43,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 48,
+              "value": 0.12,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 53,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "milo-wave",
+      "name": "Hello",
+      "artboardId": "milo-board",
+      "fps": 60,
+      "duration": 120,
+      "loop": true,
+      "tracks": [
+        {
+          "targetId": "milo-character",
+          "property": "y",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 277,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 266,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 277,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "milo-shoulder",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": -0.95,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 30,
+              "value": -0.45,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": -1.15,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 90,
+              "value": -0.45,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": -0.95,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "milo-elbow",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": -0.25,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 0.2,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": -0.25,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "machines": [
+    {
+      "id": "milo-machine",
+      "name": "Say hello",
+      "artboardId": "milo-board",
+      "inputs": [
+        {
+          "id": "milo-wave-input",
+          "name": "isWaving",
+          "type": "boolean",
+          "value": false
+        }
+      ],
+      "states": [
+        {
+          "id": "milo-idle-state",
+          "name": "Idle",
+          "animationId": "milo-idle",
+          "position": [
+            30,
+            50
+          ]
+        },
+        {
+          "id": "milo-wave-state",
+          "name": "Hello",
+          "animationId": "milo-wave",
+          "position": [
+            240,
+            50
+          ]
+        }
+      ],
+      "entryStateId": "milo-idle-state",
+      "transitions": [
+        {
+          "id": "milo-to-wave",
+          "fromId": "milo-idle-state",
+          "toId": "milo-wave-state",
+          "conditions": [
+            {
+              "inputId": "milo-wave-input",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "milo-to-idle",
+          "fromId": "milo-wave-state",
+          "toId": "milo-idle-state",
+          "conditions": [
+            {
+              "inputId": "milo-wave-input",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        }
+      ],
+      "listeners": []
+    }
+  ],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "milo-board": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  }
+}
