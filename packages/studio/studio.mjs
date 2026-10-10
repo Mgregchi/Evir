@@ -7,6 +7,7 @@ import {
 } from "@evir/project-model";
 import { History, addNode, reparent, removeSubtree, reorder } from "@evir/authoring";
 import { mountAuthoring } from "./authoring.mjs";
+import { PenDraft } from "./pen.mjs";
 import { drawScene, nodeBounds, pathOnContext } from "@evir/renderer-canvas";
 import { worldPoints, mapPoint } from "@evir/runtime/geometry";
 const config = JSON.parse(document.getElementById('editor-config').textContent);
@@ -52,6 +53,8 @@ let store,
   tool = "select",
   space = false,
   drag = null,
+  penDraft = null,
+  penPointerId = null,
   cameras = {},
   generation = 0,
   savedFingerprint = "",
@@ -156,35 +159,132 @@ function install(p) {
   selected = null;
   cameras = structuredClone(p.editor.cameras);
   drag = null;
+  penDraft = null;
+  penPointerId = null;
+  setTool("select");
   render();
 }
 function edit(label, fn, direct = false) {
+  if (!penReady()) return false;
   clearNotice();
   try {
     if (!direct && authoring && authoring.mode !== "Design") {
       authoring.recordEdit(fn);
-      return;
+      return true;
     }
     store.transact(label, fn);
     render();
     persist();
+    return true;
   } catch (e) {
     notice(e);
     render();
+    return false;
   }
 }
 function node() {
   return project().nodes.find((n) => n.id === selected);
 }
 function select(id) {
+  if (!penReady()) return;
   selected = id;
   render();
 }
 function setTool(next) {
+  if (next !== tool && !penReady()) return;
+  if (next === "pen" && authoring?.mode !== "Design") {
+    notice("Return to Design to draw a path");
+    return;
+  }
+  cancelDrag();
   tool = next;
   $("#select-tool").setAttribute("aria-pressed", String(next === "select"));
   $("#pan-tool").setAttribute("aria-pressed", String(next === "pan"));
-  stage.style.cursor = next === "pan" ? "grab" : "default";
+  $("#pen-tool").setAttribute("aria-pressed", String(next === "pen"));
+  stage.style.cursor = toolCursor();
+  draw();
+}
+function toolCursor() {
+  return tool === "pan" ? "grab" : tool === "pen" ? "crosshair" : "default";
+}
+function penReady() {
+  if (!penDraft) return true;
+  notice("Finish or cancel your path before continuing.");
+  return false;
+}
+function cancelPen() {
+  penDraft = null;
+  penPointerId = null;
+  clearNotice();
+  render();
+}
+function finishPen(closed = false) {
+  if (!penDraft) return;
+  const draft = penDraft;
+  try {
+    const geometry = draft.geometry(closed);
+    penDraft = null;
+    let id;
+    if (!edit("Draw path", (p) => {
+      id = addNode(p, "path", draft.parentId, draft.artboardId);
+      p.nodes.find((n) => n.id === id).geometry = geometry;
+    })) {
+      penDraft = draft;
+      draw();
+      return;
+    }
+    penPointerId = null;
+    selected = id;
+    setTool("select");
+    render();
+  } catch (error) {
+    notice(error);
+  }
+}
+function drawPen(zoom) {
+  $("#pen-tool").disabled = authoring && authoring.mode !== "Design";
+  $("#pen-actions").hidden = !penDraft;
+  $("#finish-path").disabled = !penDraft || penDraft.points.length < 2 || penDraft.dragging;
+  if (tool === "pen")
+    $("#selection-status").textContent = penDraft
+      ? `Unsaved draft · ${penDraft.points.length} ${penDraft.points.length === 1 ? "point" : "points"} · Enter to finish · Esc to cancel`
+      : "Click for corners. Drag for curves. Click the first point to close.";
+  if (penDraft) {
+    $("#undo").disabled = false;
+    $("#redo").disabled = true;
+    $("#project-name").disabled = true;
+    for (const control of document.querySelectorAll("#properties input,#properties select,#properties button"))
+      control.disabled = true;
+  }
+  if (!penDraft?.points.length) return;
+  const points = penDraft.worldPoints();
+  ctx.lineWidth = 1.5 / zoom;
+  ctx.strokeStyle = "#308c70";
+  pathOnContext(ctx, points, false);
+  ctx.stroke();
+  if (penDraft.hover) {
+    const hover = mapPoint(penDraft.matrix, penDraft.hover), last = points.at(-1);
+    ctx.setLineDash([4 / zoom, 4 / zoom]);
+    ctx.beginPath();
+    ctx.moveTo(...last.anchor);
+    ctx.bezierCurveTo(...last.out, ...hover, ...hover);
+    ctx.stroke();
+    ctx.setLineDash([]);
+  }
+  for (const [i, point] of points.entries()) {
+    ctx.beginPath();
+    ctx.moveTo(...point.in);
+    ctx.lineTo(...point.anchor);
+    ctx.lineTo(...point.out);
+    ctx.stroke();
+    for (const key of ["in", "out", "anchor"]) {
+      ctx.beginPath();
+      ctx.arc(...point[key], (key === "anchor" ? 4 : 2.5) / zoom, 0, Math.PI * 2);
+      ctx.fillStyle = i === 0 && key === "anchor" ? "#89e4c4" : "#fff";
+      ctx.fill();
+      ctx.stroke();
+    }
+  }
 }
 function add(kind) {
   if (authoring && authoring.mode !== "Design") {
@@ -259,7 +359,7 @@ function draw() {
   drawScene(ctx, p, activeArtboard);
   ctx.restore();
   const n = p.nodes.find((n) => n.id === selected);
-  if (n && editable(p, n, "hidden") && authoring?.mode !== "Interact") {
+  if (n && tool !== "pen" && editable(p, n, "hidden") && authoring?.mode !== "Interact") {
     const b = bounds(p, n);
     ctx.strokeStyle = "#308c70";
     ctx.lineWidth = 1.5 / c.zoom;
@@ -276,10 +376,11 @@ function draw() {
       ctx.strokeRect(x - s / 2, y - s / 2, s, s);
     }
   }
-  authoring?.overlay(ctx, p, n, c.zoom);
+  if (tool !== "pen") authoring?.overlay(ctx, p, n, c.zoom);
+  drawPen(c.zoom);
   ctx.restore();
   $("#zoom").textContent = Math.round(c.zoom * 100) + "%";
-  $("#empty-stage").hidden = p.nodes.some(
+  $("#empty-stage").hidden = tool === "pen" || p.nodes.some(
     (n) => n.artboardId === activeArtboard,
   );
 }
@@ -680,6 +781,7 @@ function render() {
   draw();
 }
 function deleteSelection() {
+  if (!penReady()) return;
   const p = project(),
     n = p.nodes.find((n) => n.id === selected);
   if (!n || !editable(p, n, "locked")) return;
@@ -735,7 +837,7 @@ function hit(p, world) {
   return null;
 }
 stage.addEventListener("pointerdown", (e) => {
-  if (e.target.closest("button") || drag || ![0, 1].includes(e.button)) return;
+  if (e.target.closest("button") || drag || penDraft?.dragging || ![0, 1].includes(e.button)) return;
   clearNotice();
   stage.focus();
   const start = coordinates(e),
@@ -748,6 +850,28 @@ stage.addEventListener("pointerdown", (e) => {
   }
   const p = project(),
     world = { x: (start.x - c.x) / c.zoom, y: (start.y - c.y) / c.zoom };
+  if (tool === "pen") {
+    if (penDraft?.dragging) return;
+    try {
+      if (!penDraft) {
+        const parent = p.nodes.find((n) => n.id === selected);
+        const parentId = ["group", "bone"].includes(parent?.kind) &&
+          editable(p, parent, "locked") && editable(p, parent, "hidden") ? parent.id : null;
+        penDraft = new PenDraft({ artboardId: activeArtboard, parentId,
+          matrix: parentId ? worldTransform(p, parentId) : undefined });
+      }
+      if (penDraft.down(world, c.zoom) === "close") finishPen(true);
+      else {
+        penPointerId = e.pointerId;
+        stage.setPointerCapture(e.pointerId);
+        draw();
+      }
+    } catch (error) {
+      notice(error);
+    }
+    e.preventDefault();
+    return;
+  }
   const selectedNode = p.nodes.find((v) => v.id === selected);
   const controlHit = authoring?.hitControl(p, selectedNode, world, c.zoom);
   if (controlHit) {
@@ -808,6 +932,12 @@ stage.addEventListener("pointerdown", (e) => {
   e.preventDefault();
 });
 stage.addEventListener("pointermove", (e) => {
+  if (!drag && penDraft && (penPointerId === null || e.pointerId === penPointerId)) {
+    const now = coordinates(e), c = camera();
+    penDraft.move({ x: (now.x - c.x) / c.zoom, y: (now.y - c.y) / c.zoom });
+    draw();
+    return;
+  }
   if (!drag) return;
   const now = coordinates(e),
     dx = (now.x - drag.start.x) / drag.c.zoom,
@@ -854,7 +984,13 @@ stage.addEventListener("pointermove", (e) => {
     notice(error);
   }
 });
-function finishDrag() {
+function finishDrag(e) {
+  if (penDraft?.dragging && e?.pointerId === penPointerId) {
+    penDraft.up();
+    penPointerId = null;
+    draw();
+    return;
+  }
   if (!drag) return;
   if (drag.kind !== "pan") store.commit();
   drag = null;
@@ -862,6 +998,12 @@ function finishDrag() {
   persist();
 }
 function cancelDrag() {
+  if (penDraft?.dragging) {
+    penDraft.cancelGesture();
+    penPointerId = null;
+    if (!penDraft.points.length) penDraft = null;
+    render();
+  }
   if (!drag) return;
   if (drag.kind !== "pan") store.cancel();
   else cameras[activeArtboard] = drag.c;
@@ -872,7 +1014,7 @@ stage.addEventListener("pointerup", finishDrag);
 stage.addEventListener("pointercancel", cancelDrag);
 stage.addEventListener("lostpointercapture", cancelDrag);
 function zoom(factor, at) {
-  if (drag) return;
+  if (drag || penDraft?.dragging) return;
   const c = camera(),
     r = stage.getBoundingClientRect();
   at ||= { x: r.width / 2, y: r.height / 2 };
@@ -888,7 +1030,7 @@ stage.addEventListener(
   "wheel",
   (e) => {
     e.preventDefault();
-    if (drag) return;
+    if (drag || penDraft?.dragging) return;
     if (e.ctrlKey || e.metaKey)
       zoom(Math.exp(-e.deltaY * 0.002), coordinates(e));
     else {
@@ -904,6 +1046,7 @@ $("#project-name").addEventListener("change", (e) =>
   edit("Rename project", (p) => (p.name = e.target.value)),
 );
 $("#artboard").addEventListener("change", (e) => {
+  if (!penReady()) { e.target.value = activeArtboard; return; }
   cancelDrag();
   activeArtboard = e.target.value;
   selected = null;
@@ -912,6 +1055,9 @@ $("#artboard").addEventListener("change", (e) => {
 $("#search").addEventListener("input", render);
 $("#select-tool").onclick = () => setTool("select");
 $("#pan-tool").onclick = () => setTool("pan");
+$("#pen-tool").onclick = () => setTool("pen");
+$("#finish-path").onclick = () => finishPen();
+$("#cancel-path").onclick = cancelPen;
 $("#add-rectangle").onclick = () => add("rectangle");
 $("#empty-add").onclick = () => add("rectangle");
 $("#add-group").onclick = () => add("group");
@@ -919,12 +1065,14 @@ $("#fit").onclick = fit;
 $("#zoom-in").onclick = () => zoom(1.2);
 $("#zoom-out").onclick = () => zoom(1 / 1.2);
 function undo() {
+  if (penDraft) { cancelPen(); return; }
   cancelDrag();
   store.undo();
   render();
   persist();
 }
 function redo() {
+  if (!penReady()) return;
   cancelDrag();
   store.redo();
   render();
@@ -933,6 +1081,7 @@ function redo() {
 $("#undo").onclick = undo;
 $("#redo").onclick = redo;
 async function save() {
+  if (!penReady()) return;
   if (store.active) {
     notice("Finish or cancel your drag before saving.");
     return;
@@ -1019,8 +1168,23 @@ window.addEventListener("keydown", (e) => {
     return;
   }
   if (e.key === "Escape") {
-    if (drag) cancelDrag();
+    if (penDraft) cancelPen();
+    else if (drag) cancelDrag();
+    else if (tool === "pen") setTool("select");
     else select(null);
+    return;
+  }
+  if (penDraft && e.key === "Enter") {
+    e.preventDefault();
+    finishPen();
+    return;
+  }
+  if (penDraft && (e.key === "Delete" || e.key === "Backspace")) {
+    e.preventDefault();
+    penDraft.removeLast();
+    penPointerId = null;
+    if (!penDraft.points.length) penDraft = null;
+    render();
     return;
   }
   if (drag) return;
@@ -1035,6 +1199,9 @@ window.addEventListener("keydown", (e) => {
         break;
       case "h":
         setTool("pan");
+        break;
+      case "p":
+        setTool("pen");
         break;
       case "r":
         add("rectangle");
@@ -1051,17 +1218,17 @@ window.addEventListener("keydown", (e) => {
 window.addEventListener("keyup", (e) => {
   if (e.code === "Space") {
     space = false;
-    stage.style.cursor = tool === "pan" ? "grab" : "default";
+    stage.style.cursor = toolCursor();
   }
 });
 window.addEventListener("blur", () => {
   space = false;
-  stage.style.cursor = tool === "pan" ? "grab" : "default";
+  stage.style.cursor = toolCursor();
   cancelDrag();
 });
 window.addEventListener("beforeunload", (e) => {
   if (
-    store.active ||
+    store.active || penDraft ||
     JSON.stringify(bundle(), null, 2) + "\n" !== savedFingerprint
   ) {
     e.preventDefault();
@@ -1102,6 +1269,12 @@ authoring = mountAuthoring({
   fit,
   notice,
   cancelDrag,
+  ready: penReady,
+  beforeMode: () => {
+    if (!penReady()) return false;
+    setTool("select");
+    return true;
+  },
 });
 render();
 // Read-only snapshots for diagnostics and browser acceptance tests.

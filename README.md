@@ -137,7 +137,7 @@ The [Evir Studio workspace](packages/studio/README.md) implements editable cubic
 
 ### Current platform and AI context
 
-The [feature audit](docs/14-platform-context-and-shipped-features.md) and [AI/agent authoring study](docs/15-ai-agent-authoring-research.md), reviewed on 9 October 2026, cover Rive and comparable platforms before further implementation. They distinguish documented availability, beta/experimental features, roadmap, runtime support and Evir's remaining gaps. The [evidence register](research/platform-context/README.md) records 78 primary sources, 43 structured claims, conflicting/outdated documentation and local CLI verification. No AI provider or agent transport is selected by this research.
+The [feature audit](docs/14-platform-context-and-shipped-features.md) and [AI/agent authoring study](docs/15-ai-agent-authoring-research.md), reviewed on 9 October 2026, cover Rive and comparable platforms before further implementation. They distinguish documented availability, beta/experimental features, roadmap, runtime support and Evir's remaining gaps. The [evidence register](research/platform-context/README.md) records 78 primary sources, 43 structured claims, conflicting/outdated documentation and local CLI verification. No AI provider or agent transport is selected by this research. The subsequent [Pen authoring step](docs/21-pen-authoring-research-and-acceptance.md) adds custom path drawing, reversible drafts and official-runtime export checks after researching Rive and Penpot's documented gestures.
 
 ### Public site and additional scene research
 

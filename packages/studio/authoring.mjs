@@ -118,6 +118,7 @@ export function mountAuthoring(api) {
     raf = null;
   }
   function changeMode(next) {
+    if (!api.beforeMode()) return;
     api.cancelDrag();
     stop();
     mode = next;
@@ -1171,6 +1172,7 @@ export function mountAuthoring(api) {
     frame = Math.round(Math.min(frame, currentAnimation(p)?.duration ?? 0));
   }
   exportButton.onclick = async () => {
+    if (!api.ready()) return;
     try {
       api.cancelDrag();
       const result = compileProject(api.authored(), await exportSchema());
