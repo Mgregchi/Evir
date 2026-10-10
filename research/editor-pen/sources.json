@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-10-10T14:59:47.923619+00:00",
+  "sources": [
+    {
+      "id": "rive-pen",
+      "url": "https://raw.githubusercontent.com/rive-app/rive-docs/8879acbbefbf676c8d68d66c2ddfe56c6ee50914/editor/fundamentals/pen-tool-overview.mdx",
+      "status": 200,
+      "sha256": "3a5ca121f0956abe349bd0b72ee5e50b9bb489ecf00e6600ab88e8f7900522e6"
+    },
+    {
+      "id": "rive-vertices",
+      "url": "https://raw.githubusercontent.com/rive-app/rive-docs/8879acbbefbf676c8d68d66c2ddfe56c6ee50914/editor/fundamentals/edit-vertices.mdx",
+      "status": 200,
+      "sha256": "464083994d32d8dba42e47ee1ea8bd84464ad6bf282ee92916e3e4b8579ce1c2"
+    },
+    {
+      "id": "penpot-paths",
+      "url": "https://raw.githubusercontent.com/penpot/penpot-docs/dae434432ed4a523ea1013666aa23451dbd12eb8/user-guide/objects/index.njk",
+      "status": 200,
+      "sha256": "7dea97ec04382494d5d916cf36752506e22e0bb115a24bf57dea57ea99ef5cfd"
+    }
+  ]
+}

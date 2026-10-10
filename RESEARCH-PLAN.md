@@ -113,15 +113,18 @@ Only after completing Phases 1–4 do we decide:
 
 ---
 
-### Immediate Next Actions
+### Current progress and next actions — 10 October 2026
 
-1. Create the repository structure for research documentation
-2. Start Phase 1: Write the Rive overview document
-3. Collect a set of simple → complex `.riv` sample files for analysis
-4. Set up a basic testing environment (official Rive web runtime)
+The structural reader/writer, generated fixtures, official Canvas2D/WebGL2 checks and cloud benchmarks are implemented. The [runtime audit](docs/09-runtime-research-closure.md) records their scope and pending gates. Studio's four [authoring milestones](docs/13-editor-milestone-acceptance.md) are implemented for the declared subset. The public web app is live according to the user; this workspace's HTTPS check returned 403, so production navigation has not been independently verified here.
+
+1. **Implemented next authoring step:** Pen drawing with corner/curve gestures, open/closed paths, reversible drafts and official-runtime export checks. [Research and acceptance](docs/21-pen-authoring-research-and-acceptance.md) document the evidence and limits.
+2. **Next editor step:** research and implement selection/navigation improvements, starting with multiple selection and marquee. Extend the transaction and world-transform checks before adding snapping, guides or layer reorganization.
+3. **Then expand authoring deliberately:** research gradients, clipping/feathering and richer deformation/blending against the existing runtime experiments; validate each added editor feature with official runtimes. Text/raster assets and semantic `.riv` import need explicit supported contracts.
+4. **Keep external evidence gates open:** the physical-device audit is deferred while the user tests it; controlled equivalent Rive Editor exports remain pending. The supplied exports are useful corpus evidence, not equivalent-scene comparisons.
+5. **AI/agents remain researched, not implemented:** use the [agent study](docs/15-ai-agent-authoring-research.md) to define bounded document operations, review/undo and data handling before selecting a provider or transport. No new binary format or performance-parity commitment follows from frontend progress.
 
 ### Architecture follow-up
 
-The reusable project model, motion/state-machine evaluator, Canvas2D renderer, authoring operations and `.riv` compiler have now been extracted into versioned npm packages. Public site and editor application build independently; `/product` and `/editor` are public pages, while the full editor launches through a configurable URL suitable for a studio subdomain. See [the completed workspace migration](docs/19-workspace-migration.md) and [package contracts](packages/README.md). Physical-device and equivalent Editor-scene research gates are still pending; organization does not close them or finalize a new binary format.
+The reusable project model, motion/state-machine evaluator, Canvas2D renderer, authoring operations and `.riv` compiler are independent versioned npm packages. `apps/web` is the single hosted frontend: `/product` and `/editor` are public pages, and `/editor/studio/` composes the separately maintained `@evir/studio` UI package. Studio consumes the engine; the engine does not depend on the frontend. See [the completed workspace migration](docs/19-workspace-migration.md) and [package contracts](packages/README.md). Physical-device and equivalent Editor-scene research gates are still pending; organization does not close them or finalize a new binary format.
 
 ---

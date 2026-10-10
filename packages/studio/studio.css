@@ -331,8 +331,20 @@ nav {
   padding: 3px 8px;
 }
 .stage-footer {
-  height: 37px;
+  min-height: 37px;
+  height: auto;
+  padding: 6px 12px;
+  gap: 8px;
+  flex-wrap: wrap;
   border-top: 1px solid var(--line);
+}
+.stage-footer > span {
+  flex: 1;
+  min-width: 170px;
+}
+#pen-actions {
+  display: flex;
+  gap: 8px;
 }
 .stage-footer button {
   font-size: 11px;

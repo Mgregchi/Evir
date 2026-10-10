@@ -26,7 +26,9 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: web-validation
-          path: research/results/public-site/
+          path: |
+            research/results/public-site/
+            research/results/editor-pen/
       - uses: actions/upload-artifact@v4
         with:
           name: web

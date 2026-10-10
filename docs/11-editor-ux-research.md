@@ -62,6 +62,8 @@ For later animation/interaction milestones, repeat the study with setting a key,
 
 This prototype establishes project persistence, transaction history and a Design workspace for groups and rectangles. The subsequent path, rigging, animation/state-machine and `.riv` export milestones are now implemented for the [declared tested subset](13-editor-milestone-acceptance.md). Before claiming a polished usable editor, add resizable/collapsible panels, hierarchical expand/collapse, multiselection and marquee, snapping and guides, drag-and-drop layer organization, resize handles, keyboard navigation of the scene tree, and representative user testing. Desktop widths below 850 pixels currently use horizontal overflow rather than a mobile editing experience.
 
+The subsequent [Pen creation workflow](21-pen-authoring-research-and-acceptance.md) adds researched corner/curve drawing gestures with explicit Finish/Cancel and export checks. Multiple selection/marquee and navigation are the next bounded editor step; the remaining usability gaps above still apply.
+
 ## Primary references
 
 - [Rive navigation](https://github.com/rive-app/rive-docs/blob/8879acbbefbf676c8d68d66c2ddfe56c6ee50914/editor/interface-overview/selection-and-navigation.mdx), [inspector](https://github.com/rive-app/rive-docs/blob/8879acbbefbf676c8d68d66c2ddfe56c6ee50914/editor/interface-overview/inspector.mdx), [stage](https://github.com/rive-app/rive-docs/blob/8879acbbefbf676c8d68d66c2ddfe56c6ee50914/editor/interface-overview/stage.mdx), [timeline](https://github.com/rive-app/rive-docs/blob/8879acbbefbf676c8d68d66c2ddfe56c6ee50914/editor/animate-mode/timeline.mdx), and [key feedback](https://github.com/rive-app/rive-docs/blob/8879acbbefbf676c8d68d66c2ddfe56c6ee50914/editor/animate-mode/keys.mdx)

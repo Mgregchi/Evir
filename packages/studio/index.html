@@ -49,6 +49,7 @@
         </button>
       </div>
       <div class="toolbar-group">
+        <button id="pen-tool" aria-pressed="false" title="Draw path · P">Pen</button>
         <button id="add-rectangle" title="Add rectangle · R">
           <span data-icon="rectangle" aria-hidden="true"></span>
           Rectangle</button
@@ -109,7 +110,8 @@
         </div>
         <div class="stage-footer">
           <span id="selection-status">Select a layer to edit</span
-          ><button id="shortcuts">Keyboard shortcuts <kbd>?</kbd></button>
+          ><div id="pen-actions" hidden><button id="finish-path">Finish path</button><button id="cancel-path">Cancel path</button></div>
+          <button id="shortcuts">Keyboard shortcuts <kbd>?</kbd></button>
         </div>
       </section>
       <aside class="inspector panel" aria-label="Properties inspector">
@@ -136,6 +138,12 @@
         <dd>Hold Space + drag</dd>
         <dt>Add rectangle</dt>
         <dd>R</dd>
+        <dt>Draw a path</dt>
+        <dd>P · click for corners, drag for curves</dd>
+        <dt>Finish / close a path</dt>
+        <dd>Enter / click its first point</dd>
+        <dt>Cancel path / remove last draft point</dt>
+        <dd>Esc / Backspace</dd>
         <dt>Fit artboard</dt>
         <dd>F</dd>
         <dt>Undo / Redo</dt>
