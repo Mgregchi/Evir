@@ -33,6 +33,7 @@ jobs:
             research/results/editor-pen/
             research/results/experience-quality/
             research/results/studio-workspace/
+            research/results/studio-navigation/
       - uses: actions/upload-artifact@v4
         with:
           name: web

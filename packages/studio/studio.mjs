@@ -5,19 +5,40 @@ import {
   serializeProject,
   openProject,
 } from "@evir/project-model";
-import { History, addNode, reparent, removeSubtree, reorder } from "@evir/authoring";
+import {
+  History,
+  addNode,
+  reparent,
+  removeSubtree,
+  reorder,
+} from "@evir/authoring";
 import { mountAuthoring } from "./authoring.mjs";
 import { PenDraft } from "./pen.mjs";
 import { mountPanels, mountDisclosures } from "./panels.mjs";
+import { mountLayout } from "./layout.mjs";
+import { touchFrame, gestureCamera } from "./navigation.mjs";
+import {
+  ancestors,
+  layerRows,
+  parentChoices,
+  organizeLayers,
+} from "./layers.mjs";
 import { createFeedback } from "@evir/ui";
-import { available, selectionRoots, selectionBounds, marqueeTargets,
-  prepareSelectionMove, applySelectionMove } from "./selection.mjs";
+import {
+  available,
+  selectionRoots,
+  selectionBounds,
+  marqueeTargets,
+  prepareSelectionMove,
+  applySelectionMove,
+} from "./selection.mjs";
 import { drawScene, nodeBounds, pathOnContext } from "@evir/renderer-canvas";
 import { worldPoints, mapPoint } from "@evir/runtime/geometry";
-const config = JSON.parse(document.getElementById('editor-config').textContent);
-document.querySelector('.brand').href = config.publicSiteUrl;
-document.querySelector('#studio-home').href = config.publicSiteUrl;
-document.querySelector('#startup-step').textContent = 'Restoring your local project…';
+const config = JSON.parse(document.getElementById("editor-config").textContent);
+document.querySelector(".brand").href = config.publicSiteUrl;
+document.querySelector("#studio-home").href = config.publicSiteUrl;
+document.querySelector("#startup-step").textContent =
+  "Restoring your local project…";
 let authoring;
 const $ = (s) => document.querySelector(s);
 const element = (tag, text, cls) => {
@@ -37,8 +58,8 @@ const iconPaths = {
   redo: "M16 5l5 5-5 5M21 10H11a7 7 0 0 0-7 7",
   play: "M7 4l14 8-14 8V4z",
   help: "M9 8a3 3 0 1 1 5 2c-2 1-2 2-2 3M12 17v.1M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0",
-  'collapse-left': "M10 5l-7 7 7 7M17 4v16",
-  'collapse-right': "M14 5l7 7-7 7M7 4v16",
+  "collapse-left": "M10 5l-7 7 7 7M17 4v16",
+  "collapse-right": "M14 5l7 7-7 7M7 4v16",
   pan: "M12 3v18M3 12h18M8 7l4-4 4 4M8 17l4 4 4-4M7 8l-4 4 4 4M17 8l4 4-4 4",
   rectangle: "M4 4h16v16H4z",
   group: "M4 4h11v11H4zM9 9h11v11H9",
@@ -64,6 +85,12 @@ function icon(name) {
 for (const holder of document.querySelectorAll("[data-icon]"))
   holder.append(icon(holder.dataset.icon));
 const CACHE = "evir.studio.project.v1";
+const collapsedLayers = new Set();
+let multipleLayers = false;
+const touches = new Map();
+let touchGesture = null,
+  touchNavigation = false,
+  touchClick = null;
 const feedback = createFeedback($("#notice"));
 let store,
   activeArtboard,
@@ -165,6 +192,9 @@ async function persist() {
   }
 }
 function install(p) {
+  resetTouches();
+  collapsedLayers.clear();
+  multipleLayers = false;
   fittedView = true;
   ++generation;
   authoring?.reset();
@@ -208,9 +238,11 @@ function select(id, additive = false) {
   if (!penReady()) return;
   if (additive && authoring?.mode === "Design") {
     const next = new Set(selectedIds);
-    if (next.has(id)) next.delete(id); else if (id) next.add(id);
+    if (next.has(id)) next.delete(id);
+    else if (id) next.add(id);
     setSelection(next);
   } else setSelection(id ? [id] : []);
+  for (const parent of ancestors(project(), id)) collapsedLayers.delete(parent);
   render();
 }
 function setTool(next) {
@@ -248,10 +280,12 @@ function finishPen(closed = false) {
     const geometry = draft.geometry(closed);
     penDraft = null;
     let id;
-    if (!edit("Draw path", (p) => {
-      id = addNode(p, "path", draft.parentId, draft.artboardId);
-      p.nodes.find((n) => n.id === id).geometry = geometry;
-    })) {
+    if (
+      !edit("Draw path", (p) => {
+        id = addNode(p, "path", draft.parentId, draft.artboardId);
+        p.nodes.find((n) => n.id === id).geometry = geometry;
+      })
+    ) {
       penDraft = draft;
       draw();
       return;
@@ -267,7 +301,8 @@ function finishPen(closed = false) {
 function drawPen(zoom) {
   $("#pen-tool").disabled = authoring && authoring.mode !== "Design";
   $("#pen-actions").hidden = !penDraft;
-  $("#finish-path").disabled = !penDraft || penDraft.points.length < 2 || penDraft.dragging;
+  $("#finish-path").disabled =
+    !penDraft || penDraft.points.length < 2 || penDraft.dragging;
   if (tool === "pen")
     $("#selection-status").textContent = penDraft
       ? `Unsaved draft · ${penDraft.points.length} ${penDraft.points.length === 1 ? "point" : "points"} · Enter to finish · Esc to cancel`
@@ -276,7 +311,9 @@ function drawPen(zoom) {
     $("#undo").disabled = false;
     $("#redo").disabled = true;
     $("#project-name").disabled = true;
-    for (const control of document.querySelectorAll("#properties input,#properties select,#properties button"))
+    for (const control of document.querySelectorAll(
+      "#properties input,#properties select,#properties button",
+    ))
       control.disabled = true;
   }
   if (!penDraft?.points.length) return;
@@ -286,7 +323,8 @@ function drawPen(zoom) {
   pathOnContext(ctx, points, false);
   ctx.stroke();
   if (penDraft.hover) {
-    const hover = mapPoint(penDraft.matrix, penDraft.hover), last = points.at(-1);
+    const hover = mapPoint(penDraft.matrix, penDraft.hover),
+      last = points.at(-1);
     ctx.setLineDash([4 / zoom, 4 / zoom]);
     ctx.beginPath();
     ctx.moveTo(...last.anchor);
@@ -302,7 +340,12 @@ function drawPen(zoom) {
     ctx.stroke();
     for (const key of ["in", "out", "anchor"]) {
       ctx.beginPath();
-      ctx.arc(...point[key], (key === "anchor" ? 4 : 2.5) / zoom, 0, Math.PI * 2);
+      ctx.arc(
+        ...point[key],
+        (key === "anchor" ? 4 : 2.5) / zoom,
+        0,
+        Math.PI * 2,
+      );
       ctx.fillStyle = i === 0 && key === "anchor" ? "#89e4c4" : "#fff";
       ctx.fill();
       ctx.stroke();
@@ -316,7 +359,8 @@ function add(kind) {
   }
   let created;
   edit(`Add ${kind}`, (p) => {
-    const parent = selectedIds.size === 1 ? p.nodes.find((n) => n.id === selected) : null;
+    const parent =
+      selectedIds.size === 1 ? p.nodes.find((n) => n.id === selected) : null;
     const parentId =
       ["group", "bone"].includes(parent?.kind) && editable(p, parent, "locked")
         ? parent.id
@@ -382,7 +426,12 @@ function draw() {
   drawScene(ctx, p, activeArtboard);
   ctx.restore();
   const n = p.nodes.find((n) => n.id === selected);
-  if (n && tool !== "pen" && editable(p, n, "hidden") && authoring?.mode !== "Interact") {
+  if (
+    n &&
+    tool !== "pen" &&
+    editable(p, n, "hidden") &&
+    authoring?.mode !== "Interact"
+  ) {
     const b = selectionBounds(p, selectedIds) || bounds(p, n);
     ctx.strokeStyle = "#308c70";
     ctx.lineWidth = 1.5 / c.zoom;
@@ -399,7 +448,8 @@ function draw() {
       ctx.strokeRect(x - s / 2, y - s / 2, s, s);
     }
   }
-  if (tool !== "pen" && selectedIds.size <= 1) authoring?.overlay(ctx, p, n, c.zoom);
+  if (tool !== "pen" && selectedIds.size <= 1)
+    authoring?.overlay(ctx, p, n, c.zoom);
   if (drag?.kind === "marquee") {
     ctx.strokeStyle = "#308c70";
     ctx.fillStyle = "#308c7018";
@@ -410,9 +460,8 @@ function draw() {
   drawPen(c.zoom);
   ctx.restore();
   $("#zoom").textContent = Math.round(c.zoom * 100) + "%";
-  $("#empty-stage").hidden = tool === "pen" || p.nodes.some(
-    (n) => n.artboardId === activeArtboard,
-  );
+  $("#empty-stage").hidden =
+    tool === "pen" || p.nodes.some((n) => n.artboardId === activeArtboard);
 }
 function fit() {
   fittedView = true;
@@ -436,9 +485,19 @@ function fitSelection() {
   const b = selectionBounds(project(), selectedIds);
   if (!b) return fit();
   const r = stage.getBoundingClientRect();
-  const zoom = Math.max(0.1, Math.min(4, (r.width - 70) / Math.max(b.width, 1), (r.height - 70) / Math.max(b.height, 1)));
-  cameras[activeArtboard] = { zoom, x: (r.width - b.width * zoom) / 2 - b.x * zoom,
-    y: (r.height - b.height * zoom) / 2 - b.y * zoom };
+  const zoom = Math.max(
+    0.1,
+    Math.min(
+      4,
+      (r.width - 70) / Math.max(b.width, 1),
+      (r.height - 70) / Math.max(b.height, 1),
+    ),
+  );
+  cameras[activeArtboard] = {
+    zoom,
+    x: (r.width - b.width * zoom) / 2 - b.x * zoom,
+    y: (r.height - b.height * zoom) / 2 - b.y * zoom,
+  };
   draw();
   persist();
 }
@@ -447,7 +506,9 @@ function moveSelection(dx, dy) {
   try {
     const prepared = prepareSelectionMove(project(), selectedIds);
     edit("Move selection", (p) => applySelectionMove(p, prepared, dx, dy));
-  } catch (error) { notice(error); }
+  } catch (error) {
+    notice(error);
+  }
 }
 function field(label, value, onChange, type = "text", disabled = false) {
   const wrapper = element("label", undefined, "field");
@@ -488,17 +549,35 @@ function properties(p) {
   if (selectedIds.size > 1) {
     $("#kind-label").textContent = "SELECTION";
     const info = section(`${selectedIds.size} layers selected`);
-    info.append(element("p", "Move the selection together. Choose one layer below to edit its individual properties."));
+    info.append(
+      element(
+        "p",
+        "Move the selection together. Choose one layer below to edit its individual properties.",
+      ),
+    );
     for (const id of selectedIds) {
       const n = p.nodes.find((v) => v.id === id);
       info.append(action(n.name, () => select(id)));
     }
     host.append(info);
     const pair = element("div", undefined, "field-pair");
-    for (const [label, axis] of [["Move X", 0], ["Move Y", 1]])
-      pair.append(field(label, 0, (v) => moveSelection(axis === 0 ? v : 0, axis === 1 ? v : 0), "number"));
-    host.append(pair, action("Fit selection", fitSelection),
-      action("Delete selected layers", deleteSelection, false, "danger"));
+    for (const [label, axis] of [
+      ["Move X", 0],
+      ["Move Y", 1],
+    ])
+      pair.append(
+        field(
+          label,
+          0,
+          (v) => moveSelection(axis === 0 ? v : 0, axis === 1 ? v : 0),
+          "number",
+        ),
+      );
+    host.append(
+      pair,
+      action("Fit selection", fitSelection),
+      action("Delete selected layers", deleteSelection, false, "danger"),
+    );
     return;
   }
   const n = p.nodes.find((n) => n.id === selected),
@@ -755,8 +834,13 @@ function toggle(key, id) {
 }
 function render() {
   const p = project();
-  setSelection([...selectedIds].filter((id) => p.nodes.some((n) => n.id === id && n.artboardId === activeArtboard)));
-  const focusedLayer = document.activeElement?.closest(".layer-select")?.dataset.nodeId;
+  setSelection(
+    [...selectedIds].filter((id) =>
+      p.nodes.some((n) => n.id === id && n.artboardId === activeArtboard),
+    ),
+  );
+  const focusedLayer =
+    document.activeElement?.closest(".layer-select")?.dataset.nodeId;
   $("#project-name").value = p.name;
   $("#save-status").textContent = status;
   $("#artboard-title").textContent = artboard(p).name;
@@ -774,8 +858,12 @@ function render() {
   const layers = $("#layers");
   layers.replaceChildren();
   const search = $("#search").value.trim().toLowerCase();
-  for (const { n, depth } of flattened(p, true)) {
-    if (search && !n.name.toLowerCase().includes(search)) continue;
+  for (const { n, depth, hasChildren } of layerRows(
+    p,
+    activeArtboard,
+    collapsedLayers,
+    search,
+  )) {
     const row = element(
       "div",
       undefined,
@@ -783,8 +871,34 @@ function render() {
         (selectedIds.has(n.id) ? " selected" : "") +
         (!editable(p, n, "hidden") ? " dim" : ""),
     );
-    row.style.paddingLeft = `${depth * 12}px`;
-    const button = action("", (e) => select(n.id, e.shiftKey));
+    row.style.paddingLeft = `${Math.min(depth, 8) * 12}px`;
+    if (hasChildren) {
+      const disclosure = action(
+        search || !collapsedLayers.has(n.id) ? "⌄" : "›",
+        () => {
+          if (collapsedLayers.has(n.id)) collapsedLayers.delete(n.id);
+          else collapsedLayers.add(n.id);
+          render();
+          [...$("#layers").querySelectorAll(".layer-select")]
+            .find((b) => b.dataset.nodeId === n.id)
+            ?.focus();
+        },
+      );
+      disclosure.className = "layer-disclosure";
+      disclosure.setAttribute(
+        "aria-label",
+        `${search || !collapsedLayers.has(n.id) ? "Collapse" : "Expand"} ${n.name}`,
+      );
+      disclosure.setAttribute(
+        "aria-expanded",
+        String(Boolean(search) || !collapsedLayers.has(n.id)),
+      );
+      disclosure.disabled = Boolean(search);
+      row.append(disclosure);
+    } else row.append(element("span", undefined, "layer-spacer"));
+    const button = action("", (e) =>
+      select(n.id, e.shiftKey || multipleLayers),
+    );
     button.className = "layer-select";
     button.setAttribute("aria-label", `Select ${n.name}`);
     button.setAttribute("aria-pressed", String(selectedIds.has(n.id)));
@@ -814,8 +928,10 @@ function render() {
     layers.append(row);
   }
   const layerButtons = [...layers.querySelectorAll(".layer-select")];
-  if (layerButtons.length && !layerButtons.some((b) => b.tabIndex === 0)) layerButtons[0].tabIndex = 0;
-  if (focusedLayer) layerButtons.find((b) => b.dataset.nodeId === focusedLayer)?.focus();
+  if (layerButtons.length && !layerButtons.some((b) => b.tabIndex === 0))
+    layerButtons[0].tabIndex = 0;
+  if (focusedLayer)
+    layerButtons.find((b) => b.dataset.nodeId === focusedLayer)?.focus();
   if (!layers.children.length)
     layers.append(
       element(
@@ -825,11 +941,21 @@ function render() {
       ),
     );
   const n = p.nodes.find((n) => n.id === selected);
-  $("#selection-status").textContent = selectedIds.size > 1 ? `${selectedIds.size} layers selected` : n
-    ? `${n.name} · ${n.kind}`
-    : "Select a layer to edit";
+  $("#selection-status").textContent =
+    selectedIds.size > 1
+      ? `${selectedIds.size} layers selected`
+      : n
+        ? `${n.name} · ${n.kind}`
+        : "Select a layer to edit";
   $("#undo").disabled = !store.canUndo;
   $("#redo").disabled = !store.canRedo;
+  $("#organize-layers").disabled =
+    !selectedIds.size || authoring?.mode !== "Design";
+  $("#multiple-layers").disabled = authoring?.mode !== "Design";
+  $("#multiple-layers").setAttribute(
+    "aria-pressed",
+    String(multipleLayers && authoring?.mode === "Design"),
+  );
   properties(p);
   if (authoring?.mode === "Interact" || (authoring?.mode === "Animate" && !n))
     for (const control of document.querySelectorAll(
@@ -854,18 +980,31 @@ function render() {
 }
 function deleteSelection() {
   if (!penReady()) return;
-  const p = project(), targets = selectionRoots(p, selectedIds);
+  const p = project(),
+    targets = selectionRoots(p, selectedIds);
   if (!targets.length) return;
-  if (targets.some((n) => !editable(p, n, "locked"))) { notice("Unlock the selected layers before deleting them."); return; }
-  const removed = new Set(targets.map((n) => n.id));
-  for (let changed = true; changed;) {
-    changed = false;
-    for (const n of p.nodes) if (removed.has(n.parentId) && !removed.has(n.id)) { removed.add(n.id); changed = true; }
+  if (targets.some((n) => !editable(p, n, "locked"))) {
+    notice("Unlock the selected layers before deleting them.");
+    return;
   }
-  if (!edit("Delete selected layers and descendants", (p) => {
-    for (const n of [...p.nodes]) if (removed.has(n.id) && n.kind === "path") removeSubtree(p, n.id);
-    for (const n of targets) if (p.nodes.some((v) => v.id === n.id)) removeSubtree(p, n.id);
-  })) return;
+  const removed = new Set(targets.map((n) => n.id));
+  for (let changed = true; changed; ) {
+    changed = false;
+    for (const n of p.nodes)
+      if (removed.has(n.parentId) && !removed.has(n.id)) {
+        removed.add(n.id);
+        changed = true;
+      }
+  }
+  if (
+    !edit("Delete selected layers and descendants", (p) => {
+      for (const n of [...p.nodes])
+        if (removed.has(n.id) && n.kind === "path") removeSubtree(p, n.id);
+      for (const n of targets)
+        if (p.nodes.some((v) => v.id === n.id)) removeSubtree(p, n.id);
+    })
+  )
+    return;
   setSelection([]);
   render();
 }
@@ -915,13 +1054,41 @@ function hit(p, world) {
   return null;
 }
 stage.addEventListener("pointerdown", (e) => {
-  if (e.target.closest("button") || drag || penDraft?.dragging || ![0, 1].includes(e.button)) return;
+  if (e.pointerType === "touch" && !e.target.closest("button")) {
+    touches.set(e.pointerId, coordinates(e));
+    if (touches.size >= 2 || touchNavigation) {
+      // A second finger cancels the provisional edit before starting navigation.
+      cancelDrag();
+      touchClick = null;
+      touchNavigation = true;
+      if (touches.size === 2)
+        touchGesture = {
+          camera: structuredClone(camera()),
+          frame: touchFrame(touches),
+        };
+      else touchGesture = null;
+      stage.setPointerCapture(e.pointerId);
+      e.preventDefault();
+      return;
+    }
+    if (drag || penDraft?.dragging) {
+      e.preventDefault();
+      return;
+    }
+  }
+  if (
+    e.target.closest("button") ||
+    drag ||
+    penDraft?.dragging ||
+    ![0, 1].includes(e.button)
+  )
+    return;
   clearNotice();
   stage.focus();
   const start = coordinates(e),
     c = structuredClone(camera());
   if (space || tool === "pan" || e.button === 1) {
-    drag = { kind: "pan", start, c };
+    drag = { kind: "pan", start, c, pointerId: e.pointerId };
     stage.setPointerCapture(e.pointerId);
     e.preventDefault();
     return;
@@ -932,11 +1099,21 @@ stage.addEventListener("pointerdown", (e) => {
     if (penDraft?.dragging) return;
     try {
       if (!penDraft) {
-        const parent = selectedIds.size === 1 ? p.nodes.find((n) => n.id === selected) : null;
-        const parentId = ["group", "bone"].includes(parent?.kind) &&
-          editable(p, parent, "locked") && editable(p, parent, "hidden") ? parent.id : null;
-        penDraft = new PenDraft({ artboardId: activeArtboard, parentId,
-          matrix: parentId ? worldTransform(p, parentId) : undefined });
+        const parent =
+          selectedIds.size === 1
+            ? p.nodes.find((n) => n.id === selected)
+            : null;
+        const parentId =
+          ["group", "bone"].includes(parent?.kind) &&
+          editable(p, parent, "locked") &&
+          editable(p, parent, "hidden")
+            ? parent.id
+            : null;
+        penDraft = new PenDraft({
+          artboardId: activeArtboard,
+          parentId,
+          matrix: parentId ? worldTransform(p, parentId) : undefined,
+        });
       }
       if (penDraft.down(world, c.zoom) === "close") finishPen(true);
       else {
@@ -951,13 +1128,16 @@ stage.addEventListener("pointerdown", (e) => {
     return;
   }
   const selectedNode = p.nodes.find((v) => v.id === selected);
-  const controlHit = selectedIds.size <= 1 && authoring?.hitControl(p, selectedNode, world, c.zoom);
+  const controlHit =
+    selectedIds.size <= 1 &&
+    authoring?.hitControl(p, selectedNode, world, c.zoom);
   if (controlHit) {
     try {
       const matrix = inverse(controlHit.matrix);
       store.begin("Move path control");
       drag = {
         kind: "control",
+        pointerId: e.pointerId,
         start,
         c,
         id: selected,
@@ -975,23 +1155,39 @@ stage.addEventListener("pointerdown", (e) => {
   }
   let n = hit(p, world);
   if (authoring?.mode === "Interact") {
-    if (n) authoring.click(n.id);
+    if (n && e.pointerType === "touch") {
+      touchClick = { id: n.id, pointerId: e.pointerId, start };
+      stage.setPointerCapture(e.pointerId);
+    } else if (n) authoring.click(n.id);
     return;
   }
   if (n && !e.ctrlKey && !e.metaKey) {
     while (n.parentId) n = p.nodes.find((v) => v.id === n.parentId);
   }
   if (!n) {
-    drag = { kind: "marquee", start, c, world, box: { x: world.x, y: world.y, width: 0, height: 0 },
-      before: [...selectedIds], additive: e.shiftKey && authoring.mode === "Design", deep: e.ctrlKey || e.metaKey };
+    drag = {
+      kind: "marquee",
+      pointerId: e.pointerId,
+      start,
+      c,
+      world,
+      box: { x: world.x, y: world.y, width: 0, height: 0 },
+      before: [...selectedIds],
+      additive: e.shiftKey && authoring.mode === "Design",
+      deep: e.ctrlKey || e.metaKey,
+    };
     if (!drag.additive) setSelection([]);
     stage.setPointerCapture(e.pointerId);
     render();
     e.preventDefault();
     return;
   }
-  if (e.shiftKey && authoring.mode === "Design") { select(n.id, true); return; }
+  if (e.shiftKey && authoring.mode === "Design") {
+    select(n.id, true);
+    return;
+  }
   if (!selectedIds.has(n.id)) setSelection([n.id]);
+  for (const parent of ancestors(p, n.id)) collapsedLayers.delete(parent);
   render();
   if (
     n.kind === "bone" &&
@@ -1006,19 +1202,57 @@ stage.addEventListener("pointerdown", (e) => {
     const prepared = prepareSelectionMove(p, selectedIds);
     authoring?.beginMove();
     store.begin("Move selection");
-    drag = { kind: "move", start, c, prepared, id: n.id };
+    drag = {
+      kind: "move",
+      start,
+      c,
+      prepared,
+      id: n.id,
+      pointerId: e.pointerId,
+    };
     stage.setPointerCapture(e.pointerId);
     e.preventDefault();
-  } catch (error) { notice(error); }
+  } catch (error) {
+    notice(error);
+  }
 });
 stage.addEventListener("pointermove", (e) => {
-  if (!drag && penDraft && (penPointerId === null || e.pointerId === penPointerId)) {
-    const now = coordinates(e), c = camera();
+  if (e.pointerType === "touch" && touches.has(e.pointerId)) {
+    touches.set(e.pointerId, coordinates(e));
+    if (
+      touchClick?.pointerId === e.pointerId &&
+      Math.hypot(
+        coordinates(e).x - touchClick.start.x,
+        coordinates(e).y - touchClick.start.y,
+      ) > 8
+    )
+      touchClick = null;
+    if (touchNavigation) {
+      if (touchGesture && touches.size === 2) {
+        cameras[activeArtboard] = gestureCamera(
+          touchGesture.camera,
+          touchGesture.frame,
+          touchFrame(touches),
+        );
+        fittedView = false;
+        draw();
+      }
+      e.preventDefault();
+      return;
+    }
+  }
+  if (
+    !drag &&
+    penDraft &&
+    (penPointerId === null || e.pointerId === penPointerId)
+  ) {
+    const now = coordinates(e),
+      c = camera();
     penDraft.move({ x: (now.x - c.x) / c.zoom, y: (now.y - c.y) / c.zoom });
     draw();
     return;
   }
-  if (!drag) return;
+  if (!drag || e.pointerId !== drag.pointerId) return;
   const now = coordinates(e),
     dx = (now.x - drag.start.x) / drag.c.zoom,
     dy = (now.y - drag.start.y) / drag.c.zoom;
@@ -1033,13 +1267,27 @@ stage.addEventListener("pointermove", (e) => {
     return;
   }
   if (drag.kind === "marquee") {
-    const world = { x: (now.x - drag.c.x) / drag.c.zoom, y: (now.y - drag.c.y) / drag.c.zoom };
-    drag.box = { x: Math.min(world.x, drag.world.x), y: Math.min(world.y, drag.world.y),
-      width: Math.abs(world.x - drag.world.x), height: Math.abs(world.y - drag.world.y) };
-    let candidates = marqueeTargets(project(), activeArtboard, drag.box, drag.deep);
+    const world = {
+      x: (now.x - drag.c.x) / drag.c.zoom,
+      y: (now.y - drag.c.y) / drag.c.zoom,
+    };
+    drag.box = {
+      x: Math.min(world.x, drag.world.x),
+      y: Math.min(world.y, drag.world.y),
+      width: Math.abs(world.x - drag.world.x),
+      height: Math.abs(world.y - drag.world.y),
+    };
+    let candidates = marqueeTargets(
+      project(),
+      activeArtboard,
+      drag.box,
+      drag.deep,
+    );
     if (authoring.mode !== "Design") candidates = candidates.slice(-1);
     const next = new Set(drag.additive ? drag.before : []);
-    for (const id of candidates) if (drag.additive && next.has(id)) next.delete(id); else next.add(id);
+    for (const id of candidates)
+      if (drag.additive && next.has(id)) next.delete(id);
+      else next.add(id);
     setSelection(next);
     render();
     return;
@@ -1074,13 +1322,31 @@ stage.addEventListener("pointermove", (e) => {
   }
 });
 function finishDrag(e) {
+  if (e?.pointerType === "touch") {
+    touches.delete(e.pointerId);
+    if (touchNavigation) {
+      touchGesture = null;
+      // Never transfer navigation to an object drag when only one finger remains.
+      if (!touches.size) {
+        touchNavigation = false;
+        persist();
+      }
+      return;
+    }
+    if (touchClick?.pointerId === e.pointerId) {
+      const id = touchClick.id;
+      touchClick = null;
+      authoring.click(id);
+      return;
+    }
+  }
   if (penDraft?.dragging && e?.pointerId === penPointerId) {
     penDraft.up();
     penPointerId = null;
     draw();
     return;
   }
-  if (!drag) return;
+  if (!drag || e.pointerId !== drag.pointerId) return;
   if (!["pan", "marquee"].includes(drag.kind)) store.commit();
   drag = null;
   render();
@@ -1101,11 +1367,33 @@ function cancelDrag() {
   render();
 }
 stage.addEventListener("pointerup", finishDrag);
-stage.addEventListener("pointercancel", cancelDrag);
-stage.addEventListener("lostpointercapture", cancelDrag);
+function resetTouches() {
+  touches.clear();
+  touchGesture = null;
+  touchNavigation = false;
+  touchClick = null;
+}
+function cancelPointer(e) {
+  // Lost capture after pointerup is normal, and must not cancel another finger.
+  if (e.pointerType === "touch") {
+    if (!touches.has(e.pointerId)) return;
+    touches.delete(e.pointerId);
+    if (touchClick?.pointerId === e.pointerId) touchClick = null;
+    touchGesture = null;
+    if (!touches.size) {
+      touchNavigation = false;
+      persist();
+    }
+  }
+  if (drag && drag.pointerId !== e.pointerId) return;
+  if (penPointerId !== null && penPointerId !== e.pointerId) return;
+  cancelDrag();
+}
+stage.addEventListener("pointercancel", cancelPointer);
+stage.addEventListener("lostpointercapture", cancelPointer);
 function zoom(factor, at) {
+  if (drag || penDraft?.dragging || touchNavigation) return;
   fittedView = false;
-  if (drag || penDraft?.dragging) return;
   const c = camera(),
     r = stage.getBoundingClientRect();
   at ||= { x: r.width / 2, y: r.height / 2 };
@@ -1121,7 +1409,7 @@ stage.addEventListener(
   "wheel",
   (e) => {
     e.preventDefault();
-    if (drag || penDraft?.dragging) return;
+    if (drag || penDraft?.dragging || touchNavigation) return;
     if (e.ctrlKey || e.metaKey)
       zoom(Math.exp(-e.deltaY * 0.002), coordinates(e));
     else {
@@ -1138,7 +1426,10 @@ $("#project-name").addEventListener("change", (e) =>
   edit("Rename project", (p) => (p.name = e.target.value)),
 );
 $("#artboard").addEventListener("change", (e) => {
-  if (!penReady()) { e.target.value = activeArtboard; return; }
+  if (!penReady()) {
+    e.target.value = activeArtboard;
+    return;
+  }
   cancelDrag();
   activeArtboard = e.target.value;
   setSelection([]);
@@ -1148,15 +1439,60 @@ $("#search").addEventListener("input", render);
 $("#layers").addEventListener("keydown", (e) => {
   const buttons = [...$("#layers").querySelectorAll(".layer-select")];
   const current = e.target.closest(".layer-select");
-  if (!current || !["ArrowUp", "ArrowDown", "Home", "End"].includes(e.key)) return;
+  if (
+    !current ||
+    ![
+      "ArrowUp",
+      "ArrowDown",
+      "ArrowLeft",
+      "ArrowRight",
+      "Home",
+      "End",
+    ].includes(e.key)
+  )
+    return;
   e.preventDefault();
   e.stopPropagation();
+  if (["ArrowLeft", "ArrowRight"].includes(e.key)) {
+    const p = project(),
+      id = current.dataset.nodeId,
+      hasChildren = p.nodes.some((n) => n.parentId === id);
+    let focus = id;
+    if (e.key === "ArrowRight" && hasChildren) {
+      if (collapsedLayers.has(id)) collapsedLayers.delete(id);
+      else
+        focus =
+          layerRows(p, activeArtboard, collapsedLayers).find(
+            ({ n }) => n.parentId === id,
+          )?.n.id || id;
+    } else if (e.key === "ArrowLeft") {
+      if (hasChildren && !collapsedLayers.has(id)) collapsedLayers.add(id);
+      else focus = p.nodes.find((n) => n.id === id)?.parentId || id;
+    }
+    render();
+    [...$("#layers").querySelectorAll(".layer-select")]
+      .find((b) => b.dataset.nodeId === focus)
+      ?.focus();
+    return;
+  }
   let index = buttons.indexOf(current);
-  index = e.key === "Home" ? 0 : e.key === "End" ? buttons.length - 1 :
-    Math.max(0, Math.min(buttons.length - 1, index + (e.key === "ArrowDown" ? 1 : -1)));
+  index =
+    e.key === "Home"
+      ? 0
+      : e.key === "End"
+        ? buttons.length - 1
+        : Math.max(
+            0,
+            Math.min(
+              buttons.length - 1,
+              index + (e.key === "ArrowDown" ? 1 : -1),
+            ),
+          );
   const id = buttons[index].dataset.nodeId;
   select(id, e.shiftKey);
-  [...$("#layers").querySelectorAll(".layer-select")].find((b) => b.dataset.nodeId === id)?.focus();
+  [...$("#layers").querySelectorAll(".layer-select")]
+    .find((b) => b.dataset.nodeId === id)
+    ?.focus();
 });
 $("#select-tool").onclick = () => setTool("select");
 $("#pan-tool").onclick = () => setTool("pan");
@@ -1170,8 +1506,81 @@ $("#fit").onclick = fit;
 $("#fit-selection").onclick = fitSelection;
 $("#zoom-in").onclick = () => zoom(1.2);
 $("#zoom-out").onclick = () => zoom(1 / 1.2);
+const organizeDialog = $("#organize-dialog");
+$("#multiple-layers").onclick = () => {
+  multipleLayers = !multipleLayers;
+  render();
+};
+let organizeIds = [],
+  organizeOrigin = null,
+  organizeFeedbackPosition = null;
+$("#organize-layers").onclick = () => {
+  if (!penReady()) return;
+  cancelDrag();
+  resetTouches();
+  const p = store.committed();
+  organizeIds = [...selectedIds];
+  const roots = selectionRoots(p, organizeIds);
+  if (!roots.length || authoring.mode !== "Design") return;
+  organizeOrigin = document.activeElement;
+  $("#organize-summary").textContent =
+    `${roots.length} ${roots.length === 1 ? "layer" : "layers"} will move. Selected children travel with their parent.`;
+  const picker = $("#organize-parent");
+  picker.replaceChildren();
+  const rootOption = element("option", "Artboard root");
+  rootOption.value = "";
+  picker.append(rootOption);
+  for (const n of parentChoices(p, organizeIds, activeArtboard)) {
+    const option = element(
+      "option",
+      `${"› ".repeat(Math.min(ancestors(p, n.id).length, 8))}${n.name}`,
+    );
+    option.value = n.id;
+    picker.append(option);
+  }
+  if (roots.every((n) => n.parentId === roots[0].parentId))
+    picker.value = roots[0].parentId || "";
+  $("#organize-position").value = "front";
+  organizeFeedbackPosition = document.createComment(
+    "Restore feedback after organization",
+  );
+  $("#notice").before(organizeFeedbackPosition);
+  organizeDialog.append($("#notice"));
+  clearNotice();
+  organizeDialog.showModal();
+  picker.focus();
+};
+$("#organize-apply").onclick = () => {
+  const parentId = $("#organize-parent").value || null;
+  if (
+    edit(
+      "Organize selection",
+      (p) =>
+        organizeLayers(p, organizeIds, parentId, $("#organize-position").value),
+      true,
+    )
+  ) {
+    if (parentId) collapsedLayers.delete(parentId);
+    for (const id of organizeIds)
+      for (const parent of ancestors(store.committed(), id))
+        collapsedLayers.delete(parent);
+    render();
+    organizeDialog.close();
+  }
+};
+$("#organize-cancel").onclick = () => organizeDialog.close();
+organizeDialog.addEventListener("close", () => {
+  organizeFeedbackPosition?.replaceWith($("#notice"));
+  organizeFeedbackPosition = null;
+  organizeOrigin?.focus();
+  organizeOrigin = null;
+  organizeIds = [];
+});
 function undo() {
-  if (penDraft) { cancelPen(); return; }
+  if (penDraft) {
+    cancelPen();
+    return;
+  }
   cancelDrag();
   store.undo();
   render();
@@ -1250,7 +1659,14 @@ $("#save-before-replace").onclick = save;
 $("#shortcuts").onclick = () => $("#help").showModal();
 $("#close-help").onclick = () => $("#help").close();
 window.addEventListener("keydown", (e) => {
-  if ($("#help").open || $("#replace-project").open || $("#mobile-panel").open || document.querySelector("[popover]:popover-open")) return;
+  if (
+    $("#help").open ||
+    $("#replace-project").open ||
+    $("#mobile-panel").open ||
+    organizeDialog.open ||
+    document.querySelector("[popover]:popover-open")
+  )
+    return;
   const mod = e.ctrlKey || e.metaKey;
   if (mod && e.key.toLowerCase() === "s") {
     e.preventDefault();
@@ -1297,21 +1713,45 @@ window.addEventListener("keydown", (e) => {
     e.preventDefault();
     if (authoring.mode === "Design" && penReady()) {
       const p = project();
-      setSelection(p.nodes.filter((n) => n.artboardId === activeArtboard && n.parentId === null &&
-        editable(p, n, "locked") && editable(p, n, "hidden")).map((n) => n.id));
+      setSelection(
+        p.nodes
+          .filter(
+            (n) =>
+              n.artboardId === activeArtboard &&
+              n.parentId === null &&
+              editable(p, n, "locked") &&
+              editable(p, n, "hidden"),
+          )
+          .map((n) => n.id),
+      );
       render();
     }
     return;
   }
-  if (e.key === "Enter" && !e.target.closest("button,a") && selectedIds.size === 1) {
+  if (
+    e.key === "Enter" &&
+    !e.target.closest("button,a") &&
+    selectedIds.size === 1
+  ) {
     const child = project().nodes.find((n) => n.parentId === selected);
-    if (child) { e.preventDefault(); select(child.id); }
+    if (child) {
+      e.preventDefault();
+      select(child.id);
+    }
     return;
   }
-  if (["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"].includes(e.key) && !e.target.closest("button,a")) {
+  if (
+    ["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"].includes(e.key) &&
+    !e.target.closest("button,a")
+  ) {
     e.preventDefault();
-    if (selectedIds.size) moveSelection((e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0) * (e.shiftKey ? 10 : 1),
-      (e.key === "ArrowDown" ? 1 : e.key === "ArrowUp" ? -1 : 0) * (e.shiftKey ? 10 : 1));
+    if (selectedIds.size)
+      moveSelection(
+        (e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0) *
+          (e.shiftKey ? 10 : 1),
+        (e.key === "ArrowDown" ? 1 : e.key === "ArrowUp" ? -1 : 0) *
+          (e.shiftKey ? 10 : 1),
+      );
     return;
   }
   if (e.key === "Delete" || e.key === "Backspace") {
@@ -1358,10 +1798,12 @@ window.addEventListener("blur", () => {
   space = false;
   stage.style.cursor = toolCursor();
   cancelDrag();
+  resetTouches();
 });
 window.addEventListener("beforeunload", (e) => {
   if (
-    store.active || penDraft ||
+    store.active ||
+    penDraft ||
     JSON.stringify(bundle(), null, 2) + "\n" !== savedFingerprint
   ) {
     e.preventDefault();
@@ -1373,6 +1815,7 @@ new ResizeObserver(() => {
   if (store) {
     // Fit views stay fitted; manually panned views retain their world-space center.
     cancelDrag();
+    resetTouches();
     if (fittedView) fit();
     else {
       if (stageSize) {
@@ -1382,7 +1825,7 @@ new ResizeObserver(() => {
       draw();
     }
   }
-  stageSize = {width:r.width,height:r.height};
+  stageSize = { width: r.width, height: r.height };
 }).observe(stage);
 let initial = demo(),
   restored = false;
@@ -1398,8 +1841,14 @@ try {
 install(initial);
 if (!restored) fit();
 else {
-  const r = stage.getBoundingClientRect(), c = camera(), a = artboard();
-  const fits = c.x >= 20 && c.y >= 20 && c.x + a.width * c.zoom <= r.width - 20 && c.y + a.height * c.zoom <= r.height - 20;
+  const r = stage.getBoundingClientRect(),
+    c = camera(),
+    a = artboard();
+  const fits =
+    c.x >= 20 &&
+    c.y >= 20 &&
+    c.x + a.width * c.zoom <= r.width - 20 &&
+    c.y + a.height * c.zoom <= r.height - 20;
   fittedView = false;
   if (!fits) fit();
   setStatus("Restored from this browser");
@@ -1427,11 +1876,15 @@ authoring = mountAuthoring({
 });
 mountPanels();
 mountDisclosures();
+mountLayout({ notice });
 render();
 document.body.classList.remove("studio-booting");
 $("#studio-loading").hidden = true;
 $("#workspace").setAttribute("aria-busy", "false");
-for (const shell of document.querySelectorAll(".topbar,.toolbar,.tool-rail,#workspace")) shell.inert = false;
+for (const shell of document.querySelectorAll(
+  ".topbar,.toolbar,.tool-rail,#workspace",
+))
+  shell.inert = false;
 // Read-only snapshots for diagnostics and browser acceptance tests.
 window.evirStudio = {
   snapshot: () => structuredClone(bundle()),

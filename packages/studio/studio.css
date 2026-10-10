@@ -727,16 +727,19 @@ body {
 .workspace {
   grid-column: 2;
   display: grid;
-  grid-template-columns: 236px minmax(0, 1fr) 260px;
+  grid-template-columns: var(--left-panel-width, 236px) minmax(0, 1fr) var(
+      --right-panel-width,
+      260px
+    );
   height: auto;
   min-height: 0;
   min-width: 0;
 }
 body.hide-left .workspace {
-  grid-template-columns: 0 minmax(0, 1fr) 260px;
+  grid-template-columns: 0 minmax(0, 1fr) var(--right-panel-width, 260px);
 }
 body.hide-right .workspace {
-  grid-template-columns: 236px minmax(0, 1fr) 0;
+  grid-template-columns: var(--left-panel-width, 236px) minmax(0, 1fr) 0;
 }
 body.hide-left.hide-right .workspace {
   grid-template-columns: 0 minmax(0, 1fr) 0;
@@ -993,13 +996,16 @@ body.hide-right .workspace > .inspector {
 }
 @media (max-width: 1100px) {
   .workspace {
-    grid-template-columns: 210px minmax(0, 1fr) 230px;
+    grid-template-columns: var(--left-panel-width, 210px) minmax(0, 1fr) var(
+        --right-panel-width,
+        230px
+      );
   }
   body.hide-left .workspace {
-    grid-template-columns: 0 minmax(0, 1fr) 230px;
+    grid-template-columns: 0 minmax(0, 1fr) var(--right-panel-width, 230px);
   }
   body.hide-right .workspace {
-    grid-template-columns: 210px minmax(0, 1fr) 0;
+    grid-template-columns: var(--left-panel-width, 210px) minmax(0, 1fr) 0;
   }
   .badge {
     display: none;
@@ -1242,4 +1248,222 @@ body.hide-right .workspace > .inspector {
   .create-menu {
     max-height: calc(100dvh - 152px);
   }
+}
+
+/* Layout preferences belong to Studio, never to the exported scene. */
+.workspace > .panel {
+  position: relative;
+}
+.panel-splitter {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 7px;
+  z-index: 3;
+  cursor: col-resize;
+  touch-action: none;
+}
+#left-splitter {
+  right: 0;
+}
+#right-splitter {
+  left: 0;
+}
+.panel-splitter:hover,
+.panel-splitter:focus-visible {
+  background: var(--accent);
+  outline: 0;
+}
+.organize-button {
+  margin: 0 14px 12px;
+  border: 1px solid var(--line);
+  font-size: 12px;
+  min-height: 36px;
+}
+.layer-disclosure,
+.layer-spacer {
+  flex: 0 0 24px;
+  width: 24px;
+  height: 32px;
+}
+.layer-disclosure {
+  padding: 2px;
+  font-size: 18px;
+}
+.layer-row .layer-select {
+  min-width: 0;
+}
+.layer-select span:last-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.panel-widths {
+  border: 1px solid var(--line);
+  margin: 14px 0;
+  padding: 10px;
+  border-radius: 8px;
+}
+.panel-widths legend {
+  font-size: 12px;
+  color: var(--muted);
+}
+.panel-widths label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 6px 0;
+  font-size: 12px;
+}
+.panel-widths input {
+  width: 76px;
+}
+#organize-dialog {
+  width: min(440px, calc(100vw - 28px));
+  max-height: calc(100dvh - 28px);
+  overflow: auto;
+}
+#organize-dialog #notice {
+  position: relative;
+  inset: auto;
+  margin: 12px 0 0;
+  width: auto;
+  max-width: none;
+}
+@media (max-width: 850px) {
+  .panel-splitter {
+    display: none;
+  }
+  .layer-disclosure,
+  .layer-spacer {
+    flex-basis: 28px;
+    width: 28px;
+    height: 44px;
+  }
+  .organize-button {
+    min-height: 44px;
+  }
+}
+
+/* Sheets keep short decisions near the work; drawers retain panel context. */
+dialog.interaction-sheet {
+  position: fixed;
+  top: auto;
+  bottom: 16px;
+  margin: 0 auto;
+  width: min(560px, calc(100vw - 32px));
+  max-height: calc(100dvh - 40px);
+  overflow: auto;
+  transform: translateY(24px);
+  opacity: 0;
+  transition:
+    opacity 180ms ease,
+    transform 220ms ease;
+}
+dialog.interaction-sheet[open] {
+  opacity: 1;
+  transform: translateY(0);
+}
+#organize-dialog.interaction-sheet {
+  width: min(560px, calc(100vw - 32px));
+}
+#mobile-panel {
+  opacity: 0;
+  transform: translateX(var(--drawer-entry, 24px));
+  transition:
+    opacity 180ms ease,
+    transform 220ms ease;
+}
+#mobile-panel[data-side="left"] {
+  --drawer-entry: -24px;
+}
+#mobile-panel[open] {
+  opacity: 1;
+  transform: translateX(0);
+}
+@starting-style {
+  dialog.interaction-sheet[open] {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  #mobile-panel[open] {
+    opacity: 0;
+    transform: translateX(var(--drawer-entry, 24px));
+  }
+}
+@media (max-width: 850px) {
+  dialog.interaction-sheet,
+  #organize-dialog.interaction-sheet {
+    bottom: 0;
+    width: 100%;
+    max-width: none;
+    max-height: 85dvh;
+    border-radius: 18px 18px 0 0;
+    padding: 24px 20px max(24px, env(safe-area-inset-bottom));
+  }
+  dialog.interaction-sheet::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 4px;
+    border-radius: 4px;
+    background: var(--muted);
+    margin: -10px auto 18px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  dialog.interaction-sheet,
+  #mobile-panel {
+    transition: none;
+  }
+}
+
+/* Draft actions must not resize the stage underneath an active Pen gesture. */
+.stage-footer {
+  height: 42px;
+  min-height: 42px;
+}
+@media (max-width: 850px) {
+  .stage-footer {
+    height: 44px;
+    min-height: 44px;
+    padding: 0 8px;
+  }
+  .stage-footer #pen-actions button {
+    min-height: 40px;
+  }
+}
+
+.layer-actions {
+  display: flex;
+  gap: 6px;
+  margin: 0 14px 12px;
+}
+.layer-actions button {
+  min-width: 0;
+  min-height: 36px;
+  font-size: 12px;
+  border: 1px solid var(--line);
+}
+.layer-actions .organize-button {
+  flex: 1;
+  margin: 0;
+}
+#multiple-layers[aria-pressed="true"] {
+  background: #2d4941;
+  color: #c2fbe7;
+}
+@media (max-width: 850px) {
+  .layer-actions button {
+    min-height: 44px;
+  }
+}
+
+/* Nested organization uses one light scrim, so the surrounding work stays legible. */
+dialog.interaction-sheet::backdrop {
+  background: #0005;
+}
+#mobile-panel:has(~ #organize-dialog[open])::backdrop {
+  background: transparent;
 }

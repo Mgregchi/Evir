@@ -148,3 +148,5 @@ To connect the repository directly to Cloudflare or Netlify, follow [the GitHub-
 [Public-page research](docs/16-public-site-research.md) records the Rive/Penpot/Framer observations and Evir's distinct design decisions. [The additional export study](docs/17-supplied-corpus-exploration.md) inventories four supplied `.riv` files and probes representative artboards in the official runtime; the fifth attachment exceeds the download tool's 32 MiB limit. These inputs do not replace controlled equivalent scenes or the deferred physical-device audit.
 
 [Product boundaries and deployment](docs/18-architecture-boundaries-and-deployment.md) records the separation decision. [The completed migration](docs/19-workspace-migration.md) describes actual ownership, the composed web build, package contracts, hosting configuration and verification. Public-site changes no longer require an editor/runtime release.
+
+The [Studio interaction guide and remaining-work plan](docs/25-studio-navigation-and-remaining-work.md) tracks the latest navigation/layer work and the remaining authoring, engine, evidence and later-service work.
