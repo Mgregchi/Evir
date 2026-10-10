@@ -16,18 +16,20 @@ jobs:
       contents: read
       pages: read
     env:
+      SITE_URL: ${{ vars.SITE_URL }}
+      STUDIO_URL: ${{ vars.STUDIO_URL }}
       PUBLIC_SITE_URL: ${{ vars.PUBLIC_SITE_URL }}
       PUBLIC_BASE_PATH: ${{ vars.PUBLIC_BASE_PATH }}
       PUBLIC_EDITOR_URL: ${{ vars.PUBLIC_EDITOR_URL }}
-      PUBLIC_REPOSITORY_URL: ${{ vars.PUBLIC_REPOSITORY_URL }}
-      PUBLIC_DOCS_URL: ${{ vars.PUBLIC_DOCS_URL }}
-      PUBLIC_COMMUNITY_URL: ${{ vars.PUBLIC_COMMUNITY_URL }}
-      PUBLIC_FEEDBACK_URL: ${{ vars.PUBLIC_FEEDBACK_URL }}
-      PUBLIC_NEWSLETTER_URL: ${{ vars.PUBLIC_NEWSLETTER_URL }}
-      PUBLIC_SOCIAL_X_URL: ${{ vars.PUBLIC_SOCIAL_X_URL }}
-      PUBLIC_SOCIAL_LINKEDIN_URL: ${{ vars.PUBLIC_SOCIAL_LINKEDIN_URL }}
-      PUBLIC_SOCIAL_MASTODON_URL: ${{ vars.PUBLIC_SOCIAL_MASTODON_URL }}
-      PUBLIC_CONTACT_URL: ${{ vars.PUBLIC_CONTACT_URL }}
+      REPOSITORY_URL: ${{ vars.REPOSITORY_URL || vars.PUBLIC_REPOSITORY_URL }}
+      DOCS_URL: ${{ vars.DOCS_URL || vars.PUBLIC_DOCS_URL }}
+      COMMUNITY_URL: ${{ vars.COMMUNITY_URL || vars.PUBLIC_COMMUNITY_URL }}
+      FEEDBACK_URL: ${{ vars.FEEDBACK_URL || vars.PUBLIC_FEEDBACK_URL }}
+      NEWSLETTER_URL: ${{ vars.NEWSLETTER_URL || vars.PUBLIC_NEWSLETTER_URL }}
+      SOCIAL_X_URL: ${{ vars.SOCIAL_X_URL || vars.PUBLIC_SOCIAL_X_URL }}
+      SOCIAL_LINKEDIN_URL: ${{ vars.SOCIAL_LINKEDIN_URL || vars.PUBLIC_SOCIAL_LINKEDIN_URL }}
+      SOCIAL_MASTODON_URL: ${{ vars.SOCIAL_MASTODON_URL || vars.PUBLIC_SOCIAL_MASTODON_URL }}
+      CONTACT_URL: ${{ vars.CONTACT_URL || vars.PUBLIC_CONTACT_URL }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
