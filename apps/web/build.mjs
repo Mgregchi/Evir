@@ -2,10 +2,11 @@ import { writeFile, mkdir, cp, access } from 'node:fs/promises';
 import path from 'node:path';
 import { build } from 'esbuild';
 import { root, loadEnvironment, prepareOutput } from '../../tools/build-support.mjs';
-import { readPublicConfig, route } from './config.mjs';
+import { readWebConfig, route } from './config.mjs';
+import { buildStudio } from '@evir/studio/build';
 import { pages, escape } from './content.mjs';
-await loadEnvironment('site');
-const config=readPublicConfig();
+await loadEnvironment('web');
+const config=readWebConfig();
 const icons = {
   '↗':'M4 12 12 4M4 4h8v8', '↓':'M8 2v11M3 8l5 5 5-5',
   '↔':'M2 8h12M5 5 2 8l3 3M11 5l3 3-3 3',
@@ -14,13 +15,13 @@ const icons = {
 const renderIcons = html => html.replace(/[↗↓↔⌘]/g, char => `<svg class="icon" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" fill="none"><path d="${icons[char]}" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`).replaceAll('＋','+');
 const required=['milo-poster.png','orbit-poster.png','studio-overview.png','studio-paths.png','studio-animation.png','studio-interact.png'];
 for(const file of required) {
-  try {await access(path.join(root,'apps/site/assets',file));}
-  catch {throw Error(`Missing real showcase asset ${file}. Run npm run site:assets first.`);}
+  try {await access(path.join(root,'apps/web/assets',file));}
+  catch {throw Error(`Missing real showcase asset ${file}. Run npm run web:assets first.`);}
 }
-const out=await prepareOutput('site','EVIR_SITE_OUTPUT');
-await cp(path.join(root,'apps/site/assets'),path.join(out,'assets'),{recursive:true});
-await cp(path.join(root,'apps/site/styles.css'),path.join(out,'assets/styles.css'));
-await build({entryPoints:[path.join(root,'apps/site/app.mjs')],bundle:true,format:'esm',splitting:true,platform:'browser',target:'es2022',outdir:path.join(out,'assets'),outExtension:{'.js':'.mjs'}});
+const out=await prepareOutput('web','EVIR_WEB_OUTPUT');
+await cp(path.join(root,'apps/web/assets'),path.join(out,'assets'),{recursive:true});
+await cp(path.join(root,'apps/web/styles.css'),path.join(out,'assets/styles.css'));
+await build({entryPoints:[path.join(root,'apps/web/app.mjs')],bundle:true,format:'esm',splitting:true,platform:'browser',target:'es2022',outdir:path.join(out,'assets'),outExtension:{'.js':'.mjs'}});
 for(const [from,to] of [['evir-wordmark-display.png','wordmark.png'],['evir-favicon.png','favicon.png']])
   await cp(path.join(root,'assets/brand',from),path.join(out,'assets',to));
 const link=(target,label,active='',classes='')=>`<a class="${classes}" href="${route(config,target)}"${active===target?' aria-current="page"':''}>${label}</a>`;
@@ -58,4 +59,5 @@ await writeFile(path.join(out,'.nojekyll'),'');
 await writeFile(path.join(out,'build-info.json'),JSON.stringify({builtAt:new Date().toISOString(),pages:content.map(p=>p.path),basePath:config.basePath,configKeys:Object.keys(config)},null,2)+'\n');
 await mkdir(path.join(out,'studio'),{recursive:true});
 await writeFile(path.join(out,'studio/index.html'),`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=${route(config,'editor/')}"><link rel="canonical" href="${escape(canonical('editor/')||route(config,'editor/'))}"><title>Evir Studio</title></head><body><a href="${route(config,'editor/')}">Explore Evir Studio</a></body></html>`);
+await buildStudio({outDir:path.join(out,'editor/studio'),basePath:config.editorUrl.replace(/\/$/,''),homeUrl:route(config)});
 console.log(`Built ${content.length} Evir public pages into ${path.relative(root,out)}${config.basePath?` for ${config.basePath}/`:''}; editor destination ${config.editorUrl}`);

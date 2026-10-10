@@ -1,0 +1,33 @@
+name: Web and Studio validation
+on:
+  pull_request:
+    paths: ['apps/web/**', 'assets/brand/**', 'packages/**', 'tests/site/**', 'tests/editor/**', 'tests/frontend/**', 'tools/build-support.mjs', 'tools/static-server.mjs', 'tools/validate_editor_authoring.cjs', 'tools/runtime-oracle.mjs', 'tools/prepare-oracle.cjs', 'tools/browser.cjs', 'tools/gpu_diagnostics.cjs', 'package*.json', '.github/workflows/web.yml']
+  push:
+    branches: [main]
+    paths: ['apps/web/**', 'assets/brand/**', 'packages/**', 'tests/site/**', 'tests/editor/**', 'tests/frontend/**', 'tools/build-support.mjs', 'tools/static-server.mjs', 'tools/validate_editor_authoring.cjs', 'tools/runtime-oracle.mjs', 'tools/prepare-oracle.cjs', 'tools/browser.cjs', 'tools/gpu_diagnostics.cjs', 'package*.json', '.github/workflows/web.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:frontend
+      - run: npm run test:editor
+      - run: npm run test:web
+      - run: npm run validate:editor
+      - uses: actions/upload-artifact@v4
+        with:
+          name: web-validation
+          path: research/results/public-site/
+      - uses: actions/upload-artifact@v4
+        with:
+          name: web
+          path: apps/web/dist/

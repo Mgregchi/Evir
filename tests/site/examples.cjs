@@ -12,9 +12,9 @@ if(!process.env.CHROMIUM_PATH && !fs.existsSync('/usr/bin/chromium'))process.env
       await gpu.install(page);await page.reload();
       const checks=[];
       for(const name of ['milo','orbit']) {
-        const project=JSON.parse(fs.readFileSync(path.join(__dirname,`../../apps/site/assets/examples/${name}.evir-project`)));
+        const project=JSON.parse(fs.readFileSync(path.join(__dirname,`../../apps/web/assets/examples/${name}.evir-project`)));
         const load=async options=>{
-          const inventory=await page.evaluate(({name,options})=>loadFixture(name,{src:`/apps/site/assets/examples/${name}.riv`,autoplay:false,...options}),{name,options});
+          const inventory=await page.evaluate(({name,options})=>loadFixture(name,{src:`/apps/web/assets/examples/${name}.riv`,autoplay:false,...options}),{name,options});
           assert.deepEqual(inventory.animations,project.animations.map(a=>a.name));
           assert.deepEqual(inventory.machines,project.machines.map(m=>m.name));
           await page.evaluate(()=>{player.stopRendering();player.drawFrame();});
@@ -55,6 +55,6 @@ if(!process.env.CHROMIUM_PATH && !fs.existsSync('/usr/bin/chromium'))process.env
       console.log(`${backend}: ${checks.length} showcase keyframe/transition comparisons passed.`);
     });
   }
-  report.fixtures=Object.fromEntries(['milo','orbit'].map(name=>[name,createHash('sha256').update(fs.readFileSync(path.join(__dirname,`../../apps/site/assets/examples/${name}.riv`))).digest('hex')]));
+  report.fixtures=Object.fromEntries(['milo','orbit'].map(name=>[name,createHash('sha256').update(fs.readFileSync(path.join(__dirname,`../../apps/web/assets/examples/${name}.riv`))).digest('hex')]));
   fs.mkdirSync('research/results/public-site',{recursive:true});fs.writeFileSync('research/results/public-site/examples.json',JSON.stringify(report,null,2)+'\n');
 })().catch(e=>{console.error(e);process.exitCode=1;});
