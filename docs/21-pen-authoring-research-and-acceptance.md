@@ -1,8 +1,8 @@
 # Pen authoring: research, decisions and acceptance
 
-Reviewed 10 October 2026 before implementation. This is the next bounded editor step after the four [authoring milestones](13-editor-milestone-acceptance.md), following the recorded drawing/selection gaps. It runs inside `@evir/studio`, composed at `/editor/studio/` by the single web app. The engine APIs, schema and hosting settings are unchanged.
+Rive's creation and vertex guides were reviewed before implementation on 10 October 2026; Penpot's path guide was cross-checked during this pass. This is the next bounded editor step after the four [authoring milestones](13-editor-milestone-acceptance.md), following the recorded drawing/selection gaps. It runs inside `@evir/studio`, composed at `/editor/studio/` by the single web app. The engine APIs, schema and hosting settings are unchanged.
 
-## Findings before implementation
+## Research findings
 
 | Primary evidence | Finding | Evir decision |
 | --- | --- | --- |
