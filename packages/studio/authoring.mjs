@@ -24,7 +24,7 @@ export function mountAuthoring(api) {
   toolbar.querySelector(".mode").replaceWith(modes);
   const add = (label) => {
     const b = el("button", label);
-    toolbar.insertBefore(b, modes);
+    document.querySelector("#creation-tools").append(b);
     return b;
   };
   const pathButton = add("Path"),
@@ -36,8 +36,8 @@ export function mountAuthoring(api) {
   const exportButton = el("button", "Export .riv");
   exportButton.id = "export-riv";
   document
-    .querySelector(".topbar nav")
-    .insertBefore(exportButton, document.querySelector("#save"));
+    .querySelector("#project-file-actions")
+    .append(exportButton);
   const panel = el("section");
   panel.id = "authoring-panel";
   panel.setAttribute("aria-label", "Animation and interaction tools");
@@ -220,7 +220,8 @@ export function mountAuthoring(api) {
     return p;
   }
   function tick(now) {
-    if (!playing) return;
+    raf = null;
+    if (!playing || document.hidden) return;
     const dt = Math.min((now - lastTime) / 1000, 0.1);
     lastTime = now;
     if (mode === "Animate") {
@@ -245,16 +246,27 @@ export function mountAuthoring(api) {
     }
     api.draw();
     updatePlayhead();
-    if (playing) raf = requestAnimationFrame(tick);
+    if (playing && !document.hidden) raf = requestAnimationFrame(tick);
   }
   function play() {
     playing = !playing;
     if (playing) {
       lastTime = performance.now();
-      raf = requestAnimationFrame(tick);
+      if (!document.hidden) raf = requestAnimationFrame(tick);
     } else stop();
     refresh();
   }
+  // Preserve the pose while suspended; never accumulate hidden-tab time.
+  const suspendPlayback = () => { if (raf !== null) cancelAnimationFrame(raf); raf = null; };
+  const resumePlayback = () => {
+    if (playing && !document.hidden && raf === null) {
+      lastTime = performance.now();
+      raf = requestAnimationFrame(tick);
+    }
+  };
+  document.addEventListener("visibilitychange", () => document.hidden ? suspendPlayback() : resumePlayback());
+  window.addEventListener("pagehide", suspendPlayback);
+  window.addEventListener("pageshow", resumePlayback);
   function updatePlayhead() {
     const range = panel.querySelector('[aria-label="Playhead"]');
     if (range) range.value = frame;

@@ -1,0 +1,68 @@
+{
+  "retrievedAt": "2026-10-10T21:08:33.146093+00:00",
+  "sources": [
+    {
+      "key": "search",
+      "url": "https://www.google.com/search?q=responsive+vector+editor+workspace+sidebar+Rive+Penpot",
+      "resolvedUrl": "https://www.google.com/search?q=responsive+vector+editor+workspace+sidebar+Rive+Penpot",
+      "bytes": 93431,
+      "sha256": "3e9f48dc75a2cb87c7cfe6f5a6ebafffc3537fc5c909e11916fc6373deb06cfa",
+      "status": 200
+    },
+    {
+      "key": "rive-interface",
+      "url": "https://rive.app/docs/editor/interface-overview/overview",
+      "resolvedUrl": "https://rive.app/docs/editor/interface-overview/overview",
+      "bytes": 367250,
+      "sha256": "93a376a26ce8fa95f86390fffcbe7547194b9e962af18561ac876e805711252e",
+      "status": 200
+    },
+    {
+      "key": "penpot",
+      "url": "https://help.penpot.app/user-guide/first-steps/the-interface/",
+      "resolvedUrl": "https://help.penpot.app/user-guide/first-steps/the-interface/",
+      "bytes": 41624,
+      "sha256": "5d626e5212832d6a94ea3641debe9f1acd84e81c76adde498e839a5e4304ee07",
+      "status": 200
+    },
+    {
+      "key": "svgator",
+      "url": "https://www.svgator.com/help/getting-started/parts-of-the-svgator-app-interface",
+      "resolvedUrl": "https://www.svgator.com/help/getting-started/parts-of-the-svgator-app-interface",
+      "bytes": 461846,
+      "sha256": "a6d95da7b1c8a79e924632c6d5da5d9d8bc8325fb48b8cadebe5ea7a4125a2eb",
+      "status": 200
+    },
+    {
+      "key": "disclosure",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/",
+      "resolvedUrl": "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/",
+      "bytes": 35553,
+      "sha256": "19a5771ec29ff91afd9784724f01b4258f4426b0f986720d1e6ac2e406f3ba1f",
+      "status": 200
+    },
+    {
+      "key": "target",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
+      "resolvedUrl": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
+      "bytes": 65155,
+      "sha256": "361694575d2a4ca5834de57dbc44b24c27ecc67956625703a140b9f1d79c62d4",
+      "status": 200
+    },
+    {
+      "key": "dialog",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/",
+      "resolvedUrl": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/",
+      "bytes": 43147,
+      "sha256": "551bcc5d306ac9f213337012cfe1ce226344f4e2eff1f05f41e6711e5abf19f1",
+      "status": 200
+    },
+    {
+      "key": "search-bing",
+      "url": "https://www.bing.com/search?q=Rive+Penpot+editor+interface+sidebar+toolbar",
+      "status": 200,
+      "bytes": 116534,
+      "sha256": "7e198348786d5faab9ae9e86cee416348a7b0ee37c228fddb09409140a0e4142"
+    }
+  ]
+}

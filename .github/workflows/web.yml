@@ -32,6 +32,7 @@ jobs:
             research/results/showcase-gallery/
             research/results/editor-pen/
             research/results/experience-quality/
+            research/results/studio-workspace/
       - uses: actions/upload-artifact@v4
         with:
           name: web

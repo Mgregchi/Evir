@@ -1,0 +1,736 @@
+{
+  "checkedAt": "2026-10-10T21:18:42.271Z",
+  "runtimeVersion": "2.44.0",
+  "scope": "Original showcase export pixels against Evir evaluated source at selected keyframes; boolean/number/AND/trigger/listener/reset outcomes. Cloud graphics, not mobile/device performance.",
+  "backends": [
+    {
+      "backend": "canvas",
+      "diagnostics": {
+        "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "contexts": [
+          {
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "unmaskedRendererAvailable": true,
+            "contextLost": false,
+            "errors": [],
+            "extensions": [
+              "EXT_clip_control",
+              "EXT_color_buffer_float",
+              "EXT_color_buffer_half_float",
+              "EXT_conservative_depth",
+              "EXT_depth_clamp",
+              "EXT_float_blend",
+              "EXT_polygon_offset_clamp",
+              "EXT_texture_compression_bptc",
+              "EXT_texture_compression_rgtc",
+              "EXT_texture_filter_anisotropic",
+              "EXT_texture_mirror_clamp_to_edge",
+              "NV_shader_noperspective_interpolation",
+              "OES_draw_buffers_indexed",
+              "OES_sample_variables",
+              "OES_shader_multisample_interpolation",
+              "OES_texture_float_linear",
+              "OVR_multiview2",
+              "WEBGL_clip_cull_distance",
+              "WEBGL_compressed_texture_astc",
+              "WEBGL_compressed_texture_etc",
+              "WEBGL_compressed_texture_etc1",
+              "WEBGL_compressed_texture_s3tc",
+              "WEBGL_compressed_texture_s3tc_srgb",
+              "WEBGL_debug_renderer_info",
+              "WEBGL_debug_shaders",
+              "WEBGL_lose_context",
+              "WEBGL_multi_draw",
+              "WEBGL_polygon_mode",
+              "WEBGL_stencil_texturing"
+            ]
+          }
+        ]
+      },
+      "checks": [
+        {
+          "example": "milo",
+          "label": "Idle frame 0",
+          "mae": 0.007106781005859375,
+          "expectedCovered": 12953,
+          "runtimeCovered": 12943
+        },
+        {
+          "example": "milo",
+          "label": "Idle frame 30",
+          "mae": 0.00882720947265625,
+          "expectedCovered": 13005,
+          "runtimeCovered": 12999
+        },
+        {
+          "example": "milo",
+          "label": "Idle frame 60",
+          "mae": 0.008785247802734375,
+          "expectedCovered": 13029,
+          "runtimeCovered": 13020
+        },
+        {
+          "example": "milo",
+          "label": "Idle frame 90",
+          "mae": 0.00882720947265625,
+          "expectedCovered": 13005,
+          "runtimeCovered": 12999
+        },
+        {
+          "example": "milo",
+          "label": "Hello frame 0",
+          "mae": 0.007106781005859375,
+          "expectedCovered": 12912,
+          "runtimeCovered": 12902
+        },
+        {
+          "example": "milo",
+          "label": "Hello frame 30",
+          "mae": 0.00882720947265625,
+          "expectedCovered": 13010,
+          "runtimeCovered": 13004
+        },
+        {
+          "example": "milo",
+          "label": "Hello frame 60",
+          "mae": 0.008785247802734375,
+          "expectedCovered": 12957,
+          "runtimeCovered": 12948
+        },
+        {
+          "example": "milo",
+          "label": "Hello frame 90",
+          "mae": 0.00882720947265625,
+          "expectedCovered": 13010,
+          "runtimeCovered": 13004
+        },
+        {
+          "example": "milo",
+          "label": "machine entry",
+          "mae": 0.007106781005859375,
+          "expectedCovered": 12953,
+          "runtimeCovered": 12943
+        },
+        {
+          "example": "milo",
+          "label": "isWaving=true",
+          "mae": 0.007106781005859375,
+          "expectedCovered": 12912,
+          "runtimeCovered": 12902
+        },
+        {
+          "example": "milo",
+          "label": "isWaving=false",
+          "mae": 0.007106781005859375,
+          "expectedCovered": 12953,
+          "runtimeCovered": 12943
+        },
+        {
+          "example": "orbit",
+          "label": "Orbit frame 0",
+          "mae": 0.2523918151855469,
+          "expectedCovered": 26340,
+          "runtimeCovered": 26334
+        },
+        {
+          "example": "orbit",
+          "label": "Orbit frame 30",
+          "mae": 0.24283218383789062,
+          "expectedCovered": 26332,
+          "runtimeCovered": 26327
+        },
+        {
+          "example": "orbit",
+          "label": "Orbit frame 60",
+          "mae": 0.25209808349609375,
+          "expectedCovered": 26340,
+          "runtimeCovered": 26334
+        },
+        {
+          "example": "orbit",
+          "label": "Orbit frame 90",
+          "mae": 0.232666015625,
+          "expectedCovered": 26333,
+          "runtimeCovered": 26324
+        },
+        {
+          "example": "bloom",
+          "label": "Breeze frame 0",
+          "mae": 0.1868743896484375,
+          "expectedCovered": 28646,
+          "runtimeCovered": 28640
+        },
+        {
+          "example": "bloom",
+          "label": "Breeze frame 30",
+          "mae": 0.18527984619140625,
+          "expectedCovered": 28646,
+          "runtimeCovered": 28640
+        },
+        {
+          "example": "bloom",
+          "label": "Breeze frame 60",
+          "mae": 0.18527984619140625,
+          "expectedCovered": 28646,
+          "runtimeCovered": 28640
+        },
+        {
+          "example": "bloom",
+          "label": "Breeze frame 90",
+          "mae": 0.18527984619140625,
+          "expectedCovered": 28646,
+          "runtimeCovered": 28640
+        },
+        {
+          "example": "tempo",
+          "label": "Rhythm frame 0",
+          "mae": 0.0350494384765625,
+          "expectedCovered": 35746,
+          "runtimeCovered": 35738
+        },
+        {
+          "example": "tempo",
+          "label": "Rhythm frame 30",
+          "mae": 0.051513671875,
+          "expectedCovered": 35746,
+          "runtimeCovered": 35738
+        },
+        {
+          "example": "tempo",
+          "label": "Rhythm frame 60",
+          "mae": 0.034717559814453125,
+          "expectedCovered": 35746,
+          "runtimeCovered": 35738
+        },
+        {
+          "example": "tempo",
+          "label": "Rhythm frame 90",
+          "mae": 0.0588531494140625,
+          "expectedCovered": 35746,
+          "runtimeCovered": 35738
+        },
+        {
+          "example": "signal",
+          "label": "Waiting frame 0",
+          "mae": 0.03704071044921875,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36833
+        },
+        {
+          "example": "signal",
+          "label": "Waiting frame 30",
+          "mae": 0.03704071044921875,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36833
+        },
+        {
+          "example": "signal",
+          "label": "Waiting frame 60",
+          "mae": 0.03704071044921875,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36833
+        },
+        {
+          "example": "signal",
+          "label": "Waiting frame 90",
+          "mae": 0.03704071044921875,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36833
+        },
+        {
+          "example": "signal",
+          "label": "Ready frame 0",
+          "mae": 0.0408172607421875,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36833
+        },
+        {
+          "example": "signal",
+          "label": "Ready frame 30",
+          "mae": 0.0408172607421875,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36833
+        },
+        {
+          "example": "signal",
+          "label": "Ready frame 60",
+          "mae": 0.0408172607421875,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36833
+        },
+        {
+          "example": "signal",
+          "label": "Ready frame 90",
+          "mae": 0.0408172607421875,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36833
+        },
+        {
+          "example": "signal",
+          "label": "Celebrating frame 0",
+          "mae": 0.038707733154296875,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36833
+        },
+        {
+          "example": "signal",
+          "label": "Celebrating frame 30",
+          "mae": 0.038707733154296875,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36833
+        },
+        {
+          "example": "signal",
+          "label": "Celebrating frame 60",
+          "mae": 0.038707733154296875,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36833
+        },
+        {
+          "example": "signal",
+          "label": "Celebrating frame 90",
+          "mae": 0.038707733154296875,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36833
+        },
+        {
+          "example": "signal",
+          "label": "machine entry",
+          "mae": 0.03704071044921875,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36833
+        },
+        {
+          "example": "signal",
+          "label": "disabled AND guard",
+          "mae": 0.03704071044921875,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36833
+        },
+        {
+          "example": "signal",
+          "label": "ready AND conditions",
+          "mae": 0.0408172607421875,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36833
+        },
+        {
+          "example": "signal",
+          "label": "number return",
+          "mae": 0.03704071044921875,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36833
+        },
+        {
+          "example": "signal",
+          "label": "trigger celebration",
+          "mae": 0.038707733154296875,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36833
+        },
+        {
+          "example": "signal",
+          "label": "reset defaults",
+          "mae": 0.03704071044921875,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36833
+        },
+        {
+          "example": "signal",
+          "label": "pad click listener",
+          "mae": 0.038707733154296875,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36833
+        }
+      ]
+    },
+    {
+      "backend": "webgl2",
+      "diagnostics": {
+        "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "contexts": [
+          {
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "unmaskedRendererAvailable": true,
+            "contextLost": false,
+            "errors": [],
+            "extensions": [
+              "EXT_clip_control",
+              "EXT_color_buffer_float",
+              "EXT_color_buffer_half_float",
+              "EXT_conservative_depth",
+              "EXT_depth_clamp",
+              "EXT_float_blend",
+              "EXT_polygon_offset_clamp",
+              "EXT_texture_compression_bptc",
+              "EXT_texture_compression_rgtc",
+              "EXT_texture_filter_anisotropic",
+              "EXT_texture_mirror_clamp_to_edge",
+              "NV_shader_noperspective_interpolation",
+              "OES_draw_buffers_indexed",
+              "OES_sample_variables",
+              "OES_shader_multisample_interpolation",
+              "OES_texture_float_linear",
+              "OVR_multiview2",
+              "WEBGL_clip_cull_distance",
+              "WEBGL_compressed_texture_astc",
+              "WEBGL_compressed_texture_etc",
+              "WEBGL_compressed_texture_etc1",
+              "WEBGL_compressed_texture_s3tc",
+              "WEBGL_compressed_texture_s3tc_srgb",
+              "WEBGL_debug_renderer_info",
+              "WEBGL_debug_shaders",
+              "WEBGL_lose_context",
+              "WEBGL_multi_draw",
+              "WEBGL_polygon_mode",
+              "WEBGL_stencil_texturing"
+            ]
+          },
+          {
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "unmaskedRendererAvailable": true,
+            "contextLost": false,
+            "errors": [],
+            "extensions": [
+              "EXT_clip_control",
+              "EXT_color_buffer_float",
+              "EXT_color_buffer_half_float",
+              "EXT_conservative_depth",
+              "EXT_depth_clamp",
+              "EXT_float_blend",
+              "EXT_polygon_offset_clamp",
+              "EXT_texture_compression_bptc",
+              "EXT_texture_compression_rgtc",
+              "EXT_texture_filter_anisotropic",
+              "EXT_texture_mirror_clamp_to_edge",
+              "NV_shader_noperspective_interpolation",
+              "OES_draw_buffers_indexed",
+              "OES_sample_variables",
+              "OES_shader_multisample_interpolation",
+              "OES_texture_float_linear",
+              "OVR_multiview2",
+              "WEBGL_clip_cull_distance",
+              "WEBGL_compressed_texture_astc",
+              "WEBGL_compressed_texture_etc",
+              "WEBGL_compressed_texture_etc1",
+              "WEBGL_compressed_texture_s3tc",
+              "WEBGL_compressed_texture_s3tc_srgb",
+              "WEBGL_debug_renderer_info",
+              "WEBGL_debug_shaders",
+              "WEBGL_lose_context",
+              "WEBGL_multi_draw",
+              "WEBGL_polygon_mode",
+              "WEBGL_stencil_texturing"
+            ]
+          }
+        ]
+      },
+      "checks": [
+        {
+          "example": "milo",
+          "label": "Idle frame 0",
+          "mae": 0.3080902099609375,
+          "expectedCovered": 12953,
+          "runtimeCovered": 12809
+        },
+        {
+          "example": "milo",
+          "label": "Idle frame 30",
+          "mae": 0.3068962097167969,
+          "expectedCovered": 13005,
+          "runtimeCovered": 12838
+        },
+        {
+          "example": "milo",
+          "label": "Idle frame 60",
+          "mae": 0.3204193115234375,
+          "expectedCovered": 13029,
+          "runtimeCovered": 12846
+        },
+        {
+          "example": "milo",
+          "label": "Idle frame 90",
+          "mae": 0.3068962097167969,
+          "expectedCovered": 13005,
+          "runtimeCovered": 12838
+        },
+        {
+          "example": "milo",
+          "label": "Hello frame 0",
+          "mae": 0.3044242858886719,
+          "expectedCovered": 12912,
+          "runtimeCovered": 12760
+        },
+        {
+          "example": "milo",
+          "label": "Hello frame 30",
+          "mae": 0.3133964538574219,
+          "expectedCovered": 13010,
+          "runtimeCovered": 12852
+        },
+        {
+          "example": "milo",
+          "label": "Hello frame 60",
+          "mae": 0.31923675537109375,
+          "expectedCovered": 12957,
+          "runtimeCovered": 12777
+        },
+        {
+          "example": "milo",
+          "label": "Hello frame 90",
+          "mae": 0.3133964538574219,
+          "expectedCovered": 13010,
+          "runtimeCovered": 12852
+        },
+        {
+          "example": "milo",
+          "label": "machine entry",
+          "mae": 0.3080902099609375,
+          "expectedCovered": 12953,
+          "runtimeCovered": 12809
+        },
+        {
+          "example": "milo",
+          "label": "isWaving=true",
+          "mae": 0.3044242858886719,
+          "expectedCovered": 12912,
+          "runtimeCovered": 12760
+        },
+        {
+          "example": "milo",
+          "label": "isWaving=false",
+          "mae": 0.3080902099609375,
+          "expectedCovered": 12953,
+          "runtimeCovered": 12809
+        },
+        {
+          "example": "orbit",
+          "label": "Orbit frame 0",
+          "mae": 0.6636276245117188,
+          "expectedCovered": 26340,
+          "runtimeCovered": 26168
+        },
+        {
+          "example": "orbit",
+          "label": "Orbit frame 30",
+          "mae": 0.6620140075683594,
+          "expectedCovered": 26332,
+          "runtimeCovered": 26169
+        },
+        {
+          "example": "orbit",
+          "label": "Orbit frame 60",
+          "mae": 0.6637077331542969,
+          "expectedCovered": 26340,
+          "runtimeCovered": 26168
+        },
+        {
+          "example": "orbit",
+          "label": "Orbit frame 90",
+          "mae": 0.6655426025390625,
+          "expectedCovered": 26333,
+          "runtimeCovered": 26169
+        },
+        {
+          "example": "bloom",
+          "label": "Breeze frame 0",
+          "mae": 0.58526611328125,
+          "expectedCovered": 28646,
+          "runtimeCovered": 28474
+        },
+        {
+          "example": "bloom",
+          "label": "Breeze frame 30",
+          "mae": 0.6110076904296875,
+          "expectedCovered": 28646,
+          "runtimeCovered": 28474
+        },
+        {
+          "example": "bloom",
+          "label": "Breeze frame 60",
+          "mae": 0.5891990661621094,
+          "expectedCovered": 28646,
+          "runtimeCovered": 28474
+        },
+        {
+          "example": "bloom",
+          "label": "Breeze frame 90",
+          "mae": 0.6124496459960938,
+          "expectedCovered": 28646,
+          "runtimeCovered": 28474
+        },
+        {
+          "example": "tempo",
+          "label": "Rhythm frame 0",
+          "mae": 0.12002182006835938,
+          "expectedCovered": 35746,
+          "runtimeCovered": 35712
+        },
+        {
+          "example": "tempo",
+          "label": "Rhythm frame 30",
+          "mae": 0.13648605346679688,
+          "expectedCovered": 35746,
+          "runtimeCovered": 35712
+        },
+        {
+          "example": "tempo",
+          "label": "Rhythm frame 60",
+          "mae": 0.11894607543945312,
+          "expectedCovered": 35746,
+          "runtimeCovered": 35712
+        },
+        {
+          "example": "tempo",
+          "label": "Rhythm frame 90",
+          "mae": 0.14382553100585938,
+          "expectedCovered": 35746,
+          "runtimeCovered": 35712
+        },
+        {
+          "example": "signal",
+          "label": "Waiting frame 0",
+          "mae": 0.18720626831054688,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36792
+        },
+        {
+          "example": "signal",
+          "label": "Waiting frame 30",
+          "mae": 0.18720626831054688,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36792
+        },
+        {
+          "example": "signal",
+          "label": "Waiting frame 60",
+          "mae": 0.18720626831054688,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36792
+        },
+        {
+          "example": "signal",
+          "label": "Waiting frame 90",
+          "mae": 0.18720626831054688,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36792
+        },
+        {
+          "example": "signal",
+          "label": "Ready frame 0",
+          "mae": 0.2544975280761719,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36792
+        },
+        {
+          "example": "signal",
+          "label": "Ready frame 30",
+          "mae": 0.2544975280761719,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36792
+        },
+        {
+          "example": "signal",
+          "label": "Ready frame 60",
+          "mae": 0.2544975280761719,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36792
+        },
+        {
+          "example": "signal",
+          "label": "Ready frame 90",
+          "mae": 0.2544975280761719,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36792
+        },
+        {
+          "example": "signal",
+          "label": "Celebrating frame 0",
+          "mae": 0.24815750122070312,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36792
+        },
+        {
+          "example": "signal",
+          "label": "Celebrating frame 30",
+          "mae": 0.24697494506835938,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36792
+        },
+        {
+          "example": "signal",
+          "label": "Celebrating frame 60",
+          "mae": 0.24815750122070312,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36792
+        },
+        {
+          "example": "signal",
+          "label": "Celebrating frame 90",
+          "mae": 0.24697494506835938,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36792
+        },
+        {
+          "example": "signal",
+          "label": "machine entry",
+          "mae": 0.18720626831054688,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36792
+        },
+        {
+          "example": "signal",
+          "label": "disabled AND guard",
+          "mae": 0.18720626831054688,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36792
+        },
+        {
+          "example": "signal",
+          "label": "ready AND conditions",
+          "mae": 0.2544975280761719,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36792
+        },
+        {
+          "example": "signal",
+          "label": "number return",
+          "mae": 0.18720626831054688,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36792
+        },
+        {
+          "example": "signal",
+          "label": "trigger celebration",
+          "mae": 0.24815750122070312,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36792
+        },
+        {
+          "example": "signal",
+          "label": "reset defaults",
+          "mae": 0.18720626831054688,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36792
+        },
+        {
+          "example": "signal",
+          "label": "pad click listener",
+          "mae": 0.24815750122070312,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36792
+        }
+      ]
+    }
+  ],
+  "fixtures": {
+    "milo": "c1db8a16bc72af40f2ade97f08ddbba8d3e8ba17c13f77736191d94d0c471199",
+    "orbit": "22c7afa65992ed8652e109051e3280f3f62b6f0e5b9a0c0b486ddd8654d6822c",
+    "bloom": "606c696bc3fa77d70b1c9354f6db2ea2bd4c54ee0604ecee7cc9dd18206f9ca8",
+    "tempo": "75af08e98c313d30dbeb59fbbb622a613931639602090bcb04d200c016224971",
+    "signal": "8d73bef975e2d346466b54b91893532880e202f9513e9a509133aecdb213f6f1"
+  }
+}

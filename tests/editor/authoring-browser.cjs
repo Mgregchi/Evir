@@ -13,7 +13,7 @@ run(async (page) => {
   );
   const snapshot = () => page.evaluate(() => evirStudio.snapshot()),
     pose = () => page.evaluate(() => evirStudio.pose()),
-    press = (name) => page.getByRole("button", { name, exact: true }).click();
+    press = (name) => require("./actions.cjs").press(page, name);
   const change = async (name, value) => {
     const f = page.getByLabel(name, { exact: true });
     await f.fill(String(value));
@@ -65,7 +65,7 @@ run(async (page) => {
     (await snapshot()).nodes.find((n) => n.id === pathId).geometry,
     before,
   );
-  await press("↶ Undo");
+  await press("Undo");
   assert.deepEqual(
     (await snapshot()).nodes.find((n) => n.id === pathId).geometry,
     before,

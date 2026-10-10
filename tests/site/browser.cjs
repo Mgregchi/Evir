@@ -134,7 +134,7 @@ async function serve(dir, base='') {
         await page.locator('#file').setInputFiles(path.join(root,'apps/web/assets/examples/milo.evir-project'));
         await page.locator('#replace-confirm').click();await page.waitForFunction(()=>evirStudio.snapshot().id==='milo-project');
         assert.equal(await page.evaluate(()=>evirStudio.snapshot().nodes.length),24);
-        const download=page.waitForEvent('download');await page.getByRole('button',{name:'Export .riv',exact:true}).click();
+        const download=page.waitForEvent('download');await require('../editor/actions.cjs').press(page,'Export .riv');
         const downloaded=await download;assert(downloaded.suggestedFilename().endsWith('.riv'));
         assert.deepEqual(fs.readFileSync(await downloaded.path()),fs.readFileSync(path.join(root,'apps/web/assets/examples/milo.riv')),'Editor export is unchanged after extraction');
         assert.equal(await page.locator('.brand-wordmark').locator('..').getAttribute('href'),base+'/');
