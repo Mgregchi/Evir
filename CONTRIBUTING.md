@@ -24,3 +24,7 @@ Keep each pull request focused on a concrete task. Explain the previous behavior
 Do not commit `node_modules`, local `.env`, generated `apps/*/dist` or `packages/*/dist`, credentials or privately supplied project files. Public examples should be original or carry documented redistribution terms. Existing Evir brand artwork in `assets/brand` should retain its appearance and provenance; do not substitute newly drawn versions. The project code and original showcase assets are MIT licensed; third-party material retains its own terms.
 
 For bugs, include the editing task, reproduction steps, expected and actual behavior, browser/OS, and a small shareable project when useful. For feature ideas, explain the workflow and success criteria. Be constructive and distinguish observations from expectations. Feedback drafted on the community page is posted only after you review and submit it in the configured destination.
+
+## Feature examples
+
+Add a small original study alongside each supported feature. Register it in `apps/web/examples.mjs`, add its generator and include editable source, a real captured poster, inspection notes and a compatible export. New interactions need keyboard-accessible controls and explicit official-runtime scenarios. [The growing gallery guide](docs/23-growing-showcase-gallery.md) explains generation, capture, checks and the distinction between Studio features and research-only fixtures.

@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-10-09T13:54:29.062Z",
-  "scope": "Independent public site and editor deployments, configured launch links, runtime previews, responsive layouts and feedback drafting. Automated accessibility is not a user study.",
+  "checkedAt": "2026-10-10T19:39:43.925Z",
+  "scope": "Single web app with a separately maintained Studio package, same-origin launch links, runtime previews, responsive layouts and feedback drafting. Automated accessibility is not a user study.",
   "pages": [
     {
       "build": "root",
@@ -51,7 +51,7 @@
       "build": "root",
       "path": "examples/",
       "accessibilityViolations": 0,
-      "accessibilityPasses": 18,
+      "accessibilityPasses": 23,
       "accessibilityViewportWidths": [
         1440,
         390
@@ -216,7 +216,7 @@
       "build": "prefix",
       "path": "examples/",
       "accessibilityViolations": 0,
-      "accessibilityPasses": 18,
+      "accessibilityPasses": 23,
       "accessibilityViewportWidths": [
         1440,
         390
@@ -334,11 +334,11 @@
     }
   ],
   "checks": [
-    "root: separate editor origin, configured home link, project open and byte-identical export; independent artifacts",
+    "root: same-origin Studio route, relative home link, project open and byte-identical export; composed artifact with package boundaries",
     "root: legacy /studio/ route redirects to /editor/ landing",
     "JavaScript disabled: mobile navigation/poster/links available; feedback cannot submit as a GET form",
     "root: internal links/assets/fragments, feedback escaped and never submitted, motion pause/play, mobile menu Escape/focus, optional configuration",
-    "prefix: separate editor origin, configured home link, project open and byte-identical export; independent artifacts",
+    "prefix: same-origin Studio route, relative home link, project open and byte-identical export; composed artifact with package boundaries",
     "prefix: legacy /studio/ route redirects to /editor/ landing",
     "prefix: internal links/assets/fragments, feedback escaped and never submitted, motion pause/play, mobile menu Escape/focus, optional configuration",
     "URL and output-directory validation; private environment values excluded"

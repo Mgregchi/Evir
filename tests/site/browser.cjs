@@ -9,6 +9,7 @@ const evidence = path.join(root, 'research/results/public-site');
 const names = ['', 'product/', 'editor/', 'examples/', 'learn/', 'community/', 'roadmap/', 'updates/', 'about/', 'contribute/', 'privacy/'];
 const publicKeys = ['REPOSITORY_URL','DOCS_URL','COMMUNITY_URL','FEEDBACK_URL','NEWSLETTER_URL','SOCIAL_X_URL','SOCIAL_LINKEDIN_URL','SOCIAL_MASTODON_URL','CONTACT_URL'];
 const mime = {'.html':'text/html','.mjs':'text/javascript','.js':'text/javascript','.css':'text/css','.json':'application/json','.png':'image/png','.xml':'application/xml'};
+async function readyPreviews(page) {for(const preview of await page.locator('[data-preview]').all()){await preview.scrollIntoViewIfNeeded();await page.waitForFunction(id=>[...document.querySelectorAll('[data-preview]')].find(el=>el.dataset.preview===id)?.dataset.ready==='true',await preview.getAttribute('data-preview'));}}
 function build(name, values={}) {
   const env = {...process.env, ...Object.fromEntries(publicKeys.flatMap(key=>[[key,''],['PUBLIC_'+key,'']])),
     SITE_URL:'', STUDIO_URL:'', PUBLIC_SITE_URL:'', PUBLIC_BASE_PATH:'', PUBLIC_EDITOR_URL:'',
@@ -56,7 +57,7 @@ async function serve(dir, base='') {
         for(const route of names) {
           await page.goto(`${origin}${base}/${route}`);
           await page.locator('.brand img').first().evaluate(img=>img.decode());
-          if(await page.locator('[data-preview]').count()) await page.waitForFunction(()=>[...document.querySelectorAll('[data-preview]')].every(el=>el.dataset.ready==='true'));
+          if(await page.locator('[data-preview]').count()) await readyPreviews(page);
           assert.equal(await page.locator('h1').count(),1);
           assert.equal(await page.locator('main').count(),1);
           assert.equal(await page.locator('script#public-config').textContent().then(s=>s.includes('never-expose')),false);
@@ -99,8 +100,8 @@ async function serve(dir, base='') {
           await page.setViewportSize({width:1440,height:1000});
         }
         await page.goto(`${origin}${base}/examples/`);
-        await page.waitForFunction(()=>[...document.querySelectorAll('[data-preview]')].every(el=>el.dataset.ready==='true'));
-        assert.deepEqual(await page.locator('[data-preview]').evaluateAll(els=>els.map(el=>el.dataset.playing)),['false','false']);
+        await readyPreviews(page);
+        assert.deepEqual(await page.locator('[data-preview]').evaluateAll(els=>els.map(el=>el.dataset.playing)),Array(5).fill('false'));
         await page.getByRole('button',{name:'Say hello'}).click();
         assert.equal(await page.locator('.milo .demo-state').textContent(),'Hello');
         await page.getByRole('button',{name:'Back to idle'}).click();

@@ -1,0 +1,63 @@
+{
+  "checkedAt": "2026-10-10T19:41:55.822Z",
+  "examples": [
+    {
+      "id": "milo",
+      "features": [
+        "Curves",
+        "Rigging",
+        "Interaction"
+      ]
+    },
+    {
+      "id": "orbit",
+      "features": [
+        "Groups",
+        "Rotation",
+        "Easing"
+      ]
+    },
+    {
+      "id": "bloom",
+      "features": [
+        "Bone chains",
+        "Weighted controls",
+        "Curves"
+      ]
+    },
+    {
+      "id": "tempo",
+      "features": [
+        "Color keys",
+        "Hold keys",
+        "Cubic easing"
+      ]
+    },
+    {
+      "id": "signal",
+      "features": [
+        "Typed inputs",
+        "AND conditions",
+        "Click / trigger / reset"
+      ]
+    }
+  ],
+  "viewportWidths": [
+    320,
+    390,
+    1440
+  ],
+  "scope": "Original scenes, software browser and official export checks; not a mobile performance or usability study.",
+  "checks": [
+    "below-fold previews deferred",
+    "one source fetch per example",
+    "reduced-motion defaults",
+    "inspection notes",
+    "boolean and number AND guard",
+    "click/trigger celebration",
+    "reset restores inputs and pose",
+    "no page overflow",
+    "zero automated accessibility violations",
+    "all five sources open and export unchanged in Studio"
+  ]
+}
