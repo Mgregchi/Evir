@@ -41,17 +41,21 @@ function mountPreview(element) {
   const name=element.dataset.preview,canvas=element.querySelector('canvas'),poster=element.querySelector('.demo-poster');
   const toggle=element.querySelector('.motion-control'),wave=element.querySelector('.wave-control'),state=element.querySelector('.demo-state'),message=element.querySelector('.demo-message');
   const loader=element.querySelector('.living-loader'),retry=element.querySelector('.retry-preview'),motion=matchMedia('(prefers-reduced-motion: reduce)');
-  const lifetime=new AbortController();let attempt,player,renderer,playing=!motion.matches,visible=false,suspended=false,waving=false;
-  const loop=createMotionLoop(dt=>renderer.draw(player.advance(dt),player.artboard.id),{onError:fail});
+  const enabled=element.querySelector('.enabled-control'),level=element.querySelector('.level-control'),celebrate=element.querySelector('.celebrate-control'),reset=element.querySelector('.reset-control');
+  loader.hidden=true;element.setAttribute('aria-busy','false');
+  const lifetime=new AbortController();let started=false,attempt,player,renderer,playing=!motion.matches,visible=false,suspended=false,waving=false;
+  const loop=createMotionLoop(dt=>{renderer.draw(player.advance(dt),player.artboard.id);syncState();},{onError:fail});
+  function syncState() {const current=player?.state?.name;if(current){if(state.textContent!==current)state.textContent=current;if(celebrate)celebrate.disabled=current!=='Ready';}}
+  function draw() {renderer.draw(player.advance(0),player.artboard.id);syncState();}
   function sync() {toggle.textContent=playing?'Pause motion':'Play motion';toggle.setAttribute('aria-pressed',String(playing));element.dataset.playing=String(playing);loop.setActive(Boolean(player&&playing&&visible&&!document.hidden&&!suspended));}
   function fail() {
     loop.stop();player=null;renderer=null;canvas.hidden=true;poster.hidden=false;
     loader.hidden=true;retry.hidden=false;element.setAttribute('aria-busy','false');delete element.dataset.ready;
     message.textContent='The live preview couldn’t wake up. Try again, or use the image and downloadable source.';
-    toggle.disabled=true;if(wave)wave.disabled=true;
+    toggle.disabled=true;if(wave)wave.disabled=true;for(const control of [enabled,level,celebrate,reset])if(control)control.disabled=true;
   }
   async function load() {
-    attempt?.abort();const current=attempt=new AbortController();
+    started=true;attempt?.abort();const current=attempt=new AbortController();
     loader.hidden=false;retry.hidden=true;message.textContent='';element.setAttribute('aria-busy','true');
     try {
       const [{createRuntime},{CanvasRenderer},response]=await Promise.all([
@@ -59,7 +63,8 @@ function mountPreview(element) {
       if(!response.ok)throw Error('Project could not load');const project=await response.json();
       if(current.signal.aborted)return;
       player=createRuntime(project,project.machines.length?{machineId:project.machines[0].id}:{animationId:project.animations[0].id});renderer=new CanvasRenderer(canvas.getContext('2d'));
-      renderer.draw(player.advance(0),player.artboard.id);waving=false;
+      draw();waving=false;
+      if(enabled){enabled.checked=false;enabled.disabled=false;level.value='0';level.disabled=false;reset.disabled=false;element.querySelector('.level-value').textContent='0';}
       if(wave){wave.setAttribute('aria-pressed','false');wave.firstChild.textContent='Say hello ';state.textContent='Idle';wave.disabled=false;}
       canvas.hidden=false;poster.hidden=true;loader.hidden=true;toggle.disabled=false;
       element.setAttribute('aria-busy','false');element.dataset.ready='true';sync();
@@ -69,11 +74,15 @@ function mountPreview(element) {
   toggle.addEventListener('click',()=>{playing=!playing;sync();},options);
   motion.addEventListener('change',e=>{if(e.matches){playing=false;sync();}},options);
   wave?.addEventListener('click',()=>{try {waving=!waving;player.setInput('isWaving',waving);renderer.draw(player.advance(0),player.artboard.id);wave.setAttribute('aria-pressed',String(waving));wave.firstChild.textContent=waving?'Back to idle ':'Say hello ';state.textContent=waving?'Hello':'Idle';}catch{fail();}},options);
+  function interact(operation) {try{operation();draw();}catch{fail();}}
+  enabled?.addEventListener('change',()=>interact(()=>player.setInput('enabled',enabled.checked)),options);
+  level?.addEventListener('input',()=>interact(()=>{player.setInput('level',Number(level.value));element.querySelector('.level-value').textContent=level.value;}),options);
+  celebrate?.addEventListener('click',()=>interact(()=>player.click('signal-celebration-pad')),options);
+  reset?.addEventListener('click',()=>interact(()=>{player.reset();enabled.checked=false;level.value='0';element.querySelector('.level-value').textContent='0';}),options);
   retry.addEventListener('click',load,options);
-  const observer=new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;sync();},{threshold:.05});observer.observe(element);
+  const observer=new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;if(visible&&!started)load();sync();},{threshold:.05});observer.observe(element);
   document.addEventListener('visibilitychange',sync,options);
   window.addEventListener('pagehide',e=>{suspended=true;loop.stop();if(!e.persisted){attempt?.abort();observer.disconnect();lifetime.abort();player=null;renderer=null;}},options);
   window.addEventListener('pageshow',e=>{if(e.persisted){suspended=false;sync();}},options);
-  load();
 }
 for(const element of document.querySelectorAll('[data-preview]'))mountPreview(element);

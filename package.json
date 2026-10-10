@@ -51,7 +51,7 @@
     "web:build": "npm run build --workspace @evir/web",
     "web:serve": "npm run serve --workspace @evir/web",
     "web:assets": "node apps/web/generate-examples.mjs && node tools/capture_site_assets.cjs",
-    "test:web": "node tests/site/browser.cjs && node tests/site/examples.cjs",
+    "test:web": "node tests/site/browser.cjs && node tests/site/examples.cjs && node tests/site/gallery.cjs",
     "test:experience": "node tests/site/quality.cjs"
   },
   "dependencies": {

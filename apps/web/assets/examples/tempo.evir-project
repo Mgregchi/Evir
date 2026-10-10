@@ -1,0 +1,1672 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 2,
+  "id": "tempo-project",
+  "name": "Tempo — three kinds of time",
+  "artboards": [
+    {
+      "id": "tempo-board",
+      "name": "Tempo — three kinds of time",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "tempo-card",
+      "name": "card",
+      "kind": "path",
+      "artboardId": "tempo-board",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        67,
+        66
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#dce8db",
+        "skin": null,
+        "points": [
+          {
+            "id": "tempo-card-p0",
+            "anchor": [
+              42,
+              0
+            ],
+            "in": [
+              18.8040405084,
+              0
+            ],
+            "out": [
+              42,
+              0
+            ]
+          },
+          {
+            "id": "tempo-card-p1",
+            "anchor": [
+              336,
+              0
+            ],
+            "in": [
+              336,
+              0
+            ],
+            "out": [
+              359.1959594916,
+              0
+            ]
+          },
+          {
+            "id": "tempo-card-p2",
+            "anchor": [
+              378,
+              42
+            ],
+            "in": [
+              378,
+              18.8040405084
+            ],
+            "out": [
+              378,
+              42
+            ]
+          },
+          {
+            "id": "tempo-card-p3",
+            "anchor": [
+              378,
+              338
+            ],
+            "in": [
+              378,
+              338
+            ],
+            "out": [
+              378,
+              361.1959594916
+            ]
+          },
+          {
+            "id": "tempo-card-p4",
+            "anchor": [
+              336,
+              380
+            ],
+            "in": [
+              359.1959594916,
+              380
+            ],
+            "out": [
+              336,
+              380
+            ]
+          },
+          {
+            "id": "tempo-card-p5",
+            "anchor": [
+              42,
+              380
+            ],
+            "in": [
+              42,
+              380
+            ],
+            "out": [
+              18.8040405084,
+              380
+            ]
+          },
+          {
+            "id": "tempo-card-p6",
+            "anchor": [
+              0,
+              338
+            ],
+            "in": [
+              0,
+              361.1959594916
+            ],
+            "out": [
+              0,
+              338
+            ]
+          },
+          {
+            "id": "tempo-card-p7",
+            "anchor": [
+              0,
+              42
+            ],
+            "in": [
+              0,
+              42
+            ],
+            "out": [
+              0,
+              18.8040405084
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tempo-inner-card",
+      "name": "inner card",
+      "kind": "path",
+      "artboardId": "tempo-board",
+      "parentId": null,
+      "order": 1,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        81,
+        80
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f5f3e7",
+        "skin": null,
+        "points": [
+          {
+            "id": "tempo-inner-card-p0",
+            "anchor": [
+              32,
+              0
+            ],
+            "in": [
+              14.3268880064,
+              0
+            ],
+            "out": [
+              32,
+              0
+            ]
+          },
+          {
+            "id": "tempo-inner-card-p1",
+            "anchor": [
+              318,
+              0
+            ],
+            "in": [
+              318,
+              0
+            ],
+            "out": [
+              335.6731119936,
+              0
+            ]
+          },
+          {
+            "id": "tempo-inner-card-p2",
+            "anchor": [
+              350,
+              32
+            ],
+            "in": [
+              350,
+              14.3268880064
+            ],
+            "out": [
+              350,
+              32
+            ]
+          },
+          {
+            "id": "tempo-inner-card-p3",
+            "anchor": [
+              350,
+              320
+            ],
+            "in": [
+              350,
+              320
+            ],
+            "out": [
+              350,
+              337.6731119936
+            ]
+          },
+          {
+            "id": "tempo-inner-card-p4",
+            "anchor": [
+              318,
+              352
+            ],
+            "in": [
+              335.6731119936,
+              352
+            ],
+            "out": [
+              318,
+              352
+            ]
+          },
+          {
+            "id": "tempo-inner-card-p5",
+            "anchor": [
+              32,
+              352
+            ],
+            "in": [
+              32,
+              352
+            ],
+            "out": [
+              14.3268880064,
+              352
+            ]
+          },
+          {
+            "id": "tempo-inner-card-p6",
+            "anchor": [
+              0,
+              320
+            ],
+            "in": [
+              0,
+              337.6731119936
+            ],
+            "out": [
+              0,
+              320
+            ]
+          },
+          {
+            "id": "tempo-inner-card-p7",
+            "anchor": [
+              0,
+              32
+            ],
+            "in": [
+              0,
+              32
+            ],
+            "out": [
+              0,
+              14.3268880064
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tempo-track-0",
+      "name": "track 0",
+      "kind": "path",
+      "artboardId": "tempo-board",
+      "parentId": null,
+      "order": 2,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        128,
+        146
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#dce7dc",
+        "skin": null,
+        "points": [
+          {
+            "id": "tempo-track-0-p0",
+            "anchor": [
+              26,
+              0
+            ],
+            "in": [
+              11.640596505200001,
+              0
+            ],
+            "out": [
+              26,
+              0
+            ]
+          },
+          {
+            "id": "tempo-track-0-p1",
+            "anchor": [
+              26,
+              0
+            ],
+            "in": [
+              26,
+              0
+            ],
+            "out": [
+              40.3594034948,
+              0
+            ]
+          },
+          {
+            "id": "tempo-track-0-p2",
+            "anchor": [
+              52,
+              26
+            ],
+            "in": [
+              52,
+              11.640596505200001
+            ],
+            "out": [
+              52,
+              26
+            ]
+          },
+          {
+            "id": "tempo-track-0-p3",
+            "anchor": [
+              52,
+              192
+            ],
+            "in": [
+              52,
+              192
+            ],
+            "out": [
+              52,
+              206.3594034948
+            ]
+          },
+          {
+            "id": "tempo-track-0-p4",
+            "anchor": [
+              26,
+              218
+            ],
+            "in": [
+              40.3594034948,
+              218
+            ],
+            "out": [
+              26,
+              218
+            ]
+          },
+          {
+            "id": "tempo-track-0-p5",
+            "anchor": [
+              26,
+              218
+            ],
+            "in": [
+              26,
+              218
+            ],
+            "out": [
+              11.640596505200001,
+              218
+            ]
+          },
+          {
+            "id": "tempo-track-0-p6",
+            "anchor": [
+              0,
+              192
+            ],
+            "in": [
+              0,
+              206.3594034948
+            ],
+            "out": [
+              0,
+              192
+            ]
+          },
+          {
+            "id": "tempo-track-0-p7",
+            "anchor": [
+              0,
+              26
+            ],
+            "in": [
+              0,
+              26
+            ],
+            "out": [
+              0,
+              11.640596505200001
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tempo-track-1",
+      "name": "track 1",
+      "kind": "path",
+      "artboardId": "tempo-board",
+      "parentId": null,
+      "order": 3,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        220,
+        146
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#dce7dc",
+        "skin": null,
+        "points": [
+          {
+            "id": "tempo-track-1-p0",
+            "anchor": [
+              26,
+              0
+            ],
+            "in": [
+              11.640596505200001,
+              0
+            ],
+            "out": [
+              26,
+              0
+            ]
+          },
+          {
+            "id": "tempo-track-1-p1",
+            "anchor": [
+              26,
+              0
+            ],
+            "in": [
+              26,
+              0
+            ],
+            "out": [
+              40.3594034948,
+              0
+            ]
+          },
+          {
+            "id": "tempo-track-1-p2",
+            "anchor": [
+              52,
+              26
+            ],
+            "in": [
+              52,
+              11.640596505200001
+            ],
+            "out": [
+              52,
+              26
+            ]
+          },
+          {
+            "id": "tempo-track-1-p3",
+            "anchor": [
+              52,
+              192
+            ],
+            "in": [
+              52,
+              192
+            ],
+            "out": [
+              52,
+              206.3594034948
+            ]
+          },
+          {
+            "id": "tempo-track-1-p4",
+            "anchor": [
+              26,
+              218
+            ],
+            "in": [
+              40.3594034948,
+              218
+            ],
+            "out": [
+              26,
+              218
+            ]
+          },
+          {
+            "id": "tempo-track-1-p5",
+            "anchor": [
+              26,
+              218
+            ],
+            "in": [
+              26,
+              218
+            ],
+            "out": [
+              11.640596505200001,
+              218
+            ]
+          },
+          {
+            "id": "tempo-track-1-p6",
+            "anchor": [
+              0,
+              192
+            ],
+            "in": [
+              0,
+              206.3594034948
+            ],
+            "out": [
+              0,
+              192
+            ]
+          },
+          {
+            "id": "tempo-track-1-p7",
+            "anchor": [
+              0,
+              26
+            ],
+            "in": [
+              0,
+              26
+            ],
+            "out": [
+              0,
+              11.640596505200001
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tempo-track-2",
+      "name": "track 2",
+      "kind": "path",
+      "artboardId": "tempo-board",
+      "parentId": null,
+      "order": 4,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        312,
+        146
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#dce7dc",
+        "skin": null,
+        "points": [
+          {
+            "id": "tempo-track-2-p0",
+            "anchor": [
+              26,
+              0
+            ],
+            "in": [
+              11.640596505200001,
+              0
+            ],
+            "out": [
+              26,
+              0
+            ]
+          },
+          {
+            "id": "tempo-track-2-p1",
+            "anchor": [
+              26,
+              0
+            ],
+            "in": [
+              26,
+              0
+            ],
+            "out": [
+              40.3594034948,
+              0
+            ]
+          },
+          {
+            "id": "tempo-track-2-p2",
+            "anchor": [
+              52,
+              26
+            ],
+            "in": [
+              52,
+              11.640596505200001
+            ],
+            "out": [
+              52,
+              26
+            ]
+          },
+          {
+            "id": "tempo-track-2-p3",
+            "anchor": [
+              52,
+              192
+            ],
+            "in": [
+              52,
+              192
+            ],
+            "out": [
+              52,
+              206.3594034948
+            ]
+          },
+          {
+            "id": "tempo-track-2-p4",
+            "anchor": [
+              26,
+              218
+            ],
+            "in": [
+              40.3594034948,
+              218
+            ],
+            "out": [
+              26,
+              218
+            ]
+          },
+          {
+            "id": "tempo-track-2-p5",
+            "anchor": [
+              26,
+              218
+            ],
+            "in": [
+              26,
+              218
+            ],
+            "out": [
+              11.640596505200001,
+              218
+            ]
+          },
+          {
+            "id": "tempo-track-2-p6",
+            "anchor": [
+              0,
+              192
+            ],
+            "in": [
+              0,
+              206.3594034948
+            ],
+            "out": [
+              0,
+              192
+            ]
+          },
+          {
+            "id": "tempo-track-2-p7",
+            "anchor": [
+              0,
+              26
+            ],
+            "in": [
+              0,
+              26
+            ],
+            "out": [
+              0,
+              11.640596505200001
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tempo-smooth-column",
+      "name": "smooth column",
+      "kind": "rectangle",
+      "artboardId": "tempo-board",
+      "parentId": null,
+      "order": 5,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        128,
+        288
+      ],
+      "geometry": {
+        "width": 52,
+        "height": 76,
+        "fill": "#89d4b5"
+      }
+    },
+    {
+      "id": "tempo-smooth-marker",
+      "name": "smooth marker",
+      "kind": "path",
+      "artboardId": "tempo-board",
+      "parentId": null,
+      "order": 6,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        154,
+        399
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#89d4b5",
+        "skin": null,
+        "points": [
+          {
+            "id": "tempo-smooth-marker-p0",
+            "anchor": [
+              8,
+              0
+            ],
+            "in": [
+              8,
+              -4.4182779984
+            ],
+            "out": [
+              8,
+              4.4182779984
+            ]
+          },
+          {
+            "id": "tempo-smooth-marker-p1",
+            "anchor": [
+              0,
+              8
+            ],
+            "in": [
+              4.4182779984,
+              8
+            ],
+            "out": [
+              -4.4182779984,
+              8
+            ]
+          },
+          {
+            "id": "tempo-smooth-marker-p2",
+            "anchor": [
+              -8,
+              0
+            ],
+            "in": [
+              -8,
+              4.4182779984
+            ],
+            "out": [
+              -8,
+              -4.4182779984
+            ]
+          },
+          {
+            "id": "tempo-smooth-marker-p3",
+            "anchor": [
+              0,
+              -8
+            ],
+            "in": [
+              -4.4182779984,
+              -8
+            ],
+            "out": [
+              4.4182779984,
+              -8
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tempo-linear-column",
+      "name": "linear column",
+      "kind": "rectangle",
+      "artboardId": "tempo-board",
+      "parentId": null,
+      "order": 7,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        220,
+        288
+      ],
+      "geometry": {
+        "width": 52,
+        "height": 76,
+        "fill": "#edb99c"
+      }
+    },
+    {
+      "id": "tempo-linear-marker",
+      "name": "linear marker",
+      "kind": "path",
+      "artboardId": "tempo-board",
+      "parentId": null,
+      "order": 8,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        246,
+        399
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#edb99c",
+        "skin": null,
+        "points": [
+          {
+            "id": "tempo-linear-marker-p0",
+            "anchor": [
+              8,
+              0
+            ],
+            "in": [
+              8,
+              -4.4182779984
+            ],
+            "out": [
+              8,
+              4.4182779984
+            ]
+          },
+          {
+            "id": "tempo-linear-marker-p1",
+            "anchor": [
+              0,
+              8
+            ],
+            "in": [
+              4.4182779984,
+              8
+            ],
+            "out": [
+              -4.4182779984,
+              8
+            ]
+          },
+          {
+            "id": "tempo-linear-marker-p2",
+            "anchor": [
+              -8,
+              0
+            ],
+            "in": [
+              -8,
+              4.4182779984
+            ],
+            "out": [
+              -8,
+              -4.4182779984
+            ]
+          },
+          {
+            "id": "tempo-linear-marker-p3",
+            "anchor": [
+              0,
+              -8
+            ],
+            "in": [
+              -4.4182779984,
+              -8
+            ],
+            "out": [
+              4.4182779984,
+              -8
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tempo-stepped-column",
+      "name": "stepped column",
+      "kind": "rectangle",
+      "artboardId": "tempo-board",
+      "parentId": null,
+      "order": 9,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        312,
+        288
+      ],
+      "geometry": {
+        "width": 52,
+        "height": 76,
+        "fill": "#547e66"
+      }
+    },
+    {
+      "id": "tempo-stepped-marker",
+      "name": "stepped marker",
+      "kind": "path",
+      "artboardId": "tempo-board",
+      "parentId": null,
+      "order": 10,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        338,
+        399
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#547e66",
+        "skin": null,
+        "points": [
+          {
+            "id": "tempo-stepped-marker-p0",
+            "anchor": [
+              8,
+              0
+            ],
+            "in": [
+              8,
+              -4.4182779984
+            ],
+            "out": [
+              8,
+              4.4182779984
+            ]
+          },
+          {
+            "id": "tempo-stepped-marker-p1",
+            "anchor": [
+              0,
+              8
+            ],
+            "in": [
+              4.4182779984,
+              8
+            ],
+            "out": [
+              -4.4182779984,
+              8
+            ]
+          },
+          {
+            "id": "tempo-stepped-marker-p2",
+            "anchor": [
+              -8,
+              0
+            ],
+            "in": [
+              -8,
+              4.4182779984
+            ],
+            "out": [
+              -8,
+              -4.4182779984
+            ]
+          },
+          {
+            "id": "tempo-stepped-marker-p3",
+            "anchor": [
+              0,
+              -8
+            ],
+            "in": [
+              -4.4182779984,
+              -8
+            ],
+            "out": [
+              4.4182779984,
+              -8
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tempo-top-mark",
+      "name": "top mark",
+      "kind": "path",
+      "artboardId": "tempo-board",
+      "parentId": null,
+      "order": 11,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        212,
+        108
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#bdcbbd",
+        "skin": null,
+        "points": [
+          {
+            "id": "tempo-top-mark-p0",
+            "anchor": [
+              3.5,
+              0
+            ],
+            "in": [
+              1.5670033757000001,
+              0
+            ],
+            "out": [
+              3.5,
+              0
+            ]
+          },
+          {
+            "id": "tempo-top-mark-p1",
+            "anchor": [
+              84.5,
+              0
+            ],
+            "in": [
+              84.5,
+              0
+            ],
+            "out": [
+              86.4329966243,
+              0
+            ]
+          },
+          {
+            "id": "tempo-top-mark-p2",
+            "anchor": [
+              88,
+              3.5
+            ],
+            "in": [
+              88,
+              1.5670033757000001
+            ],
+            "out": [
+              88,
+              3.5
+            ]
+          },
+          {
+            "id": "tempo-top-mark-p3",
+            "anchor": [
+              88,
+              3.5
+            ],
+            "in": [
+              88,
+              3.5
+            ],
+            "out": [
+              88,
+              5.432996624299999
+            ]
+          },
+          {
+            "id": "tempo-top-mark-p4",
+            "anchor": [
+              84.5,
+              7
+            ],
+            "in": [
+              86.4329966243,
+              7
+            ],
+            "out": [
+              84.5,
+              7
+            ]
+          },
+          {
+            "id": "tempo-top-mark-p5",
+            "anchor": [
+              3.5,
+              7
+            ],
+            "in": [
+              3.5,
+              7
+            ],
+            "out": [
+              1.5670033757000001,
+              7
+            ]
+          },
+          {
+            "id": "tempo-top-mark-p6",
+            "anchor": [
+              0,
+              3.5
+            ],
+            "in": [
+              0,
+              5.432996624299999
+            ],
+            "out": [
+              0,
+              3.5
+            ]
+          },
+          {
+            "id": "tempo-top-mark-p7",
+            "anchor": [
+              0,
+              3.5
+            ],
+            "in": [
+              0,
+              3.5
+            ],
+            "out": [
+              0,
+              1.5670033757000001
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [
+    {
+      "id": "tempo-rhythm",
+      "name": "Rhythm",
+      "artboardId": "tempo-board",
+      "fps": 60,
+      "duration": 120,
+      "loop": true,
+      "tracks": [
+        {
+          "targetId": "tempo-smooth-column",
+          "property": "height",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 76,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.25,
+                  0,
+                  0.75,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 30,
+              "value": 166,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.25,
+                  0,
+                  0.75,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 208,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.25,
+                  0,
+                  0.75,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 90,
+              "value": 120,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.25,
+                  0,
+                  0.75,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 76,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.25,
+                  0,
+                  0.75,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "tempo-smooth-column",
+          "property": "y",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 288,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.25,
+                  0,
+                  0.75,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 30,
+              "value": 198,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.25,
+                  0,
+                  0.75,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 156,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.25,
+                  0,
+                  0.75,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 90,
+              "value": 244,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.25,
+                  0,
+                  0.75,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 288,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.25,
+                  0,
+                  0.75,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "tempo-smooth-column",
+          "property": "fill",
+          "keys": [
+            {
+              "frame": 0,
+              "value": "#89d4b5",
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": "#edb99c",
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": "#89d4b5",
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "tempo-linear-column",
+          "property": "height",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 76,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 30,
+              "value": 166,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 60,
+              "value": 208,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 90,
+              "value": 120,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 120,
+              "value": 76,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "tempo-linear-column",
+          "property": "y",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 288,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 30,
+              "value": 198,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 60,
+              "value": 156,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 90,
+              "value": 244,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 120,
+              "value": 288,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "tempo-linear-column",
+          "property": "fill",
+          "keys": [
+            {
+              "frame": 0,
+              "value": "#edb99c",
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": "#547e66",
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": "#edb99c",
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "tempo-stepped-column",
+          "property": "height",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 76,
+              "easing": {
+                "type": "hold",
+                "curve": null
+              }
+            },
+            {
+              "frame": 30,
+              "value": 166,
+              "easing": {
+                "type": "hold",
+                "curve": null
+              }
+            },
+            {
+              "frame": 60,
+              "value": 208,
+              "easing": {
+                "type": "hold",
+                "curve": null
+              }
+            },
+            {
+              "frame": 90,
+              "value": 120,
+              "easing": {
+                "type": "hold",
+                "curve": null
+              }
+            },
+            {
+              "frame": 120,
+              "value": 76,
+              "easing": {
+                "type": "hold",
+                "curve": null
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "tempo-stepped-column",
+          "property": "y",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 288,
+              "easing": {
+                "type": "hold",
+                "curve": null
+              }
+            },
+            {
+              "frame": 30,
+              "value": 198,
+              "easing": {
+                "type": "hold",
+                "curve": null
+              }
+            },
+            {
+              "frame": 60,
+              "value": 156,
+              "easing": {
+                "type": "hold",
+                "curve": null
+              }
+            },
+            {
+              "frame": 90,
+              "value": 244,
+              "easing": {
+                "type": "hold",
+                "curve": null
+              }
+            },
+            {
+              "frame": 120,
+              "value": 288,
+              "easing": {
+                "type": "hold",
+                "curve": null
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "tempo-stepped-column",
+          "property": "fill",
+          "keys": [
+            {
+              "frame": 0,
+              "value": "#547e66",
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": "#89d4b5",
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": "#547e66",
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "tempo-board": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  }
+}

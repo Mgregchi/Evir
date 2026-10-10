@@ -1,0 +1,33 @@
+{
+  "checkedAt": "2026-10-10T19:43:35.420271+00:00",
+  "baseCommit": "2e891c188b2d6f57d3060c5085439af70f7813f3",
+  "checks": {
+    "frontendUnit": 12,
+    "runtimeContracts": 6,
+    "publicPageConfigurations": 22,
+    "gallerySourcesOpenedAndExported": 5,
+    "experienceLifecycleAndRecovery": true
+  },
+  "officialRuntime": [
+    {
+      "backend": "canvas",
+      "runtimeVersion": "2.44.0",
+      "comparisons": 42,
+      "maxMAE": 0.2523918151855469
+    },
+    {
+      "backend": "webgl2",
+      "runtimeVersion": "2.44.0",
+      "comparisons": 42,
+      "maxMAE": 0.6655426025390625
+    }
+  ],
+  "fixtureSHA256": {
+    "milo": "c1db8a16bc72af40f2ade97f08ddbba8d3e8ba17c13f77736191d94d0c471199",
+    "orbit": "22c7afa65992ed8652e109051e3280f3f62b6f0e5b9a0c0b486ddd8654d6822c",
+    "bloom": "606c696bc3fa77d70b1c9354f6db2ea2bd4c54ee0604ecee7cc9dd18206f9ca8",
+    "tempo": "75af08e98c313d30dbeb59fbbb622a613931639602090bcb04d200c016224971",
+    "signal": "8d73bef975e2d346466b54b91893532880e202f9513e9a509133aecdb213f6f1"
+  },
+  "physicalDeviceMeasurements": false
+}

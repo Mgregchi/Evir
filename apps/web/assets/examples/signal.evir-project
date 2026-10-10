@@ -1,0 +1,2369 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 2,
+  "id": "signal-project",
+  "name": "Signal — an interactive yes",
+  "artboards": [
+    {
+      "id": "signal-board",
+      "name": "Signal — an interactive yes",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "signal-panel",
+      "name": "panel",
+      "kind": "path",
+      "artboardId": "signal-board",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        69,
+        61
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#dce8db",
+        "skin": null,
+        "points": [
+          {
+            "id": "signal-panel-p0",
+            "anchor": [
+              42,
+              0
+            ],
+            "in": [
+              18.8040405084,
+              0
+            ],
+            "out": [
+              42,
+              0
+            ]
+          },
+          {
+            "id": "signal-panel-p1",
+            "anchor": [
+              332,
+              0
+            ],
+            "in": [
+              332,
+              0
+            ],
+            "out": [
+              355.1959594916,
+              0
+            ]
+          },
+          {
+            "id": "signal-panel-p2",
+            "anchor": [
+              374,
+              42
+            ],
+            "in": [
+              374,
+              18.8040405084
+            ],
+            "out": [
+              374,
+              42
+            ]
+          },
+          {
+            "id": "signal-panel-p3",
+            "anchor": [
+              374,
+              352
+            ],
+            "in": [
+              374,
+              352
+            ],
+            "out": [
+              374,
+              375.1959594916
+            ]
+          },
+          {
+            "id": "signal-panel-p4",
+            "anchor": [
+              332,
+              394
+            ],
+            "in": [
+              355.1959594916,
+              394
+            ],
+            "out": [
+              332,
+              394
+            ]
+          },
+          {
+            "id": "signal-panel-p5",
+            "anchor": [
+              42,
+              394
+            ],
+            "in": [
+              42,
+              394
+            ],
+            "out": [
+              18.8040405084,
+              394
+            ]
+          },
+          {
+            "id": "signal-panel-p6",
+            "anchor": [
+              0,
+              352
+            ],
+            "in": [
+              0,
+              375.1959594916
+            ],
+            "out": [
+              0,
+              352
+            ]
+          },
+          {
+            "id": "signal-panel-p7",
+            "anchor": [
+              0,
+              42
+            ],
+            "in": [
+              0,
+              42
+            ],
+            "out": [
+              0,
+              18.8040405084
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "signal-panel-face",
+      "name": "panel face",
+      "kind": "path",
+      "artboardId": "signal-board",
+      "parentId": null,
+      "order": 1,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        83,
+        75
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f5f3e7",
+        "skin": null,
+        "points": [
+          {
+            "id": "signal-panel-face-p0",
+            "anchor": [
+              32,
+              0
+            ],
+            "in": [
+              14.3268880064,
+              0
+            ],
+            "out": [
+              32,
+              0
+            ]
+          },
+          {
+            "id": "signal-panel-face-p1",
+            "anchor": [
+              314,
+              0
+            ],
+            "in": [
+              314,
+              0
+            ],
+            "out": [
+              331.6731119936,
+              0
+            ]
+          },
+          {
+            "id": "signal-panel-face-p2",
+            "anchor": [
+              346,
+              32
+            ],
+            "in": [
+              346,
+              14.3268880064
+            ],
+            "out": [
+              346,
+              32
+            ]
+          },
+          {
+            "id": "signal-panel-face-p3",
+            "anchor": [
+              346,
+              334
+            ],
+            "in": [
+              346,
+              334
+            ],
+            "out": [
+              346,
+              351.6731119936
+            ]
+          },
+          {
+            "id": "signal-panel-face-p4",
+            "anchor": [
+              314,
+              366
+            ],
+            "in": [
+              331.6731119936,
+              366
+            ],
+            "out": [
+              314,
+              366
+            ]
+          },
+          {
+            "id": "signal-panel-face-p5",
+            "anchor": [
+              32,
+              366
+            ],
+            "in": [
+              32,
+              366
+            ],
+            "out": [
+              14.3268880064,
+              366
+            ]
+          },
+          {
+            "id": "signal-panel-face-p6",
+            "anchor": [
+              0,
+              334
+            ],
+            "in": [
+              0,
+              351.6731119936
+            ],
+            "out": [
+              0,
+              334
+            ]
+          },
+          {
+            "id": "signal-panel-face-p7",
+            "anchor": [
+              0,
+              32
+            ],
+            "in": [
+              0,
+              32
+            ],
+            "out": [
+              0,
+              14.3268880064
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "signal-header-dot-0",
+      "name": "header dot 0",
+      "kind": "path",
+      "artboardId": "signal-board",
+      "parentId": null,
+      "order": 2,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        118,
+        110
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#98ad99",
+        "skin": null,
+        "points": [
+          {
+            "id": "signal-header-dot-0-p0",
+            "anchor": [
+              4,
+              0
+            ],
+            "in": [
+              4,
+              -2.2091389992
+            ],
+            "out": [
+              4,
+              2.2091389992
+            ]
+          },
+          {
+            "id": "signal-header-dot-0-p1",
+            "anchor": [
+              0,
+              4
+            ],
+            "in": [
+              2.2091389992,
+              4
+            ],
+            "out": [
+              -2.2091389992,
+              4
+            ]
+          },
+          {
+            "id": "signal-header-dot-0-p2",
+            "anchor": [
+              -4,
+              0
+            ],
+            "in": [
+              -4,
+              2.2091389992
+            ],
+            "out": [
+              -4,
+              -2.2091389992
+            ]
+          },
+          {
+            "id": "signal-header-dot-0-p3",
+            "anchor": [
+              0,
+              -4
+            ],
+            "in": [
+              -2.2091389992,
+              -4
+            ],
+            "out": [
+              2.2091389992,
+              -4
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "signal-header-dot-1",
+      "name": "header dot 1",
+      "kind": "path",
+      "artboardId": "signal-board",
+      "parentId": null,
+      "order": 3,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        138,
+        110
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#98ad99",
+        "skin": null,
+        "points": [
+          {
+            "id": "signal-header-dot-1-p0",
+            "anchor": [
+              4,
+              0
+            ],
+            "in": [
+              4,
+              -2.2091389992
+            ],
+            "out": [
+              4,
+              2.2091389992
+            ]
+          },
+          {
+            "id": "signal-header-dot-1-p1",
+            "anchor": [
+              0,
+              4
+            ],
+            "in": [
+              2.2091389992,
+              4
+            ],
+            "out": [
+              -2.2091389992,
+              4
+            ]
+          },
+          {
+            "id": "signal-header-dot-1-p2",
+            "anchor": [
+              -4,
+              0
+            ],
+            "in": [
+              -4,
+              2.2091389992
+            ],
+            "out": [
+              -4,
+              -2.2091389992
+            ]
+          },
+          {
+            "id": "signal-header-dot-1-p3",
+            "anchor": [
+              0,
+              -4
+            ],
+            "in": [
+              -2.2091389992,
+              -4
+            ],
+            "out": [
+              2.2091389992,
+              -4
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "signal-header-dot-2",
+      "name": "header dot 2",
+      "kind": "path",
+      "artboardId": "signal-board",
+      "parentId": null,
+      "order": 4,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        158,
+        110
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#98ad99",
+        "skin": null,
+        "points": [
+          {
+            "id": "signal-header-dot-2-p0",
+            "anchor": [
+              4,
+              0
+            ],
+            "in": [
+              4,
+              -2.2091389992
+            ],
+            "out": [
+              4,
+              2.2091389992
+            ]
+          },
+          {
+            "id": "signal-header-dot-2-p1",
+            "anchor": [
+              0,
+              4
+            ],
+            "in": [
+              2.2091389992,
+              4
+            ],
+            "out": [
+              -2.2091389992,
+              4
+            ]
+          },
+          {
+            "id": "signal-header-dot-2-p2",
+            "anchor": [
+              -4,
+              0
+            ],
+            "in": [
+              -4,
+              2.2091389992
+            ],
+            "out": [
+              -4,
+              -2.2091389992
+            ]
+          },
+          {
+            "id": "signal-header-dot-2-p3",
+            "anchor": [
+              0,
+              -4
+            ],
+            "in": [
+              -2.2091389992,
+              -4
+            ],
+            "out": [
+              2.2091389992,
+              -4
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "signal-status-disc",
+      "name": "status disc",
+      "kind": "path",
+      "artboardId": "signal-board",
+      "parentId": null,
+      "order": 5,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        256,
+        248
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#d1dccf",
+        "skin": null,
+        "points": [
+          {
+            "id": "signal-status-disc-p0",
+            "anchor": [
+              90,
+              0
+            ],
+            "in": [
+              90,
+              -49.705627482
+            ],
+            "out": [
+              90,
+              49.705627482
+            ]
+          },
+          {
+            "id": "signal-status-disc-p1",
+            "anchor": [
+              0,
+              90
+            ],
+            "in": [
+              49.705627482,
+              90
+            ],
+            "out": [
+              -49.705627482,
+              90
+            ]
+          },
+          {
+            "id": "signal-status-disc-p2",
+            "anchor": [
+              -90,
+              0
+            ],
+            "in": [
+              -90,
+              49.705627482
+            ],
+            "out": [
+              -90,
+              -49.705627482
+            ]
+          },
+          {
+            "id": "signal-status-disc-p3",
+            "anchor": [
+              0,
+              -90
+            ],
+            "in": [
+              -49.705627482,
+              -90
+            ],
+            "out": [
+              49.705627482,
+              -90
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "signal-status-face",
+      "name": "status face",
+      "kind": "path",
+      "artboardId": "signal-board",
+      "parentId": null,
+      "order": 6,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        256,
+        248
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f5f3e7",
+        "skin": null,
+        "points": [
+          {
+            "id": "signal-status-face-p0",
+            "anchor": [
+              70,
+              0
+            ],
+            "in": [
+              70,
+              -38.659932485999995
+            ],
+            "out": [
+              70,
+              38.659932485999995
+            ]
+          },
+          {
+            "id": "signal-status-face-p1",
+            "anchor": [
+              0,
+              70
+            ],
+            "in": [
+              38.659932485999995,
+              70
+            ],
+            "out": [
+              -38.659932485999995,
+              70
+            ]
+          },
+          {
+            "id": "signal-status-face-p2",
+            "anchor": [
+              -70,
+              0
+            ],
+            "in": [
+              -70,
+              38.659932485999995
+            ],
+            "out": [
+              -70,
+              -38.659932485999995
+            ]
+          },
+          {
+            "id": "signal-status-face-p3",
+            "anchor": [
+              0,
+              -70
+            ],
+            "in": [
+              -38.659932485999995,
+              -70
+            ],
+            "out": [
+              38.659932485999995,
+              -70
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "signal-check",
+      "name": "check",
+      "kind": "path",
+      "artboardId": "signal-board",
+      "parentId": null,
+      "order": 7,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#243f3300",
+        "skin": null,
+        "points": [
+          {
+            "id": "signal-check-p0",
+            "anchor": [
+              215,
+              246
+            ],
+            "in": [
+              215,
+              246
+            ],
+            "out": [
+              215,
+              246
+            ]
+          },
+          {
+            "id": "signal-check-p1",
+            "anchor": [
+              243,
+              274
+            ],
+            "in": [
+              243,
+              274
+            ],
+            "out": [
+              243,
+              274
+            ]
+          },
+          {
+            "id": "signal-check-p2",
+            "anchor": [
+              296,
+              221
+            ],
+            "in": [
+              296,
+              221
+            ],
+            "out": [
+              296,
+              221
+            ]
+          },
+          {
+            "id": "signal-check-p3",
+            "anchor": [
+              306,
+              231
+            ],
+            "in": [
+              306,
+              231
+            ],
+            "out": [
+              306,
+              231
+            ]
+          },
+          {
+            "id": "signal-check-p4",
+            "anchor": [
+              243,
+              294
+            ],
+            "in": [
+              243,
+              294
+            ],
+            "out": [
+              243,
+              294
+            ]
+          },
+          {
+            "id": "signal-check-p5",
+            "anchor": [
+              205,
+              256
+            ],
+            "in": [
+              205,
+              256
+            ],
+            "out": [
+              205,
+              256
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "signal-waiting-mark",
+      "name": "waiting mark",
+      "kind": "path",
+      "artboardId": "signal-board",
+      "parentId": null,
+      "order": 8,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        242,
+        220
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#8ba68f",
+        "skin": null,
+        "points": [
+          {
+            "id": "signal-waiting-mark-p0",
+            "anchor": [
+              14,
+              0
+            ],
+            "in": [
+              6.268013502800001,
+              0
+            ],
+            "out": [
+              14,
+              0
+            ]
+          },
+          {
+            "id": "signal-waiting-mark-p1",
+            "anchor": [
+              14,
+              0
+            ],
+            "in": [
+              14,
+              0
+            ],
+            "out": [
+              21.731986497199998,
+              0
+            ]
+          },
+          {
+            "id": "signal-waiting-mark-p2",
+            "anchor": [
+              28,
+              14
+            ],
+            "in": [
+              28,
+              6.268013502800001
+            ],
+            "out": [
+              28,
+              14
+            ]
+          },
+          {
+            "id": "signal-waiting-mark-p3",
+            "anchor": [
+              28,
+              42
+            ],
+            "in": [
+              28,
+              42
+            ],
+            "out": [
+              28,
+              49.7319864972
+            ]
+          },
+          {
+            "id": "signal-waiting-mark-p4",
+            "anchor": [
+              14,
+              56
+            ],
+            "in": [
+              21.731986497199998,
+              56
+            ],
+            "out": [
+              14,
+              56
+            ]
+          },
+          {
+            "id": "signal-waiting-mark-p5",
+            "anchor": [
+              14,
+              56
+            ],
+            "in": [
+              14,
+              56
+            ],
+            "out": [
+              6.268013502800001,
+              56
+            ]
+          },
+          {
+            "id": "signal-waiting-mark-p6",
+            "anchor": [
+              0,
+              42
+            ],
+            "in": [
+              0,
+              49.7319864972
+            ],
+            "out": [
+              0,
+              42
+            ]
+          },
+          {
+            "id": "signal-waiting-mark-p7",
+            "anchor": [
+              0,
+              14
+            ],
+            "in": [
+              0,
+              14
+            ],
+            "out": [
+              0,
+              6.268013502800001
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "signal-celebration-pad",
+      "name": "celebration pad",
+      "kind": "path",
+      "artboardId": "signal-board",
+      "parentId": null,
+      "order": 9,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        175,
+        367
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#c5d3c3",
+        "skin": null,
+        "points": [
+          {
+            "id": "signal-celebration-pad-p0",
+            "anchor": [
+              19,
+              0
+            ],
+            "in": [
+              8.5065897538,
+              0
+            ],
+            "out": [
+              19,
+              0
+            ]
+          },
+          {
+            "id": "signal-celebration-pad-p1",
+            "anchor": [
+              143,
+              0
+            ],
+            "in": [
+              143,
+              0
+            ],
+            "out": [
+              153.4934102462,
+              0
+            ]
+          },
+          {
+            "id": "signal-celebration-pad-p2",
+            "anchor": [
+              162,
+              19
+            ],
+            "in": [
+              162,
+              8.5065897538
+            ],
+            "out": [
+              162,
+              19
+            ]
+          },
+          {
+            "id": "signal-celebration-pad-p3",
+            "anchor": [
+              162,
+              19
+            ],
+            "in": [
+              162,
+              19
+            ],
+            "out": [
+              162,
+              29.4934102462
+            ]
+          },
+          {
+            "id": "signal-celebration-pad-p4",
+            "anchor": [
+              143,
+              38
+            ],
+            "in": [
+              153.4934102462,
+              38
+            ],
+            "out": [
+              143,
+              38
+            ]
+          },
+          {
+            "id": "signal-celebration-pad-p5",
+            "anchor": [
+              19,
+              38
+            ],
+            "in": [
+              19,
+              38
+            ],
+            "out": [
+              8.5065897538,
+              38
+            ]
+          },
+          {
+            "id": "signal-celebration-pad-p6",
+            "anchor": [
+              0,
+              19
+            ],
+            "in": [
+              0,
+              29.4934102462
+            ],
+            "out": [
+              0,
+              19
+            ]
+          },
+          {
+            "id": "signal-celebration-pad-p7",
+            "anchor": [
+              0,
+              19
+            ],
+            "in": [
+              0,
+              19
+            ],
+            "out": [
+              0,
+              8.5065897538
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "signal-spark-0",
+      "name": "spark 0",
+      "kind": "path",
+      "artboardId": "signal-board",
+      "parentId": null,
+      "order": 10,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        150,
+        177
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e9b49600",
+        "skin": null,
+        "points": [
+          {
+            "id": "signal-spark-0-p0",
+            "anchor": [
+              0,
+              -12
+            ],
+            "in": [
+              0,
+              -12
+            ],
+            "out": [
+              0,
+              -12
+            ]
+          },
+          {
+            "id": "signal-spark-0-p1",
+            "anchor": [
+              4,
+              -4
+            ],
+            "in": [
+              4,
+              -4
+            ],
+            "out": [
+              4,
+              -4
+            ]
+          },
+          {
+            "id": "signal-spark-0-p2",
+            "anchor": [
+              12,
+              0
+            ],
+            "in": [
+              12,
+              0
+            ],
+            "out": [
+              12,
+              0
+            ]
+          },
+          {
+            "id": "signal-spark-0-p3",
+            "anchor": [
+              4,
+              4
+            ],
+            "in": [
+              4,
+              4
+            ],
+            "out": [
+              4,
+              4
+            ]
+          },
+          {
+            "id": "signal-spark-0-p4",
+            "anchor": [
+              0,
+              12
+            ],
+            "in": [
+              0,
+              12
+            ],
+            "out": [
+              0,
+              12
+            ]
+          },
+          {
+            "id": "signal-spark-0-p5",
+            "anchor": [
+              -4,
+              4
+            ],
+            "in": [
+              -4,
+              4
+            ],
+            "out": [
+              -4,
+              4
+            ]
+          },
+          {
+            "id": "signal-spark-0-p6",
+            "anchor": [
+              -12,
+              0
+            ],
+            "in": [
+              -12,
+              0
+            ],
+            "out": [
+              -12,
+              0
+            ]
+          },
+          {
+            "id": "signal-spark-0-p7",
+            "anchor": [
+              -4,
+              -4
+            ],
+            "in": [
+              -4,
+              -4
+            ],
+            "out": [
+              -4,
+              -4
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "signal-spark-1",
+      "name": "spark 1",
+      "kind": "path",
+      "artboardId": "signal-board",
+      "parentId": null,
+      "order": 11,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        362,
+        183
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e9b49600",
+        "skin": null,
+        "points": [
+          {
+            "id": "signal-spark-1-p0",
+            "anchor": [
+              0,
+              -12
+            ],
+            "in": [
+              0,
+              -12
+            ],
+            "out": [
+              0,
+              -12
+            ]
+          },
+          {
+            "id": "signal-spark-1-p1",
+            "anchor": [
+              4,
+              -4
+            ],
+            "in": [
+              4,
+              -4
+            ],
+            "out": [
+              4,
+              -4
+            ]
+          },
+          {
+            "id": "signal-spark-1-p2",
+            "anchor": [
+              12,
+              0
+            ],
+            "in": [
+              12,
+              0
+            ],
+            "out": [
+              12,
+              0
+            ]
+          },
+          {
+            "id": "signal-spark-1-p3",
+            "anchor": [
+              4,
+              4
+            ],
+            "in": [
+              4,
+              4
+            ],
+            "out": [
+              4,
+              4
+            ]
+          },
+          {
+            "id": "signal-spark-1-p4",
+            "anchor": [
+              0,
+              12
+            ],
+            "in": [
+              0,
+              12
+            ],
+            "out": [
+              0,
+              12
+            ]
+          },
+          {
+            "id": "signal-spark-1-p5",
+            "anchor": [
+              -4,
+              4
+            ],
+            "in": [
+              -4,
+              4
+            ],
+            "out": [
+              -4,
+              4
+            ]
+          },
+          {
+            "id": "signal-spark-1-p6",
+            "anchor": [
+              -12,
+              0
+            ],
+            "in": [
+              -12,
+              0
+            ],
+            "out": [
+              -12,
+              0
+            ]
+          },
+          {
+            "id": "signal-spark-1-p7",
+            "anchor": [
+              -4,
+              -4
+            ],
+            "in": [
+              -4,
+              -4
+            ],
+            "out": [
+              -4,
+              -4
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "signal-spark-2",
+      "name": "spark 2",
+      "kind": "path",
+      "artboardId": "signal-board",
+      "parentId": null,
+      "order": 12,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        348,
+        312
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e9b49600",
+        "skin": null,
+        "points": [
+          {
+            "id": "signal-spark-2-p0",
+            "anchor": [
+              0,
+              -12
+            ],
+            "in": [
+              0,
+              -12
+            ],
+            "out": [
+              0,
+              -12
+            ]
+          },
+          {
+            "id": "signal-spark-2-p1",
+            "anchor": [
+              4,
+              -4
+            ],
+            "in": [
+              4,
+              -4
+            ],
+            "out": [
+              4,
+              -4
+            ]
+          },
+          {
+            "id": "signal-spark-2-p2",
+            "anchor": [
+              12,
+              0
+            ],
+            "in": [
+              12,
+              0
+            ],
+            "out": [
+              12,
+              0
+            ]
+          },
+          {
+            "id": "signal-spark-2-p3",
+            "anchor": [
+              4,
+              4
+            ],
+            "in": [
+              4,
+              4
+            ],
+            "out": [
+              4,
+              4
+            ]
+          },
+          {
+            "id": "signal-spark-2-p4",
+            "anchor": [
+              0,
+              12
+            ],
+            "in": [
+              0,
+              12
+            ],
+            "out": [
+              0,
+              12
+            ]
+          },
+          {
+            "id": "signal-spark-2-p5",
+            "anchor": [
+              -4,
+              4
+            ],
+            "in": [
+              -4,
+              4
+            ],
+            "out": [
+              -4,
+              4
+            ]
+          },
+          {
+            "id": "signal-spark-2-p6",
+            "anchor": [
+              -12,
+              0
+            ],
+            "in": [
+              -12,
+              0
+            ],
+            "out": [
+              -12,
+              0
+            ]
+          },
+          {
+            "id": "signal-spark-2-p7",
+            "anchor": [
+              -4,
+              -4
+            ],
+            "in": [
+              -4,
+              -4
+            ],
+            "out": [
+              -4,
+              -4
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "signal-spark-3",
+      "name": "spark 3",
+      "kind": "path",
+      "artboardId": "signal-board",
+      "parentId": null,
+      "order": 13,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        166,
+        308
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e9b49600",
+        "skin": null,
+        "points": [
+          {
+            "id": "signal-spark-3-p0",
+            "anchor": [
+              0,
+              -12
+            ],
+            "in": [
+              0,
+              -12
+            ],
+            "out": [
+              0,
+              -12
+            ]
+          },
+          {
+            "id": "signal-spark-3-p1",
+            "anchor": [
+              4,
+              -4
+            ],
+            "in": [
+              4,
+              -4
+            ],
+            "out": [
+              4,
+              -4
+            ]
+          },
+          {
+            "id": "signal-spark-3-p2",
+            "anchor": [
+              12,
+              0
+            ],
+            "in": [
+              12,
+              0
+            ],
+            "out": [
+              12,
+              0
+            ]
+          },
+          {
+            "id": "signal-spark-3-p3",
+            "anchor": [
+              4,
+              4
+            ],
+            "in": [
+              4,
+              4
+            ],
+            "out": [
+              4,
+              4
+            ]
+          },
+          {
+            "id": "signal-spark-3-p4",
+            "anchor": [
+              0,
+              12
+            ],
+            "in": [
+              0,
+              12
+            ],
+            "out": [
+              0,
+              12
+            ]
+          },
+          {
+            "id": "signal-spark-3-p5",
+            "anchor": [
+              -4,
+              4
+            ],
+            "in": [
+              -4,
+              4
+            ],
+            "out": [
+              -4,
+              4
+            ]
+          },
+          {
+            "id": "signal-spark-3-p6",
+            "anchor": [
+              -12,
+              0
+            ],
+            "in": [
+              -12,
+              0
+            ],
+            "out": [
+              -12,
+              0
+            ]
+          },
+          {
+            "id": "signal-spark-3-p7",
+            "anchor": [
+              -4,
+              -4
+            ],
+            "in": [
+              -4,
+              -4
+            ],
+            "out": [
+              -4,
+              -4
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [
+    {
+      "id": "signal-waiting",
+      "name": "Waiting",
+      "artboardId": "signal-board",
+      "fps": 60,
+      "duration": 120,
+      "loop": true,
+      "tracks": [
+        {
+          "targetId": "signal-status-disc",
+          "property": "fill",
+          "keys": [
+            {
+              "frame": 0,
+              "value": "#d1dccf",
+              "easing": {
+                "type": "hold",
+                "curve": null
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "signal-check",
+          "property": "fill",
+          "keys": [
+            {
+              "frame": 0,
+              "value": "#243f3300",
+              "easing": {
+                "type": "hold",
+                "curve": null
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "signal-waiting-mark",
+          "property": "fill",
+          "keys": [
+            {
+              "frame": 0,
+              "value": "#8ba68f",
+              "easing": {
+                "type": "hold",
+                "curve": null
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "signal-celebration-pad",
+          "property": "fill",
+          "keys": [
+            {
+              "frame": 0,
+              "value": "#c5d3c3",
+              "easing": {
+                "type": "hold",
+                "curve": null
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "signal-spark-0",
+          "property": "fill",
+          "keys": [
+            {
+              "frame": 0,
+              "value": "#e9b49600",
+              "easing": {
+                "type": "hold",
+                "curve": null
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "signal-spark-1",
+          "property": "fill",
+          "keys": [
+            {
+              "frame": 0,
+              "value": "#e9b49600",
+              "easing": {
+                "type": "hold",
+                "curve": null
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "signal-spark-2",
+          "property": "fill",
+          "keys": [
+            {
+              "frame": 0,
+              "value": "#e9b49600",
+              "easing": {
+                "type": "hold",
+                "curve": null
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "signal-spark-3",
+          "property": "fill",
+          "keys": [
+            {
+              "frame": 0,
+              "value": "#e9b49600",
+              "easing": {
+                "type": "hold",
+                "curve": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "signal-ready",
+      "name": "Ready",
+      "artboardId": "signal-board",
+      "fps": 60,
+      "duration": 120,
+      "loop": true,
+      "tracks": [
+        {
+          "targetId": "signal-status-disc",
+          "property": "fill",
+          "keys": [
+            {
+              "frame": 0,
+              "value": "#89d4b5",
+              "easing": {
+                "type": "hold",
+                "curve": null
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "signal-check",
+          "property": "fill",
+          "keys": [
+            {
+              "frame": 0,
+              "value": "#243f33ff",
+              "easing": {
+                "type": "hold",
+                "curve": null
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "signal-waiting-mark",
+          "property": "fill",
+          "keys": [
+            {
+              "frame": 0,
+              "value": "#8ba68f00",
+              "easing": {
+                "type": "hold",
+                "curve": null
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "signal-celebration-pad",
+          "property": "fill",
+          "keys": [
+            {
+              "frame": 0,
+              "value": "#89d4b5",
+              "easing": {
+                "type": "hold",
+                "curve": null
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "signal-spark-0",
+          "property": "fill",
+          "keys": [
+            {
+              "frame": 0,
+              "value": "#e9b49600",
+              "easing": {
+                "type": "hold",
+                "curve": null
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "signal-spark-1",
+          "property": "fill",
+          "keys": [
+            {
+              "frame": 0,
+              "value": "#e9b49600",
+              "easing": {
+                "type": "hold",
+                "curve": null
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "signal-spark-2",
+          "property": "fill",
+          "keys": [
+            {
+              "frame": 0,
+              "value": "#e9b49600",
+              "easing": {
+                "type": "hold",
+                "curve": null
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "signal-spark-3",
+          "property": "fill",
+          "keys": [
+            {
+              "frame": 0,
+              "value": "#e9b49600",
+              "easing": {
+                "type": "hold",
+                "curve": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "signal-celebrating",
+      "name": "Celebrating",
+      "artboardId": "signal-board",
+      "fps": 60,
+      "duration": 120,
+      "loop": true,
+      "tracks": [
+        {
+          "targetId": "signal-status-disc",
+          "property": "fill",
+          "keys": [
+            {
+              "frame": 0,
+              "value": "#edb99c",
+              "easing": {
+                "type": "hold",
+                "curve": null
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "signal-check",
+          "property": "fill",
+          "keys": [
+            {
+              "frame": 0,
+              "value": "#243f33ff",
+              "easing": {
+                "type": "hold",
+                "curve": null
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "signal-waiting-mark",
+          "property": "fill",
+          "keys": [
+            {
+              "frame": 0,
+              "value": "#8ba68f00",
+              "easing": {
+                "type": "hold",
+                "curve": null
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "signal-celebration-pad",
+          "property": "fill",
+          "keys": [
+            {
+              "frame": 0,
+              "value": "#edb99c",
+              "easing": {
+                "type": "hold",
+                "curve": null
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "signal-spark-0",
+          "property": "fill",
+          "keys": [
+            {
+              "frame": 0,
+              "value": "#e9b496ff",
+              "easing": {
+                "type": "hold",
+                "curve": null
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "signal-spark-1",
+          "property": "fill",
+          "keys": [
+            {
+              "frame": 0,
+              "value": "#e9b496ff",
+              "easing": {
+                "type": "hold",
+                "curve": null
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "signal-spark-2",
+          "property": "fill",
+          "keys": [
+            {
+              "frame": 0,
+              "value": "#e9b496ff",
+              "easing": {
+                "type": "hold",
+                "curve": null
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "signal-spark-3",
+          "property": "fill",
+          "keys": [
+            {
+              "frame": 0,
+              "value": "#e9b496ff",
+              "easing": {
+                "type": "hold",
+                "curve": null
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "signal-spark-0",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 1.5707963267948966,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 3.141592653589793,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "signal-spark-1",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 1.5707963267948966,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 3.141592653589793,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "signal-spark-2",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 1.5707963267948966,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 3.141592653589793,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "signal-spark-3",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 1.5707963267948966,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 3.141592653589793,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "machines": [
+    {
+      "id": "signal-flow",
+      "name": "Flow",
+      "artboardId": "signal-board",
+      "inputs": [
+        {
+          "id": "signal-enabled",
+          "name": "enabled",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "id": "signal-level",
+          "name": "level",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "id": "signal-celebrate",
+          "name": "celebrate",
+          "type": "trigger",
+          "value": false
+        }
+      ],
+      "states": [
+        {
+          "id": "signal-state-0",
+          "name": "Waiting",
+          "animationId": "signal-waiting",
+          "position": [
+            0,
+            40
+          ]
+        },
+        {
+          "id": "signal-state-1",
+          "name": "Ready",
+          "animationId": "signal-ready",
+          "position": [
+            200,
+            40
+          ]
+        },
+        {
+          "id": "signal-state-2",
+          "name": "Celebrating",
+          "animationId": "signal-celebrating",
+          "position": [
+            400,
+            40
+          ]
+        }
+      ],
+      "entryStateId": "signal-state-0",
+      "transitions": [
+        {
+          "id": "signal-transition-ready",
+          "fromId": "signal-state-0",
+          "toId": "signal-state-1",
+          "conditions": [
+            {
+              "inputId": "signal-enabled",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "inputId": "signal-level",
+              "op": "ge",
+              "value": 50
+            }
+          ]
+        },
+        {
+          "id": "signal-transition-disabled",
+          "fromId": "signal-state-1",
+          "toId": "signal-state-0",
+          "conditions": [
+            {
+              "inputId": "signal-enabled",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        {
+          "id": "signal-transition-low",
+          "fromId": "signal-state-1",
+          "toId": "signal-state-0",
+          "conditions": [
+            {
+              "inputId": "signal-level",
+              "op": "lt",
+              "value": 50
+            }
+          ]
+        },
+        {
+          "id": "signal-transition-celebrate",
+          "fromId": "signal-state-1",
+          "toId": "signal-state-2",
+          "conditions": [
+            {
+              "inputId": "signal-celebrate",
+              "op": "fire",
+              "value": null
+            }
+          ]
+        }
+      ],
+      "listeners": [
+        {
+          "id": "signal-listener",
+          "targetId": "signal-celebration-pad",
+          "event": "click",
+          "inputId": "signal-celebrate",
+          "value": null
+        }
+      ]
+    }
+  ],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "signal-board": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  }
+}

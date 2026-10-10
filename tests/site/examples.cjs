@@ -5,13 +5,14 @@ const gpu=require('../../tools/gpu_diagnostics.cjs');
 if(!process.env.CHROMIUM_PATH && !fs.existsSync('/usr/bin/chromium'))process.env.CHROMIUM_PATH=chromium.executablePath();
 (async()=>{
   await require('../../tools/prepare-oracle.cjs').prepare();
-  const report={checkedAt:new Date().toISOString(),runtimeVersion:'2.44.0',scope:'Original showcase export pixels against Evir evaluated source at selected keyframes; bool transitions. Cloud graphics, not mobile/device performance.',backends:[]};
+  const {exampleIds}=await import('../../apps/web/examples.mjs');
+  const report={checkedAt:new Date().toISOString(),runtimeVersion:'2.44.0',scope:'Original showcase export pixels against Evir evaluated source at selected keyframes; boolean/number/AND/trigger/listener/reset outcomes. Cloud graphics, not mobile/device performance.',backends:[]};
   for(const backend of ['canvas','webgl2']) {
     process.env.RIVE_RENDERER=backend;
     await run(async page=>{
       await gpu.install(page);await page.reload();
       const checks=[];
-      for(const name of ['milo','orbit']) {
+      for(const name of exampleIds) {
         const project=JSON.parse(fs.readFileSync(path.join(__dirname,`../../apps/web/assets/examples/${name}.evir-project`)));
         const load=async options=>{
           const inventory=await page.evaluate(({name,options})=>loadFixture(name,{src:`/apps/web/assets/examples/${name}.riv`,autoplay:false,...options}),{name,options});
@@ -41,20 +42,29 @@ if(!process.env.CHROMIUM_PATH && !fs.existsSync('/usr/bin/chromium'))process.env
         }
         if(project.machines.length) {
           const machine=project.machines[0];await load({stateMachines:machine.name});
-          const advance=()=>page.evaluate(()=>{player.animator.stateMachines[0].advanceAndApply(0);player.drawFrame();});
+          const advance=()=>page.evaluate(()=>{player.stopRendering();player.animator.stateMachines[0].advanceAndApply(0);player.lastRenderTime=document.timeline.currentTime;player.drawFrame();player.stopRendering();});
+          const input=async(inputName,value)=>{await page.evaluate(({machineName,inputName,value})=>{const i=player.stateMachineInputs(machineName).find(i=>i.name===inputName);if(i.type===rive.StateMachineInputType.Trigger)i.fire();else i.value=value;},{machineName:machine.name,inputName,value});await advance();};
           await advance();await compare(project.animations[0],0,'machine entry');
           const inputs=await page.evaluate(name=>player.stateMachineInputs(name).map(i=>({name:i.name,type:i.type})),machine.name);
-          assert.equal(inputs.length,1);assert.equal(inputs[0].name,'isWaving');
-          for(const [value,index] of [[true,1],[false,0]]) {
-            await page.evaluate(({name,value})=>{player.stateMachineInputs(name)[0].value=value;},{name:machine.name,value});
-            await advance();await compare(project.animations[index],0,`isWaving=${value}`);
-          }
+          assert.deepEqual(inputs.map(i=>i.name),machine.inputs.map(i=>i.name));
+          if(name==='milo') {
+            for(const [value,index] of [[true,1],[false,0]]){await input('isWaving',value);await compare(project.animations[index],0,`isWaving=${value}`);}
+          } else if(name==='signal') {
+            await input('level',75);await compare(project.animations[0],0,'disabled AND guard');
+            await input('enabled',true);await compare(project.animations[1],0,'ready AND conditions');
+            await input('level',20);await compare(project.animations[0],0,'number return');
+            await input('level',75);await input('celebrate',true);await compare(project.animations[2],0,'trigger celebration');
+            await load({stateMachines:machine.name});await advance();await compare(project.animations[0],0,'reset defaults');
+            await input('enabled',true);await input('level',75);
+            await page.evaluate(()=>{player.play('Flow');player.stopRendering();});
+            const rect=await page.locator('#canvas').boundingBox();await page.mouse.click(rect.x+128,rect.y+193);await advance();await compare(project.animations[2],0,'pad click listener');
+          } else assert.fail(`Add declared machine-input scenarios for ${name}`);
         }
       }
       report.backends.push({backend,diagnostics:await gpu.collect(page),checks});
       console.log(`${backend}: ${checks.length} showcase keyframe/transition comparisons passed.`);
     });
   }
-  report.fixtures=Object.fromEntries(['milo','orbit'].map(name=>[name,createHash('sha256').update(fs.readFileSync(path.join(__dirname,`../../apps/web/assets/examples/${name}.riv`))).digest('hex')]));
+  report.fixtures=Object.fromEntries(exampleIds.map(name=>[name,createHash('sha256').update(fs.readFileSync(path.join(__dirname,`../../apps/web/assets/examples/${name}.riv`))).digest('hex')]));
   fs.mkdirSync('research/results/public-site',{recursive:true});fs.writeFileSync('research/results/public-site/examples.json',JSON.stringify(report,null,2)+'\n');
 })().catch(e=>{console.error(e);process.exitCode=1;});

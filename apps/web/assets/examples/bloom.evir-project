@@ -1,0 +1,1472 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 2,
+  "id": "bloom-project",
+  "name": "Bloom — rooted motion",
+  "artboards": [
+    {
+      "id": "bloom-board",
+      "name": "Bloom — rooted motion",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "bloom-backdrop",
+      "name": "backdrop",
+      "kind": "path",
+      "artboardId": "bloom-board",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        256,
+        248
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#dfeadd",
+        "skin": null,
+        "points": [
+          {
+            "id": "bloom-backdrop-p0",
+            "anchor": [
+              187,
+              0
+            ],
+            "in": [
+              187,
+              -103.2772482126
+            ],
+            "out": [
+              187,
+              103.2772482126
+            ]
+          },
+          {
+            "id": "bloom-backdrop-p1",
+            "anchor": [
+              0,
+              187
+            ],
+            "in": [
+              103.2772482126,
+              187
+            ],
+            "out": [
+              -103.2772482126,
+              187
+            ]
+          },
+          {
+            "id": "bloom-backdrop-p2",
+            "anchor": [
+              -187,
+              0
+            ],
+            "in": [
+              -187,
+              103.2772482126
+            ],
+            "out": [
+              -187,
+              -103.2772482126
+            ]
+          },
+          {
+            "id": "bloom-backdrop-p3",
+            "anchor": [
+              0,
+              -187
+            ],
+            "in": [
+              -103.2772482126,
+              -187
+            ],
+            "out": [
+              103.2772482126,
+              -187
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "bloom-shadow",
+      "name": "shadow",
+      "kind": "path",
+      "artboardId": "bloom-board",
+      "parentId": null,
+      "order": 1,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        256,
+        439
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#243f331c",
+        "skin": null,
+        "points": [
+          {
+            "id": "bloom-shadow-p0",
+            "anchor": [
+              100,
+              0
+            ],
+            "in": [
+              100,
+              -6.627416997599999
+            ],
+            "out": [
+              100,
+              6.627416997599999
+            ]
+          },
+          {
+            "id": "bloom-shadow-p1",
+            "anchor": [
+              0,
+              12
+            ],
+            "in": [
+              55.228474979999994,
+              12
+            ],
+            "out": [
+              -55.228474979999994,
+              12
+            ]
+          },
+          {
+            "id": "bloom-shadow-p2",
+            "anchor": [
+              -100,
+              0
+            ],
+            "in": [
+              -100,
+              6.627416997599999
+            ],
+            "out": [
+              -100,
+              -6.627416997599999
+            ]
+          },
+          {
+            "id": "bloom-shadow-p3",
+            "anchor": [
+              0,
+              -12
+            ],
+            "in": [
+              -55.228474979999994,
+              -12
+            ],
+            "out": [
+              55.228474979999994,
+              -12
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "bloom-root-joint",
+      "name": "root joint",
+      "kind": "bone",
+      "artboardId": "bloom-board",
+      "parentId": null,
+      "order": 2,
+      "transform": [
+        0,
+        -1,
+        1,
+        0,
+        256,
+        378
+      ],
+      "geometry": {
+        "length": 90
+      }
+    },
+    {
+      "id": "bloom-tip-joint",
+      "name": "tip joint",
+      "kind": "bone",
+      "artboardId": "bloom-board",
+      "parentId": "bloom-root-joint",
+      "order": 3,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "length": 105
+      }
+    },
+    {
+      "id": "bloom-flexible-stem",
+      "name": "flexible stem",
+      "kind": "path",
+      "artboardId": "bloom-board",
+      "parentId": null,
+      "order": 4,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        246,
+        183
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#487a5c",
+        "skin": {
+          "bindWorld": [
+            1,
+            0,
+            0,
+            1,
+            246,
+            183
+          ],
+          "bones": [
+            {
+              "boneId": "bloom-root-joint",
+              "bind": [
+                0,
+                -1,
+                1,
+                0,
+                256,
+                378
+              ]
+            },
+            {
+              "boneId": "bloom-tip-joint",
+              "bind": [
+                0,
+                -1,
+                1,
+                0,
+                256,
+                288
+              ]
+            }
+          ],
+          "weights": [
+            {
+              "pointId": "bloom-flexible-stem-p0",
+              "anchor": [
+                [
+                  "bloom-root-joint",
+                  0
+                ],
+                [
+                  "bloom-tip-joint",
+                  1
+                ]
+              ],
+              "in": [
+                [
+                  "bloom-root-joint",
+                  0
+                ],
+                [
+                  "bloom-tip-joint",
+                  1
+                ]
+              ],
+              "out": [
+                [
+                  "bloom-root-joint",
+                  0
+                ],
+                [
+                  "bloom-tip-joint",
+                  1
+                ]
+              ]
+            },
+            {
+              "pointId": "bloom-flexible-stem-p1",
+              "anchor": [
+                [
+                  "bloom-root-joint",
+                  0
+                ],
+                [
+                  "bloom-tip-joint",
+                  1
+                ]
+              ],
+              "in": [
+                [
+                  "bloom-root-joint",
+                  0
+                ],
+                [
+                  "bloom-tip-joint",
+                  1
+                ]
+              ],
+              "out": [
+                [
+                  "bloom-root-joint",
+                  0
+                ],
+                [
+                  "bloom-tip-joint",
+                  1
+                ]
+              ]
+            },
+            {
+              "pointId": "bloom-flexible-stem-p2",
+              "anchor": [
+                [
+                  "bloom-root-joint",
+                  0
+                ],
+                [
+                  "bloom-tip-joint",
+                  1
+                ]
+              ],
+              "in": [
+                [
+                  "bloom-root-joint",
+                  0
+                ],
+                [
+                  "bloom-tip-joint",
+                  1
+                ]
+              ],
+              "out": [
+                [
+                  "bloom-root-joint",
+                  0.1803921568627451
+                ],
+                [
+                  "bloom-tip-joint",
+                  0.8196078431372549
+                ]
+              ]
+            },
+            {
+              "pointId": "bloom-stem-middle-right",
+              "anchor": [
+                [
+                  "bloom-root-joint",
+                  0.6823529411764706
+                ],
+                [
+                  "bloom-tip-joint",
+                  0.3176470588235294
+                ]
+              ],
+              "in": [
+                [
+                  "bloom-root-joint",
+                  0.40784313725490196
+                ],
+                [
+                  "bloom-tip-joint",
+                  0.592156862745098
+                ]
+              ],
+              "out": [
+                [
+                  "bloom-root-joint",
+                  0.9529411764705882
+                ],
+                [
+                  "bloom-tip-joint",
+                  0.047058823529411764
+                ]
+              ]
+            },
+            {
+              "pointId": "bloom-flexible-stem-p3",
+              "anchor": [
+                [
+                  "bloom-root-joint",
+                  1
+                ],
+                [
+                  "bloom-tip-joint",
+                  0
+                ]
+              ],
+              "in": [
+                [
+                  "bloom-root-joint",
+                  1
+                ],
+                [
+                  "bloom-tip-joint",
+                  0
+                ]
+              ],
+              "out": [
+                [
+                  "bloom-root-joint",
+                  1
+                ],
+                [
+                  "bloom-tip-joint",
+                  0
+                ]
+              ]
+            },
+            {
+              "pointId": "bloom-flexible-stem-p4",
+              "anchor": [
+                [
+                  "bloom-root-joint",
+                  1
+                ],
+                [
+                  "bloom-tip-joint",
+                  0
+                ]
+              ],
+              "in": [
+                [
+                  "bloom-root-joint",
+                  1
+                ],
+                [
+                  "bloom-tip-joint",
+                  0
+                ]
+              ],
+              "out": [
+                [
+                  "bloom-root-joint",
+                  1
+                ],
+                [
+                  "bloom-tip-joint",
+                  0
+                ]
+              ]
+            },
+            {
+              "pointId": "bloom-flexible-stem-p5",
+              "anchor": [
+                [
+                  "bloom-root-joint",
+                  1
+                ],
+                [
+                  "bloom-tip-joint",
+                  0
+                ]
+              ],
+              "in": [
+                [
+                  "bloom-root-joint",
+                  1
+                ],
+                [
+                  "bloom-tip-joint",
+                  0
+                ]
+              ],
+              "out": [
+                [
+                  "bloom-root-joint",
+                  1
+                ],
+                [
+                  "bloom-tip-joint",
+                  0
+                ]
+              ]
+            },
+            {
+              "pointId": "bloom-flexible-stem-p6",
+              "anchor": [
+                [
+                  "bloom-root-joint",
+                  1
+                ],
+                [
+                  "bloom-tip-joint",
+                  0
+                ]
+              ],
+              "in": [
+                [
+                  "bloom-root-joint",
+                  1
+                ],
+                [
+                  "bloom-tip-joint",
+                  0
+                ]
+              ],
+              "out": [
+                [
+                  "bloom-root-joint",
+                  1
+                ],
+                [
+                  "bloom-tip-joint",
+                  0
+                ]
+              ]
+            },
+            {
+              "pointId": "bloom-stem-middle-left",
+              "anchor": [
+                [
+                  "bloom-root-joint",
+                  0.6823529411764706
+                ],
+                [
+                  "bloom-tip-joint",
+                  0.3176470588235294
+                ]
+              ],
+              "in": [
+                [
+                  "bloom-root-joint",
+                  0.9529411764705882
+                ],
+                [
+                  "bloom-tip-joint",
+                  0.047058823529411764
+                ]
+              ],
+              "out": [
+                [
+                  "bloom-root-joint",
+                  0.40784313725490196
+                ],
+                [
+                  "bloom-tip-joint",
+                  0.592156862745098
+                ]
+              ]
+            },
+            {
+              "pointId": "bloom-flexible-stem-p7",
+              "anchor": [
+                [
+                  "bloom-root-joint",
+                  0
+                ],
+                [
+                  "bloom-tip-joint",
+                  1
+                ]
+              ],
+              "in": [
+                [
+                  "bloom-root-joint",
+                  0.1803921568627451
+                ],
+                [
+                  "bloom-tip-joint",
+                  0.8196078431372549
+                ]
+              ],
+              "out": [
+                [
+                  "bloom-root-joint",
+                  0
+                ],
+                [
+                  "bloom-tip-joint",
+                  1
+                ]
+              ]
+            }
+          ]
+        },
+        "points": [
+          {
+            "id": "bloom-flexible-stem-p0",
+            "anchor": [
+              10,
+              0
+            ],
+            "in": [
+              4.477152502,
+              0
+            ],
+            "out": [
+              10,
+              0
+            ]
+          },
+          {
+            "id": "bloom-flexible-stem-p1",
+            "anchor": [
+              10,
+              0
+            ],
+            "in": [
+              10,
+              0
+            ],
+            "out": [
+              15.522847498,
+              0
+            ]
+          },
+          {
+            "id": "bloom-flexible-stem-p2",
+            "anchor": [
+              20,
+              10
+            ],
+            "in": [
+              20,
+              4.477152502
+            ],
+            "out": [
+              20,
+              40
+            ]
+          },
+          {
+            "id": "bloom-stem-middle-right",
+            "anchor": [
+              20,
+              95
+            ],
+            "in": [
+              20,
+              65
+            ],
+            "out": [
+              20,
+              125
+            ]
+          },
+          {
+            "id": "bloom-flexible-stem-p3",
+            "anchor": [
+              20,
+              185
+            ],
+            "in": [
+              20,
+              155
+            ],
+            "out": [
+              20,
+              190.522847498
+            ]
+          },
+          {
+            "id": "bloom-flexible-stem-p4",
+            "anchor": [
+              10,
+              195
+            ],
+            "in": [
+              15.522847498,
+              195
+            ],
+            "out": [
+              10,
+              195
+            ]
+          },
+          {
+            "id": "bloom-flexible-stem-p5",
+            "anchor": [
+              10,
+              195
+            ],
+            "in": [
+              10,
+              195
+            ],
+            "out": [
+              4.477152502,
+              195
+            ]
+          },
+          {
+            "id": "bloom-flexible-stem-p6",
+            "anchor": [
+              0,
+              185
+            ],
+            "in": [
+              0,
+              190.522847498
+            ],
+            "out": [
+              0,
+              155
+            ]
+          },
+          {
+            "id": "bloom-stem-middle-left",
+            "anchor": [
+              0,
+              95
+            ],
+            "in": [
+              0,
+              125
+            ],
+            "out": [
+              0,
+              65
+            ]
+          },
+          {
+            "id": "bloom-flexible-stem-p7",
+            "anchor": [
+              0,
+              10
+            ],
+            "in": [
+              0,
+              40
+            ],
+            "out": [
+              0,
+              4.477152502
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "bloom-left-leaf",
+      "name": "left leaf",
+      "kind": "path",
+      "artboardId": "bloom-board",
+      "parentId": "bloom-root-joint",
+      "order": 5,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        65,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#89c9a0",
+        "skin": null,
+        "points": [
+          {
+            "id": "bloom-left-leaf-p0",
+            "anchor": [
+              0,
+              0
+            ],
+            "in": [
+              0,
+              0
+            ],
+            "out": [
+              70,
+              -12
+            ]
+          },
+          {
+            "id": "bloom-left-leaf-p1",
+            "anchor": [
+              82,
+              -72
+            ],
+            "in": [
+              76,
+              -20
+            ],
+            "out": [
+              24,
+              -90
+            ]
+          },
+          {
+            "id": "bloom-left-leaf-p2",
+            "anchor": [
+              0,
+              0
+            ],
+            "in": [
+              -8,
+              -30
+            ],
+            "out": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "bloom-right-leaf",
+      "name": "right leaf",
+      "kind": "path",
+      "artboardId": "bloom-board",
+      "parentId": "bloom-tip-joint",
+      "order": 6,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        28,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#579879",
+        "skin": null,
+        "points": [
+          {
+            "id": "bloom-right-leaf-p0",
+            "anchor": [
+              0,
+              0
+            ],
+            "in": [
+              0,
+              0
+            ],
+            "out": [
+              65,
+              8
+            ]
+          },
+          {
+            "id": "bloom-right-leaf-p1",
+            "anchor": [
+              78,
+              82
+            ],
+            "in": [
+              88,
+              35
+            ],
+            "out": [
+              21,
+              86
+            ]
+          },
+          {
+            "id": "bloom-right-leaf-p2",
+            "anchor": [
+              0,
+              0
+            ],
+            "in": [
+              -10,
+              33
+            ],
+            "out": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "bloom-top-leaf",
+      "name": "top leaf",
+      "kind": "path",
+      "artboardId": "bloom-board",
+      "parentId": "bloom-tip-joint",
+      "order": 7,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        88,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#a4dfb9",
+        "skin": null,
+        "points": [
+          {
+            "id": "bloom-top-leaf-p0",
+            "anchor": [
+              0,
+              0
+            ],
+            "in": [
+              0,
+              0
+            ],
+            "out": [
+              0,
+              -30
+            ]
+          },
+          {
+            "id": "bloom-top-leaf-p1",
+            "anchor": [
+              75,
+              -18
+            ],
+            "in": [
+              34,
+              -60
+            ],
+            "out": [
+              70,
+              28
+            ]
+          },
+          {
+            "id": "bloom-top-leaf-p2",
+            "anchor": [
+              0,
+              0
+            ],
+            "in": [
+              29,
+              35
+            ],
+            "out": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "bloom-pot",
+      "name": "pot",
+      "kind": "path",
+      "artboardId": "bloom-board",
+      "parentId": null,
+      "order": 8,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        190,
+        370
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#dfac8e",
+        "skin": null,
+        "points": [
+          {
+            "id": "bloom-pot-p0",
+            "anchor": [
+              22,
+              0
+            ],
+            "in": [
+              9.8497355044,
+              0
+            ],
+            "out": [
+              22,
+              0
+            ]
+          },
+          {
+            "id": "bloom-pot-p1",
+            "anchor": [
+              110,
+              0
+            ],
+            "in": [
+              110,
+              0
+            ],
+            "out": [
+              122.1502644956,
+              0
+            ]
+          },
+          {
+            "id": "bloom-pot-p2",
+            "anchor": [
+              132,
+              22
+            ],
+            "in": [
+              132,
+              9.8497355044
+            ],
+            "out": [
+              132,
+              22
+            ]
+          },
+          {
+            "id": "bloom-pot-p3",
+            "anchor": [
+              132,
+              42
+            ],
+            "in": [
+              132,
+              42
+            ],
+            "out": [
+              132,
+              54.1502644956
+            ]
+          },
+          {
+            "id": "bloom-pot-p4",
+            "anchor": [
+              110,
+              64
+            ],
+            "in": [
+              122.1502644956,
+              64
+            ],
+            "out": [
+              110,
+              64
+            ]
+          },
+          {
+            "id": "bloom-pot-p5",
+            "anchor": [
+              22,
+              64
+            ],
+            "in": [
+              22,
+              64
+            ],
+            "out": [
+              9.8497355044,
+              64
+            ]
+          },
+          {
+            "id": "bloom-pot-p6",
+            "anchor": [
+              0,
+              42
+            ],
+            "in": [
+              0,
+              54.1502644956
+            ],
+            "out": [
+              0,
+              42
+            ]
+          },
+          {
+            "id": "bloom-pot-p7",
+            "anchor": [
+              0,
+              22
+            ],
+            "in": [
+              0,
+              22
+            ],
+            "out": [
+              0,
+              9.8497355044
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "bloom-pot-lip",
+      "name": "pot lip",
+      "kind": "path",
+      "artboardId": "bloom-board",
+      "parentId": null,
+      "order": 9,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        180,
+        364
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#efc8a9",
+        "skin": null,
+        "points": [
+          {
+            "id": "bloom-pot-lip-p0",
+            "anchor": [
+              11,
+              0
+            ],
+            "in": [
+              4.9248677522,
+              0
+            ],
+            "out": [
+              11,
+              0
+            ]
+          },
+          {
+            "id": "bloom-pot-lip-p1",
+            "anchor": [
+              141,
+              0
+            ],
+            "in": [
+              141,
+              0
+            ],
+            "out": [
+              147.0751322478,
+              0
+            ]
+          },
+          {
+            "id": "bloom-pot-lip-p2",
+            "anchor": [
+              152,
+              11
+            ],
+            "in": [
+              152,
+              4.9248677522
+            ],
+            "out": [
+              152,
+              11
+            ]
+          },
+          {
+            "id": "bloom-pot-lip-p3",
+            "anchor": [
+              152,
+              11
+            ],
+            "in": [
+              152,
+              11
+            ],
+            "out": [
+              152,
+              17.0751322478
+            ]
+          },
+          {
+            "id": "bloom-pot-lip-p4",
+            "anchor": [
+              141,
+              22
+            ],
+            "in": [
+              147.0751322478,
+              22
+            ],
+            "out": [
+              141,
+              22
+            ]
+          },
+          {
+            "id": "bloom-pot-lip-p5",
+            "anchor": [
+              11,
+              22
+            ],
+            "in": [
+              11,
+              22
+            ],
+            "out": [
+              4.9248677522,
+              22
+            ]
+          },
+          {
+            "id": "bloom-pot-lip-p6",
+            "anchor": [
+              0,
+              11
+            ],
+            "in": [
+              0,
+              17.0751322478
+            ],
+            "out": [
+              0,
+              11
+            ]
+          },
+          {
+            "id": "bloom-pot-lip-p7",
+            "anchor": [
+              0,
+              11
+            ],
+            "in": [
+              0,
+              11
+            ],
+            "out": [
+              0,
+              4.9248677522
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "bloom-pot-mark",
+      "name": "pot mark",
+      "kind": "path",
+      "artboardId": "bloom-board",
+      "parentId": null,
+      "order": 10,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        256,
+        400
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#b47960",
+        "skin": null,
+        "points": [
+          {
+            "id": "bloom-pot-mark-p0",
+            "anchor": [
+              13,
+              0
+            ],
+            "in": [
+              13,
+              -5.522847498
+            ],
+            "out": [
+              13,
+              5.522847498
+            ]
+          },
+          {
+            "id": "bloom-pot-mark-p1",
+            "anchor": [
+              0,
+              10
+            ],
+            "in": [
+              7.179701747399999,
+              10
+            ],
+            "out": [
+              -7.179701747399999,
+              10
+            ]
+          },
+          {
+            "id": "bloom-pot-mark-p2",
+            "anchor": [
+              -13,
+              0
+            ],
+            "in": [
+              -13,
+              5.522847498
+            ],
+            "out": [
+              -13,
+              -5.522847498
+            ]
+          },
+          {
+            "id": "bloom-pot-mark-p3",
+            "anchor": [
+              0,
+              -10
+            ],
+            "in": [
+              -7.179701747399999,
+              -10
+            ],
+            "out": [
+              7.179701747399999,
+              -10
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [
+    {
+      "id": "bloom-breeze",
+      "name": "Breeze",
+      "artboardId": "bloom-board",
+      "fps": 60,
+      "duration": 120,
+      "loop": true,
+      "tracks": [
+        {
+          "targetId": "bloom-root-joint",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": -1.5707963267948966,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 30,
+              "value": -1.72,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 90,
+              "value": -1.42,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": -1.5707963267948966,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "bloom-tip-joint",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 30,
+              "value": -0.25,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 90,
+              "value": 0.25,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "bloom-board": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  }
+}

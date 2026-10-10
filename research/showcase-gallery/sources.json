@@ -1,0 +1,22 @@
+[
+  {
+    "id": "rive-community",
+    "url": "https://community.rive.app/",
+    "resolvedUrl": "https://community.rive.app/c/start-here?post_login_redirect=https%3A%2F%2Fcommunity.rive.app%2F",
+    "retrievedAt": "2026-10-10T16:19:40.746601+00:00",
+    "status": 200,
+    "sha256": "3bd90f442429d8ca363d9802fabcccbdfcaed938cb3fd658d0c27f0ce2dca895",
+    "bytes": 11927,
+    "title": "Start Here | Rive Community"
+  },
+  {
+    "id": "lottiefiles-featured",
+    "url": "https://lottiefiles.com/featured",
+    "resolvedUrl": "https://lottiefiles.com/featured-free-animations",
+    "retrievedAt": "2026-10-10T16:19:41.498430+00:00",
+    "status": 200,
+    "sha256": "8f05a76248417d22833ff341c0f9d218555871b3cb8db55e8733006d042dec5b",
+    "bytes": 685370,
+    "title": "Featured Free Lottie Animations - Curated Motion Designs"
+  }
+]

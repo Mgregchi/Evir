@@ -4,6 +4,7 @@ import { build } from 'esbuild';
 import { root, loadEnvironment, prepareOutput } from '../../tools/build-support.mjs';
 import { readWebConfig, route } from './config.mjs';
 import { buildStudio } from '@evir/studio/build';
+import { exampleIds } from './examples.mjs';
 import { pages, escape } from './content.mjs';
 await loadEnvironment('web');
 const config=readWebConfig();
@@ -13,7 +14,7 @@ const icons = {
   '⌘':'M5 5h6v6H5zM5 5V3a2 2 0 1 0-2 2h2m6 0h2a2 2 0 1 0-2-2v2m0 6v2a2 2 0 1 0 2-2h-2m-6 0H3a2 2 0 1 0 2 2v-2',
 };
 const renderIcons = html => html.replace(/[↗↓↔⌘]/g, char => `<svg class="icon" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" fill="none"><path d="${icons[char]}" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`).replaceAll('＋','+');
-const required=['milo-poster.png','orbit-poster.png','studio-overview.png','studio-paths.png','studio-animation.png','studio-interact.png','evir-showcase.jpg'];
+const required=[...exampleIds.map(id=>`${id}-poster.png`),'studio-overview.png','studio-paths.png','studio-animation.png','studio-interact.png','evir-showcase.jpg'];
 for(const file of required) {
   try {await access(path.join(root,'apps/web/assets',file));}
   catch {throw Error(`Missing real showcase asset ${file}. Run npm run web:assets first.`);}
