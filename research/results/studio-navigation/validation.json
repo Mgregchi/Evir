@@ -1,0 +1,33 @@
+{
+  "checkedAt": "2026-10-10T22:02:00.825642+00:00",
+  "localChecks": {
+    "editorUnitTests": 31,
+    "editorBrowserFlows": [
+      "foundation",
+      "authoring",
+      "Pen",
+      "selection",
+      "workspace",
+      "navigation/organization"
+    ],
+    "frontendUnitTests": 12,
+    "runtimeUnitTests": 6,
+    "pythonUnitTests": 22,
+    "publicPageConfigurationChecks": 22,
+    "gallerySourceRoundTrips": 5,
+    "workspaceSizes": 6,
+    "organizationSheetSizes": 5,
+    "authoringOfficialComparisons": 40,
+    "showcaseOfficialComparisons": 84,
+    "penOfficialComparisons": 2,
+    "experienceRecoveryAndSEO": "passed",
+    "websiteStudioScreenshotsRefreshed": 4,
+    "touchPointerIsolation": "passed"
+  },
+  "officialBackends": [
+    "Canvas2D",
+    "WebGL2"
+  ],
+  "automatedAccessibilityViolations": 0,
+  "limits": "Software Chromium and synthetic touch-event dispatch. Physical GPU/mobile memory, matched Rive Editor scenes, screen-reader sessions and representative usability studies remain open."
+}

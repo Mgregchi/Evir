@@ -1,0 +1,83 @@
+{
+  "retrievedAt": "2026-10-10T21:42:22.220570+00:00",
+  "sources": [
+    {
+      "key": "rive-sidebar",
+      "url": "https://rive.app/docs/editor/interface-overview/sidebar",
+      "resolvedUrl": "https://rive.app/docs/editor/interface-overview/sidebar",
+      "bytes": 305866,
+      "sha256": "3d5a73d3decf3d96cb7ebf4b9914a260d24eec3d5975eb88141b6c7dc112302a",
+      "status": 200
+    },
+    {
+      "key": "rive-toolbar",
+      "url": "https://rive.app/docs/editor/interface-overview/toolbar",
+      "resolvedUrl": "https://rive.app/docs/editor/interface-overview/toolbar",
+      "bytes": 334954,
+      "sha256": "c70a3eff43842981c4c5ab30e6c8e8137fd827ebf3a19cb733098c1e555e2ef8",
+      "status": 200
+    },
+    {
+      "key": "rive-navigation",
+      "url": "https://rive.app/docs/editor/interface-overview/selection-and-navigation",
+      "resolvedUrl": "https://rive.app/docs/editor/interface-overview/selection-and-navigation",
+      "bytes": 346485,
+      "sha256": "cfae2ba740a35f798a428a393eac6a533c8cd9e19c3afa40d081bb73182afc78",
+      "status": 200
+    },
+    {
+      "key": "penpot-layers",
+      "url": "https://help.penpot.app/user-guide/design/layers/",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "key": "separator",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/windowsplitter/",
+      "resolvedUrl": "https://www.w3.org/WAI/ARIA/apg/patterns/windowsplitter/",
+      "bytes": 38095,
+      "sha256": "3396f0820992071d20e6a66aa17659e1bb5b56b92120c28629d7bc3d17ba57c9",
+      "status": 200
+    },
+    {
+      "key": "tree",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/treeview/",
+      "resolvedUrl": "https://www.w3.org/WAI/ARIA/apg/patterns/treeview/",
+      "bytes": 53663,
+      "sha256": "53452e8c19a2ffff35337b3734813921d2a783bed14243fa3377786edfbccd8c",
+      "status": 200
+    },
+    {
+      "key": "dragging",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html",
+      "resolvedUrl": "https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html",
+      "bytes": 48929,
+      "sha256": "c3905630a35b6e8246aba32c1769f3ff82b217d464d41e4b1b2a34b9df5771c6",
+      "status": 200
+    },
+    {
+      "key": "pointer",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Pointer_events/Pinch_zoom_gestures",
+      "resolvedUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Pointer_events/Pinch_zoom_gestures",
+      "bytes": 158569,
+      "sha256": "da52bc1d458dbd279f1742c79f3a94c47695cc9e270daab7fd5d8f37f10310b0",
+      "status": 200
+    },
+    {
+      "key": "material-sheets",
+      "url": "https://m3.material.io/components/bottom-sheets/overview",
+      "resolvedUrl": "https://m3.material.io/components/bottom-sheets/overview",
+      "status": 200,
+      "bytes": 61751,
+      "sha256": "db7f3f36034c0c2765807788d3a51e953ac676ad5222d410de92bfca0e815855"
+    },
+    {
+      "key": "reduced-motion",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion",
+      "resolvedUrl": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion",
+      "status": 200,
+      "bytes": 329730,
+      "sha256": "8351f1cdf07bd83128cb29fe2a64a43ff4a9d7afeab3651a3431576b9ff3a9da"
+    }
+  ],
+  "retrievalCompletedAt": "2026-10-10T21:57:52.299912+00:00"
+}

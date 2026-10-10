@@ -1,0 +1,153 @@
+{
+  "checkedAt": "2026-10-10T21:55:04.830Z",
+  "measurements": [
+    {
+      "width": 320,
+      "height": 568,
+      "stage": {
+        "x": 56,
+        "y": 148,
+        "width": 264,
+        "height": 376
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 64
+      },
+      "save": {
+        "x": 205.890625,
+        "y": 11.5,
+        "width": 60.109375,
+        "height": 40
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "stage": {
+        "x": 56,
+        "y": 148,
+        "width": 334,
+        "height": 652
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 64
+      },
+      "save": {
+        "x": 275.890625,
+        "y": 11.5,
+        "width": 60.109375,
+        "height": 40
+      }
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "stage": {
+        "x": 56,
+        "y": 148,
+        "width": 712,
+        "height": 832
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 768,
+        "height": 64
+      },
+      "save": {
+        "x": 653.890625,
+        "y": 11.5,
+        "width": 60.109375,
+        "height": 40
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "stage": {
+        "x": 56,
+        "y": 148,
+        "width": 788,
+        "height": 198
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 844,
+        "height": 64
+      },
+      "save": {
+        "x": 729.890625,
+        "y": 11.5,
+        "width": 60.109375,
+        "height": 40
+      }
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "stage": {
+        "x": 296,
+        "y": 150,
+        "width": 468,
+        "height": 576
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 64
+      },
+      "save": {
+        "x": 875.890625,
+        "y": 11.5,
+        "width": 84.109375,
+        "height": 40
+      }
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "stage": {
+        "x": 296,
+        "y": 150,
+        "width": 884,
+        "height": 808
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 64
+      },
+      "save": {
+        "x": 1285.890625,
+        "y": 11.5,
+        "width": 84.109375,
+        "height": 40
+      }
+    }
+  ],
+  "automatedAccessibilityViolations": 0,
+  "checks": [
+    "balanced compact header",
+    "persistent tool/panel rail",
+    "mobile drawers and focus restoration",
+    "desktop panel collapse",
+    "centered fitting, preserved manual framing and bounded DPR",
+    "mobile property edit and undo",
+    "mobile timeline and machine access",
+    "source and runtime downloads",
+    "keyboard disclosure opening and Escape",
+    "slow startup and reduced motion",
+    "module failure and no-JavaScript recovery",
+    "hidden and BFCache simulated playback suspension"
+  ],
+  "limits": "Chromium automation and screenshot review; no physical-device, screen-reader or moderated usability certification."
+}

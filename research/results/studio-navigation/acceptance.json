@@ -1,0 +1,98 @@
+{
+  "checkedAt": "2026-10-10T22:01:37.721Z",
+  "measurements": [
+    {
+      "width": 320,
+      "height": 844,
+      "sheet": {
+        "x": 0,
+        "y": 461.5,
+        "width": 320,
+        "height": 382.5
+      },
+      "stage": {
+        "x": 56,
+        "y": 148,
+        "width": 264,
+        "height": 652
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "sheet": {
+        "x": 0,
+        "y": 461.5,
+        "width": 390,
+        "height": 382.5
+      },
+      "stage": {
+        "x": 56,
+        "y": 148,
+        "width": 334,
+        "height": 652
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "sheet": {
+        "x": 0,
+        "y": 58.5,
+        "width": 844,
+        "height": 331.5
+      },
+      "stage": {
+        "x": 56,
+        "y": 148,
+        "width": 788,
+        "height": 198
+      }
+    },
+    {
+      "width": 1024,
+      "height": 844,
+      "sheet": {
+        "x": 277,
+        "y": 469,
+        "width": 470,
+        "height": 359
+      },
+      "stage": {
+        "x": 360,
+        "y": 150,
+        "width": 376,
+        "height": 652
+      }
+    },
+    {
+      "width": 1440,
+      "height": 844,
+      "sheet": {
+        "x": 485,
+        "y": 469,
+        "width": 470,
+        "height": 359
+      },
+      "stage": {
+        "x": 360,
+        "y": 150,
+        "width": 792,
+        "height": 652
+      }
+    }
+  ],
+  "checks": [
+    "keyboard, pointer and numeric panel resizing",
+    "stage width budget and layout recovery",
+    "splitter collapse focus",
+    "hierarchy collapse, keyboard and search ancestors",
+    "single-pointer bulk organization and preserved affine positions",
+    "one-step undo, locked rejection and feedback in sheet",
+    "bottom sheets at five sizes",
+    "two-finger focal zoom/pan and provisional-edit rollback",
+    "one/three-finger navigation guards and touch cancellation",
+    "automated WCAG checks"
+  ],
+  "limits": "Chromium with synthetic touch dispatch; no physical touch, screen-reader or moderated usability certification."
+}
