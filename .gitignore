@@ -9,3 +9,6 @@ apps/*/.env.*
 !apps/*/.env.example
 packages/*/dist/
 tools/.test-build/
+packages/*/.test-build/
+packages/*/.env
+packages/*/.env.*

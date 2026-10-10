@@ -1,16 +1,10 @@
-# Evir Studio
+# Evir Studio package
 
-From the repository root, run `npm ci`, `npm run editor:build`, then `npm run editor:serve`. Open `http://127.0.0.1:8788/` in a modern desktop browser. Web Crypto requires localhost or HTTPS. The application needs no account or remote storage.
+`@evir/studio` owns the editor's browser UI, styles and template. The sole frontend application, `apps/web`, imports `@evir/studio/build` and renders the workspace into its `/editor/studio/` directory. The package has no hosting configuration or environment file.
 
-Studio is independently deployed from `apps/editor/dist`. Its browser UI lives here; project validation, authoring operations, motion, rendering and export live in [versioned shared packages](../../packages/README.md). The build bundles those package APIs and the `.riv` schema; runtime export makes no request to the research directory. The public site's `/editor/` page introduces Studio and launches this application at its configured address.
+Run `npm ci`, `npm run web:build`, then `npm run web:serve` from the repository root. Open `http://127.0.0.1:8787/editor/studio/` in a modern desktop browser. Studio's home link returns to the same web app. Web Crypto requires localhost or HTTPS; no account or remote storage is needed.
 
-## Hosting
-
-Use [the GitHub-connected deployment guide](../../docs/20-github-connected-hosting.md). Set **the same `SITE_URL` and `STUDIO_URL` values as the public-site project**. Studio derives its home link from `SITE_URL` and its path from `STUDIO_URL`. No community/social settings are needed here.
-
-Local builds work without an environment file. To customize them, copy [`.env.example`](.env.example) to `apps/editor/.env`; production values belong in your provider's build environment. All settings are public; rebuild after editing.
-
-The output stays `apps/editor/dist` whether Studio has a subdomain or uses [the `/editor/studio/` route](../../docs/21-studio-path-hosting.md). `/editor/` stays the public landing page.
+Project validation, authoring, playback, drawing and `.riv` export remain in the [engine packages](../README.md). The build bundles those APIs and the schema; runtime export makes no request to the research directory. Editing this package does not move its implementation into the web app or publish a runtime release. See [the ownership decision](../../docs/18-architecture-boundaries-and-deployment.md) and [web hosting guide](../../docs/20-github-connected-hosting.md).
 
 The four editor milestones are implemented for a declared vector subset:
 

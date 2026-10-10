@@ -12,9 +12,9 @@ const mime = {'.html':'text/html','.mjs':'text/javascript','.js':'text/javascrip
 function build(name, values={}) {
   const env = {...process.env, ...Object.fromEntries(publicKeys.flatMap(key=>[[key,''],['PUBLIC_'+key,'']])),
     SITE_URL:'', STUDIO_URL:'', PUBLIC_SITE_URL:'', PUBLIC_BASE_PATH:'', PUBLIC_EDITOR_URL:'',
-    EVIR_SITE_OUTPUT:`apps/site/.test-build/${name}`, ...values, PRIVATE_TEST_SENTINEL:'never-expose-this-private-value'};
-  execFileSync(process.execPath, ['apps/site/build.mjs'], {cwd:root, env, stdio:'pipe'});
-  return path.join(root, env.EVIR_SITE_OUTPUT);
+    EVIR_WEB_OUTPUT:`apps/web/.test-build/${name}`, ...values, PRIVATE_TEST_SENTINEL:'never-expose-this-private-value'};
+  execFileSync(process.execPath, ['apps/web/build.mjs'], {cwd:root, env, stdio:'pipe'});
+  return path.join(root, env.EVIR_WEB_OUTPUT);
 }
 async function serve(dir, base='') {
   const {createStaticServer}=await import('../../tools/static-server.mjs');
@@ -23,12 +23,12 @@ async function serve(dir, base='') {
   return {server, origin:`http://127.0.0.1:${server.address().port}`};
 }
 (async()=>{
-  const {readPublicConfig}=await import('../../apps/site/config.mjs');
+  const {readWebConfig}=await import('../../apps/web/config.mjs');
   for(const values of [{PUBLIC_SITE_URL:'javascript:alert(1)'},{COMMUNITY_URL:'https://user:pass@example.org'},{PUBLIC_BASE_PATH:'/../'},{PUBLIC_BASE_PATH:'/Evir//'},{PUBLIC_SITE_URL:'https://example.org/Evir/'}])
-    assert.throws(()=>readPublicConfig(values));
-  assert.equal(readPublicConfig({}).community,'');
-  assert.equal(readPublicConfig({CONTACT_URL:'mailto:hello@example.org'}).contact,'mailto:hello@example.org');
-  assert.throws(()=>build('unsafe',{EVIR_SITE_OUTPUT:'apps/site/assets'}));
+    assert.throws(()=>readWebConfig(values));
+  assert.equal(readWebConfig({}).community,'');
+  assert.equal(readWebConfig({CONTACT_URL:'mailto:hello@example.org'}).contact,'mailto:hello@example.org');
+  assert.throws(()=>build('unsafe',{EVIR_WEB_OUTPUT:'apps/web/assets'}));
   const builds=[['root',{},''],['prefix',{
     SITE_URL:'https://example.org/Evir/',
     COMMUNITY_URL:'https://chat.example.org/join',DOCS_URL:'https://docs.example.org',
@@ -36,19 +36,17 @@ async function serve(dir, base='') {
     SOCIAL_X_URL:'https://x.example.org/evir',SOCIAL_LINKEDIN_URL:'https://linkedin.example.org/evir',
     SOCIAL_MASTODON_URL:'https://social.example.org/@evir',CONTACT_URL:'mailto:hello@example.org'},'/Evir']];
   const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH || (fs.existsSync('/usr/bin/chromium')?'/usr/bin/chromium':chromium.executablePath()),args:['--no-sandbox'],headless:true});
-  const report={checkedAt:new Date().toISOString(),scope:'Independent public site and editor deployments, configured launch links, runtime previews, responsive layouts and feedback drafting. Automated accessibility is not a user study.',pages:[],checks:[]};
+  const report={checkedAt:new Date().toISOString(),scope:'Single web app with a separately maintained Studio package, same-origin launch links, runtime previews, responsive layouts and feedback drafting. Automated accessibility is not a user study.',pages:[],checks:[]};
   fs.mkdirSync(evidence,{recursive:true});
   try {
     for(const [name,env,base] of builds) {
-      const editorBase=name==='prefix'?'/studio':'';
-      const editorDir=path.join(root,`apps/editor/.test-build/${name}`);
-      execFileSync(process.execPath,['apps/editor/build.mjs'],{cwd:root,stdio:'pipe',env:{...process.env,EVIR_EDITOR_OUTPUT:editorDir,SITE_URL:'https://example.org/Evir/',STUDIO_URL:'http://127.0.0.1:8788'+editorBase+'/',PRIVATE_TEST_SENTINEL:'never-expose-this-private-value'}});
-      const editor=await serve(editorDir,editorBase);
-      env.STUDIO_URL=editor.origin+editorBase+'/';
       const dir=build(name,env),{server,origin}=await serve(dir,base);
-      assert(!fs.existsSync(path.join(dir,'studio.mjs')),'Site must not contain editor code');
-      assert(!fs.existsSync(path.join(dir,'assets/engine')),'Site must consume runtime API, not copied source');
-      assert(!fs.existsSync(path.join(editorDir,'product')),'Editor must not contain marketing pages');
+      assert(fs.existsSync(path.join(dir,'editor/studio/studio.mjs')),'Web must compose the Studio package');
+      assert(!fs.existsSync(path.join(dir,'assets/engine')),'Web consumes engine APIs, not copied source');
+      const redirect=await fetch(`${origin}${base}/editor/studio?demo=1`,{redirect:'manual'});
+      assert.equal(redirect.status,301);
+      assert.equal(redirect.headers.get('location'),`${base}/editor/studio/?demo=1`);
+      assert.equal((await fetch(`${origin}${base}/editor/studio/missing.mjs`)).status,404);
       const context=await browser.newContext({reducedMotion:'reduce',viewport:{width:1440,height:1000}});
       const page=await context.newPage(),errors=[],requests=[];
       page.on('pageerror',e=>errors.push(e.message));
@@ -127,19 +125,20 @@ async function serve(dir, base='') {
         assert.equal(requests.filter(r=>r.method!=='GET').length,0,'Feedback must never post');
         await page.goto(`${origin}${base}/editor/`);
         assert.equal(await page.locator('#stage').count(),0,'/editor is a public landing page');
-        assert.equal(await page.getByRole('link',{name:'Open Evir Studio'}).getAttribute('href'),env.STUDIO_URL.replace(/\/$/,''));
+        assert.equal(await page.getByRole('link',{name:'Open Evir Studio'}).getAttribute('href'),`${base}/editor/studio/`);
         await page.getByRole('link',{name:'Open Evir Studio'}).click();
         await page.waitForFunction(()=>window.evirStudio);
-        assert(new URL(page.url()).origin===editor.origin,'Editor opens on a separate origin');
-        await page.locator('#file').setInputFiles(path.join(root,'apps/site/assets/examples/milo.evir-project'));
+        assert.equal(new URL(page.url()).origin,origin,'Studio must stay on the web origin');
+        assert.equal(new URL(page.url()).pathname,`${base}/editor/studio/`);
+        await page.locator('#file').setInputFiles(path.join(root,'apps/web/assets/examples/milo.evir-project'));
         await page.locator('#replace-confirm').click();await page.waitForFunction(()=>evirStudio.snapshot().id==='milo-project');
         assert.equal(await page.evaluate(()=>evirStudio.snapshot().nodes.length),24);
         const download=page.waitForEvent('download');await page.getByRole('button',{name:'Export .riv',exact:true}).click();
         const downloaded=await download;assert(downloaded.suggestedFilename().endsWith('.riv'));
-        assert.deepEqual(fs.readFileSync(await downloaded.path()),fs.readFileSync(path.join(root,'apps/site/assets/examples/milo.riv')),'Editor export is unchanged after extraction');
-        assert.equal(await page.locator('.brand-wordmark').locator('..').getAttribute('href'),'https://example.org/Evir/');
+        assert.deepEqual(fs.readFileSync(await downloaded.path()),fs.readFileSync(path.join(root,'apps/web/assets/examples/milo.riv')),'Editor export is unchanged after extraction');
+        assert.equal(await page.locator('.brand-wordmark').locator('..').getAttribute('href'),base+'/');
         assert.equal(await page.locator('#editor-config').textContent().then(s=>s.includes('never-expose')),false);
-        report.checks.push(`${name}: separate editor origin, configured home link, project open and byte-identical export; independent artifacts`);
+        report.checks.push(`${name}: same-origin Studio route, relative home link, project open and byte-identical export; composed artifact with package boundaries`);
         await page.goto(`${origin}${base}/studio/`);
         await page.waitForURL(`${origin}${base}/editor/`);
         report.checks.push(`${name}: legacy /studio/ route redirects to /editor/ landing`);
@@ -165,7 +164,7 @@ async function serve(dir, base='') {
         }
         assert.deepEqual(errors,[]);
         report.checks.push(`${name}: internal links/assets/fragments, feedback escaped and never submitted, motion pause/play, mobile menu Escape/focus, optional configuration`);
-      } finally {await context.close();await new Promise(resolve=>server.close(resolve));await new Promise(resolve=>editor.server.close(resolve));}
+      } finally {await context.close();await new Promise(resolve=>server.close(resolve));}
     }
     report.checks.push('URL and output-directory validation; private environment values excluded');
     fs.writeFileSync(path.join(evidence,'browser.json'),JSON.stringify(report,null,2)+'\n');

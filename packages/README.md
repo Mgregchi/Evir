@@ -42,3 +42,7 @@ npm pack --workspace @evir/runtime --dry-run
 Every package has its own version, exports, MIT license and standalone `dist/index.mjs` module. Node/bundler consumers use the source exports with versioned package dependencies; browser hosts can use the standalone module without a workspace install. Published archives include the source, documentation and built modules; the format adapter also retains the upstream schema license. Build from the root before packing. Package names/versions must be coordinated when an API change affects dependents; npm publication is an explicit release step and is not performed by CI.
 
 Backend services for accounts, collaboration, storage or agents remain a separate future boundary. They are not required for the local editor or runtime.
+
+## Studio frontend package
+
+`@evir/studio` in `packages/studio` is the separately maintained authoring UI package, not a playback engine package. Its `./build` export is consumed by `@evir/web` to render `/editor/studio/` in the single hosted frontend. It has no separate hosting settings and is private to this workspace. The five engine packages above retain independent builds/releases and cannot depend on Studio or web.

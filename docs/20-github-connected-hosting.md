@@ -1,114 +1,92 @@
-# Deploy from GitHub
+# Deploy the web app from GitHub
 
-Create two hosting projects from `Mgregchi/Evir`, both using production branch `main`:
+**One repository connection, one hosting project, one output:** `apps/web/dist`.
 
-- **Public site** builds `apps/site`: home, product, community and `/editor/` landing pages.
-- **Studio** builds `apps/editor`: the actual editor workspace.
+The web build imports `@evir/studio` and includes its workspace at `/editor/studio/`. `/editor/` remains the public landing page. Studio and the engine remain separate packages; they do not need separate hosting projects.
 
-The provider builds from GitHub; you do not upload a local `dist`. Use the section for your provider below. Your existing `evir` deployment is **Cloudflare Workers**.
+## Environment
 
-## Two addresses, the same on both projects
+Set `SITE_URL` in the web project's **build environment**, for example:
 
-Set these in the **build environment of both hosting projects**:
+```dotenv
+SITE_URL=https://evir.idey.click/
+```
 
-| Variable | What to enter | Example |
-| --- | --- | --- |
-| `SITE_URL` | Full address of the public website | `https://yourdomain.com/` |
-| `STUDIO_URL` | Full address where visitors open the editor workspace | `https://studio.yourdomain.com/` |
+This is the full public address, including any subdirectory. GitHub project hosting could use `https://mgregchi.github.io/Evir/`; Studio then lives at `/Evir/editor/studio/` automatically. Without `SITE_URL`, all navigation still works on the current host; canonical metadata and the sitemap are omitted. No `STUDIO_URL` or editor/base-path variables are needed.
 
-The site uses `SITE_URL` for page links/search metadata and `STUDIO_URL` for its launch buttons. Studio uses `SITE_URL` for its home link and the path in `STUDIO_URL` for its mount. Include any subdirectory in the full URL. **There are no separate base-path settings to enter.**
-
-For example, a GitHub project site uses `SITE_URL=https://mgregchi.github.io/Evir/`. A mounted editor uses `STUDIO_URL=https://yourdomain.com/editor/studio/`. `/editor/` is the public landing page, so do not use it as the workspace address.
-
-Provider URLs (`workers.dev`, `pages.dev`, `netlify.app`) work before you connect a domain. Deploy both projects, copy their actual addresses into these two variables on both projects, then rebuild. For custom domains, attach the domains in the provider dashboard and update the same two values. Neither variable contains a secret.
-
-**Optional links belong only on the public-site project.** Add `COMMUNITY_URL`, `FEEDBACK_URL`, `NEWSLETTER_URL` or social/contact links when you have them. Studio needs none of these. See [the site's optional-link list](../apps/site/README.md#optional-public-site-links); empty values use the documented defaults or hide the link.
+Optional `COMMUNITY_URL`, `FEEDBACK_URL`, newsletter/social/contact URLs also go on this same web project. See [the optional-link list](../apps/web/README.md#optional-public-links). These are public build-time settings; rebuild after changing them. Never put credentials here.
 
 ## Cloudflare Workers
 
-This matches the **Domains → Add Domain / Add Route** screen you shared.
+For the existing `evir` Worker, open **Workers & Pages → evir → Settings → Builds**. Connect GitHub repository `Mgregchi/Evir` and configure:
 
-1. Open **Workers & Pages → evir → Settings → Builds** for the existing public Worker. Connect GitHub repository `Mgregchi/Evir` if needed. Create another Worker from the same repository for Studio using **Create application → Import a repository → GitHub**.
-2. Set production branch `main` and these fields:
+| Field | Value |
+| --- | --- |
+| Production branch | `main` |
+| Root directory | `apps/web` |
+| Build command | `npm --prefix ../.. ci && npm --prefix ../.. run web:build` |
+| Deploy command | `npx wrangler deploy --config wrangler.jsonc` |
+| Preview command | `npx wrangler preview --config wrangler.jsonc`, or disable previews initially |
 
-| Field | Public site | Studio |
-| --- | --- | --- |
-| Worker name | `evir` | `evir-studio` |
-| Root directory | `apps/site` | `apps/editor` |
-| Build command | `npm --prefix ../.. ci && npm --prefix ../.. run site:build` | `npm --prefix ../.. ci && npm --prefix ../.. run editor:build` |
-| Deploy command | `npx wrangler deploy --config wrangler.jsonc` | `npx wrangler deploy --config wrangler.jsonc` |
+Under **Build Variables and Secrets**, add `SITE_URL`, `NODE_VERSION=24` and `SKIP_DEPENDENCY_INSTALL=1`. Optional links belong here too, rather than Worker runtime bindings. The command installs from the root lockfile, then builds the web app; Wrangler serves `./dist` beside its app configuration.
 
-3. Under **Build Variables and Secrets**, add the same `SITE_URL` and `STUDIO_URL` to both projects, plus `NODE_VERSION=24` and `SKIP_DEPENDENCY_INSTALL=1`. These are build variables, not Worker runtime bindings. Optional community links go on `evir` only.
-4. Build/deploy both. Leave the nonproduction **Preview command** at `npx wrangler preview --config wrangler.jsonc`, or disable previews for initial setup.
-5. For separate domains, use **Domains → Add Domain**: the public hostname on `evir`, the Studio hostname on `evir-studio`. Update the two URL values and rebuild both.
+Build/deploy, then use **Domains → Add Domain** to connect the public hostname. **Studio needs no separate Worker, path route, asset handler or proxy:** its files are inside the same web output. The Worker name must match `name` in `apps/web/wrangler.jsonc` (currently `evir`).
 
-Worker names must match each app's `wrangler.jsonc`. The commands install at the repository root but run Wrangler beside the app's `dist`. There is no Pages publish-directory field here.
+For a new project, use **Create application → Import a repository → GitHub** with the same settings. If a preview reports “This Worker does not exist on your account”, check the selected account, connected Worker and configured name.
 
 ## Netlify
 
-1. Choose **Add new project → Import an existing project → GitHub**, authorize `Mgregchi/Evir`, and create the public-site project. Repeat for Studio with the same repository and branch `main`.
-2. Configure each project:
+Use **Add new project → Import an existing project → GitHub**, authorize `Mgregchi/Evir`, and configure:
 
-| Field | Public site | Studio |
-| --- | --- | --- |
-| Base directory | Empty (repository root) | Empty (repository root) |
-| Package directory | `apps/site` | `apps/editor` |
-| Build command | `npm run site:build` | `npm run editor:build` |
-| Publish directory | `apps/site/dist` | `apps/editor/dist` |
+| Field | Value |
+| --- | --- |
+| Branch | `main` |
+| Base directory | Empty (repository root) |
+| Package directory | `apps/web` |
+| Build command | `npm run web:build` |
+| Publish directory | `apps/web/dist` |
 
-3. Under **Environment variables**, give both projects the same `SITE_URL` and `STUDIO_URL` with **Builds** scope. Optional community links go on the public project only. Each app's `netlify.toml` already sets Node 24 and build filtering.
-4. Deploy, complete the URL values with the actual provider addresses, and rebuild. Connect separate public/Studio domains under **Domain management**, then update the values if the addresses change.
+The package directory selects `apps/web/netlify.toml`; installation uses the root lockfile. The file already sets Node 24 and filters builds to web/Studio/shared dependencies. Under **Environment variables**, set `SITE_URL` with **Builds** scope and any optional links. Deploy and add your hostname under **Domain management**.
 
-**Base directory** and **Package directory** are different Netlify fields. The root lockfile owns installation; the package directory selects the app's `netlify.toml`. Check the resolved settings in the build log because file settings override matching dashboard settings.
+Studio is a directory in this same output. Do not add an external editor proxy or a blanket SPA rewrite to `/index.html`.
 
-## Cloudflare Pages (alternative to Workers)
+## Cloudflare Pages
 
-Use **Create application → Pages → Connect to Git** to create two projects from the repository and branch `main`:
+Use **Create application → Pages → Connect to Git**, select `Mgregchi/Evir`, and configure:
 
-| Field | Public site | Studio |
-| --- | --- | --- |
-| Framework preset | None | None |
-| Root directory | Empty | Empty |
-| Build command | `npm ci && npm run site:build` | `npm ci && npm run editor:build` |
-| Output directory | `apps/site/dist` | `apps/editor/dist` |
+| Field | Value |
+| --- | --- |
+| Production branch | `main` |
+| Framework preset | None |
+| Root directory | Empty |
+| Build command | `npm ci && npm run web:build` |
+| Output directory | `apps/web/dist` |
 
-Set the same two URL values, `NODE_VERSION=24` and `SKIP_DEPENDENCY_INSTALL=1` in each project's build environment. Deploy, wire the actual addresses, and rebuild. Connect separate hostnames under each project's **Custom domains**. This Pages flow is separate from the existing Workers deployment.
+Set `SITE_URL`, `NODE_VERSION=24` and `SKIP_DEPENDENCY_INSTALL=1` in the project's build environment. Deploy and connect the hostname under **Custom domains**. Pages serves the public pages and Studio from the same output.
 
-For optional Pages build filtering, consult the linked official watch-path documentation. Netlify's supplied app configs already filter unrelated changes.
+## Updating an existing deployment
 
-## Serve Studio at `/editor/studio/` on the public domain
+Change old `apps/site` root/package/output settings to the web settings above. Replace old build commands with `web:build`. One web deployment replaces the two frontend deployments.
 
-Keep the same two projects and set `STUDIO_URL=https://yourdomain.com/editor/studio/` on both. Then follow [the path-routing recipe](21-studio-path-hosting.md). Cloudflare needs the editor's asset handler and path route; Netlify needs a proxy rewrite. Setting a URL alone does not create a route. `/editor/` remains the public landing page.
+Remove `STUDIO_URL`, `PUBLIC_EDITOR_URL`, `EDITOR_PUBLIC_SITE_URL` and `EDITOR_BASE_PATH`; the web build does not use them. Legacy `PUBLIC_SITE_URL` plus `PUBLIC_BASE_PATH` still work, but one full `SITE_URL` is the preferred replacement. Existing optional `PUBLIC_*` links are also accepted; new setup uses the plain names in the web environment example.
+
+If you previously installed a Studio Worker route or Netlify proxy, remove that rule after deploying the combined output so it cannot intercept the new local files. Do not delete an old Studio deployment until users have downloaded projects stored on its origin. Moving to another origin does not transfer browser storage; changing only the path on the same origin retains it.
+
+GitHub Pages uses the supplied workflow and publishes this same web artifact. Its Pages metadata supplies the public origin/path when `SITE_URL` is not configured explicitly.
 
 ## Check before sharing
 
-- Both provider builds succeeded and published the intended commit.
-- The public home and `/editor/` landing load; launch buttons open Studio.
-- Studio loads its stage, opens/saves a project, exports `.riv`, and its home link returns to the public site.
-- No production links point to localhost. Missing URLs return 404.
+- The provider deployed the intended commit successfully.
+- `/`, `/product/` and `/editor/` load; launch buttons open `/editor/studio/` on the same origin.
+- Studio loads its modules/styles/icons, opens/saves a project, exports `.riv`, and its home link returns to the web home.
+- `/editor/studio` redirects to the directory URL with its trailing slash. Missing pages/assets return 404.
 
-Rebuild after changing environment values. Copy the required values into preview build environments too; public previews use the configured Studio address rather than automatically discovering a matching editor preview. Before moving Studio to a different domain, download existing projects: browser storage belongs to the old origin.
-
-If a provider build fails, open its build log first. For Cloudflare's “This Worker does not exist on your account” error, check that the connected Worker exists in the selected account and its name matches `wrangler.jsonc`. Local checks do not establish provider-account authorization or DNS success.
-
-## Existing settings
-
-Older deployments keep working. You can replace them with the two names above and remove the old entries:
-
-| Old setting | Replacement |
-| --- | --- |
-| Site's `PUBLIC_SITE_URL` + `PUBLIC_BASE_PATH` | One full `SITE_URL`, including the path |
-| Site's `PUBLIC_EDITOR_URL` | `STUDIO_URL` |
-| Studio's `EDITOR_PUBLIC_SITE_URL` | The same `SITE_URL` |
-| Studio's `EDITOR_BASE_PATH` | Derived from `STUDIO_URL`; remove it |
-| Optional `PUBLIC_COMMUNITY_URL`, etc. | `COMMUNITY_URL`, etc. on the public project |
-
-Nonempty new values take precedence over their old equivalents. New setup does not require the old names.
+No live hosting account, domain or deployment was changed by this repository update. Preview navigation stays on its own host because launch/home links are relative to the web route.
 
 ## References
 
-Provider settings and routing behavior were checked against official documentation on 9 October 2026:
+The settings follow the providers' official Git/monorepo/static-asset documentation:
 
-- Cloudflare [Workers Git builds](https://developers.cloudflare.com/workers/ci-cd/builds/), [build configuration](https://developers.cloudflare.com/workers/ci-cd/builds/configuration/), [build image](https://developers.cloudflare.com/workers/ci-cd/builds/build-image/) and [custom domains](https://developers.cloudflare.com/workers/configuration/routing/custom-domains/).
-- Cloudflare Pages [Git integration](https://developers.cloudflare.com/pages/get-started/git-integration/), [monorepos](https://developers.cloudflare.com/pages/configuration/monorepos/), [build configuration](https://developers.cloudflare.com/pages/configuration/build-configuration/), [build image](https://developers.cloudflare.com/pages/configuration/build-image/) and [watch paths](https://developers.cloudflare.com/pages/configuration/build-watch-paths/).
-- Netlify [monorepos](https://docs.netlify.com/build/configure-builds/monorepos/), [file configuration](https://docs.netlify.com/build/configure-builds/file-based-configuration/), [dependency installation](https://docs.netlify.com/build/configure-builds/manage-dependencies/), [build filtering](https://docs.netlify.com/build/configure-builds/ignore-builds/) and [revision variables](https://docs.netlify.com/build/configure-builds/environment-variables/).
+- Cloudflare [Workers Git builds](https://developers.cloudflare.com/workers/ci-cd/builds/), [build configuration](https://developers.cloudflare.com/workers/ci-cd/builds/configuration/), [build image](https://developers.cloudflare.com/workers/ci-cd/builds/build-image/) and [static assets](https://developers.cloudflare.com/workers/static-assets/).
+- Cloudflare Pages [Git integration](https://developers.cloudflare.com/pages/get-started/git-integration/), [monorepos](https://developers.cloudflare.com/pages/configuration/monorepos/) and [build configuration](https://developers.cloudflare.com/pages/configuration/build-configuration/).
+- Netlify [monorepos](https://docs.netlify.com/build/configure-builds/monorepos/), [file configuration](https://docs.netlify.com/build/configure-builds/file-based-configuration/) and [build filtering](https://docs.netlify.com/build/configure-builds/ignore-builds/).

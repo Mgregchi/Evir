@@ -1,8 +1,8 @@
-name: Deploy public site to Pages
+name: Deploy web app to Pages
 on:
   push:
     branches: [main]
-    paths: ['apps/site/**', 'assets/brand/**', 'packages/project-model/**', 'packages/runtime/**', 'packages/renderer-canvas/**', 'tools/build-support.mjs', 'package*.json', '.github/workflows/static.yml']
+    paths: ['apps/web/**', 'assets/brand/**', 'packages/**', 'tools/build-support.mjs', 'package*.json', '.github/workflows/static.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -17,10 +17,8 @@ jobs:
       pages: read
     env:
       SITE_URL: ${{ vars.SITE_URL }}
-      STUDIO_URL: ${{ vars.STUDIO_URL }}
       PUBLIC_SITE_URL: ${{ vars.PUBLIC_SITE_URL }}
       PUBLIC_BASE_PATH: ${{ vars.PUBLIC_BASE_PATH }}
-      PUBLIC_EDITOR_URL: ${{ vars.PUBLIC_EDITOR_URL }}
       REPOSITORY_URL: ${{ vars.REPOSITORY_URL || vars.PUBLIC_REPOSITORY_URL }}
       DOCS_URL: ${{ vars.DOCS_URL || vars.PUBLIC_DOCS_URL }}
       COMMUNITY_URL: ${{ vars.COMMUNITY_URL || vars.PUBLIC_COMMUNITY_URL }}
@@ -39,13 +37,13 @@ jobs:
       - uses: actions/configure-pages@v5
         id: pages
       - run: npm ci
-      - run: npm run site:build
+      - run: npm run web:build
         env:
           PUBLIC_SITE_URL: ${{ vars.PUBLIC_SITE_URL || steps.pages.outputs.origin }}
           PUBLIC_BASE_PATH: ${{ vars.PUBLIC_BASE_PATH || steps.pages.outputs.base_path }}
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: apps/site/dist
+          path: apps/web/dist
   deploy:
     if: github.ref == 'refs/heads/main'
     needs: build

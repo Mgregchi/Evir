@@ -1,6 +1,6 @@
-import { readDeploymentConfig } from '../../tools/build-support.mjs';
+import { readSiteAddress } from '../../tools/build-support.mjs';
 
-export function readPublicConfig(env = process.env) {
+export function readWebConfig(env = process.env) {
   const url = (key, fallback = '', allowMail = false) => {
     const value = (env[key] || env[`PUBLIC_${key}`] || fallback).trim();
     if (!value) return '';
@@ -11,10 +11,10 @@ export function readPublicConfig(env = process.env) {
     return parsed.href.replace(/\/$/, '');
   };
   const repository = url('REPOSITORY_URL', 'https://github.com/Mgregchi/Evir');
-  const { site, studio, siteConfigured } = readDeploymentConfig(env, 'site');
+  const site = readSiteAddress(env);
   return {
-    siteUrl: siteConfigured ? site.origin : '', basePath: site.basePath, repository,
-    editorUrl: studio.url.replace(/\/$/, ''),
+    siteUrl: site.configured ? site.origin : '', basePath: site.basePath, repository,
+    editorUrl: `${site.basePath}/editor/studio/`,
     docs: url('DOCS_URL', `${repository}/blob/main/research/README.md`),
     community: url('COMMUNITY_URL'),
     feedback: url('FEEDBACK_URL', `${repository}/issues/new`),

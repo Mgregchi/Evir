@@ -7,17 +7,17 @@ if(!process.env.CHROMIUM_PATH && !fs.existsSync('/usr/bin/chromium'))process.env
 const root=path.resolve(__dirname,'..');
 async function capture(){
 await require('./prepare-oracle.cjs').prepare();
-require('node:child_process').execFileSync(process.execPath,['apps/editor/build.mjs'],{cwd:root,stdio:'pipe'});
+require('node:child_process').execFileSync(process.execPath,['apps/web/build.mjs'],{cwd:root,stdio:'pipe'});
 await run(async page=>{
-  const out=path.join(root,'apps/site/assets');fs.mkdirSync(out,{recursive:true});
+  const out=path.join(root,'apps/web/assets');fs.mkdirSync(out,{recursive:true});
   for(const name of ['milo','orbit']) {
     await page.setViewportSize({width:512,height:512});
-    await page.goto(`http://127.0.0.1:8776/apps/site/preview.html?example=${name}`);
+    await page.goto(`http://127.0.0.1:8776/apps/web/preview.html?example=${name}`);
     await page.waitForFunction(()=>window.assetReady);
     await page.locator('canvas').screenshot({path:path.join(out,name+'-poster.png'),omitBackground:true});
   }
   await page.setViewportSize({width:1440,height:900});
-  await page.goto('http://127.0.0.1:8776/apps/editor/dist/');
+  await page.goto('http://127.0.0.1:8776/apps/web/dist/editor/studio/');
   await page.waitForFunction(()=>window.evirStudio);
   await page.locator('#file').setInputFiles(path.join(out,'examples/milo.evir-project'));
   await page.locator('#replace-confirm').click();

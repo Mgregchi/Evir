@@ -62,7 +62,7 @@ test('runtime JSON loader validates references, schema and asset hashes without 
 
 test('format package embeds the pinned schema and preserves published showcase bytes',()=>{
   for(const name of ['milo','orbit']) {
-    const source=JSON.parse(readFileSync(new URL(`../../apps/site/assets/examples/${name}.evir-project`,import.meta.url)));
-    assert.deepEqual(Buffer.from(compileProject(source).bytes),readFileSync(new URL(`../../apps/site/assets/examples/${name}.riv`,import.meta.url)));
+    const source=JSON.parse(readFileSync(new URL(`../../apps/web/assets/examples/${name}.evir-project`,import.meta.url)));
+    assert.deepEqual(Buffer.from(compileProject(source).bytes),readFileSync(new URL(`../../apps/web/assets/examples/${name}.riv`,import.meta.url)));
   }
 });
