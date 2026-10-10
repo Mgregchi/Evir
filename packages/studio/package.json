@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "dependencies": {
+    "@evir/ui": "0.1.0",
     "@evir/project-model": "0.1.0",
     "@evir/authoring": "0.1.0",
     "@evir/runtime": "0.1.0",

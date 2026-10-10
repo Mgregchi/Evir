@@ -1,0 +1,94 @@
+{
+  "sources": [
+    {
+      "id": "rive-selection",
+      "url": "https://raw.githubusercontent.com/rive-app/rive-docs/8879acbbefbf676c8d68d66c2ddfe56c6ee50914/editor/interface-overview/selection-and-navigation.mdx",
+      "retrievedAt": "2026-10-10T15:18:49.961043+00:00",
+      "httpStatus": 200,
+      "snapshot": "decoded readable text (temporary workspace capture)",
+      "sha256": "e6dd1dee3b5632d2eca895799913c583eb4d6d6879ac17d2c1bde4600972265b",
+      "bytes": 3119
+    },
+    {
+      "id": "wcag-reflow",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html",
+      "retrievedAt": "2026-10-10T15:18:50.394758+00:00",
+      "httpStatus": 200,
+      "snapshot": "decoded readable text (temporary workspace capture)",
+      "sha256": "bc0b7f0afa54f9f3817026aa3e070251174ccf6db1244c927a1e83e9819a6183",
+      "bytes": 85770
+    },
+    {
+      "id": "wcag-status",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html",
+      "retrievedAt": "2026-10-10T15:18:50.698073+00:00",
+      "httpStatus": 200,
+      "snapshot": "decoded readable text (temporary workspace capture)",
+      "sha256": "d5a085f7be8814e4f01520db08d41d09b62491f40dc0fb6fb4941ec762cf3746",
+      "bytes": 60299
+    },
+    {
+      "id": "wcag-target",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
+      "retrievedAt": "2026-10-10T15:20:57.806813+00:00",
+      "httpStatus": 200,
+      "snapshot": "decoded readable text (temporary workspace capture)",
+      "sha256": "361694575d2a4ca5834de57dbc44b24c27ecc67956625703a140b9f1d79c62d4",
+      "bytes": 65155
+    },
+    {
+      "id": "reduced-motion",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion",
+      "retrievedAt": "2026-10-10T15:20:58.230811+00:00",
+      "httpStatus": 200,
+      "snapshot": "decoded readable text (temporary workspace capture)",
+      "sha256": "8351f1cdf07bd83128cb29fe2a64a43ff4a9d7afeab3651a3431576b9ff3a9da",
+      "bytes": 329730
+    },
+    {
+      "id": "visibility",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API",
+      "retrievedAt": "2026-10-10T15:20:58.395104+00:00",
+      "httpStatus": 200,
+      "snapshot": "decoded readable text (temporary workspace capture)",
+      "sha256": "69254e410e3aed13fd74b88c7a7c9af3a622d1fe56dee6a2ef24eda488b34fbe",
+      "bytes": 158550
+    },
+    {
+      "id": "intersection",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/disconnect",
+      "retrievedAt": "2026-10-10T15:20:58.651684+00:00",
+      "httpStatus": 200,
+      "snapshot": "decoded readable text (temporary workspace capture)",
+      "sha256": "9e86b21651352d9476234bcae4a85286c7a175f35421212f1ed0cf3c985c2dc0",
+      "bytes": 149247
+    },
+    {
+      "id": "dialog",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/",
+      "retrievedAt": "2026-10-10T15:20:58.916847+00:00",
+      "httpStatus": 200,
+      "snapshot": "decoded readable text (temporary workspace capture)",
+      "sha256": "551bcc5d306ac9f213337012cfe1ce226344f4e2eff1f05f41e6711e5abf19f1",
+      "bytes": 43147
+    },
+    {
+      "id": "google-title",
+      "url": "https://developers.google.com/search/docs/appearance/title-link",
+      "retrievedAt": "2026-10-10T15:18:51.061809+00:00",
+      "httpStatus": 200,
+      "snapshot": "decoded readable text (temporary workspace capture)",
+      "sha256": "d87c84494ea3739f063b20fc2fbc26ef824704852241c804b698cdf9a295ffdc",
+      "bytes": 189016
+    },
+    {
+      "id": "ogp",
+      "url": "https://ogp.me/",
+      "retrievedAt": "2026-10-10T15:18:51.202490+00:00",
+      "httpStatus": 200,
+      "snapshot": "decoded readable text (temporary workspace capture)",
+      "sha256": "7014532286751499f442e4ea5c6392f112e9327233c9f47a3825a6275f8e5d9a",
+      "bytes": 23130
+    }
+  ]
+}

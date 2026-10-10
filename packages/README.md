@@ -46,3 +46,5 @@ Backend services for accounts, collaboration, storage or agents remain a separat
 ## Studio frontend package
 
 `@evir/studio` in `packages/studio` is the separately maintained authoring UI package, not a playback engine package. Its `./build` export is consumed by `@evir/web` to render `/editor/studio/` in the single hosted frontend. It has no separate hosting settings and is private to this workspace. The five engine packages above retain independent builds/releases and cannot depend on Studio or web.
+
+`@evir/ui` is a private frontend package for shared loading markup, feedback controls and styles. Web and Studio consume it; engine packages do not. It adds no service, environment variable or hosting target.

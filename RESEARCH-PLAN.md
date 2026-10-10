@@ -118,10 +118,23 @@ Only after completing Phases 1–4 do we decide:
 The structural reader/writer, generated fixtures, official Canvas2D/WebGL2 checks and cloud benchmarks are implemented. The [runtime audit](docs/09-runtime-research-closure.md) records their scope and pending gates. Studio's four [authoring milestones](docs/13-editor-milestone-acceptance.md) are implemented for the declared subset. The public web app is live according to the user; this workspace's HTTPS check returned 403, so production navigation has not been independently verified here.
 
 1. **Implemented next authoring step:** Pen drawing with corner/curve gestures, open/closed paths, reversible drafts and official-runtime export checks. [Research and acceptance](docs/21-pen-authoring-research-and-acceptance.md) document the evidence and limits.
-2. **Next editor step:** research and implement selection/navigation improvements, starting with multiple selection and marquee. Extend the transaction and world-transform checks before adding snapping, guides or layer reorganization.
+2. **Implemented selection/navigation step:** multiple selection, marquee, grouped world-space movement, keyboard navigation and responsive panels. The [experience-quality evidence](docs/22-selection-and-experience-quality.md) records checks and limitations. Research snapping, guides and layer reorganization before the next increment.
 3. **Then expand authoring deliberately:** research gradients, clipping/feathering and richer deformation/blending against the existing runtime experiments; validate each added editor feature with official runtimes. Text/raster assets and semantic `.riv` import need explicit supported contracts.
 4. **Keep external evidence gates open:** the physical-device audit is deferred while the user tests it; controlled equivalent Rive Editor exports remain pending. The supplied exports are useful corpus evidence, not equivalent-scene comparisons.
 5. **AI/agents remain researched, not implemented:** use the [agent study](docs/15-ai-agent-authoring-research.md) to define bounded document operations, review/undo and data handling before selecting a provider or transport. No new binary format or performance-parity commitment follows from frontend progress.
+
+### Product quality requirements — added 10 October 2026
+
+Apply these alongside the editor/runtime phases, starting with selection/navigation. Research the existing case studies and primary guidance before each increment; verify the resulting user tasks rather than treating a checklist as completion.
+
+- **Mobile responsiveness:** public pages and Studio chrome must reflow at 320 CSS pixels; make Layers/Properties accessible on small screens and preserve a usable stage. Physical touch/pinch and mobile performance remain separate device checks.
+- **Memory and lifecycle:** stop animation scheduling when paused, offscreen or hidden; disconnect observers and abort pending loads on teardown; bound canvas pixel allocations and keep history behavior explicit. Measure browser resource behavior before claiming memory/performance gains.
+- **Accessibility:** keyboard selection/navigation, visible focus, labeled controls, adequate touch targets, reduced-motion alternatives, programmatic statuses and custom dialogs that manage focus. Automated WCAG checks supplement representative assistive-technology sessions.
+- **SEO and sharing:** descriptive server-rendered titles/descriptions, canonical URLs, sitemap/robots behavior and an original story-led Evir showcase image for Open Graph and social cards. Preserve the supplied brand artwork; never fabricate product screenshots or endorsements.
+- **Loading and recovery:** a fitting living-character loading state, static reduced-motion fallback, usable preview fallback/retry and friendly branded error pages with recovery links.
+- **Toasts and alerts:** consistent custom, accessible success/error feedback and inline field errors. Avoid browser `alert`, `confirm`, `prompt` and validation popovers; keep important errors visible and do not steal focus for passive status updates.
+
+The current increment combines these requirements with multiple selection, marquee and stage/layer navigation. The device audit and controlled equivalent Rive Editor comparisons remain pending.
 
 ### Architecture follow-up
 

@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-10-10T15:46:06.440Z",
+  "widths": [
+    320,
+    390,
+    768,
+    1100,
+    1440
+  ],
+  "flows": [
+    "Shift toggle",
+    "marquee enclosure and Shift toggle",
+    "select all and bulk delete/undo",
+    "multiple drag and undo",
+    "keyboard nudge and undo",
+    "roving Layers focus",
+    "mobile dialog Escape and focus restoration"
+  ],
+  "automatedAccessibilityViolations": 0,
+  "physicalDeviceMeasurements": false
+}

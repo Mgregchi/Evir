@@ -1,7 +1,7 @@
 import http from 'node:http';
 import path from 'node:path';
 import { readFile, stat } from 'node:fs/promises';
-const mime={'.html':'text/html; charset=utf-8','.mjs':'text/javascript','.js':'text/javascript','.css':'text/css','.json':'application/json','.png':'image/png','.svg':'image/svg+xml','.xml':'application/xml','.txt':'text/plain','.evir-project':'application/json'};
+const mime={'.html':'text/html; charset=utf-8','.mjs':'text/javascript','.js':'text/javascript','.css':'text/css','.json':'application/json','.png':'image/png','.jpg':'image/jpeg','.svg':'image/svg+xml','.xml':'application/xml','.txt':'text/plain','.evir-project':'application/json'};
 export function createStaticServer(root, basePath='') {
   root=path.resolve(root);
   return http.createServer(async(req,res)=>{

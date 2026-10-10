@@ -22,6 +22,7 @@ jobs:
       - run: npm run test:frontend
       - run: npm run test:editor
       - run: npm run test:web
+      - run: npm run test:experience
       - run: npm run validate:editor
       - uses: actions/upload-artifact@v4
         with:
@@ -29,6 +30,7 @@ jobs:
           path: |
             research/results/public-site/
             research/results/editor-pen/
+            research/results/experience-quality/
       - uses: actions/upload-artifact@v4
         with:
           name: web

@@ -1,13 +1,14 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8" /><meta name="robots" content="noindex, nofollow" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Evir — Character studio</title>
     <link rel="icon" type="image/png" href="assets/evir-favicon.png" />
     <link rel="stylesheet" href="studio.css" />
   </head>
-  <body>
+  <body class="studio-booting">
+    <div id="studio-loading"><!-- LIVING_LOADER --><div class="startup-error" hidden role="alert"><img src="assets/evir-wordmark-display.png" alt="Evir" width="108" height="40"><h1>Studio couldn't wake up.</h1><p>Reload to try again. Your browser's saved project stays in its recovery storage.</p><div class="startup-actions"><button onclick="location.reload()">Reload Studio</button><!-- STUDIO_RECOVERY_LINK --></div></div></div>
     <header class="topbar">
       <a class="brand" href="./" aria-label="Evir character studio"
         ><img
@@ -63,7 +64,8 @@
       </div>
       <span class="mode"><span class="mode-dot"></span>Design</span>
     </div>
-    <main class="workspace">
+    <nav class="panel-switcher" aria-label="Workspace panels"><button id="show-layers" aria-haspopup="dialog">Layers</button><button id="show-properties" aria-haspopup="dialog">Properties</button></nav>
+    <main class="workspace" id="workspace" aria-busy="true" inert>
       <aside class="layers panel" aria-label="Layers panel">
         <div class="panel-title">
           <h1>Layers</h1>
@@ -90,7 +92,7 @@
         <div class="stage-heading">
           <span id="artboard-title"></span>
           <div>
-            <button id="fit" title="Fit artboard · F">Fit</button
+            <button id="fit-selection" title="Fit selection · Shift F">Fit selection</button><button id="fit" title="Fit artboard · F">Fit</button
             ><button id="zoom-out" aria-label="Zoom out">−</button
             ><output id="zoom">100%</output
             ><button id="zoom-in" aria-label="Zoom in">+</button>
@@ -98,6 +100,7 @@
         </div>
         <div
           id="stage"
+          role="region"
           tabindex="0"
           aria-label="Character stage. Drag to move a shape. Hold Space to pan."
         >
@@ -122,11 +125,12 @@
         <div id="properties"></div>
       </aside>
     </main>
-    <div id="notice" role="alert" hidden>
+    <dialog id="mobile-panel" aria-labelledby="mobile-panel-title"><div class="mobile-panel-heading"><h2 id="mobile-panel-title"></h2><button id="close-panel" aria-label="Close panel">Close</button></div></dialog>
+    <div id="notice" class="evir-toast" role="alert" hidden>
       <span></span><button aria-label="Dismiss message">×</button>
     </div>
-    <dialog id="help">
-      <h2>Stay in your flow</h2>
+    <dialog id="help" aria-labelledby="help-title">
+      <h2 id="help-title">Stay in your flow</h2>
       <p>
         Tool shortcuts work outside text fields. Save also works while you’re
         typing.
@@ -146,6 +150,12 @@
         <dd>Esc / Backspace</dd>
         <dt>Fit artboard</dt>
         <dd>F</dd>
+        <dt>Fit selection / zoom</dt><dd>Shift F / + and −</dd>
+        <dt>Multiple selection</dt><dd>Shift + click, or drag on empty stage</dd>
+        <dt>Select all visible roots</dt><dd>Ctrl or ⌘ A</dd>
+        <dt>Move selected layers</dt><dd>Arrow keys / Shift + arrows for ten units</dd>
+        <dt>Navigate Layers</dt><dd>Up / Down / Home / End</dd>
+        <dt>Enter a group / select parent</dt><dd>Enter / Esc on the stage</dd>
         <dt>Undo / Redo</dt>
         <dd>Ctrl or ⌘ Z / Shift Z</dd>
         <dt>Save project</dt>
@@ -159,7 +169,7 @@
       </dl>
       <button id="close-help" class="primary">Back to creating</button>
     </dialog>
-    <dialog id="replace-project">
+    <dialog id="replace-project" aria-labelledby="replace-title">
       <h2 id="replace-title">Open another project?</h2>
       <p>
         Your current canvas will be replaced. Save a copy if you want to keep
@@ -175,6 +185,16 @@
         </button>
       </form>
     </dialog>
+    <noscript><style>#studio-loading .living-loader{display:none}</style><p class="no-script">Studio needs JavaScript to edit projects. You can still explore Evir's public pages from the home link.</p></noscript>
+    <script>
+      const startupError = () => {
+        if (!document.body.classList.contains('studio-booting')) return;
+        document.querySelector('#studio-loading .living-loader').hidden = true;
+        document.querySelector('.startup-error').hidden = false;
+      };
+      window.addEventListener('error', startupError, true);
+      window.addEventListener('unhandledrejection', startupError);
+    </script>
     <script type="module" src="studio.mjs"></script>
   </body>
 </html>
