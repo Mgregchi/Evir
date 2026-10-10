@@ -130,7 +130,11 @@ const { run } = require("./browser.cjs");
       page.evaluate(() => {
         player.stopRendering();
         player.animator.stateMachines[0].advanceAndApply(0);
+        // drawFrame uses the document clock and can restart the playing loop.
+        // Compare the requested zero-time pose, then freeze it for screenshot capture.
+        player.lastRenderTime = document.timeline.currentTime;
         player.drawFrame();
+        player.stopRendering();
       });
     const input = async (name, value) => {
       await page.evaluate(

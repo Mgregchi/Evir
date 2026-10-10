@@ -1,0 +1,48 @@
+{
+  "checkedAt": "2026-10-10T15:49:12.168352+00:00",
+  "baseCommit": "bea9f6c7155f2821b3d9013bc03f29aa3466685b",
+  "commands": {
+    "npm run test:frontend": {
+      "passed": 8
+    },
+    "npm run test:runtime": {
+      "passed": 6
+    },
+    "npm test": {
+      "passed": 22
+    },
+    "npm run test:editor": {
+      "unitPassed": 25,
+      "browserWorkflowsPassed": 4
+    },
+    "npm run test:web": {
+      "pageConfigurationChecks": 22,
+      "viewportWidths": [
+        1440,
+        390,
+        320
+      ],
+      "showcaseOfficialComparisons": 30
+    },
+    "npm run test:experience": {
+      "passed": true
+    },
+    "npm run validate:editor": {
+      "officialAuthoringComparisons": 40
+    }
+  },
+  "officialAuthoring": {
+    "canvas": {
+      "runtime": "2.44.0",
+      "comparisons": 20,
+      "maxMAE": 0.013851165771484375,
+      "clickListenerMAE": 0
+    },
+    "webgl2": {
+      "runtime": "2.44.0",
+      "comparisons": 20,
+      "maxMAE": 0.22022247314453125,
+      "clickListenerMAE": 0.13967514038085938
+    }
+  }
+}

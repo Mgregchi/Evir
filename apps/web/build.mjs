@@ -1,4 +1,4 @@
-import { writeFile, mkdir, cp, access } from 'node:fs/promises';
+import { writeFile, mkdir, cp, access, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { build } from 'esbuild';
 import { root, loadEnvironment, prepareOutput } from '../../tools/build-support.mjs';
@@ -13,14 +13,14 @@ const icons = {
   '⌘':'M5 5h6v6H5zM5 5V3a2 2 0 1 0-2 2h2m6 0h2a2 2 0 1 0-2-2v2m0 6v2a2 2 0 1 0 2-2h-2m-6 0H3a2 2 0 1 0 2 2v-2',
 };
 const renderIcons = html => html.replace(/[↗↓↔⌘]/g, char => `<svg class="icon" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" fill="none"><path d="${icons[char]}" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`).replaceAll('＋','+');
-const required=['milo-poster.png','orbit-poster.png','studio-overview.png','studio-paths.png','studio-animation.png','studio-interact.png'];
+const required=['milo-poster.png','orbit-poster.png','studio-overview.png','studio-paths.png','studio-animation.png','studio-interact.png','evir-showcase.jpg'];
 for(const file of required) {
   try {await access(path.join(root,'apps/web/assets',file));}
   catch {throw Error(`Missing real showcase asset ${file}. Run npm run web:assets first.`);}
 }
 const out=await prepareOutput('web','EVIR_WEB_OUTPUT');
 await cp(path.join(root,'apps/web/assets'),path.join(out,'assets'),{recursive:true});
-await cp(path.join(root,'apps/web/styles.css'),path.join(out,'assets/styles.css'));
+await writeFile(path.join(out,'assets/styles.css'),await readFile(path.join(root,'apps/web/styles.css'),'utf8')+'\n'+await readFile(path.join(root,'packages/ui/styles.css'),'utf8'));
 await build({entryPoints:[path.join(root,'apps/web/app.mjs')],bundle:true,format:'esm',splitting:true,platform:'browser',target:'es2022',outdir:path.join(out,'assets'),outExtension:{'.js':'.mjs'}});
 for(const [from,to] of [['evir-wordmark-display.png','wordmark.png'],['evir-favicon.png','favicon.png']])
   await cp(path.join(root,'assets/brand',from),path.join(out,'assets',to));
@@ -44,16 +44,16 @@ function footer() {
 const content=pages(config);
 const canonical=(p)=>config.siteUrl?`${config.siteUrl}${route(config,p)}`:'';
 for(const page of content) {
-  const url=canonical(page.path), imageUrl=canonical('assets/studio-overview.png');
+  const url=canonical(page.path), imageUrl=canonical('assets/evir-showcase.jpg');
   const html=`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#101815">
   <title>${escape(page.title)}</title><meta name="description" content="${escape(page.description)}"><meta property="og:type" content="website"><meta property="og:site_name" content="Evir"><meta property="og:title" content="${escape(page.title)}"><meta property="og:description" content="${escape(page.description)}"><meta name="twitter:card" content="summary_large_image">
-  ${url?`<link rel="canonical" href="${escape(url)}"><meta property="og:url" content="${escape(url)}"><meta property="og:image" content="${escape(imageUrl)}"><meta property="og:image:alt" content="The actual Evir Studio editor with an original character">`:''}
+  ${url?`<link rel="canonical" href="${escape(url)}"><meta property="og:url" content="${escape(url)}"><meta property="og:image" content="${escape(imageUrl)}"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="An Evir character grows from Bézier outlines into motion and an interactive hello."><meta name="twitter:image" content="${escape(imageUrl)}"><meta name="twitter:image:alt" content="An Evir character grows from Bézier outlines into motion and an interactive hello.">`:''}
   <link rel="icon" type="image/png" href="${route(config,'assets/favicon.png')}"><link rel="stylesheet" href="${route(config,'assets/styles.css')}"><script id="public-config" type="application/json">${JSON.stringify(config).replaceAll('<','\\u003c')}</script><script type="module" src="${route(config,'assets/app.mjs')}"></script></head>
-  <body data-page="${page.path||'home'}">${renderIcons(header(page.path))}<main id="main">${renderIcons(page.body)}</main>${renderIcons(footer())}</body></html>`;
+  <body data-page="${page.path||'home'}">${renderIcons(header(page.path))}<main id="main">${renderIcons(page.body)}</main>${renderIcons(footer())}<div id="site-notice" class="evir-toast" role="status" hidden><span></span><button type="button" aria-label="Dismiss notification">×</button></div></body></html>`;
   const dir=path.join(out,page.path);await mkdir(dir,{recursive:true});await writeFile(path.join(dir,'index.html'),html);
 }
-await writeFile(path.join(out,'404.html'),`<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Page not found — Evir</title><link rel="stylesheet" href="${route(config,'assets/styles.css')}"><main class="page-intro wrap"><span class="eyebrow">404</span><h1>This page<br>has wandered off.</h1><p>${link('','Return to Evir home','','button primary')}</p></main></html>`);
-await writeFile(path.join(out,'robots.txt'),`User-agent: *\nAllow: /\n${config.siteUrl?`Sitemap: ${canonical('sitemap.xml')}\n`:''}`);
+await writeFile(path.join(out,'404.html'),`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>Page not found — Evir</title><link rel="icon" href="${route(config,'assets/favicon.png')}"><link rel="stylesheet" href="${route(config,'assets/styles.css')}"></head><body><a class="skip-link" href="#main">Skip to content</a><header class="site-header wrap"><a class="brand" href="${route(config)}" aria-label="Evir home">${brand}</a></header><main id="main" class="page-intro wrap"><span class="eyebrow">404 · A SMALL DETOUR</span><h1>This page<br>has wandered off.</h1><p>The link may have moved. Your next little discovery is still here.</p><div class="actions">${link('','Return home','','button primary')}${link('examples/','Explore the examples','','button secondary')}${link('community/#feedback','Report a broken link')}</div></main>${renderIcons(footer())}</body></html>`);
+await writeFile(path.join(out,'robots.txt'),`User-agent: *\nAllow: /\nDisallow: ${route(config,'editor/studio/')}\n${config.siteUrl?`Sitemap: ${canonical('sitemap.xml')}\n`:''}`);
 if(config.siteUrl)await writeFile(path.join(out,'sitemap.xml'),`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${content.map(p=>`<url><loc>${escape(canonical(p.path))}</loc></url>`).join('')}</urlset>`);
 await writeFile(path.join(out,'.nojekyll'),'');
 await writeFile(path.join(out,'build-info.json'),JSON.stringify({builtAt:new Date().toISOString(),pages:content.map(p=>p.path),basePath:config.basePath,configKeys:Object.keys(config)},null,2)+'\n');
