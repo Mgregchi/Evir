@@ -59,3 +59,7 @@ npm run validate:editor
 The first full run exposed a timing flaw in the existing click-listener oracle: pinned Rive 2.44.0 drawFrame advances from the document clock and can reschedule a playing machine, so screenshot capture observed a later pose than the requested frame zero. The oracle now resets its render-clock reference before that explicit zero-time draw and stops scheduling afterward. The listener still receives a real browser mouse click; comparison tolerances and engine/export behavior are unchanged.
 
 Automated accessibility is not equivalent to a screen-reader study. Physical touch, mobile heap/GPU measurements, representative user sessions, production crawler/link-card rendering and controlled equivalent Rive Editor exports remain open. The user deferred the physical-device audit. Research snapping/guides, freehand and richer authoring next; agent/provider choices and new format decisions remain separate research gates.
+
+## Subsequent visual review
+
+The user reported that the first mobile reflow remained cluttered despite its passing overflow and automated accessibility checks. The [workspace UX revision](24-studio-workspace-ux.md) supersedes that layout with a compact header, persistent rail and contextual drawers, and adds screen-area and editing-task evidence. The earlier checks establish functionality, not usability certification.

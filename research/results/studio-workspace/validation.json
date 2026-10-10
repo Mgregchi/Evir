@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-10T21:24:38.625708+00:00",
+  "localChecks": {
+    "editorUnitTests": 25,
+    "editorBrowserFlows": [
+      "foundation",
+      "authoring",
+      "Pen",
+      "selection",
+      "workspace"
+    ],
+    "frontendUnitTests": 12,
+    "runtimeUnitTests": 6,
+    "publicPageConfigurationChecks": 22,
+    "gallerySourceRoundTrips": 5,
+    "workspaceSizes": 6,
+    "authoringOfficialComparisons": 40,
+    "showcaseOfficialComparisons": 84,
+    "penOfficialComparisons": 2,
+    "experienceRecoveryAndSEO": "passed"
+  },
+  "officialBackends": [
+    "Canvas2D",
+    "WebGL2"
+  ],
+  "automatedAccessibilityViolations": 0,
+  "limits": "Software Chromium validation and visual review. Physical GPU/mobile memory, screen-reader sessions and representative usability studies remain unmeasured."
+}

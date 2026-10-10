@@ -8,7 +8,7 @@ import {
 import { History, addNode, reparent, removeSubtree, reorder } from "@evir/authoring";
 import { mountAuthoring } from "./authoring.mjs";
 import { PenDraft } from "./pen.mjs";
-import { mountPanels } from "./panels.mjs";
+import { mountPanels, mountDisclosures } from "./panels.mjs";
 import { createFeedback } from "@evir/ui";
 import { available, selectionRoots, selectionBounds, marqueeTargets,
   prepareSelectionMove, applySelectionMove } from "./selection.mjs";
@@ -16,6 +16,8 @@ import { drawScene, nodeBounds, pathOnContext } from "@evir/renderer-canvas";
 import { worldPoints, mapPoint } from "@evir/runtime/geometry";
 const config = JSON.parse(document.getElementById('editor-config').textContent);
 document.querySelector('.brand').href = config.publicSiteUrl;
+document.querySelector('#studio-home').href = config.publicSiteUrl;
+document.querySelector('#startup-step').textContent = 'Restoring your local project…';
 let authoring;
 const $ = (s) => document.querySelector(s);
 const element = (tag, text, cls) => {
@@ -26,6 +28,17 @@ const element = (tag, text, cls) => {
 };
 const iconPaths = {
   cursor: "M5 3l14 9-7 1-3 7z",
+  menu: "M4 6h16M4 12h16M4 18h16",
+  plus: "M12 4v16M4 12h16",
+  pen: "M4 20l3-8L17 2l5 5-10 10-8 3M7 12l5 5M14 5l5 5",
+  layers: "M12 3L2 8l10 5 10-5-10-5M2 12l10 5 10-5M2 16l10 5 10-5",
+  sliders: "M4 6h16M4 12h16M4 18h16M8 3v6M16 9v6M10 15v6",
+  undo: "M8 5L3 10l5 5M3 10h10a7 7 0 0 1 7 7",
+  redo: "M16 5l5 5-5 5M21 10H11a7 7 0 0 0-7 7",
+  play: "M7 4l14 8-14 8V4z",
+  help: "M9 8a3 3 0 1 1 5 2c-2 1-2 2-2 3M12 17v.1M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0",
+  'collapse-left': "M10 5l-7 7 7 7M17 4v16",
+  'collapse-right': "M14 5l7 7-7 7M7 4v16",
   pan: "M12 3v18M3 12h18M8 7l4-4 4 4M8 17l4 4 4-4M7 8l-4 4 4 4M17 8l4 4-4 4",
   rectangle: "M4 4h16v16H4z",
   group: "M4 4h11v11H4zM9 9h11v11H9",
@@ -62,6 +75,8 @@ let store,
   penDraft = null,
   penPointerId = null,
   cameras = {},
+  fittedView = true,
+  stageSize = null,
   generation = 0,
   savedFingerprint = "",
   status = "Local project";
@@ -150,6 +165,7 @@ async function persist() {
   }
 }
 function install(p) {
+  fittedView = true;
   ++generation;
   authoring?.reset();
   store = new History(p);
@@ -399,11 +415,12 @@ function draw() {
   );
 }
 function fit() {
+  fittedView = true;
   const r = stage.getBoundingClientRect(),
     a = artboard();
   const zoom = Math.min(
-    (r.width - 100) / a.width,
-    (r.height - 85) / a.height,
+    (r.width - (r.width < 500 ? 40 : 100)) / a.width,
+    (r.height - (r.height < 400 ? 40 : 85)) / a.height,
     1.5,
   );
   cameras[activeArtboard] = {
@@ -415,6 +432,7 @@ function fit() {
   persist();
 }
 function fitSelection() {
+  fittedView = false;
   const b = selectionBounds(project(), selectedIds);
   if (!b) return fit();
   const r = stage.getBoundingClientRect();
@@ -1005,6 +1023,7 @@ stage.addEventListener("pointermove", (e) => {
     dx = (now.x - drag.start.x) / drag.c.zoom,
     dy = (now.y - drag.start.y) / drag.c.zoom;
   if (drag.kind === "pan") {
+    fittedView = false;
     cameras[activeArtboard] = {
       ...drag.c,
       x: drag.c.x + now.x - drag.start.x,
@@ -1085,6 +1104,7 @@ stage.addEventListener("pointerup", finishDrag);
 stage.addEventListener("pointercancel", cancelDrag);
 stage.addEventListener("lostpointercapture", cancelDrag);
 function zoom(factor, at) {
+  fittedView = false;
   if (drag || penDraft?.dragging) return;
   const c = camera(),
     r = stage.getBoundingClientRect();
@@ -1105,6 +1125,7 @@ stage.addEventListener(
     if (e.ctrlKey || e.metaKey)
       zoom(Math.exp(-e.deltaY * 0.002), coordinates(e));
     else {
+      fittedView = false;
       camera().x -= e.deltaX;
       camera().y -= e.deltaY;
       draw();
@@ -1229,7 +1250,7 @@ $("#save-before-replace").onclick = save;
 $("#shortcuts").onclick = () => $("#help").showModal();
 $("#close-help").onclick = () => $("#help").close();
 window.addEventListener("keydown", (e) => {
-  if ($("#help").open || $("#replace-project").open || $("#mobile-panel").open) return;
+  if ($("#help").open || $("#replace-project").open || $("#mobile-panel").open || document.querySelector("[popover]:popover-open")) return;
   const mod = e.ctrlKey || e.metaKey;
   if (mod && e.key.toLowerCase() === "s") {
     e.preventDefault();
@@ -1238,7 +1259,7 @@ window.addEventListener("keydown", (e) => {
     save();
     return;
   }
-  if (e.target.closest("input,select,textarea")) return;
+  if (e.target.closest("input,select,textarea,[popover]")) return;
   if (mod && e.key.toLowerCase() === "z") {
     e.preventDefault();
     e.shiftKey ? redo() : undo();
@@ -1348,10 +1369,20 @@ window.addEventListener("beforeunload", (e) => {
   }
 });
 new ResizeObserver(() => {
+  const r = stage.getBoundingClientRect();
   if (store) {
-    if (authoring && authoring.mode !== "Design") fit();
-    else draw();
+    // Fit views stay fitted; manually panned views retain their world-space center.
+    cancelDrag();
+    if (fittedView) fit();
+    else {
+      if (stageSize) {
+        camera().x += (r.width - stageSize.width) / 2;
+        camera().y += (r.height - stageSize.height) / 2;
+      }
+      draw();
+    }
   }
+  stageSize = {width:r.width,height:r.height};
 }).observe(stage);
 let initial = demo(),
   restored = false;
@@ -1367,9 +1398,14 @@ try {
 install(initial);
 if (!restored) fit();
 else {
+  const r = stage.getBoundingClientRect(), c = camera(), a = artboard();
+  const fits = c.x >= 20 && c.y >= 20 && c.x + a.width * c.zoom <= r.width - 20 && c.y + a.height * c.zoom <= r.height - 20;
+  fittedView = false;
+  if (!fits) fit();
   setStatus("Restored from this browser");
   savedFingerprint = await serializeProject(bundle());
 }
+$("#startup-step").textContent = "Getting your tools ready…";
 authoring = mountAuthoring({
   add,
   artboardId: () => activeArtboard,
@@ -1390,11 +1426,12 @@ authoring = mountAuthoring({
   },
 });
 mountPanels();
+mountDisclosures();
 render();
 document.body.classList.remove("studio-booting");
 $("#studio-loading").hidden = true;
 $("#workspace").setAttribute("aria-busy", "false");
-$("#workspace").inert = false;
+for (const shell of document.querySelectorAll(".topbar,.toolbar,.tool-rail,#workspace")) shell.inert = false;
 // Read-only snapshots for diagnostics and browser acceptance tests.
 window.evirStudio = {
   snapshot: () => structuredClone(bundle()),

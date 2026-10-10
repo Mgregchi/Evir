@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-10-10T21:24:13.209Z",
+  "banner": {
+    "width": 1200,
+    "height": 630,
+    "bytes": 84258,
+    "type": "image/jpeg",
+    "canonicalPrefix": "/Evir"
+  },
+  "checks": [
+    "living loading state is visible and static under reduced motion",
+    "failed preview retains poster and Retry recovers",
+    "reduced-motion paused by default",
+    "paused/offscreen/simulated-hidden/BFCache-suspended preview schedules zero callbacks",
+    "BFCache simulated resume",
+    "custom feedback errors focus first invalid field",
+    "no browser dialogs in feedback flow",
+    "404 recovery and noindex",
+    "Studio module failure recovery"
+  ],
+  "automatedAccessibilityViolations": 0,
+  "memoryScope": "Callback scheduling and bounded buffers; no physical-device heap benchmark or native BFCache certification"
+}

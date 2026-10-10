@@ -26,12 +26,12 @@ run(async (page) => {
     (await snapshot()).nodes.find((n) => n.name === "Body").transform[4],
     32,
   );
-  await page.getByRole("button", { name: "↶ Undo", exact: true }).click();
+  await page.getByRole("button", { name: "Undo", exact: true }).click();
   assert.equal(
     (await snapshot()).nodes.find((n) => n.name === "Body").transform[4],
     10,
   );
-  await page.getByRole("button", { name: "↷ Redo", exact: true }).click();
+  await page.getByRole("button", { name: "Redo", exact: true }).click();
   assert.equal(
     (await snapshot()).nodes.find((n) => n.name === "Body").transform[4],
     32,
@@ -192,10 +192,10 @@ run(async (page) => {
   assert((await snapshot()).editor.hidden.includes(head.id));
   await page.getByRole("button", { name: "Show", exact: true }).click();
   const retained = await snapshot();
-  await page.getByRole("button", { name: "New", exact: true }).click();
+  await require("./actions.cjs").press(page, "New");
   await page.getByRole("button", { name: "Keep editing", exact: true }).click();
   assert.deepEqual(await snapshot(), retained);
-  await page.getByRole("button", { name: "New", exact: true }).click();
+  await require("./actions.cjs").press(page, "New");
   await page
     .getByRole("button", { name: "Create project", exact: true })
     .click();
@@ -212,7 +212,7 @@ run(async (page) => {
       throw new DOMException("Storage full", "QuotaExceededError");
     };
   });
-  await page.getByRole("button", { name: "Rectangle", exact: true }).click();
+  await require("./actions.cjs").press(page, "Rectangle");
   await page
     .getByRole("alert")
     .filter({ hasText: "Download a project copy" })

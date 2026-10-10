@@ -15,6 +15,6 @@ export async function buildStudio({outDir,basePath,homeUrl}) {
   await cp(new URL('../format/schema/LICENSE.rive',import.meta.url),path.join(outDir,'assets/LICENSE.rive'));
   const source=await readFile(path.join(sourceRoot,'index.html'),'utf8');
   const head=`<script id="editor-config" type="application/json">${JSON.stringify(config).replaceAll('<','\\u003c')}</script>`;
-  const html=source.replace('<!-- LIVING_LOADER -->',livingLoader('Studio is waking up…')).replace('<!-- STUDIO_RECOVERY_LINK -->',`<a href="${homeUrl.replaceAll('&','&amp;').replaceAll('"','&quot;')}">Return home</a>`).replace('</head>',head+'</head>').replace('href="./" aria-label="Evir character studio"',`href="${homeUrl.replaceAll('&','&amp;').replaceAll('"','&quot;')}" aria-label="Evir Studio home"`);
+  const html=source.replace('<!-- LIVING_LOADER -->',livingLoader('Studio is waking up…')).replaceAll('<!-- STUDIO_RECOVERY_LINK -->',`<a href="${homeUrl.replaceAll('&','&amp;').replaceAll('"','&quot;')}">Return home</a>`).replace('</head>',head+'</head>').replace('href="./" aria-label="Evir character studio"',`href="${homeUrl.replaceAll('&','&amp;').replaceAll('"','&quot;')}" aria-label="Evir Studio home"`);
   await writeFile(path.join(outDir,'index.html'),html);
 }

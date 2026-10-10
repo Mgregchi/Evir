@@ -135,7 +135,7 @@ Apply these alongside the editor/runtime phases, starting with selection/navigat
 - **Loading and recovery:** a fitting living-character loading state, static reduced-motion fallback, usable preview fallback/retry and friendly branded error pages with recovery links.
 - **Toasts and alerts:** consistent custom, accessible success/error feedback and inline field errors. Avoid browser `alert`, `confirm`, `prompt` and validation popovers; keep important errors visible and do not steal focus for passive status updates.
 
-The current increment combines these requirements with multiple selection, marquee and stage/layer navigation. The device audit and controlled equivalent Rive Editor comparisons remain pending.
+The [Studio workspace revision](docs/24-studio-workspace-ux.md) addresses the user-reported clutter after the initial reflow pass: a compact header, persistent rail, desktop panel collapse, mobile panel/workflow drawers, adaptive stage fitting and explicit startup/recovery. Automated overflow/accessibility checks are necessary but do not establish usability. The device audit and controlled equivalent Rive Editor comparisons remain pending.
 
 ### Architecture follow-up
 

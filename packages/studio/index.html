@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="studio.css" />
   </head>
   <body class="studio-booting">
-    <div id="studio-loading"><!-- LIVING_LOADER --><div class="startup-error" hidden role="alert"><img src="assets/evir-wordmark-display.png" alt="Evir" width="108" height="40"><h1>Studio couldn't wake up.</h1><p>Reload to try again. Your browser's saved project stays in its recovery storage.</p><div class="startup-actions"><button onclick="location.reload()">Reload Studio</button><!-- STUDIO_RECOVERY_LINK --></div></div></div>
-    <header class="topbar">
+    <div id="studio-loading"><div class="startup-scene"><img src="assets/evir-wordmark-display.png" alt="Evir" width="108" height="40"><!-- LIVING_LOADER --><h1>A little space for big ideas.</h1><p id="startup-step">Preparing your workspace…</p><p class="startup-note">Your work stays in this browser. No account needed.</p></div><div class="startup-error" hidden role="alert"><img src="assets/evir-wordmark-display.png" alt="Evir" width="108" height="40"><h1>Studio couldn't wake up.</h1><p>Reload to try again. Your browser's saved project stays in its recovery storage.</p><div class="startup-actions"><button onclick="location.reload()">Reload Studio</button><!-- STUDIO_RECOVERY_LINK --></div></div></div>
+    <header class="topbar" inert>
       <a class="brand" href="./" aria-label="Evir character studio"
         ><img
           class="brand-wordmark"
@@ -24,52 +24,47 @@
           >Local project</span
         >
       </div>
-      <nav aria-label="Project actions">
-        <button id="new">New</button><button id="open">Open project</button
-        ><button id="save" class="primary">
-          Save project
-          <span data-icon="download" aria-hidden="true"></span></button
-        ><input
-          id="file"
-          type="file"
-          accept=".json,.evir-project,application/json"
-          hidden
-        />
-      </nav>
+      <div class="project-actions">
+        <button id="save" class="primary" aria-label="Save project" title="Download an editable project copy · Ctrl/⌘ S">Save <span data-icon="download" aria-hidden="true"></span></button>
+        <button id="project-menu-toggle" popovertarget="project-menu" aria-expanded="false" aria-controls="project-menu" aria-label="Project menu" title="Project menu"><span data-icon="menu" aria-hidden="true"></span></button>
+      </div>
+      <div id="project-menu" class="tool-popover project-menu" popover>
+        <h2>Project</h2>
+        <nav id="project-file-actions" aria-label="Project actions"><button id="new">New</button><button id="open">Open project</button></nav>
+        <p>Save keeps an editable copy. Export creates a runtime animation.</p>
+        <a id="studio-home" href="./">Explore Evir ↗</a>
+      </div>
+      <input id="file" type="file" accept=".json,.evir-project,application/json" hidden />
     </header>
-    <div class="toolbar" role="toolbar" aria-label="Design tools">
-      <div class="toolbar-group">
-        <button id="select-tool" aria-pressed="true" title="Select · V">
-          <span data-icon="cursor" aria-hidden="true"></span> Select</button
-        ><button
-          id="pan-tool"
-          aria-pressed="false"
-          title="Pan · H or hold Space"
-        >
-          <span data-icon="pan" aria-hidden="true"></span> Pan
-        </button>
+    <div class="toolbar" role="group" aria-label="Editing mode" inert><span class="mode">Design</span></div>
+    <nav class="tool-rail" aria-label="Studio tools and panels" inert>
+      <div class="rail-tools" role="group" aria-label="Design tools">
+        <button id="select-tool" aria-label="Select" aria-pressed="true" title="Select · V"><span data-icon="cursor" aria-hidden="true"></span><span>Select</span></button>
+        <button id="pan-tool" aria-label="Pan" aria-pressed="false" title="Pan · H or hold Space"><span data-icon="pan" aria-hidden="true"></span><span>Pan</span></button>
+        <button id="pen-tool" aria-label="Pen" aria-pressed="false" title="Draw path · P"><span data-icon="pen" aria-hidden="true"></span><span>Pen</span></button>
+        <button id="create-toggle" aria-label="Create" popovertarget="create-menu" aria-expanded="false" aria-controls="create-menu" title="Add shapes, groups and bones"><span data-icon="plus" aria-hidden="true"></span><span>Create</span></button>
       </div>
-      <div class="toolbar-group">
-        <button id="pen-tool" aria-pressed="false" title="Draw path · P">Pen</button>
-        <button id="add-rectangle" title="Add rectangle · R">
-          <span data-icon="rectangle" aria-hidden="true"></span>
-          Rectangle</button
-        ><button id="add-group" title="Add group">
-          <span data-icon="group" aria-hidden="true"></span> Group
-        </button>
+      <div class="panel-switcher" role="group" aria-label="Workspace panels">
+        <button id="show-layers" aria-label="Layers" aria-expanded="true" aria-controls="layers-panel" title="Show or hide Layers"><span data-icon="layers" aria-hidden="true"></span><span>Layers</span></button>
+        <button id="show-properties" aria-label="Properties" aria-expanded="true" aria-controls="properties-panel" title="Show or hide Properties"><span data-icon="sliders" aria-hidden="true"></span><span>Properties</span></button>
       </div>
-      <div class="toolbar-group">
-        <button id="undo" title="Undo · Ctrl/⌘ Z">↶ Undo</button
-        ><button id="redo" title="Redo · Ctrl/⌘ Shift Z">↷ Redo</button>
+      <button id="show-workflow" hidden aria-haspopup="dialog" aria-expanded="false" aria-controls="mobile-panel"><span data-icon="play" aria-hidden="true"></span><span>Timeline</span></button>
+      <div class="rail-history" role="group" aria-label="History">
+        <button id="undo" aria-label="Undo" title="Undo · Ctrl/⌘ Z"><span data-icon="undo" aria-hidden="true"></span><span>Undo</span></button>
+        <button id="redo" aria-label="Redo" title="Redo · Ctrl/⌘ Shift Z"><span data-icon="redo" aria-hidden="true"></span><span>Redo</span></button>
       </div>
-      <span class="mode"><span class="mode-dot"></span>Design</span>
+      <button id="shortcuts" aria-label="Help and keyboard shortcuts" title="Keyboard shortcuts · ?"><span data-icon="help" aria-hidden="true"></span><span>Help</span></button>
+    </nav>
+    <div id="create-menu" class="tool-popover create-menu" popover>
+      <h2>Add to your artboard</h2>
+      <div id="creation-tools"><button id="add-rectangle"><span data-icon="rectangle" aria-hidden="true"></span>Rectangle <kbd aria-hidden="true">R</kbd></button><button id="add-group"><span data-icon="group" aria-hidden="true"></span>Group</button></div>
+      <p>For custom curves, use the Pen tool.</p>
     </div>
-    <nav class="panel-switcher" aria-label="Workspace panels"><button id="show-layers" aria-haspopup="dialog">Layers</button><button id="show-properties" aria-haspopup="dialog">Properties</button></nav>
     <main class="workspace" id="workspace" aria-busy="true" inert>
-      <aside class="layers panel" aria-label="Layers panel">
+      <aside id="layers-panel" class="layers panel" aria-label="Layers panel">
         <div class="panel-title">
           <h1>Layers</h1>
-          <span id="layer-count"></span>
+          <span id="layer-count"></span><button id="hide-layers" aria-label="Hide Layers panel" title="Hide Layers"><span data-icon="collapse-left" aria-hidden="true"></span></button>
         </div>
         <label class="search"
           ><span data-icon="search" aria-hidden="true"></span
@@ -92,10 +87,8 @@
         <div class="stage-heading">
           <span id="artboard-title"></span>
           <div>
-            <button id="fit-selection" title="Fit selection · Shift F">Fit selection</button><button id="fit" title="Fit artboard · F">Fit</button
-            ><button id="zoom-out" aria-label="Zoom out">−</button
-            ><output id="zoom">100%</output
-            ><button id="zoom-in" aria-label="Zoom in">+</button>
+            <button id="fit" title="Fit artboard · F">Fit</button
+            ><button id="view-toggle" popovertarget="view-menu" aria-expanded="false" aria-controls="view-menu" aria-labelledby="zoom view-label"><output id="zoom">100%</output><span id="view-label" class="sr-only">zoom and view options</span><span aria-hidden="true">⌄</span></button>
           </div>
         </div>
         <div
@@ -114,17 +107,18 @@
         <div class="stage-footer">
           <span id="selection-status">Select a layer to edit</span
           ><div id="pen-actions" hidden><button id="finish-path">Finish path</button><button id="cancel-path">Cancel path</button></div>
-          <button id="shortcuts">Keyboard shortcuts <kbd>?</kbd></button>
+
         </div>
       </section>
-      <aside class="inspector panel" aria-label="Properties inspector">
+      <aside id="properties-panel" class="inspector panel" aria-label="Properties inspector">
         <div class="panel-title">
           <h2>Properties</h2>
-          <span id="kind-label">ARTBOARD</span>
+          <span id="kind-label">ARTBOARD</span><button id="hide-properties" aria-label="Hide Properties panel" title="Hide Properties"><span data-icon="collapse-right" aria-hidden="true"></span></button>
         </div>
         <div id="properties"></div>
       </aside>
     </main>
+    <div id="view-menu" class="tool-popover view-menu" popover><h2>Canvas view</h2><div class="zoom-controls"><button id="zoom-out" aria-label="Zoom out">−</button><span>Zoom</span><button id="zoom-in" aria-label="Zoom in">+</button></div><button id="fit-selection">Fit selection <kbd aria-hidden="true">Shift F</kbd></button></div>
     <dialog id="mobile-panel" aria-labelledby="mobile-panel-title"><div class="mobile-panel-heading"><h2 id="mobile-panel-title"></h2><button id="close-panel" aria-label="Close panel">Close</button></div></dialog>
     <div id="notice" class="evir-toast" role="alert" hidden>
       <span></span><button aria-label="Dismiss message">×</button>
@@ -185,11 +179,11 @@
         </button>
       </form>
     </dialog>
-    <noscript><style>#studio-loading .living-loader{display:none}</style><p class="no-script">Studio needs JavaScript to edit projects. You can still explore Evir's public pages from the home link.</p></noscript>
+    <noscript><style>#studio-loading .startup-scene{display:none}</style><p class="no-script">Studio needs JavaScript to edit projects. You can still explore Evir's public pages. <!-- STUDIO_RECOVERY_LINK --></p></noscript>
     <script>
       const startupError = () => {
         if (!document.body.classList.contains('studio-booting')) return;
-        document.querySelector('#studio-loading .living-loader').hidden = true;
+        document.querySelector('.startup-scene').hidden = true;
         document.querySelector('.startup-error').hidden = false;
       };
       window.addEventListener('error', startupError, true);
