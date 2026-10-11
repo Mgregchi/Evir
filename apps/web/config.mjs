@@ -1,5 +1,9 @@
 import { readSiteAddress } from '../../tools/build-support.mjs';
 
+// Public metadata always has an absolute origin, even without hosting variables.
+// SITE_URL remains the single override for a different domain or mount path.
+const DEFAULT_SITE_URL = 'https://evir.idey.click';
+
 export function readWebConfig(env = process.env) {
   const url = (key, fallback = '', allowMail = false) => {
     const value = (env[key] || env[`PUBLIC_${key}`] || fallback).trim();
@@ -13,7 +17,7 @@ export function readWebConfig(env = process.env) {
   const repository = url('REPOSITORY_URL', 'https://github.com/Mgregchi/Evir');
   const site = readSiteAddress(env);
   return {
-    siteUrl: site.configured ? site.origin : '', basePath: site.basePath, repository,
+    siteUrl: site.configured ? site.origin : DEFAULT_SITE_URL, basePath: site.basePath, repository,
     editorUrl: `${site.basePath}/editor/studio/`,
     docs: url('DOCS_URL', `${repository}/blob/main/research/README.md`),
     community: url('COMMUNITY_URL'),

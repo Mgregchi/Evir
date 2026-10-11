@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-10-11T08:09:20.266356+00:00",
+  "baseMain": "e5cbf60",
+  "branch": "fix/social-link-previews",
+  "frontendTests": {
+    "passed": 14,
+    "failed": 0
+  },
+  "rawHTMLRegressions": {
+    "buildConfigurations": 2,
+    "publicPagesPerBuild": 11,
+    "crawlerUserAgents": 4,
+    "pageRequests": 88,
+    "javascript": false
+  },
+  "publicSite": {
+    "pageConfigurationChecks": 22,
+    "viewportWidths": 3,
+    "automatedWCAG_A_AA_Violations": 0
+  },
+  "officialRuntimeShowcaseComparisons": {
+    "canvas": 48,
+    "webgl2": 48
+  },
+  "galleryEditableStudyRoundTrips": 6,
+  "experienceChecks": "passed",
+  "image": {
+    "width": 1200,
+    "height": 630,
+    "bytes": 84258,
+    "sha256": "d0d91f066db9cc869ad7815701245dcfff7dc4ec083709d936f825bff9393cab",
+    "changed": false
+  },
+  "productionStatus": "Before deployment: live HTML lacks image tags. Merge and hosting rebuild required. Platform rendered cards and cache invalidation not verified."
+}

@@ -150,7 +150,10 @@ async function serve(dir, base='') {
         } else {
           await page.goto(`${origin}/community/`);
           assert.equal(await page.getByRole('link',{name:'Join the community',exact:true}).count(),0);
-          assert(!fs.existsSync(path.join(dir,'sitemap.xml')));
+          assert(fs.readFileSync(path.join(dir,'sitemap.xml'),'utf8').includes('https://evir.idey.click/editor/'));
+          const defaultHTML=fs.readFileSync(path.join(dir,'index.html'),'utf8');
+          assert(defaultHTML.includes('property="og:image" content="https://evir.idey.click/assets/evir-showcase.jpg"'));
+          assert(defaultHTML.includes('name="twitter:image" content="https://evir.idey.click/assets/evir-showcase.jpg"'));
           const noJS=await browser.newContext({javaScriptEnabled:false,viewport:{width:390,height:844}});
           try {
             const fallback=await noJS.newPage();await fallback.goto(`${origin}/`);

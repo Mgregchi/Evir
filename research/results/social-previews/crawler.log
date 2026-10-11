@@ -1,0 +1,10 @@
+✔ raw crawler HTML includes a working image in default builds without JavaScript (298.800162ms)
+✔ raw crawler HTML includes a working image in override builds without JavaScript (246.659389ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 628.401154

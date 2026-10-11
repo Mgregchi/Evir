@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-10-11T08:02:16.774384+00:00",
+  "sources": [
+    {
+      "url": "https://ogp.me/",
+      "resolvedUrl": "https://ogp.me/",
+      "status": 200,
+      "sha256": "7014532286751499f442e4ea5c6392f112e9327233c9f47a3825a6275f8e5d9a",
+      "bytes": 23130
+    },
+    {
+      "url": "https://developer.x.com/en/docs/x-for-websites/cards/overview/summary-card-with-large-image",
+      "resolvedUrl": "https://docs.x.com/overview",
+      "status": 200,
+      "sha256": "db55b2a98fddf7bb4734bb38877626966d5ce5f13053d91f31fe29923235b749",
+      "bytes": 687862,
+      "scope": "Legacy X card URL redirected to general API overview; no card requirements inferred from that response."
+    }
+  ]
+}
