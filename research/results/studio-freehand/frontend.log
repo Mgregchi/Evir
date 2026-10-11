@@ -1,0 +1,31 @@
+
+> evir-workspace@0.1.0 test:frontend
+> node --test tests/frontend/*.test.mjs
+
+✔ one address configures public metadata and an internal Studio route (1.606167ms)
+✔ web and Studio paths follow a prefixed SITE_URL without a second address (0.284507ms)
+✔ unconfigured web builds keep local navigation and a public preview origin (0.190439ms)
+✔ legacy site addresses and public optional links remain compatible (1.148046ms)
+✔ obsolete Studio settings cannot redirect the unified app to another origin (0.245921ms)
+✔ invalid site addresses and unsafe external links fail early (0.52463ms)
+✔ Every registered study has valid editable source and its exact compatible export (38.289987ms)
+✔ Bloom contains mixed independent control weights and a visible deforming stem (2.87492ms)
+✔ Tempo demonstrates distinct hold/linear/cubic timing and color changes (1.817208ms)
+✔ Signal gates typed inputs, consumes early triggers and restores defaults on reset (7.99087ms)
+✔ Preview schedules no frames while inactive, clamps time and resumes without hidden-time jumps (1.7783ms)
+✔ A renderer failure stops the loop and invokes recovery once (0.180455ms)
+✔ raw crawler HTML includes a working image in default builds without JavaScript (312.804698ms)
+✔ raw crawler HTML includes a working image in override builds without JavaScript (267.521174ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 746.455749
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice

@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-10-11T13:09:33.277419+00:00",
+  "baseMain": "6c5d8dcc8d429ed78bc5f679009401d4fe453a92",
+  "branch": "feature/studio-freehand",
+  "commands": {
+    "npm run test:editor": "passed: 44 unit tests and 8 browser workflows",
+    "npm run validate:editor": "passed: 20 checks each in official Canvas2D/WebGL2",
+    "npm run test:frontend": "passed: 14 tests",
+    "npm run web:build": "passed: 11 public pages plus Studio",
+    "npm run test:web": "passed: 22 page/configuration checks, 52 showcase comparisons per backend, 7 editable study round trips",
+    "npm run test:experience": "passed: loading, scheduling, feedback, SEO and recovery",
+    "node tests/editor/freehand-browser.cjs": "passed: five viewports, touch drawing/cancellation, coalesced branch, source recovery and 2 exact-export pixel comparisons",
+    "node tools/measure_freehand.mjs": "completed: 12 fitting experiments"
+  },
+  "originalWisp": {
+    "apps/web/assets/examples/wisp.evir-project": "527cca3d336d3ae1a06e15c2e82f75f526c6a8d0a3f2daa98e5b906febf8fac5",
+    "apps/web/assets/examples/wisp.riv": "0dd3a1f36d2b8f1ef963041048b87cf8ec827983da917f7cfd8016be11fc2f90",
+    "apps/web/assets/wisp-poster.png": "cc394f32e287f1ece6126d49240d4d357bfaa310152d058685bd0a7c7c0af81a"
+  },
+  "scope": "Cloud Chromium/software rendering and deterministic CPU experiments. No physical-device, real GPU/heap, screen-reader/user study or controlled matched Rive Editor evidence."
+}

@@ -1,0 +1,122 @@
+{
+  "checkedAt": "2026-10-11T13:00:21.844Z",
+  "scope": "Deterministic Node CPU fitting experiment. 30 fits after one warm-up; 128 linear subdivisions per cubic for sample deviation. No physical-device, renderer or human-drawing measurement.",
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "linux",
+    "architecture": "x64",
+    "reportedCPU": "AMD EPYC 9V74 80-Core Processor"
+  },
+  "sourceSha256": "f14273f70f6d9c86edefa1bddc19d05c819e75609bc6a7c3b8f839273a45038d",
+  "sampleSetSha256": "e4ea31339892229c679c81205a87446b181fe5c8c4a66007375c1b6f3c707d12",
+  "results": [
+    {
+      "name": "wave",
+      "tolerance": 0.5,
+      "closed": false,
+      "samples": 401,
+      "anchors": 31,
+      "maximumSampleDeviation": 0.2125977561724672,
+      "medianFitMilliseconds": 0.21397400000000033
+    },
+    {
+      "name": "wave",
+      "tolerance": 2,
+      "closed": false,
+      "samples": 401,
+      "anchors": 15,
+      "maximumSampleDeviation": 0.7734835645408494,
+      "medianFitMilliseconds": 0.15916400000000408
+    },
+    {
+      "name": "wave",
+      "tolerance": 8,
+      "closed": false,
+      "samples": 401,
+      "anchors": 8,
+      "maximumSampleDeviation": 2.806924339475333,
+      "medianFitMilliseconds": 0.10519499999998061
+    },
+    {
+      "name": "ring",
+      "tolerance": 0.5,
+      "closed": true,
+      "samples": 401,
+      "anchors": 64,
+      "maximumSampleDeviation": 0.030232777188815917,
+      "medianFitMilliseconds": 0.23240099999998165
+    },
+    {
+      "name": "ring",
+      "tolerance": 2,
+      "closed": true,
+      "samples": 401,
+      "anchors": 32,
+      "maximumSampleDeviation": 0.05953263291403862,
+      "medianFitMilliseconds": 0.12102799999996705
+    },
+    {
+      "name": "ring",
+      "tolerance": 8,
+      "closed": true,
+      "samples": 401,
+      "anchors": 16,
+      "maximumSampleDeviation": 0.06365060638149238,
+      "medianFitMilliseconds": 0.09885500000001457
+    },
+    {
+      "name": "corner",
+      "tolerance": 0.5,
+      "closed": false,
+      "samples": 201,
+      "anchors": 3,
+      "maximumSampleDeviation": 0.1110990103628839,
+      "medianFitMilliseconds": 0.029322999999976673
+    },
+    {
+      "name": "corner",
+      "tolerance": 2,
+      "closed": false,
+      "samples": 201,
+      "anchors": 3,
+      "maximumSampleDeviation": 0.44441614330689044,
+      "medianFitMilliseconds": 0.030023999999968964
+    },
+    {
+      "name": "corner",
+      "tolerance": 8,
+      "closed": false,
+      "samples": 201,
+      "anchors": 3,
+      "maximumSampleDeviation": 1.7776797757405172,
+      "medianFitMilliseconds": 0.029612999999983458
+    },
+    {
+      "name": "noisy",
+      "tolerance": 0.5,
+      "closed": false,
+      "samples": 401,
+      "anchors": 95,
+      "maximumSampleDeviation": 0.3261033363714636,
+      "medianFitMilliseconds": 0.24559999999996762
+    },
+    {
+      "name": "noisy",
+      "tolerance": 2,
+      "closed": false,
+      "samples": 401,
+      "anchors": 15,
+      "maximumSampleDeviation": 0.7384854769797728,
+      "medianFitMilliseconds": 0.16728599999999005
+    },
+    {
+      "name": "noisy",
+      "tolerance": 8,
+      "closed": false,
+      "samples": 401,
+      "anchors": 8,
+      "maximumSampleDeviation": 2.916237352756359,
+      "medianFitMilliseconds": 0.08321200000000317
+    }
+  ]
+}

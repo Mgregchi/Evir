@@ -14,6 +14,7 @@ import {
 } from "@evir/authoring";
 import { mountAuthoring } from "./authoring.mjs";
 import { PenDraft } from "./pen.mjs";
+import { FreehandDraft } from "./freehand.mjs";
 import { mountPanels, mountDisclosures } from "./panels.mjs";
 import { mountLayout } from "./layout.mjs";
 import { touchFrame, gestureCamera } from "./navigation.mjs";
@@ -120,6 +121,7 @@ $("#snap-alignment").addEventListener("change", (e) => {
     localStorage.setItem(SNAP_CACHE, String(snapping));
   } catch {}
 });
+const drawingSettings = { smoothing: 2, closed: true };
 const touches = new Map();
 let touchGesture = null,
   touchNavigation = false,
@@ -280,7 +282,7 @@ function select(id, additive = false) {
 }
 function setTool(next) {
   if (next !== tool && !penReady()) return;
-  if (next === "pen" && authoring?.mode !== "Design") {
+  if (["pen", "freehand"].includes(next) && authoring?.mode !== "Design") {
     notice("Return to Design to draw a path");
     return;
   }
@@ -289,11 +291,16 @@ function setTool(next) {
   $("#select-tool").setAttribute("aria-pressed", String(next === "select"));
   $("#pan-tool").setAttribute("aria-pressed", String(next === "pan"));
   $("#pen-tool").setAttribute("aria-pressed", String(next === "pen"));
+  $("#freehand-tool").setAttribute("aria-pressed", String(next === "freehand"));
   stage.style.cursor = toolCursor();
   draw();
 }
 function toolCursor() {
-  return tool === "pan" ? "grab" : tool === "pen" ? "crosshair" : "default";
+  return tool === "pan"
+    ? "grab"
+    : ["pen", "freehand"].includes(tool)
+      ? "crosshair"
+      : "default";
 }
 function penReady() {
   if (!penDraft) return true;
@@ -332,7 +339,10 @@ function finishPen(closed = false) {
   }
 }
 function drawPen(zoom) {
-  $("#pen-tool").disabled = authoring && authoring.mode !== "Design";
+  $("#pen-tool").disabled = $("#freehand-tool").disabled =
+    authoring && authoring.mode !== "Design";
+  $("#drawing-options").hidden = tool !== "freehand";
+  $("#drawing-options").disabled = Boolean(penDraft?.dragging);
   $("#pen-actions").hidden = !penDraft;
   $("#finish-path").disabled =
     !penDraft || penDraft.points.length < 2 || penDraft.dragging;
@@ -348,6 +358,23 @@ function drawPen(zoom) {
       "#properties input,#properties select,#properties button",
     ))
       control.disabled = true;
+  }
+  if (tool === "freehand") {
+    $("#selection-status").textContent = penDraft
+      ? `Unsaved shape · ${penDraft.samples.length} samples · ${penDraft.points.length} points · Esc to cancel`
+      : "Drag a shape, then review and finish. Solid fill, no brush stroke.";
+    $("#finish-path").disabled =
+      !penDraft || penDraft.dragging || penDraft.samples.length < 3;
+  }
+  if (penDraft instanceof FreehandDraft && penDraft.dragging) {
+    ctx.strokeStyle = "#89e4c4";
+    ctx.lineWidth = 1.5 / zoom;
+    ctx.beginPath();
+    penDraft.samples.forEach((p, i) =>
+      i ? ctx.lineTo(...p) : ctx.moveTo(...p),
+    );
+    ctx.stroke();
+    return;
   }
   if (!penDraft?.points.length) return;
   const points = penDraft.worldPoints();
@@ -1195,8 +1222,12 @@ stage.addEventListener("pointerdown", (e) => {
   }
   const p = project(),
     world = { x: (start.x - c.x) / c.zoom, y: (start.y - c.y) / c.zoom };
-  if (tool === "pen") {
+  if (["pen", "freehand"].includes(tool)) {
     if (penDraft?.dragging) return;
+    if (tool === "freehand" && penDraft) {
+      penReady();
+      return;
+    }
     try {
       if (!penDraft) {
         const parent =
@@ -1209,10 +1240,12 @@ stage.addEventListener("pointerdown", (e) => {
           editable(p, parent, "hidden")
             ? parent.id
             : null;
-        penDraft = new PenDraft({
+        penDraft = new (tool === "freehand" ? FreehandDraft : PenDraft)({
           artboardId: activeArtboard,
           parentId,
           matrix: parentId ? worldTransform(p, parentId) : undefined,
+          zoom: c.zoom,
+          ...drawingSettings,
         });
       }
       if (penDraft.down(world, c.zoom) === "close") finishPen(true);
@@ -1356,7 +1389,22 @@ stage.addEventListener("pointermove", (e) => {
   ) {
     const now = coordinates(e),
       c = camera();
-    penDraft.move({ x: (now.x - c.x) / c.zoom, y: (now.y - c.y) / c.zoom });
+    try {
+      if (penDraft instanceof FreehandDraft) {
+        const samples = e.getCoalescedEvents?.() || [];
+        for (const event of [...samples, e]) {
+          const pos = coordinates(event);
+          penDraft.move({
+            x: (pos.x - c.x) / c.zoom,
+            y: (pos.y - c.y) / c.zoom,
+          });
+        }
+      } else
+        penDraft.move({ x: (now.x - c.x) / c.zoom, y: (now.y - c.y) / c.zoom });
+    } catch (error) {
+      cancelPen();
+      notice(error);
+    }
     draw();
     return;
   }
@@ -1458,7 +1506,24 @@ function finishDrag(e) {
     }
   }
   if (penDraft?.dragging && e?.pointerId === penPointerId) {
-    penDraft.up();
+    try {
+      if (penDraft instanceof FreehandDraft) {
+        const pos = coordinates(e),
+          c = camera();
+        penDraft.sample(
+          { x: (pos.x - c.x) / c.zoom, y: (pos.y - c.y) / c.zoom },
+          true,
+        );
+      }
+      penDraft.up();
+    } catch (error) {
+      if (
+        penDraft instanceof FreehandDraft &&
+        (penDraft.samples.length < 3 || penDraft.samples.length >= 4096)
+      )
+        cancelPen();
+      notice(error);
+    }
     penPointerId = null;
     draw();
     return;
@@ -1616,6 +1681,45 @@ $("#layers").addEventListener("keydown", (e) => {
 $("#select-tool").onclick = () => setTool("select");
 $("#pan-tool").onclick = () => setTool("pan");
 $("#pen-tool").onclick = () => setTool("pen");
+$("#freehand-tool").onclick = () => setTool("freehand");
+const drawingSheet = $("#drawing-sheet");
+let drawingOrigin;
+$("#drawing-options").onclick = () => {
+  if (penDraft?.dragging) return;
+  drawingOrigin = document.activeElement;
+  $("#drawing-smoothing").value = drawingSettings.smoothing;
+  $("#drawing-closed").checked = drawingSettings.closed;
+  $("#drawing-error").textContent = "";
+  drawingSheet.showModal();
+};
+$("#drawing-apply").onclick = () => {
+  const smoothing = $("#drawing-smoothing");
+  const value = Number(smoothing.value);
+  if (!Number.isFinite(value) || value < 0.5 || value > 8) {
+    $("#drawing-error").textContent =
+      "Choose smoothing between 0.5 and 8 screen pixels.";
+    smoothing.focus();
+    return;
+  }
+  if (penDraft instanceof FreehandDraft) {
+    const previous = { tolerance: penDraft.tolerance, closed: penDraft.closed };
+    penDraft.tolerance = value / penDraft.zoom;
+    penDraft.closed = $("#drawing-closed").checked;
+    try {
+      penDraft.refit();
+    } catch (error) {
+      Object.assign(penDraft, previous);
+      $("#drawing-error").textContent = error.message;
+      return;
+    }
+  }
+  drawingSettings.smoothing = value;
+  drawingSettings.closed = $("#drawing-closed").checked;
+  drawingSheet.close();
+  draw();
+};
+$("#drawing-cancel").onclick = () => drawingSheet.close();
+drawingSheet.addEventListener("close", () => drawingOrigin?.focus());
 $("#finish-path").onclick = () => finishPen();
 $("#cancel-path").onclick = cancelPen;
 $("#add-rectangle").onclick = () => add("rectangle");
@@ -1783,6 +1887,7 @@ window.addEventListener("keydown", (e) => {
     $("#replace-project").open ||
     $("#mobile-panel").open ||
     organizeDialog.open ||
+    drawingSheet.open ||
     document.querySelector("[popover]:popover-open")
   )
     return;
@@ -1810,7 +1915,7 @@ window.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     if (penDraft) cancelPen();
     else if (drag) cancelDrag();
-    else if (tool === "pen") setTool("select");
+    else if (["pen", "freehand"].includes(tool)) setTool("select");
     else select(node()?.parentId || null);
     return;
   }
@@ -1821,6 +1926,10 @@ window.addEventListener("keydown", (e) => {
   }
   if (penDraft && (e.key === "Delete" || e.key === "Backspace")) {
     e.preventDefault();
+    if (penDraft instanceof FreehandDraft) {
+      cancelPen();
+      return;
+    }
     penDraft.removeLast();
     penPointerId = null;
     if (!penDraft.points.length) penDraft = null;
@@ -1887,6 +1996,9 @@ window.addEventListener("keydown", (e) => {
         break;
       case "p":
         setTool("pen");
+        break;
+      case "b":
+        setTool("freehand");
         break;
       case "r":
         add("rectangle");

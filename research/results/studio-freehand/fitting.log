@@ -1,0 +1,12 @@
+wave, tolerance 0.5: 401 samples → 31 anchors; deviation 0.213; median fit 0.214 ms
+wave, tolerance 2: 401 samples → 15 anchors; deviation 0.773; median fit 0.159 ms
+wave, tolerance 8: 401 samples → 8 anchors; deviation 2.807; median fit 0.105 ms
+ring, tolerance 0.5: 401 samples → 64 anchors; deviation 0.030; median fit 0.232 ms
+ring, tolerance 2: 401 samples → 32 anchors; deviation 0.060; median fit 0.121 ms
+ring, tolerance 8: 401 samples → 16 anchors; deviation 0.064; median fit 0.099 ms
+corner, tolerance 0.5: 201 samples → 3 anchors; deviation 0.111; median fit 0.029 ms
+corner, tolerance 2: 201 samples → 3 anchors; deviation 0.444; median fit 0.030 ms
+corner, tolerance 8: 201 samples → 3 anchors; deviation 1.778; median fit 0.030 ms
+noisy, tolerance 0.5: 401 samples → 95 anchors; deviation 0.326; median fit 0.246 ms
+noisy, tolerance 2: 401 samples → 15 anchors; deviation 0.738; median fit 0.167 ms
+noisy, tolerance 8: 401 samples → 8 anchors; deviation 2.916; median fit 0.083 ms

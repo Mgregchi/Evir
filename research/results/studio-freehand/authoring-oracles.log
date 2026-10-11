@@ -1,0 +1,249 @@
+
+> evir-workspace@0.1.0 validate:editor
+> node tools/validate_editor_authoring.cjs && RIVE_RENDERER=webgl2 node tools/validate_editor_authoring.cjs
+
+{
+  label: 'rest',
+  mae: 0.0009307861328125,
+  expectedCovered: 11488,
+  runtimeCovered: 11488
+}
+{
+  label: 'Bend 0',
+  mae: 0.0009307861328125,
+  expectedCovered: 11488,
+  runtimeCovered: 11488
+}
+{
+  label: 'Bend 15',
+  mae: 0,
+  expectedCovered: 11398,
+  runtimeCovered: 11398
+}
+{
+  label: 'Bend 30',
+  mae: 0,
+  expectedCovered: 9784,
+  runtimeCovered: 9784
+}
+{
+  label: 'Bend 60',
+  mae: 0,
+  expectedCovered: 5996,
+  runtimeCovered: 5996
+}
+{
+  label: 'Active 30',
+  mae: 0,
+  expectedCovered: 9500,
+  runtimeCovered: 9500
+}
+{
+  label: 'Active 60',
+  mae: 0,
+  expectedCovered: 10353,
+  runtimeCovered: 10353
+}
+{
+  label: 'entry',
+  mae: 0.0009307861328125,
+  expectedCovered: 11488,
+  runtimeCovered: 11488
+}
+{
+  label: 'AND guard',
+  mae: 0.0009307861328125,
+  expectedCovered: 11488,
+  runtimeCovered: 11488
+}
+{
+  label: 'numeric transition',
+  mae: 0,
+  expectedCovered: 9500,
+  runtimeCovered: 9500
+}
+{
+  label: 'bool false + numeric return',
+  mae: 0.0009307861328125,
+  expectedCovered: 11488,
+  runtimeCovered: 11488
+}
+{
+  label: 'trigger',
+  mae: 0,
+  expectedCovered: 9500,
+  runtimeCovered: 9500
+}
+{
+  label: 'reset',
+  mae: 0.0009307861328125,
+  expectedCovered: 11488,
+  runtimeCovered: 11488
+}
+{
+  label: 'click listener',
+  mae: 0,
+  expectedCovered: 9500,
+  runtimeCovered: 9500
+}
+{
+  label: 'browser authored Animation 1 0',
+  mae: 0.007640838623046875,
+  expectedCovered: 7062,
+  runtimeCovered: 7062
+}
+{
+  label: 'browser authored Animation 1 30',
+  mae: 0.008106231689453125,
+  expectedCovered: 7043,
+  runtimeCovered: 7043
+}
+{
+  label: 'browser authored Animation 1 60',
+  mae: 0.00846099853515625,
+  expectedCovered: 7035,
+  runtimeCovered: 7035
+}
+{
+  label: 'browser authored Active 0',
+  mae: 0.013851165771484375,
+  expectedCovered: 7133,
+  runtimeCovered: 7131
+}
+{
+  label: 'browser authored Active 30',
+  mae: 0.013851165771484375,
+  expectedCovered: 7133,
+  runtimeCovered: 7131
+}
+{
+  label: 'browser authored Active 60',
+  mae: 0.013851165771484375,
+  expectedCovered: 7133,
+  runtimeCovered: 7131
+}
+{
+  label: 'rest',
+  mae: 0.16790008544921875,
+  expectedCovered: 11488,
+  runtimeCovered: 11400
+}
+{
+  label: 'Bend 0',
+  mae: 0.16790008544921875,
+  expectedCovered: 11488,
+  runtimeCovered: 11400
+}
+{
+  label: 'Bend 15',
+  mae: 0.22022247314453125,
+  expectedCovered: 11398,
+  runtimeCovered: 11286
+}
+{
+  label: 'Bend 30',
+  mae: 0.13883590698242188,
+  expectedCovered: 9784,
+  runtimeCovered: 9716
+}
+{
+  label: 'Bend 60',
+  mae: 0.119232177734375,
+  expectedCovered: 5996,
+  runtimeCovered: 5940
+}
+{
+  label: 'Active 30',
+  mae: 0.13967514038085938,
+  expectedCovered: 9500,
+  runtimeCovered: 9434
+}
+{
+  label: 'Active 60',
+  mae: 0.14490127563476562,
+  expectedCovered: 10353,
+  runtimeCovered: 10281
+}
+{
+  label: 'entry',
+  mae: 0.16790008544921875,
+  expectedCovered: 11488,
+  runtimeCovered: 11400
+}
+{
+  label: 'AND guard',
+  mae: 0.16790008544921875,
+  expectedCovered: 11488,
+  runtimeCovered: 11400
+}
+{
+  label: 'numeric transition',
+  mae: 0.13967514038085938,
+  expectedCovered: 9500,
+  runtimeCovered: 9434
+}
+{
+  label: 'bool false + numeric return',
+  mae: 0.16790008544921875,
+  expectedCovered: 11488,
+  runtimeCovered: 11400
+}
+{
+  label: 'trigger',
+  mae: 0.13967514038085938,
+  expectedCovered: 9500,
+  runtimeCovered: 9434
+}
+{
+  label: 'reset',
+  mae: 0.16790008544921875,
+  expectedCovered: 11488,
+  runtimeCovered: 11400
+}
+{
+  label: 'click listener',
+  mae: 0.13967514038085938,
+  expectedCovered: 9500,
+  runtimeCovered: 9434
+}
+{
+  label: 'browser authored Animation 1 0',
+  mae: 0.049419403076171875,
+  expectedCovered: 7062,
+  runtimeCovered: 7059
+}
+{
+  label: 'browser authored Animation 1 30',
+  mae: 0.045627593994140625,
+  expectedCovered: 7043,
+  runtimeCovered: 7041
+}
+{
+  label: 'browser authored Animation 1 60',
+  mae: 0.04761505126953125,
+  expectedCovered: 7035,
+  runtimeCovered: 7034
+}
+{
+  label: 'browser authored Active 0',
+  mae: 0.050273895263671875,
+  expectedCovered: 7133,
+  runtimeCovered: 7129
+}
+{
+  label: 'browser authored Active 30',
+  mae: 0.050273895263671875,
+  expectedCovered: 7133,
+  runtimeCovered: 7129
+}
+{
+  label: 'browser authored Active 60',
+  mae: 0.050273895263671875,
+  expectedCovered: 7133,
+  runtimeCovered: 7129
+}
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice

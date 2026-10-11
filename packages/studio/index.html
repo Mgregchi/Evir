@@ -121,6 +121,14 @@
           <span data-icon="pen" aria-hidden="true"></span><span>Pen</span>
         </button>
         <button
+          id="freehand-tool"
+          aria-label="Freehand"
+          aria-pressed="false"
+          title="Freehand shape · B"
+        >
+          <span data-icon="path" aria-hidden="true"></span><span>Freehand</span>
+        </button>
+        <button
           id="create-toggle"
           aria-label="Create"
           popovertarget="create-menu"
@@ -288,6 +296,9 @@
             role="status"
             aria-live="polite"
           ></span>
+          <button id="drawing-options" aria-label="Drawing options" hidden>
+            Options
+          </button>
           <div id="pen-actions" hidden>
             <button id="finish-path">Finish path</button
             ><button id="cancel-path">Cancel path</button>
@@ -408,6 +419,47 @@
         ><button id="organize-apply" class="primary">Apply organization</button>
       </div>
     </dialog>
+    <dialog
+      id="drawing-sheet"
+      class="interaction-sheet"
+      aria-labelledby="drawing-title"
+    >
+      <h2 id="drawing-title">Freehand shape</h2>
+      <p>
+        Draw with a mouse, pen or one finger. Release to review editable points
+        before finishing.
+      </p>
+      <label class="field"
+        >Smoothing (screen pixels)<input
+          id="drawing-smoothing"
+          aria-describedby="drawing-note drawing-error"
+          type="number"
+          min="0.5"
+          max="8"
+          step="0.5"
+          value="2"
+      /></label>
+      <p id="drawing-note">
+        Lower values retain more detail. Higher values use fewer points. Up to
+        4,096 samples and 256 editable points per shape.
+      </p>
+      <label class="drawing-close"
+        ><input id="drawing-closed" type="checkbox" checked /><span
+          >Close the shape</span
+        ></label
+      >
+      <p>
+        Paths use solid fills. Open curves do not add a brush stroke or
+        pressure-sensitive ink. Pen and numeric point controls remain available.
+      </p>
+      <p id="drawing-error" role="alert"></p>
+      <div class="dialog-actions">
+        <button id="drawing-cancel">Keep drawing</button>
+        <button id="drawing-apply" class="primary">
+          Apply drawing options
+        </button>
+      </div>
+    </dialog>
     <dialog id="help" class="interaction-sheet" aria-labelledby="help-title">
       <h2 id="help-title">Stay in your flow</h2>
       <p>
@@ -423,6 +475,8 @@
         <dd>R</dd>
         <dt>Draw a path</dt>
         <dd>P · click for corners, drag for curves</dd>
+        <dt>Draw a freehand shape</dt>
+        <dd>B · drag, release, then Finish path</dd>
         <dt>Finish / close a path</dt>
         <dd>Enter / click its first point</dd>
         <dt>Cancel path / remove last draft point</dt>
