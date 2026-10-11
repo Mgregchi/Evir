@@ -1,4 +1,9 @@
-import { validateProject, ProjectError } from "@evir/project-model";
+import {
+  validateProject,
+  ProjectError,
+  isColorProperty,
+  pngSize,
+} from "@evir/project-model";
 import { components, quantize, getValue } from "@evir/runtime/geometry";
 const OP = { eq: 0, ne: 1, le: 2, ge: 3, lt: 4, gt: 5 }; // pinned TransitionConditionOp
 import runtimeSchema from "./schema/runtime.json" with { type: "json" };
@@ -6,11 +11,11 @@ export { runtimeSchema };
 export function compileProject(project, schema = runtimeSchema) {
   validateProject(project);
   const diagnostics = [];
-  if (project.schemaVersion !== 2)
+  if (![2, 3].includes(project.schemaVersion))
     diagnostics.push(
       "Open the project to migrate it to version 2 before exporting",
     );
-  if (project.assets.length)
+  if (project.assets.length && !project.advanced)
     diagnostics.push(
       "Attached assets are outside the tested vector export subset",
     );
@@ -75,6 +80,30 @@ export function compileProject(project, schema = runtimeSchema) {
     tx: m[4],
     ty: m[5],
   });
+  const assets = new Map();
+  for (const [assetIndex, asset] of project.assets.entries()) {
+    const bytes = Uint8Array.from(atob(asset.data), (c) => c.charCodeAt(0));
+    if (asset.mimeType === "image/png") {
+      if (
+        bytes.length < 24 ||
+        ![137, 80, 78, 71, 13, 10, 26, 10].every((v, i) => bytes[i] === v)
+      )
+        throw new ProjectError(["Invalid PNG " + asset.name]);
+      const { width, height } = pngSize(bytes);
+      assets.set(asset.id, { index: assetIndex, width, height });
+      emit("ImageAsset", {
+        name: asset.name,
+        assetId: assetIndex + 1,
+        width,
+        height,
+      });
+    } else if (["font/ttf", "font/otf"].includes(asset.mimeType)) {
+      assets.set(asset.id, { index: assetIndex });
+      emit("FontAsset", { name: asset.name, assetId: assetIndex + 1 });
+    } else
+      throw new ProjectError(["Unsupported embedded asset: " + asset.mimeType]);
+    emit("FileAssetContents", { bytes });
+  }
   for (const [artboardIndex, a] of project.artboards.entries()) {
     const animations = project.animations.filter((v) => v.artboardId === a.id),
       machines = project.machines.filter((v) => v.artboardId === a.id);
@@ -88,6 +117,7 @@ export function compileProject(project, schema = runtimeSchema) {
     let component = 1;
     const ids = new Map(),
       targets = new Map(),
+      fills = new Map(),
       pending = [];
     const componentRecord = (type, fields) => {
       const index = component++;
@@ -107,7 +137,11 @@ export function compileProject(project, schema = runtimeSchema) {
               ? boneParent
                 ? "Bone"
                 : "RootBone"
-              : "Shape";
+              : n.kind === "text"
+                ? "Text"
+                : ["image", "mesh"].includes(n.kind)
+                  ? "Image"
+                  : "Shape";
         const c = components(n.transform),
           fields = {
             name: n.name,
@@ -119,6 +153,23 @@ export function compileProject(project, schema = runtimeSchema) {
         if (type !== "Bone") {
           fields.x = c.x;
           fields.y = c.y;
+        }
+        if (
+          project.advanced?.clips.some((c) => !c.visible && c.maskId === n.id)
+        )
+          fields.opacity = 0;
+        if (n.kind === "text") Object.assign(fields, { originValue: 1 });
+        if (["image", "mesh"].includes(n.kind)) {
+          const asset = assets.get(n.geometry.assetId);
+          Object.assign(fields, {
+            assetId: asset.index,
+            originX: 0,
+            originY: 0,
+          });
+          if (n.kind === "image") {
+            fields.scaleX *= n.geometry.width / asset.width;
+            fields.scaleY *= n.geometry.height / asset.height;
+          }
         }
         if (n.kind === "bone") fields.length = n.geometry.length;
         const { index } = componentRecord(type, fields);
@@ -137,7 +188,107 @@ export function compileProject(project, schema = runtimeSchema) {
           ...(n.kind === "bone" ? ["length"] : []),
         ])
           if (type !== "Bone" || !["x", "y"].includes(property))
-            targets.set(n.id + "/" + property, { index, type, property });
+            targets.set(n.id + "/" + property, {
+              index,
+              type,
+              property,
+              ...(n.kind === "image" && ["scaleX", "scaleY"].includes(property)
+                ? {
+                    factor:
+                      property === "scaleX"
+                        ? n.geometry.width /
+                          assets.get(n.geometry.assetId).width
+                        : n.geometry.height /
+                          assets.get(n.geometry.assetId).height,
+                  }
+                : {}),
+            });
+        if (n.kind === "text") {
+          const style = componentRecord("TextStylePaint", {
+            parentId: index,
+            fontSize: n.geometry.fontSize,
+            fontAssetId: assets.get(n.geometry.fontAssetId).index,
+          }).index;
+          const fill = componentRecord("Fill", { parentId: style }).index;
+          const solid = componentRecord("SolidColor", {
+            parentId: fill,
+            colorValue: color(n.geometry.fill),
+          }).index;
+          componentRecord("TextValueRun", {
+            parentId: index,
+            styleId: style,
+            text: n.geometry.text,
+          });
+          targets.set(n.id + "/fontSize", {
+            index: style,
+            type: "TextStylePaint",
+            property: "fontSize",
+          });
+          targets.set(n.id + "/fill", {
+            index: solid,
+            type: "SolidColor",
+            property: "colorValue",
+          });
+        }
+        if (n.kind === "mesh") {
+          const g = n.geometry,
+            packedIndices = [];
+          for (let value of g.triangles) {
+            do {
+              const byte = value % 128;
+              value = Math.floor(value / 128);
+              packedIndices.push(byte + (value ? 128 : 0));
+            } while (value);
+          }
+          const mesh = componentRecord("Mesh", {
+            parentId: index,
+            triangleIndexBytes: Uint8Array.from(packedIndices),
+          }).index;
+          for (const v of g.vertices) {
+            const vertex = componentRecord("MeshVertex", {
+              parentId: mesh,
+              x: v.position[0],
+              y: v.position[1],
+              u: v.uv[0],
+              v: v.uv[1],
+            }).index;
+            if (g.skin) {
+              const w = quantize(
+                g.skin.weights.find((w) => w.pointId === v.id).anchor,
+              );
+              componentRecord("Weight", {
+                parentId: vertex,
+                indices:
+                  w.reduce(
+                    (s, [b], i) =>
+                      s +
+                      (g.skin.bones.findIndex((t) => t.boneId === b) + 1) *
+                        2 ** (8 * i),
+                    0,
+                  ) >>> 0,
+                values:
+                  w.reduce(
+                    (s, [, v], i) => s + Math.round(v * 255) * 2 ** (8 * i),
+                    0,
+                  ) >>> 0,
+              });
+            }
+          }
+          if (g.skin) {
+            const skin = componentRecord("Skin", {
+              parentId: mesh,
+              ...matrix(g.skin.bindWorld),
+            }).index;
+            for (const b of g.skin.bones) {
+              const tendon = componentRecord("Tendon", {
+                parentId: skin,
+                boneId: 0,
+                ...matrix(b.bind),
+              });
+              pending.push({ record: tendon.record, boneId: b.boneId });
+            }
+          }
+        }
         if (n.kind === "rectangle") {
           const path = componentRecord("Rectangle", {
             parentId: index,
@@ -229,29 +380,61 @@ export function compileProject(project, schema = runtimeSchema) {
           }
         }
         if (["rectangle", "path"].includes(n.kind)) {
-          const fill = componentRecord("Fill", { parentId: index }).index;
+          const feather = project.advanced?.feathers.find(
+            (f) => f.targetId === n.id,
+          );
+          const fill = componentRecord("Fill", {
+            parentId: index,
+            ...(feather ? { fillRule: 2 } : {}),
+          }).index;
+          fills.set(n.id, fill);
           const paint = n.geometry.fill;
           if (typeof paint === "string") {
             const solid = componentRecord("SolidColor", {
-              parentId: fill, colorValue: color(paint),
+              parentId: fill,
+              colorValue: color(paint),
             }).index;
             targets.set(n.id + "/fill", {
-              index: solid, type: "SolidColor", property: "colorValue",
+              index: solid,
+              type: "SolidColor",
+              property: "colorValue",
             });
           } else {
             const gradient = componentRecord(
               paint.type === "linear" ? "LinearGradient" : "RadialGradient",
               {
                 parentId: fill,
-                startX: paint.start[0], startY: paint.start[1],
-                endX: paint.end[0], endY: paint.end[1],
+                startX: paint.start[0],
+                startY: paint.start[1],
+                endX: paint.end[0],
+                endY: paint.end[1],
               },
             ).index;
-            for (const stop of paint.stops)
-              componentRecord("GradientStop", {
-                parentId: gradient,
-                position: stop.position, colorValue: color(stop.color),
+            const type =
+              paint.type === "linear" ? "LinearGradient" : "RadialGradient";
+            for (const property of ["startX", "startY", "endX", "endY"])
+              targets.set(n.id + "/paint." + property, {
+                index: gradient,
+                type,
+                property,
               });
+            for (const [stopIndex, stop] of paint.stops.entries()) {
+              const stopId = componentRecord("GradientStop", {
+                parentId: gradient,
+                position: stop.position,
+                colorValue: color(stop.color),
+              }).index;
+              targets.set(n.id + `/paint.stop.${stopIndex}.position`, {
+                index: stopId,
+                type: "GradientStop",
+                property: "position",
+              });
+              targets.set(n.id + `/paint.stop.${stopIndex}.color`, {
+                index: stopId,
+                type: "GradientStop",
+                property: "colorValue",
+              });
+            }
           }
         }
         traverse(n.id);
@@ -261,6 +444,29 @@ export function compileProject(project, schema = runtimeSchema) {
     for (const item of pending)
       item.record.fields.find((f) => f.key === key("Tendon", "boneId")).value =
         ids.get(item.boneId);
+    for (const c of project.advanced?.clips ?? [])
+      if (ids.has(c.targetId))
+        componentRecord("ClippingShape", {
+          parentId: ids.get(c.targetId),
+          sourceId: ids.get(c.maskId),
+          fillRule: 0,
+          isVisible: true,
+        });
+    for (const f of project.advanced?.feathers ?? [])
+      if (ids.has(f.targetId))
+        componentRecord("Feather", {
+          parentId: fills.get(f.targetId),
+          strength: f.strength,
+        });
+    for (const c of project.advanced?.ik ?? [])
+      if (ids.has(c.boneId))
+        componentRecord("IKConstraint", {
+          parentId: ids.get(c.boneId),
+          targetId: ids.get(c.targetId),
+          parentBoneCount: c.count - 1,
+          invertDirection: c.invert,
+          strength: c.strength,
+        });
     const interpolators = new Map();
     for (const animation of animations)
       for (const track of animation.tracks)
@@ -333,10 +539,14 @@ export function compileProject(project, schema = runtimeSchema) {
           });
           for (const k of track.keys)
             emit(
-              track.property === "fill" ? "KeyFrameColor" : "KeyFrameDouble",
+              isColorProperty(track.property)
+                ? "KeyFrameColor"
+                : "KeyFrameDouble",
               {
                 frame: k.frame,
-                value: track.property === "fill" ? color(k.value) : k.value,
+                value: isColorProperty(track.property)
+                  ? color(k.value)
+                  : k.value * (target.factor ?? 1),
                 interpolationType: k.easing.type === "hold" ? 0 : 1,
                 ...(k.easing.type === "cubic"
                   ? {
@@ -377,13 +587,29 @@ export function compileProject(project, schema = runtimeSchema) {
       emit("AnyState");
       emit("ExitState");
       for (const state of m.states) {
-        emit("AnimationState", {
-          animationId: animations.findIndex((a) => a.id === state.animationId),
-        });
+        if (state.blend) {
+          emit("BlendState1DInput", {
+            inputId: inputIds.get(state.blend.inputId),
+            flags: 2,
+          });
+          for (const child of state.blend.children)
+            emit("BlendAnimation1D", {
+              animationId: animations.findIndex(
+                (a) => a.id === child.animationId,
+              ),
+              value: child.position,
+            });
+        } else
+          emit("AnimationState", {
+            animationId: animations.findIndex(
+              (a) => a.id === state.animationId,
+            ),
+          });
         for (const t of m.transitions.filter((t) => t.fromId === state.id)) {
           emit("StateTransition", {
             stateToId: stateIds.get(t.toId),
-            duration: 0,
+            duration: t.durationMs ?? 0,
+            ...("exitTimeMs" in t ? { flags: 4, exitTime: t.exitTimeMs } : {}),
           });
           for (const c of t.conditions) {
             const input = m.inputs.find((i) => i.id === c.inputId),
@@ -443,8 +669,8 @@ export function compileProject(project, schema = runtimeSchema) {
         value = field.value;
       if (wire === "uint") uint(value);
       else if (wire === "bool") out.push(value ? 1 : 0);
-      else if (wire === "string") {
-        const bytes = encodedText.encode(value);
+      else if (wire === "string" || wire === "bytes") {
+        const bytes = wire === "bytes" ? value : encodedText.encode(value);
         uint(bytes.length);
         for (const b of bytes) out.push(b);
       } else {
@@ -467,6 +693,8 @@ export function compileProject(project, schema = runtimeSchema) {
     bytes: Uint8Array.from(out),
     mapping,
     scope:
-      "Solid and static linear/radial gradient rectangles/unskinned cubic paths, TRS groups and bone chains, four-influence control skinning, typed linear/hold/cubic keys, one-layer conditional machines and click listeners. No universal Rive compatibility.",
+      "2D fills, animated gradients, clipping, outer feather, embedded PNG/TTF assets, single-line text, textured meshes, one/two-bone unit-scale IK, four-influence skinning, typed keys, one-layer timed transitions, 1D blends and click listeners. No universal Rive compatibility.",
   };
 }
+
+export { importRiv, readRiv } from "./import.mjs";

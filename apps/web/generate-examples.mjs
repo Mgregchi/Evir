@@ -1,3 +1,4 @@
+import {suite} from './advanced-examples.mjs';
 import { fitFreehand } from '../../packages/studio/freehand.mjs';
 import { exampleIds } from './examples.mjs';
 import { createProject, validateProject } from '@evir/project-model';
@@ -236,6 +237,19 @@ function dawn() {
 }
 
 const factories={milo,orbit,bloom,tempo,signal,gather,wisp,dawn};
+for(const original of await suite()){
+ const p=structuredClone(original);p.artboards[0].width=p.artboards[0].height=512;
+ for(const n of p.nodes){n.transform[4]*=2;n.transform[5]*=2;const g=n.geometry;if(!g)continue;
+  for(const k of ['width','height','length','fontSize'])if(k in g)g[k]*=2;
+  if(g.points)for(const v of g.points)for(const k of ['anchor','in','out'])v[k]=v[k].map(x=>x*2);
+  if(g.skin){for(const m of [g.skin.bindWorld,...g.skin.bones.map(b=>b.bind)]){m[4]*=2;m[5]*=2;}}
+  if(g.vertices)for(const v of g.vertices)v.position=v.position.map(x=>x*2);
+  if(g.fill&&typeof g.fill!=='string'){g.fill.start=g.fill.start.map(x=>x*2);g.fill.end=g.fill.end.map(x=>x*2);}
+ }
+ for(const a of p.animations)for(const t of a.tracks)if(['x','y','width','height','length','fontSize','paint.startX','paint.startY','paint.endX','paint.endY'].includes(t.property))for(const k of t.keys)k.value*=2;
+ for(const f of p.advanced.feathers)f.strength*=2;
+ factories[p.name]=()=>p;
+}
 await mkdir(output,{recursive:true});
 for(const name of exampleIds) {
   const p=factories[name]();validateProject(p);

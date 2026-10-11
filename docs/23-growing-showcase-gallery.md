@@ -1,5 +1,7 @@
 # A growing feature gallery
 
+This document records the initial five-study gallery. The current catalog has fourteen studies, including animated gradients, clipping, feather, IK, textured meshes, text and 1D blending. Use the [current feature contracts and evidence](30-advanced-2d-authoring.md) and [consolidated remaining-work table](25-studio-navigation-and-remaining-work.md) for present status.
+
 Research and implementation: 10 October 2026. The user requested more examples of working features, with additions as Evir progresses. PR #16 is merged into main; it adds selection/navigation and experience quality. This gallery increment adds content and host controls, using the existing engine subset.
 
 ## Research and decisions

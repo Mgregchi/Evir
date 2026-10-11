@@ -1,0 +1,47 @@
+{
+  "scope": "Actual semantic-import attempts on original user-supplied exports; no artwork redistributed; rejection occurs before project replacement",
+  "results": [
+    {
+      "filename": "27773-52471-maasai-inspired-event-hero-banner-concept.riv",
+      "bytes": 1550988,
+      "sha256": "c3dccec305f4c35c3a9ffde7955e8850696c8ec631172ee86c354c16faed1f35",
+      "status": "rejected",
+      "diagnostic": "ViewModel at byte 1517817: outside editable import subset; original file remains unchanged"
+    },
+    {
+      "filename": "28761-54484-sobo.riv",
+      "bytes": 2744286,
+      "sha256": "bd15378a5fae9ab5f0f166be36df10e775a5ccee15200234d41f947098e4e29e",
+      "status": "rejected",
+      "diagnostic": "DataConverterTrigger at byte 2306887: outside editable import subset; original file remains unchanged"
+    },
+    {
+      "filename": "28745-54500-character-poses.riv",
+      "bytes": 5998357,
+      "sha256": "60439694ed44eabfd80177303a92e6876c3fab205bc906ef888c91bf6ddf6965",
+      "status": "rejected",
+      "diagnostic": "DataConverterSystemNormalizer at byte 163: outside editable import subset; original file remains unchanged"
+    },
+    {
+      "filename": "26133-49002-studiorun-a-cosmic-game-by-thelittlelabs.riv",
+      "bytes": 13363082,
+      "sha256": "bc87386bba331c03854ebbc92c34723c0d565a8b4ab0914669e2f2104b1d5889",
+      "status": "rejected",
+      "diagnostic": "AudioAsset at byte 214: outside editable import subset; original file remains unchanged"
+    },
+    {
+      "filename": "28334-53514-interactive-character-follow.riv",
+      "bytes": 81042,
+      "sha256": "f064f4cfa73bcabaff7a6970cf0032792018c4b7a237f1f320822bc09066e030",
+      "status": "rejected",
+      "diagnostic": "ViewModel at byte 54875: outside editable import subset; original file remains unchanged"
+    }
+  ],
+  "unavailableInputs": [
+    {
+      "filename": "25989-48561-room-decor-mini-game.riv",
+      "status": "not tested",
+      "reason": "Sediment download failed: file exceeds the executor transfer limit of 32 MiB. The file is absent locally. Editable import also has an explicit 32 MiB file budget."
+    }
+  ]
+}

@@ -32,7 +32,7 @@ export class RuntimePlayer {
   snapshot() { return structuredClone(this.#project); }
   pose() {
     if (this.#machine) return this.#machine.pose();
-    if (!this.#animation) return this.snapshot();
+    if (!this.#animation) return evaluate(this.#project,null,0);
     const a = this.#animation, frame = this.#time * a.fps;
     return evaluate(this.#project, a.id, a.loop ? frame % a.duration : Math.min(a.duration, frame));
   }

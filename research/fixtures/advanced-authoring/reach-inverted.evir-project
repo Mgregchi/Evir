@@ -1,0 +1,194 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 3,
+  "id": "reach-project",
+  "name": "reach-inverted",
+  "artboards": [
+    {
+      "id": "reach-board",
+      "name": "reach",
+      "width": 256,
+      "height": 256
+    }
+  ],
+  "nodes": [
+    {
+      "id": "reach-shoulder",
+      "name": "shoulder",
+      "kind": "bone",
+      "parentId": null,
+      "artboardId": "reach-board",
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        64,
+        160
+      ],
+      "geometry": {
+        "length": 64
+      }
+    },
+    {
+      "id": "reach-elbow",
+      "name": "elbow",
+      "kind": "bone",
+      "parentId": "reach-shoulder",
+      "artboardId": "reach-board",
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "length": 56
+      }
+    },
+    {
+      "id": "reach-upper",
+      "name": "upper",
+      "kind": "rectangle",
+      "parentId": "reach-shoulder",
+      "artboardId": "reach-board",
+      "order": 1,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        -8
+      ],
+      "geometry": {
+        "width": 64,
+        "height": 16,
+        "fill": "#34594b"
+      }
+    },
+    {
+      "id": "reach-lower",
+      "name": "lower",
+      "kind": "rectangle",
+      "parentId": "reach-elbow",
+      "artboardId": "reach-board",
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        -7
+      ],
+      "geometry": {
+        "width": 56,
+        "height": 14,
+        "fill": "#8dd9b7"
+      }
+    },
+    {
+      "id": "reach-target",
+      "name": "target",
+      "kind": "group",
+      "parentId": null,
+      "artboardId": "reach-board",
+      "order": 1,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        170,
+        80
+      ],
+      "geometry": null
+    },
+    {
+      "id": "reach-target-marker",
+      "name": "target-marker",
+      "kind": "rectangle",
+      "parentId": "reach-target",
+      "artboardId": "reach-board",
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -5,
+        -5
+      ],
+      "geometry": {
+        "width": 10,
+        "height": 10,
+        "fill": "#efb489"
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [
+    {
+      "id": "reach-Reach",
+      "name": "Reach",
+      "artboardId": "reach-board",
+      "fps": 60,
+      "duration": 60,
+      "loop": false,
+      "tracks": [
+        {
+          "targetId": "reach-target",
+          "property": "x",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 170,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 60,
+              "value": 110,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "reach-board": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  },
+  "advanced": {
+    "clips": [],
+    "feathers": [],
+    "ik": [
+      {
+        "boneId": "reach-elbow",
+        "targetId": "reach-target",
+        "count": 2,
+        "invert": true,
+        "strength": 1
+      }
+    ]
+  }
+}

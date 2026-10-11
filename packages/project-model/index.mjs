@@ -1,10 +1,31 @@
+export {
+  encodeBase64,
+  decodeBase64,
+  pngSize,
+  assetBudget,
+  MAX_ASSET_BYTES,
+} from "./assets.mjs";
+import { validateAdvanced } from "./advanced.mjs";
+export {
+  upgradeAdvanced,
+  paintProperties,
+  paintValue,
+  isColorProperty,
+} from "./advanced.mjs";
 import { validatePaint } from "./paint.mjs";
 export { validatePaint, MAX_GRADIENT_STOPS } from "./paint.mjs";
 import { validateFeatures } from "./features.mjs";
 import { ProjectError, newId as id } from "./primitives.mjs";
-export { ProjectError, newId, mapPoint, multiply, inverse, worldTransform } from "./primitives.mjs";
+export {
+  ProjectError,
+  newId,
+  mapPoint,
+  multiply,
+  inverse,
+  worldTransform,
+} from "./primitives.mjs";
 export { ANIMATABLE, propertiesFor } from "./features.mjs";
-const copy = value => structuredClone(value);
+const copy = (value) => structuredClone(value);
 export function createProject() {
   const artboardId = id("artboard");
   return {
@@ -33,8 +54,13 @@ export function validateRuntimeProject(p) {
   return validateDocument(p, true);
 }
 function validateDocument(p, runtime) {
-  if (!p || typeof p !== "object") throw new ProjectError(["project: expected object"]);
-  const sceneVersion = runtime ? 2 : p.schemaVersion;
+  if (!p || typeof p !== "object")
+    throw new ProjectError(["project: expected object"]);
+  const sceneVersion = runtime
+    ? p.schemaVersion === 2
+      ? 3
+      : 2
+    : p.schemaVersion;
   const issues = [],
     seen = new Set();
   const problem = (path, text) => issues.push(`${path}: ${text}`);
@@ -74,13 +100,21 @@ function validateDocument(p, runtime) {
       "nodes",
       "assets",
       ...(runtime ? [] : ["editor"]),
-      ...(sceneVersion === 2 ? ["animations", "machines"] : []),
+      ...(sceneVersion >= 2 ? ["animations", "machines"] : []),
+      ...(sceneVersion === 3 ? ["advanced"] : []),
     ])
   )
     throw new ProjectError(issues);
   if (p.format !== (runtime ? "evir-runtime" : "evir-project"))
-    problem("project.format", runtime ? "expected evir-runtime" : "expected evir-project");
-  if (!(runtime ? p.schemaVersion === 1 : [1, 2].includes(p.schemaVersion)))
+    problem(
+      "project.format",
+      runtime ? "expected evir-runtime" : "expected evir-project",
+    );
+  if (
+    !(runtime
+      ? [1, 2].includes(p.schemaVersion)
+      : [1, 2, 3].includes(p.schemaVersion))
+  )
     problem(
       "project.schemaVersion",
       "unsupported version; no implicit migration",
@@ -148,13 +182,25 @@ function validateDocument(p, runtime) {
         positive(n.geometry.width, `${path}.geometry.width`);
         positive(n.geometry.height, `${path}.geometry.height`);
         if (sceneVersion === 1 && typeof n.geometry.fill !== "string")
-          problem(`${path}.geometry.fill`, "gradients require source version 2");
+          problem(
+            `${path}.geometry.fill`,
+            "gradients require source version 2",
+          );
         validatePaint(n.geometry.fill, `${path}.geometry.fill`, problem);
       }
     } else if (n.kind === "group") {
       if (n.geometry !== null)
         problem(`${path}.geometry`, "group geometry must be null");
-    } else if (!(sceneVersion === 2 && ["path", "bone"].includes(n.kind)))
+    } else if (
+      !(
+        sceneVersion >= 2 &&
+        [
+          "path",
+          "bone",
+          ...(sceneVersion === 3 ? ["text", "image", "mesh"] : []),
+        ].includes(n.kind)
+      )
+    )
       problem(`${path}.kind`, "unsupported node type");
     const chain = new Set([n.id]);
     let parent = nodes.get(n.parentId);
@@ -214,8 +260,9 @@ function validateDocument(p, runtime) {
       }
     }
   }
-  if (!issues.length && sceneVersion === 2)
+  if (!issues.length && sceneVersion >= 2)
     validateFeatures(p, problem, identifier, { editorState: !runtime });
+  if (!issues.length && sceneVersion === 3) validateAdvanced(p, problem, identifier);
   if (issues.length) throw new ProjectError(issues);
   return p;
 }
@@ -255,7 +302,7 @@ export function toRuntimeProject(project) {
   validateProject(project);
   const { editor, ...scene } = copy(project);
   scene.format = "evir-runtime";
-  scene.schemaVersion = 1;
+  scene.schemaVersion = project.schemaVersion === 3 ? 2 : 1;
   scene.animations ??= [];
   scene.machines ??= [];
   for (const machine of scene.machines)
@@ -265,8 +312,11 @@ export function toRuntimeProject(project) {
 
 export async function openRuntimeProject(text) {
   let scene;
-  try { scene = JSON.parse(text); }
-  catch { throw new ProjectError(["project: invalid JSON"]); }
+  try {
+    scene = JSON.parse(text);
+  } catch {
+    throw new ProjectError(["project: invalid JSON"]);
+  }
   if (scene.format === "evir-project") scene = toRuntimeProject(scene);
   else validateRuntimeProject(scene);
   await verifyAssets(scene);

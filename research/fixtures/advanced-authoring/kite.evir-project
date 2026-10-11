@@ -1,0 +1,277 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 3,
+  "id": "kite-project",
+  "name": "kite",
+  "artboards": [
+    {
+      "id": "kite-board",
+      "name": "kite",
+      "width": 256,
+      "height": 256
+    }
+  ],
+  "nodes": [
+    {
+      "id": "kite-wind",
+      "name": "wind",
+      "kind": "bone",
+      "parentId": null,
+      "artboardId": "kite-board",
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "length": 40
+      }
+    },
+    {
+      "id": "kite-cloth",
+      "name": "cloth",
+      "kind": "mesh",
+      "parentId": null,
+      "artboardId": "kite-board",
+      "order": 1,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "assetId": "kite-texture",
+        "vertices": [
+          {
+            "id": "kite-v0",
+            "position": [
+              48,
+              48
+            ],
+            "uv": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "kite-v1",
+            "position": [
+              208,
+              48
+            ],
+            "uv": [
+              1,
+              0
+            ]
+          },
+          {
+            "id": "kite-v2",
+            "position": [
+              208,
+              208
+            ],
+            "uv": [
+              1,
+              1
+            ]
+          },
+          {
+            "id": "kite-v3",
+            "position": [
+              48,
+              208
+            ],
+            "uv": [
+              0,
+              1
+            ]
+          }
+        ],
+        "triangles": [
+          0,
+          1,
+          2,
+          0,
+          2,
+          3
+        ],
+        "skin": {
+          "bindWorld": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "bones": [
+            {
+              "boneId": "kite-wind",
+              "bind": [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0
+              ]
+            }
+          ],
+          "weights": [
+            {
+              "pointId": "kite-v0",
+              "anchor": [
+                [
+                  "kite-wind",
+                  1
+                ]
+              ],
+              "in": [
+                [
+                  "kite-wind",
+                  1
+                ]
+              ],
+              "out": [
+                [
+                  "kite-wind",
+                  1
+                ]
+              ]
+            },
+            {
+              "pointId": "kite-v1",
+              "anchor": [
+                [
+                  "kite-wind",
+                  1
+                ]
+              ],
+              "in": [
+                [
+                  "kite-wind",
+                  1
+                ]
+              ],
+              "out": [
+                [
+                  "kite-wind",
+                  1
+                ]
+              ]
+            },
+            {
+              "pointId": "kite-v2",
+              "anchor": [
+                [
+                  "kite-wind",
+                  1
+                ]
+              ],
+              "in": [
+                [
+                  "kite-wind",
+                  1
+                ]
+              ],
+              "out": [
+                [
+                  "kite-wind",
+                  1
+                ]
+              ]
+            },
+            {
+              "pointId": "kite-v3",
+              "anchor": [
+                [
+                  "kite-wind",
+                  1
+                ]
+              ],
+              "in": [
+                [
+                  "kite-wind",
+                  1
+                ]
+              ],
+              "out": [
+                [
+                  "kite-wind",
+                  1
+                ]
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "assets": [
+    {
+      "id": "kite-texture",
+      "name": "kite-texture",
+      "mimeType": "image/png",
+      "sha256": "14d2249740406ae4baec5a77cc2b5671a95d80d70b41c2188e435a0cc8445de7",
+      "data": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAkUlEQVR4AeXBQRVAQAAA0TFPGA000kUFaVy3gYMuxNjD/L+c7/0x0fEMZpI4iZM4iZM4iZM4iZM4iZM4iZM4iZM4iZM4iZM4iZM4iZM4iZM4iZM4iZM4iZO49XgGM13bzkwSJ3ESJ3ESJ3ESJ3ESJ3ESJ3ESJ3ESJ3ESJ3ESJ3ESJ3ESJ3ESJ3ESJ3ESJ3ES9wOCRwitYY+W/QAAAABJRU5ErkJggg=="
+    }
+  ],
+  "animations": [
+    {
+      "id": "kite-Flutter",
+      "name": "Flutter",
+      "artboardId": "kite-board",
+      "fps": 60,
+      "duration": 60,
+      "loop": false,
+      "tracks": [
+        {
+          "targetId": "kite-wind",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 60,
+              "value": 0.16,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "kite-board": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  },
+  "advanced": {
+    "clips": [],
+    "feathers": [],
+    "ik": []
+  }
+}

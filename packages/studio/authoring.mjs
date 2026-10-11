@@ -1,3 +1,5 @@
+import { machineControls } from "./advanced.mjs";
+import { isColorProperty } from "@evir/project-model";
 import { paintControls } from "./paint.mjs";
 import { inverse, worldTransform, validateProject, newId, propertiesFor } from "@evir/project-model";
 import {
@@ -218,7 +220,7 @@ export function mountAuthoring(api) {
       ensurePlayer(p, m);
       return player.pose();
     }
-    return p;
+    return evaluate(p,null,0);
   }
   function tick(now) {
     raf = null;
@@ -678,7 +680,7 @@ export function mountAuthoring(api) {
           "Key value",
           key.value,
           (value) => updateKey((k) => (k.value = value)),
-          selectedTrack.property === "fill" ? "text" : "number",
+          isColorProperty(selectedTrack.property) ? "text" : "number",
         ),
       );
       details.append(
@@ -1149,6 +1151,7 @@ export function mountAuthoring(api) {
         ),
       );
     panel.append(routes);
+    machineControls(panel,p,m,transaction,api.notice);
     updatePlayhead();
   }
   function parseBoolean(value) {

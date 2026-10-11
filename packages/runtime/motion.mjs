@@ -1,5 +1,7 @@
+import { paintValue, isColorProperty } from "@evir/project-model";
+import { solveIK, mixPoses } from "./advanced.mjs";
 import { components } from "./geometry.mjs";
-const clone=x=>structuredClone(x);
+const clone = (x) => structuredClone(x);
 export function easingValue(e, t) {
   if (e.type === "hold") return 0;
   if (e.type === "linear") return t;
@@ -29,7 +31,7 @@ export function keyValue(track, frame) {
     a = keys[next - 1],
     b = keys[next],
     t = easingValue(a.easing, (frame - a.frame) / (b.frame - a.frame));
-  if (track.property === "fill") {
+  if (isColorProperty(track.property)) {
     const from = rgba(a.value),
       to = rgba(b.value);
     return (
@@ -45,10 +47,15 @@ export function keyValue(track, frame) {
   }
   return a.value + (b.value - a.value) * t;
 }
-export function evaluate(p, animationId, frame) {
+export function evaluate(
+  p,
+  animationId,
+  frame,
+  { applyConstraints = true } = {},
+) {
   const pose = clone(p),
     a = p.animations.find((a) => a.id === animationId);
-  if (!a) return pose;
+  if (!a) return applyConstraints ? solveIK(pose) : pose;
   const changes = new Map();
   for (const track of a.tracks) {
     if (!changes.has(track.targetId)) changes.set(track.targetId, {});
@@ -73,10 +80,18 @@ export function evaluate(p, animationId, frame) {
     m[3] = (s * cc + c * dd) * sy;
     if (values.x !== undefined) m[4] = values.x;
     if (values.y !== undefined) m[5] = values.y;
-    for (const key of ["width", "height", "length", "fill"])
+    for (const key of ["width", "height", "length", "fontSize", "fill"])
       if (values[key] !== undefined) n.geometry[key] = values[key];
   }
-  return pose;
+  for (const [id, values] of changes)
+    for (const [property, value] of Object.entries(values))
+      if (property.startsWith("paint."))
+        paintValue(
+          pose.nodes.find((n) => n.id === id),
+          property,
+          value,
+        );
+  return applyConstraints ? solveIK(pose) : pose;
 }
 export class MachinePlayer {
   constructor(p, machineId) {
@@ -87,6 +102,7 @@ export class MachinePlayer {
   reset() {
     this.stateId = this.machine.entryStateId;
     this.time = 0;
+    this.mixing = null;
     this.inputs = Object.fromEntries(
       this.machine.inputs.map((i) => [i.id, i.value]),
     );
@@ -105,34 +121,71 @@ export class MachinePlayer {
   }
   advance(dt) {
     if (!Number.isFinite(dt) || dt < 0) throw Error("Invalid delta time");
-    this.time += dt;
-    for (let iteration = 0; iteration < 100; iteration++) {
-      const t = this.machine.transitions.find(
-        (t) =>
-          t.fromId === this.stateId &&
-          t.toId !== this.stateId &&
-          t.conditions.every((c) => {
-            const v = this.inputs[c.inputId];
-            return {
-              eq: () => v === c.value,
-              ne: () => v !== c.value,
-              gt: () => v > c.value,
-              ge: () => v >= c.value,
-              lt: () => v < c.value,
-              le: () => v <= c.value,
-              fire: () => v === true,
-            }[c.op]();
-          }),
-      );
-      if (!t) break;
-      this.stateId = t.toId;
-      this.time = 0;
-      for (const condition of t.conditions)
-        if (condition.op === "fire") this.inputs[condition.inputId] = false;
-      if (iteration === 99)
-        throw Error(
-          "State machine has a continuously enabled transition cycle",
+    let remaining = dt,
+      transitions = 0;
+    const enabled = (t) =>
+      t.fromId === this.stateId &&
+      t.toId !== this.stateId &&
+      t.conditions.every((c) => {
+        const v = this.inputs[c.inputId];
+        return {
+          eq: () => v === c.value,
+          ne: () => v !== c.value,
+          gt: () => v > c.value,
+          ge: () => v >= c.value,
+          lt: () => v < c.value,
+          le: () => v <= c.value,
+          fire: () => v === true,
+        }[c.op]();
+      });
+    for (;;) {
+      if (this.mixing) {
+        if (remaining <= 0) break;
+        const step = Math.min(
+          remaining,
+          Math.max(0, this.mixing.duration - this.mixing.elapsed),
         );
+        this.time += step;
+        this.mixing.elapsed += step;
+        this.mixing.fromTime += step;
+        remaining = Math.max(0, remaining - step);
+        if (this.mixing.elapsed + 1e-10 >= this.mixing.duration)
+          this.mixing = null;
+        else break;
+        continue;
+      }
+      const candidates = this.machine.transitions.filter(enabled);
+      const t = candidates.find(
+        (t) => !("exitTimeMs" in t) || this.time * 1000 + 1e-7 >= t.exitTimeMs,
+      );
+      if (t) {
+        if (++transitions > 100)
+          throw Error(
+            "State machine has a continuously enabled transition cycle",
+          );
+        if (t.durationMs > 0)
+          this.mixing = {
+            fromId: this.stateId,
+            fromTime: this.time,
+            elapsed: 0,
+            duration: t.durationMs / 1000,
+          };
+        this.stateId = t.toId;
+        this.time = 0;
+        for (const c of t.conditions)
+          if (c.op === "fire") this.inputs[c.inputId] = false;
+        continue;
+      }
+      if (remaining <= 0) break;
+      const wait = Math.min(
+        ...candidates
+          .filter((t) => "exitTimeMs" in t)
+          .map((t) => Math.max(0, t.exitTimeMs / 1000 - this.time)),
+      );
+      const step = Math.min(remaining, wait);
+      this.time += step;
+      remaining = Math.max(0, remaining - step);
+      if (step === 0) break;
     }
     for (const i of this.machine.inputs)
       if (i.type === "trigger") this.inputs[i.id] = false;
@@ -150,15 +203,45 @@ export class MachinePlayer {
       );
     return this.advance(0);
   }
+  statePose(stateId, time) {
+    const state = this.machine.states.find((s) => s.id === stateId);
+    const animationPose = (id) => {
+      const a = this.project.animations.find((a) => a.id === id);
+      return evaluate(
+        this.project,
+        id,
+        a.loop
+          ? (time * a.fps) % a.duration
+          : Math.min(a.duration, time * a.fps),
+        { applyConstraints: false },
+      );
+    };
+    if (!state.blend) return animationPose(state.animationId);
+    const children = state.blend.children,
+      value = this.inputs[state.blend.inputId];
+    if (value <= children[0].position)
+      return animationPose(children[0].animationId);
+    if (value >= children.at(-1).position)
+      return animationPose(children.at(-1).animationId);
+    const i = children.findIndex((c) => c.position > value),
+      lo = children[i - 1],
+      hi = children[i];
+    return mixPoses(
+      animationPose(lo.animationId),
+      animationPose(hi.animationId),
+      (value - lo.position) / (hi.position - lo.position),
+    );
+  }
   pose() {
-    const state = this.machine.states.find((s) => s.id === this.stateId),
-      a = this.project.animations.find((a) => a.id === state.animationId);
-    return evaluate(
-      this.project,
-      a.id,
-      a.loop
-        ? (this.time * a.fps) % a.duration
-        : Math.min(a.duration, this.time * a.fps),
+    const current = this.statePose(this.stateId, this.time);
+    return solveIK(
+      this.mixing
+        ? mixPoses(
+            this.statePose(this.mixing.fromId, this.mixing.fromTime),
+            current,
+            this.mixing.elapsed / this.mixing.duration,
+          )
+        : current,
     );
   }
 }

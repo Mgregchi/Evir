@@ -1,3 +1,8 @@
+import { mountAdvanced } from "./advanced.mjs";
+import { SceneAssets } from "@evir/renderer-canvas";
+import { importRiv } from "@evir/format";
+const sceneAssets = new SceneAssets();
+let advanced;
 import {
   createProject,
   worldTransform,
@@ -484,7 +489,7 @@ function draw() {
   ctx.beginPath();
   ctx.rect(0, 0, a.width, a.height);
   ctx.clip();
-  drawScene(ctx, p, activeArtboard);
+  drawScene(ctx, p, activeArtboard, {assets:sceneAssets});
   ctx.restore();
   const n = p.nodes.find((n) => n.id === selected);
   if (
@@ -862,7 +867,7 @@ function properties(p) {
     );
     host.append(size);
   }
-  if (!locked) authoring?.editGeometry(p, n, host);
+  if (!locked) {authoring?.editGeometry(p, n, host);advanced?.properties(p,n,host);}
   const hierarchy = section("Organization"),
     label = element("label", undefined, "field");
   label.append(element("span", "Parent"));
@@ -1097,6 +1102,7 @@ function render() {
   }
   $("#project-name").disabled = authoring && authoring.mode !== "Design";
   authoring?.refresh();
+  advanced?.refresh();
   draw();
 }
 function deleteSelection() {
@@ -1841,9 +1847,12 @@ $("#file").addEventListener("change", async (e) => {
   e.target.value = "";
   if (!file) return;
   try {
-    const next = await openProject(await file.text());
+    if (file.name.toLowerCase().endsWith(".riv") && file.size > 32 * 1024 * 1024)
+      throw Error("Rive file exceeds the 32 MiB import budget");
+    const next = file.name.toLowerCase().endsWith(".riv") ? await importRiv(await file.arrayBuffer()) : await openProject(await file.text());
     cancelDrag();
     if (!(await askReplace("Open another project?", "Open project"))) return;
+    await sceneAssets.load(next);
     install(next);
     persist();
     clearNotice();
@@ -1854,7 +1863,9 @@ $("#file").addEventListener("change", async (e) => {
 $("#new").onclick = async () => {
   if (!(await askReplace("Start a new project?", "Create project"))) return;
   cancelDrag();
-  install(createProject());
+  const next=createProject();
+  await sceneAssets.load(next);
+  install(next);
   fit();
   clearNotice();
 };
@@ -2063,6 +2074,7 @@ try {
 } catch (e) {
   notice(`The saved project could not be restored. ${e.message}`);
 }
+await sceneAssets.load(initial);
 install(initial);
 if (!restored) fit();
 else {
@@ -2099,6 +2111,8 @@ authoring = mountAuthoring({
     return true;
   },
 });
+advanced = mountAdvanced({project:()=>store.snapshot(),artboardId:()=>activeArtboard,mode:()=>authoring.mode,commit:(label,fn)=>edit(label,fn,true),prepare:p=>sceneAssets.load(p),select,notice});
+window.addEventListener("pagehide",e=>{if(!e.persisted)sceneAssets.dispose();});
 mountPanels();
 mountDisclosures();
 mountLayout({ notice });
