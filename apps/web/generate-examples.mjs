@@ -1,3 +1,4 @@
+import { fitFreehand } from '../../packages/studio/freehand.mjs';
 import { exampleIds } from './examples.mjs';
 import { createProject, validateProject } from '@evir/project-model';
 import { setKey, bindPath, setWeight } from '@evir/authoring';
@@ -185,7 +186,41 @@ function gather() {
   }
   return p;
 }
-const factories={milo,orbit,bloom,tempo,signal,gather};
+function wisp() {
+  const {p,node,oval,anim,key}=project('wisp','Wisp — a drawn little daydream');
+  oval('backdrop',256,256,194,194,'#e4ece1');
+  oval('shadow',256,413,87,12,'#243f3320');
+  const root=node('daydream','group',null,null,256,248);
+  const sampled=(id,rx,ry,x,y,fill)=>{
+    const samples=Array.from({length:361},(_,i)=>{
+      const t=i/360*Math.PI*2;
+      return [x+rx*Math.cos(t)*(1+.06*Math.sin(3*t)),y+ry*Math.sin(t)+9*Math.cos(4*t)];
+    });
+    const geometry=fitFreehand(samples,{tolerance:1.5,closed:true});
+    geometry.fill=fill;
+    geometry.points.forEach((p,i)=>p.id=`wisp-${id}-p${i}`);
+    return node(id,'path',geometry,root);
+  };
+  sampled('left-wing',45,24,-95,38,'#243f33');
+  sampled('left-wing-light',37,17,-95,35,'#e9c3a3');
+  sampled('right-wing',45,24,95,38,'#243f33');
+  sampled('right-wing-light',37,17,95,35,'#e9c3a3');
+  sampled('drawn-outline',92,121,0,0,'#243f33');
+  sampled('drawn-body',85,113,0,-2,'#9cdeb9');
+  oval('face',0,-27,60,49,'#f5f3e7',root);
+  oval('left-eye',-22,-34,6,10,'#243f33',root);
+  oval('right-eye',22,-34,6,10,'#243f33',root);
+  oval('left-cheek',-37,-14,9,5,'#e7b093',root);
+  oval('right-cheek',37,-14,9,5,'#e7b093',root);
+  oval('smile',0,-6,8,5,'#243f33',root);
+  oval('belly-dot',0,66,13,12,'#f5f3e7',root);
+  const drift=anim('drift','Drift');
+  key(drift,root,'y',[[0,248],[60,230],[120,248]]);
+  key(drift,root,'rotation',[[0,-.035],[60,.035],[120,-.035]]);
+  return p;
+}
+
+const factories={milo,orbit,bloom,tempo,signal,gather,wisp};
 await mkdir(output,{recursive:true});
 for(const name of exampleIds) {
   const p=factories[name]();validateProject(p);

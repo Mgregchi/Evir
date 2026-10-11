@@ -1,0 +1,71 @@
+[
+  {
+    "url": "https://rive.app/docs/editor/tools/pen-tool",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/getCoalescedEvents",
+    "resolvedUrl": "https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/getCoalescedEvents",
+    "status": 200,
+    "bytes": 153362,
+    "sha256": "be95aff887a2d0aa51bda5c0886559a0e348fbb907db66a0eb46c505811ce708"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Element/pointercancel_event",
+    "resolvedUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Element/pointercancel_event",
+    "status": 200,
+    "bytes": 179089,
+    "sha256": "f07bc908775b55c13f1994ce982df34fd03419ef39646234698e2ca57cda4b74"
+  },
+  {
+    "url": "https://www.w3.org/TR/pointerevents3/",
+    "resolvedUrl": "https://www.w3.org/TR/pointerevents3/",
+    "status": 200,
+    "bytes": 595222,
+    "sha256": "552c4d85256fbeb1a54aea79f03d9ae7e1f99bcbbc65fcf35c3b355574deb6e5"
+  },
+  {
+    "url": "https://inkscape.org/doc/tutorials/shapes/tutorial-shapes.html",
+    "resolvedUrl": "https://inkscape.org/doc/tutorials/shapes/tutorial-shapes.html",
+    "status": 200,
+    "bytes": 61196,
+    "sha256": "17d3066a4280028574520551c92232204c1210683f96b08b79a3110d7062bdf7"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths",
+    "resolvedUrl": "https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths",
+    "status": 200,
+    "bytes": 223558,
+    "sha256": "8eeaf474bc316b0b77edc24271060dddac9cc8c9a43fb8e3dfc4312d36bc9518"
+  },
+  {
+    "url": "https://rive.app/docs/editor/tools/pen",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://inkscape-manuals.readthedocs.io/en/latest/drawing-freehand.html",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://cartography-playground.gitlab.io/playgrounds/douglas-peucker-algorithm/",
+    "resolvedUrl": "https://cartography-playground.gitlab.io/playgrounds/douglas-peucker-algorithm/",
+    "status": 200,
+    "bytes": 29009,
+    "sha256": "d4267bc182c338484b8f9e16c373a644385f864bae4a75f3ab75421f258c49de"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/rive-app/rive-docs/8879acbbefbf676c8d68d66c2ddfe56c6ee50914/editor/fundamentals/pen-tool-overview.mdx",
+    "resolvedUrl": "https://raw.githubusercontent.com/rive-app/rive-docs/8879acbbefbf676c8d68d66c2ddfe56c6ee50914/editor/fundamentals/pen-tool-overview.mdx",
+    "status": 200,
+    "bytes": 1260,
+    "sha256": "3a5ca121f0956abe349bd0b72ee5e50b9bb489ecf00e6600ab88e8f7900522e6"
+  },
+  {
+    "url": "https://inkscape-manuals.readthedocs.io/en/latest/pencil-tool.html",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/mourner/simplify-js/1.2.4/simplify.js",
+    "error": "HTTP Error 404: Not Found"
+  }
+]

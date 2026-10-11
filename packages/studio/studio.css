@@ -1490,3 +1490,37 @@ dialog.interaction-sheet::backdrop {
   height: 18px;
   accent-color: #89d4b5;
 }
+
+.stage-footer #drawing-options {
+  flex-shrink: 0;
+  border: 1px solid var(--line);
+  padding: 4px 7px;
+}
+@media (max-width: 850px) {
+  .stage-footer #drawing-options {
+    min-height: 40px;
+  }
+  .stage-footer:has(#drawing-options:not([hidden])) #selection-status {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip-path: inset(50%);
+    overflow: hidden;
+  }
+}
+/* Keep feedback above the reserved draft actions, including on compact screens. */
+body > #notice {
+  bottom: max(62px, env(safe-area-inset-bottom));
+}
+
+.drawing-close {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 18px 0;
+  min-height: 44px;
+}
+.drawing-close input {
+  width: 20px;
+  height: 20px;
+}
