@@ -1,0 +1,100 @@
+{
+  "checkedAt": "2026-10-11T14:01:11.029486+00:00",
+  "branch": "feature/studio-gradient-authoring",
+  "scope": "Local cloud Chromium + software graphics; static linear/radial paints on rectangles and unskinned paths. Backend and live MCP are documented proposals only. No physical-device, screen-reader, moderated-user or matched-Editor-export evidence.",
+  "commands": [
+    {
+      "command": "npm run test:editor",
+      "exitCode": 0,
+      "seconds": 98.4
+    },
+    {
+      "command": "npm run validate:editor",
+      "exitCode": 0,
+      "seconds": 59.42
+    },
+    {
+      "command": "npm run test:web",
+      "exitCode": 0,
+      "seconds": 188.43
+    },
+    {
+      "command": "npm run test:experience",
+      "exitCode": 0,
+      "seconds": 4.31
+    },
+    {
+      "command": "npm run test:runtime",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run runtime:build",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run test:frontend",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run web:build",
+      "exitCode": 0
+    },
+    {
+      "command": "node tests/editor/paint-browser.cjs",
+      "exitCode": 0,
+      "note": "Final targeted run after opacity formatting and endpoint-distance validation; also checks color extension beyond interior outer stops."
+    }
+  ],
+  "editorUnitTests": 47,
+  "editorBrowserWorkflows": 9,
+  "runtimeUnitTests": 6,
+  "frontendUnitTests": 14,
+  "newPaintChecks": {
+    "viewports": 5,
+    "backends": [
+      "canvas",
+      "webgl2"
+    ],
+    "framesPerBackend": 2,
+    "report": "browser.json"
+  },
+  "gallery": {
+    "studies": 8,
+    "oracleChecksPerBackend": 56,
+    "backends": [
+      "canvas",
+      "webgl2"
+    ],
+    "oracleReport": "gallery-oracles.json",
+    "sourceExportReport": "gallery-browser.json"
+  },
+  "authoringRegression": {
+    "checksPerBackend": 20,
+    "reports": [
+      "authoring-canvas.json",
+      "authoring-webgl2.json"
+    ]
+  },
+  "artifacts": {
+    "apps/web/assets/examples/dawn.evir-project": {
+      "bytes": 15765,
+      "sha256": "b20f6dbf06672b641c869241b4b3e936a2af652e434bb4daa87962430e104c4b"
+    },
+    "apps/web/assets/examples/dawn.riv": {
+      "bytes": 1777,
+      "sha256": "6fe56c01b1f73ea9647e5e53f88cc1d2fbc09bba5e9e7d56b605220be1da9346"
+    },
+    "apps/web/assets/dawn-poster.png": {
+      "bytes": 44664,
+      "sha256": "c6d0dd77e6290bca36bb9042b1af4af5243de102dfaa80da9524a9d7eed70a66"
+    },
+    "research/results/studio-gradients/paint.evir-project": {
+      "bytes": 8062,
+      "sha256": "4bc11f1573b0916f9e6b137509c28c0413fbbf02280384c57710dc40f4fab6f9"
+    },
+    "research/results/studio-gradients/paint.riv": {
+      "bytes": 921,
+      "sha256": "83c040238ae2a8a9ccc6029cb2d507504e15ab06b7347ee53db754f0d23e0814"
+    }
+  }
+}

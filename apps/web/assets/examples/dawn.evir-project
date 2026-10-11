@@ -1,0 +1,824 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 2,
+  "id": "dawn-project",
+  "name": "Dawn — a little light",
+  "artboards": [
+    {
+      "id": "dawn-board",
+      "name": "Dawn — a little light",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "dawn-sky",
+      "name": "sky",
+      "kind": "path",
+      "artboardId": "dawn-board",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        52,
+        52
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": {
+          "type": "linear",
+          "start": [
+            0,
+            0
+          ],
+          "end": [
+            0,
+            408
+          ],
+          "stops": [
+            {
+              "position": 0,
+              "color": "#233e34"
+            },
+            {
+              "position": 0.5,
+              "color": "#a9d9bd"
+            },
+            {
+              "position": 1,
+              "color": "#f5e4ca"
+            }
+          ]
+        },
+        "skin": null,
+        "points": [
+          {
+            "id": "dawn-sky-p0",
+            "anchor": [
+              44,
+              0
+            ],
+            "in": [
+              19.6994710088,
+              0
+            ],
+            "out": [
+              44,
+              0
+            ]
+          },
+          {
+            "id": "dawn-sky-p1",
+            "anchor": [
+              364,
+              0
+            ],
+            "in": [
+              364,
+              0
+            ],
+            "out": [
+              388.3005289912,
+              0
+            ]
+          },
+          {
+            "id": "dawn-sky-p2",
+            "anchor": [
+              408,
+              44
+            ],
+            "in": [
+              408,
+              19.6994710088
+            ],
+            "out": [
+              408,
+              44
+            ]
+          },
+          {
+            "id": "dawn-sky-p3",
+            "anchor": [
+              408,
+              364
+            ],
+            "in": [
+              408,
+              364
+            ],
+            "out": [
+              408,
+              388.3005289912
+            ]
+          },
+          {
+            "id": "dawn-sky-p4",
+            "anchor": [
+              364,
+              408
+            ],
+            "in": [
+              388.3005289912,
+              408
+            ],
+            "out": [
+              364,
+              408
+            ]
+          },
+          {
+            "id": "dawn-sky-p5",
+            "anchor": [
+              44,
+              408
+            ],
+            "in": [
+              44,
+              408
+            ],
+            "out": [
+              19.6994710088,
+              408
+            ]
+          },
+          {
+            "id": "dawn-sky-p6",
+            "anchor": [
+              0,
+              364
+            ],
+            "in": [
+              0,
+              388.3005289912
+            ],
+            "out": [
+              0,
+              364
+            ]
+          },
+          {
+            "id": "dawn-sky-p7",
+            "anchor": [
+              0,
+              44
+            ],
+            "in": [
+              0,
+              44
+            ],
+            "out": [
+              0,
+              19.6994710088
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "dawn-sun-motion",
+      "name": "sun motion",
+      "kind": "group",
+      "artboardId": "dawn-board",
+      "parentId": null,
+      "order": 1,
+      "transform": [
+        1,
+        0,
+        0,
+        0.82,
+        304,
+        220
+      ],
+      "geometry": null
+    },
+    {
+      "id": "dawn-sun",
+      "name": "sun",
+      "kind": "path",
+      "artboardId": "dawn-board",
+      "parentId": "dawn-sun-motion",
+      "order": 2,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": {
+          "type": "radial",
+          "start": [
+            -22,
+            -22
+          ],
+          "end": [
+            90,
+            0
+          ],
+          "stops": [
+            {
+              "position": 0,
+              "color": "#fff5d9"
+            },
+            {
+              "position": 0.5,
+              "color": "#efbe92"
+            },
+            {
+              "position": 1,
+              "color": "#dd927a"
+            }
+          ]
+        },
+        "skin": null,
+        "points": [
+          {
+            "id": "dawn-sun-p0",
+            "anchor": [
+              92,
+              0
+            ],
+            "in": [
+              92,
+              -50.8101969816
+            ],
+            "out": [
+              92,
+              50.8101969816
+            ]
+          },
+          {
+            "id": "dawn-sun-p1",
+            "anchor": [
+              0,
+              92
+            ],
+            "in": [
+              50.8101969816,
+              92
+            ],
+            "out": [
+              -50.8101969816,
+              92
+            ]
+          },
+          {
+            "id": "dawn-sun-p2",
+            "anchor": [
+              -92,
+              0
+            ],
+            "in": [
+              -92,
+              50.8101969816
+            ],
+            "out": [
+              -92,
+              -50.8101969816
+            ]
+          },
+          {
+            "id": "dawn-sun-p3",
+            "anchor": [
+              0,
+              -92
+            ],
+            "in": [
+              -50.8101969816,
+              -92
+            ],
+            "out": [
+              50.8101969816,
+              -92
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "dawn-far-hill",
+      "name": "far hill",
+      "kind": "path",
+      "artboardId": "dawn-board",
+      "parentId": null,
+      "order": 3,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": {
+          "type": "linear",
+          "start": [
+            0,
+            275
+          ],
+          "end": [
+            0,
+            420
+          ],
+          "stops": [
+            {
+              "position": 0,
+              "color": "#8bbca0"
+            },
+            {
+              "position": 1,
+              "color": "#4c8264"
+            }
+          ]
+        },
+        "skin": null,
+        "points": [
+          {
+            "id": "dawn-far-hill-p0",
+            "anchor": [
+              65,
+              368
+            ],
+            "in": [
+              65,
+              368
+            ],
+            "out": [
+              137,
+              250
+            ]
+          },
+          {
+            "id": "dawn-far-hill-p1",
+            "anchor": [
+              264,
+              298
+            ],
+            "in": [
+              176,
+              239
+            ],
+            "out": [
+              350,
+              270
+            ]
+          },
+          {
+            "id": "dawn-far-hill-p2",
+            "anchor": [
+              448,
+              353
+            ],
+            "in": [
+              391,
+              268
+            ],
+            "out": [
+              448,
+              353
+            ]
+          },
+          {
+            "id": "dawn-far-hill-p3",
+            "anchor": [
+              448,
+              419
+            ],
+            "in": [
+              448,
+              419
+            ],
+            "out": [
+              448,
+              419
+            ]
+          },
+          {
+            "id": "dawn-far-hill-p4",
+            "anchor": [
+              65,
+              419
+            ],
+            "in": [
+              65,
+              419
+            ],
+            "out": [
+              65,
+              419
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "dawn-near-hill",
+      "name": "near hill",
+      "kind": "path",
+      "artboardId": "dawn-board",
+      "parentId": null,
+      "order": 4,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": {
+          "type": "linear",
+          "start": [
+            70,
+            380
+          ],
+          "end": [
+            440,
+            440
+          ],
+          "stops": [
+            {
+              "position": 0,
+              "color": "#47775e"
+            },
+            {
+              "position": 1,
+              "color": "#213d33"
+            }
+          ]
+        },
+        "skin": null,
+        "points": [
+          {
+            "id": "dawn-near-hill-p0",
+            "anchor": [
+              65,
+              405
+            ],
+            "in": [
+              65,
+              405
+            ],
+            "out": [
+              158,
+              385
+            ]
+          },
+          {
+            "id": "dawn-near-hill-p1",
+            "anchor": [
+              286,
+              360
+            ],
+            "in": [
+              216,
+              339
+            ],
+            "out": [
+              360,
+              358
+            ]
+          },
+          {
+            "id": "dawn-near-hill-p2",
+            "anchor": [
+              448,
+              405
+            ],
+            "in": [
+              404,
+              382
+            ],
+            "out": [
+              448,
+              405
+            ]
+          },
+          {
+            "id": "dawn-near-hill-p3",
+            "anchor": [
+              448,
+              438
+            ],
+            "in": [
+              448,
+              438
+            ],
+            "out": [
+              448,
+              438
+            ]
+          },
+          {
+            "id": "dawn-near-hill-p4",
+            "anchor": [
+              65,
+              438
+            ],
+            "in": [
+              65,
+              438
+            ],
+            "out": [
+              65,
+              438
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "dawn-light-mote",
+      "name": "light mote",
+      "kind": "path",
+      "artboardId": "dawn-board",
+      "parentId": null,
+      "order": 5,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        145,
+        155
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f9edc7",
+        "skin": null,
+        "points": [
+          {
+            "id": "dawn-light-mote-p0",
+            "anchor": [
+              6,
+              0
+            ],
+            "in": [
+              6,
+              -3.3137084987999996
+            ],
+            "out": [
+              6,
+              3.3137084987999996
+            ]
+          },
+          {
+            "id": "dawn-light-mote-p1",
+            "anchor": [
+              0,
+              6
+            ],
+            "in": [
+              3.3137084987999996,
+              6
+            ],
+            "out": [
+              -3.3137084987999996,
+              6
+            ]
+          },
+          {
+            "id": "dawn-light-mote-p2",
+            "anchor": [
+              -6,
+              0
+            ],
+            "in": [
+              -6,
+              3.3137084987999996
+            ],
+            "out": [
+              -6,
+              -3.3137084987999996
+            ]
+          },
+          {
+            "id": "dawn-light-mote-p3",
+            "anchor": [
+              0,
+              -6
+            ],
+            "in": [
+              -3.3137084987999996,
+              -6
+            ],
+            "out": [
+              3.3137084987999996,
+              -6
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "dawn-small-mote",
+      "name": "small mote",
+      "kind": "path",
+      "artboardId": "dawn-board",
+      "parentId": null,
+      "order": 6,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        199,
+        121
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f9edc7",
+        "skin": null,
+        "points": [
+          {
+            "id": "dawn-small-mote-p0",
+            "anchor": [
+              3,
+              0
+            ],
+            "in": [
+              3,
+              -1.6568542493999998
+            ],
+            "out": [
+              3,
+              1.6568542493999998
+            ]
+          },
+          {
+            "id": "dawn-small-mote-p1",
+            "anchor": [
+              0,
+              3
+            ],
+            "in": [
+              1.6568542493999998,
+              3
+            ],
+            "out": [
+              -1.6568542493999998,
+              3
+            ]
+          },
+          {
+            "id": "dawn-small-mote-p2",
+            "anchor": [
+              -3,
+              0
+            ],
+            "in": [
+              -3,
+              1.6568542493999998
+            ],
+            "out": [
+              -3,
+              -1.6568542493999998
+            ]
+          },
+          {
+            "id": "dawn-small-mote-p3",
+            "anchor": [
+              0,
+              -3
+            ],
+            "in": [
+              -1.6568542493999998,
+              -3
+            ],
+            "out": [
+              1.6568542493999998,
+              -3
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [
+    {
+      "id": "dawn-rise",
+      "name": "Rise",
+      "artboardId": "dawn-board",
+      "fps": 60,
+      "duration": 120,
+      "loop": true,
+      "tracks": [
+        {
+          "targetId": "dawn-sun-motion",
+          "property": "y",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 220,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 194,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 220,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "dawn-sun-motion",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": -0.08,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 0.08,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": -0.08,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "dawn-board": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  }
+}

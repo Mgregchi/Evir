@@ -12,6 +12,7 @@ import {
   removeSubtree,
   reorder,
 } from "@evir/authoring";
+import { paintControls } from "./paint.mjs";
 import { mountAuthoring } from "./authoring.mjs";
 import { PenDraft } from "./pen.mjs";
 import { FreehandDraft } from "./freehand.mjs";
@@ -854,17 +855,10 @@ function properties(p) {
       );
     size.append(
       pair,
-      field(
-        "Fill color",
-        n.geometry.fill.slice(0, 7),
-        (v) =>
-          edit("Change fill", (p) => {
-            const g = p.nodes.find((n) => n.id === selected).geometry;
-            g.fill = v + (g.fill.length === 9 ? g.fill.slice(7) : "");
-          }),
-        "color",
-        locked,
-      ),
+      paintControls({
+        project: p, node: n, commit: edit, notice,
+        disabled: locked, paintDisabled: locked || authoring?.mode !== "Design",
+      }),
     );
     host.append(size);
   }

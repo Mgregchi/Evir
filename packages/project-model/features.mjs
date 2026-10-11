@@ -1,3 +1,4 @@
+import { validatePaint } from "./paint.mjs";
 import { inverse } from "./primitives.mjs";
 export const ANIMATABLE = [
   "x",
@@ -11,6 +12,7 @@ export const ANIMATABLE = [
   "length",
 ];
 export function propertiesFor(n) {
+  const fill = typeof n.geometry?.fill === "string" ? ["fill"] : [];
   return [
     "x",
     "y",
@@ -18,9 +20,9 @@ export function propertiesFor(n) {
     "scaleX",
     "scaleY",
     ...(n.kind === "rectangle"
-      ? ["width", "height", "fill"]
+      ? ["width", "height", ...fill]
       : n.kind === "path"
-        ? ["fill"]
+        ? fill
         : n.kind === "bone"
           ? ["length"]
           : []),
@@ -78,7 +80,12 @@ export function validateFeatures(p, problem, identifier, { editorState = true } 
       continue;
     if (typeof g.closed !== "boolean")
       problem(path + ".closed", "expected boolean");
-    color(g.fill, path + ".fill");
+    validatePaint(g.fill, path + ".fill", problem);
+    if (g.skin !== null && typeof g.fill !== "string")
+      problem(
+        path + ".fill",
+        "gradient paint on skinned paths is outside the supported contract",
+      );
     if (!arr(g.points, path + ".points")) continue;
     if (g.points.length < (g.closed ? 3 : 2))
       problem(path + ".points", "too few control points");

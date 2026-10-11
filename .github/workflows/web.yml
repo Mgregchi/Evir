@@ -35,6 +35,8 @@ jobs:
             research/results/studio-workspace/
             research/results/studio-navigation/
             research/results/studio-snapping/
+            research/results/studio-freehand/
+            research/results/studio-gradients/
       - uses: actions/upload-artifact@v4
         with:
           name: web

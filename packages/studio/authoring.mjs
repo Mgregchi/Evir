@@ -1,3 +1,4 @@
+import { paintControls } from "./paint.mjs";
 import { inverse, worldTransform, validateProject, newId, propertiesFor } from "@evir/project-model";
 import {
   convertRectangle,
@@ -109,7 +110,7 @@ export function mountAuthoring(api) {
   };
   const transaction = (label, fn) => {
     stop();
-    api.transact(label, fn);
+    return api.transact(label, fn);
   };
   function stop() {
     frame = Math.round(frame);
@@ -394,18 +395,10 @@ export function mountAuthoring(api) {
         }),
       ),
     );
-    section.append(
-      field(
-        "Path fill",
-        n.geometry.fill.slice(0, 7),
-        (value) =>
-          transaction("Change path fill", (p) => {
-            const g = p.nodes.find((v) => v.id === n.id).geometry;
-            g.fill = value + (g.fill.length === 9 ? g.fill.slice(7) : "");
-          }),
-        "color",
-      ),
-    );
+    section.append(paintControls({
+      project: p, node: n, commit: transaction, notice: api.notice,
+      label: "Path fill", disabled: mode !== "Design",
+    }));
     const rig = el("section");
     rig.className = "property-section";
     rig.append(el("h3", "Bind & weights"));
