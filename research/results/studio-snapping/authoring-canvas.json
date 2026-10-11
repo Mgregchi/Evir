@@ -1,0 +1,175 @@
+{
+  "runtime": "2.44.0",
+  "backend": "canvas",
+  "diagnostics": {
+    "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+    "contexts": [
+      {
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "unmaskedRendererAvailable": true,
+        "contextLost": false,
+        "errors": [],
+        "extensions": [
+          "EXT_clip_control",
+          "EXT_color_buffer_float",
+          "EXT_color_buffer_half_float",
+          "EXT_conservative_depth",
+          "EXT_depth_clamp",
+          "EXT_float_blend",
+          "EXT_polygon_offset_clamp",
+          "EXT_texture_compression_bptc",
+          "EXT_texture_compression_rgtc",
+          "EXT_texture_filter_anisotropic",
+          "EXT_texture_mirror_clamp_to_edge",
+          "NV_shader_noperspective_interpolation",
+          "OES_draw_buffers_indexed",
+          "OES_sample_variables",
+          "OES_shader_multisample_interpolation",
+          "OES_texture_float_linear",
+          "OVR_multiview2",
+          "WEBGL_clip_cull_distance",
+          "WEBGL_compressed_texture_astc",
+          "WEBGL_compressed_texture_etc",
+          "WEBGL_compressed_texture_etc1",
+          "WEBGL_compressed_texture_s3tc",
+          "WEBGL_compressed_texture_s3tc_srgb",
+          "WEBGL_debug_renderer_info",
+          "WEBGL_debug_shaders",
+          "WEBGL_lose_context",
+          "WEBGL_multi_draw",
+          "WEBGL_polygon_mode",
+          "WEBGL_stencil_texturing"
+        ]
+      }
+    ]
+  },
+  "fixtureSHA256": {
+    "authoring": "64aba43bac6f8d86caeb3618aacf73a9a38e40260f675629aae4adee88121228",
+    "browser-authored": "0f34c5e53f351a4cca6bd6b9031c75a62566e4bb4bbccac2f00f8f77349dab1b"
+  },
+  "checks": [
+    {
+      "label": "rest",
+      "mae": 0.0009307861328125,
+      "expectedCovered": 11488,
+      "runtimeCovered": 11488
+    },
+    {
+      "label": "Bend 0",
+      "mae": 0.0009307861328125,
+      "expectedCovered": 11488,
+      "runtimeCovered": 11488
+    },
+    {
+      "label": "Bend 15",
+      "mae": 0,
+      "expectedCovered": 11398,
+      "runtimeCovered": 11398
+    },
+    {
+      "label": "Bend 30",
+      "mae": 0,
+      "expectedCovered": 9784,
+      "runtimeCovered": 9784
+    },
+    {
+      "label": "Bend 60",
+      "mae": 0,
+      "expectedCovered": 5996,
+      "runtimeCovered": 5996
+    },
+    {
+      "label": "Active 30",
+      "mae": 0,
+      "expectedCovered": 9500,
+      "runtimeCovered": 9500
+    },
+    {
+      "label": "Active 60",
+      "mae": 0,
+      "expectedCovered": 10353,
+      "runtimeCovered": 10353
+    },
+    {
+      "label": "entry",
+      "mae": 0.0009307861328125,
+      "expectedCovered": 11488,
+      "runtimeCovered": 11488
+    },
+    {
+      "label": "AND guard",
+      "mae": 0.0009307861328125,
+      "expectedCovered": 11488,
+      "runtimeCovered": 11488
+    },
+    {
+      "label": "numeric transition",
+      "mae": 0,
+      "expectedCovered": 9500,
+      "runtimeCovered": 9500
+    },
+    {
+      "label": "bool false + numeric return",
+      "mae": 0.0009307861328125,
+      "expectedCovered": 11488,
+      "runtimeCovered": 11488
+    },
+    {
+      "label": "trigger",
+      "mae": 0,
+      "expectedCovered": 9500,
+      "runtimeCovered": 9500
+    },
+    {
+      "label": "reset",
+      "mae": 0.0009307861328125,
+      "expectedCovered": 11488,
+      "runtimeCovered": 11488
+    },
+    {
+      "label": "click listener",
+      "mae": 0,
+      "expectedCovered": 9500,
+      "runtimeCovered": 9500
+    },
+    {
+      "label": "browser authored Animation 1 0",
+      "mae": 0.007640838623046875,
+      "expectedCovered": 7062,
+      "runtimeCovered": 7062
+    },
+    {
+      "label": "browser authored Animation 1 30",
+      "mae": 0.008106231689453125,
+      "expectedCovered": 7043,
+      "runtimeCovered": 7043
+    },
+    {
+      "label": "browser authored Animation 1 60",
+      "mae": 0.00846099853515625,
+      "expectedCovered": 7035,
+      "runtimeCovered": 7035
+    },
+    {
+      "label": "browser authored Active 0",
+      "mae": 0.013851165771484375,
+      "expectedCovered": 7133,
+      "runtimeCovered": 7131
+    },
+    {
+      "label": "browser authored Active 30",
+      "mae": 0.013851165771484375,
+      "expectedCovered": 7133,
+      "runtimeCovered": 7131
+    },
+    {
+      "label": "browser authored Active 60",
+      "mae": 0.013851165771484375,
+      "expectedCovered": 7133,
+      "runtimeCovered": 7131
+    }
+  ],
+  "exportBytes": 1115,
+  "scope": "Solid rectangles/cubic paths, TRS groups and bone chains, four-influence control skinning, typed linear/hold/cubic keys, one-layer conditional machines and click listeners. No universal Rive compatibility."
+}

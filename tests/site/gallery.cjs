@@ -11,7 +11,7 @@ const {execFileSync}=require('node:child_process'),{chromium}=require('playwrigh
   await page.goto(origin+'/examples/');await page.waitForFunction(()=>document.querySelector('.milo').dataset.ready==='true'&&document.querySelector('.orbit').dataset.ready==='true');
   assert.equal(requests.length,2,'only visible previews initialize at entry');assert(requests.every(url=>/\/(milo|orbit)\.evir-project$/.test(url)));
   for(const example of examples){const preview=page.locator(`[data-preview=${example.id}]`);await preview.scrollIntoViewIfNeeded();await page.waitForFunction(id=>document.querySelector(`[data-preview=${id}]`).dataset.ready==='true',example.id);assert.equal(await preview.getAttribute('data-playing'),'false');await page.locator(`#${example.id} summary`).click();assert(await page.locator(`#${example.id} details`).getAttribute('open')!==null);}
-  assert.equal(requests.length,5,'one project fetch per example');const signal=page.locator('.signal');
+  assert.equal(requests.length,examples.length,'one project fetch per example');const signal=page.locator('.signal');
   await signal.scrollIntoViewIfNeeded();const level=signal.locator('.level-control'),enabled=signal.locator('.enabled-control'),state=signal.locator('.demo-state');
   await level.fill('75');assert.equal(await state.innerText(),'Waiting');await enabled.check();assert.equal(await state.innerText(),'Ready');await level.fill('20');assert.equal(await state.innerText(),'Waiting');await level.fill('75');await signal.getByRole('button',{name:'Celebrate',exact:true}).click();assert.equal(await state.innerText(),'Celebrating');assert(await signal.locator('.celebrate-control').isDisabled());await signal.getByRole('button',{name:'Reset example',exact:true}).click();assert.equal(await state.innerText(),'Waiting');assert.equal(await level.inputValue(),'0');assert.equal(await enabled.isChecked(),false);
   await page.addScriptTag({path:require.resolve('axe-core/axe.min.js')});
@@ -19,7 +19,22 @@ const {execFileSync}=require('node:child_process'),{chromium}=require('playwrigh
   const evidence=path.join(root,'research/results/showcase-gallery');fs.mkdirSync(evidence,{recursive:true});await page.setViewportSize({width:390,height:844});await signal.scrollIntoViewIfNeeded();await page.screenshot({path:path.join(evidence,'signal-mobile.png')});
   // Each download is a real editable project and exports back to its published bytes in Studio.
   await page.goto(origin+'/editor/studio/');await page.waitForFunction(()=>window.evirStudio);
-  for(const example of examples){const file=path.join(root,`apps/web/assets/examples/${example.id}.evir-project`);await page.locator('#file').setInputFiles(file);await page.locator('#replace-confirm').click();await page.waitForFunction(id=>evirStudio.snapshot().id===`${id}-project`,example.id);const download=page.waitForEvent('download');await require('../editor/actions.cjs').press(page,'Export .riv');const downloaded=await download;assert.deepEqual(fs.readFileSync(await downloaded.path()),fs.readFileSync(path.join(root,`apps/web/assets/examples/${example.id}.riv`)));}
-  assert.deepEqual(errors,[]);report.checks=['below-fold previews deferred','one source fetch per example','reduced-motion defaults','inspection notes','boolean and number AND guard','click/trigger celebration','reset restores inputs and pose','no page overflow','zero automated accessibility violations','all five sources open and export unchanged in Studio'];fs.writeFileSync(path.join(evidence,'browser.json'),JSON.stringify(report,null,2)+'\n');await context.close();console.log('Gallery: five editable studies, lazy loading, Signal interaction/reset and responsive accessibility passed.');
+  for(const example of examples) {
+    const file=path.join(root,`apps/web/assets/examples/${example.id}.evir-project`);
+    await page.locator('#file').setInputFiles(file);
+    await page.locator('#replace-confirm').click();
+    await page.waitForFunction(id=>evirStudio.snapshot().id===`${id}-project`,example.id);
+    const download=page.waitForEvent('download');
+    await require('../editor/actions.cjs').press(page,'Export .riv');
+    let downloaded;
+    try { downloaded=await download; }
+    catch(error) {
+      throw Error(`${example.id} export: ${await page.locator('#notice').innerText()} / ${await page.locator('#save-status').innerText()}`,{cause:error});
+    }
+    assert.deepEqual(fs.readFileSync(await downloaded.path()),fs.readFileSync(path.join(root,`apps/web/assets/examples/${example.id}.riv`)));
+    // Each export emits two files; pace this automated burst below Chromium's download rate limit.
+    await page.waitForTimeout(1100);
+  }
+  assert.deepEqual(errors,[]);report.checks=['below-fold previews deferred','one source fetch per example','reduced-motion defaults','inspection notes','boolean and number AND guard','click/trigger celebration','reset restores inputs and pose','no page overflow','zero automated accessibility violations',`all ${examples.length} sources open and export unchanged in Studio`];fs.writeFileSync(path.join(evidence,'browser.json'),JSON.stringify(report,null,2)+'\n');await context.close();console.log(`Gallery: ${examples.length} editable studies, lazy loading, Signal interaction/reset and responsive accessibility passed.`);
  }finally{await browser.close();await new Promise(r=>server.close(r));}
 })().catch(e=>{console.error(e);process.exitCode=1;});

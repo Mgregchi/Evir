@@ -1,0 +1,47 @@
+{
+  "retrievedAt": "2026-10-11T06:55:00.702805+00:00",
+  "sources": [
+    {
+      "key": "rive-index",
+      "url": "https://rive.app/docs/llms.txt",
+      "resolvedUrl": "https://rive.app/docs/llms.txt",
+      "status": 200,
+      "bytes": 51172,
+      "sha256": "805ee896b51b087f0f882dd98da32622f0be183f48076db6b9dc96fc6156423c"
+    },
+    {
+      "key": "penpot-interface",
+      "url": "https://help.penpot.app/user-guide/first-steps/the-interface/",
+      "resolvedUrl": "https://help.penpot.app/user-guide/first-steps/the-interface/",
+      "status": 200,
+      "bytes": 41624,
+      "sha256": "5d626e5212832d6a94ea3641debe9f1acd84e81c76adde498e839a5e4304ee07"
+    },
+    {
+      "key": "wcag-dragging",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html",
+      "resolvedUrl": "https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html",
+      "status": 200,
+      "bytes": 48929,
+      "sha256": "c3905630a35b6e8246aba32c1769f3ff82b217d464d41e4b1b2a34b9df5771c6"
+    },
+    {
+      "key": "rive-align",
+      "url": "https://rive.app/docs/editor/fundamentals/align-and-distribute.md",
+      "status": 200,
+      "bytes": 2337,
+      "sha256": "0bd2f230bd81e95df65c8ec50b93c06d9db08c42106cbc39b3c818f556678faa",
+      "retrievedAt": "2026-10-11T07:12:49.358963+00:00",
+      "resolvedUrl": "https://rive.app/docs/editor/fundamentals/align-and-distribute.md"
+    },
+    {
+      "key": "rive-guides",
+      "url": "https://rive.app/docs/editor/design/rulers-and-guides.md",
+      "status": 200,
+      "bytes": 6131,
+      "sha256": "0c47cb7fa64ddfb15bb932fda814a03f46c23b37ff04dcf7dfe5bd453b34c161",
+      "retrievedAt": "2026-10-11T07:12:49.710956+00:00",
+      "resolvedUrl": "https://rive.app/docs/editor/design/rulers-and-guides.md"
+    }
+  ]
+}

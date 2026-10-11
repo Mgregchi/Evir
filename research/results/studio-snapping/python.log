@@ -1,0 +1,31 @@
+
+> evir-workspace@0.1.0 test
+> python3 -m unittest discover -s tests -v
+
+test_arbitrary_topology_and_wide_indices (test_mesh_math.MeshExportTests.test_arbitrary_topology_and_wide_indices) ... ok
+test_expected_weight_layout (test_mesh_math.MeshExportTests.test_expected_weight_layout) ... ok
+test_invalid_triangles (test_mesh_math.MeshExportTests.test_invalid_triangles) ... ok
+test_invalid_weights (test_mesh_math.MeshExportTests.test_invalid_weights) ... ok
+test_quantization_sum_and_error (test_mesh_math.MeshExportTests.test_quantization_sum_and_error) ... ok
+test_tendon_count_bounds (test_mesh_math.MeshExportTests.test_tendon_count_bounds) ... ok
+test_bad_scalar (test_riv.WireTests.test_bad_scalar) ... ok
+test_corpus_sha_and_lossless_roundtrips (test_riv.WireTests.test_corpus_sha_and_lossless_roundtrips) ... ok
+test_duplicate_toc (test_riv.WireTests.test_duplicate_toc) ... ok
+test_edit_property (test_riv.WireTests.test_edit_property) ... ok
+test_forward_compatible_unknown_object (test_riv.WireTests.test_forward_compatible_unknown_object) ... ok
+test_generated_roundtrips (test_riv.WireTests.test_generated_roundtrips) ... ok
+test_independent_empty_artboard_golden (test_riv.WireTests.test_independent_empty_artboard_golden) ... ok
+test_invalid_headers (test_riv.WireTests.test_invalid_headers) ... ok
+test_scalar_encoding (test_riv.WireTests.test_scalar_encoding) ... ok
+test_truncated_object_fields (test_riv.WireTests.test_truncated_object_fields) ... ok
+test_uint_write_range (test_riv.WireTests.test_uint_write_range) ... ok
+test_unknown_without_toc (test_riv.WireTests.test_unknown_without_toc) ... ok
+test_varuint_boundaries (test_riv.WireTests.test_varuint_boundaries) ... ok
+test_varuint_errors (test_riv.WireTests.test_varuint_errors) ... ok
+test_writer_type_mismatch (test_riv.WireTests.test_writer_type_mismatch) ... ok
+test_zigzag (test_riv.WireTests.test_zigzag) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.031s
+
+OK

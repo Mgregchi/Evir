@@ -28,3 +28,9 @@ For bugs, include the editing task, reproduction steps, expected and actual beha
 ## Feature examples
 
 Add a small original study alongside each supported feature. Register it in `apps/web/examples.mjs`, add its generator and include editable source, a real captured poster, inspection notes and a compatible export. New interactions need keyboard-accessible controls and explicit official-runtime scenarios. [The growing gallery guide](docs/23-growing-showcase-gallery.md) explains generation, capture, checks and the distinction between Studio features and research-only fixtures.
+
+## Branches and review links
+
+Start each new increment from freshly fetched `origin/main` on a fresh branch. Before reusing a branch, check its PR state: a merged or closed PR must not receive further work. Push completed work and create a new PR targeting `main`; verify that it is open and that its head matches the pushed commit. Include the new PR link in the completion report. Do not merge or deploy unless requested.
+
+For screenshots and evidence that readers need outside the development workspace, provide GitHub blob links using the current PR branch or a commit permalink. Verify the tracked path before reporting it. Local filesystem links only work inside the active workspace.

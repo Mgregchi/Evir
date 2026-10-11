@@ -18,6 +18,12 @@ import { mountPanels, mountDisclosures } from "./panels.mjs";
 import { mountLayout } from "./layout.mjs";
 import { touchFrame, gestureCamera } from "./navigation.mjs";
 import {
+  snapTargets,
+  snapMove,
+  alignmentMoves,
+  applyAlignment,
+} from "./alignment.mjs";
+import {
   ancestors,
   layerRows,
   parentChoices,
@@ -87,6 +93,33 @@ for (const holder of document.querySelectorAll("[data-icon]"))
 const CACHE = "evir.studio.project.v1";
 const collapsedLayers = new Set();
 let multipleLayers = false;
+const SNAP_CACHE = "evir.studio.snapping.v1";
+let snapping = false;
+try {
+  snapping = localStorage.getItem(SNAP_CACHE) === "true";
+} catch {}
+let snapGuides = [];
+function updateGuides(guides = []) {
+  snapGuides = guides;
+  const status = guides.length
+    ? "Aligned: " +
+      guides
+        .map(
+          (g) =>
+            `${g.axis === "x" ? "vertical" : "horizontal"} · ${g.target.name}`,
+        )
+        .join("; ")
+    : "";
+  if ($("#alignment-status").textContent !== status)
+    $("#alignment-status").textContent = status;
+}
+$("#snap-alignment").checked = snapping;
+$("#snap-alignment").addEventListener("change", (e) => {
+  snapping = e.target.checked;
+  try {
+    localStorage.setItem(SNAP_CACHE, String(snapping));
+  } catch {}
+});
 const touches = new Map();
 let touchGesture = null,
   touchNavigation = false,
@@ -457,6 +490,27 @@ function draw() {
     ctx.fillRect(drag.box.x, drag.box.y, drag.box.width, drag.box.height);
     ctx.strokeRect(drag.box.x, drag.box.y, drag.box.width, drag.box.height);
   }
+  if (snapGuides.length) {
+    const b = selectionBounds(p, selectedIds);
+    ctx.save();
+    ctx.strokeStyle = "#b35b96";
+    ctx.lineWidth = 1.5 / c.zoom;
+    ctx.setLineDash([4 / c.zoom, 3 / c.zoom]);
+    for (const guide of snapGuides) {
+      const t = guide.target,
+        pad = 12 / c.zoom;
+      ctx.beginPath();
+      if (guide.axis === "x") {
+        ctx.moveTo(guide.value, Math.min(t.y, b.y) - pad);
+        ctx.lineTo(guide.value, Math.max(t.y + t.height, b.y + b.height) + pad);
+      } else {
+        ctx.moveTo(Math.min(t.x, b.x) - pad, guide.value);
+        ctx.lineTo(Math.max(t.x + t.width, b.x + b.width) + pad, guide.value);
+      }
+      ctx.stroke();
+    }
+    ctx.restore();
+  }
   drawPen(c.zoom);
   ctx.restore();
   $("#zoom").textContent = Math.round(c.zoom * 100) + "%";
@@ -543,6 +597,51 @@ function action(text, fn, disabled = false, cls) {
   b.addEventListener("click", fn);
   return b;
 }
+function alignmentPanel(p) {
+  const group = section("Alignment");
+  group.append(
+    element(
+      "p",
+      selectionRoots(p, selectedIds).length === 1
+        ? "Align to the artboard."
+        : "Align selected layers to each other.",
+    ),
+  );
+  const controls = element("div", undefined, "alignment-controls");
+  for (const [id, label] of [
+    ["left", "Left"],
+    ["center", "Center"],
+    ["right", "Right"],
+    ["top", "Top"],
+    ["middle", "Middle"],
+    ["bottom", "Bottom"],
+  ]) {
+    const button = action(
+      label,
+      () => {
+        if (authoring.mode !== "Design" || !penReady()) return;
+        try {
+          const moves = alignmentMoves(project(), selectedIds, id);
+          if (!edit(`Align ${id}`, (p) => applyAlignment(p, moves), true))
+            return;
+          // Rendering replaces the Inspector; restore the activated control's focus.
+          document.querySelector(`[data-alignment="${id}"]`)?.focus();
+        } catch (error) {
+          notice(error);
+        }
+      },
+      authoring?.mode !== "Design" ||
+        selectionRoots(p, selectedIds).some(
+          (n) => !available(p, n, "locked") || !available(p, n, "hidden"),
+        ),
+    );
+    button.dataset.alignment = id;
+    button.setAttribute("aria-label", `Align ${label.toLowerCase()}`);
+    controls.append(button);
+  }
+  group.append(controls);
+  return group;
+}
 function properties(p) {
   const host = $("#properties");
   host.replaceChildren();
@@ -559,7 +658,7 @@ function properties(p) {
       const n = p.nodes.find((v) => v.id === id);
       info.append(action(n.name, () => select(id)));
     }
-    host.append(info);
+    host.append(info, alignmentPanel(p));
     const pair = element("div", undefined, "field-pair");
     for (const [label, axis] of [
       ["Move X", 0],
@@ -627,7 +726,7 @@ function properties(p) {
       locked,
     ),
   );
-  host.append(info);
+  host.append(info, alignmentPanel(p));
   const transform = section("Position");
   const pair = element("div", undefined, "field-pair");
   for (const [label, index] of [
@@ -956,6 +1055,7 @@ function render() {
     "aria-pressed",
     String(multipleLayers && authoring?.mode === "Design"),
   );
+  $("#snap-alignment").disabled = authoring?.mode !== "Design";
   properties(p);
   if (authoring?.mode === "Interact" || (authoring?.mode === "Animate" && !n))
     for (const control of document.querySelectorAll(
@@ -1207,6 +1307,14 @@ stage.addEventListener("pointerdown", (e) => {
       start,
       c,
       prepared,
+      snapBox:
+        authoring.mode === "Design" && snapping
+          ? selectionBounds(p, selectedIds)
+          : null,
+      snapTargets:
+        authoring.mode === "Design" && snapping
+          ? snapTargets(p, selectedIds, activeArtboard)
+          : null,
       id: n.id,
       pointerId: e.pointerId,
     };
@@ -1308,7 +1416,16 @@ stage.addEventListener("pointermove", (e) => {
         } else raw[drag.control] = local;
       } else {
         const authoredTransform = [...n.transform];
-        applySelectionMove(p, drag.prepared, dx, dy);
+        const snapped = snapMove(
+          drag.snapBox,
+          drag.snapTargets,
+          dx,
+          dy,
+          drag.c.zoom,
+          e.altKey,
+        );
+        updateGuides(snapped.guides);
+        applySelectionMove(p, drag.prepared, snapped.dx, snapped.dy);
         if (authoring.mode === "Animate") {
           authoring.writeMoveKeys(p, n.id, n.transform[4], n.transform[5]);
           n.transform = authoredTransform;
@@ -1349,6 +1466,7 @@ function finishDrag(e) {
   if (!drag || e.pointerId !== drag.pointerId) return;
   if (!["pan", "marquee"].includes(drag.kind)) store.commit();
   drag = null;
+  updateGuides();
   render();
   persist();
 }
@@ -1364,6 +1482,7 @@ function cancelDrag() {
   else if (drag.kind !== "pan") store.cancel();
   else cameras[activeArtboard] = drag.c;
   drag = null;
+  updateGuides();
   render();
 }
 stage.addEventListener("pointerup", finishDrag);
@@ -1892,4 +2011,5 @@ window.evirStudio = {
   selections: () => [...selectedIds],
   pose: () => structuredClone(project()),
   mode: () => authoring.mode,
+  guides: () => structuredClone(snapGuides),
 };

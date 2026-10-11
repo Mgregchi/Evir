@@ -25,6 +25,7 @@ async function serve(dir, base='') {
 }
 (async()=>{
   const {readWebConfig}=await import('../../apps/web/config.mjs');
+  const {exampleIds}=await import('../../apps/web/examples.mjs');
   for(const values of [{PUBLIC_SITE_URL:'javascript:alert(1)'},{COMMUNITY_URL:'https://user:pass@example.org'},{PUBLIC_BASE_PATH:'/../'},{PUBLIC_BASE_PATH:'/Evir//'},{PUBLIC_SITE_URL:'https://example.org/Evir/'}])
     assert.throws(()=>readWebConfig(values));
   assert.equal(readWebConfig({}).community,'');
@@ -101,7 +102,7 @@ async function serve(dir, base='') {
         }
         await page.goto(`${origin}${base}/examples/`);
         await readyPreviews(page);
-        assert.deepEqual(await page.locator('[data-preview]').evaluateAll(els=>els.map(el=>el.dataset.playing)),Array(5).fill('false'));
+        assert.deepEqual(await page.locator('[data-preview]').evaluateAll(els=>els.map(el=>el.dataset.playing)),Array(exampleIds.length).fill('false'));
         await page.getByRole('button',{name:'Say hello'}).click();
         assert.equal(await page.locator('.milo .demo-state').textContent(),'Hello');
         await page.getByRole('button',{name:'Back to idle'}).click();

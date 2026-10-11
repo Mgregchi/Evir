@@ -167,7 +167,25 @@ function signal() {
     transition('celebrate',1,2,[{inputId:inputs[2].id,op:'fire',value:null}])],listeners:[{id:'signal-listener',targetId:pad,event:'click',inputId:inputs[2].id,value:null}]}];
   return p;
 }
-const factories={milo,orbit,bloom,tempo,signal};
+function gather() {
+  const {p,node,path,oval,box,anim,key}=project('gather','Gather — find a little order');
+  box('paper',54,48,404,416,36,'#e3eadd');
+  const glow=anim('glow','Glow');
+  for(const [i,x,y,fill] of [[0,96,85,'#89d4b5'],[1,132,210,'#edb99c'],[2,112,335,'#547e66']]) {
+    const group=node(`card-${i+1}`,'group',null,null,x,y);
+    box(`face-${i}`,0,0,268,92,22,fill,group);
+    oval(`badge-${i}`,46,46,24,24,'#f5f3e7',group);
+    if(i===0) path('leaf',[[[32,53]],[[39,30],[38,36],[59,32]],[[60,36],[57,54],[39,57]]],'#547e66',group);
+    if(i===1) oval('sun',46,46,13,13,'#edb99c',group);
+    if(i===2) path('hill',[[[27,56]],[[42,34]],[[52,48]],[[58,40]],[[66,56]]],'#547e66',group);
+    box(`line-${i}`,88,29,112,9,4.5,i===2?'#c9dcca':'#426c56',group);
+    box(`subline-${i}`,88,49,78,7,3.5,i===2?'#b2c8b7':'#688b72',group);
+    const dot=oval(`light-${i}`,236,46,5,5,'#f5f3e7',group);
+    key(glow,dot,'fill',[[0,'#f5f3e7'],[60,'#89d4b5'],[120,'#f5f3e7']]);
+  }
+  return p;
+}
+const factories={milo,orbit,bloom,tempo,signal,gather};
 await mkdir(output,{recursive:true});
 for(const name of exampleIds) {
   const p=factories[name]();validateProject(p);

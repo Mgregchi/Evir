@@ -1,0 +1,2404 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 2,
+  "id": "gather-project",
+  "name": "Gather — find a little order",
+  "artboards": [
+    {
+      "id": "gather-board",
+      "name": "Gather — find a little order",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "gather-paper",
+      "name": "paper",
+      "kind": "path",
+      "artboardId": "gather-board",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        54,
+        48
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e3eadd",
+        "skin": null,
+        "points": [
+          {
+            "id": "gather-paper-p0",
+            "anchor": [
+              36,
+              0
+            ],
+            "in": [
+              16.1177490072,
+              0
+            ],
+            "out": [
+              36,
+              0
+            ]
+          },
+          {
+            "id": "gather-paper-p1",
+            "anchor": [
+              368,
+              0
+            ],
+            "in": [
+              368,
+              0
+            ],
+            "out": [
+              387.8822509928,
+              0
+            ]
+          },
+          {
+            "id": "gather-paper-p2",
+            "anchor": [
+              404,
+              36
+            ],
+            "in": [
+              404,
+              16.1177490072
+            ],
+            "out": [
+              404,
+              36
+            ]
+          },
+          {
+            "id": "gather-paper-p3",
+            "anchor": [
+              404,
+              380
+            ],
+            "in": [
+              404,
+              380
+            ],
+            "out": [
+              404,
+              399.8822509928
+            ]
+          },
+          {
+            "id": "gather-paper-p4",
+            "anchor": [
+              368,
+              416
+            ],
+            "in": [
+              387.8822509928,
+              416
+            ],
+            "out": [
+              368,
+              416
+            ]
+          },
+          {
+            "id": "gather-paper-p5",
+            "anchor": [
+              36,
+              416
+            ],
+            "in": [
+              36,
+              416
+            ],
+            "out": [
+              16.1177490072,
+              416
+            ]
+          },
+          {
+            "id": "gather-paper-p6",
+            "anchor": [
+              0,
+              380
+            ],
+            "in": [
+              0,
+              399.8822509928
+            ],
+            "out": [
+              0,
+              380
+            ]
+          },
+          {
+            "id": "gather-paper-p7",
+            "anchor": [
+              0,
+              36
+            ],
+            "in": [
+              0,
+              36
+            ],
+            "out": [
+              0,
+              16.1177490072
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gather-card-1",
+      "name": "card 1",
+      "kind": "group",
+      "artboardId": "gather-board",
+      "parentId": null,
+      "order": 1,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        96,
+        85
+      ],
+      "geometry": null
+    },
+    {
+      "id": "gather-face-0",
+      "name": "face 0",
+      "kind": "path",
+      "artboardId": "gather-board",
+      "parentId": "gather-card-1",
+      "order": 2,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#89d4b5",
+        "skin": null,
+        "points": [
+          {
+            "id": "gather-face-0-p0",
+            "anchor": [
+              22,
+              0
+            ],
+            "in": [
+              9.8497355044,
+              0
+            ],
+            "out": [
+              22,
+              0
+            ]
+          },
+          {
+            "id": "gather-face-0-p1",
+            "anchor": [
+              246,
+              0
+            ],
+            "in": [
+              246,
+              0
+            ],
+            "out": [
+              258.1502644956,
+              0
+            ]
+          },
+          {
+            "id": "gather-face-0-p2",
+            "anchor": [
+              268,
+              22
+            ],
+            "in": [
+              268,
+              9.8497355044
+            ],
+            "out": [
+              268,
+              22
+            ]
+          },
+          {
+            "id": "gather-face-0-p3",
+            "anchor": [
+              268,
+              70
+            ],
+            "in": [
+              268,
+              70
+            ],
+            "out": [
+              268,
+              82.1502644956
+            ]
+          },
+          {
+            "id": "gather-face-0-p4",
+            "anchor": [
+              246,
+              92
+            ],
+            "in": [
+              258.1502644956,
+              92
+            ],
+            "out": [
+              246,
+              92
+            ]
+          },
+          {
+            "id": "gather-face-0-p5",
+            "anchor": [
+              22,
+              92
+            ],
+            "in": [
+              22,
+              92
+            ],
+            "out": [
+              9.8497355044,
+              92
+            ]
+          },
+          {
+            "id": "gather-face-0-p6",
+            "anchor": [
+              0,
+              70
+            ],
+            "in": [
+              0,
+              82.1502644956
+            ],
+            "out": [
+              0,
+              70
+            ]
+          },
+          {
+            "id": "gather-face-0-p7",
+            "anchor": [
+              0,
+              22
+            ],
+            "in": [
+              0,
+              22
+            ],
+            "out": [
+              0,
+              9.8497355044
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gather-badge-0",
+      "name": "badge 0",
+      "kind": "path",
+      "artboardId": "gather-board",
+      "parentId": "gather-card-1",
+      "order": 3,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        46,
+        46
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f5f3e7",
+        "skin": null,
+        "points": [
+          {
+            "id": "gather-badge-0-p0",
+            "anchor": [
+              24,
+              0
+            ],
+            "in": [
+              24,
+              -13.254833995199998
+            ],
+            "out": [
+              24,
+              13.254833995199998
+            ]
+          },
+          {
+            "id": "gather-badge-0-p1",
+            "anchor": [
+              0,
+              24
+            ],
+            "in": [
+              13.254833995199998,
+              24
+            ],
+            "out": [
+              -13.254833995199998,
+              24
+            ]
+          },
+          {
+            "id": "gather-badge-0-p2",
+            "anchor": [
+              -24,
+              0
+            ],
+            "in": [
+              -24,
+              13.254833995199998
+            ],
+            "out": [
+              -24,
+              -13.254833995199998
+            ]
+          },
+          {
+            "id": "gather-badge-0-p3",
+            "anchor": [
+              0,
+              -24
+            ],
+            "in": [
+              -13.254833995199998,
+              -24
+            ],
+            "out": [
+              13.254833995199998,
+              -24
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gather-leaf",
+      "name": "leaf",
+      "kind": "path",
+      "artboardId": "gather-board",
+      "parentId": "gather-card-1",
+      "order": 4,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#547e66",
+        "skin": null,
+        "points": [
+          {
+            "id": "gather-leaf-p0",
+            "anchor": [
+              32,
+              53
+            ],
+            "in": [
+              32,
+              53
+            ],
+            "out": [
+              32,
+              53
+            ]
+          },
+          {
+            "id": "gather-leaf-p1",
+            "anchor": [
+              39,
+              30
+            ],
+            "in": [
+              38,
+              36
+            ],
+            "out": [
+              59,
+              32
+            ]
+          },
+          {
+            "id": "gather-leaf-p2",
+            "anchor": [
+              60,
+              36
+            ],
+            "in": [
+              57,
+              54
+            ],
+            "out": [
+              39,
+              57
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gather-line-0",
+      "name": "line 0",
+      "kind": "path",
+      "artboardId": "gather-board",
+      "parentId": "gather-card-1",
+      "order": 5,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        88,
+        29
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#426c56",
+        "skin": null,
+        "points": [
+          {
+            "id": "gather-line-0-p0",
+            "anchor": [
+              4.5,
+              0
+            ],
+            "in": [
+              2.0147186259,
+              0
+            ],
+            "out": [
+              4.5,
+              0
+            ]
+          },
+          {
+            "id": "gather-line-0-p1",
+            "anchor": [
+              107.5,
+              0
+            ],
+            "in": [
+              107.5,
+              0
+            ],
+            "out": [
+              109.9852813741,
+              0
+            ]
+          },
+          {
+            "id": "gather-line-0-p2",
+            "anchor": [
+              112,
+              4.5
+            ],
+            "in": [
+              112,
+              2.0147186259
+            ],
+            "out": [
+              112,
+              4.5
+            ]
+          },
+          {
+            "id": "gather-line-0-p3",
+            "anchor": [
+              112,
+              4.5
+            ],
+            "in": [
+              112,
+              4.5
+            ],
+            "out": [
+              112,
+              6.9852813740999995
+            ]
+          },
+          {
+            "id": "gather-line-0-p4",
+            "anchor": [
+              107.5,
+              9
+            ],
+            "in": [
+              109.9852813741,
+              9
+            ],
+            "out": [
+              107.5,
+              9
+            ]
+          },
+          {
+            "id": "gather-line-0-p5",
+            "anchor": [
+              4.5,
+              9
+            ],
+            "in": [
+              4.5,
+              9
+            ],
+            "out": [
+              2.0147186259,
+              9
+            ]
+          },
+          {
+            "id": "gather-line-0-p6",
+            "anchor": [
+              0,
+              4.5
+            ],
+            "in": [
+              0,
+              6.9852813740999995
+            ],
+            "out": [
+              0,
+              4.5
+            ]
+          },
+          {
+            "id": "gather-line-0-p7",
+            "anchor": [
+              0,
+              4.5
+            ],
+            "in": [
+              0,
+              4.5
+            ],
+            "out": [
+              0,
+              2.0147186259
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gather-subline-0",
+      "name": "subline 0",
+      "kind": "path",
+      "artboardId": "gather-board",
+      "parentId": "gather-card-1",
+      "order": 6,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        88,
+        49
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#688b72",
+        "skin": null,
+        "points": [
+          {
+            "id": "gather-subline-0-p0",
+            "anchor": [
+              3.5,
+              0
+            ],
+            "in": [
+              1.5670033757000001,
+              0
+            ],
+            "out": [
+              3.5,
+              0
+            ]
+          },
+          {
+            "id": "gather-subline-0-p1",
+            "anchor": [
+              74.5,
+              0
+            ],
+            "in": [
+              74.5,
+              0
+            ],
+            "out": [
+              76.4329966243,
+              0
+            ]
+          },
+          {
+            "id": "gather-subline-0-p2",
+            "anchor": [
+              78,
+              3.5
+            ],
+            "in": [
+              78,
+              1.5670033757000001
+            ],
+            "out": [
+              78,
+              3.5
+            ]
+          },
+          {
+            "id": "gather-subline-0-p3",
+            "anchor": [
+              78,
+              3.5
+            ],
+            "in": [
+              78,
+              3.5
+            ],
+            "out": [
+              78,
+              5.432996624299999
+            ]
+          },
+          {
+            "id": "gather-subline-0-p4",
+            "anchor": [
+              74.5,
+              7
+            ],
+            "in": [
+              76.4329966243,
+              7
+            ],
+            "out": [
+              74.5,
+              7
+            ]
+          },
+          {
+            "id": "gather-subline-0-p5",
+            "anchor": [
+              3.5,
+              7
+            ],
+            "in": [
+              3.5,
+              7
+            ],
+            "out": [
+              1.5670033757000001,
+              7
+            ]
+          },
+          {
+            "id": "gather-subline-0-p6",
+            "anchor": [
+              0,
+              3.5
+            ],
+            "in": [
+              0,
+              5.432996624299999
+            ],
+            "out": [
+              0,
+              3.5
+            ]
+          },
+          {
+            "id": "gather-subline-0-p7",
+            "anchor": [
+              0,
+              3.5
+            ],
+            "in": [
+              0,
+              3.5
+            ],
+            "out": [
+              0,
+              1.5670033757000001
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gather-light-0",
+      "name": "light 0",
+      "kind": "path",
+      "artboardId": "gather-board",
+      "parentId": "gather-card-1",
+      "order": 7,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        236,
+        46
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f5f3e7",
+        "skin": null,
+        "points": [
+          {
+            "id": "gather-light-0-p0",
+            "anchor": [
+              5,
+              0
+            ],
+            "in": [
+              5,
+              -2.761423749
+            ],
+            "out": [
+              5,
+              2.761423749
+            ]
+          },
+          {
+            "id": "gather-light-0-p1",
+            "anchor": [
+              0,
+              5
+            ],
+            "in": [
+              2.761423749,
+              5
+            ],
+            "out": [
+              -2.761423749,
+              5
+            ]
+          },
+          {
+            "id": "gather-light-0-p2",
+            "anchor": [
+              -5,
+              0
+            ],
+            "in": [
+              -5,
+              2.761423749
+            ],
+            "out": [
+              -5,
+              -2.761423749
+            ]
+          },
+          {
+            "id": "gather-light-0-p3",
+            "anchor": [
+              0,
+              -5
+            ],
+            "in": [
+              -2.761423749,
+              -5
+            ],
+            "out": [
+              2.761423749,
+              -5
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gather-card-2",
+      "name": "card 2",
+      "kind": "group",
+      "artboardId": "gather-board",
+      "parentId": null,
+      "order": 8,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        96,
+        210
+      ],
+      "geometry": null
+    },
+    {
+      "id": "gather-face-1",
+      "name": "face 1",
+      "kind": "path",
+      "artboardId": "gather-board",
+      "parentId": "gather-card-2",
+      "order": 9,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#edb99c",
+        "skin": null,
+        "points": [
+          {
+            "id": "gather-face-1-p0",
+            "anchor": [
+              22,
+              0
+            ],
+            "in": [
+              9.8497355044,
+              0
+            ],
+            "out": [
+              22,
+              0
+            ]
+          },
+          {
+            "id": "gather-face-1-p1",
+            "anchor": [
+              246,
+              0
+            ],
+            "in": [
+              246,
+              0
+            ],
+            "out": [
+              258.1502644956,
+              0
+            ]
+          },
+          {
+            "id": "gather-face-1-p2",
+            "anchor": [
+              268,
+              22
+            ],
+            "in": [
+              268,
+              9.8497355044
+            ],
+            "out": [
+              268,
+              22
+            ]
+          },
+          {
+            "id": "gather-face-1-p3",
+            "anchor": [
+              268,
+              70
+            ],
+            "in": [
+              268,
+              70
+            ],
+            "out": [
+              268,
+              82.1502644956
+            ]
+          },
+          {
+            "id": "gather-face-1-p4",
+            "anchor": [
+              246,
+              92
+            ],
+            "in": [
+              258.1502644956,
+              92
+            ],
+            "out": [
+              246,
+              92
+            ]
+          },
+          {
+            "id": "gather-face-1-p5",
+            "anchor": [
+              22,
+              92
+            ],
+            "in": [
+              22,
+              92
+            ],
+            "out": [
+              9.8497355044,
+              92
+            ]
+          },
+          {
+            "id": "gather-face-1-p6",
+            "anchor": [
+              0,
+              70
+            ],
+            "in": [
+              0,
+              82.1502644956
+            ],
+            "out": [
+              0,
+              70
+            ]
+          },
+          {
+            "id": "gather-face-1-p7",
+            "anchor": [
+              0,
+              22
+            ],
+            "in": [
+              0,
+              22
+            ],
+            "out": [
+              0,
+              9.8497355044
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gather-badge-1",
+      "name": "badge 1",
+      "kind": "path",
+      "artboardId": "gather-board",
+      "parentId": "gather-card-2",
+      "order": 10,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        46,
+        46
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f5f3e7",
+        "skin": null,
+        "points": [
+          {
+            "id": "gather-badge-1-p0",
+            "anchor": [
+              24,
+              0
+            ],
+            "in": [
+              24,
+              -13.254833995199998
+            ],
+            "out": [
+              24,
+              13.254833995199998
+            ]
+          },
+          {
+            "id": "gather-badge-1-p1",
+            "anchor": [
+              0,
+              24
+            ],
+            "in": [
+              13.254833995199998,
+              24
+            ],
+            "out": [
+              -13.254833995199998,
+              24
+            ]
+          },
+          {
+            "id": "gather-badge-1-p2",
+            "anchor": [
+              -24,
+              0
+            ],
+            "in": [
+              -24,
+              13.254833995199998
+            ],
+            "out": [
+              -24,
+              -13.254833995199998
+            ]
+          },
+          {
+            "id": "gather-badge-1-p3",
+            "anchor": [
+              0,
+              -24
+            ],
+            "in": [
+              -13.254833995199998,
+              -24
+            ],
+            "out": [
+              13.254833995199998,
+              -24
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gather-sun",
+      "name": "sun",
+      "kind": "path",
+      "artboardId": "gather-board",
+      "parentId": "gather-card-2",
+      "order": 11,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        46,
+        46
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#edb99c",
+        "skin": null,
+        "points": [
+          {
+            "id": "gather-sun-p0",
+            "anchor": [
+              13,
+              0
+            ],
+            "in": [
+              13,
+              -7.179701747399999
+            ],
+            "out": [
+              13,
+              7.179701747399999
+            ]
+          },
+          {
+            "id": "gather-sun-p1",
+            "anchor": [
+              0,
+              13
+            ],
+            "in": [
+              7.179701747399999,
+              13
+            ],
+            "out": [
+              -7.179701747399999,
+              13
+            ]
+          },
+          {
+            "id": "gather-sun-p2",
+            "anchor": [
+              -13,
+              0
+            ],
+            "in": [
+              -13,
+              7.179701747399999
+            ],
+            "out": [
+              -13,
+              -7.179701747399999
+            ]
+          },
+          {
+            "id": "gather-sun-p3",
+            "anchor": [
+              0,
+              -13
+            ],
+            "in": [
+              -7.179701747399999,
+              -13
+            ],
+            "out": [
+              7.179701747399999,
+              -13
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gather-line-1",
+      "name": "line 1",
+      "kind": "path",
+      "artboardId": "gather-board",
+      "parentId": "gather-card-2",
+      "order": 12,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        88,
+        29
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#426c56",
+        "skin": null,
+        "points": [
+          {
+            "id": "gather-line-1-p0",
+            "anchor": [
+              4.5,
+              0
+            ],
+            "in": [
+              2.0147186259,
+              0
+            ],
+            "out": [
+              4.5,
+              0
+            ]
+          },
+          {
+            "id": "gather-line-1-p1",
+            "anchor": [
+              107.5,
+              0
+            ],
+            "in": [
+              107.5,
+              0
+            ],
+            "out": [
+              109.9852813741,
+              0
+            ]
+          },
+          {
+            "id": "gather-line-1-p2",
+            "anchor": [
+              112,
+              4.5
+            ],
+            "in": [
+              112,
+              2.0147186259
+            ],
+            "out": [
+              112,
+              4.5
+            ]
+          },
+          {
+            "id": "gather-line-1-p3",
+            "anchor": [
+              112,
+              4.5
+            ],
+            "in": [
+              112,
+              4.5
+            ],
+            "out": [
+              112,
+              6.9852813740999995
+            ]
+          },
+          {
+            "id": "gather-line-1-p4",
+            "anchor": [
+              107.5,
+              9
+            ],
+            "in": [
+              109.9852813741,
+              9
+            ],
+            "out": [
+              107.5,
+              9
+            ]
+          },
+          {
+            "id": "gather-line-1-p5",
+            "anchor": [
+              4.5,
+              9
+            ],
+            "in": [
+              4.5,
+              9
+            ],
+            "out": [
+              2.0147186259,
+              9
+            ]
+          },
+          {
+            "id": "gather-line-1-p6",
+            "anchor": [
+              0,
+              4.5
+            ],
+            "in": [
+              0,
+              6.9852813740999995
+            ],
+            "out": [
+              0,
+              4.5
+            ]
+          },
+          {
+            "id": "gather-line-1-p7",
+            "anchor": [
+              0,
+              4.5
+            ],
+            "in": [
+              0,
+              4.5
+            ],
+            "out": [
+              0,
+              2.0147186259
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gather-subline-1",
+      "name": "subline 1",
+      "kind": "path",
+      "artboardId": "gather-board",
+      "parentId": "gather-card-2",
+      "order": 13,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        88,
+        49
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#688b72",
+        "skin": null,
+        "points": [
+          {
+            "id": "gather-subline-1-p0",
+            "anchor": [
+              3.5,
+              0
+            ],
+            "in": [
+              1.5670033757000001,
+              0
+            ],
+            "out": [
+              3.5,
+              0
+            ]
+          },
+          {
+            "id": "gather-subline-1-p1",
+            "anchor": [
+              74.5,
+              0
+            ],
+            "in": [
+              74.5,
+              0
+            ],
+            "out": [
+              76.4329966243,
+              0
+            ]
+          },
+          {
+            "id": "gather-subline-1-p2",
+            "anchor": [
+              78,
+              3.5
+            ],
+            "in": [
+              78,
+              1.5670033757000001
+            ],
+            "out": [
+              78,
+              3.5
+            ]
+          },
+          {
+            "id": "gather-subline-1-p3",
+            "anchor": [
+              78,
+              3.5
+            ],
+            "in": [
+              78,
+              3.5
+            ],
+            "out": [
+              78,
+              5.432996624299999
+            ]
+          },
+          {
+            "id": "gather-subline-1-p4",
+            "anchor": [
+              74.5,
+              7
+            ],
+            "in": [
+              76.4329966243,
+              7
+            ],
+            "out": [
+              74.5,
+              7
+            ]
+          },
+          {
+            "id": "gather-subline-1-p5",
+            "anchor": [
+              3.5,
+              7
+            ],
+            "in": [
+              3.5,
+              7
+            ],
+            "out": [
+              1.5670033757000001,
+              7
+            ]
+          },
+          {
+            "id": "gather-subline-1-p6",
+            "anchor": [
+              0,
+              3.5
+            ],
+            "in": [
+              0,
+              5.432996624299999
+            ],
+            "out": [
+              0,
+              3.5
+            ]
+          },
+          {
+            "id": "gather-subline-1-p7",
+            "anchor": [
+              0,
+              3.5
+            ],
+            "in": [
+              0,
+              3.5
+            ],
+            "out": [
+              0,
+              1.5670033757000001
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gather-light-1",
+      "name": "light 1",
+      "kind": "path",
+      "artboardId": "gather-board",
+      "parentId": "gather-card-2",
+      "order": 14,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        236,
+        46
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f5f3e7",
+        "skin": null,
+        "points": [
+          {
+            "id": "gather-light-1-p0",
+            "anchor": [
+              5,
+              0
+            ],
+            "in": [
+              5,
+              -2.761423749
+            ],
+            "out": [
+              5,
+              2.761423749
+            ]
+          },
+          {
+            "id": "gather-light-1-p1",
+            "anchor": [
+              0,
+              5
+            ],
+            "in": [
+              2.761423749,
+              5
+            ],
+            "out": [
+              -2.761423749,
+              5
+            ]
+          },
+          {
+            "id": "gather-light-1-p2",
+            "anchor": [
+              -5,
+              0
+            ],
+            "in": [
+              -5,
+              2.761423749
+            ],
+            "out": [
+              -5,
+              -2.761423749
+            ]
+          },
+          {
+            "id": "gather-light-1-p3",
+            "anchor": [
+              0,
+              -5
+            ],
+            "in": [
+              -2.761423749,
+              -5
+            ],
+            "out": [
+              2.761423749,
+              -5
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gather-card-3",
+      "name": "card 3",
+      "kind": "group",
+      "artboardId": "gather-board",
+      "parentId": null,
+      "order": 15,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        96,
+        335
+      ],
+      "geometry": null
+    },
+    {
+      "id": "gather-face-2",
+      "name": "face 2",
+      "kind": "path",
+      "artboardId": "gather-board",
+      "parentId": "gather-card-3",
+      "order": 16,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#547e66",
+        "skin": null,
+        "points": [
+          {
+            "id": "gather-face-2-p0",
+            "anchor": [
+              22,
+              0
+            ],
+            "in": [
+              9.8497355044,
+              0
+            ],
+            "out": [
+              22,
+              0
+            ]
+          },
+          {
+            "id": "gather-face-2-p1",
+            "anchor": [
+              246,
+              0
+            ],
+            "in": [
+              246,
+              0
+            ],
+            "out": [
+              258.1502644956,
+              0
+            ]
+          },
+          {
+            "id": "gather-face-2-p2",
+            "anchor": [
+              268,
+              22
+            ],
+            "in": [
+              268,
+              9.8497355044
+            ],
+            "out": [
+              268,
+              22
+            ]
+          },
+          {
+            "id": "gather-face-2-p3",
+            "anchor": [
+              268,
+              70
+            ],
+            "in": [
+              268,
+              70
+            ],
+            "out": [
+              268,
+              82.1502644956
+            ]
+          },
+          {
+            "id": "gather-face-2-p4",
+            "anchor": [
+              246,
+              92
+            ],
+            "in": [
+              258.1502644956,
+              92
+            ],
+            "out": [
+              246,
+              92
+            ]
+          },
+          {
+            "id": "gather-face-2-p5",
+            "anchor": [
+              22,
+              92
+            ],
+            "in": [
+              22,
+              92
+            ],
+            "out": [
+              9.8497355044,
+              92
+            ]
+          },
+          {
+            "id": "gather-face-2-p6",
+            "anchor": [
+              0,
+              70
+            ],
+            "in": [
+              0,
+              82.1502644956
+            ],
+            "out": [
+              0,
+              70
+            ]
+          },
+          {
+            "id": "gather-face-2-p7",
+            "anchor": [
+              0,
+              22
+            ],
+            "in": [
+              0,
+              22
+            ],
+            "out": [
+              0,
+              9.8497355044
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gather-badge-2",
+      "name": "badge 2",
+      "kind": "path",
+      "artboardId": "gather-board",
+      "parentId": "gather-card-3",
+      "order": 17,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        46,
+        46
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f5f3e7",
+        "skin": null,
+        "points": [
+          {
+            "id": "gather-badge-2-p0",
+            "anchor": [
+              24,
+              0
+            ],
+            "in": [
+              24,
+              -13.254833995199998
+            ],
+            "out": [
+              24,
+              13.254833995199998
+            ]
+          },
+          {
+            "id": "gather-badge-2-p1",
+            "anchor": [
+              0,
+              24
+            ],
+            "in": [
+              13.254833995199998,
+              24
+            ],
+            "out": [
+              -13.254833995199998,
+              24
+            ]
+          },
+          {
+            "id": "gather-badge-2-p2",
+            "anchor": [
+              -24,
+              0
+            ],
+            "in": [
+              -24,
+              13.254833995199998
+            ],
+            "out": [
+              -24,
+              -13.254833995199998
+            ]
+          },
+          {
+            "id": "gather-badge-2-p3",
+            "anchor": [
+              0,
+              -24
+            ],
+            "in": [
+              -13.254833995199998,
+              -24
+            ],
+            "out": [
+              13.254833995199998,
+              -24
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gather-hill",
+      "name": "hill",
+      "kind": "path",
+      "artboardId": "gather-board",
+      "parentId": "gather-card-3",
+      "order": 18,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#547e66",
+        "skin": null,
+        "points": [
+          {
+            "id": "gather-hill-p0",
+            "anchor": [
+              27,
+              56
+            ],
+            "in": [
+              27,
+              56
+            ],
+            "out": [
+              27,
+              56
+            ]
+          },
+          {
+            "id": "gather-hill-p1",
+            "anchor": [
+              42,
+              34
+            ],
+            "in": [
+              42,
+              34
+            ],
+            "out": [
+              42,
+              34
+            ]
+          },
+          {
+            "id": "gather-hill-p2",
+            "anchor": [
+              52,
+              48
+            ],
+            "in": [
+              52,
+              48
+            ],
+            "out": [
+              52,
+              48
+            ]
+          },
+          {
+            "id": "gather-hill-p3",
+            "anchor": [
+              58,
+              40
+            ],
+            "in": [
+              58,
+              40
+            ],
+            "out": [
+              58,
+              40
+            ]
+          },
+          {
+            "id": "gather-hill-p4",
+            "anchor": [
+              66,
+              56
+            ],
+            "in": [
+              66,
+              56
+            ],
+            "out": [
+              66,
+              56
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gather-line-2",
+      "name": "line 2",
+      "kind": "path",
+      "artboardId": "gather-board",
+      "parentId": "gather-card-3",
+      "order": 19,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        88,
+        29
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#c9dcca",
+        "skin": null,
+        "points": [
+          {
+            "id": "gather-line-2-p0",
+            "anchor": [
+              4.5,
+              0
+            ],
+            "in": [
+              2.0147186259,
+              0
+            ],
+            "out": [
+              4.5,
+              0
+            ]
+          },
+          {
+            "id": "gather-line-2-p1",
+            "anchor": [
+              107.5,
+              0
+            ],
+            "in": [
+              107.5,
+              0
+            ],
+            "out": [
+              109.9852813741,
+              0
+            ]
+          },
+          {
+            "id": "gather-line-2-p2",
+            "anchor": [
+              112,
+              4.5
+            ],
+            "in": [
+              112,
+              2.0147186259
+            ],
+            "out": [
+              112,
+              4.5
+            ]
+          },
+          {
+            "id": "gather-line-2-p3",
+            "anchor": [
+              112,
+              4.5
+            ],
+            "in": [
+              112,
+              4.5
+            ],
+            "out": [
+              112,
+              6.9852813740999995
+            ]
+          },
+          {
+            "id": "gather-line-2-p4",
+            "anchor": [
+              107.5,
+              9
+            ],
+            "in": [
+              109.9852813741,
+              9
+            ],
+            "out": [
+              107.5,
+              9
+            ]
+          },
+          {
+            "id": "gather-line-2-p5",
+            "anchor": [
+              4.5,
+              9
+            ],
+            "in": [
+              4.5,
+              9
+            ],
+            "out": [
+              2.0147186259,
+              9
+            ]
+          },
+          {
+            "id": "gather-line-2-p6",
+            "anchor": [
+              0,
+              4.5
+            ],
+            "in": [
+              0,
+              6.9852813740999995
+            ],
+            "out": [
+              0,
+              4.5
+            ]
+          },
+          {
+            "id": "gather-line-2-p7",
+            "anchor": [
+              0,
+              4.5
+            ],
+            "in": [
+              0,
+              4.5
+            ],
+            "out": [
+              0,
+              2.0147186259
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gather-subline-2",
+      "name": "subline 2",
+      "kind": "path",
+      "artboardId": "gather-board",
+      "parentId": "gather-card-3",
+      "order": 20,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        88,
+        49
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#b2c8b7",
+        "skin": null,
+        "points": [
+          {
+            "id": "gather-subline-2-p0",
+            "anchor": [
+              3.5,
+              0
+            ],
+            "in": [
+              1.5670033757000001,
+              0
+            ],
+            "out": [
+              3.5,
+              0
+            ]
+          },
+          {
+            "id": "gather-subline-2-p1",
+            "anchor": [
+              74.5,
+              0
+            ],
+            "in": [
+              74.5,
+              0
+            ],
+            "out": [
+              76.4329966243,
+              0
+            ]
+          },
+          {
+            "id": "gather-subline-2-p2",
+            "anchor": [
+              78,
+              3.5
+            ],
+            "in": [
+              78,
+              1.5670033757000001
+            ],
+            "out": [
+              78,
+              3.5
+            ]
+          },
+          {
+            "id": "gather-subline-2-p3",
+            "anchor": [
+              78,
+              3.5
+            ],
+            "in": [
+              78,
+              3.5
+            ],
+            "out": [
+              78,
+              5.432996624299999
+            ]
+          },
+          {
+            "id": "gather-subline-2-p4",
+            "anchor": [
+              74.5,
+              7
+            ],
+            "in": [
+              76.4329966243,
+              7
+            ],
+            "out": [
+              74.5,
+              7
+            ]
+          },
+          {
+            "id": "gather-subline-2-p5",
+            "anchor": [
+              3.5,
+              7
+            ],
+            "in": [
+              3.5,
+              7
+            ],
+            "out": [
+              1.5670033757000001,
+              7
+            ]
+          },
+          {
+            "id": "gather-subline-2-p6",
+            "anchor": [
+              0,
+              3.5
+            ],
+            "in": [
+              0,
+              5.432996624299999
+            ],
+            "out": [
+              0,
+              3.5
+            ]
+          },
+          {
+            "id": "gather-subline-2-p7",
+            "anchor": [
+              0,
+              3.5
+            ],
+            "in": [
+              0,
+              3.5
+            ],
+            "out": [
+              0,
+              1.5670033757000001
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gather-light-2",
+      "name": "light 2",
+      "kind": "path",
+      "artboardId": "gather-board",
+      "parentId": "gather-card-3",
+      "order": 21,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        236,
+        46
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f5f3e7",
+        "skin": null,
+        "points": [
+          {
+            "id": "gather-light-2-p0",
+            "anchor": [
+              5,
+              0
+            ],
+            "in": [
+              5,
+              -2.761423749
+            ],
+            "out": [
+              5,
+              2.761423749
+            ]
+          },
+          {
+            "id": "gather-light-2-p1",
+            "anchor": [
+              0,
+              5
+            ],
+            "in": [
+              2.761423749,
+              5
+            ],
+            "out": [
+              -2.761423749,
+              5
+            ]
+          },
+          {
+            "id": "gather-light-2-p2",
+            "anchor": [
+              -5,
+              0
+            ],
+            "in": [
+              -5,
+              2.761423749
+            ],
+            "out": [
+              -5,
+              -2.761423749
+            ]
+          },
+          {
+            "id": "gather-light-2-p3",
+            "anchor": [
+              0,
+              -5
+            ],
+            "in": [
+              -2.761423749,
+              -5
+            ],
+            "out": [
+              2.761423749,
+              -5
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [
+    {
+      "id": "gather-glow",
+      "name": "Glow",
+      "artboardId": "gather-board",
+      "fps": 60,
+      "duration": 120,
+      "loop": true,
+      "tracks": [
+        {
+          "targetId": "gather-light-0",
+          "property": "fill",
+          "keys": [
+            {
+              "frame": 0,
+              "value": "#f5f3e7",
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": "#89d4b5",
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": "#f5f3e7",
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "gather-light-1",
+          "property": "fill",
+          "keys": [
+            {
+              "frame": 0,
+              "value": "#f5f3e7",
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": "#89d4b5",
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": "#f5f3e7",
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "gather-light-2",
+          "property": "fill",
+          "keys": [
+            {
+              "frame": 0,
+              "value": "#f5f3e7",
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": "#89d4b5",
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": "#f5f3e7",
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "gather-board": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  }
+}

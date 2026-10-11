@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-10-11T07:15:25.006525+00:00",
+  "baseMain": "13976ed3180f5ef75043e386d001840f9a64abc5",
+  "branch": "feature/studio-snapping-guides",
+  "localChecks": {
+    "editorUnitTests": 37,
+    "editorBrowserFlows": [
+      "foundation",
+      "authoring",
+      "Pen",
+      "selection",
+      "workspace",
+      "navigation/organization",
+      "alignment/snapping + Gather export"
+    ],
+    "frontendUnitTests": 12,
+    "runtimeUnitTests": 6,
+    "pythonUnitTests": 22,
+    "publicPageConfigurationChecks": 22,
+    "gallerySourceRoundTrips": 6,
+    "alignmentViewportTasks": 5,
+    "workspaceSizes": 6,
+    "authoringOfficialComparisons": 40,
+    "showcaseOfficialComparisons": 96,
+    "penOfficialComparisons": 2,
+    "experienceRecoveryAndSEO": "passed",
+    "automatedAccessibilityViolations": 0
+  },
+  "runtimeVersion": "2.44.0",
+  "alignedFixtureSHA256": {
+    "gather-aligned.evir-project": "9eca8bad7e1248981e3c7229bea6c44dfb7620a0dd1f14a8e26181169889fea6",
+    "gather-aligned.riv": "885be6f2a060d4c41a4a81ac565e61f8354cd3779c3e9ea1112ee853a3eb027a"
+  },
+  "scope": "Local Chromium and software graphics. Physical-device GPU/memory measurements, matched Rive Editor scenes, assistive-technology/user sessions, persistent guides and distribution remain open."
+}
