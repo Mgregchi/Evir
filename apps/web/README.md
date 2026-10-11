@@ -18,7 +18,7 @@ Ordinary builds use committed screenshots/examples and need no browser installat
 
 ## Environment
 
-The web app has one address setting: `SITE_URL`, its full public URL including any prefix. Studio's route and home link are derived automatically. Local builds need no environment file. For custom settings, copy [`.env.example`](.env.example) to `apps/web/.env`, or set values in the provider's build environment. Process values take precedence. All named settings are public; rebuild after editing. Unrelated environment values are not embedded.
+The web app has one address setting: `SITE_URL`, its full public URL including any prefix. It defaults to `https://evir.idey.click/`; set it only to change the public address. Studio's route and home link are derived automatically. Local builds need no environment file. For custom settings, copy [`.env.example`](.env.example) to `apps/web/.env`, or set values in the provider's build environment. Process values take precedence. All named settings are public; rebuild after editing. Unrelated environment values are not embedded.
 
 ### Optional public links
 
@@ -36,7 +36,7 @@ These configure the public pages within the same web app.
 | `SOCIAL_MASTODON_URL` | Mastodon profile | Hide link |
 | `CONTACT_URL` | Contact page or `mailto:` address | Hide link |
 
-URL settings reject executable links and credentials. Repository-derived docs/feedback defaults assume GitHub; override them if you use another service. Without a configured `SITE_URL`, local builds omit canonical/social-image URLs and the sitemap.
+URL settings reject executable links and credentials. Repository-derived docs/feedback defaults assume GitHub; override them if you use another service. Every public page includes absolute canonical and social-image URLs and a sitemap, using the default public address or your `SITE_URL` override. Local navigation and Studio still use relative paths on the current host. Forks and deployments using a different public domain should override `SITE_URL` before building.
 
 Community feedback creates an escaped, reviewable draft in the page. It prefills title/body only for GitHub `/issues/new`; other configured destinations open unchanged, and visitors can copy the draft. No message is posted automatically. Optional community/newsletter links open your external destination; the site does not create those services.
 

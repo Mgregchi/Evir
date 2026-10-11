@@ -1,0 +1,94 @@
+{
+  "checkedAt": "2026-10-11T08:05:06.391240+00:00",
+  "scope": "Direct live HTTP requests with crawler User-Agent strings; not actual platform-card renders. Before deploying the fix.",
+  "responses": [
+    {
+      "agent": "x",
+      "userAgent": "Twitterbot/1.0",
+      "url": "https://evir.idey.click/",
+      "resolvedUrl": "https://evir.idey.click/",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 13974,
+      "sha256": "62aff23d88de015245b7dc26657da8357930fba5ec8baaa3fac5b9e93f563dc8",
+      "hasOGImage": false,
+      "hasXImage": false
+    },
+    {
+      "agent": "x",
+      "userAgent": "Twitterbot/1.0",
+      "url": "https://evir.idey.click/assets/evir-showcase.jpg",
+      "resolvedUrl": "https://evir.idey.click/assets/evir-showcase.jpg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 84258,
+      "sha256": "d0d91f066db9cc869ad7815701245dcfff7dc4ec083709d936f825bff9393cab"
+    },
+    {
+      "agent": "meta",
+      "userAgent": "facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)",
+      "url": "https://evir.idey.click/",
+      "resolvedUrl": "https://evir.idey.click/",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 13974,
+      "sha256": "62aff23d88de015245b7dc26657da8357930fba5ec8baaa3fac5b9e93f563dc8",
+      "hasOGImage": false,
+      "hasXImage": false
+    },
+    {
+      "agent": "meta",
+      "userAgent": "facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)",
+      "url": "https://evir.idey.click/assets/evir-showcase.jpg",
+      "resolvedUrl": "https://evir.idey.click/assets/evir-showcase.jpg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 84258,
+      "sha256": "d0d91f066db9cc869ad7815701245dcfff7dc4ec083709d936f825bff9393cab"
+    },
+    {
+      "agent": "whatsapp",
+      "userAgent": "WhatsApp/2.24.6.77 A",
+      "url": "https://evir.idey.click/",
+      "resolvedUrl": "https://evir.idey.click/",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 13974,
+      "sha256": "62aff23d88de015245b7dc26657da8357930fba5ec8baaa3fac5b9e93f563dc8",
+      "hasOGImage": false,
+      "hasXImage": false
+    },
+    {
+      "agent": "whatsapp",
+      "userAgent": "WhatsApp/2.24.6.77 A",
+      "url": "https://evir.idey.click/assets/evir-showcase.jpg",
+      "resolvedUrl": "https://evir.idey.click/assets/evir-showcase.jpg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 84258,
+      "sha256": "d0d91f066db9cc869ad7815701245dcfff7dc4ec083709d936f825bff9393cab"
+    },
+    {
+      "agent": "linkedin",
+      "userAgent": "LinkedInBot/1.0",
+      "url": "https://evir.idey.click/",
+      "resolvedUrl": "https://evir.idey.click/",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 13974,
+      "sha256": "62aff23d88de015245b7dc26657da8357930fba5ec8baaa3fac5b9e93f563dc8",
+      "hasOGImage": false,
+      "hasXImage": false
+    },
+    {
+      "agent": "linkedin",
+      "userAgent": "LinkedInBot/1.0",
+      "url": "https://evir.idey.click/assets/evir-showcase.jpg",
+      "resolvedUrl": "https://evir.idey.click/assets/evir-showcase.jpg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 84258,
+      "sha256": "d0d91f066db9cc869ad7815701245dcfff7dc4ec083709d936f825bff9393cab"
+    }
+  ]
+}

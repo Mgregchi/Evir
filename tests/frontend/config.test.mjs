@@ -20,9 +20,9 @@ test('web and Studio paths follow a prefixed SITE_URL without a second address',
   assert.equal(route(config),'/Evir/');
 });
 
-test('local and preview builds use their own web origin', () => {
+test('unconfigured web builds keep local navigation and a public preview origin', () => {
   const config=readWebConfig({});
-  assert.equal(config.siteUrl,'');
+  assert.equal(config.siteUrl,'https://evir.idey.click');
   assert.equal(config.basePath,'');
   assert.equal(config.editorUrl,'/editor/studio/');
 });

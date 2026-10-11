@@ -6,13 +6,13 @@ The web build imports `@evir/studio` and includes its workspace at `/editor/stud
 
 ## Environment
 
-Set `SITE_URL` in the web project's **build environment**, for example:
+The public address defaults to `https://evir.idey.click/`. To use a different domain or subdirectory, set `SITE_URL` in the web project's **build environment**, for example:
 
 ```dotenv
 SITE_URL=https://evir.idey.click/
 ```
 
-This is the full public address, including any subdirectory. GitHub project hosting could use `https://mgregchi.github.io/Evir/`; Studio then lives at `/Evir/editor/studio/` automatically. Without `SITE_URL`, all navigation still works on the current host; canonical metadata and the sitemap are omitted. No `STUDIO_URL` or editor/base-path variables are needed.
+This is the full public address, including any subdirectory. GitHub project hosting could use `https://mgregchi.github.io/Evir/`; Studio then lives at `/Evir/editor/studio/` automatically. Without an override, canonical metadata, link-preview images and the sitemap use the default public address; navigation and Studio still work on the current host. No `STUDIO_URL` or editor/base-path variables are needed.
 
 Optional `COMMUNITY_URL`, `FEEDBACK_URL`, newsletter/social/contact URLs also go on this same web project. See [the optional-link list](../apps/web/README.md#optional-public-links). These are public build-time settings; rebuild after changing them. Never put credentials here.
 
@@ -28,7 +28,7 @@ For the existing `evir` Worker, open **Workers & Pages → evir → Settings →
 | Deploy command | `npx wrangler deploy --config wrangler.jsonc` |
 | Preview command | `npx wrangler preview --config wrangler.jsonc`, or disable previews initially |
 
-Under **Build Variables and Secrets**, add `SITE_URL`, `NODE_VERSION=24` and `SKIP_DEPENDENCY_INSTALL=1`. Optional links belong here too, rather than Worker runtime bindings. The command installs from the root lockfile, then builds the web app; Wrangler serves `./dist` beside its app configuration.
+Under **Build Variables and Secrets**, add `NODE_VERSION=24` and `SKIP_DEPENDENCY_INSTALL=1`; add `SITE_URL` only to override the default public address. Optional links belong here too, rather than Worker runtime bindings. The command installs from the root lockfile, then builds the web app; Wrangler serves `./dist` beside its app configuration.
 
 Build/deploy, then use **Domains → Add Domain** to connect the public hostname. **Studio needs no separate Worker, path route, asset handler or proxy:** its files are inside the same web output. The Worker name must match `name` in `apps/web/wrangler.jsonc` (currently `evir`).
 
@@ -46,7 +46,7 @@ Use **Add new project → Import an existing project → GitHub**, authorize `Mg
 | Build command | `npm run web:build` |
 | Publish directory | `apps/web/dist` |
 
-The package directory selects `apps/web/netlify.toml`; installation uses the root lockfile. The file already sets Node 24 and filters builds to web/Studio/shared dependencies. Under **Environment variables**, set `SITE_URL` with **Builds** scope and any optional links. Deploy and add your hostname under **Domain management**.
+The package directory selects `apps/web/netlify.toml`; installation uses the root lockfile. The file already sets Node 24 and filters builds to web/Studio/shared dependencies. Under **Environment variables**, put any `SITE_URL` override and optional links in **Builds** scope. Deploy and add your hostname under **Domain management**.
 
 Studio is a directory in this same output. Do not add an external editor proxy or a blanket SPA rewrite to `/index.html`.
 
@@ -62,7 +62,7 @@ Use **Create application → Pages → Connect to Git**, select `Mgregchi/Evir`,
 | Build command | `npm ci && npm run web:build` |
 | Output directory | `apps/web/dist` |
 
-Set `SITE_URL`, `NODE_VERSION=24` and `SKIP_DEPENDENCY_INSTALL=1` in the project's build environment. Deploy and connect the hostname under **Custom domains**. Pages serves the public pages and Studio from the same output.
+Set `NODE_VERSION=24` and `SKIP_DEPENDENCY_INSTALL=1` in the project's build environment; add `SITE_URL` only to override the default address. Deploy and connect the hostname under **Custom domains**. Pages serves the public pages and Studio from the same output.
 
 ## Updating an existing deployment
 
@@ -90,3 +90,13 @@ The settings follow the providers' official Git/monorepo/static-asset documentat
 - Cloudflare [Workers Git builds](https://developers.cloudflare.com/workers/ci-cd/builds/), [build configuration](https://developers.cloudflare.com/workers/ci-cd/builds/configuration/), [build image](https://developers.cloudflare.com/workers/ci-cd/builds/build-image/) and [static assets](https://developers.cloudflare.com/workers/static-assets/).
 - Cloudflare Pages [Git integration](https://developers.cloudflare.com/pages/get-started/git-integration/), [monorepos](https://developers.cloudflare.com/pages/configuration/monorepos/) and [build configuration](https://developers.cloudflare.com/pages/configuration/build-configuration/).
 - Netlify [monorepos](https://docs.netlify.com/build/configure-builds/monorepos/), [file configuration](https://docs.netlify.com/build/configure-builds/file-based-configuration/) and [build filtering](https://docs.netlify.com/build/configure-builds/ignore-builds/).
+
+## Link previews
+
+The public pages ship Open Graph and X image tags in the initial HTML, without JavaScript. The preview uses `/assets/evir-showcase.jpg`, a 1200×630 JPEG. Builds default to `https://evir.idey.click/` so leaving `SITE_URL` empty no longer removes the image tags. Use the single `SITE_URL` override for another public domain, then rebuild and deploy. Setting it as a Worker runtime binding cannot change already-built HTML.
+
+For an older deployment missing image tags, an immediate workaround is to set `SITE_URL=https://evir.idey.click/` in **Build Variables and Secrets** and trigger a new build. The default-address fix applies automatically when its PR is merged and the GitHub-connected build redeploys.
+
+Check the deployed page source for `og:image` and `twitter:image` (not just the browser's JavaScript DOM), and open the absolute JPEG address. Both should return HTTP 200 without login or a bot challenge. LinkedIn's [Post Inspector](https://www.linkedin.com/post-inspector/) can request a new inspection after deployment. Other services may retain an earlier empty preview; create a fresh share after deployment. If it remains stale, try a one-time query such as `?preview=2` on the page URL to distinguish it from the previously shared link. This is a cache retry, not a substitute for correct image tags.
+
+Studio and 404 pages remain `noindex`; share `/editor/` when introducing Studio, rather than its workspace route.
