@@ -1,0 +1,41 @@
+{
+  "scope": "Automated Chromium flows; not human or screen-reader evidence",
+  "results": [
+    {
+      "width": 390,
+      "flows": [
+        "clip/undo",
+        "IK validation/apply",
+        "text edit",
+        "mesh edit",
+        "blend timing",
+        "font asset",
+        "sheet axe/reflow",
+        "semantic riv import",
+        "invalid import preserves scene"
+      ]
+    },
+    {
+      "width": 1440,
+      "flows": [
+        "clip/undo",
+        "IK validation/apply",
+        "text edit",
+        "mesh edit",
+        "blend timing",
+        "font asset",
+        "sheet axe/reflow",
+        "semantic riv import",
+        "invalid import preserves scene"
+      ]
+    },
+    {
+      "resources": {
+        "initialFontCount": 0,
+        "finalFontCount": 0,
+        "closedBitmap": true,
+        "failedPrepareRetainedCurrent": true
+      }
+    }
+  ]
+}

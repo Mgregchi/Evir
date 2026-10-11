@@ -1,4 +1,4 @@
-import { validateProject, MAX_GRADIENT_STOPS } from "@evir/project-model";
+import { validateProject, MAX_GRADIENT_STOPS, upgradeAdvanced } from "@evir/project-model";
 const el = (tag, text) => {
   const node = document.createElement(tag);
   if (text !== undefined) node.textContent = text;
@@ -66,7 +66,7 @@ function openPaintSheet({ project, node, commit, open }) {
   title.id = "paint-title";
   const description = el(
     "p",
-    "Colors and endpoints belong to this shape. Apply makes one undo step. Gradient stops are static; animate the shape to move them.",
+    "Colors and endpoints belong to this shape. Apply makes one undo step. Use Animate to key gradient endpoints, stop positions and colors.",
   );
   const error = el("p");
   error.id = "paint-error";
@@ -293,6 +293,7 @@ function openPaintSheet({ project, node, commit, open }) {
       const candidate = structuredClone(project);
       candidate.nodes.find((n) => n.id === node.id).geometry.fill =
         structuredClone(fill);
+      if(node.geometry.skin && typeof fill!=="string")upgradeAdvanced(candidate);
       validateProject(candidate);
       if (
         !commit("Change shape paint", (p) => {
@@ -302,6 +303,7 @@ function openPaintSheet({ project, node, commit, open }) {
             JSON.stringify(target.geometry.fill) !== JSON.stringify(original)
           )
             throw Error("The shape changed. Reopen its fill before applying.");
+          if(target.geometry.skin && typeof fill!=="string")upgradeAdvanced(p);
           target.geometry.fill = structuredClone(fill);
         })
       )

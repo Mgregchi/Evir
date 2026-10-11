@@ -1,0 +1,361 @@
+{
+  "checkedAt": "2026-10-11T21:58:53.019Z",
+  "runtimeVersion": "2.44.0",
+  "browserVersion": "151.0.7922.173",
+  "diagnostics": {
+    "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+    "contexts": [
+      {
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "unmaskedRendererAvailable": true,
+        "contextLost": false,
+        "errors": [],
+        "extensions": [
+          "EXT_clip_control",
+          "EXT_color_buffer_float",
+          "EXT_color_buffer_half_float",
+          "EXT_conservative_depth",
+          "EXT_depth_clamp",
+          "EXT_float_blend",
+          "EXT_polygon_offset_clamp",
+          "EXT_texture_compression_bptc",
+          "EXT_texture_compression_rgtc",
+          "EXT_texture_filter_anisotropic",
+          "EXT_texture_mirror_clamp_to_edge",
+          "NV_shader_noperspective_interpolation",
+          "OES_draw_buffers_indexed",
+          "OES_sample_variables",
+          "OES_shader_multisample_interpolation",
+          "OES_texture_float_linear",
+          "OVR_multiview2",
+          "WEBGL_clip_cull_distance",
+          "WEBGL_compressed_texture_astc",
+          "WEBGL_compressed_texture_etc",
+          "WEBGL_compressed_texture_etc1",
+          "WEBGL_compressed_texture_s3tc",
+          "WEBGL_compressed_texture_s3tc_srgb",
+          "WEBGL_debug_renderer_info",
+          "WEBGL_debug_shaders",
+          "WEBGL_lose_context",
+          "WEBGL_multi_draw",
+          "WEBGL_polygon_mode",
+          "WEBGL_stencil_texturing"
+        ]
+      },
+      {
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "unmaskedRendererAvailable": true,
+        "contextLost": false,
+        "errors": [],
+        "extensions": [
+          "EXT_clip_control",
+          "EXT_color_buffer_float",
+          "EXT_color_buffer_half_float",
+          "EXT_conservative_depth",
+          "EXT_depth_clamp",
+          "EXT_float_blend",
+          "EXT_polygon_offset_clamp",
+          "EXT_texture_compression_bptc",
+          "EXT_texture_compression_rgtc",
+          "EXT_texture_filter_anisotropic",
+          "EXT_texture_mirror_clamp_to_edge",
+          "NV_shader_noperspective_interpolation",
+          "OES_draw_buffers_indexed",
+          "OES_sample_variables",
+          "OES_shader_multisample_interpolation",
+          "OES_texture_float_linear",
+          "OVR_multiview2",
+          "WEBGL_clip_cull_distance",
+          "WEBGL_compressed_texture_astc",
+          "WEBGL_compressed_texture_etc",
+          "WEBGL_compressed_texture_etc1",
+          "WEBGL_compressed_texture_s3tc",
+          "WEBGL_compressed_texture_s3tc_srgb",
+          "WEBGL_debug_renderer_info",
+          "WEBGL_debug_shaders",
+          "WEBGL_lose_context",
+          "WEBGL_multi_draw",
+          "WEBGL_polygon_mode",
+          "WEBGL_stencil_texturing"
+        ]
+      }
+    ]
+  },
+  "fixtures": {
+    "canopy": {
+      "evir-project": "9ca6c4513fd3b4a7b1dafd2c570d58d64b8ac1b19c16e4179c6f73ce0d8e7ce1",
+      "riv": "be2f513d4f5f8170ea756b452bbc09fc95b35d1f895f41949d4467a3e496b405"
+    },
+    "halo": {
+      "evir-project": "d63f9f7b07f57a80e3d228783d059f138b04d085c8dc5b3094d6e6a22649ccdd",
+      "riv": "575a2b87b5a5d0593699e8add17a422c0d3f45c546decc7d1691b154eda77447"
+    },
+    "reach": {
+      "evir-project": "d46c353072686f7a2f959a1a89d0c1e4d428bdafa76a57f433c0763ba3458ad2",
+      "riv": "12a89853cf3d193bc29c3921893dc21ddcf3fbed6947e08d128c1de502307dfc"
+    },
+    "kite": {
+      "evir-project": "81b00b771572e3a7e9048fdc95f36f5a03c1accddf0498f39ced150bd4ea6527",
+      "riv": "8697a82a88bb69a1e6988544b5af9704f281ba53db7a092abb8273c0ff899350"
+    },
+    "caption": {
+      "evir-project": "5b9f68d97c230bfab9c0f4f7d1e20d18a8372d9d030c05433f510775d5594719",
+      "riv": "b35f4f55a2c7a78b5355d342b8338dfb54ed796f7d0296244bb14c98b4b0ca75"
+    },
+    "blend": {
+      "evir-project": "526485faf8c88d87aad378149b6862c97f74d836ac4c5d16520259286db74159",
+      "riv": "57a8d0355e9925065a196dfe76b8381ab2da7e0494931ffc5610f6057a4a392c"
+    },
+    "reach-one-bone": {
+      "evir-project": "70255644d64497b8da5c14f016dbd9045062cfb42bebf5dadc736047e1c34556",
+      "riv": "a59d216b8babc120cde2ab355d3002c9d155c217f3bbf9117060a8572912cc0c"
+    },
+    "reach-inverted": {
+      "evir-project": "9007640c2b016d9675471f46d55322f3ac9d7eb8099377f6e11b04e15895345b",
+      "riv": "993b7d205f3bdf2e9af5760f2837432a8be20b291e24ecffc483b3f83f9f0d31"
+    },
+    "reach-half-strength": {
+      "evir-project": "e454410601c905c257f7ccecbe1a3739b7773e1127594babef58440710f729c1",
+      "riv": "bb0256fd4e7c36f94bd89f4863ac2c591e4cc466215429a5b8a3be8290426415"
+    }
+  },
+  "environment": "headless Chromium; software rendering; no physical-device evidence",
+  "results": [
+    {
+      "scene": "canopy",
+      "frame": 0,
+      "mae": 0.08093643188476562,
+      "covered": 28224,
+      "backend": "webgl2"
+    },
+    {
+      "scene": "canopy",
+      "frame": 30,
+      "mae": 0.06731033325195312,
+      "covered": 28224,
+      "backend": "webgl2"
+    },
+    {
+      "scene": "canopy",
+      "frame": 60,
+      "mae": 0.030792236328125,
+      "covered": 28224,
+      "backend": "webgl2"
+    },
+    {
+      "scene": "halo",
+      "frame": 0,
+      "mae": 5.075374603271484,
+      "covered": 21247,
+      "backend": "webgl2",
+      "comparison": "Approximate Canvas blur; Canvas oracle ignores feather; WebGL2 oracle feathers"
+    },
+    {
+      "scene": "halo",
+      "frame": 30,
+      "mae": 5.075374603271484,
+      "covered": 21247,
+      "backend": "webgl2",
+      "comparison": "Approximate Canvas blur; Canvas oracle ignores feather; WebGL2 oracle feathers"
+    },
+    {
+      "scene": "halo",
+      "frame": 60,
+      "mae": 5.075374603271484,
+      "covered": 21247,
+      "backend": "webgl2",
+      "comparison": "Approximate Canvas blur; Canvas oracle ignores feather; WebGL2 oracle feathers"
+    },
+    {
+      "scene": "reach",
+      "frame": 0,
+      "mae": 0.15870285034179688,
+      "covered": 1999,
+      "backend": "webgl2"
+    },
+    {
+      "scene": "reach",
+      "frame": 30,
+      "mae": 0.11363983154296875,
+      "covered": 1922,
+      "backend": "webgl2"
+    },
+    {
+      "scene": "reach",
+      "frame": 60,
+      "mae": 0.12505340576171875,
+      "covered": 1891,
+      "backend": "webgl2"
+    },
+    {
+      "scene": "kite",
+      "frame": 0,
+      "mae": 0.054790496826171875,
+      "covered": 25600,
+      "backend": "webgl2"
+    },
+    {
+      "scene": "kite",
+      "frame": 30,
+      "mae": 0.294158935546875,
+      "covered": 25847,
+      "backend": "webgl2"
+    },
+    {
+      "scene": "kite",
+      "frame": 60,
+      "mae": 0.3230743408203125,
+      "covered": 25850,
+      "backend": "webgl2"
+    },
+    {
+      "scene": "caption",
+      "frame": 0,
+      "mae": 0.11307525634765625,
+      "covered": 731,
+      "backend": "webgl2"
+    },
+    {
+      "scene": "caption",
+      "frame": 30,
+      "mae": 0.16352462768554688,
+      "covered": 991,
+      "backend": "webgl2"
+    },
+    {
+      "scene": "caption",
+      "frame": 60,
+      "mae": 0.3363761901855469,
+      "covered": 1274,
+      "backend": "webgl2"
+    },
+    {
+      "scene": "blend",
+      "frame": 0,
+      "mae": 0,
+      "covered": 1400,
+      "backend": "webgl2"
+    },
+    {
+      "scene": "blend",
+      "frame": 30,
+      "mae": 0,
+      "covered": 1400,
+      "backend": "webgl2"
+    },
+    {
+      "scene": "blend",
+      "frame": 60,
+      "mae": 0,
+      "covered": 1400,
+      "backend": "webgl2"
+    },
+    {
+      "scene": "reach-one-bone",
+      "frame": 0,
+      "mae": 0.06675338745117188,
+      "covered": 1924,
+      "backend": "webgl2"
+    },
+    {
+      "scene": "reach-one-bone",
+      "frame": 30,
+      "mae": 0.0484466552734375,
+      "covered": 1911,
+      "backend": "webgl2"
+    },
+    {
+      "scene": "reach-one-bone",
+      "frame": 60,
+      "mae": 0.0670013427734375,
+      "covered": 1882,
+      "backend": "webgl2"
+    },
+    {
+      "scene": "reach-inverted",
+      "frame": 0,
+      "mae": 0.15870285034179688,
+      "covered": 1999,
+      "backend": "webgl2"
+    },
+    {
+      "scene": "reach-inverted",
+      "frame": 30,
+      "mae": 0.13115692138671875,
+      "covered": 1930,
+      "backend": "webgl2"
+    },
+    {
+      "scene": "reach-inverted",
+      "frame": 60,
+      "mae": 0.12163543701171875,
+      "covered": 1903,
+      "backend": "webgl2"
+    },
+    {
+      "scene": "reach-half-strength",
+      "frame": 0,
+      "mae": 0.13363265991210938,
+      "covered": 1998,
+      "backend": "webgl2"
+    },
+    {
+      "scene": "reach-half-strength",
+      "frame": 30,
+      "mae": 0.14795303344726562,
+      "covered": 1990,
+      "backend": "webgl2"
+    },
+    {
+      "scene": "reach-half-strength",
+      "frame": 60,
+      "mae": 0.11024093627929688,
+      "covered": 1983,
+      "backend": "webgl2"
+    },
+    {
+      "scene": "blend-machine",
+      "dt": 0,
+      "level": null,
+      "mae": 0,
+      "backend": "webgl2"
+    },
+    {
+      "scene": "blend-machine",
+      "dt": 0.1,
+      "level": null,
+      "mae": 0,
+      "backend": "webgl2"
+    },
+    {
+      "scene": "blend-machine",
+      "dt": 0.1,
+      "level": null,
+      "mae": 0,
+      "backend": "webgl2"
+    },
+    {
+      "scene": "blend-machine",
+      "dt": 0.2,
+      "level": null,
+      "mae": 0,
+      "backend": "webgl2"
+    },
+    {
+      "scene": "blend-machine",
+      "dt": 0.2,
+      "level": null,
+      "mae": 0,
+      "backend": "webgl2"
+    },
+    {
+      "scene": "blend-machine",
+      "dt": 0,
+      "level": 0.25,
+      "mae": 0.0006103515625,
+      "backend": "webgl2"
+    }
+  ]
+}

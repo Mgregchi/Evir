@@ -2,7 +2,7 @@ name: Deploy web app to Pages
 on:
   push:
     branches: [main]
-    paths: ['apps/web/**', 'assets/brand/**', 'packages/**', 'tools/build-support.mjs', 'package*.json', '.github/workflows/static.yml']
+    paths: ['apps/web/**', 'assets/brand/**', 'assets/fonts/**', 'packages/**', 'tools/build-support.mjs', 'package*.json', '.github/workflows/static.yml']
   workflow_dispatch:
 permissions:
   contents: read

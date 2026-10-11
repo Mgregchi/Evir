@@ -5,10 +5,10 @@ These are versioned npm workspaces with one source of truth. Applications consum
 | Package | Owns |
 | --- | --- |
 | `@evir/project-model` | Editable source validation/persistence, scene transforms and the runtime snapshot contract |
-| `@evir/runtime` | Playback API, animation evaluation, skinning and conditional state machines |
-| `@evir/renderer-canvas` | Canvas2D drawing and the host rendering adapter |
+| `@evir/runtime` | Playback API, animation evaluation, skinning, IK and conditional/timed/blended state machines |
+| `@evir/renderer-canvas` | Canvas2D vector/text/image/mesh drawing, embedded asset lifetime and the host rendering adapter |
 | `@evir/authoring` | Path/bone/key editing, binding, reparenting and undo transactions |
-| `@evir/format` | Explicit `.riv` subset compiler and its pinned schema |
+| `@evir/format` | Explicit `.riv` subset compiler, bounded editable import and pinned schema |
 
 The direction is `project-model` → `runtime` → renderer/authoring/format. The model validates animation/interaction data itself, so it no longer imports the playback evaluator. Applications select the packages they use. The public site bundles runtime/renderer previews; Studio additionally bundles authoring and export. A site build does not write editor or package release artifacts.
 
@@ -20,15 +20,18 @@ import { CanvasRenderer } from '@evir/renderer-canvas';
 
 const player = await loadRuntime(projectJSON, { machineId: 'milo-machine' });
 const renderer = new CanvasRenderer(canvas.getContext('2d'));
+await renderer.prepare(player.snapshot());
 renderer.draw(player.advance(0), player.artboard.id);
 player.setInput('isWaving', true);
 renderer.draw(player.advance(1 / 60), player.artboard.id);
 player.reset();
+// On host teardown or when replacing the renderer:
+renderer.dispose();
 ```
 
 Use the actual animation/machine IDs from your project. Choose `animationId` or `machineId`; scheduling, device scaling and pointer hit-testing belong to the host. `advance` takes seconds. `setInput` accepts an input name or stable ID and validates the value type; triggers take `true`. `click` accepts a known target ID. `pose`, `snapshot`, `artboard` and `state` return detached values. The runtime has no DOM, account, storage or app-environment dependency.
 
-`loadRuntime` accepts editable project JSON or a version-1 `evir-runtime` JSON snapshot and verifies embedded asset hashes. `toRuntimeProject` from `@evir/project-model` strips editor cameras, locks, hidden-layer controls and graph positions. This is a JSON playback contract for the existing scene subset, rather than a new optimized binary-format decision. Existing source files continue to open unchanged. Assets can be preserved/validated; raster/text rendering, semantic `.riv` import and GPU/native backends remain future work.
+`loadRuntime` accepts editable project JSON (versions 1–3) or `evir-runtime` JSON (versions 1–2) and verifies embedded asset hashes. `toRuntimeProject` from `@evir/project-model` strips editor cameras, locks, hidden-layer controls and graph positions. Advanced source uses runtime version 2. Existing source files continue to open unchanged. The [advanced contracts](../docs/30-advanced-2d-authoring.md) describe supported PNG meshes/images, single-line embedded-font text, gradients, clipping, approximate feather, IK, blending and editable `.riv` import, together with their limits. Browser hosts prepare embedded resources before drawing and dispose them on teardown. GPU/native backends and a new optimized binary format remain separate research decisions.
 
 ## Build and release
 

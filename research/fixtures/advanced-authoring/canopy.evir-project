@@ -1,0 +1,407 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 3,
+  "id": "canopy-project",
+  "name": "canopy",
+  "artboards": [
+    {
+      "id": "canopy-board",
+      "name": "canopy",
+      "width": 256,
+      "height": 256
+    }
+  ],
+  "nodes": [
+    {
+      "id": "canopy-window",
+      "name": "window",
+      "kind": "group",
+      "parentId": null,
+      "artboardId": "canopy-board",
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        20,
+        20
+      ],
+      "geometry": null
+    },
+    {
+      "id": "canopy-background",
+      "name": "background",
+      "kind": "rectangle",
+      "parentId": "canopy-window",
+      "artboardId": "canopy-board",
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "width": 216,
+        "height": 216,
+        "fill": "#d9eee3"
+      }
+    },
+    {
+      "id": "canopy-light",
+      "name": "light",
+      "kind": "path",
+      "parentId": "canopy-window",
+      "artboardId": "canopy-board",
+      "order": 1,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -30,
+        65
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": {
+          "type": "linear",
+          "start": [
+            0,
+            0
+          ],
+          "end": [
+            270,
+            0
+          ],
+          "stops": [
+            {
+              "position": 0,
+              "color": "#89dcc0"
+            },
+            {
+              "position": 1,
+              "color": "#efb489"
+            }
+          ]
+        },
+        "skin": {
+          "bindWorld": [
+            1,
+            0,
+            0,
+            1,
+            -10,
+            85
+          ],
+          "bones": [
+            {
+              "boneId": "canopy-paint-wind",
+              "bind": [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0
+              ]
+            }
+          ],
+          "weights": [
+            {
+              "pointId": "canopy-light-point-0",
+              "anchor": [
+                [
+                  "canopy-paint-wind",
+                  1
+                ]
+              ],
+              "in": [
+                [
+                  "canopy-paint-wind",
+                  1
+                ]
+              ],
+              "out": [
+                [
+                  "canopy-paint-wind",
+                  1
+                ]
+              ]
+            },
+            {
+              "pointId": "canopy-light-point-1",
+              "anchor": [
+                [
+                  "canopy-paint-wind",
+                  1
+                ]
+              ],
+              "in": [
+                [
+                  "canopy-paint-wind",
+                  1
+                ]
+              ],
+              "out": [
+                [
+                  "canopy-paint-wind",
+                  1
+                ]
+              ]
+            },
+            {
+              "pointId": "canopy-light-point-2",
+              "anchor": [
+                [
+                  "canopy-paint-wind",
+                  1
+                ]
+              ],
+              "in": [
+                [
+                  "canopy-paint-wind",
+                  1
+                ]
+              ],
+              "out": [
+                [
+                  "canopy-paint-wind",
+                  1
+                ]
+              ]
+            },
+            {
+              "pointId": "canopy-light-point-3",
+              "anchor": [
+                [
+                  "canopy-paint-wind",
+                  1
+                ]
+              ],
+              "in": [
+                [
+                  "canopy-paint-wind",
+                  1
+                ]
+              ],
+              "out": [
+                [
+                  "canopy-paint-wind",
+                  1
+                ]
+              ]
+            }
+          ]
+        },
+        "points": [
+          {
+            "id": "canopy-light-point-0",
+            "anchor": [
+              0,
+              0
+            ],
+            "in": [
+              0,
+              0
+            ],
+            "out": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "canopy-light-point-1",
+            "anchor": [
+              270,
+              0
+            ],
+            "in": [
+              270,
+              0
+            ],
+            "out": [
+              270,
+              0
+            ]
+          },
+          {
+            "id": "canopy-light-point-2",
+            "anchor": [
+              270,
+              150
+            ],
+            "in": [
+              270,
+              150
+            ],
+            "out": [
+              270,
+              150
+            ]
+          },
+          {
+            "id": "canopy-light-point-3",
+            "anchor": [
+              0,
+              150
+            ],
+            "in": [
+              0,
+              150
+            ],
+            "out": [
+              0,
+              150
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "canopy-paint-wind",
+      "name": "paint-wind",
+      "kind": "bone",
+      "parentId": null,
+      "artboardId": "canopy-board",
+      "order": 1,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "length": 32
+      }
+    },
+    {
+      "id": "canopy-mask",
+      "name": "mask",
+      "kind": "rectangle",
+      "parentId": null,
+      "artboardId": "canopy-board",
+      "order": 2,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        44,
+        44
+      ],
+      "geometry": {
+        "width": 168,
+        "height": 168,
+        "fill": "#ffffff"
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [
+    {
+      "id": "canopy-Glow",
+      "name": "Glow",
+      "artboardId": "canopy-board",
+      "fps": 60,
+      "duration": 60,
+      "loop": false,
+      "tracks": [
+        {
+          "targetId": "canopy-paint-wind",
+          "property": "y",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 60,
+              "value": 20,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "canopy-light",
+          "property": "paint.stop.0.color",
+          "keys": [
+            {
+              "frame": 0,
+              "value": "#89dcc0",
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 60,
+              "value": "#28493d",
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "canopy-light",
+          "property": "paint.endX",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 270,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 60,
+              "value": 130,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "canopy-board": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  },
+  "advanced": {
+    "clips": [
+      {
+        "targetId": "canopy-window",
+        "maskId": "canopy-mask",
+        "visible": false
+      }
+    ],
+    "feathers": [],
+    "ik": []
+  }
+}

@@ -1,0 +1,217 @@
+[
+  {
+    "url": "https://rive.app",
+    "retrievalId": "0",
+    "status": 200,
+    "resolvedUrl": "https://rive.app",
+    "bytes": 506878,
+    "sha256": "c5b4a5fbe31efb9ec81f751c33d2ee2037a63ad7015310c74c76a21aa3ba1472"
+  },
+  {
+    "url": "https://rive.app/sitemap.xml",
+    "retrievalId": "1",
+    "status": 200,
+    "resolvedUrl": "https://rive.app/sitemap.xml",
+    "bytes": 20178,
+    "sha256": "79bc0e9d17e9307f466660458fb20105c7ff7acdad3aa273028775083036f736"
+  },
+  {
+    "url": "https://rive.app/docs/llms.txt",
+    "retrievalId": "2",
+    "status": 200,
+    "resolvedUrl": "https://rive.app/docs/llms.txt",
+    "bytes": 51172,
+    "sha256": "805ee896b51b087f0f882dd98da32622f0be183f48076db6b9dc96fc6156423c"
+  },
+  {
+    "url": "https://x.com/guidorosso",
+    "retrievalId": "3",
+    "status": 200,
+    "resolvedUrl": "https://x.com/guidorosso",
+    "bytes": 183320,
+    "sha256": "88eba8208c7b0fa2df3d1c8c2fb946a7aefc30e5b764ed2bb0a98bb978dae74a"
+  },
+  {
+    "url": "https://rive.app/use-cases/games",
+    "retrievalId": "4",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/main/src/shapes/paint/feather.cpp",
+    "retrievalId": "5",
+    "status": 200,
+    "resolvedUrl": "https://raw.githubusercontent.com/rive-app/rive-runtime/main/src/shapes/paint/feather.cpp",
+    "bytes": 3828,
+    "sha256": "4e78c95b3e0a23c59b594f9c59bd8259a655b585d01bbf4bfbfc9e91ee4d725f"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/main/src/constraints/ik_constraint.cpp",
+    "retrievalId": "6",
+    "status": 200,
+    "resolvedUrl": "https://raw.githubusercontent.com/rive-app/rive-runtime/main/src/constraints/ik_constraint.cpp",
+    "bytes": 9615,
+    "sha256": "413c80904a8b94100d70e032c24cdb2990ffeaaebf6b20c4a100f8e23c47cfbf"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/main/src/shapes/mesh.cpp",
+    "retrievalId": "7",
+    "status": 200,
+    "resolvedUrl": "https://raw.githubusercontent.com/rive-app/rive-runtime/main/src/shapes/mesh.cpp",
+    "bytes": 7186,
+    "sha256": "516d0bcb0ded05bed90bf62a0759bcd391ed715dda50c400c29e85593ab352d0"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/main/src/animation/state_transition.cpp",
+    "retrievalId": "8",
+    "status": 200,
+    "resolvedUrl": "https://raw.githubusercontent.com/rive-app/rive-runtime/main/src/animation/state_transition.cpp",
+    "bytes": 7546,
+    "sha256": "0abb2ef7e53be348258e9daeaa56132a4be5c9110b3b1a3670a3cdf8527289df"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/main/src/text/text.cpp",
+    "retrievalId": "9",
+    "status": 200,
+    "resolvedUrl": "https://raw.githubusercontent.com/rive-app/rive-runtime/main/src/text/text.cpp",
+    "bytes": 64368,
+    "sha256": "28fb15042f331630ac675adce559e68466ae837541c6b6f193b03812cd10b84d"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/main/src/shapes/paint/linear_gradient.cpp",
+    "retrievalId": "10",
+    "status": 200,
+    "resolvedUrl": "https://raw.githubusercontent.com/rive-app/rive-runtime/main/src/shapes/paint/linear_gradient.cpp",
+    "bytes": 8698,
+    "sha256": "78fbb77d97bebf18af1183181ae603d497fd1e9f514e6188376766a0d05b5c88"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/FontFace",
+    "retrievalId": "11",
+    "status": 200,
+    "resolvedUrl": "https://developer.mozilla.org/en-US/docs/Web/API/FontFace",
+    "bytes": 155320,
+    "sha256": "edbeb6cb17b41615157a04e2115c642be39c7919ad5b075db285fb7e7444a802"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/filter",
+    "retrievalId": "12",
+    "status": 200,
+    "resolvedUrl": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/filter",
+    "bytes": 165845,
+    "sha256": "a27f03967f39542c91568268f428a9c73a1d3bad609f0291e4a52be16cd1f76d"
+  },
+  {
+    "url": "https://rive.app/game-ui",
+    "retrievalId": "extra-0",
+    "status": 200,
+    "bytes": 433438,
+    "sha256": "714fd385c6816688e0dc389da2ecc9c5c929a08fd8ce93848eeda5105642e729"
+  },
+  {
+    "url": "https://rive.app/blog/scripting-is-live-in-rive",
+    "retrievalId": "extra-1",
+    "status": 200,
+    "bytes": 372868,
+    "sha256": "bf37deb928bb11ff96cbdbc795f4e263117f26c314ce57b8dfd447955abbc26c"
+  },
+  {
+    "url": "https://rive.app/blog/why-scripting-runs-on-luau",
+    "retrievalId": "extra-2",
+    "status": 200,
+    "bytes": 373855,
+    "sha256": "a2f459e6aa36e00260c8c175a22b87af823548454fc878f5013abb6b791751c7"
+  },
+  {
+    "url": "https://rive.app/docs/editor/fundamentals/fill-and-stroke.md",
+    "retrievalId": "extra-3",
+    "status": 200,
+    "bytes": 15479,
+    "sha256": "b242ef5e1c8faf3f229d016f26c61f0cf3540b2e3f9bc3c7d671c5f2edee29bb"
+  },
+  {
+    "url": "https://rive.app/docs/editor/manipulating-shapes/meshes.md",
+    "retrievalId": "extra-4",
+    "status": 200,
+    "bytes": 10916,
+    "sha256": "bd4154ff63e147daa31cf9421aa4feae65799ff181dce1dbb0e77971288b4b5b"
+  },
+  {
+    "url": "https://rive.app/docs/editor/constraints/ik-constraint.md",
+    "retrievalId": "extra-5",
+    "status": 200,
+    "bytes": 25619,
+    "sha256": "153b19da4c83d923d5498d42159b3e37a03d5e40b8870563ce8e9c7f3d35f559"
+  },
+  {
+    "url": "https://rive.app/docs/editor/text/text-overview.md",
+    "retrievalId": "extra-6",
+    "status": 200,
+    "bytes": 5851,
+    "sha256": "51db99928be52e8d2e942f4ee47c3590f288d8c0f428ababb318d7f6ef9ac658"
+  },
+  {
+    "url": "https://rive.app/docs/game-runtimes/unity/unity.md",
+    "retrievalId": "extra-7",
+    "status": 200,
+    "bytes": 22802,
+    "sha256": "ffb20e65d1269c818aa6a3c332ba823d489ce8f822984843da168ca0c2b43cec"
+  },
+  {
+    "url": "https://rive.app/docs/game-runtimes/unreal/unreal.md",
+    "retrievalId": "extra-8",
+    "status": 200,
+    "bytes": 2211,
+    "sha256": "b271b20ee33f97b79008a9b4fafd9fb19e720100b548337cad6f269f2edb7039"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosans/NotoSans%5Bwdth,wght%5D.ttf",
+    "retrievalId": "extra-9",
+    "status": 200,
+    "bytes": 2049096,
+    "sha256": "bfb7bb691513f12e734dc346c03a03f784912432d7e3fa8e56efcf906fe86b3d"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosans/OFL.txt",
+    "retrievalId": "extra-10",
+    "status": 200,
+    "bytes": 4396,
+    "sha256": "cee9892f9f0cc8fe882c9e9537ee6a89621d86ee7ceaf70b02e2b2b1c25c061a"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/main/include/rive/shapes/paint/feather.hpp",
+    "retrievalId": "extra-11",
+    "status": 200,
+    "bytes": 1505,
+    "sha256": "a0afaddfadaaa0ce37c3d4537e31bd5d9688e738993f0c0a53b4da2459bacefa"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/main/renderer/src/render_context.cpp",
+    "retrievalId": "extra-12",
+    "status": 200,
+    "bytes": 188333,
+    "sha256": "9bec88a9cd982c3c5efa458e6494111152b0243ca8d1367090f4db54656de2fb"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/main/include/rive/generated/text/text_base.hpp",
+    "retrievalId": "extra-13",
+    "status": 200,
+    "bytes": 15225,
+    "sha256": "52134ac3cfe97fa9a99bbd76dc9db62e165abc3fe87aa46e76871bc25a8420ee"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/main/include/rive/generated/text/text_style_base.hpp",
+    "retrievalId": "extra-14",
+    "status": 200,
+    "bytes": 3929,
+    "sha256": "f3b48b0bf7d41c6a82400d022410794a68ef8bd32ef9996055eda35fed746bdc"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/artboard.cpp",
+    "retrievalId": "static-artboard-runtime",
+    "status": 200,
+    "resolvedUrl": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/artboard.cpp",
+    "bytes": 153600,
+    "sha256": "20ff07251cbab3cfbf97e68e44247a7417264182b0ce124b9baef8d6890dc7d7",
+    "checkedAt": "2026-10-11T21:51:49.510610+00:00"
+  }
+]

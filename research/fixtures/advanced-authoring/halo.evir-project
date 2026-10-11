@@ -1,0 +1,61 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 3,
+  "id": "halo-project",
+  "name": "halo",
+  "artboards": [
+    {
+      "id": "halo-board",
+      "name": "halo",
+      "width": 256,
+      "height": 256
+    }
+  ],
+  "nodes": [
+    {
+      "id": "halo-glow",
+      "name": "glow",
+      "kind": "rectangle",
+      "parentId": null,
+      "artboardId": "halo-board",
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        72,
+        72
+      ],
+      "geometry": {
+        "width": 112,
+        "height": 112,
+        "fill": "#8bdcba"
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "halo-board": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  },
+  "advanced": {
+    "clips": [],
+    "feathers": [
+      {
+        "targetId": "halo-glow",
+        "strength": 12
+      }
+    ],
+    "ik": []
+  }
+}

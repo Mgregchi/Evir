@@ -1,3 +1,4 @@
+import { paintProperties, isColorProperty } from "./advanced.mjs";
 import { validatePaint } from "./paint.mjs";
 import { inverse } from "./primitives.mjs";
 export const ANIMATABLE = [
@@ -19,16 +20,24 @@ export function propertiesFor(n) {
     "rotation",
     "scaleX",
     "scaleY",
+    ...paintProperties(n),
     ...(n.kind === "rectangle"
       ? ["width", "height", ...fill]
       : n.kind === "path"
         ? fill
         : n.kind === "bone"
           ? ["length"]
-          : []),
+          : n.kind === "text"
+            ? ["fontSize", "fill"]
+            : []),
   ];
 }
-export function validateFeatures(p, problem, identifier, { editorState = true } = {}) {
+export function validateFeatures(
+  p,
+  problem,
+  identifier,
+  { editorState = true } = {},
+) {
   const rec = (v, path, keys) => {
     if (!v || typeof v !== "object" || Array.isArray(v)) {
       problem(path, "expected object");
@@ -81,7 +90,7 @@ export function validateFeatures(p, problem, identifier, { editorState = true } 
     if (typeof g.closed !== "boolean")
       problem(path + ".closed", "expected boolean");
     validatePaint(g.fill, path + ".fill", problem);
-    if (g.skin !== null && typeof g.fill !== "string")
+    if (!p.advanced && g.skin !== null && typeof g.fill !== "string")
       problem(
         path + ".fill",
         "gradient paint on skinned paths is outside the supported contract",
@@ -216,10 +225,14 @@ export function validateFeatures(p, problem, identifier, { editorState = true } 
         )
           problem(path, "keys must be sorted, unique frames within duration");
         previous = k.frame;
-        if (t.property === "fill") color(k.value, path + ".key");
+        if (!p.advanced && t.property.startsWith("paint."))
+          problem(path, "paint keys require advanced source version 3");
+        if (isColorProperty(t.property)) color(k.value, path + ".key");
         else if (
           !Number.isFinite(k.value) ||
-          (["width", "height", "length"].includes(t.property) && k.value <= 0)
+          (["width", "height", "length", "fontSize"].includes(t.property) &&
+            k.value <= 0) || (t.property === "fontSize" && k.value > 512) ||
+          (t.property.endsWith(".position") && (k.value < 0 || k.value > 1))
         )
           problem(path + ".key", "invalid numeric value");
         if (!rec(k.easing, path + ".easing", ["type", "curve"])) continue;
@@ -284,7 +297,13 @@ export function validateFeatures(p, problem, identifier, { editorState = true } 
     }
     for (const state of m.states) {
       if (
-        !rec(state, path + ".state", ["id", "name", "animationId", ...(editorState ? ["position"] : [])])
+        !rec(state, path + ".state", [
+          "id",
+          "name",
+          "animationId",
+          ...(editorState ? ["position"] : []),
+          ...(state?.blend ? ["blend"] : []),
+        ])
       )
         continue;
       identifier(state.id, path + ".state.id");
@@ -292,17 +311,62 @@ export function validateFeatures(p, problem, identifier, { editorState = true } 
       states.add(state.id);
       if (anims.get(state.animationId)?.artboardId !== m.artboardId)
         problem(path, "state needs an animation in its artboard");
+      if (state.blend) {
+        const b = state.blend;
+        if (!p.advanced) problem(path, "blend states require advanced source");
+        if (rec(b, path + ".blend", ["type", "inputId", "children"])) {
+          if (b.type !== "1d" || inputs.get(b.inputId)?.type !== "number")
+            problem(path, "1D blend needs a number input");
+          if (arr(b.children, path + ".children")) {
+            if (b.children.length < 2)
+              problem(path, "two blend children required");
+            let previous = -Infinity;
+            for (const child of b.children) {
+              if (!rec(child, path + ".child", ["animationId", "position"]))
+                continue;
+              if (
+                anims.get(child.animationId)?.artboardId !== m.artboardId ||
+                !Number.isFinite(child.position) ||
+                child.position <= previous
+              )
+                problem(
+                  path,
+                  "blend children need animations and increasing positions",
+                );
+              previous = child.position;
+            }
+          }
+        }
+      }
       if (editorState) vec(state.position, path + ".position");
     }
     if (!states.has(m.entryStateId)) problem(path, "missing entry state");
     for (const t of m.transitions) {
-      if (!rec(t, path + ".transition", ["id", "fromId", "toId", "conditions"]))
+      if (
+        !rec(t, path + ".transition", [
+          "id",
+          "fromId",
+          "toId",
+          "conditions",
+          ...("durationMs" in t ? ["durationMs"] : []),
+          ...("exitTimeMs" in t ? ["exitTimeMs"] : []),
+        ])
+      )
         continue;
       identifier(t.id, path + ".transition.id");
       if (!states.has(t.fromId) || !states.has(t.toId))
         problem(path, "missing transition state");
       if (!arr(t.conditions, path + ".conditions")) continue;
-      if (!t.conditions.length)
+      for (const k of ["durationMs", "exitTimeMs"])
+        if (
+          k in t &&
+          (!p.advanced || !Number.isInteger(t[k]) || t[k] < 0 || t[k] > 600000)
+        )
+          problem(
+            path,
+            "transition times require advanced source and integer milliseconds 0–600000",
+          );
+      if (!t.conditions.length && !("exitTimeMs" in t))
         problem(path, "a conditional transition needs at least one condition");
       for (const c of t.conditions) {
         if (!rec(c, path + ".condition", ["inputId", "op", "value"])) continue;

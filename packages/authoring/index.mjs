@@ -1,4 +1,4 @@
-import { ProjectError, newId as id, newId, worldTransform, multiply, inverse, validateProject } from "@evir/project-model";
+import { ProjectError, newId as id, newId, worldTransform, multiply, inverse, validateProject, upgradeAdvanced } from "@evir/project-model";
 import { quantize, components } from "@evir/runtime/geometry";
 const copy=x=>structuredClone(x), clone=copy, identity=()=>[1,0,0,1,0,0];
 export function pathGeometry() {
@@ -151,6 +151,11 @@ export function removeSubtree(p, nodeId) {
   if (p.machines)
     for (const m of p.machines)
       m.listeners = m.listeners.filter((l) => !removed.has(l.targetId));
+  if(p.advanced){
+    p.advanced.clips=p.advanced.clips.filter(c=>!removed.has(c.targetId)&&!removed.has(c.maskId));
+    p.advanced.feathers=p.advanced.feathers.filter(c=>!removed.has(c.targetId));
+    p.advanced.ik=p.advanced.ik.filter(c=>!removed.has(c.boneId)&&!removed.has(c.targetId));
+  }
   p.nodes = p.nodes.filter((n) => !removed.has(n.id));
   for (const k of ["locked", "hidden"])
     p.editor[k] = p.editor[k].filter((v) => !removed.has(v));
@@ -310,6 +315,7 @@ export function bindPath(p, nodeId, boneIds) {
   const n = p.nodes.find((n) => n.id === nodeId);
   if (n.kind !== "path" || !boneIds.length || boneIds.length > 4)
     throw Error("Select a path and one to four bones");
+  if(typeof n.geometry.fill!=="string")upgradeAdvanced(p);
   const bindWorld = worldTransform(p, nodeId),
     bones = boneIds.map((boneId) => {
       const bone = p.nodes.find((v) => v.id === boneId);
@@ -402,6 +408,7 @@ export function setKey(
   value,
   easing = { type: "linear", curve: null },
 ) {
+  if(property.startsWith("paint."))upgradeAdvanced(p);
   const a = p.animations.find((a) => a.id === animationId);
   let t = a.tracks.find(
     (t) => t.targetId === targetId && t.property === property,

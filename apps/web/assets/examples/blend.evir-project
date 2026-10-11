@@ -1,0 +1,177 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 3,
+  "id": "blend-project",
+  "name": "blend",
+  "artboards": [
+    {
+      "id": "blend-board",
+      "name": "blend",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "blend-marker",
+      "name": "marker",
+      "kind": "rectangle",
+      "parentId": null,
+      "artboardId": "blend-board",
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        70,
+        216
+      ],
+      "geometry": {
+        "width": 70,
+        "height": 80,
+        "fill": "#89dcc0"
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [
+    {
+      "id": "blend-Left",
+      "name": "Left",
+      "artboardId": "blend-board",
+      "fps": 60,
+      "duration": 60,
+      "loop": false,
+      "tracks": [
+        {
+          "targetId": "blend-marker",
+          "property": "x",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 70,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "blend-Right",
+      "name": "Right",
+      "artboardId": "blend-board",
+      "fps": 60,
+      "duration": 60,
+      "loop": false,
+      "tracks": [
+        {
+          "targetId": "blend-marker",
+          "property": "x",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 372,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "machines": [
+    {
+      "id": "blend-machine",
+      "name": "Motion",
+      "artboardId": "blend-board",
+      "inputs": [
+        {
+          "id": "blend-level",
+          "name": "position",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "id": "blend-on",
+          "name": "active",
+          "type": "boolean",
+          "value": false
+        }
+      ],
+      "states": [
+        {
+          "id": "blend-idle",
+          "name": "Idle",
+          "animationId": "blend-Left",
+          "position": [
+            0,
+            0
+          ]
+        },
+        {
+          "id": "blend-active",
+          "name": "Blend",
+          "animationId": "blend-Left",
+          "position": [
+            200,
+            0
+          ],
+          "blend": {
+            "type": "1d",
+            "inputId": "blend-level",
+            "children": [
+              {
+                "animationId": "blend-Left",
+                "position": 0
+              },
+              {
+                "animationId": "blend-Right",
+                "position": 1
+              }
+            ]
+          }
+        }
+      ],
+      "entryStateId": "blend-idle",
+      "transitions": [
+        {
+          "id": "blend-start",
+          "fromId": "blend-idle",
+          "toId": "blend-active",
+          "conditions": [
+            {
+              "inputId": "blend-on",
+              "op": "eq",
+              "value": true
+            }
+          ],
+          "durationMs": 400,
+          "exitTimeMs": 200
+        }
+      ],
+      "listeners": []
+    }
+  ],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "blend-board": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  },
+  "advanced": {
+    "clips": [],
+    "feathers": [],
+    "ik": []
+  }
+}

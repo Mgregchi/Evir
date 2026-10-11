@@ -1,0 +1,81 @@
+{
+  "checkedAt": "2026-10-11T22:00:40.538634+00:00",
+  "baseMainCommit": "a589dfe",
+  "scope": "Declared advanced 2D contracts and original gallery, tested in software Chromium. No physical-device, human, screen-reader or broad Rive parity claims.",
+  "checks": [
+    {
+      "command": "npm run test:runtime",
+      "exitCode": 0,
+      "tests": 6
+    },
+    {
+      "command": "npm run test:frontend",
+      "exitCode": 0,
+      "tests": 14
+    },
+    {
+      "command": "npm run runtime:build",
+      "exitCode": 0,
+      "standalonePackages": 5
+    },
+    {
+      "command": "npm run test:editor",
+      "exitCode": 0,
+      "unitTests": 54,
+      "browserSuites": 10
+    },
+    {
+      "command": "npm run validate:editor",
+      "exitCode": 0,
+      "scope": "Existing authoring oracles plus the initial advanced suite on both official backends"
+    },
+    {
+      "command": "npm run test:web",
+      "exitCode": 0,
+      "pageConfigurationChecks": 22,
+      "examples": 14,
+      "galleryComparisonsPerBackend": 83
+    },
+    {
+      "command": "npm run test:experience",
+      "exitCode": 0,
+      "scope": "Retries, idle callbacks, feedback, SEO and recovery"
+    },
+    {
+      "command": "npm run build && node --test tests/editor/*.test.mjs && node tests/editor/advanced-browser.cjs",
+      "exitCode": 0,
+      "unitTests": 54,
+      "scope": "Final indexed mesh controls, in-sheet errors, selected assets and resource lifetime"
+    },
+    {
+      "command": "node tools/validate-authoring-suite.cjs && RIVE_RENDERER=webgl2 node tools/validate-authoring-suite.cjs",
+      "exitCode": 0,
+      "advancedComparisons": {
+        "canvas": 33,
+        "webgl2": 33
+      },
+      "scope": "Final deterministic fixtures, including one-bone, inverted and half-strength IK"
+    },
+    {
+      "command": "node --test tests/editor/advanced.test.mjs",
+      "exitCode": 0,
+      "tests": 7,
+      "scope": "Final reproducible generation, semantic round trips and header packing"
+    },
+    {
+      "command": "npm run web:build && node tests/editor/advanced-browser.cjs",
+      "exitCode": 0,
+      "scope": "Final .riv upload pre-read budget, observable failed-import completion, indexed mesh navigation, font asset selection and resource cleanup"
+    }
+  ],
+  "fixtureHashesVerified": true,
+  "feather": "Approximation envelope: Canvas MAE <17, WebGL2 MAE <6. Other advanced fixtures MAE <3; timed machine MAE <1.",
+  "outstanding": [
+    "Broader Editor import: five supplied exports reject unsupported contracts; room-decor download exceeds 32 MiB transfer limit",
+    "Rich text/layout, inner feather, general IK, graphical multi-bone mesh weighting, direct/nested blends",
+    "Physical devices and measured memory/GPU behavior",
+    "Matched Editor-produced scenes",
+    "Human/assistive-technology sessions",
+    "Backend and AI/MCP implementation excluded by user"
+  ]
+}
