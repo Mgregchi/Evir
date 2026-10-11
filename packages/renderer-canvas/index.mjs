@@ -1,5 +1,14 @@
 import { worldTransform } from "@evir/project-model";
 import { worldPoints, mapPoint } from "@evir/runtime/geometry";
+export function paintOnContext(ctx, fill) {
+  if (typeof fill === "string") return fill;
+  const [x, y] = fill.start, [ex, ey] = fill.end;
+  const gradient = fill.type === "linear"
+    ? ctx.createLinearGradient(x, y, ex, ey)
+    : ctx.createRadialGradient(x, y, 0, x, y, Math.hypot(ex - x, ey - y));
+  for (const stop of fill.stops) gradient.addColorStop(stop.position, stop.color);
+  return gradient;
+}
 export function pathOnContext(ctx, points, closed) {
   ctx.beginPath();
   ctx.moveTo(...points[0].anchor);
@@ -51,13 +60,17 @@ export function drawScene(
     if (n.kind === "rectangle") {
       ctx.save();
       ctx.transform(...worldTransform(p, n.id));
-      ctx.fillStyle = n.geometry.fill;
+      ctx.fillStyle = paintOnContext(ctx, n.geometry.fill);
       ctx.fillRect(0, 0, n.geometry.width, n.geometry.height);
       ctx.restore();
     } else if (n.kind === "path") {
-      pathOnContext(ctx, worldPoints(p, n), n.geometry.closed);
-      ctx.fillStyle = n.geometry.fill;
+      ctx.save();
+      const gradient = typeof n.geometry.fill !== "string";
+      if (gradient) ctx.transform(...worldTransform(p, n.id));
+      pathOnContext(ctx, gradient ? n.geometry.points : worldPoints(p, n), n.geometry.closed);
+      ctx.fillStyle = paintOnContext(ctx, n.geometry.fill);
       ctx.fill("nonzero");
+      ctx.restore();
     }
   }
 }

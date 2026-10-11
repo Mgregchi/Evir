@@ -1,3 +1,5 @@
+import { validatePaint } from "./paint.mjs";
+export { validatePaint, MAX_GRADIENT_STOPS } from "./paint.mjs";
 import { validateFeatures } from "./features.mjs";
 import { ProjectError, newId as id } from "./primitives.mjs";
 export { ProjectError, newId, mapPoint, multiply, inverse, worldTransform } from "./primitives.mjs";
@@ -145,11 +147,9 @@ function validateDocument(p, runtime) {
       if (record(n.geometry, `${path}.geometry`, ["width", "height", "fill"])) {
         positive(n.geometry.width, `${path}.geometry.width`);
         positive(n.geometry.height, `${path}.geometry.height`);
-        if (
-          typeof n.geometry.fill !== "string" ||
-          !/^#[\da-fA-F]{6}([\da-fA-F]{2})?$/.test(n.geometry.fill)
-        )
-          problem(`${path}.geometry.fill`, "expected #RRGGBB or #RRGGBBAA");
+        if (sceneVersion === 1 && typeof n.geometry.fill !== "string")
+          problem(`${path}.geometry.fill`, "gradients require source version 2");
+        validatePaint(n.geometry.fill, `${path}.geometry.fill`, problem);
       }
     } else if (n.kind === "group") {
       if (n.geometry !== null)

@@ -220,7 +220,22 @@ function wisp() {
   return p;
 }
 
-const factories={milo,orbit,bloom,tempo,signal,gather,wisp};
+function dawn() {
+  const {p,node,path,oval,box,anim,key}=project('dawn','Dawn — a little light');
+  const linear=(start,end,colors)=>({type:'linear',start,end,stops:colors.map((color,i)=>({position:i/(colors.length-1),color}))});
+  const radial=(start,end,colors)=>({...linear(start,end,colors),type:'radial'});
+  box('sky',52,52,408,408,44,linear([0,0],[0,408],['#233e34','#a9d9bd','#f5e4ca']));
+  const sun=node('sun-motion','group',null,null,304,220);
+  p.nodes.find(n=>n.id===sun).transform=[1,0,0,.82,304,220];
+  oval('sun',0,0,92,92,radial([-22,-22],[90,0],['#fff5d9','#efbe92','#dd927a']),sun);
+  path('far-hill',[[[65,368],[65,368],[137,250]],[[264,298],[176,239],[350,270]],[[448,353],[391,268],[448,353]],[[448,419]],[[65,419]]],linear([0,275],[0,420],['#8bbca0','#4c8264']));
+  path('near-hill',[[[65,405],[65,405],[158,385]],[[286,360],[216,339],[360,358]],[[448,405],[404,382],[448,405]],[[448,438]],[[65,438]]],linear([70,380],[440,440],['#47775e','#213d33']));
+  oval('light-mote',145,155,6,6,'#f9edc7');oval('small-mote',199,121,3,3,'#f9edc7');
+  const rise=anim('rise','Rise');key(rise,sun,'y',[[0,220],[60,194],[120,220]]);key(rise,sun,'rotation',[[0,-.08],[60,.08],[120,-.08]]);
+  return p;
+}
+
+const factories={milo,orbit,bloom,tempo,signal,gather,wisp,dawn};
 await mkdir(output,{recursive:true});
 for(const name of exampleIds) {
   const p=factories[name]();validateProject(p);

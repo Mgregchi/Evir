@@ -1,0 +1,87 @@
+{
+  "retrievedAt": "2026-10-11",
+  "sources": [
+    {
+      "url": "https://modelcontextprotocol.io/specification/2025-11-25/architecture",
+      "resolvedUrl": "https://modelcontextprotocol.io/specification/2025-11-25/architecture",
+      "status": 200,
+      "bytes": 305327,
+      "sha256": "2273df5710c1c44b62dff96d035944f1ee65a16cd4ef5d2bcaeedf630af11690",
+      "retrievalId": "0"
+    },
+    {
+      "url": "https://modelcontextprotocol.io/specification/2025-11-25/server/tools",
+      "resolvedUrl": "https://modelcontextprotocol.io/specification/2025-11-25/server/tools",
+      "status": 200,
+      "bytes": 690513,
+      "sha256": "436f2db26f767f934f80fdf8e607b4dd5bd20729912c399678da5f59dc42cfde",
+      "retrievalId": "1"
+    },
+    {
+      "url": "https://modelcontextprotocol.io/specification/2025-11-25/basic/transports",
+      "resolvedUrl": "https://modelcontextprotocol.io/specification/2025-11-25/basic/transports",
+      "status": 200,
+      "bytes": 373928,
+      "sha256": "70d19cb7d02993a33e20ee24afeb55545e7770bea788921e3dd85c994d2e9336",
+      "retrievalId": "2"
+    },
+    {
+      "url": "https://developers.cloudflare.com/durable-objects/",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://developers.cloudflare.com/d1/",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://developers.cloudflare.com/r2/",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/cloudflare/cloudflare-docs/production/src/content/docs/durable-objects/index.mdx",
+      "resolvedUrl": "https://raw.githubusercontent.com/cloudflare/cloudflare-docs/production/src/content/docs/durable-objects/index.mdx",
+      "status": 200,
+      "bytes": 4596,
+      "sha256": "9b9f18510be8b6aeca85ce4a631206a189dda54542be3ff8469dc54ce3e1ffab",
+      "retrievalId": "extra-0"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/cloudflare/cloudflare-docs/production/src/content/docs/d1/index.mdx",
+      "resolvedUrl": "https://raw.githubusercontent.com/cloudflare/cloudflare-docs/production/src/content/docs/d1/index.mdx",
+      "status": 200,
+      "bytes": 3781,
+      "sha256": "48418d3a491f694dc6565b7239edf95f54feaf16925180be8102eb39b93f96c9",
+      "retrievalId": "extra-1"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/cloudflare/cloudflare-docs/production/src/content/docs/r2/index.mdx",
+      "resolvedUrl": "https://raw.githubusercontent.com/cloudflare/cloudflare-docs/production/src/content/docs/r2/index.mdx",
+      "status": 200,
+      "bytes": 3534,
+      "sha256": "a5d3a14a04d8ae2b8dc49533459c1aae563be6e0d809b400db75150cc3fb7838",
+      "retrievalId": "extra-2"
+    },
+    {
+      "url": "https://modelcontextprotocol.io/extensions/apps/overview",
+      "status": 200,
+      "resolved": "https://modelcontextprotocol.io/extensions/apps/overview",
+      "bytes": 347010,
+      "sha256": "50d55febd26e253a22a7c2bb18718d20f605871f428574b8c0839d92370dce1b"
+    },
+    {
+      "url": "https://modelcontextprotocol.io/specification/2025-11-25/basic/authorization",
+      "status": 200,
+      "resolved": "https://modelcontextprotocol.io/specification/2025-11-25/basic/authorization",
+      "bytes": 618643,
+      "sha256": "cabdebb7cc7c586ed302aba77cbf122d957d70cb23ba2072366f86c004e9cc4e"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/modelcontextprotocol/ext-apps/main/README.md",
+      "status": 200,
+      "resolved": "https://raw.githubusercontent.com/modelcontextprotocol/ext-apps/main/README.md",
+      "bytes": 18932,
+      "sha256": "03bb330e99c0ee241cde4614e78cfc7c17f3593b145c69ddd0f6c930606b8c0e"
+    }
+  ],
+  "note": "Sources are primary documentation/source, not empirical provider, hardware or host compatibility tests. Direct Cloudflare documentation returned 403; its public source repository supplied the read overviews."
+}

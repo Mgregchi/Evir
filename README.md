@@ -150,3 +150,5 @@ To connect the repository directly to Cloudflare or Netlify, follow [the GitHub-
 [Product boundaries and deployment](docs/18-architecture-boundaries-and-deployment.md) records the separation decision. [The completed migration](docs/19-workspace-migration.md) describes actual ownership, the composed web build, package contracts, hosting configuration and verification. Public-site changes no longer require an editor/runtime release.
 
 The [Studio interaction guide and remaining-work plan](docs/25-studio-navigation-and-remaining-work.md) tracks the latest navigation/layer work and the remaining authoring, engine, evidence and later-service work.
+
+Static gradient authoring and the original Dawn study are documented in [gradient acceptance](docs/28-studio-gradient-paints.md). The proposed independent persistence/live-session backend, remote MCP tools and agent-defined audience controls are recorded in [backend and live agent sessions](docs/29-backend-and-live-agent-sessions.md); these services remain proposals, not shipped integrations.

@@ -229,16 +229,30 @@ export function compileProject(project, schema = runtimeSchema) {
           }
         }
         if (["rectangle", "path"].includes(n.kind)) {
-          const fill = componentRecord("Fill", { parentId: index }).index,
-            paint = componentRecord("SolidColor", {
-              parentId: fill,
-              colorValue: color(n.geometry.fill),
+          const fill = componentRecord("Fill", { parentId: index }).index;
+          const paint = n.geometry.fill;
+          if (typeof paint === "string") {
+            const solid = componentRecord("SolidColor", {
+              parentId: fill, colorValue: color(paint),
             }).index;
-          targets.set(n.id + "/fill", {
-            index: paint,
-            type: "SolidColor",
-            property: "colorValue",
-          });
+            targets.set(n.id + "/fill", {
+              index: solid, type: "SolidColor", property: "colorValue",
+            });
+          } else {
+            const gradient = componentRecord(
+              paint.type === "linear" ? "LinearGradient" : "RadialGradient",
+              {
+                parentId: fill,
+                startX: paint.start[0], startY: paint.start[1],
+                endX: paint.end[0], endY: paint.end[1],
+              },
+            ).index;
+            for (const stop of paint.stops)
+              componentRecord("GradientStop", {
+                parentId: gradient,
+                position: stop.position, colorValue: color(stop.color),
+              });
+          }
         }
         traverse(n.id);
       }
@@ -453,6 +467,6 @@ export function compileProject(project, schema = runtimeSchema) {
     bytes: Uint8Array.from(out),
     mapping,
     scope:
-      "Solid rectangles/cubic paths, TRS groups and bone chains, four-influence control skinning, typed linear/hold/cubic keys, one-layer conditional machines and click listeners. No universal Rive compatibility.",
+      "Solid and static linear/radial gradient rectangles/unskinned cubic paths, TRS groups and bone chains, four-influence control skinning, typed linear/hold/cubic keys, one-layer conditional machines and click listeners. No universal Rive compatibility.",
   };
 }

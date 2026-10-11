@@ -1,0 +1,73 @@
+{
+  "retrievedAt": "2026-10-11",
+  "sources": [
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createLinearGradient",
+      "resolvedUrl": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createLinearGradient",
+      "status": 200,
+      "bytes": 163049,
+      "sha256": "6ff380860750dda7c56ca061f465c8880fa79d440e05a95763d18e860494ea9b",
+      "retrievalId": "6"
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createRadialGradient",
+      "resolvedUrl": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createRadialGradient",
+      "status": 200,
+      "bytes": 162112,
+      "sha256": "f529702d4eb550b0e2fe6d3b14a2f65ba057d1fcc68220ec83096f6c2d78597c",
+      "retrievalId": "7"
+    },
+    {
+      "url": "https://rive.app/docs/editor/shapes/paint",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/main/include/rive/shapes/paint/linear_gradient.hpp",
+      "resolvedUrl": "https://raw.githubusercontent.com/rive-app/rive-runtime/main/include/rive/shapes/paint/linear_gradient.hpp",
+      "status": 200,
+      "bytes": 2461,
+      "sha256": "7f274dc3ac8423d4a08a499c49ce0410c2322fa9c82dbc3bea00dbe4fd931064",
+      "retrievalId": "9"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/main/include/rive/shapes/paint/radial_gradient.hpp",
+      "resolvedUrl": "https://raw.githubusercontent.com/rive-app/rive-runtime/main/include/rive/shapes/paint/radial_gradient.hpp",
+      "status": 200,
+      "bytes": 486,
+      "sha256": "aa863f02b5f021b03c30a0d24f9dc346b16f55932c9c9148983986fea3cbfde5",
+      "retrievalId": "10"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/main/include/rive/generated/shapes/paint/gradient_stop_base.hpp",
+      "resolvedUrl": "https://raw.githubusercontent.com/rive-app/rive-runtime/main/include/rive/generated/shapes/paint/gradient_stop_base.hpp",
+      "status": 200,
+      "bytes": 2379,
+      "sha256": "588f9c0bf4db3e6cf2bc85b88e3ae1e9a19002ace9f4b116189198cde83c1260",
+      "retrievalId": "11"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/main/src/shapes/paint/linear_gradient.cpp",
+      "resolvedUrl": "https://raw.githubusercontent.com/rive-app/rive-runtime/main/src/shapes/paint/linear_gradient.cpp",
+      "status": 200,
+      "bytes": 8698,
+      "sha256": "78fbb77d97bebf18af1183181ae603d497fd1e9f514e6188376766a0d05b5c88",
+      "retrievalId": "extra-3"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/main/src/shapes/paint/radial_gradient.cpp",
+      "resolvedUrl": "https://raw.githubusercontent.com/rive-app/rive-runtime/main/src/shapes/paint/radial_gradient.cpp",
+      "status": 200,
+      "bytes": 879,
+      "sha256": "bd268e8e3e1f28da76af8e15b47d47d996fd8575ac291522bf2a16f00f5ad8aa",
+      "retrievalId": "extra-4"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/include/rive/generated/shapes/paint/shape_paint_base.hpp",
+      "status": 200,
+      "resolved": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/include/rive/generated/shapes/paint/shape_paint_base.hpp",
+      "bytes": 3835,
+      "sha256": "62a759ff66392390a879837c44c3f55aff720c08526375fc17f80312155c53f5"
+    }
+  ],
+  "note": "Sources are primary documentation/source, not empirical provider, hardware or host compatibility tests. Direct Cloudflare documentation returned 403; its public source repository supplied the read overviews."
+}

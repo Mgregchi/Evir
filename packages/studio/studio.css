@@ -1524,3 +1524,9 @@ body > #notice {
   width: 20px;
   height: 20px;
 }
+
+.gradient-stop { border: 1px solid var(--line, #354047); border-radius: 12px; padding: 12px; margin: 12px 0; min-width: 0; }
+.gradient-stop legend { padding: 0 6px; }
+#paint-error { color: #ffc4b4; overflow-wrap: anywhere; }
+#paint-sheet .field-pair { min-width: 0; }
+#paint-sheet input { min-width: 0; }
