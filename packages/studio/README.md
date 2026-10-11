@@ -51,3 +51,5 @@ Reparenting preserves world transforms, including shear, and rejects ownership/c
 [Selection and experience quality evidence](../../docs/22-selection-and-experience-quality.md) covers the responsive panels, keyboard workflows, loading recovery and lifecycle checks. The private `@evir/ui` package shares frontend loading/feedback primitives with web; it has no engine or hosting role.
 
 For workspace navigation, panel widths and layer organization, see [the interaction guide and remaining-work plan](../../docs/25-studio-navigation-and-remaining-work.md). Layout widths are browser preferences, separate from editable project files.
+
+For snapping and Inspector alignment, see [the alignment guide](../../docs/26-studio-alignment-and-snapping.md). Canvas view stores its snapping toggle as a separate browser preference; temporary guide overlays never enter the project or runtime export.

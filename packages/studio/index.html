@@ -282,6 +282,12 @@
         </div>
         <div class="stage-footer">
           <span id="selection-status">Select a layer to edit</span>
+          <span
+            id="alignment-status"
+            class="sr-only"
+            role="status"
+            aria-live="polite"
+          ></span>
           <div id="pen-actions" hidden>
             <button id="finish-path">Finish path</button
             ><button id="cancel-path">Cancel path</button>
@@ -329,6 +335,13 @@
       <button id="fit-selection">
         Fit selection <kbd aria-hidden="true">Shift F</kbd>
       </button>
+      <label class="snap-toggle"
+        ><input id="snap-alignment" type="checkbox" /> Snap to alignment</label
+      >
+      <p>
+        Align edges and centers while moving layers. Hold Alt to move freely.
+        Alignment buttons in Properties also work without dragging.
+      </p>
       <fieldset class="panel-widths">
         <legend>Desktop panel widths</legend>
         <label

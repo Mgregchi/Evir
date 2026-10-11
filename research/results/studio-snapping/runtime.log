@@ -1,0 +1,23 @@
+
+> evir-workspace@0.1.0 test:runtime
+> node --test tests/runtime/*.test.mjs
+
+✔ package imports have an acyclic graph and cannot reach applications, tools or Rive runtime dependencies (2.502334ms)
+✔ runtime snapshots exclude editor state and preserve source, skinning, animation and input contracts (9.576232ms)
+✔ runtime validates input types and preserves transitions, trigger consumption, click and reset (3.864324ms)
+✔ runtime seconds match source keyframe evaluation, loop/clamp and reset (3.165268ms)
+✔ runtime JSON loader validates references, schema and asset hashes without editor metadata (9.186811ms)
+✔ format package embeds the pinned schema and preserves published showcase bytes (7.271207ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 95.834572
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice

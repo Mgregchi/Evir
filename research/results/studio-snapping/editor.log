@@ -1,0 +1,92 @@
+
+> evir-workspace@0.1.0 test:editor
+> npm run web:build && node --test tests/editor/*.test.mjs && node tests/editor/browser.cjs && node tests/editor/authoring-browser.cjs && node tests/editor/pen-browser.cjs && node tests/editor/selection-browser.cjs && node tests/editor/workspace-browser.cjs && node tests/editor/navigation-browser.cjs && node tests/editor/alignment-browser.cjs
+
+
+> evir-workspace@0.1.0 web:build
+> npm run build --workspace @evir/web
+
+
+> @evir/web@0.1.0 build
+> node build.mjs
+
+Built 11 Evir public pages into apps/web/dist; editor destination /editor/studio/
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+✔ Snapping uses six screen pixels at different zooms, separate axes and Alt bypass (9.71391ms)
+✔ Targets exclude moving ancestors and descendants, hidden ancestry and other artboards (1.710683ms)
+✔ One root aligns to artboard; several align bounding edges and centers under affine parents with one undo (8.834648ms)
+✔ Invalid selected members reject alignment without partial changes (0.860834ms)
+✔ Snap targets are immutable drag snapshots and artboard centers are valid references (0.475799ms)
+✔ compiler preserves source, produces stable bytes and explicit component/source namespaces (17.562278ms)
+✔ unsupported assets, shear, singular transforms and float32 overflow fail before download (1.625608ms)
+✔ source IDs remain opaque even when they match JavaScript prototype names (0.574434ms)
+✔ save/open retains IDs, affine transforms, authoring controls and verified asset bytes (19.344006ms)
+✔ opening rejects unknown versions, future fields, broken ownership, cycles and nonfinite transforms (2.195805ms)
+✔ reparent preserves world matrix under rotated, scaled and sheared parents and across undo/redo (1.713898ms)
+✔ singular, cross-artboard and cyclic reparent failures leave committed state and history unchanged (1.1439ms)
+✔ preview is isolated, cancellation restores exact state, many drag updates create one undo entry (8.76106ms)
+✔ rejected and throwing edits are atomic; caller references cannot mutate stored data (1.062201ms)
+✔ subtree deletion removes descendant settings and undo restores every record (0.889847ms)
+✔ draw order is explicit; branching discards redo and no-op edits preserve it (1.152192ms)
+✔ v1 migration validates and retains all old content (6.547808ms)
+✔ curve insertion is De Casteljau subdivision and carries stable point IDs (1.233232ms)
+✔ quantized one-through-four influences always sum to 255 bytes (1.149037ms)
+✔ nonidentity binding leaves the rest pose unchanged; child tips and independently weighted handles deform correctly (2.031685ms)
+✔ deleting a referenced bone fails atomically; deleting paths cleans tracks and listeners (1.528265ms)
+✔ linear, hold, cubic and color keys evaluate deterministically without writing defaults (0.693279ms)
+✔ typed machine conditions, transient triggers, listeners and reset preserve the source project (1.065004ms)
+✔ scale tracks remain independent through reflection and zero; track order does not change a pose (0.354351ms)
+✔ immediate machines settle guarded transition chains and consume triggers only once (0.499483ms)
+✔ Two-finger camera preserves the midpoint world position with translation and clamped zoom (2.499221ms)
+✔ Desktop panels reserve a usable stage under either resizing direction (0.505653ms)
+✔ Collapsed hierarchy and search retain matching ancestors without changing source (4.099673ms)
+✔ Bulk organization preserves affine world positions and descendant IDs in one Undo step (2.958296ms)
+✔ Invalid destinations, locked selections, singular transforms and rig constraints leave History unchanged (1.57269ms)
+✔ Organization does not silently break animation keys by changing parent spaces (0.944507ms)
+✔ Pen drawing preserves world anchors and mirrored handles under an affine parent (10.924558ms)
+✔ Pen drafts enforce valid topology, close in screen space and cancel interrupted gestures (0.913622ms)
+✔ Multiple selection uses world deltas under distinct affine parents and one history step (9.883629ms)
+✔ Selected ancestors move descendants once and invalid members reject preparation before mutation (1.244047ms)
+✔ Marquee respects enclosure, ancestry, hidden and locked layers (0.897879ms)
+ℹ tests 36
+ℹ suites 0
+ℹ pass 36
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 267.521065
+Editor browser workflows passed
+Authoring browser flow passed: editable paths, pointer controls, bone chain/weights, timeline, trigger/listener/reset, save/open, binary export.
+Pen browser workflow and official Canvas2D/WebGL2 export comparisons passed. [
+  {
+    backend: 'canvas',
+    mae: 0.002704620361328125,
+    expectedCovered: 2355,
+    actualCovered: 2356
+  },
+  {
+    backend: 'webgl2',
+    mae: 0.09023284912109375,
+    expectedCovered: 2355,
+    actualCovered: 2320
+  }
+]
+Selection, responsive panels and keyboard browser checks passed
+Workspace UX acceptance passed across six portrait/landscape/tablet/desktop sizes
+Studio navigation and organization acceptance passed
+Snapping/alignment: five viewport tasks, guide cleanup, Alt bypass, undo, preference isolation and automated accessibility passed.
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice

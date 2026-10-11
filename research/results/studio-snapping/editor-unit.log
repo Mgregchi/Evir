@@ -1,0 +1,45 @@
+✔ Snapping uses six screen pixels at different zooms, separate axes and Alt bypass (7.42781ms)
+✔ Targets exclude moving ancestors and descendants, hidden ancestry and other artboards (0.818833ms)
+✔ One root aligns to artboard; several align bounding edges and centers under affine parents with one undo (7.077385ms)
+✔ Invalid selected members reject alignment without partial changes (0.930647ms)
+✔ Snap targets are immutable drag snapshots and artboard centers are valid references (0.604067ms)
+✔ Coincident targets retain the same stable reference when approached from either side (0.263758ms)
+✔ compiler preserves source, produces stable bytes and explicit component/source namespaces (14.445648ms)
+✔ unsupported assets, shear, singular transforms and float32 overflow fail before download (1.767907ms)
+✔ source IDs remain opaque even when they match JavaScript prototype names (0.376313ms)
+✔ save/open retains IDs, affine transforms, authoring controls and verified asset bytes (17.06112ms)
+✔ opening rejects unknown versions, future fields, broken ownership, cycles and nonfinite transforms (3.224876ms)
+✔ reparent preserves world matrix under rotated, scaled and sheared parents and across undo/redo (2.053606ms)
+✔ singular, cross-artboard and cyclic reparent failures leave committed state and history unchanged (1.038706ms)
+✔ preview is isolated, cancellation restores exact state, many drag updates create one undo entry (6.152407ms)
+✔ rejected and throwing edits are atomic; caller references cannot mutate stored data (0.755339ms)
+✔ subtree deletion removes descendant settings and undo restores every record (0.7216ms)
+✔ draw order is explicit; branching discards redo and no-op edits preserve it (0.908484ms)
+✔ v1 migration validates and retains all old content (7.48176ms)
+✔ curve insertion is De Casteljau subdivision and carries stable point IDs (1.546692ms)
+✔ quantized one-through-four influences always sum to 255 bytes (1.129489ms)
+✔ nonidentity binding leaves the rest pose unchanged; child tips and independently weighted handles deform correctly (2.447966ms)
+✔ deleting a referenced bone fails atomically; deleting paths cleans tracks and listeners (1.435389ms)
+✔ linear, hold, cubic and color keys evaluate deterministically without writing defaults (0.781388ms)
+✔ typed machine conditions, transient triggers, listeners and reset preserve the source project (1.370062ms)
+✔ scale tracks remain independent through reflection and zero; track order does not change a pose (0.369433ms)
+✔ immediate machines settle guarded transition chains and consume triggers only once (0.915876ms)
+✔ Two-finger camera preserves the midpoint world position with translation and clamped zoom (1.754467ms)
+✔ Desktop panels reserve a usable stage under either resizing direction (0.568335ms)
+✔ Collapsed hierarchy and search retain matching ancestors without changing source (5.907538ms)
+✔ Bulk organization preserves affine world positions and descendant IDs in one Undo step (3.946116ms)
+✔ Invalid destinations, locked selections, singular transforms and rig constraints leave History unchanged (2.567852ms)
+✔ Organization does not silently break animation keys by changing parent spaces (1.139443ms)
+✔ Pen drawing preserves world anchors and mirrored handles under an affine parent (14.042926ms)
+✔ Pen drafts enforce valid topology, close in screen space and cancel interrupted gestures (1.343884ms)
+✔ Multiple selection uses world deltas under distinct affine parents and one history step (7.412007ms)
+✔ Selected ancestors move descendants once and invalid members reject preparation before mutation (0.842357ms)
+✔ Marquee respects enclosure, ancestry, hidden and locked layers (0.778473ms)
+ℹ tests 37
+ℹ suites 0
+ℹ pass 37
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 240.466805

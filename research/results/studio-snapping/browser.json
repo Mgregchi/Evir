@@ -1,0 +1,57 @@
+{
+  "checkedAt": "2026-10-11T07:08:52.189Z",
+  "scope": "Chromium responsive authoring and automated accessibility; not physical device or assistive-technology evidence",
+  "results": [
+    {
+      "width": 320,
+      "height": 844,
+      "zoom": 0.35,
+      "snapping": true,
+      "bypass": true,
+      "cancellation": true,
+      "alignmentUndo": true,
+      "axeViolations": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "zoom": 0.459375,
+      "snapping": true,
+      "bypass": true,
+      "cancellation": true,
+      "alignmentUndo": true,
+      "axeViolations": 0
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "zoom": 0.32916666666666666,
+      "snapping": true,
+      "bypass": true,
+      "cancellation": true,
+      "alignmentUndo": true,
+      "axeViolations": 0
+    },
+    {
+      "width": 1024,
+      "height": 844,
+      "zoom": 0.66875,
+      "snapping": true,
+      "bypass": true,
+      "cancellation": true,
+      "alignmentUndo": true,
+      "axeViolations": 0
+    },
+    {
+      "width": 1440,
+      "height": 844,
+      "zoom": 1.18125,
+      "snapping": true,
+      "bypass": true,
+      "cancellation": true,
+      "alignmentUndo": true,
+      "axeViolations": 0
+    }
+  ],
+  "errors": []
+}

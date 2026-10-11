@@ -20,13 +20,13 @@ if(!process.env.CHROMIUM_PATH && !fs.existsSync('/usr/bin/chromium'))process.env
           assert.deepEqual(inventory.machines,project.machines.map(m=>m.name));
           await page.evaluate(()=>{player.stopRendering();player.drawFrame();});
         };
-        const compare=async(animation,frame,label)=>{
+        const compare=async(animation,frame,label,source=project)=>{
           const expected=await page.evaluate(async({project,id,frame})=>{
             const {evaluate}=await import('/tools/.test-build/oracle.mjs'),{drawScene}=await import('/tools/.test-build/oracle.mjs');
             const c=document.createElement('canvas');c.width=c.height=256;const ctx=c.getContext('2d');ctx.scale(.5,.5);
             drawScene(ctx,evaluate(project,id,frame),project.artboards[0].id,{ignoreEditorState:true});
             return Array.from(c.getContext('2d').getImageData(0,0,256,256).data);
-          },{project,id:animation.id,frame});
+          },{project:source,id:animation.id,frame});
           const actual=backend==='canvas'?await page.evaluate(()=>Array.from(document.getElementById('canvas').getContext('2d').getImageData(0,0,256,256).data)):
             PNG.sync.read(await page.locator('#canvas').screenshot({omitBackground:true})).data;
           let error=0,expectedCovered=0,runtimeCovered=0;
@@ -39,6 +39,20 @@ if(!process.env.CHROMIUM_PATH && !fs.existsSync('/usr/bin/chromium'))process.env
           await load({animations:animation.name});
           await page.evaluate(({name,seconds})=>{player.scrub(name,seconds);player.drawFrame();},{name:animation.name,seconds:frame/animation.fps});
           await compare(animation,frame,`${animation.name} frame ${frame}`);
+        }
+        if(name==='gather') {
+          const {alignmentMoves,applyAlignment}=await import('../../packages/studio/alignment.mjs');
+          const {compileProject}=await import('@evir/format');
+          const aligned=structuredClone(project),ids=[1,2,3].map(i=>`gather-card-${i}`);
+          applyAlignment(aligned,alignmentMoves(aligned,ids,'left'));
+          const dir='research/results/studio-snapping';fs.mkdirSync(dir,{recursive:true});
+          fs.writeFileSync(`${dir}/gather-aligned.evir-project`,JSON.stringify(aligned,null,2)+'\n');
+          fs.writeFileSync(`${dir}/gather-aligned.riv`,compileProject(aligned).bytes);
+          for(const frame of [0,60]) {
+            await load({src:`/${dir}/gather-aligned.riv`,animations:aligned.animations[0].name});
+            await page.evaluate(({name,seconds})=>{player.scrub(name,seconds);player.drawFrame();},{name:aligned.animations[0].name,seconds:frame/60});
+            await compare(aligned.animations[0],frame,`aligned composition frame ${frame}`,aligned);
+          }
         }
         if(project.machines.length) {
           const machine=project.machines[0];await load({stateMachines:machine.name});
