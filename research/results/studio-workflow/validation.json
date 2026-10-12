@@ -1,0 +1,65 @@
+{
+  "checkedAt": "2026-10-12T00:14:24.364135+00:00",
+  "baseMainCommit": "7375759",
+  "scope": "Cloud Node and headless software Chromium; no physical-device, human or screen-reader certification",
+  "checks": [
+    {
+      "command": "npm run test:editor",
+      "exitCode": 0,
+      "unitTests": 62,
+      "browserSuites": 11
+    },
+    {
+      "command": "npm run test:runtime",
+      "exitCode": 0,
+      "tests": 6
+    },
+    {
+      "command": "npm run test:frontend",
+      "exitCode": 0,
+      "tests": 14
+    },
+    {
+      "command": "npm run runtime:build",
+      "exitCode": 0,
+      "standalonePackages": 5
+    },
+    {
+      "command": "npm run validate:editor",
+      "exitCode": 0,
+      "advancedComparisonsPerBackend": 33,
+      "scope": "Existing authoring comparisons plus advanced/IK/blend suites"
+    },
+    {
+      "command": "npm run test:web",
+      "exitCode": 0,
+      "pageConfigurationChecks": 22,
+      "originalStudies": 15,
+      "galleryComparisonsPerBackend": 84
+    },
+    {
+      "command": "npm run test:experience",
+      "exitCode": 0,
+      "scope": "Retry/idle/SEO/feedback/recovery regressions"
+    },
+    {
+      "command": "node --expose-gc tools/profile-workflow.mjs --baseline && node --expose-gc tools/profile-workflow.mjs",
+      "exitCode": 0,
+      "freshProcessTrialsPerVariant": 3,
+      "fixtureHashesMatch": true
+    },
+    {
+      "command": "npm run web:build && node tests/editor/workflow-browser.cjs && npm run test:experience",
+      "exitCode": 0,
+      "scope": "Final responsive graph sizing, deterministic large recovery fixture, durable abort check and source validation"
+    }
+  ],
+  "galleryFixtureHashesVerified": true,
+  "knownLimits": [
+    "Rebasing only matching static parent bases; general rebasing rejects",
+    "Layer controls paged, other control virtualization remains open",
+    "One recovery slot per origin; quota/eviction/termination and concurrent tabs remain limitations",
+    "Persistent guides, key-object alignment, RML and command/MCP work remain later tracks",
+    "Backend and external device/matched-Editor/human evidence remain deferred"
+  ]
+}

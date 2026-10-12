@@ -1,7 +1,15 @@
 import { machineControls } from "./advanced.mjs";
+import { neighborKey } from "./key-navigation.mjs";
+import { graphViewBox, stateViewBox } from "./graph-navigation.mjs";
 import { isColorProperty } from "@evir/project-model";
 import { paintControls } from "./paint.mjs";
-import { inverse, worldTransform, validateProject, newId, propertiesFor } from "@evir/project-model";
+import {
+  inverse,
+  worldTransform,
+  validateProject,
+  newId,
+  propertiesFor,
+} from "@evir/project-model";
 import {
   convertRectangle,
   insertPoint,
@@ -12,7 +20,12 @@ import {
   createAnimation,
   createMachine,
 } from "@evir/authoring";
-import { worldPoints, controlMatrix, mapPoint, getValue } from "@evir/runtime/geometry";
+import {
+  worldPoints,
+  controlMatrix,
+  mapPoint,
+  getValue,
+} from "@evir/runtime/geometry";
 import { evaluate, MachinePlayer } from "@evir/runtime";
 import { compileProject, runtimeSchema } from "@evir/format";
 const el = (tag, text) => {
@@ -38,9 +51,7 @@ export function mountAuthoring(api) {
   boneButton.onclick = () => api.add("bone");
   const exportButton = el("button", "Export .riv");
   exportButton.id = "export-riv";
-  document
-    .querySelector("#project-file-actions")
-    .append(exportButton);
+  document.querySelector("#project-file-actions").append(exportButton);
   const panel = el("section");
   panel.id = "authoring-panel";
   panel.setAttribute("aria-label", "Animation and interaction tools");
@@ -60,6 +71,7 @@ export function mountAuthoring(api) {
     lastTime = 0,
     raf = null;
   const exportSchema = async () => runtimeSchema;
+  const graphViews = new Map();
   const button = (text, fn) => {
     const b = el("button", text);
     b.onclick = () => {
@@ -220,7 +232,7 @@ export function mountAuthoring(api) {
       ensurePlayer(p, m);
       return player.pose();
     }
-    return evaluate(p,null,0);
+    return p.advanced?.ik.length ? evaluate(p, null, 0) : p;
   }
   function tick(now) {
     raf = null;
@@ -260,14 +272,19 @@ export function mountAuthoring(api) {
     refresh();
   }
   // Preserve the pose while suspended; never accumulate hidden-tab time.
-  const suspendPlayback = () => { if (raf !== null) cancelAnimationFrame(raf); raf = null; };
+  const suspendPlayback = () => {
+    if (raf !== null) cancelAnimationFrame(raf);
+    raf = null;
+  };
   const resumePlayback = () => {
     if (playing && !document.hidden && raf === null) {
       lastTime = performance.now();
       raf = requestAnimationFrame(tick);
     }
   };
-  document.addEventListener("visibilitychange", () => document.hidden ? suspendPlayback() : resumePlayback());
+  document.addEventListener("visibilitychange", () =>
+    document.hidden ? suspendPlayback() : resumePlayback(),
+  );
   window.addEventListener("pagehide", suspendPlayback);
   window.addEventListener("pageshow", resumePlayback);
   function updatePlayhead() {
@@ -397,10 +414,16 @@ export function mountAuthoring(api) {
         }),
       ),
     );
-    section.append(paintControls({
-      project: p, node: n, commit: transaction, notice: api.notice,
-      label: "Path fill", disabled: mode !== "Design",
-    }));
+    section.append(
+      paintControls({
+        project: p,
+        node: n,
+        commit: transaction,
+        notice: api.notice,
+        label: "Path fill",
+        disabled: mode !== "Design",
+      }),
+    );
     const rig = el("section");
     rig.className = "property-section";
     rig.append(el("h3", "Bind & weights"));
@@ -493,6 +516,27 @@ export function mountAuthoring(api) {
       ),
       button(playing ? "Pause" : "Play", play),
     );
+    for (const [direction, label] of [
+      [-1, "Previous key"],
+      [1, "Next key"],
+    ]) {
+      const key = neighborKey(a, api.selected(), frame, direction);
+      const navigate = button(label, () => {
+        if (!key) return;
+        stop();
+        frame = key.frame;
+        selectedKey = key;
+        api.refresh();
+        const next = panel.querySelector(`[data-key-direction="${direction}"]`);
+        (next?.disabled
+          ? panel.querySelector('[aria-label="Playhead"]')
+          : next
+        )?.focus();
+      });
+      navigate.dataset.keyDirection = direction;
+      navigate.disabled = !key;
+      header.append(navigate);
+    }
     header.append(
       field("Animation name", a.name, (value) =>
         transaction(
@@ -784,9 +828,36 @@ export function mountAuthoring(api) {
     const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     svg.setAttribute(
       "viewBox",
-      `0 0 700 ${Math.max(180, ...m.states.map((s) => s.position[1] + 65))}`,
+      (graphViews.get(m.id) || graphViewBox(m.states)).join(" "),
     );
     svg.setAttribute("aria-label", "State machine graph");
+    header.append(
+      button("Fit graph", () => {
+        graphViews.delete(m.id);
+        svg.setAttribute("viewBox", graphViewBox(m.states).join(" "));
+      }),
+      button("Focus state", () => {
+        const state = m.states.find((s) => s.id === editState) || m.states[0];
+        const box = stateViewBox(state);
+        graphViews.set(m.id, box);
+        svg.setAttribute("viewBox", box.join(" "));
+      }),
+    );
+    const edgePaths = new Map();
+    const redrawEdges = (id, position) => {
+      for (const t of m.transitions) {
+        const from = m.states.find((s) => s.id === t.fromId),
+          to = m.states.find((s) => s.id === t.toId);
+        const a = from.id === id ? position : from.position,
+          b = to.id === id ? position : to.position;
+        edgePaths
+          .get(t.id)
+          ?.setAttribute(
+            "d",
+            `M${a[0] + 120},${a[1] + 20}L${b[0]},${b[1] + 20}l-7,-4m7,4l-7,4`,
+          );
+      }
+    };
     for (const t of m.transitions) {
       const from = m.states.find((s) => s.id === t.fromId),
         to = m.states.find((s) => s.id === t.toId),
@@ -796,10 +867,100 @@ export function mountAuthoring(api) {
         `M${from.position[0] + 120},${from.position[1] + 20}L${to.position[0]},${to.position[1] + 20}l-7,-4m7,4l-7,4`,
       );
       line.setAttribute("class", "transition-line");
+      edgePaths.set(t.id, line);
       svg.append(line);
     }
     for (const state of m.states) {
       const g = document.createElementNS(svg.namespaceURI, "g");
+      g.dataset.editState = state.id;
+      g.setAttribute("role", "button");
+      g.setAttribute("tabindex", "0");
+      g.setAttribute("aria-label", `Edit state ${state.name}`);
+      g.setAttribute(
+        "aria-pressed",
+        String(state.id === (editState || m.entryStateId)),
+      );
+      const choose = () => {
+        editState = state.id;
+        api.refresh();
+        panel.querySelector(`[data-edit-state="${state.id}"]`)?.focus();
+      };
+      let gesture = null,
+        suppressClick = false;
+      const point = (e) => {
+        const v = svg.createSVGPoint();
+        v.x = e.clientX;
+        v.y = e.clientY;
+        const q = v.matrixTransform(svg.getScreenCTM().inverse());
+        return [q.x, q.y];
+      };
+      const cancel = () => {
+        if (!gesture) return;
+        gesture = null;
+        suppressClick = true;
+        g.setAttribute("transform", `translate(${state.position})`);
+        redrawEdges(state.id, state.position);
+      };
+      g.onclick = () => {
+        if (suppressClick) {
+          suppressClick = false;
+          return;
+        }
+        choose();
+      };
+      g.onkeydown = (e) => {
+        if (e.key === "Escape" && gesture) {
+          e.preventDefault();
+          e.stopPropagation();
+          cancel();
+          return;
+        }
+        if (["Enter", " "].includes(e.key)) {
+          e.preventDefault();
+          e.stopPropagation();
+          choose();
+        }
+      };
+      g.onpointerdown = (e) => {
+        if (e.button !== 0 || !e.isPrimary) return;
+        e.preventDefault();
+        stop();
+        g.focus();
+        gesture = {
+          id: e.pointerId,
+          start: point(e),
+          position: [...state.position],
+          moved: false,
+        };
+        g.setPointerCapture(e.pointerId);
+      };
+      g.onpointermove = (e) => {
+        if (gesture?.id !== e.pointerId) return;
+        const q = point(e),
+          delta = q.map((v, i) => v - gesture.start[i]);
+        gesture.moved ||= Math.hypot(...delta) > 2;
+        if (!gesture.moved) return;
+        gesture.position = delta.map((v, i) => v + state.position[i]);
+        g.setAttribute("transform", `translate(${gesture.position})`);
+        redrawEdges(state.id, gesture.position);
+      };
+      g.onpointerup = (e) => {
+        if (gesture?.id !== e.pointerId) return;
+        const draft = gesture;
+        gesture = null;
+        if (!draft.moved) return;
+        suppressClick = true;
+        editState = state.id;
+        transaction(
+          "Move graph state",
+          (q) =>
+            (q.machines
+              .find((v) => v.id === m.id)
+              .states.find((s) => s.id === state.id).position = draft.position),
+        );
+        panel.querySelector(`[data-edit-state="${state.id}"]`)?.focus();
+      };
+      g.onpointercancel = g.onlostpointercapture = cancel;
       g.setAttribute("transform", `translate(${state.position})`);
       const rect = document.createElementNS(svg.namespaceURI, "rect");
       rect.dataset.state = state.id;
@@ -1151,7 +1312,7 @@ export function mountAuthoring(api) {
         ),
       );
     panel.append(routes);
-    machineControls(panel,p,m,transaction,api.notice);
+    machineControls(panel, p, m, transaction, api.notice);
     updatePlayhead();
   }
   function parseBoolean(value) {
@@ -1160,7 +1321,7 @@ export function mountAuthoring(api) {
     return value === "true";
   }
   function ensurePlayer(p, m) {
-    const source = JSON.stringify(p);
+    const source = api.revision ? api.revision() : JSON.stringify(p);
     if (!player || player.machine.id !== m.id || playerSource !== source) {
       player = new MachinePlayer(p, m.id);
       playerSource = source;
@@ -1171,6 +1332,7 @@ export function mountAuthoring(api) {
     for (const b of modes.children)
       b.setAttribute("aria-pressed", String(b.dataset.mode === mode));
     panel.hidden = mode === "Design";
+    panel.dataset.mode = mode;
     pathButton.disabled = boneButton.disabled = mode !== "Design";
     for (const id of ["add-rectangle", "add-group", "empty-add"])
       document.getElementById(id).disabled = mode !== "Design";
@@ -1213,6 +1375,7 @@ export function mountAuthoring(api) {
     recordEdit,
     editGeometry,
     reset() {
+      graphViews.clear();
       stop();
       mode = "Design";
       animationId = machineId = null;

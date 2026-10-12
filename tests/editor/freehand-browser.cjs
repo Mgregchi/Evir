@@ -325,6 +325,10 @@ const { run } = require("../../tools/browser.cjs"),
         const restored = JSON.parse(
           fs.readFileSync(await (await saved).path(), "utf8"),
         );
+        await page
+          .getByRole("status")
+          .filter({ hasText: "Saved in this browser" })
+          .waitFor();
         await page.reload();
         await page.waitForFunction(() => window.evirStudio);
         assert.deepEqual((await snapshot()).nodes, restored.nodes);

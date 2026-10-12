@@ -126,7 +126,7 @@ export function mountPanels() {
     sync();
   }).observe(document.getElementById("authoring-panel"), {
     attributes: true,
-    attributeFilter: ["hidden"],
+    attributeFilter: ["hidden", "data-mode"],
   });
   sync();
 }

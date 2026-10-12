@@ -141,3 +141,39 @@ export function applyAlignment(p, moves) {
   for (const move of moves)
     applySelectionMove(p, [move.prepared], move.dx, move.dy);
 }
+
+// Keep the outermost edges fixed and equalize the gaps, including negative
+// gaps when the selection overlaps. All members are prepared before mutation.
+export function distributionMoves(p, ids, axis) {
+  if (!["x", "y"].includes(axis)) throw Error("Choose a distribution axis.");
+  const roots = selectionRoots(p, ids);
+  if (roots.length < 3)
+    throw Error("Select at least three independent layers.");
+  if (new Set(roots.map((n) => n.artboardId)).size !== 1)
+    throw Error("Distribute layers on the same artboard.");
+  if (roots.some((n) => !available(p, n, "hidden")))
+    throw Error("Show the selected layers before distributing them.");
+  const prepared = new Map(prepareSelectionMove(p, ids).map((v) => [v.id, v]));
+  const size = axis === "x" ? "width" : "height";
+  const ordered = roots
+    .map((n) => ({ n, box: nodeBounds(p, n) }))
+    .sort((a, b) => a.box[axis] - b.box[axis] || a.n.order - b.n.order);
+  const first = ordered[0].box[axis],
+    last = ordered.at(-1).box;
+  const gap =
+    (last[axis] +
+      last[size] -
+      first -
+      ordered.reduce((sum, v) => sum + v.box[size], 0)) /
+    (ordered.length - 1);
+  let at = first;
+  return ordered.map(({ n, box }, i) => {
+    const delta = i === 0 || i === ordered.length - 1 ? 0 : at - box[axis];
+    at += box[size] + gap;
+    return {
+      prepared: prepared.get(n.id),
+      dx: axis === "x" ? delta : 0,
+      dy: axis === "y" ? delta : 0,
+    };
+  });
+}

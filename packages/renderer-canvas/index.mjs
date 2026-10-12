@@ -1,6 +1,10 @@
 import { SceneAssets } from "./assets.mjs";
 export { SceneAssets } from "./assets.mjs";
-import { worldTransform, inverse } from "@evir/project-model";
+import {
+  worldTransform,
+  inverse,
+  transformResolver,
+} from "@evir/project-model";
 import { worldPoints, mapPoint, controlMatrix } from "@evir/runtime/geometry";
 export function paintOnContext(ctx, fill) {
   if (typeof fill === "string") return fill;
@@ -34,16 +38,20 @@ export function pathOnContext(ctx, points, closed) {
 }
 
 export function sceneOrder(p, artboardId) {
-  const out = [];
-  function visit(parentId) {
-    for (const n of p.nodes
-      .filter((n) => n.artboardId === artboardId && n.parentId === parentId)
-      .sort((a, b) => a.order - b.order)) {
-      out.push(n);
-      visit(n.id);
-    }
+  const children = new Map(),
+    out = [];
+  for (const n of p.nodes) {
+    if (n.artboardId !== artboardId) continue;
+    if (!children.has(n.parentId)) children.set(n.parentId, []);
+    children.get(n.parentId).push(n);
   }
-  visit(null);
+  for (const list of children.values()) list.sort((a, b) => b.order - a.order);
+  const stack = [...(children.get(null) || [])];
+  while (stack.length) {
+    const n = stack.pop();
+    out.push(n);
+    for (const child of children.get(n.id) || []) stack.push(child);
+  }
   return out;
 }
 export function isHidden(p, n) {
@@ -60,23 +68,38 @@ export function drawScene(
   artboardId,
   { ignoreEditorState = false, assets } = {},
 ) {
+  const nodes = new Map(p.nodes.map((n) => [n.id, n])),
+    resolve = transformResolver(p);
+  const clips = new Map((p.advanced?.clips || []).map((c) => [c.targetId, c]));
+  const feathers = new Map(
+    (p.advanced?.feathers || []).map((f) => [f.targetId, f]),
+  );
+  const maskArtworkHidden = new Set(
+    (p.advanced?.clips || []).filter((c) => !c.visible).map((c) => c.maskId),
+  );
+  const hidden = new Set(ignoreEditorState ? [] : p.editor?.hidden || []);
   for (const n of sceneOrder(p, artboardId)) {
-    if (!ignoreEditorState && isHidden(p, n)) continue;
-    if ((p.advanced?.clips ?? []).some((c) => !c.visible && c.maskId === n.id))
-      continue;
+    let invisible = false;
+    for (let ancestor = n; ancestor; ancestor = nodes.get(ancestor.parentId))
+      if (hidden.has(ancestor.id)) {
+        invisible = true;
+        break;
+      }
+    if (invisible) continue;
+    if (maskArtworkHidden.has(n.id)) continue;
     ctx.save();
     try {
       let ancestor = n;
       while (ancestor) {
-        const clip = p.advanced?.clips.find((c) => c.targetId === ancestor.id);
+        const clip = clips.get(ancestor.id);
         if (clip) {
-          const mask = p.nodes.find((v) => v.id === clip.maskId);
-          shapePath(ctx, p, mask);
+          const mask = nodes.get(clip.maskId);
+          shapePath(ctx, p, mask, resolve);
           ctx.clip("nonzero");
         }
-        ancestor = p.nodes.find((v) => v.id === ancestor.parentId);
+        ancestor = nodes.get(ancestor.parentId);
       }
-      const feather = p.advanced?.feathers.find((f) => f.targetId === n.id);
+      const feather = feathers.get(n.id);
       if (feather?.strength) {
         if (!("filter" in ctx))
           throw Error("Outer feather requires Canvas2D filter support");
@@ -85,22 +108,23 @@ export function drawScene(
       }
       if (n.kind === "rectangle") {
         ctx.save();
-        ctx.transform(...worldTransform(p, n.id));
+        ctx.transform(...resolve(n.id));
         ctx.fillStyle = paintOnContext(ctx, n.geometry.fill);
         ctx.fillRect(0, 0, n.geometry.width, n.geometry.height);
         ctx.restore();
       } else if (n.kind === "path") {
         ctx.save();
         const gradient = typeof n.geometry.fill !== "string";
-        if (gradient) ctx.transform(...worldTransform(p, n.id));
-        const points = worldPoints(p, n);
+        if (gradient) ctx.transform(...resolve(n.id));
+        const points = worldPoints(p, n, resolve);
+        const paintInverse = gradient ? inverse(resolve(n.id)) : null;
         const local = gradient
           ? points.map((v) => ({
               ...v,
               ...Object.fromEntries(
                 ["anchor", "in", "out"].map((k) => [
                   k,
-                  mapPoint(inverse(worldTransform(p, n.id)), v[k]),
+                  mapPoint(paintInverse, v[k]),
                 ]),
               ),
             }))
@@ -111,7 +135,7 @@ export function drawScene(
         ctx.restore();
       } else if (n.kind === "text") {
         ctx.save();
-        ctx.transform(...worldTransform(p, n.id));
+        ctx.transform(...resolve(n.id));
         ctx.font = `${n.geometry.fontSize}px "${assets.get(n.geometry.fontAssetId).family}"`;
         ctx.textBaseline = "alphabetic";
         ctx.textAlign = "left";
@@ -120,7 +144,7 @@ export function drawScene(
         ctx.restore();
       } else if (n.kind === "image") {
         ctx.save();
-        ctx.transform(...worldTransform(p, n.id));
+        ctx.transform(...resolve(n.id));
         ctx.drawImage(
           assets.get(n.geometry.assetId).bitmap,
           0,
@@ -130,17 +154,17 @@ export function drawScene(
         );
         ctx.restore();
       } else if (n.kind === "mesh")
-        drawMesh(ctx, p, n, assets.get(n.geometry.assetId).bitmap);
+        drawMesh(ctx, p, n, assets.get(n.geometry.assetId).bitmap, resolve);
     } finally {
       ctx.restore();
     }
   }
 }
-function shapePath(ctx, p, n) {
+function shapePath(ctx, p, n, resolve) {
   if (n.kind === "path")
-    pathOnContext(ctx, worldPoints(p, n), n.geometry.closed);
+    pathOnContext(ctx, worldPoints(p, n, resolve), n.geometry.closed);
   else {
-    const m = worldTransform(p, n.id),
+    const m = resolve(n.id),
       g = n.geometry,
       points = [
         [0, 0],
@@ -154,9 +178,12 @@ function shapePath(ctx, p, n) {
     ctx.closePath();
   }
 }
-function drawMesh(ctx, p, n, image) {
+function drawMesh(ctx, p, n, image, resolve) {
   const vertices = n.geometry.vertices.map((v) => ({
-    position: mapPoint(controlMatrix(p, n, v.id, "anchor"), v.position),
+    position: mapPoint(
+      controlMatrix(p, n, v.id, "anchor", resolve),
+      v.position,
+    ),
     uv: [v.uv[0] * image.width, v.uv[1] * image.height],
   }));
   for (let i = 0; i < n.geometry.triangles.length; i += 3) {

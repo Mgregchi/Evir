@@ -1,5 +1,6 @@
 import { mountAdvanced } from "./advanced.mjs";
-import { SceneAssets } from "@evir/renderer-canvas";
+import { ProjectRecovery, RecoveryQueue } from "./recovery.mjs";
+import { SceneAssets, sceneOrder } from "@evir/renderer-canvas";
 import { importRiv } from "@evir/format";
 const sceneAssets = new SceneAssets();
 let advanced;
@@ -29,12 +30,14 @@ import {
   snapMove,
   alignmentMoves,
   applyAlignment,
+  distributionMoves,
 } from "./alignment.mjs";
 import {
   ancestors,
   layerRows,
   parentChoices,
   organizeLayers,
+  layerDrop,
 } from "./layers.mjs";
 import { createFeedback } from "@evir/ui";
 import {
@@ -97,7 +100,6 @@ function icon(name) {
 }
 for (const holder of document.querySelectorAll("[data-icon]"))
   holder.append(icon(holder.dataset.icon));
-const CACHE = "evir.studio.project.v1";
 const collapsedLayers = new Set();
 let multipleLayers = false;
 const SNAP_CACHE = "evir.studio.snapping.v1";
@@ -137,6 +139,11 @@ let store,
   activeArtboard,
   selected = null,
   selectedIds = new Set(),
+  layerDrag = null,
+  layerPage = 0,
+  lastLayerSelected = null,
+  lastLayerSearch = "",
+  allLayerRows = [],
   tool = "select",
   space = false,
   drag = null,
@@ -146,7 +153,7 @@ let store,
   fittedView = true,
   stageSize = null,
   generation = 0,
-  savedFingerprint = "",
+  savedGeneration = -1,
   status = "Local project";
 const canvas = $("#scene"),
   ctx = canvas.getContext("2d"),
@@ -215,24 +222,39 @@ function setStatus(text) {
   $("#save-status").textContent = text;
 }
 async function persist() {
-  const version = ++generation;
+  ++generation;
   setStatus("Saving in browser…");
-  try {
-    const text = await serializeProject(bundle());
-    if (version !== generation) return;
-    localStorage.setItem(CACHE, text);
-    savedFingerprint = text;
-    setStatus("Saved in this browser");
-  } catch (e) {
-    if (version === generation) {
+  return recoveryQueue.request();
+}
+const recovery = new ProjectRecovery();
+const recoveryQueue = new RecoveryQueue({
+  sample: () => ({ project: bundle(), generation }),
+  write: (record) => recovery.write(record.project),
+  saved: (record) => {
+    if (record.generation === generation) {
+      savedGeneration = generation;
+      setStatus("Saved in this browser");
+    }
+  },
+  failed: (error, record) => {
+    if (!record || record.generation === generation) {
       setStatus("Not saved in browser");
       notice(
-        `Your changes are still open. Download a project copy. ${e.message}`,
+        `Your changes are still open. Download a project copy. ${error.message}`,
       );
     }
-  }
-}
+  },
+});
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) recoveryQueue.flush();
+});
+window.addEventListener("pagehide", () => recoveryQueue.flush());
 function install(p) {
+  recoveryQueue.cancel();
+  clearLayerDrop();
+  layerPage = 0;
+  lastLayerSelected = null;
+  lastLayerSearch = "";
   resetTouches();
   collapsedLayers.clear();
   multipleLayers = false;
@@ -277,6 +299,7 @@ function setSelection(ids) {
 }
 function select(id, additive = false) {
   if (!penReady()) return;
+  lastLayerSelected = null;
   if (additive && authoring?.mode === "Design") {
     const next = new Set(selectedIds);
     if (next.has(id)) next.delete(id);
@@ -440,18 +463,8 @@ function add(kind) {
   });
   if (created) select(created);
 }
-function flattened(p, frontFirst = false) {
-  const result = [];
-  function visit(parentId, depth) {
-    for (const n of p.nodes
-      .filter((n) => n.artboardId === activeArtboard && n.parentId === parentId)
-      .sort((a, b) => (frontFirst ? b.order - a.order : a.order - b.order))) {
-      result.push({ n, depth });
-      visit(n.id, depth + 1);
-    }
-  }
-  visit(null, 0);
-  return result;
+function flattened(p) {
+  return sceneOrder(p, activeArtboard).map((n) => ({ n }));
 }
 function point(matrix, x, y) {
   return {
@@ -489,7 +502,7 @@ function draw() {
   ctx.beginPath();
   ctx.rect(0, 0, a.width, a.height);
   ctx.clip();
-  drawScene(ctx, p, activeArtboard, {assets:sceneAssets});
+  drawScene(ctx, p, activeArtboard, { assets: sceneAssets });
   ctx.restore();
   const n = p.nodes.find((n) => n.id === selected);
   if (
@@ -673,6 +686,28 @@ function alignmentPanel(p) {
     controls.append(button);
   }
   group.append(controls);
+  for (const [axis, label] of [
+    ["x", "horizontal"],
+    ["y", "vertical"],
+  ]) {
+    const distribute = action(
+      `Distribute ${label}`,
+      () => {
+        try {
+          const moves = distributionMoves(project(), selectedIds, axis);
+          if (
+            edit(`Distribute ${label}`, (q) => applyAlignment(q, moves), true)
+          )
+            document.querySelector(`[data-distribution="${axis}"]`)?.focus();
+        } catch (e) {
+          notice(e);
+        }
+      },
+      authoring?.mode !== "Design" || selectionRoots(p, selectedIds).length < 3,
+    );
+    distribute.dataset.distribution = axis;
+    group.append(distribute);
+  }
   return group;
 }
 function properties(p) {
@@ -861,13 +896,20 @@ function properties(p) {
     size.append(
       pair,
       paintControls({
-        project: p, node: n, commit: edit, notice,
-        disabled: locked, paintDisabled: locked || authoring?.mode !== "Design",
+        project: p,
+        node: n,
+        commit: edit,
+        notice,
+        disabled: locked,
+        paintDisabled: locked || authoring?.mode !== "Design",
       }),
     );
     host.append(size);
   }
-  if (!locked) {authoring?.editGeometry(p, n, host);advanced?.properties(p,n,host);}
+  if (!locked) {
+    authoring?.editGeometry(p, n, host);
+    advanced?.properties(p, n, host);
+  }
   const hierarchy = section("Organization"),
     label = element("label", undefined, "field");
   label.append(element("span", "Parent"));
@@ -957,6 +999,11 @@ function toggle(key, id) {
       : [...p.editor[key], id];
   });
 }
+function clearLayerDrop() {
+  layerDrag = null;
+  for (const row of $("#layers").querySelectorAll("[data-drop]"))
+    delete row.dataset.drop;
+}
 function render() {
   const p = project();
   setSelection(
@@ -983,11 +1030,56 @@ function render() {
   const layers = $("#layers");
   layers.replaceChildren();
   const search = $("#search").value.trim().toLowerCase();
-  for (const { n, depth, hasChildren } of layerRows(
-    p,
-    activeArtboard,
-    collapsedLayers,
-    search,
+  allLayerRows = layerRows(p, activeArtboard, collapsedLayers, search);
+  const pageSize = 120;
+  if (search !== lastLayerSearch) layerPage = 0;
+  if (selected !== lastLayerSelected) {
+    const index = allLayerRows.findIndex((r) => r.n.id === selected);
+    if (index >= 0) layerPage = Math.floor(index / pageSize);
+  }
+  lastLayerSelected = selected;
+  lastLayerSearch = search;
+  layerPage = Math.max(
+    0,
+    Math.min(layerPage, Math.ceil(allLayerRows.length / pageSize) - 1),
+  );
+  if (allLayerRows.length > pageSize) {
+    const paging = element("div", undefined, "layer-pagination");
+    paging.append(
+      element(
+        "span",
+        `${layerPage * pageSize + 1}–${Math.min((layerPage + 1) * pageSize, allLayerRows.length)} / ${allLayerRows.length}`,
+      ),
+    );
+    for (const [direction, label] of [
+      [-1, "Previous layers"],
+      [1, "Next layers"],
+    ]) {
+      const b = action(
+        direction < 0 ? "←" : "→",
+        () => {
+          layerPage += direction;
+          render();
+          layers.scrollTop = 0;
+          const next = layers.querySelector(`[data-layer-page="${direction}"]`);
+          (next?.disabled
+            ? layers.querySelector(".layer-select")
+            : next
+          )?.focus();
+        },
+        direction < 0
+          ? layerPage === 0
+          : (layerPage + 1) * pageSize >= allLayerRows.length,
+      );
+      b.dataset.layerPage = direction;
+      b.setAttribute("aria-label", label);
+      paging.append(b);
+    }
+    layers.append(paging);
+  }
+  for (const { n, depth, hasChildren } of allLayerRows.slice(
+    layerPage * pageSize,
+    (layerPage + 1) * pageSize,
   )) {
     const row = element(
       "div",
@@ -1028,6 +1120,56 @@ function render() {
     button.setAttribute("aria-label", `Select ${n.name}`);
     button.setAttribute("aria-pressed", String(selectedIds.has(n.id)));
     button.dataset.nodeId = n.id;
+    button.draggable = authoring?.mode === "Design" && editable(p, n, "locked");
+    button.addEventListener("dragstart", (e) => {
+      if (!button.draggable || !penReady()) {
+        e.preventDefault();
+        return;
+      }
+      layerDrag = selectedIds.has(n.id) ? [...selectedIds] : [n.id];
+      e.dataTransfer.setData("text/plain", "Evir layer selection");
+      e.dataTransfer.effectAllowed = "move";
+    });
+    button.addEventListener("dragend", clearLayerDrop);
+    const placement = (e) => {
+      const r = row.getBoundingClientRect(),
+        fraction = (e.clientY - r.top) / r.height;
+      return fraction > 0.25 &&
+        fraction < 0.75 &&
+        ["group", "bone"].includes(n.kind)
+        ? "inside"
+        : fraction < 0.5
+          ? "above"
+          : "below";
+    };
+    row.addEventListener("dragover", (e) => {
+      if (!layerDrag || authoring.mode !== "Design") return;
+      e.preventDefault();
+      e.dataTransfer.dropEffect = "move";
+      for (const other of layers.querySelectorAll("[data-drop]"))
+        delete other.dataset.drop;
+      row.dataset.drop = placement(e);
+    });
+    row.addEventListener("dragleave", () => delete row.dataset.drop);
+    row.addEventListener("drop", (e) => {
+      if (!layerDrag) return;
+      e.preventDefault();
+      const ids = layerDrag,
+        where = placement(e);
+      clearLayerDrop();
+      if (authoring.mode !== "Design" || !penReady()) return;
+      if (edit("Move layers", (q) => layerDrop(q, ids, n.id, where), true)) {
+        setSelection(ids);
+        for (const id of ids)
+          for (const parent of ancestors(store.committed(), id))
+            collapsedLayers.delete(parent);
+        render();
+        notice(
+          `Moved ${ids.length} ${ids.length === 1 ? "layer" : "layers"} ${where} ${n.name}.`,
+          "success",
+        );
+      }
+    });
     button.tabIndex = n.id === selected ? 0 : -1;
     const symbol = element("span", undefined, "layer-icon");
     symbol.append(icon(n.kind));
@@ -1653,26 +1795,33 @@ $("#layers").addEventListener("keydown", (e) => {
       if (hasChildren && !collapsedLayers.has(id)) collapsedLayers.add(id);
       else focus = p.nodes.find((n) => n.id === id)?.parentId || id;
     }
+    const rowIndex = layerRows(
+      p,
+      activeArtboard,
+      collapsedLayers,
+      $("#search").value.trim().toLowerCase(),
+    ).findIndex((r) => r.n.id === focus);
+    if (rowIndex >= 0) layerPage = Math.floor(rowIndex / 120);
     render();
     [...$("#layers").querySelectorAll(".layer-select")]
       .find((b) => b.dataset.nodeId === focus)
       ?.focus();
     return;
   }
-  let index = buttons.indexOf(current);
+  let index = allLayerRows.findIndex((r) => r.n.id === current.dataset.nodeId);
   index =
     e.key === "Home"
       ? 0
       : e.key === "End"
-        ? buttons.length - 1
+        ? allLayerRows.length - 1
         : Math.max(
             0,
             Math.min(
-              buttons.length - 1,
+              allLayerRows.length - 1,
               index + (e.key === "ArrowDown" ? 1 : -1),
             ),
           );
-  const id = buttons[index].dataset.nodeId;
+  const id = allLayerRows[index].n.id;
   select(id, e.shiftKey);
   [...$("#layers").querySelectorAll(".layer-select")]
     .find((b) => b.dataset.nodeId === id)
@@ -1737,6 +1886,30 @@ $("#multiple-layers").onclick = () => {
 let organizeIds = [],
   organizeOrigin = null,
   organizeFeedbackPosition = null;
+function updateOrganizeReference() {
+  const position = $("#organize-position").value;
+  $("#organize-reference-field").hidden = !["above", "below"].includes(
+    position,
+  );
+  const p = store.committed(),
+    moving = new Set(selectionRoots(p, organizeIds).map((n) => n.id));
+  const picker = $("#organize-reference");
+  picker.replaceChildren();
+  for (const n of p.nodes
+    .filter(
+      (n) =>
+        n.artboardId === activeArtboard &&
+        n.parentId === ($("#organize-parent").value || null) &&
+        !moving.has(n.id),
+    )
+    .sort((a, b) => b.order - a.order)) {
+    const option = element("option", n.name);
+    option.value = n.id;
+    picker.append(option);
+  }
+}
+$("#organize-position").onchange = updateOrganizeReference;
+$("#organize-parent").onchange = updateOrganizeReference;
 $("#organize-layers").onclick = () => {
   if (!penReady()) return;
   cancelDrag();
@@ -1764,6 +1937,7 @@ $("#organize-layers").onclick = () => {
   if (roots.every((n) => n.parentId === roots[0].parentId))
     picker.value = roots[0].parentId || "";
   $("#organize-position").value = "front";
+  updateOrganizeReference();
   organizeFeedbackPosition = document.createComment(
     "Restore feedback after organization",
   );
@@ -1779,7 +1953,13 @@ $("#organize-apply").onclick = () => {
     edit(
       "Organize selection",
       (p) =>
-        organizeLayers(p, organizeIds, parentId, $("#organize-position").value),
+        organizeLayers(
+          p,
+          organizeIds,
+          parentId,
+          $("#organize-position").value,
+          $("#organize-reference").value || null,
+        ),
       true,
     )
   ) {
@@ -1847,9 +2027,14 @@ $("#file").addEventListener("change", async (e) => {
   e.target.value = "";
   if (!file) return;
   try {
-    if (file.name.toLowerCase().endsWith(".riv") && file.size > 32 * 1024 * 1024)
+    if (
+      file.name.toLowerCase().endsWith(".riv") &&
+      file.size > 32 * 1024 * 1024
+    )
       throw Error("Rive file exceeds the 32 MiB import budget");
-    const next = file.name.toLowerCase().endsWith(".riv") ? await importRiv(await file.arrayBuffer()) : await openProject(await file.text());
+    const next = file.name.toLowerCase().endsWith(".riv")
+      ? await importRiv(await file.arrayBuffer())
+      : await openProject(await file.text());
     cancelDrag();
     if (!(await askReplace("Open another project?", "Open project"))) return;
     await sceneAssets.load(next);
@@ -1863,7 +2048,7 @@ $("#file").addEventListener("change", async (e) => {
 $("#new").onclick = async () => {
   if (!(await askReplace("Start a new project?", "Create project"))) return;
   cancelDrag();
-  const next=createProject();
+  const next = createProject();
   await sceneAssets.load(next);
   install(next);
   fit();
@@ -2037,11 +2222,7 @@ window.addEventListener("blur", () => {
   resetTouches();
 });
 window.addEventListener("beforeunload", (e) => {
-  if (
-    store.active ||
-    penDraft ||
-    JSON.stringify(bundle(), null, 2) + "\n" !== savedFingerprint
-  ) {
+  if (store.active || penDraft || generation !== savedGeneration) {
     e.preventDefault();
     e.returnValue = "";
   }
@@ -2066,9 +2247,11 @@ new ResizeObserver(() => {
 let initial = demo(),
   restored = false;
 try {
-  const cached = localStorage.getItem(CACHE);
+  const cached = await recovery.read();
   if (cached) {
-    initial = await openProject(cached);
+    initial = await openProject(
+      cached.legacyText || JSON.stringify(cached.project),
+    );
     restored = true;
   }
 } catch (e) {
@@ -2089,7 +2272,9 @@ else {
   fittedView = false;
   if (!fits) fit();
   setStatus("Restored from this browser");
-  savedFingerprint = await serializeProject(bundle());
+  savedGeneration = generation;
+  // Complete legacy migration and retain any adjusted recovery camera.
+  persist();
 }
 $("#startup-step").textContent = "Getting your tools ready…";
 authoring = mountAuthoring({
@@ -2097,6 +2282,7 @@ authoring = mountAuthoring({
   artboardId: () => activeArtboard,
   selected: () => selected,
   authored: () => store.snapshot(),
+  revision: () => store.revision,
   transact: (label, fn) => edit(label, fn, true),
   refresh: render,
   draw,
@@ -2111,8 +2297,18 @@ authoring = mountAuthoring({
     return true;
   },
 });
-advanced = mountAdvanced({project:()=>store.snapshot(),artboardId:()=>activeArtboard,mode:()=>authoring.mode,commit:(label,fn)=>edit(label,fn,true),prepare:p=>sceneAssets.load(p),select,notice});
-window.addEventListener("pagehide",e=>{if(!e.persisted)sceneAssets.dispose();});
+advanced = mountAdvanced({
+  project: () => store.snapshot(),
+  artboardId: () => activeArtboard,
+  mode: () => authoring.mode,
+  commit: (label, fn) => edit(label, fn, true),
+  prepare: (p) => sceneAssets.load(p),
+  select,
+  notice,
+});
+window.addEventListener("pagehide", (e) => {
+  if (!e.persisted) sceneAssets.dispose();
+});
 mountPanels();
 mountDisclosures();
 mountLayout({ notice });

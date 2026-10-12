@@ -23,6 +23,7 @@ export {
   multiply,
   inverse,
   worldTransform,
+  transformResolver,
 } from "./primitives.mjs";
 export { ANIMATABLE, propertiesFor } from "./features.mjs";
 const copy = (value) => structuredClone(value);
@@ -223,9 +224,8 @@ function validateDocument(p, runtime) {
       problem(`${path}.sha256`, "expected SHA-256 hex digest");
     if (
       typeof a.data !== "string" ||
-      !/^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$/.test(
-        a.data,
-      )
+      a.data.length % 4 !== 0 ||
+      !/^[A-Za-z0-9+/]*={0,2}$/.test(a.data)
     )
       problem(`${path}.data`, "expected base64 asset bytes");
   });
@@ -262,7 +262,8 @@ function validateDocument(p, runtime) {
   }
   if (!issues.length && sceneVersion >= 2)
     validateFeatures(p, problem, identifier, { editorState: !runtime });
-  if (!issues.length && sceneVersion === 3) validateAdvanced(p, problem, identifier);
+  if (!issues.length && sceneVersion === 3)
+    validateAdvanced(p, problem, identifier);
   if (issues.length) throw new ProjectError(issues);
   return p;
 }

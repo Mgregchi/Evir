@@ -55,7 +55,7 @@ export function parentChoices(p, ids, artboardId) {
       !ancestors(p, n.id).some((id) => roots.has(id)),
   );
 }
-export function organizeLayers(p, ids, parentId, position) {
+export function organizeLayers(p, ids, parentId, position, referenceId = null) {
   const roots = selectionRoots(p, ids);
   if (!roots.length) throw Error("Select a layer to organize.");
   const artboardId = roots[0].artboardId;
@@ -69,37 +69,17 @@ export function organizeLayers(p, ids, parentId, position) {
     !parentChoices(p, ids, artboardId).some((n) => n.id === parentId)
   )
     throw Error("Choose an unlocked parent outside this selection.");
-  if (!["front", "back"].includes(position))
+  if (!["front", "back", "above", "below"].includes(position))
     throw Error("Choose a stacking position.");
-  // Local animation keys cannot simply be carried into a different parent space.
-  // Keep stacking edits available, but reject a reparent that needs key rebasing.
-  const transformProperties = new Set([
-    "x",
-    "y",
-    "rotation",
-    "scaleX",
-    "scaleY",
-    "length",
-  ]);
-  const animated = new Set(
-    p.animations.flatMap((a) =>
-      a.tracks
-        .filter((t) => transformProperties.has(t.property))
-        .map((t) => t.targetId),
-    ),
-  );
-  for (const n of roots)
-    if (n.parentId !== parentId) {
-      const affected = [
-        n.id,
-        ...ancestors(p, n.id),
-        ...(parentId ? [parentId, ...ancestors(p, parentId)] : []),
-      ];
-      if (affected.some((id) => animated.has(id)))
-        throw Error(
-          "This parent change needs animation-key rebasing. Keep the current parent; stacking changes are available.",
-        );
-    }
+  const reference = p.nodes.find((n) => n.id === referenceId);
+  if (
+    ["above", "below"].includes(position) &&
+    (!reference ||
+      reference.parentId !== parentId ||
+      reference.artboardId !== artboardId ||
+      roots.some((n) => n.id === referenceId))
+  )
+    throw Error("Choose an unselected sibling as the reference layer.");
   // Preserve scene order within the selected set, even when clicks came in another order.
   const ordered = layerRows(p, artboardId)
     .reverse()
@@ -115,7 +95,30 @@ export function organizeLayers(p, ids, parentId, position) {
         !moving.has(n.id),
     )
     .sort((a, b) => a.order - b.order);
-  const siblings =
+  let siblings =
     position === "front" ? [...rest, ...ordered] : [...ordered, ...rest];
+  if (["above", "below"].includes(position)) {
+    siblings = [...rest];
+    siblings.splice(
+      rest.findIndex((n) => n.id === referenceId) +
+        (position === "above" ? 1 : 0),
+      0,
+      ...ordered,
+    );
+  }
   siblings.forEach((n, i) => (n.order = i));
+}
+
+export function layerDrop(p, ids, targetId, placement) {
+  const target = p.nodes.find((n) => n.id === targetId);
+  if (!target) throw Error("Choose a layer as the drop destination.");
+  if (!["above", "below", "inside"].includes(placement))
+    throw Error("Choose a drop position.");
+  organizeLayers(
+    p,
+    ids,
+    placement === "inside" ? target.id : target.parentId,
+    placement === "inside" ? "front" : placement,
+    targetId,
+  );
 }

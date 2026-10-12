@@ -236,7 +236,20 @@ function dawn() {
   return p;
 }
 
-const factories={milo,orbit,bloom,tempo,signal,gather,wisp,dawn};
+function arrange() {
+  const {p,node,box,oval}=project('arrange','Arrange — give things room');
+  box('backdrop',35,65,442,392,38,'#dfeadd');
+  for(const [i,[x,y]] of [[60,124],[201,155],[364,103],[78,314],[212,280],[350,320]].entries()) {
+    const card=node(`card-${i+1}`,'group',null,null,x,y);
+    const palette=['#91d8b7','#e9bb95','#34594b'];
+    box(`card-${i+1}-shadow`,3,5,78,108,16,'#243f3320',card);
+    box(`card-${i+1}-face`,0,0,78,108,16,palette[i%3],card);
+    oval(`card-${i+1}-dot`,39,42,17,17,i%3===2?'#b4e3c8':'#34594b',card);
+    box(`card-${i+1}-line`,19,74,40,6,3,i%3===2?'#b4e3c8':'#34594b',card);
+  }
+  return p;
+}
+const factories={milo,orbit,bloom,tempo,signal,gather,wisp,dawn,arrange};
 for(const original of await suite()){
  const p=structuredClone(original);p.artboards[0].width=p.artboards[0].height=512;
  for(const n of p.nodes){n.transform[4]*=2;n.transform[5]*=2;const g=n.geometry;if(!g)continue;

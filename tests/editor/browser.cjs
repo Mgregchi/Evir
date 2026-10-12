@@ -207,8 +207,8 @@ run(async (page) => {
   assert.equal((await snapshot()).nodes.length, 1);
   // Storage failure keeps edits in memory and explains recovery.
   await page.evaluate(() => {
-    window.originalStorageSet = Storage.prototype.setItem;
-    Storage.prototype.setItem = function () {
+    window.originalStoragePut = IDBObjectStore.prototype.put;
+    IDBObjectStore.prototype.put = function () {
       throw new DOMException("Storage full", "QuotaExceededError");
     };
   });
@@ -219,8 +219,8 @@ run(async (page) => {
     .waitFor();
   assert.equal((await snapshot()).nodes.length, 2);
   await page.evaluate(() => {
-    Storage.prototype.setItem = window.originalStorageSet;
-    delete window.originalStorageSet;
+    IDBObjectStore.prototype.put = window.originalStoragePut;
+    delete window.originalStoragePut;
   });
   const recoveryDownload = page.waitForEvent("download");
   await page

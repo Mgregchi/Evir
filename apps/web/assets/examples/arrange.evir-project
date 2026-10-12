@@ -1,0 +1,3347 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 2,
+  "id": "arrange-project",
+  "name": "Arrange — give things room",
+  "artboards": [
+    {
+      "id": "arrange-board",
+      "name": "Arrange — give things room",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "arrange-backdrop",
+      "name": "backdrop",
+      "kind": "path",
+      "artboardId": "arrange-board",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        35,
+        65
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#dfeadd",
+        "skin": null,
+        "points": [
+          {
+            "id": "arrange-backdrop-p0",
+            "anchor": [
+              38,
+              0
+            ],
+            "in": [
+              17.0131795076,
+              0
+            ],
+            "out": [
+              38,
+              0
+            ]
+          },
+          {
+            "id": "arrange-backdrop-p1",
+            "anchor": [
+              404,
+              0
+            ],
+            "in": [
+              404,
+              0
+            ],
+            "out": [
+              424.9868204924,
+              0
+            ]
+          },
+          {
+            "id": "arrange-backdrop-p2",
+            "anchor": [
+              442,
+              38
+            ],
+            "in": [
+              442,
+              17.0131795076
+            ],
+            "out": [
+              442,
+              38
+            ]
+          },
+          {
+            "id": "arrange-backdrop-p3",
+            "anchor": [
+              442,
+              354
+            ],
+            "in": [
+              442,
+              354
+            ],
+            "out": [
+              442,
+              374.9868204924
+            ]
+          },
+          {
+            "id": "arrange-backdrop-p4",
+            "anchor": [
+              404,
+              392
+            ],
+            "in": [
+              424.9868204924,
+              392
+            ],
+            "out": [
+              404,
+              392
+            ]
+          },
+          {
+            "id": "arrange-backdrop-p5",
+            "anchor": [
+              38,
+              392
+            ],
+            "in": [
+              38,
+              392
+            ],
+            "out": [
+              17.0131795076,
+              392
+            ]
+          },
+          {
+            "id": "arrange-backdrop-p6",
+            "anchor": [
+              0,
+              354
+            ],
+            "in": [
+              0,
+              374.9868204924
+            ],
+            "out": [
+              0,
+              354
+            ]
+          },
+          {
+            "id": "arrange-backdrop-p7",
+            "anchor": [
+              0,
+              38
+            ],
+            "in": [
+              0,
+              38
+            ],
+            "out": [
+              0,
+              17.0131795076
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "arrange-card-1",
+      "name": "card 1",
+      "kind": "group",
+      "artboardId": "arrange-board",
+      "parentId": null,
+      "order": 1,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        60,
+        124
+      ],
+      "geometry": null
+    },
+    {
+      "id": "arrange-card-1-shadow",
+      "name": "card 1 shadow",
+      "kind": "path",
+      "artboardId": "arrange-board",
+      "parentId": "arrange-card-1",
+      "order": 2,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        3,
+        5
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#243f3320",
+        "skin": null,
+        "points": [
+          {
+            "id": "arrange-card-1-shadow-p0",
+            "anchor": [
+              16,
+              0
+            ],
+            "in": [
+              7.1634440032,
+              0
+            ],
+            "out": [
+              16,
+              0
+            ]
+          },
+          {
+            "id": "arrange-card-1-shadow-p1",
+            "anchor": [
+              62,
+              0
+            ],
+            "in": [
+              62,
+              0
+            ],
+            "out": [
+              70.8365559968,
+              0
+            ]
+          },
+          {
+            "id": "arrange-card-1-shadow-p2",
+            "anchor": [
+              78,
+              16
+            ],
+            "in": [
+              78,
+              7.1634440032
+            ],
+            "out": [
+              78,
+              16
+            ]
+          },
+          {
+            "id": "arrange-card-1-shadow-p3",
+            "anchor": [
+              78,
+              92
+            ],
+            "in": [
+              78,
+              92
+            ],
+            "out": [
+              78,
+              100.8365559968
+            ]
+          },
+          {
+            "id": "arrange-card-1-shadow-p4",
+            "anchor": [
+              62,
+              108
+            ],
+            "in": [
+              70.8365559968,
+              108
+            ],
+            "out": [
+              62,
+              108
+            ]
+          },
+          {
+            "id": "arrange-card-1-shadow-p5",
+            "anchor": [
+              16,
+              108
+            ],
+            "in": [
+              16,
+              108
+            ],
+            "out": [
+              7.1634440032,
+              108
+            ]
+          },
+          {
+            "id": "arrange-card-1-shadow-p6",
+            "anchor": [
+              0,
+              92
+            ],
+            "in": [
+              0,
+              100.8365559968
+            ],
+            "out": [
+              0,
+              92
+            ]
+          },
+          {
+            "id": "arrange-card-1-shadow-p7",
+            "anchor": [
+              0,
+              16
+            ],
+            "in": [
+              0,
+              16
+            ],
+            "out": [
+              0,
+              7.1634440032
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "arrange-card-1-face",
+      "name": "card 1 face",
+      "kind": "path",
+      "artboardId": "arrange-board",
+      "parentId": "arrange-card-1",
+      "order": 3,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#91d8b7",
+        "skin": null,
+        "points": [
+          {
+            "id": "arrange-card-1-face-p0",
+            "anchor": [
+              16,
+              0
+            ],
+            "in": [
+              7.1634440032,
+              0
+            ],
+            "out": [
+              16,
+              0
+            ]
+          },
+          {
+            "id": "arrange-card-1-face-p1",
+            "anchor": [
+              62,
+              0
+            ],
+            "in": [
+              62,
+              0
+            ],
+            "out": [
+              70.8365559968,
+              0
+            ]
+          },
+          {
+            "id": "arrange-card-1-face-p2",
+            "anchor": [
+              78,
+              16
+            ],
+            "in": [
+              78,
+              7.1634440032
+            ],
+            "out": [
+              78,
+              16
+            ]
+          },
+          {
+            "id": "arrange-card-1-face-p3",
+            "anchor": [
+              78,
+              92
+            ],
+            "in": [
+              78,
+              92
+            ],
+            "out": [
+              78,
+              100.8365559968
+            ]
+          },
+          {
+            "id": "arrange-card-1-face-p4",
+            "anchor": [
+              62,
+              108
+            ],
+            "in": [
+              70.8365559968,
+              108
+            ],
+            "out": [
+              62,
+              108
+            ]
+          },
+          {
+            "id": "arrange-card-1-face-p5",
+            "anchor": [
+              16,
+              108
+            ],
+            "in": [
+              16,
+              108
+            ],
+            "out": [
+              7.1634440032,
+              108
+            ]
+          },
+          {
+            "id": "arrange-card-1-face-p6",
+            "anchor": [
+              0,
+              92
+            ],
+            "in": [
+              0,
+              100.8365559968
+            ],
+            "out": [
+              0,
+              92
+            ]
+          },
+          {
+            "id": "arrange-card-1-face-p7",
+            "anchor": [
+              0,
+              16
+            ],
+            "in": [
+              0,
+              16
+            ],
+            "out": [
+              0,
+              7.1634440032
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "arrange-card-1-dot",
+      "name": "card 1 dot",
+      "kind": "path",
+      "artboardId": "arrange-board",
+      "parentId": "arrange-card-1",
+      "order": 4,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        39,
+        42
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#34594b",
+        "skin": null,
+        "points": [
+          {
+            "id": "arrange-card-1-dot-p0",
+            "anchor": [
+              17,
+              0
+            ],
+            "in": [
+              17,
+              -9.3888407466
+            ],
+            "out": [
+              17,
+              9.3888407466
+            ]
+          },
+          {
+            "id": "arrange-card-1-dot-p1",
+            "anchor": [
+              0,
+              17
+            ],
+            "in": [
+              9.3888407466,
+              17
+            ],
+            "out": [
+              -9.3888407466,
+              17
+            ]
+          },
+          {
+            "id": "arrange-card-1-dot-p2",
+            "anchor": [
+              -17,
+              0
+            ],
+            "in": [
+              -17,
+              9.3888407466
+            ],
+            "out": [
+              -17,
+              -9.3888407466
+            ]
+          },
+          {
+            "id": "arrange-card-1-dot-p3",
+            "anchor": [
+              0,
+              -17
+            ],
+            "in": [
+              -9.3888407466,
+              -17
+            ],
+            "out": [
+              9.3888407466,
+              -17
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "arrange-card-1-line",
+      "name": "card 1 line",
+      "kind": "path",
+      "artboardId": "arrange-board",
+      "parentId": "arrange-card-1",
+      "order": 5,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        19,
+        74
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#34594b",
+        "skin": null,
+        "points": [
+          {
+            "id": "arrange-card-1-line-p0",
+            "anchor": [
+              3,
+              0
+            ],
+            "in": [
+              1.3431457506000002,
+              0
+            ],
+            "out": [
+              3,
+              0
+            ]
+          },
+          {
+            "id": "arrange-card-1-line-p1",
+            "anchor": [
+              37,
+              0
+            ],
+            "in": [
+              37,
+              0
+            ],
+            "out": [
+              38.6568542494,
+              0
+            ]
+          },
+          {
+            "id": "arrange-card-1-line-p2",
+            "anchor": [
+              40,
+              3
+            ],
+            "in": [
+              40,
+              1.3431457506000002
+            ],
+            "out": [
+              40,
+              3
+            ]
+          },
+          {
+            "id": "arrange-card-1-line-p3",
+            "anchor": [
+              40,
+              3
+            ],
+            "in": [
+              40,
+              3
+            ],
+            "out": [
+              40,
+              4.6568542494
+            ]
+          },
+          {
+            "id": "arrange-card-1-line-p4",
+            "anchor": [
+              37,
+              6
+            ],
+            "in": [
+              38.6568542494,
+              6
+            ],
+            "out": [
+              37,
+              6
+            ]
+          },
+          {
+            "id": "arrange-card-1-line-p5",
+            "anchor": [
+              3,
+              6
+            ],
+            "in": [
+              3,
+              6
+            ],
+            "out": [
+              1.3431457506000002,
+              6
+            ]
+          },
+          {
+            "id": "arrange-card-1-line-p6",
+            "anchor": [
+              0,
+              3
+            ],
+            "in": [
+              0,
+              4.6568542494
+            ],
+            "out": [
+              0,
+              3
+            ]
+          },
+          {
+            "id": "arrange-card-1-line-p7",
+            "anchor": [
+              0,
+              3
+            ],
+            "in": [
+              0,
+              3
+            ],
+            "out": [
+              0,
+              1.3431457506000002
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "arrange-card-2",
+      "name": "card 2",
+      "kind": "group",
+      "artboardId": "arrange-board",
+      "parentId": null,
+      "order": 6,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        201,
+        155
+      ],
+      "geometry": null
+    },
+    {
+      "id": "arrange-card-2-shadow",
+      "name": "card 2 shadow",
+      "kind": "path",
+      "artboardId": "arrange-board",
+      "parentId": "arrange-card-2",
+      "order": 7,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        3,
+        5
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#243f3320",
+        "skin": null,
+        "points": [
+          {
+            "id": "arrange-card-2-shadow-p0",
+            "anchor": [
+              16,
+              0
+            ],
+            "in": [
+              7.1634440032,
+              0
+            ],
+            "out": [
+              16,
+              0
+            ]
+          },
+          {
+            "id": "arrange-card-2-shadow-p1",
+            "anchor": [
+              62,
+              0
+            ],
+            "in": [
+              62,
+              0
+            ],
+            "out": [
+              70.8365559968,
+              0
+            ]
+          },
+          {
+            "id": "arrange-card-2-shadow-p2",
+            "anchor": [
+              78,
+              16
+            ],
+            "in": [
+              78,
+              7.1634440032
+            ],
+            "out": [
+              78,
+              16
+            ]
+          },
+          {
+            "id": "arrange-card-2-shadow-p3",
+            "anchor": [
+              78,
+              92
+            ],
+            "in": [
+              78,
+              92
+            ],
+            "out": [
+              78,
+              100.8365559968
+            ]
+          },
+          {
+            "id": "arrange-card-2-shadow-p4",
+            "anchor": [
+              62,
+              108
+            ],
+            "in": [
+              70.8365559968,
+              108
+            ],
+            "out": [
+              62,
+              108
+            ]
+          },
+          {
+            "id": "arrange-card-2-shadow-p5",
+            "anchor": [
+              16,
+              108
+            ],
+            "in": [
+              16,
+              108
+            ],
+            "out": [
+              7.1634440032,
+              108
+            ]
+          },
+          {
+            "id": "arrange-card-2-shadow-p6",
+            "anchor": [
+              0,
+              92
+            ],
+            "in": [
+              0,
+              100.8365559968
+            ],
+            "out": [
+              0,
+              92
+            ]
+          },
+          {
+            "id": "arrange-card-2-shadow-p7",
+            "anchor": [
+              0,
+              16
+            ],
+            "in": [
+              0,
+              16
+            ],
+            "out": [
+              0,
+              7.1634440032
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "arrange-card-2-face",
+      "name": "card 2 face",
+      "kind": "path",
+      "artboardId": "arrange-board",
+      "parentId": "arrange-card-2",
+      "order": 8,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e9bb95",
+        "skin": null,
+        "points": [
+          {
+            "id": "arrange-card-2-face-p0",
+            "anchor": [
+              16,
+              0
+            ],
+            "in": [
+              7.1634440032,
+              0
+            ],
+            "out": [
+              16,
+              0
+            ]
+          },
+          {
+            "id": "arrange-card-2-face-p1",
+            "anchor": [
+              62,
+              0
+            ],
+            "in": [
+              62,
+              0
+            ],
+            "out": [
+              70.8365559968,
+              0
+            ]
+          },
+          {
+            "id": "arrange-card-2-face-p2",
+            "anchor": [
+              78,
+              16
+            ],
+            "in": [
+              78,
+              7.1634440032
+            ],
+            "out": [
+              78,
+              16
+            ]
+          },
+          {
+            "id": "arrange-card-2-face-p3",
+            "anchor": [
+              78,
+              92
+            ],
+            "in": [
+              78,
+              92
+            ],
+            "out": [
+              78,
+              100.8365559968
+            ]
+          },
+          {
+            "id": "arrange-card-2-face-p4",
+            "anchor": [
+              62,
+              108
+            ],
+            "in": [
+              70.8365559968,
+              108
+            ],
+            "out": [
+              62,
+              108
+            ]
+          },
+          {
+            "id": "arrange-card-2-face-p5",
+            "anchor": [
+              16,
+              108
+            ],
+            "in": [
+              16,
+              108
+            ],
+            "out": [
+              7.1634440032,
+              108
+            ]
+          },
+          {
+            "id": "arrange-card-2-face-p6",
+            "anchor": [
+              0,
+              92
+            ],
+            "in": [
+              0,
+              100.8365559968
+            ],
+            "out": [
+              0,
+              92
+            ]
+          },
+          {
+            "id": "arrange-card-2-face-p7",
+            "anchor": [
+              0,
+              16
+            ],
+            "in": [
+              0,
+              16
+            ],
+            "out": [
+              0,
+              7.1634440032
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "arrange-card-2-dot",
+      "name": "card 2 dot",
+      "kind": "path",
+      "artboardId": "arrange-board",
+      "parentId": "arrange-card-2",
+      "order": 9,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        39,
+        42
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#34594b",
+        "skin": null,
+        "points": [
+          {
+            "id": "arrange-card-2-dot-p0",
+            "anchor": [
+              17,
+              0
+            ],
+            "in": [
+              17,
+              -9.3888407466
+            ],
+            "out": [
+              17,
+              9.3888407466
+            ]
+          },
+          {
+            "id": "arrange-card-2-dot-p1",
+            "anchor": [
+              0,
+              17
+            ],
+            "in": [
+              9.3888407466,
+              17
+            ],
+            "out": [
+              -9.3888407466,
+              17
+            ]
+          },
+          {
+            "id": "arrange-card-2-dot-p2",
+            "anchor": [
+              -17,
+              0
+            ],
+            "in": [
+              -17,
+              9.3888407466
+            ],
+            "out": [
+              -17,
+              -9.3888407466
+            ]
+          },
+          {
+            "id": "arrange-card-2-dot-p3",
+            "anchor": [
+              0,
+              -17
+            ],
+            "in": [
+              -9.3888407466,
+              -17
+            ],
+            "out": [
+              9.3888407466,
+              -17
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "arrange-card-2-line",
+      "name": "card 2 line",
+      "kind": "path",
+      "artboardId": "arrange-board",
+      "parentId": "arrange-card-2",
+      "order": 10,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        19,
+        74
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#34594b",
+        "skin": null,
+        "points": [
+          {
+            "id": "arrange-card-2-line-p0",
+            "anchor": [
+              3,
+              0
+            ],
+            "in": [
+              1.3431457506000002,
+              0
+            ],
+            "out": [
+              3,
+              0
+            ]
+          },
+          {
+            "id": "arrange-card-2-line-p1",
+            "anchor": [
+              37,
+              0
+            ],
+            "in": [
+              37,
+              0
+            ],
+            "out": [
+              38.6568542494,
+              0
+            ]
+          },
+          {
+            "id": "arrange-card-2-line-p2",
+            "anchor": [
+              40,
+              3
+            ],
+            "in": [
+              40,
+              1.3431457506000002
+            ],
+            "out": [
+              40,
+              3
+            ]
+          },
+          {
+            "id": "arrange-card-2-line-p3",
+            "anchor": [
+              40,
+              3
+            ],
+            "in": [
+              40,
+              3
+            ],
+            "out": [
+              40,
+              4.6568542494
+            ]
+          },
+          {
+            "id": "arrange-card-2-line-p4",
+            "anchor": [
+              37,
+              6
+            ],
+            "in": [
+              38.6568542494,
+              6
+            ],
+            "out": [
+              37,
+              6
+            ]
+          },
+          {
+            "id": "arrange-card-2-line-p5",
+            "anchor": [
+              3,
+              6
+            ],
+            "in": [
+              3,
+              6
+            ],
+            "out": [
+              1.3431457506000002,
+              6
+            ]
+          },
+          {
+            "id": "arrange-card-2-line-p6",
+            "anchor": [
+              0,
+              3
+            ],
+            "in": [
+              0,
+              4.6568542494
+            ],
+            "out": [
+              0,
+              3
+            ]
+          },
+          {
+            "id": "arrange-card-2-line-p7",
+            "anchor": [
+              0,
+              3
+            ],
+            "in": [
+              0,
+              3
+            ],
+            "out": [
+              0,
+              1.3431457506000002
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "arrange-card-3",
+      "name": "card 3",
+      "kind": "group",
+      "artboardId": "arrange-board",
+      "parentId": null,
+      "order": 11,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        364,
+        103
+      ],
+      "geometry": null
+    },
+    {
+      "id": "arrange-card-3-shadow",
+      "name": "card 3 shadow",
+      "kind": "path",
+      "artboardId": "arrange-board",
+      "parentId": "arrange-card-3",
+      "order": 12,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        3,
+        5
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#243f3320",
+        "skin": null,
+        "points": [
+          {
+            "id": "arrange-card-3-shadow-p0",
+            "anchor": [
+              16,
+              0
+            ],
+            "in": [
+              7.1634440032,
+              0
+            ],
+            "out": [
+              16,
+              0
+            ]
+          },
+          {
+            "id": "arrange-card-3-shadow-p1",
+            "anchor": [
+              62,
+              0
+            ],
+            "in": [
+              62,
+              0
+            ],
+            "out": [
+              70.8365559968,
+              0
+            ]
+          },
+          {
+            "id": "arrange-card-3-shadow-p2",
+            "anchor": [
+              78,
+              16
+            ],
+            "in": [
+              78,
+              7.1634440032
+            ],
+            "out": [
+              78,
+              16
+            ]
+          },
+          {
+            "id": "arrange-card-3-shadow-p3",
+            "anchor": [
+              78,
+              92
+            ],
+            "in": [
+              78,
+              92
+            ],
+            "out": [
+              78,
+              100.8365559968
+            ]
+          },
+          {
+            "id": "arrange-card-3-shadow-p4",
+            "anchor": [
+              62,
+              108
+            ],
+            "in": [
+              70.8365559968,
+              108
+            ],
+            "out": [
+              62,
+              108
+            ]
+          },
+          {
+            "id": "arrange-card-3-shadow-p5",
+            "anchor": [
+              16,
+              108
+            ],
+            "in": [
+              16,
+              108
+            ],
+            "out": [
+              7.1634440032,
+              108
+            ]
+          },
+          {
+            "id": "arrange-card-3-shadow-p6",
+            "anchor": [
+              0,
+              92
+            ],
+            "in": [
+              0,
+              100.8365559968
+            ],
+            "out": [
+              0,
+              92
+            ]
+          },
+          {
+            "id": "arrange-card-3-shadow-p7",
+            "anchor": [
+              0,
+              16
+            ],
+            "in": [
+              0,
+              16
+            ],
+            "out": [
+              0,
+              7.1634440032
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "arrange-card-3-face",
+      "name": "card 3 face",
+      "kind": "path",
+      "artboardId": "arrange-board",
+      "parentId": "arrange-card-3",
+      "order": 13,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#34594b",
+        "skin": null,
+        "points": [
+          {
+            "id": "arrange-card-3-face-p0",
+            "anchor": [
+              16,
+              0
+            ],
+            "in": [
+              7.1634440032,
+              0
+            ],
+            "out": [
+              16,
+              0
+            ]
+          },
+          {
+            "id": "arrange-card-3-face-p1",
+            "anchor": [
+              62,
+              0
+            ],
+            "in": [
+              62,
+              0
+            ],
+            "out": [
+              70.8365559968,
+              0
+            ]
+          },
+          {
+            "id": "arrange-card-3-face-p2",
+            "anchor": [
+              78,
+              16
+            ],
+            "in": [
+              78,
+              7.1634440032
+            ],
+            "out": [
+              78,
+              16
+            ]
+          },
+          {
+            "id": "arrange-card-3-face-p3",
+            "anchor": [
+              78,
+              92
+            ],
+            "in": [
+              78,
+              92
+            ],
+            "out": [
+              78,
+              100.8365559968
+            ]
+          },
+          {
+            "id": "arrange-card-3-face-p4",
+            "anchor": [
+              62,
+              108
+            ],
+            "in": [
+              70.8365559968,
+              108
+            ],
+            "out": [
+              62,
+              108
+            ]
+          },
+          {
+            "id": "arrange-card-3-face-p5",
+            "anchor": [
+              16,
+              108
+            ],
+            "in": [
+              16,
+              108
+            ],
+            "out": [
+              7.1634440032,
+              108
+            ]
+          },
+          {
+            "id": "arrange-card-3-face-p6",
+            "anchor": [
+              0,
+              92
+            ],
+            "in": [
+              0,
+              100.8365559968
+            ],
+            "out": [
+              0,
+              92
+            ]
+          },
+          {
+            "id": "arrange-card-3-face-p7",
+            "anchor": [
+              0,
+              16
+            ],
+            "in": [
+              0,
+              16
+            ],
+            "out": [
+              0,
+              7.1634440032
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "arrange-card-3-dot",
+      "name": "card 3 dot",
+      "kind": "path",
+      "artboardId": "arrange-board",
+      "parentId": "arrange-card-3",
+      "order": 14,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        39,
+        42
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#b4e3c8",
+        "skin": null,
+        "points": [
+          {
+            "id": "arrange-card-3-dot-p0",
+            "anchor": [
+              17,
+              0
+            ],
+            "in": [
+              17,
+              -9.3888407466
+            ],
+            "out": [
+              17,
+              9.3888407466
+            ]
+          },
+          {
+            "id": "arrange-card-3-dot-p1",
+            "anchor": [
+              0,
+              17
+            ],
+            "in": [
+              9.3888407466,
+              17
+            ],
+            "out": [
+              -9.3888407466,
+              17
+            ]
+          },
+          {
+            "id": "arrange-card-3-dot-p2",
+            "anchor": [
+              -17,
+              0
+            ],
+            "in": [
+              -17,
+              9.3888407466
+            ],
+            "out": [
+              -17,
+              -9.3888407466
+            ]
+          },
+          {
+            "id": "arrange-card-3-dot-p3",
+            "anchor": [
+              0,
+              -17
+            ],
+            "in": [
+              -9.3888407466,
+              -17
+            ],
+            "out": [
+              9.3888407466,
+              -17
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "arrange-card-3-line",
+      "name": "card 3 line",
+      "kind": "path",
+      "artboardId": "arrange-board",
+      "parentId": "arrange-card-3",
+      "order": 15,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        19,
+        74
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#b4e3c8",
+        "skin": null,
+        "points": [
+          {
+            "id": "arrange-card-3-line-p0",
+            "anchor": [
+              3,
+              0
+            ],
+            "in": [
+              1.3431457506000002,
+              0
+            ],
+            "out": [
+              3,
+              0
+            ]
+          },
+          {
+            "id": "arrange-card-3-line-p1",
+            "anchor": [
+              37,
+              0
+            ],
+            "in": [
+              37,
+              0
+            ],
+            "out": [
+              38.6568542494,
+              0
+            ]
+          },
+          {
+            "id": "arrange-card-3-line-p2",
+            "anchor": [
+              40,
+              3
+            ],
+            "in": [
+              40,
+              1.3431457506000002
+            ],
+            "out": [
+              40,
+              3
+            ]
+          },
+          {
+            "id": "arrange-card-3-line-p3",
+            "anchor": [
+              40,
+              3
+            ],
+            "in": [
+              40,
+              3
+            ],
+            "out": [
+              40,
+              4.6568542494
+            ]
+          },
+          {
+            "id": "arrange-card-3-line-p4",
+            "anchor": [
+              37,
+              6
+            ],
+            "in": [
+              38.6568542494,
+              6
+            ],
+            "out": [
+              37,
+              6
+            ]
+          },
+          {
+            "id": "arrange-card-3-line-p5",
+            "anchor": [
+              3,
+              6
+            ],
+            "in": [
+              3,
+              6
+            ],
+            "out": [
+              1.3431457506000002,
+              6
+            ]
+          },
+          {
+            "id": "arrange-card-3-line-p6",
+            "anchor": [
+              0,
+              3
+            ],
+            "in": [
+              0,
+              4.6568542494
+            ],
+            "out": [
+              0,
+              3
+            ]
+          },
+          {
+            "id": "arrange-card-3-line-p7",
+            "anchor": [
+              0,
+              3
+            ],
+            "in": [
+              0,
+              3
+            ],
+            "out": [
+              0,
+              1.3431457506000002
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "arrange-card-4",
+      "name": "card 4",
+      "kind": "group",
+      "artboardId": "arrange-board",
+      "parentId": null,
+      "order": 16,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        78,
+        314
+      ],
+      "geometry": null
+    },
+    {
+      "id": "arrange-card-4-shadow",
+      "name": "card 4 shadow",
+      "kind": "path",
+      "artboardId": "arrange-board",
+      "parentId": "arrange-card-4",
+      "order": 17,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        3,
+        5
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#243f3320",
+        "skin": null,
+        "points": [
+          {
+            "id": "arrange-card-4-shadow-p0",
+            "anchor": [
+              16,
+              0
+            ],
+            "in": [
+              7.1634440032,
+              0
+            ],
+            "out": [
+              16,
+              0
+            ]
+          },
+          {
+            "id": "arrange-card-4-shadow-p1",
+            "anchor": [
+              62,
+              0
+            ],
+            "in": [
+              62,
+              0
+            ],
+            "out": [
+              70.8365559968,
+              0
+            ]
+          },
+          {
+            "id": "arrange-card-4-shadow-p2",
+            "anchor": [
+              78,
+              16
+            ],
+            "in": [
+              78,
+              7.1634440032
+            ],
+            "out": [
+              78,
+              16
+            ]
+          },
+          {
+            "id": "arrange-card-4-shadow-p3",
+            "anchor": [
+              78,
+              92
+            ],
+            "in": [
+              78,
+              92
+            ],
+            "out": [
+              78,
+              100.8365559968
+            ]
+          },
+          {
+            "id": "arrange-card-4-shadow-p4",
+            "anchor": [
+              62,
+              108
+            ],
+            "in": [
+              70.8365559968,
+              108
+            ],
+            "out": [
+              62,
+              108
+            ]
+          },
+          {
+            "id": "arrange-card-4-shadow-p5",
+            "anchor": [
+              16,
+              108
+            ],
+            "in": [
+              16,
+              108
+            ],
+            "out": [
+              7.1634440032,
+              108
+            ]
+          },
+          {
+            "id": "arrange-card-4-shadow-p6",
+            "anchor": [
+              0,
+              92
+            ],
+            "in": [
+              0,
+              100.8365559968
+            ],
+            "out": [
+              0,
+              92
+            ]
+          },
+          {
+            "id": "arrange-card-4-shadow-p7",
+            "anchor": [
+              0,
+              16
+            ],
+            "in": [
+              0,
+              16
+            ],
+            "out": [
+              0,
+              7.1634440032
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "arrange-card-4-face",
+      "name": "card 4 face",
+      "kind": "path",
+      "artboardId": "arrange-board",
+      "parentId": "arrange-card-4",
+      "order": 18,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#91d8b7",
+        "skin": null,
+        "points": [
+          {
+            "id": "arrange-card-4-face-p0",
+            "anchor": [
+              16,
+              0
+            ],
+            "in": [
+              7.1634440032,
+              0
+            ],
+            "out": [
+              16,
+              0
+            ]
+          },
+          {
+            "id": "arrange-card-4-face-p1",
+            "anchor": [
+              62,
+              0
+            ],
+            "in": [
+              62,
+              0
+            ],
+            "out": [
+              70.8365559968,
+              0
+            ]
+          },
+          {
+            "id": "arrange-card-4-face-p2",
+            "anchor": [
+              78,
+              16
+            ],
+            "in": [
+              78,
+              7.1634440032
+            ],
+            "out": [
+              78,
+              16
+            ]
+          },
+          {
+            "id": "arrange-card-4-face-p3",
+            "anchor": [
+              78,
+              92
+            ],
+            "in": [
+              78,
+              92
+            ],
+            "out": [
+              78,
+              100.8365559968
+            ]
+          },
+          {
+            "id": "arrange-card-4-face-p4",
+            "anchor": [
+              62,
+              108
+            ],
+            "in": [
+              70.8365559968,
+              108
+            ],
+            "out": [
+              62,
+              108
+            ]
+          },
+          {
+            "id": "arrange-card-4-face-p5",
+            "anchor": [
+              16,
+              108
+            ],
+            "in": [
+              16,
+              108
+            ],
+            "out": [
+              7.1634440032,
+              108
+            ]
+          },
+          {
+            "id": "arrange-card-4-face-p6",
+            "anchor": [
+              0,
+              92
+            ],
+            "in": [
+              0,
+              100.8365559968
+            ],
+            "out": [
+              0,
+              92
+            ]
+          },
+          {
+            "id": "arrange-card-4-face-p7",
+            "anchor": [
+              0,
+              16
+            ],
+            "in": [
+              0,
+              16
+            ],
+            "out": [
+              0,
+              7.1634440032
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "arrange-card-4-dot",
+      "name": "card 4 dot",
+      "kind": "path",
+      "artboardId": "arrange-board",
+      "parentId": "arrange-card-4",
+      "order": 19,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        39,
+        42
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#34594b",
+        "skin": null,
+        "points": [
+          {
+            "id": "arrange-card-4-dot-p0",
+            "anchor": [
+              17,
+              0
+            ],
+            "in": [
+              17,
+              -9.3888407466
+            ],
+            "out": [
+              17,
+              9.3888407466
+            ]
+          },
+          {
+            "id": "arrange-card-4-dot-p1",
+            "anchor": [
+              0,
+              17
+            ],
+            "in": [
+              9.3888407466,
+              17
+            ],
+            "out": [
+              -9.3888407466,
+              17
+            ]
+          },
+          {
+            "id": "arrange-card-4-dot-p2",
+            "anchor": [
+              -17,
+              0
+            ],
+            "in": [
+              -17,
+              9.3888407466
+            ],
+            "out": [
+              -17,
+              -9.3888407466
+            ]
+          },
+          {
+            "id": "arrange-card-4-dot-p3",
+            "anchor": [
+              0,
+              -17
+            ],
+            "in": [
+              -9.3888407466,
+              -17
+            ],
+            "out": [
+              9.3888407466,
+              -17
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "arrange-card-4-line",
+      "name": "card 4 line",
+      "kind": "path",
+      "artboardId": "arrange-board",
+      "parentId": "arrange-card-4",
+      "order": 20,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        19,
+        74
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#34594b",
+        "skin": null,
+        "points": [
+          {
+            "id": "arrange-card-4-line-p0",
+            "anchor": [
+              3,
+              0
+            ],
+            "in": [
+              1.3431457506000002,
+              0
+            ],
+            "out": [
+              3,
+              0
+            ]
+          },
+          {
+            "id": "arrange-card-4-line-p1",
+            "anchor": [
+              37,
+              0
+            ],
+            "in": [
+              37,
+              0
+            ],
+            "out": [
+              38.6568542494,
+              0
+            ]
+          },
+          {
+            "id": "arrange-card-4-line-p2",
+            "anchor": [
+              40,
+              3
+            ],
+            "in": [
+              40,
+              1.3431457506000002
+            ],
+            "out": [
+              40,
+              3
+            ]
+          },
+          {
+            "id": "arrange-card-4-line-p3",
+            "anchor": [
+              40,
+              3
+            ],
+            "in": [
+              40,
+              3
+            ],
+            "out": [
+              40,
+              4.6568542494
+            ]
+          },
+          {
+            "id": "arrange-card-4-line-p4",
+            "anchor": [
+              37,
+              6
+            ],
+            "in": [
+              38.6568542494,
+              6
+            ],
+            "out": [
+              37,
+              6
+            ]
+          },
+          {
+            "id": "arrange-card-4-line-p5",
+            "anchor": [
+              3,
+              6
+            ],
+            "in": [
+              3,
+              6
+            ],
+            "out": [
+              1.3431457506000002,
+              6
+            ]
+          },
+          {
+            "id": "arrange-card-4-line-p6",
+            "anchor": [
+              0,
+              3
+            ],
+            "in": [
+              0,
+              4.6568542494
+            ],
+            "out": [
+              0,
+              3
+            ]
+          },
+          {
+            "id": "arrange-card-4-line-p7",
+            "anchor": [
+              0,
+              3
+            ],
+            "in": [
+              0,
+              3
+            ],
+            "out": [
+              0,
+              1.3431457506000002
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "arrange-card-5",
+      "name": "card 5",
+      "kind": "group",
+      "artboardId": "arrange-board",
+      "parentId": null,
+      "order": 21,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        212,
+        280
+      ],
+      "geometry": null
+    },
+    {
+      "id": "arrange-card-5-shadow",
+      "name": "card 5 shadow",
+      "kind": "path",
+      "artboardId": "arrange-board",
+      "parentId": "arrange-card-5",
+      "order": 22,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        3,
+        5
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#243f3320",
+        "skin": null,
+        "points": [
+          {
+            "id": "arrange-card-5-shadow-p0",
+            "anchor": [
+              16,
+              0
+            ],
+            "in": [
+              7.1634440032,
+              0
+            ],
+            "out": [
+              16,
+              0
+            ]
+          },
+          {
+            "id": "arrange-card-5-shadow-p1",
+            "anchor": [
+              62,
+              0
+            ],
+            "in": [
+              62,
+              0
+            ],
+            "out": [
+              70.8365559968,
+              0
+            ]
+          },
+          {
+            "id": "arrange-card-5-shadow-p2",
+            "anchor": [
+              78,
+              16
+            ],
+            "in": [
+              78,
+              7.1634440032
+            ],
+            "out": [
+              78,
+              16
+            ]
+          },
+          {
+            "id": "arrange-card-5-shadow-p3",
+            "anchor": [
+              78,
+              92
+            ],
+            "in": [
+              78,
+              92
+            ],
+            "out": [
+              78,
+              100.8365559968
+            ]
+          },
+          {
+            "id": "arrange-card-5-shadow-p4",
+            "anchor": [
+              62,
+              108
+            ],
+            "in": [
+              70.8365559968,
+              108
+            ],
+            "out": [
+              62,
+              108
+            ]
+          },
+          {
+            "id": "arrange-card-5-shadow-p5",
+            "anchor": [
+              16,
+              108
+            ],
+            "in": [
+              16,
+              108
+            ],
+            "out": [
+              7.1634440032,
+              108
+            ]
+          },
+          {
+            "id": "arrange-card-5-shadow-p6",
+            "anchor": [
+              0,
+              92
+            ],
+            "in": [
+              0,
+              100.8365559968
+            ],
+            "out": [
+              0,
+              92
+            ]
+          },
+          {
+            "id": "arrange-card-5-shadow-p7",
+            "anchor": [
+              0,
+              16
+            ],
+            "in": [
+              0,
+              16
+            ],
+            "out": [
+              0,
+              7.1634440032
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "arrange-card-5-face",
+      "name": "card 5 face",
+      "kind": "path",
+      "artboardId": "arrange-board",
+      "parentId": "arrange-card-5",
+      "order": 23,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e9bb95",
+        "skin": null,
+        "points": [
+          {
+            "id": "arrange-card-5-face-p0",
+            "anchor": [
+              16,
+              0
+            ],
+            "in": [
+              7.1634440032,
+              0
+            ],
+            "out": [
+              16,
+              0
+            ]
+          },
+          {
+            "id": "arrange-card-5-face-p1",
+            "anchor": [
+              62,
+              0
+            ],
+            "in": [
+              62,
+              0
+            ],
+            "out": [
+              70.8365559968,
+              0
+            ]
+          },
+          {
+            "id": "arrange-card-5-face-p2",
+            "anchor": [
+              78,
+              16
+            ],
+            "in": [
+              78,
+              7.1634440032
+            ],
+            "out": [
+              78,
+              16
+            ]
+          },
+          {
+            "id": "arrange-card-5-face-p3",
+            "anchor": [
+              78,
+              92
+            ],
+            "in": [
+              78,
+              92
+            ],
+            "out": [
+              78,
+              100.8365559968
+            ]
+          },
+          {
+            "id": "arrange-card-5-face-p4",
+            "anchor": [
+              62,
+              108
+            ],
+            "in": [
+              70.8365559968,
+              108
+            ],
+            "out": [
+              62,
+              108
+            ]
+          },
+          {
+            "id": "arrange-card-5-face-p5",
+            "anchor": [
+              16,
+              108
+            ],
+            "in": [
+              16,
+              108
+            ],
+            "out": [
+              7.1634440032,
+              108
+            ]
+          },
+          {
+            "id": "arrange-card-5-face-p6",
+            "anchor": [
+              0,
+              92
+            ],
+            "in": [
+              0,
+              100.8365559968
+            ],
+            "out": [
+              0,
+              92
+            ]
+          },
+          {
+            "id": "arrange-card-5-face-p7",
+            "anchor": [
+              0,
+              16
+            ],
+            "in": [
+              0,
+              16
+            ],
+            "out": [
+              0,
+              7.1634440032
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "arrange-card-5-dot",
+      "name": "card 5 dot",
+      "kind": "path",
+      "artboardId": "arrange-board",
+      "parentId": "arrange-card-5",
+      "order": 24,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        39,
+        42
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#34594b",
+        "skin": null,
+        "points": [
+          {
+            "id": "arrange-card-5-dot-p0",
+            "anchor": [
+              17,
+              0
+            ],
+            "in": [
+              17,
+              -9.3888407466
+            ],
+            "out": [
+              17,
+              9.3888407466
+            ]
+          },
+          {
+            "id": "arrange-card-5-dot-p1",
+            "anchor": [
+              0,
+              17
+            ],
+            "in": [
+              9.3888407466,
+              17
+            ],
+            "out": [
+              -9.3888407466,
+              17
+            ]
+          },
+          {
+            "id": "arrange-card-5-dot-p2",
+            "anchor": [
+              -17,
+              0
+            ],
+            "in": [
+              -17,
+              9.3888407466
+            ],
+            "out": [
+              -17,
+              -9.3888407466
+            ]
+          },
+          {
+            "id": "arrange-card-5-dot-p3",
+            "anchor": [
+              0,
+              -17
+            ],
+            "in": [
+              -9.3888407466,
+              -17
+            ],
+            "out": [
+              9.3888407466,
+              -17
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "arrange-card-5-line",
+      "name": "card 5 line",
+      "kind": "path",
+      "artboardId": "arrange-board",
+      "parentId": "arrange-card-5",
+      "order": 25,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        19,
+        74
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#34594b",
+        "skin": null,
+        "points": [
+          {
+            "id": "arrange-card-5-line-p0",
+            "anchor": [
+              3,
+              0
+            ],
+            "in": [
+              1.3431457506000002,
+              0
+            ],
+            "out": [
+              3,
+              0
+            ]
+          },
+          {
+            "id": "arrange-card-5-line-p1",
+            "anchor": [
+              37,
+              0
+            ],
+            "in": [
+              37,
+              0
+            ],
+            "out": [
+              38.6568542494,
+              0
+            ]
+          },
+          {
+            "id": "arrange-card-5-line-p2",
+            "anchor": [
+              40,
+              3
+            ],
+            "in": [
+              40,
+              1.3431457506000002
+            ],
+            "out": [
+              40,
+              3
+            ]
+          },
+          {
+            "id": "arrange-card-5-line-p3",
+            "anchor": [
+              40,
+              3
+            ],
+            "in": [
+              40,
+              3
+            ],
+            "out": [
+              40,
+              4.6568542494
+            ]
+          },
+          {
+            "id": "arrange-card-5-line-p4",
+            "anchor": [
+              37,
+              6
+            ],
+            "in": [
+              38.6568542494,
+              6
+            ],
+            "out": [
+              37,
+              6
+            ]
+          },
+          {
+            "id": "arrange-card-5-line-p5",
+            "anchor": [
+              3,
+              6
+            ],
+            "in": [
+              3,
+              6
+            ],
+            "out": [
+              1.3431457506000002,
+              6
+            ]
+          },
+          {
+            "id": "arrange-card-5-line-p6",
+            "anchor": [
+              0,
+              3
+            ],
+            "in": [
+              0,
+              4.6568542494
+            ],
+            "out": [
+              0,
+              3
+            ]
+          },
+          {
+            "id": "arrange-card-5-line-p7",
+            "anchor": [
+              0,
+              3
+            ],
+            "in": [
+              0,
+              3
+            ],
+            "out": [
+              0,
+              1.3431457506000002
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "arrange-card-6",
+      "name": "card 6",
+      "kind": "group",
+      "artboardId": "arrange-board",
+      "parentId": null,
+      "order": 26,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        350,
+        320
+      ],
+      "geometry": null
+    },
+    {
+      "id": "arrange-card-6-shadow",
+      "name": "card 6 shadow",
+      "kind": "path",
+      "artboardId": "arrange-board",
+      "parentId": "arrange-card-6",
+      "order": 27,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        3,
+        5
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#243f3320",
+        "skin": null,
+        "points": [
+          {
+            "id": "arrange-card-6-shadow-p0",
+            "anchor": [
+              16,
+              0
+            ],
+            "in": [
+              7.1634440032,
+              0
+            ],
+            "out": [
+              16,
+              0
+            ]
+          },
+          {
+            "id": "arrange-card-6-shadow-p1",
+            "anchor": [
+              62,
+              0
+            ],
+            "in": [
+              62,
+              0
+            ],
+            "out": [
+              70.8365559968,
+              0
+            ]
+          },
+          {
+            "id": "arrange-card-6-shadow-p2",
+            "anchor": [
+              78,
+              16
+            ],
+            "in": [
+              78,
+              7.1634440032
+            ],
+            "out": [
+              78,
+              16
+            ]
+          },
+          {
+            "id": "arrange-card-6-shadow-p3",
+            "anchor": [
+              78,
+              92
+            ],
+            "in": [
+              78,
+              92
+            ],
+            "out": [
+              78,
+              100.8365559968
+            ]
+          },
+          {
+            "id": "arrange-card-6-shadow-p4",
+            "anchor": [
+              62,
+              108
+            ],
+            "in": [
+              70.8365559968,
+              108
+            ],
+            "out": [
+              62,
+              108
+            ]
+          },
+          {
+            "id": "arrange-card-6-shadow-p5",
+            "anchor": [
+              16,
+              108
+            ],
+            "in": [
+              16,
+              108
+            ],
+            "out": [
+              7.1634440032,
+              108
+            ]
+          },
+          {
+            "id": "arrange-card-6-shadow-p6",
+            "anchor": [
+              0,
+              92
+            ],
+            "in": [
+              0,
+              100.8365559968
+            ],
+            "out": [
+              0,
+              92
+            ]
+          },
+          {
+            "id": "arrange-card-6-shadow-p7",
+            "anchor": [
+              0,
+              16
+            ],
+            "in": [
+              0,
+              16
+            ],
+            "out": [
+              0,
+              7.1634440032
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "arrange-card-6-face",
+      "name": "card 6 face",
+      "kind": "path",
+      "artboardId": "arrange-board",
+      "parentId": "arrange-card-6",
+      "order": 28,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#34594b",
+        "skin": null,
+        "points": [
+          {
+            "id": "arrange-card-6-face-p0",
+            "anchor": [
+              16,
+              0
+            ],
+            "in": [
+              7.1634440032,
+              0
+            ],
+            "out": [
+              16,
+              0
+            ]
+          },
+          {
+            "id": "arrange-card-6-face-p1",
+            "anchor": [
+              62,
+              0
+            ],
+            "in": [
+              62,
+              0
+            ],
+            "out": [
+              70.8365559968,
+              0
+            ]
+          },
+          {
+            "id": "arrange-card-6-face-p2",
+            "anchor": [
+              78,
+              16
+            ],
+            "in": [
+              78,
+              7.1634440032
+            ],
+            "out": [
+              78,
+              16
+            ]
+          },
+          {
+            "id": "arrange-card-6-face-p3",
+            "anchor": [
+              78,
+              92
+            ],
+            "in": [
+              78,
+              92
+            ],
+            "out": [
+              78,
+              100.8365559968
+            ]
+          },
+          {
+            "id": "arrange-card-6-face-p4",
+            "anchor": [
+              62,
+              108
+            ],
+            "in": [
+              70.8365559968,
+              108
+            ],
+            "out": [
+              62,
+              108
+            ]
+          },
+          {
+            "id": "arrange-card-6-face-p5",
+            "anchor": [
+              16,
+              108
+            ],
+            "in": [
+              16,
+              108
+            ],
+            "out": [
+              7.1634440032,
+              108
+            ]
+          },
+          {
+            "id": "arrange-card-6-face-p6",
+            "anchor": [
+              0,
+              92
+            ],
+            "in": [
+              0,
+              100.8365559968
+            ],
+            "out": [
+              0,
+              92
+            ]
+          },
+          {
+            "id": "arrange-card-6-face-p7",
+            "anchor": [
+              0,
+              16
+            ],
+            "in": [
+              0,
+              16
+            ],
+            "out": [
+              0,
+              7.1634440032
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "arrange-card-6-dot",
+      "name": "card 6 dot",
+      "kind": "path",
+      "artboardId": "arrange-board",
+      "parentId": "arrange-card-6",
+      "order": 29,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        39,
+        42
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#b4e3c8",
+        "skin": null,
+        "points": [
+          {
+            "id": "arrange-card-6-dot-p0",
+            "anchor": [
+              17,
+              0
+            ],
+            "in": [
+              17,
+              -9.3888407466
+            ],
+            "out": [
+              17,
+              9.3888407466
+            ]
+          },
+          {
+            "id": "arrange-card-6-dot-p1",
+            "anchor": [
+              0,
+              17
+            ],
+            "in": [
+              9.3888407466,
+              17
+            ],
+            "out": [
+              -9.3888407466,
+              17
+            ]
+          },
+          {
+            "id": "arrange-card-6-dot-p2",
+            "anchor": [
+              -17,
+              0
+            ],
+            "in": [
+              -17,
+              9.3888407466
+            ],
+            "out": [
+              -17,
+              -9.3888407466
+            ]
+          },
+          {
+            "id": "arrange-card-6-dot-p3",
+            "anchor": [
+              0,
+              -17
+            ],
+            "in": [
+              -9.3888407466,
+              -17
+            ],
+            "out": [
+              9.3888407466,
+              -17
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "arrange-card-6-line",
+      "name": "card 6 line",
+      "kind": "path",
+      "artboardId": "arrange-board",
+      "parentId": "arrange-card-6",
+      "order": 30,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        19,
+        74
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#b4e3c8",
+        "skin": null,
+        "points": [
+          {
+            "id": "arrange-card-6-line-p0",
+            "anchor": [
+              3,
+              0
+            ],
+            "in": [
+              1.3431457506000002,
+              0
+            ],
+            "out": [
+              3,
+              0
+            ]
+          },
+          {
+            "id": "arrange-card-6-line-p1",
+            "anchor": [
+              37,
+              0
+            ],
+            "in": [
+              37,
+              0
+            ],
+            "out": [
+              38.6568542494,
+              0
+            ]
+          },
+          {
+            "id": "arrange-card-6-line-p2",
+            "anchor": [
+              40,
+              3
+            ],
+            "in": [
+              40,
+              1.3431457506000002
+            ],
+            "out": [
+              40,
+              3
+            ]
+          },
+          {
+            "id": "arrange-card-6-line-p3",
+            "anchor": [
+              40,
+              3
+            ],
+            "in": [
+              40,
+              3
+            ],
+            "out": [
+              40,
+              4.6568542494
+            ]
+          },
+          {
+            "id": "arrange-card-6-line-p4",
+            "anchor": [
+              37,
+              6
+            ],
+            "in": [
+              38.6568542494,
+              6
+            ],
+            "out": [
+              37,
+              6
+            ]
+          },
+          {
+            "id": "arrange-card-6-line-p5",
+            "anchor": [
+              3,
+              6
+            ],
+            "in": [
+              3,
+              6
+            ],
+            "out": [
+              1.3431457506000002,
+              6
+            ]
+          },
+          {
+            "id": "arrange-card-6-line-p6",
+            "anchor": [
+              0,
+              3
+            ],
+            "in": [
+              0,
+              4.6568542494
+            ],
+            "out": [
+              0,
+              3
+            ]
+          },
+          {
+            "id": "arrange-card-6-line-p7",
+            "anchor": [
+              0,
+              3
+            ],
+            "in": [
+              0,
+              3
+            ],
+            "out": [
+              0,
+              1.3431457506000002
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "arrange-board": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  }
+}
