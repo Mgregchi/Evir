@@ -1,0 +1,39 @@
+{
+  "artboards": {
+    "playback-once-1-board": 0
+  },
+  "nodes": {
+    "playback-once-1-rectangle": {
+      "artboard": 0,
+      "component": 1,
+      "type": "Shape"
+    }
+  },
+  "points": {},
+  "animations": {
+    "playback-once-1-animation": {
+      "artboard": 0,
+      "index": 0,
+      "name": "Animation 1",
+      "fps": 60,
+      "duration": 60,
+      "playback": {
+        "mode": "once",
+        "iterations": 1,
+        "speed": 1.5
+      },
+      "repeatPolicy": "native",
+      "trackScope": [
+        {
+          "targetId": "playback-once-1-rectangle",
+          "property": "x"
+        },
+        {
+          "targetId": "playback-once-1-rectangle",
+          "property": "fill"
+        }
+      ]
+    }
+  },
+  "machines": {}
+}

@@ -10,7 +10,9 @@ await require('./prepare-oracle.cjs').prepare();
 const {exampleIds}=await import('../apps/web/examples.mjs');
 await run(async page=>{
   const out=path.join(root,'apps/web/assets');fs.mkdirSync(out,{recursive:true});
-  for(const name of exampleIds) {
+  const selected=process.env.EVIR_CAPTURE_EXAMPLE;
+  if(selected&&!exampleIds.includes(selected))throw Error('Unknown example to capture');
+  for(const name of selected?[selected]:exampleIds) {
     await page.setViewportSize({width:512,height:512});
     await page.goto(`http://127.0.0.1:8776/apps/web/preview.html?example=${name}`);
     await page.waitForFunction(()=>window.assetReady);

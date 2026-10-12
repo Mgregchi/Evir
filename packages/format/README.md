@@ -5,3 +5,5 @@ Explicit compatibility adapter: `compileProject(project, schema = runtimeSchema)
 Static local linear/radial paints emit one gradient mutator per Fill with parent-linked GradientStop records. Endpoint/stop animation and paint deformation on skinned paths are outside the tested authoring contract. See [gradient evidence](../../docs/28-studio-gradient-paints.md).
 
 Advanced 2D contracts, source/runtime versions, asset preparation/disposal, authoring controls, import coverage and remaining limits are documented in [the current feature contract](../../docs/30-advanced-2d-authoring.md).
+
+Playback modes/counts/speed, independent timeline layers, the Sunday motorcycle and native export policy are documented in [playback and motorcycle contracts](../../docs/32-animation-playback-and-motorcycle.md).

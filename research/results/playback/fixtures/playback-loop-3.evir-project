@@ -1,0 +1,110 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 2,
+  "id": "playback-loop-3",
+  "name": "playback-loop-3",
+  "artboards": [
+    {
+      "id": "playback-loop-3-board",
+      "name": "Artboard 1",
+      "width": 256,
+      "height": 256
+    }
+  ],
+  "nodes": [
+    {
+      "id": "playback-loop-3-rectangle",
+      "name": "Rectangle",
+      "kind": "rectangle",
+      "artboardId": "playback-loop-3-board",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        24,
+        105
+      ],
+      "geometry": {
+        "width": 32,
+        "height": 46,
+        "fill": "#91d8b7"
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [
+    {
+      "id": "playback-loop-3-animation",
+      "name": "Animation 1",
+      "artboardId": "playback-loop-3-board",
+      "fps": 60,
+      "duration": 60,
+      "tracks": [
+        {
+          "targetId": "playback-loop-3-rectangle",
+          "property": "x",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 24,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 60,
+              "value": 196,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "playback-loop-3-rectangle",
+          "property": "fill",
+          "keys": [
+            {
+              "frame": 0,
+              "value": "#91d8b7",
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 60,
+              "value": "#edb99c",
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            }
+          ]
+        }
+      ],
+      "playback": {
+        "mode": "loop",
+        "iterations": 3,
+        "speed": 1.25
+      }
+    }
+  ],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "playback-loop-3-board": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  }
+}

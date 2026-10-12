@@ -1,0 +1,84 @@
+{
+  "checkedAt": "2026-10-12T09:53:21.739Z",
+  "checks": [
+    {
+      "width": 320,
+      "height": 844,
+      "passed": [
+        "explicit reduced-motion opt-in",
+        "keyboard throttle",
+        "accelerate/brake/release",
+        "pause",
+        "headlight",
+        "one-shot bump/retrigger guard",
+        "counted signal/retrigger guard",
+        "quiet fast telemetry",
+        "simulated hidden-page suspension",
+        "full reset",
+        "no page overflow",
+        "zero automated accessibility violations"
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "passed": [
+        "explicit reduced-motion opt-in",
+        "keyboard throttle",
+        "accelerate/brake/release",
+        "pause",
+        "headlight",
+        "one-shot bump/retrigger guard",
+        "counted signal/retrigger guard",
+        "quiet fast telemetry",
+        "simulated hidden-page suspension",
+        "full reset",
+        "no page overflow",
+        "zero automated accessibility violations"
+      ]
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "passed": [
+        "explicit reduced-motion opt-in",
+        "keyboard throttle",
+        "accelerate/brake/release",
+        "pause",
+        "headlight",
+        "one-shot bump/retrigger guard",
+        "counted signal/retrigger guard",
+        "quiet fast telemetry",
+        "simulated hidden-page suspension",
+        "full reset",
+        "no page overflow",
+        "zero automated accessibility violations"
+      ]
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "passed": [
+        "explicit reduced-motion opt-in",
+        "keyboard throttle",
+        "accelerate/brake/release",
+        "pause",
+        "headlight",
+        "one-shot bump/retrigger guard",
+        "counted signal/retrigger guard",
+        "quiet fast telemetry",
+        "simulated hidden-page suspension",
+        "full reset",
+        "no page overflow",
+        "zero automated accessibility violations"
+      ]
+    },
+    {
+      "passed": [
+        "offscreen animation suspended"
+      ]
+    }
+  ],
+  "scope": "Headless Chromium UX/lifecycle automation, not physical-device or human evidence",
+  "browserVersion": "151.0.7922.173"
+}

@@ -323,3 +323,4 @@ export async function openRuntimeProject(text) {
   await verifyAssets(scene);
   return copy(scene);
 }
+export { playbackSettings, validatePlayback } from './playback.mjs';

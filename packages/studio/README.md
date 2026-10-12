@@ -61,3 +61,5 @@ Use **Freehand / B** in Design, drag, release to review and choose **Finish path
 Advanced 2D contracts, source/runtime versions, asset preparation/disposal, authoring controls, import coverage and remaining limits are documented in [the current feature contract](../../docs/30-advanced-2d-authoring.md).
 
 Current workflow controls and IndexedDB recovery are documented in [workflow/recovery](../../docs/31-studio-workflow-and-recovery.md).
+
+Playback modes/counts/speed, independent timeline layers, the Sunday motorcycle and native export policy are documented in [playback and motorcycle contracts](../../docs/32-animation-playback-and-motorcycle.md).

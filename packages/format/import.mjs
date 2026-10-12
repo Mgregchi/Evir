@@ -289,7 +289,7 @@ async function decodeProject(input) {
     TextStylePaint: [...common, "fontSize", "fontAssetId"],
     TextValueRun: [...common, "styleId", "text"],
     CubicEaseInterpolator: ["x1", "y1", "x2", "y2"],
-    LinearAnimation: ["name", "fps", "duration", "loopValue"],
+    LinearAnimation: ["name", "fps", "duration", "loopValue", "speed"],
     KeyedObject: ["objectId"],
     KeyedProperty: ["propertyKey"],
     KeyFrameDouble: ["frame", "value", "interpolationType", "interpolatorId"],
@@ -710,7 +710,7 @@ async function decodeProject(input) {
     for (const r of board.tail) {
       const f = r.fields;
       if (r.type === "LinearAnimation") {
-        if (![0, 1].includes(f.loopValue ?? 0))
+        if (![0, 1, 2].includes(f.loopValue ?? 0))
           fail(r, "unsupported loop mode");
         animation = {
           id: newId("animation"),
@@ -718,7 +718,7 @@ async function decodeProject(input) {
           artboardId: art.id,
           fps: f.fps ?? 60,
           duration: f.duration ?? 1,
-          loop: f.loopValue === 1,
+          ...(f.loopValue === 2 || (f.speed ?? 1) !== 1 ? {playback:{mode:f.loopValue === 2 ? 'ping-pong' : f.loopValue === 1 ? 'loop' : 'once', iterations:f.loopValue ? 0 : 1, speed:f.speed ?? 1}} : {loop:f.loopValue === 1}),
           tracks: [],
         };
         p.animations.push(animation);

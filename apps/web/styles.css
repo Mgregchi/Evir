@@ -18,3 +18,10 @@
 .example-grid article{scroll-margin-top:110px;min-width:0}.example-grid .demo-stage{max-height:none}
 
 .signal-controls{color-scheme:light}
+/* Vehicle controls keep a calm hierarchy on narrow gallery cards. */
+.motorcycle-controls .ride-telemetry{width:100%;justify-content:space-between;align-items:baseline;padding-bottom:10px;border-bottom:1px solid #b7cab5;font-variant-numeric:tabular-nums}
+.ride-telemetry output{font-size:26px;font-weight:650;letter-spacing:-.04em}
+.motorcycle-controls>label{width:100%;display:block}.throttle-value{float:right}.throttle-control{display:block;width:100%;min-height:44px;accent-color:#315e45}
+.motorcycle-controls .ride-actions{width:100%;gap:8px}.ride-actions button{flex:1;white-space:nowrap}.ride-actions button[aria-pressed=true]{background:#294a34;color:#f5f3e7}
+.motorcycle-controls .ride-options{width:100%;justify-content:space-between;gap:8px}.ride-options label{display:flex;align-items:center;gap:7px;min-height:44px}.ride-options input{width:18px;height:18px;accent-color:#315e45}
+.motorcycle-controls .text-link{color:#294a34;font-size:12px;min-height:44px;display:inline-flex;align-items:center}

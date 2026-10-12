@@ -3,6 +3,7 @@ import {
   ProjectError,
   isColorProperty,
   pngSize,
+  playbackSettings,
 } from "@evir/project-model";
 import { components, quantize, getValue } from "@evir/runtime/geometry";
 const OP = { eq: 0, ne: 1, le: 2, ge: 3, lt: 4, gt: 5 }; // pinned TransitionConditionOp
@@ -483,16 +484,19 @@ export function compileProject(project, schema = runtimeSchema) {
             }
           }
     for (const [animationIndex, animation] of animations.entries()) {
+      const playback = playbackSettings(animation);
       mapping.animations[animation.id] = {
         artboard: artboardIndex,
         index: animationIndex,
         name: animation.name,
+        ...(animation.playback ? {fps:animation.fps, duration:animation.duration, playback:{...playback}, repeatPolicy:playback.mode !== 'once' && playback.iterations > 0 ? 'host' : 'native', trackScope:animation.tracks.map(t => ({targetId:t.targetId,property:t.property}))} : {}),
       };
       emit("LinearAnimation", {
         name: animation.name,
         fps: animation.fps,
         duration: animation.duration,
-        loopValue: animation.loop ? 1 : 0,
+        loopValue: {once:0, loop:1, 'ping-pong':2}[playback.mode],
+        ...(playback.speed !== 1 ? {speed:playback.speed} : {}),
       });
       const grouped = new Map();
       // Runtime animation application only writes keyed properties. Explicit
