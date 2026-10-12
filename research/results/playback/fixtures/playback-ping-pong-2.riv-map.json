@@ -1,0 +1,39 @@
+{
+  "artboards": {
+    "playback-ping-pong-2-board": 0
+  },
+  "nodes": {
+    "playback-ping-pong-2-rectangle": {
+      "artboard": 0,
+      "component": 1,
+      "type": "Shape"
+    }
+  },
+  "points": {},
+  "animations": {
+    "playback-ping-pong-2-animation": {
+      "artboard": 0,
+      "index": 0,
+      "name": "Animation 1",
+      "fps": 60,
+      "duration": 60,
+      "playback": {
+        "mode": "ping-pong",
+        "iterations": 2,
+        "speed": 1.25
+      },
+      "repeatPolicy": "host",
+      "trackScope": [
+        {
+          "targetId": "playback-ping-pong-2-rectangle",
+          "property": "x"
+        },
+        {
+          "targetId": "playback-ping-pong-2-rectangle",
+          "property": "fill"
+        }
+      ]
+    }
+  },
+  "machines": {}
+}

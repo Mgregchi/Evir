@@ -1,0 +1,34 @@
+{
+  "retrievedAt": "2026-10-12",
+  "sources": [
+    {
+      "url": "https://rive.app/docs/editor/animate-mode/timeline",
+      "status": 200,
+      "bytes": 334428,
+      "sha256": "8b08bfab3b01d7ff3bacf9a7d9c41abc607314bef1e1c74416d2271bad767168"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/master/src/animation/linear_animation_instance.cpp",
+      "status": 200,
+      "bytes": 19465,
+      "sha256": "18b3ceaf548de597b85c9195182f1a5486c1bdbb79649f2b302d16a9af9dcb8d"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/master/include/rive/animation/loop.hpp",
+      "status": 200,
+      "bytes": 478,
+      "sha256": "3cf649f8a0aa3a3acda567555fc21f1d5b246aadc9ee3181bae24fc9f918a5da"
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect",
+      "status": 200,
+      "bytes": 157236,
+      "sha256": "bbebccf6782ed4e30a0d2f98b57627853131e8346af8b8144348b3e517058075"
+    }
+  ],
+  "observations": [
+    "Rive native loop enum: oneShot=0, loop=1, pingPong=2; speed scales elapsed delta.",
+    "MDN iterations and alternate direction inform Evir cycle naming; Rive native .riv has no fixed repeat-count field.",
+    "One Evir ping-pong cycle means forward and back; host repeat policy accompanies native export in the source map."
+  ]
+}

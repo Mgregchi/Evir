@@ -43,17 +43,26 @@ function mountPreview(element) {
   const blendInput=element.querySelector('.blend-input'),blendOn=element.querySelector('.blend-active');
   const loader=element.querySelector('.living-loader'),retry=element.querySelector('.retry-preview'),motion=matchMedia('(prefers-reduced-motion: reduce)');
   const enabled=element.querySelector('.enabled-control'),level=element.querySelector('.level-control'),celebrate=element.querySelector('.celebrate-control'),reset=element.querySelector('.reset-control');
+  const motorcycle=name==='motorcycle',throttle=element.querySelector('.throttle-control'),brake=element.querySelector('.brake-control'),bump=element.querySelector('.bump-control'),headlight=element.querySelector('.headlight-control'),roughRoad=element.querySelector('.rough-road-control'),rideReset=element.querySelector('.ride-reset');
+  const turnSignal=element.querySelector('.turn-signal-control');
   loader.hidden=true;element.setAttribute('aria-busy','false');
   const lifetime=new AbortController();let started=false,attempt,player,renderer,playing=!motion.matches,visible=false,suspended=false,waving=false,animated=true;
-  const loop=createMotionLoop(dt=>{renderer.draw(player.advance(dt),player.artboard.id);syncState();},{onError:fail});
-  function syncState() {const current=player?.state?.name;if(current){if(state.textContent!==current)state.textContent=current;if(celebrate)celebrate.disabled=current!=='Ready';}}
+  if(motorcycle)playing=false;
+  const loop=createMotionLoop(dt=>{renderer.draw(player.advance(dt),player.artboard.id);syncState();if(player.playback?.completed){playing=false;sync();}},{onError:fail});
+  function syncState() {
+    const telemetry=player?.telemetry;
+    const current=telemetry?(telemetry.braking?'Braking':telemetry.speed>.05?'Cruising':'Parked'):player?.state?.name;
+    if(current){if(state.textContent!==current)state.textContent=current;if(celebrate)celebrate.disabled=current!=='Ready';}
+    if(telemetry){element.querySelector('.ride-speed').textContent=telemetry.speedKmh.toFixed(0);element.querySelector('.ride-distance').textContent=telemetry.distance.toFixed(0);}
+  }
   function draw() {renderer.draw(player.advance(0),player.artboard.id);syncState();}
-  function sync() {toggle.textContent=animated?(playing?'Pause motion':'Play motion'):'Static study';toggle.setAttribute('aria-pressed',String(playing));element.dataset.playing=String(playing);loop.setActive(Boolean(animated&&player&&playing&&visible&&!document.hidden&&!suspended));}
+  function sync() {toggle.textContent=animated?(motorcycle?(playing?'Pause ride':'Start ride'):(playing?'Pause motion':'Play motion')):'Static study';toggle.setAttribute('aria-pressed',String(playing));element.dataset.playing=String(playing);loop.setActive(Boolean(animated&&player&&playing&&visible&&!document.hidden&&!suspended));}
   function fail() {
     loop.stop();player=null;renderer?.dispose();renderer=null;canvas.hidden=true;poster.hidden=false;
     loader.hidden=true;retry.hidden=false;element.setAttribute('aria-busy','false');delete element.dataset.ready;
     message.textContent='The live preview couldn’t wake up. Try again, or use the image and downloadable source.';
     toggle.disabled=true;if(wave)wave.disabled=true;for(const control of [enabled,level,celebrate,reset,blendInput,blendOn])if(control)control.disabled=true;
+    for(const control of element.querySelectorAll('[data-motor-control]'))control.disabled=true;
   }
   async function load() {
     started=true;attempt?.abort();const current=attempt=new AbortController();
@@ -64,19 +73,20 @@ function mountPreview(element) {
         import('@evir/runtime'),import('@evir/renderer-canvas'),fetch(`${config.basePath}/assets/examples/${name}.evir-project`,{signal:current.signal})]);
       if(!response.ok)throw Error('Project could not load');const project=await response.json();
       if(current.signal.aborted)return;
-      const nextPlayer=createRuntime(project,project.machines.length?{machineId:project.machines[0].id}:{animationId:project.animations[0]?.id});preparingRenderer=new CanvasRenderer(canvas.getContext('2d'));
+      const nextPlayer=motorcycle?new (await import('./motorcycle.mjs')).MotorcycleController(project):createRuntime(project,project.machines.length?{machineId:project.machines[0].id}:{animationId:project.animations[0]?.id});preparingRenderer=new CanvasRenderer(canvas.getContext('2d'));
       await preparingRenderer.prepare(project);if(current.signal.aborted){preparingRenderer.dispose();return;}
       renderer?.dispose();renderer=preparingRenderer;preparingRenderer=null;player=nextPlayer;
       animated=Boolean(project.animations.length||project.machines.length);if(!animated)playing=false;
       draw();waving=false;if(blendInput){blendInput.disabled=false;blendOn.disabled=false;}
       if(enabled){enabled.checked=false;enabled.disabled=false;level.value='0';level.disabled=false;reset.disabled=false;element.querySelector('.level-value').textContent='0';}
       if(wave){wave.setAttribute('aria-pressed','false');wave.firstChild.textContent='Say hello ';state.textContent='Idle';wave.disabled=false;}
+      if(motorcycle){for(const control of element.querySelectorAll('[data-motor-control]'))control.disabled=false;resetRideControls();}
       canvas.hidden=false;poster.hidden=true;loader.hidden=true;toggle.disabled=!animated;
       element.setAttribute('aria-busy','false');element.dataset.ready='true';sync();
     } catch(error) {preparingRenderer?.dispose();if(!current.signal.aborted)fail();}
   }
   const options={signal:lifetime.signal};
-  toggle.addEventListener('click',()=>{playing=!playing;sync();},options);
+  toggle.addEventListener('click',()=>{if(!playing&&player?.playback?.completed)player.reset();playing=!playing;sync();},options);
   motion.addEventListener('change',e=>{if(e.matches){playing=false;sync();}},options);
   wave?.addEventListener('click',()=>{try {waving=!waving;player.setInput('isWaving',waving);renderer.draw(player.advance(0),player.artboard.id);wave.setAttribute('aria-pressed',String(waving));wave.firstChild.textContent=waving?'Back to idle ':'Say hello ';state.textContent=waving?'Hello':'Idle';}catch{fail();}},options);
   function interact(operation) {try{operation();draw();}catch{fail();}}
@@ -86,6 +96,14 @@ function mountPreview(element) {
   level?.addEventListener('input',()=>interact(()=>{player.setInput('level',Number(level.value));element.querySelector('.level-value').textContent=level.value;}),options);
   celebrate?.addEventListener('click',()=>interact(()=>player.click('signal-celebration-pad')),options);
   reset?.addEventListener('click',()=>interact(()=>{player.reset();enabled.checked=false;level.value='0';element.querySelector('.level-value').textContent='0';}),options);
+  function resetRideControls(){throttle.value='0';element.querySelector('.throttle-value').textContent='0%';brake.setAttribute('aria-pressed','false');headlight.checked=false;roughRoad.checked=true;playing=false;sync();}
+  throttle?.addEventListener('input',()=>interact(()=>{player.setThrottle(Number(throttle.value)/100);element.querySelector('.throttle-value').textContent=throttle.value+'%';}),options);
+  brake?.addEventListener('click',()=>interact(()=>{const value=brake.getAttribute('aria-pressed')!=='true';player.setBrake(value);brake.setAttribute('aria-pressed',String(value));}),options);
+  bump?.addEventListener('click',()=>interact(()=>{message.textContent=player.bump()?'Suspension bump started. Play the ride to see it settle.':'Let the suspension settle before adding another bump.';}),options);
+  turnSignal?.addEventListener('click',()=>interact(()=>{message.textContent=player.signal()?'Turn signal started: three blinks while the ride plays.':'The turn signal is still blinking.';}),options);
+  headlight?.addEventListener('change',()=>interact(()=>player.setHeadlight(headlight.checked)),options);
+  roughRoad?.addEventListener('change',()=>interact(()=>player.setRoughRoad(roughRoad.checked)),options);
+  rideReset?.addEventListener('click',()=>interact(()=>{player.reset();message.textContent='Ride reset. Set throttle and start when you’re ready.';resetRideControls();}),options);
   retry.addEventListener('click',load,options);
   const observer=new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;if(visible&&!started)load();sync();},{threshold:.05});observer.observe(element);
   document.addEventListener('visibilitychange',sync,options);

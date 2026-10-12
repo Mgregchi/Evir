@@ -1,6 +1,7 @@
 import { paintValue, isColorProperty } from "@evir/project-model";
 import { solveIK, mixPoses } from "./advanced.mjs";
 import { components } from "./geometry.mjs";
+import { playbackSample } from './playback.mjs';
 const clone = (x) => structuredClone(x);
 export function easingValue(e, t) {
   if (e.type === "hold") return 0;
@@ -53,16 +54,26 @@ export function evaluate(
   frame,
   { applyConstraints = true } = {},
 ) {
+  return evaluateLayers(p, [{ animationId, frame }], {applyConstraints});
+}
+// Collect property changes before applying transforms; later layers win only
+// for properties they key, leaving other components and transforms untouched.
+export function evaluateLayers(p, layers, {applyConstraints = true} = {}) {
   const pose = clone(p),
-    a = p.animations.find((a) => a.id === animationId);
-  if (!a) return applyConstraints ? solveIK(pose) : pose;
+    animations = new Map(p.animations.map(a => [a.id, a]));
   const changes = new Map();
-  for (const track of a.tracks) {
-    if (!changes.has(track.targetId)) changes.set(track.targetId, {});
-    changes.get(track.targetId)[track.property] = keyValue(
-      track,
-      Math.max(0, Math.min(a.duration, frame)),
-    );
+  for (const layer of layers) {
+    const a = animations.get(layer.animationId);
+    if (!a) continue;
+    const frame = layer.frame;
+    if (!Number.isFinite(frame)) throw new RangeError('animation: frame must be finite');
+    for (const track of a.tracks) {
+      if (!changes.has(track.targetId)) changes.set(track.targetId, {});
+      changes.get(track.targetId)[track.property] = keyValue(
+        track,
+        Math.max(0, Math.min(a.duration, frame)),
+      );
+    }
   }
   for (const [id, values] of changes) {
     const n = pose.nodes.find((n) => n.id === id),
@@ -210,9 +221,7 @@ export class MachinePlayer {
       return evaluate(
         this.project,
         id,
-        a.loop
-          ? (time * a.fps) % a.duration
-          : Math.min(a.duration, time * a.fps),
+        playbackSample(a, time).frame,
         { applyConstraints: false },
       );
     };

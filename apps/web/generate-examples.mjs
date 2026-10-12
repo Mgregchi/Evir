@@ -1,4 +1,5 @@
 import {suite} from './advanced-examples.mjs';
+import {motorcycle} from './motorcycle-scene.mjs';
 import { fitFreehand } from '../../packages/studio/freehand.mjs';
 import { exampleIds } from './examples.mjs';
 import { createProject, validateProject } from '@evir/project-model';
@@ -249,7 +250,7 @@ function arrange() {
   }
   return p;
 }
-const factories={milo,orbit,bloom,tempo,signal,gather,wisp,dawn,arrange};
+const factories={milo,orbit,bloom,tempo,signal,gather,wisp,dawn,arrange,motorcycle:()=>motorcycle(project)};
 for(const original of await suite()){
  const p=structuredClone(original);p.artboards[0].width=p.artboards[0].height=512;
  for(const n of p.nodes){n.transform[4]*=2;n.transform[5]*=2;const g=n.geometry;if(!g)continue;
@@ -269,5 +270,9 @@ for(const name of exampleIds) {
   const compiled=compileProject(p);
   await writeFile(`${output}${name}.evir-project`,JSON.stringify(p,null,2)+'\n');
   await writeFile(`${output}${name}.riv`,compiled.bytes);
+  if(name==='motorcycle') {
+    await writeFile(`${output}${name}.riv-map.json`,JSON.stringify(compiled.mapping,null,2)+'\n');
+    await writeFile(`${output}${name}-controller.mjs`,await (await import('node:fs/promises')).readFile(new URL('./motorcycle.mjs',import.meta.url)));
+  }
   console.log(`${name}: ${p.nodes.length} editable nodes, ${p.animations.length} animations, validated source and compiled export`);
 }

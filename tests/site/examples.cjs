@@ -43,7 +43,9 @@ if(!process.env.CHROMIUM_PATH && !fs.existsSync('/usr/bin/chromium'))process.env
         for(const animation of project.animations)for(const frame of [0,30,60,90]) {
           await load({animations:animation.name});
           await page.evaluate(({name,seconds})=>{player.scrub(name,seconds);player.drawFrame();},{name:animation.name,seconds:frame/animation.fps});
-          await compare(animation,frame,`${animation.name} frame ${frame}`);
+          const {playbackSample}=await import('@evir/runtime');
+          const evaluated=animation.playback?playbackSample({...animation,playback:{...animation.playback,iterations:animation.playback.mode==='once'?1:0}},frame/animation.fps).frame:frame;
+          await compare(animation,evaluated,`${animation.name} native time ${frame/animation.fps}s`);
         }
         if(name==='gather') {
           const {alignmentMoves,applyAlignment}=await import('../../packages/studio/alignment.mjs');

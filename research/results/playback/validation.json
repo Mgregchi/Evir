@@ -1,0 +1,136 @@
+{
+  "checkedAt": "2026-10-12T09:57:45.994Z",
+  "nodeVersion": "v24.19.0",
+  "riveRuntimeVersion": "2.44.0",
+  "commands": [
+    {
+      "command": "npm run test:runtime",
+      "status": "passed",
+      "exitCode": 0,
+      "count": 12,
+      "scope": "units"
+    },
+    {
+      "command": "npm run test:frontend",
+      "status": "passed",
+      "exitCode": 0,
+      "count": 18,
+      "scope": "units"
+    },
+    {
+      "command": "npm run test:editor",
+      "status": "passed",
+      "exitCode": 0,
+      "count": 62,
+      "scope": "units + 12 browser suites"
+    },
+    {
+      "command": "npm run runtime:build",
+      "status": "passed",
+      "exitCode": 0,
+      "count": 5,
+      "scope": "package builds"
+    },
+    {
+      "command": "npm run web:build",
+      "status": "passed",
+      "exitCode": 0,
+      "count": 11,
+      "scope": "public pages + Studio"
+    },
+    {
+      "command": "npm run validate:editor",
+      "status": "passed",
+      "exitCode": 0,
+      "scope": "authoring/advanced native oracles + playback oracles"
+    },
+    {
+      "command": "npm run validate:playback",
+      "status": "passed",
+      "exitCode": 0,
+      "count": 82,
+      "scope": "native clock/pixel and explicit fixed-count adapter comparisons, nonblank coverage required"
+    },
+    {
+      "command": "npm run test:web",
+      "status": "passed",
+      "exitCode": 0,
+      "scope": "22 page/config checks, 256 gallery comparisons, 16 exact source exports and 4 responsive vehicle workflows"
+    },
+    {
+      "command": "npm run test:experience",
+      "status": "passed",
+      "exitCode": 0,
+      "scope": "retry/idle/feedback/SEO/recovery checks"
+    },
+    {
+      "command": "node tests/editor/playback-browser.cjs",
+      "status": "passed",
+      "exitCode": 0,
+      "count": 2,
+      "scope": "final mobile/desktop playback, focus, accessibility and provisional key-drag workflows"
+    },
+    {
+      "command": "node tests/site/motorcycle.cjs",
+      "status": "passed",
+      "exitCode": 0,
+      "count": 4,
+      "scope": "final vehicle controls, quiet telemetry, lifecycle and accessibility workflows"
+    },
+    {
+      "command": "EVIR_CAPTURE_EXAMPLES_ONLY=1 EVIR_CAPTURE_EXAMPLE=motorcycle node tools/capture_site_assets.cjs",
+      "status": "passed",
+      "exitCode": 0,
+      "count": 1,
+      "scope": "actual original scene poster"
+    }
+  ],
+  "unitTests": 92,
+  "comparisonSummary": {
+    "advanced": 66,
+    "gallery": 256,
+    "playback": 82,
+    "total": 404
+  },
+  "environment": "Cloud headless Chromium/software graphics; no physical-device, moderated-user or screen-reader evidence.",
+  "fixtures": {
+    "apps/web/assets/examples/motorcycle.evir-project": {
+      "bytes": 227468,
+      "sha256": "bbfe5d7d6fb6b1b1b8dd070a5323d9cbbd577f11b627cc08cfd2fab4d0aed51f"
+    },
+    "apps/web/assets/examples/motorcycle.riv": {
+      "bytes": 29347,
+      "sha256": "5fd6f55203fb1e4b51a41b70af9d542332878950a230999d176d58fec5a90499"
+    },
+    "apps/web/assets/examples/motorcycle.riv-map.json": {
+      "bytes": 63080,
+      "sha256": "c99a48416fd1bccc6e10352ddd1c3aa5302b6dc5d261711153bdd2a7c36da7b0"
+    },
+    "apps/web/assets/examples/motorcycle-controller.mjs": {
+      "bytes": 3575,
+      "sha256": "bfbd1412662a727a74fcb64cea5cf291c52dcbd524794890e5f5fd0626567fec"
+    },
+    "apps/web/assets/motorcycle-poster.png": {
+      "bytes": 30560,
+      "sha256": "d16bd23fa24815be5a8c67f3c7e344b01fee3482eee31671a5c844ed473de5dd"
+    }
+  },
+  "fixesValidated": [
+    "negative resumed RAF deltas clamp to zero",
+    "initialization waits check window.evirStudio safely",
+    "component preview reads provisional source keys",
+    "play/pause/completion retain focus",
+    "telemetry explicitly disables frequent live announcements",
+    "motorcycle browser test builds its own fresh output"
+  ],
+  "validationNotes": [
+    "The complete editor suite passed; final focused playback workflows re-ran after interaction/accessibility adjustments.",
+    "Initial attempts exposed a missing oracle export, a resume-time edge case and test timing/stale-build assumptions; each was corrected, and the final relevant command runs passed."
+  ],
+  "compatibility": [
+    "Native modes and authored speed are encoded in .riv.",
+    "Fixed counts require the source-map host policy.",
+    "The motorcycle controls use the Evir source mixer/controller; raw .riv carries artwork, individual timelines and combined Ride.",
+    "Native simultaneous composition of isolated exports can overwrite properties through compiler default tracks; Evir property-scoped composition is separately implemented."
+  ]
+}

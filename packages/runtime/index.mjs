@@ -1,12 +1,15 @@
 import { ProjectError, validateRuntimeProject, toRuntimeProject, openRuntimeProject } from '@evir/project-model';
 import { evaluate, MachinePlayer } from './motion.mjs';
-export { evaluate, MachinePlayer, easingValue, keyValue } from './motion.mjs';
+import { AnimationClock } from './playback.mjs';
+export { evaluate, evaluateLayers, MachinePlayer, easingValue, keyValue } from './motion.mjs';
+export { AnimationClock, playbackSample } from './playback.mjs';
+export { AnimationMixer } from './mixer.mjs';
 
 export class RuntimePlayer {
   #project;
   #animation;
   #machine;
-  #time = 0;
+  #clock;
   #artboard;
   constructor(project, { artboardId, animationId, machineId } = {}) {
     this.#project = project.format === 'evir-project' ? toRuntimeProject(project) : structuredClone(validateRuntimeProject(project));
@@ -16,6 +19,7 @@ export class RuntimePlayer {
     if (animationId) {
       this.#animation = this.#project.animations.find(a => a.id === animationId && a.artboardId === this.#artboard.id);
       if (!this.#animation) throw new ProjectError(['runtime: missing animation in selected artboard']);
+      this.#clock = new AnimationClock(this.#animation);
     }
     if (machineId) {
       const m = this.#project.machines.find(m => m.id === machineId && m.artboardId === this.#artboard.id);
@@ -30,16 +34,21 @@ export class RuntimePlayer {
     return { id: state.id, name: state.name };
   }
   snapshot() { return structuredClone(this.#project); }
+  get playback() { return this.#clock ? {...this.#clock.state, speed:this.#clock.speed} : null; }
+  setSpeed(value) {
+    if (!this.#clock) throw new ProjectError(['runtime: no active animation']);
+    this.#clock.setSpeed(value);
+    return this.pose();
+  }
   pose() {
     if (this.#machine) return this.#machine.pose();
     if (!this.#animation) return evaluate(this.#project,null,0);
-    const a = this.#animation, frame = this.#time * a.fps;
-    return evaluate(this.#project, a.id, a.loop ? frame % a.duration : Math.min(a.duration, frame));
+    return evaluate(this.#project, this.#animation.id, this.#clock.state.frame);
   }
   advance(seconds) {
     if (!Number.isFinite(seconds) || seconds < 0) throw new RangeError('runtime: delta must be finite and nonnegative');
     if (this.#machine) return this.#machine.advance(seconds);
-    this.#time += seconds;
+    this.#clock?.advance(seconds);
     return this.pose();
   }
   setInput(nameOrId, value) {
@@ -55,7 +64,7 @@ export class RuntimePlayer {
     return this.#machine.click(targetId);
   }
   reset() {
-    this.#time = 0;
+    this.#clock?.reset();
     return this.#machine ? this.#machine.reset() : this.pose();
   }
 }

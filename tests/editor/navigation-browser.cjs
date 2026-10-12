@@ -118,7 +118,7 @@ const { chromium } = require("playwright");
           .filter({ hasText: "Saved in this browser" })
           .waitFor();
         await page.reload();
-        await page.waitForFunction(() => evirStudio);
+        await page.waitForFunction(() => window.evirStudio);
         assert.equal(
           await page.locator("#left-splitter").getAttribute("aria-valuenow"),
           "300",
@@ -282,7 +282,7 @@ const { chromium } = require("playwright");
       page = await context.newPage();
     page.on("pageerror", (e) => errors.push(e.message));
     await page.goto(origin + "/editor/studio/");
-    await page.waitForFunction(() => evirStudio);
+    await page.waitForFunction(() => window.evirStudio);
     await page.locator("#fit").click();
     const cdp = await context.newCDPSession(page),
       snap = () => page.evaluate(() => evirStudio.snapshot());

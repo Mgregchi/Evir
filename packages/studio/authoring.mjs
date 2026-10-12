@@ -1,7 +1,7 @@
-import { machineControls } from "./advanced.mjs";
+import { machineControls, sheet } from "./advanced.mjs";
 import { neighborKey } from "./key-navigation.mjs";
 import { graphViewBox, stateViewBox } from "./graph-navigation.mjs";
-import { isColorProperty } from "@evir/project-model";
+import { isColorProperty, playbackSettings } from "@evir/project-model";
 import { paintControls } from "./paint.mjs";
 import {
   inverse,
@@ -26,7 +26,7 @@ import {
   mapPoint,
   getValue,
 } from "@evir/runtime/geometry";
-import { evaluate, MachinePlayer } from "@evir/runtime";
+import { evaluate, evaluateLayers, MachinePlayer, AnimationMixer } from "@evir/runtime";
 import { compileProject, runtimeSchema } from "@evir/format";
 const el = (tag, text) => {
   const e = document.createElement(tag);
@@ -70,6 +70,26 @@ export function mountAuthoring(api) {
     editState = null,
     lastTime = 0,
     raf = null;
+  let previewMixer = null, previewRevision = null, previewAnimation = null;
+  const previewLayers = new Map();
+  function invalidatePreview() { previewMixer = null; previewRevision = null; }
+  function ensurePreview(p, a) {
+    const revision = api.revision ? api.revision() : JSON.stringify(p);
+    if (!previewMixer || previewRevision !== revision || previewAnimation !== a.id) {
+      const layers = [...previewLayers].filter(([id]) => id !== a.id && p.animations.some(v => v.id === id && v.artboardId === a.artboardId))
+        .map(([animationId, speed]) => ({animationId, speed}));
+      // The selected timeline has priority for overlapping keyed properties.
+      layers.push({animationId:a.id});
+      previewMixer = new AnimationMixer(p, {artboardId:a.artboardId, layers});
+      previewMixer.seek(a.id, Math.min(frame, a.duration));
+      previewRevision = revision; previewAnimation = a.id;
+    }
+    return previewMixer;
+  }
+  function seekPreview(value) {
+    frame = value;
+    if (previewMixer && previewAnimation) previewMixer.seek(previewAnimation, frame);
+  }
   const exportSchema = async () => runtimeSchema;
   const graphViews = new Map();
   const button = (text, fn) => {
@@ -137,6 +157,7 @@ export function mountAuthoring(api) {
     api.cancelDrag();
     stop();
     mode = next;
+    invalidatePreview();
     panel.scrollTop = 0;
     vertices = false;
     player = null;
@@ -224,7 +245,7 @@ export function mountAuthoring(api) {
   function pose(p) {
     if (mode === "Animate") {
       const a = currentAnimation(p);
-      return a ? evaluate(p, a.id, frame) : p;
+      return a ? evaluateLayers(p, ensurePreview(p, a).layers.filter(l=>l.enabled).map(l=>({animationId:l.animationId,frame:l.frame}))) : p;
     }
     if (mode === "Interact") {
       const m = currentMachine(p);
@@ -237,19 +258,19 @@ export function mountAuthoring(api) {
   function tick(now) {
     raf = null;
     if (!playing || document.hidden) return;
-    const dt = Math.min((now - lastTime) / 1000, 0.1);
+    // A resumed callback can receive this frame's timestamp from just before
+    // the lifecycle handler called performance.now(). It must not step back.
+    const dt = Math.max(0, Math.min((now - lastTime) / 1000, 0.1));
     lastTime = now;
     if (mode === "Animate") {
       const a = currentAnimation(api.authored());
       if (a) {
-        frame += dt * a.fps;
-        if (frame > a.duration) {
-          if (a.loop) frame %= a.duration;
-          else {
-            frame = a.duration;
-            stop();
-          }
-        }
+        try {
+          const mixer = ensurePreview(api.authored(), a);
+          mixer.advanceClocks(dt);
+          frame = mixer.playback(a.id).frame;
+          if (mixer.playback(a.id).completed) { stop(); refreshPlayback(); }
+        } catch(error) { stop(); api.notice(error); }
       }
     } else if (player) {
       try {
@@ -266,10 +287,22 @@ export function mountAuthoring(api) {
   function play() {
     playing = !playing;
     if (playing) {
+      if (mode === 'Animate') {
+        const p = api.authored(), a = currentAnimation(p);
+        if (a) {
+          const mixer = ensurePreview(p,a);
+          if (mixer.playback(a.id).completed) { mixer.restart(a.id); frame = 0; }
+        }
+      }
       lastTime = performance.now();
       if (!document.hidden) raf = requestAnimationFrame(tick);
     } else stop();
+    refreshPlayback();
+  }
+  function refreshPlayback() {
+    const focused = document.activeElement?.id === 'timeline-play';
     refresh();
+    if (focused) document.getElementById('timeline-play')?.focus();
   }
   // Preserve the pose while suspended; never accumulate hidden-tab time.
   const suspendPlayback = () => {
@@ -485,6 +518,8 @@ export function mountAuthoring(api) {
     animationId = a?.id || null;
     const header = el("div");
     header.className = "authoring-controls";
+    const playButton = button(playing ? "Pause" : "Play", play);
+    playButton.id = 'timeline-play';
     header.append(
       button("+ Animation", () =>
         transaction("Create animation", (p) => {
@@ -511,10 +546,11 @@ export function mountAuthoring(api) {
           stop();
           animationId = id;
           frame = 0;
+          invalidatePreview();
           api.refresh();
         },
       ),
-      button(playing ? "Pause" : "Play", play),
+      playButton,
     );
     for (const [direction, label] of [
       [-1, "Previous key"],
@@ -524,7 +560,7 @@ export function mountAuthoring(api) {
       const navigate = button(label, () => {
         if (!key) return;
         stop();
-        frame = key.frame;
+        seekPreview(key.frame);
         selectedKey = key;
         api.refresh();
         const next = panel.querySelector(`[data-key-direction="${direction}"]`);
@@ -569,6 +605,65 @@ export function mountAuthoring(api) {
         "number",
       ),
     );
+    const playback = playbackSettings(a);
+    const settings = button('Playback settings…', () => {
+      stop();
+      const draft = {...playbackSettings(a)};
+      sheet('Animation playback', body => {
+        const count = field('Repeat cycles', draft.iterations || 1, value => draft.iterations = value, 'number');
+        const repeat = select('Repeat', [['continuous','Continuous'],['count','Fixed count']], draft.iterations ? 'count' : 'continuous', value => {
+          draft.iterations = value === 'continuous' ? 0 : Number(count.querySelector('input').value);
+          count.hidden = value === 'continuous';
+        });
+        const modeControl = select('Playback mode', [['once','Play once'],['loop','Loop'],['ping-pong','Ping-pong']], draft.mode, value => {
+          draft.mode = value;
+          if (value === 'once') draft.iterations = 1;
+          else draft.iterations = repeat.querySelector('select').value === 'continuous' ? 0 : Number(count.querySelector('input').value);
+          repeat.hidden = value === 'once';
+          count.hidden = value === 'once' || draft.iterations === 0;
+        });
+        count.querySelector('input').min = 1; count.querySelector('input').max = 10000; count.querySelector('input').step = 1;
+        // Draft fields sample on input so Apply does not depend on blur timing.
+        count.querySelector('input').oninput = e => { if (draft.mode !== 'once' && repeat.querySelector('select').value === 'count') draft.iterations = e.target.valueAsNumber; };
+        const speed = field('Playback speed', draft.speed, value => draft.speed = value, 'number');
+        speed.querySelector('input').min = .01; speed.querySelector('input').max = 16; speed.querySelector('input').step = .01;
+        speed.querySelector('input').oninput = e => draft.speed = e.target.valueAsNumber;
+        repeat.hidden = draft.mode === 'once'; count.hidden = draft.mode === 'once' || draft.iterations === 0;
+        body.append(modeControl, repeat, count, speed, el('p','A ping-pong cycle goes forward and back. Fixed counts include the first cycle. Speed 1 is normal. Native .riv modes and speed export directly; fixed counts need the accompanying map and host playback policy.'));
+      }, () => {
+        if (draft.mode !== 'once' && draft.iterations === 0 && document.querySelector('[aria-label="Repeat"]').value === 'count')
+          throw Error('Fixed count must be 1–10000 complete cycles');
+        const ok = transaction('Change playback', p => {
+          const record = p.animations.find(v => v.id === a.id);
+          delete record.loop; record.playback = {...draft};
+        });
+        invalidatePreview();
+        return ok;
+      }, api.notice, settings);
+    });
+    const together = button('Preview layers…', () => {
+      stop();
+      const draft = new Map(previewLayers);
+      sheet('Preview animation layers', body => {
+        body.append(el('p','Combine keyed properties using independent clocks. The selected timeline wins overlaps and its completion stops this preview. These preview choices stay out of saved projects; applications configure their own mixer.'));
+        for (const other of p.animations.filter(v => v.artboardId === a.artboardId && v.id !== a.id)) {
+          const row = el('label'), input = el('input');
+          input.type = 'checkbox'; input.checked = draft.has(other.id);
+          row.append(input, document.createTextNode(' ' + other.name));
+          const speed = field(`${other.name} layer speed`, draft.get(other.id) ?? playbackSettings(other).speed, value => { if (input.checked) draft.set(other.id, value); }, 'number');
+          const number = speed.querySelector('input'); number.min = 0; number.max = 64; number.step = .1;
+          number.oninput = () => { if (input.checked) draft.set(other.id, number.valueAsNumber); };
+          input.onchange = () => { if (input.checked) draft.set(other.id, number.valueAsNumber); else draft.delete(other.id); };
+          body.append(row, speed);
+        }
+        if (p.animations.filter(v=>v.artboardId===a.artboardId).length < 2) body.append(el('p','Create a second animation to combine components.'));
+      }, () => {
+        for (const speed of draft.values()) if (!Number.isFinite(speed) || speed < 0 || speed > 64) throw Error('Layer speed must be 0–64');
+        previewLayers.clear(); for (const [id,speed] of draft) previewLayers.set(id,speed);
+        frame = 0; invalidatePreview(); api.refresh(); api.draw();
+      }, api.notice, together);
+    });
+    header.append(settings, together, el('span', `${{once:'Play once',loop:'Loop','ping-pong':'Ping-pong'}[playback.mode]} · ${playback.iterations ? playback.iterations + ' cycle' + (playback.iterations > 1 ? 's' : '') : 'continuous'} · ${playback.speed}×`));
     const scrub = el("input");
     scrub.type = "range";
     scrub.min = 0;
@@ -578,12 +673,13 @@ export function mountAuthoring(api) {
     scrub.setAttribute("aria-label", "Playhead");
     scrub.oninput = () => {
       stop();
-      frame = Number(scrub.value);
+      seekPreview(Number(scrub.value));
       api.draw();
       updatePlayhead();
     };
     const label = el("output", `${Math.round(frame)}f`);
     label.id = "frame-label";
+    label.setAttribute('aria-live','off');
     panel.append(scrub, label);
     const n = p.nodes.find((v) => v.id === api.selected());
     if (n) {
@@ -657,7 +753,7 @@ export function mountAuthoring(api) {
       for (const key of track.keys) {
         const b = button(`◆ ${key.frame}`, () => {
           stop();
-          frame = key.frame;
+          seekPreview(key.frame);
           selectedKey = {
             targetId: track.targetId,
             property: track.property,
@@ -714,7 +810,7 @@ export function mountAuthoring(api) {
                 throw Error("A key already exists at that frame");
               k.frame = value;
               selectedKey.frame = value;
-              frame = value;
+              seekPreview(value);
             }),
           "number",
         ),
@@ -1339,7 +1435,7 @@ export function mountAuthoring(api) {
     panel.replaceChildren();
     if (mode === "Animate") animationPanel(p);
     if (mode === "Interact") machinePanel(p);
-    frame = Math.round(Math.min(frame, currentAnimation(p)?.duration ?? 0));
+    frame = Math.min(frame, currentAnimation(p)?.duration ?? 0);
   }
   exportButton.onclick = async () => {
     if (!api.ready()) return;
@@ -1352,7 +1448,8 @@ export function mountAuthoring(api) {
         "application/json",
         api.authored().name + ".riv-map.json",
       );
-      api.notice("Rive export and source map downloaded.", "success");
+      const counted = api.authored().animations.some(a => a.playback?.mode !== 'once' && a.playback?.iterations > 0);
+      api.notice(counted ? 'Rive export and map downloaded. Fixed repeat counts require host playback using the map; raw .riv playback repeats continuously.' : "Rive export and source map downloaded.", "success");
     } catch (e) {
       api.notice(e);
     }
@@ -1376,6 +1473,7 @@ export function mountAuthoring(api) {
     editGeometry,
     reset() {
       graphViews.clear();
+      previewLayers.clear(); invalidatePreview();
       stop();
       mode = "Design";
       animationId = machineId = null;

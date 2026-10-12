@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-10-12T09:43:53.866Z",
+  "widths": [
+    390,
+    1440
+  ],
+  "checks": [
+    {
+      "width": 390,
+      "checks": [
+        "counted completion/restart",
+        "completion preserves focus",
+        "ping-pong forward/back completion",
+        "one-shot endpoint",
+        "loop endpoint scrubbing",
+        "invalid fixed count keeps sheet",
+        "independent preview layers",
+        "preview preferences excluded from project",
+        "older resumed RAF timestamps preserve playback",
+        "zero automated sheet accessibility violations",
+        "no horizontal page overflow"
+      ]
+    },
+    {
+      "width": 1440,
+      "checks": [
+        "counted completion/restart",
+        "completion preserves focus",
+        "ping-pong forward/back completion",
+        "one-shot endpoint",
+        "loop endpoint scrubbing",
+        "invalid fixed count keeps sheet",
+        "independent preview layers",
+        "preview preferences excluded from project",
+        "older resumed RAF timestamps preserve playback",
+        "zero automated sheet accessibility violations",
+        "no horizontal page overflow",
+        "provisional key drag renders and cancels"
+      ]
+    }
+  ],
+  "scope": "Chromium automation; not physical-device or human accessibility evidence",
+  "browserVersion": "151.0.7922.173"
+}

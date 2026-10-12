@@ -1,0 +1,2978 @@
+{
+  "artboards": {
+    "motorcycle-board": 0
+  },
+  "nodes": {
+    "motorcycle-foreground-ground": {
+      "artboard": 0,
+      "component": 1,
+      "type": "Shape"
+    },
+    "motorcycle-foreground": {
+      "artboard": 0,
+      "component": 13,
+      "type": "Node"
+    },
+    "motorcycle-pebble-5": {
+      "artboard": 0,
+      "component": 14,
+      "type": "Shape"
+    },
+    "motorcycle-grass-5": {
+      "artboard": 0,
+      "component": 22,
+      "type": "Shape"
+    },
+    "motorcycle-pebble-4": {
+      "artboard": 0,
+      "component": 31,
+      "type": "Shape"
+    },
+    "motorcycle-grass-4": {
+      "artboard": 0,
+      "component": 39,
+      "type": "Shape"
+    },
+    "motorcycle-pebble-3": {
+      "artboard": 0,
+      "component": 48,
+      "type": "Shape"
+    },
+    "motorcycle-grass-3": {
+      "artboard": 0,
+      "component": 56,
+      "type": "Shape"
+    },
+    "motorcycle-pebble-2": {
+      "artboard": 0,
+      "component": 65,
+      "type": "Shape"
+    },
+    "motorcycle-grass-2": {
+      "artboard": 0,
+      "component": 73,
+      "type": "Shape"
+    },
+    "motorcycle-pebble-1": {
+      "artboard": 0,
+      "component": 82,
+      "type": "Shape"
+    },
+    "motorcycle-grass-1": {
+      "artboard": 0,
+      "component": 90,
+      "type": "Shape"
+    },
+    "motorcycle-pebble-0": {
+      "artboard": 0,
+      "component": 99,
+      "type": "Shape"
+    },
+    "motorcycle-grass-0": {
+      "artboard": 0,
+      "component": 107,
+      "type": "Shape"
+    },
+    "motorcycle-motorcycle": {
+      "artboard": 0,
+      "component": 116,
+      "type": "Node"
+    },
+    "motorcycle-chassis-and-rider": {
+      "artboard": 0,
+      "component": 117,
+      "type": "Node"
+    },
+    "motorcycle-turn-indicator": {
+      "artboard": 0,
+      "component": 118,
+      "type": "Shape"
+    },
+    "motorcycle-tail-light": {
+      "artboard": 0,
+      "component": 126,
+      "type": "Shape"
+    },
+    "motorcycle-headlight": {
+      "artboard": 0,
+      "component": 138,
+      "type": "Shape"
+    },
+    "motorcycle-headlight-case": {
+      "artboard": 0,
+      "component": 146,
+      "type": "Shape"
+    },
+    "motorcycle-headlight-beam": {
+      "artboard": 0,
+      "component": 154,
+      "type": "Shape"
+    },
+    "motorcycle-helmet-highlight": {
+      "artboard": 0,
+      "component": 161,
+      "type": "Shape"
+    },
+    "motorcycle-helmet-visor": {
+      "artboard": 0,
+      "component": 173,
+      "type": "Shape"
+    },
+    "motorcycle-helmet-shell": {
+      "artboard": 0,
+      "component": 185,
+      "type": "Shape"
+    },
+    "motorcycle-helmet": {
+      "artboard": 0,
+      "component": 193,
+      "type": "Shape"
+    },
+    "motorcycle-neck": {
+      "artboard": 0,
+      "component": 201,
+      "type": "Shape"
+    },
+    "motorcycle-glove": {
+      "artboard": 0,
+      "component": 213,
+      "type": "Shape"
+    },
+    "motorcycle-handlebar": {
+      "artboard": 0,
+      "component": 221,
+      "type": "Shape"
+    },
+    "motorcycle-rider-arm": {
+      "artboard": 0,
+      "component": 233,
+      "type": "Shape"
+    },
+    "motorcycle-jacket-light": {
+      "artboard": 0,
+      "component": 243,
+      "type": "Shape"
+    },
+    "motorcycle-rider-jacket": {
+      "artboard": 0,
+      "component": 252,
+      "type": "Shape"
+    },
+    "motorcycle-boot": {
+      "artboard": 0,
+      "component": 260,
+      "type": "Shape"
+    },
+    "motorcycle-rider-leg": {
+      "artboard": 0,
+      "component": 272,
+      "type": "Shape"
+    },
+    "motorcycle-exhaust-end": {
+      "artboard": 0,
+      "component": 284,
+      "type": "Shape"
+    },
+    "motorcycle-exhaust-pipe": {
+      "artboard": 0,
+      "component": 296,
+      "type": "Shape"
+    },
+    "motorcycle-front-fender": {
+      "artboard": 0,
+      "component": 306,
+      "type": "Shape"
+    },
+    "motorcycle-rear-fender": {
+      "artboard": 0,
+      "component": 314,
+      "type": "Shape"
+    },
+    "motorcycle-seat-top": {
+      "artboard": 0,
+      "component": 322,
+      "type": "Shape"
+    },
+    "motorcycle-seat": {
+      "artboard": 0,
+      "component": 334,
+      "type": "Shape"
+    },
+    "motorcycle-tank-stripe": {
+      "artboard": 0,
+      "component": 346,
+      "type": "Shape"
+    },
+    "motorcycle-fuel-tank": {
+      "artboard": 0,
+      "component": 358,
+      "type": "Shape"
+    },
+    "motorcycle-engine-core": {
+      "artboard": 0,
+      "component": 366,
+      "type": "Shape"
+    },
+    "motorcycle-engine-fin-3": {
+      "artboard": 0,
+      "component": 378,
+      "type": "Shape"
+    },
+    "motorcycle-engine-fin-2": {
+      "artboard": 0,
+      "component": 390,
+      "type": "Shape"
+    },
+    "motorcycle-engine-fin-1": {
+      "artboard": 0,
+      "component": 402,
+      "type": "Shape"
+    },
+    "motorcycle-engine-fin-0": {
+      "artboard": 0,
+      "component": 414,
+      "type": "Shape"
+    },
+    "motorcycle-engine": {
+      "artboard": 0,
+      "component": 426,
+      "type": "Shape"
+    },
+    "motorcycle-front-fork-inner": {
+      "artboard": 0,
+      "component": 434,
+      "type": "Shape"
+    },
+    "motorcycle-front-fork": {
+      "artboard": 0,
+      "component": 442,
+      "type": "Shape"
+    },
+    "motorcycle-frame": {
+      "artboard": 0,
+      "component": 450,
+      "type": "Shape"
+    },
+    "motorcycle-swing-arm": {
+      "artboard": 0,
+      "component": 460,
+      "type": "Shape"
+    },
+    "motorcycle-front-wheel": {
+      "artboard": 0,
+      "component": 468,
+      "type": "Node"
+    },
+    "motorcycle-front-hub-light": {
+      "artboard": 0,
+      "component": 469,
+      "type": "Shape"
+    },
+    "motorcycle-front-hub": {
+      "artboard": 0,
+      "component": 477,
+      "type": "Shape"
+    },
+    "motorcycle-front-spoke-5": {
+      "artboard": 0,
+      "component": 485,
+      "type": "Shape"
+    },
+    "motorcycle-front-spoke-4": {
+      "artboard": 0,
+      "component": 497,
+      "type": "Shape"
+    },
+    "motorcycle-front-spoke-3": {
+      "artboard": 0,
+      "component": 509,
+      "type": "Shape"
+    },
+    "motorcycle-front-spoke-2": {
+      "artboard": 0,
+      "component": 521,
+      "type": "Shape"
+    },
+    "motorcycle-front-spoke-1": {
+      "artboard": 0,
+      "component": 533,
+      "type": "Shape"
+    },
+    "motorcycle-front-spoke-0": {
+      "artboard": 0,
+      "component": 545,
+      "type": "Shape"
+    },
+    "motorcycle-front-hub-well": {
+      "artboard": 0,
+      "component": 557,
+      "type": "Shape"
+    },
+    "motorcycle-front-rim": {
+      "artboard": 0,
+      "component": 565,
+      "type": "Shape"
+    },
+    "motorcycle-front-tire": {
+      "artboard": 0,
+      "component": 573,
+      "type": "Shape"
+    },
+    "motorcycle-rear-wheel": {
+      "artboard": 0,
+      "component": 581,
+      "type": "Node"
+    },
+    "motorcycle-rear-hub-light": {
+      "artboard": 0,
+      "component": 582,
+      "type": "Shape"
+    },
+    "motorcycle-rear-hub": {
+      "artboard": 0,
+      "component": 590,
+      "type": "Shape"
+    },
+    "motorcycle-rear-spoke-5": {
+      "artboard": 0,
+      "component": 598,
+      "type": "Shape"
+    },
+    "motorcycle-rear-spoke-4": {
+      "artboard": 0,
+      "component": 610,
+      "type": "Shape"
+    },
+    "motorcycle-rear-spoke-3": {
+      "artboard": 0,
+      "component": 622,
+      "type": "Shape"
+    },
+    "motorcycle-rear-spoke-2": {
+      "artboard": 0,
+      "component": 634,
+      "type": "Shape"
+    },
+    "motorcycle-rear-spoke-1": {
+      "artboard": 0,
+      "component": 646,
+      "type": "Shape"
+    },
+    "motorcycle-rear-spoke-0": {
+      "artboard": 0,
+      "component": 658,
+      "type": "Shape"
+    },
+    "motorcycle-rear-hub-well": {
+      "artboard": 0,
+      "component": 670,
+      "type": "Shape"
+    },
+    "motorcycle-rear-rim": {
+      "artboard": 0,
+      "component": 678,
+      "type": "Shape"
+    },
+    "motorcycle-rear-tire": {
+      "artboard": 0,
+      "component": 686,
+      "type": "Shape"
+    },
+    "motorcycle-bike-shadow": {
+      "artboard": 0,
+      "component": 694,
+      "type": "Shape"
+    },
+    "motorcycle-road-markings": {
+      "artboard": 0,
+      "component": 702,
+      "type": "Node"
+    },
+    "motorcycle-road-dash-5": {
+      "artboard": 0,
+      "component": 703,
+      "type": "Shape"
+    },
+    "motorcycle-road-dash-4": {
+      "artboard": 0,
+      "component": 715,
+      "type": "Shape"
+    },
+    "motorcycle-road-dash-3": {
+      "artboard": 0,
+      "component": 727,
+      "type": "Shape"
+    },
+    "motorcycle-road-dash-2": {
+      "artboard": 0,
+      "component": 739,
+      "type": "Shape"
+    },
+    "motorcycle-road-dash-1": {
+      "artboard": 0,
+      "component": 751,
+      "type": "Shape"
+    },
+    "motorcycle-road-dash-0": {
+      "artboard": 0,
+      "component": 763,
+      "type": "Shape"
+    },
+    "motorcycle-road-edge": {
+      "artboard": 0,
+      "component": 775,
+      "type": "Shape"
+    },
+    "motorcycle-road": {
+      "artboard": 0,
+      "component": 787,
+      "type": "Shape"
+    },
+    "motorcycle-midground": {
+      "artboard": 0,
+      "component": 799,
+      "type": "Node"
+    },
+    "motorcycle-near-hill-3": {
+      "artboard": 0,
+      "component": 800,
+      "type": "Shape"
+    },
+    "motorcycle-near-hill-2": {
+      "artboard": 0,
+      "component": 810,
+      "type": "Shape"
+    },
+    "motorcycle-near-hill-1": {
+      "artboard": 0,
+      "component": 820,
+      "type": "Shape"
+    },
+    "motorcycle-near-hill-0": {
+      "artboard": 0,
+      "component": 830,
+      "type": "Shape"
+    },
+    "motorcycle-background": {
+      "artboard": 0,
+      "component": 840,
+      "type": "Node"
+    },
+    "motorcycle-cloud-3": {
+      "artboard": 0,
+      "component": 841,
+      "type": "Shape"
+    },
+    "motorcycle-far-hill-3": {
+      "artboard": 0,
+      "component": 849,
+      "type": "Shape"
+    },
+    "motorcycle-cloud-2": {
+      "artboard": 0,
+      "component": 859,
+      "type": "Shape"
+    },
+    "motorcycle-far-hill-2": {
+      "artboard": 0,
+      "component": 867,
+      "type": "Shape"
+    },
+    "motorcycle-cloud-1": {
+      "artboard": 0,
+      "component": 877,
+      "type": "Shape"
+    },
+    "motorcycle-far-hill-1": {
+      "artboard": 0,
+      "component": 885,
+      "type": "Shape"
+    },
+    "motorcycle-cloud-0": {
+      "artboard": 0,
+      "component": 895,
+      "type": "Shape"
+    },
+    "motorcycle-far-hill-0": {
+      "artboard": 0,
+      "component": 903,
+      "type": "Shape"
+    },
+    "motorcycle-sun": {
+      "artboard": 0,
+      "component": 913,
+      "type": "Shape"
+    },
+    "motorcycle-sky": {
+      "artboard": 0,
+      "component": 921,
+      "type": "Shape"
+    }
+  },
+  "points": {
+    "motorcycle-foreground-ground-p0": {
+      "artboard": 0,
+      "component": 3
+    },
+    "motorcycle-foreground-ground-p1": {
+      "artboard": 0,
+      "component": 4
+    },
+    "motorcycle-foreground-ground-p2": {
+      "artboard": 0,
+      "component": 5
+    },
+    "motorcycle-foreground-ground-p3": {
+      "artboard": 0,
+      "component": 6
+    },
+    "motorcycle-foreground-ground-p4": {
+      "artboard": 0,
+      "component": 7
+    },
+    "motorcycle-foreground-ground-p5": {
+      "artboard": 0,
+      "component": 8
+    },
+    "motorcycle-foreground-ground-p6": {
+      "artboard": 0,
+      "component": 9
+    },
+    "motorcycle-foreground-ground-p7": {
+      "artboard": 0,
+      "component": 10
+    },
+    "motorcycle-pebble-5-p0": {
+      "artboard": 0,
+      "component": 16
+    },
+    "motorcycle-pebble-5-p1": {
+      "artboard": 0,
+      "component": 17
+    },
+    "motorcycle-pebble-5-p2": {
+      "artboard": 0,
+      "component": 18
+    },
+    "motorcycle-pebble-5-p3": {
+      "artboard": 0,
+      "component": 19
+    },
+    "motorcycle-grass-5-p0": {
+      "artboard": 0,
+      "component": 24
+    },
+    "motorcycle-grass-5-p1": {
+      "artboard": 0,
+      "component": 25
+    },
+    "motorcycle-grass-5-p2": {
+      "artboard": 0,
+      "component": 26
+    },
+    "motorcycle-grass-5-p3": {
+      "artboard": 0,
+      "component": 27
+    },
+    "motorcycle-grass-5-p4": {
+      "artboard": 0,
+      "component": 28
+    },
+    "motorcycle-pebble-4-p0": {
+      "artboard": 0,
+      "component": 33
+    },
+    "motorcycle-pebble-4-p1": {
+      "artboard": 0,
+      "component": 34
+    },
+    "motorcycle-pebble-4-p2": {
+      "artboard": 0,
+      "component": 35
+    },
+    "motorcycle-pebble-4-p3": {
+      "artboard": 0,
+      "component": 36
+    },
+    "motorcycle-grass-4-p0": {
+      "artboard": 0,
+      "component": 41
+    },
+    "motorcycle-grass-4-p1": {
+      "artboard": 0,
+      "component": 42
+    },
+    "motorcycle-grass-4-p2": {
+      "artboard": 0,
+      "component": 43
+    },
+    "motorcycle-grass-4-p3": {
+      "artboard": 0,
+      "component": 44
+    },
+    "motorcycle-grass-4-p4": {
+      "artboard": 0,
+      "component": 45
+    },
+    "motorcycle-pebble-3-p0": {
+      "artboard": 0,
+      "component": 50
+    },
+    "motorcycle-pebble-3-p1": {
+      "artboard": 0,
+      "component": 51
+    },
+    "motorcycle-pebble-3-p2": {
+      "artboard": 0,
+      "component": 52
+    },
+    "motorcycle-pebble-3-p3": {
+      "artboard": 0,
+      "component": 53
+    },
+    "motorcycle-grass-3-p0": {
+      "artboard": 0,
+      "component": 58
+    },
+    "motorcycle-grass-3-p1": {
+      "artboard": 0,
+      "component": 59
+    },
+    "motorcycle-grass-3-p2": {
+      "artboard": 0,
+      "component": 60
+    },
+    "motorcycle-grass-3-p3": {
+      "artboard": 0,
+      "component": 61
+    },
+    "motorcycle-grass-3-p4": {
+      "artboard": 0,
+      "component": 62
+    },
+    "motorcycle-pebble-2-p0": {
+      "artboard": 0,
+      "component": 67
+    },
+    "motorcycle-pebble-2-p1": {
+      "artboard": 0,
+      "component": 68
+    },
+    "motorcycle-pebble-2-p2": {
+      "artboard": 0,
+      "component": 69
+    },
+    "motorcycle-pebble-2-p3": {
+      "artboard": 0,
+      "component": 70
+    },
+    "motorcycle-grass-2-p0": {
+      "artboard": 0,
+      "component": 75
+    },
+    "motorcycle-grass-2-p1": {
+      "artboard": 0,
+      "component": 76
+    },
+    "motorcycle-grass-2-p2": {
+      "artboard": 0,
+      "component": 77
+    },
+    "motorcycle-grass-2-p3": {
+      "artboard": 0,
+      "component": 78
+    },
+    "motorcycle-grass-2-p4": {
+      "artboard": 0,
+      "component": 79
+    },
+    "motorcycle-pebble-1-p0": {
+      "artboard": 0,
+      "component": 84
+    },
+    "motorcycle-pebble-1-p1": {
+      "artboard": 0,
+      "component": 85
+    },
+    "motorcycle-pebble-1-p2": {
+      "artboard": 0,
+      "component": 86
+    },
+    "motorcycle-pebble-1-p3": {
+      "artboard": 0,
+      "component": 87
+    },
+    "motorcycle-grass-1-p0": {
+      "artboard": 0,
+      "component": 92
+    },
+    "motorcycle-grass-1-p1": {
+      "artboard": 0,
+      "component": 93
+    },
+    "motorcycle-grass-1-p2": {
+      "artboard": 0,
+      "component": 94
+    },
+    "motorcycle-grass-1-p3": {
+      "artboard": 0,
+      "component": 95
+    },
+    "motorcycle-grass-1-p4": {
+      "artboard": 0,
+      "component": 96
+    },
+    "motorcycle-pebble-0-p0": {
+      "artboard": 0,
+      "component": 101
+    },
+    "motorcycle-pebble-0-p1": {
+      "artboard": 0,
+      "component": 102
+    },
+    "motorcycle-pebble-0-p2": {
+      "artboard": 0,
+      "component": 103
+    },
+    "motorcycle-pebble-0-p3": {
+      "artboard": 0,
+      "component": 104
+    },
+    "motorcycle-grass-0-p0": {
+      "artboard": 0,
+      "component": 109
+    },
+    "motorcycle-grass-0-p1": {
+      "artboard": 0,
+      "component": 110
+    },
+    "motorcycle-grass-0-p2": {
+      "artboard": 0,
+      "component": 111
+    },
+    "motorcycle-grass-0-p3": {
+      "artboard": 0,
+      "component": 112
+    },
+    "motorcycle-grass-0-p4": {
+      "artboard": 0,
+      "component": 113
+    },
+    "motorcycle-turn-indicator-p0": {
+      "artboard": 0,
+      "component": 120
+    },
+    "motorcycle-turn-indicator-p1": {
+      "artboard": 0,
+      "component": 121
+    },
+    "motorcycle-turn-indicator-p2": {
+      "artboard": 0,
+      "component": 122
+    },
+    "motorcycle-turn-indicator-p3": {
+      "artboard": 0,
+      "component": 123
+    },
+    "motorcycle-tail-light-p0": {
+      "artboard": 0,
+      "component": 128
+    },
+    "motorcycle-tail-light-p1": {
+      "artboard": 0,
+      "component": 129
+    },
+    "motorcycle-tail-light-p2": {
+      "artboard": 0,
+      "component": 130
+    },
+    "motorcycle-tail-light-p3": {
+      "artboard": 0,
+      "component": 131
+    },
+    "motorcycle-tail-light-p4": {
+      "artboard": 0,
+      "component": 132
+    },
+    "motorcycle-tail-light-p5": {
+      "artboard": 0,
+      "component": 133
+    },
+    "motorcycle-tail-light-p6": {
+      "artboard": 0,
+      "component": 134
+    },
+    "motorcycle-tail-light-p7": {
+      "artboard": 0,
+      "component": 135
+    },
+    "motorcycle-headlight-p0": {
+      "artboard": 0,
+      "component": 140
+    },
+    "motorcycle-headlight-p1": {
+      "artboard": 0,
+      "component": 141
+    },
+    "motorcycle-headlight-p2": {
+      "artboard": 0,
+      "component": 142
+    },
+    "motorcycle-headlight-p3": {
+      "artboard": 0,
+      "component": 143
+    },
+    "motorcycle-headlight-case-p0": {
+      "artboard": 0,
+      "component": 148
+    },
+    "motorcycle-headlight-case-p1": {
+      "artboard": 0,
+      "component": 149
+    },
+    "motorcycle-headlight-case-p2": {
+      "artboard": 0,
+      "component": 150
+    },
+    "motorcycle-headlight-case-p3": {
+      "artboard": 0,
+      "component": 151
+    },
+    "motorcycle-headlight-beam-p0": {
+      "artboard": 0,
+      "component": 156
+    },
+    "motorcycle-headlight-beam-p1": {
+      "artboard": 0,
+      "component": 157
+    },
+    "motorcycle-headlight-beam-p2": {
+      "artboard": 0,
+      "component": 158
+    },
+    "motorcycle-helmet-highlight-p0": {
+      "artboard": 0,
+      "component": 163
+    },
+    "motorcycle-helmet-highlight-p1": {
+      "artboard": 0,
+      "component": 164
+    },
+    "motorcycle-helmet-highlight-p2": {
+      "artboard": 0,
+      "component": 165
+    },
+    "motorcycle-helmet-highlight-p3": {
+      "artboard": 0,
+      "component": 166
+    },
+    "motorcycle-helmet-highlight-p4": {
+      "artboard": 0,
+      "component": 167
+    },
+    "motorcycle-helmet-highlight-p5": {
+      "artboard": 0,
+      "component": 168
+    },
+    "motorcycle-helmet-highlight-p6": {
+      "artboard": 0,
+      "component": 169
+    },
+    "motorcycle-helmet-highlight-p7": {
+      "artboard": 0,
+      "component": 170
+    },
+    "motorcycle-helmet-visor-p0": {
+      "artboard": 0,
+      "component": 175
+    },
+    "motorcycle-helmet-visor-p1": {
+      "artboard": 0,
+      "component": 176
+    },
+    "motorcycle-helmet-visor-p2": {
+      "artboard": 0,
+      "component": 177
+    },
+    "motorcycle-helmet-visor-p3": {
+      "artboard": 0,
+      "component": 178
+    },
+    "motorcycle-helmet-visor-p4": {
+      "artboard": 0,
+      "component": 179
+    },
+    "motorcycle-helmet-visor-p5": {
+      "artboard": 0,
+      "component": 180
+    },
+    "motorcycle-helmet-visor-p6": {
+      "artboard": 0,
+      "component": 181
+    },
+    "motorcycle-helmet-visor-p7": {
+      "artboard": 0,
+      "component": 182
+    },
+    "motorcycle-helmet-shell-p0": {
+      "artboard": 0,
+      "component": 187
+    },
+    "motorcycle-helmet-shell-p1": {
+      "artboard": 0,
+      "component": 188
+    },
+    "motorcycle-helmet-shell-p2": {
+      "artboard": 0,
+      "component": 189
+    },
+    "motorcycle-helmet-shell-p3": {
+      "artboard": 0,
+      "component": 190
+    },
+    "motorcycle-helmet-p0": {
+      "artboard": 0,
+      "component": 195
+    },
+    "motorcycle-helmet-p1": {
+      "artboard": 0,
+      "component": 196
+    },
+    "motorcycle-helmet-p2": {
+      "artboard": 0,
+      "component": 197
+    },
+    "motorcycle-helmet-p3": {
+      "artboard": 0,
+      "component": 198
+    },
+    "motorcycle-neck-p0": {
+      "artboard": 0,
+      "component": 203
+    },
+    "motorcycle-neck-p1": {
+      "artboard": 0,
+      "component": 204
+    },
+    "motorcycle-neck-p2": {
+      "artboard": 0,
+      "component": 205
+    },
+    "motorcycle-neck-p3": {
+      "artboard": 0,
+      "component": 206
+    },
+    "motorcycle-neck-p4": {
+      "artboard": 0,
+      "component": 207
+    },
+    "motorcycle-neck-p5": {
+      "artboard": 0,
+      "component": 208
+    },
+    "motorcycle-neck-p6": {
+      "artboard": 0,
+      "component": 209
+    },
+    "motorcycle-neck-p7": {
+      "artboard": 0,
+      "component": 210
+    },
+    "motorcycle-glove-p0": {
+      "artboard": 0,
+      "component": 215
+    },
+    "motorcycle-glove-p1": {
+      "artboard": 0,
+      "component": 216
+    },
+    "motorcycle-glove-p2": {
+      "artboard": 0,
+      "component": 217
+    },
+    "motorcycle-glove-p3": {
+      "artboard": 0,
+      "component": 218
+    },
+    "motorcycle-handlebar-p0": {
+      "artboard": 0,
+      "component": 223
+    },
+    "motorcycle-handlebar-p1": {
+      "artboard": 0,
+      "component": 224
+    },
+    "motorcycle-handlebar-p2": {
+      "artboard": 0,
+      "component": 225
+    },
+    "motorcycle-handlebar-p3": {
+      "artboard": 0,
+      "component": 226
+    },
+    "motorcycle-handlebar-p4": {
+      "artboard": 0,
+      "component": 227
+    },
+    "motorcycle-handlebar-p5": {
+      "artboard": 0,
+      "component": 228
+    },
+    "motorcycle-handlebar-p6": {
+      "artboard": 0,
+      "component": 229
+    },
+    "motorcycle-handlebar-p7": {
+      "artboard": 0,
+      "component": 230
+    },
+    "motorcycle-rider-arm-p0": {
+      "artboard": 0,
+      "component": 235
+    },
+    "motorcycle-rider-arm-p1": {
+      "artboard": 0,
+      "component": 236
+    },
+    "motorcycle-rider-arm-p2": {
+      "artboard": 0,
+      "component": 237
+    },
+    "motorcycle-rider-arm-p3": {
+      "artboard": 0,
+      "component": 238
+    },
+    "motorcycle-rider-arm-p4": {
+      "artboard": 0,
+      "component": 239
+    },
+    "motorcycle-rider-arm-p5": {
+      "artboard": 0,
+      "component": 240
+    },
+    "motorcycle-jacket-light-p0": {
+      "artboard": 0,
+      "component": 245
+    },
+    "motorcycle-jacket-light-p1": {
+      "artboard": 0,
+      "component": 246
+    },
+    "motorcycle-jacket-light-p2": {
+      "artboard": 0,
+      "component": 247
+    },
+    "motorcycle-jacket-light-p3": {
+      "artboard": 0,
+      "component": 248
+    },
+    "motorcycle-jacket-light-p4": {
+      "artboard": 0,
+      "component": 249
+    },
+    "motorcycle-rider-jacket-p0": {
+      "artboard": 0,
+      "component": 254
+    },
+    "motorcycle-rider-jacket-p1": {
+      "artboard": 0,
+      "component": 255
+    },
+    "motorcycle-rider-jacket-p2": {
+      "artboard": 0,
+      "component": 256
+    },
+    "motorcycle-rider-jacket-p3": {
+      "artboard": 0,
+      "component": 257
+    },
+    "motorcycle-boot-p0": {
+      "artboard": 0,
+      "component": 262
+    },
+    "motorcycle-boot-p1": {
+      "artboard": 0,
+      "component": 263
+    },
+    "motorcycle-boot-p2": {
+      "artboard": 0,
+      "component": 264
+    },
+    "motorcycle-boot-p3": {
+      "artboard": 0,
+      "component": 265
+    },
+    "motorcycle-boot-p4": {
+      "artboard": 0,
+      "component": 266
+    },
+    "motorcycle-boot-p5": {
+      "artboard": 0,
+      "component": 267
+    },
+    "motorcycle-boot-p6": {
+      "artboard": 0,
+      "component": 268
+    },
+    "motorcycle-boot-p7": {
+      "artboard": 0,
+      "component": 269
+    },
+    "motorcycle-rider-leg-p0": {
+      "artboard": 0,
+      "component": 274
+    },
+    "motorcycle-rider-leg-p1": {
+      "artboard": 0,
+      "component": 275
+    },
+    "motorcycle-rider-leg-p2": {
+      "artboard": 0,
+      "component": 276
+    },
+    "motorcycle-rider-leg-p3": {
+      "artboard": 0,
+      "component": 277
+    },
+    "motorcycle-rider-leg-p4": {
+      "artboard": 0,
+      "component": 278
+    },
+    "motorcycle-rider-leg-p5": {
+      "artboard": 0,
+      "component": 279
+    },
+    "motorcycle-rider-leg-p6": {
+      "artboard": 0,
+      "component": 280
+    },
+    "motorcycle-rider-leg-p7": {
+      "artboard": 0,
+      "component": 281
+    },
+    "motorcycle-exhaust-end-p0": {
+      "artboard": 0,
+      "component": 286
+    },
+    "motorcycle-exhaust-end-p1": {
+      "artboard": 0,
+      "component": 287
+    },
+    "motorcycle-exhaust-end-p2": {
+      "artboard": 0,
+      "component": 288
+    },
+    "motorcycle-exhaust-end-p3": {
+      "artboard": 0,
+      "component": 289
+    },
+    "motorcycle-exhaust-end-p4": {
+      "artboard": 0,
+      "component": 290
+    },
+    "motorcycle-exhaust-end-p5": {
+      "artboard": 0,
+      "component": 291
+    },
+    "motorcycle-exhaust-end-p6": {
+      "artboard": 0,
+      "component": 292
+    },
+    "motorcycle-exhaust-end-p7": {
+      "artboard": 0,
+      "component": 293
+    },
+    "motorcycle-exhaust-pipe-p0": {
+      "artboard": 0,
+      "component": 298
+    },
+    "motorcycle-exhaust-pipe-p1": {
+      "artboard": 0,
+      "component": 299
+    },
+    "motorcycle-exhaust-pipe-p2": {
+      "artboard": 0,
+      "component": 300
+    },
+    "motorcycle-exhaust-pipe-p3": {
+      "artboard": 0,
+      "component": 301
+    },
+    "motorcycle-exhaust-pipe-p4": {
+      "artboard": 0,
+      "component": 302
+    },
+    "motorcycle-exhaust-pipe-p5": {
+      "artboard": 0,
+      "component": 303
+    },
+    "motorcycle-front-fender-p0": {
+      "artboard": 0,
+      "component": 308
+    },
+    "motorcycle-front-fender-p1": {
+      "artboard": 0,
+      "component": 309
+    },
+    "motorcycle-front-fender-p2": {
+      "artboard": 0,
+      "component": 310
+    },
+    "motorcycle-front-fender-p3": {
+      "artboard": 0,
+      "component": 311
+    },
+    "motorcycle-rear-fender-p0": {
+      "artboard": 0,
+      "component": 316
+    },
+    "motorcycle-rear-fender-p1": {
+      "artboard": 0,
+      "component": 317
+    },
+    "motorcycle-rear-fender-p2": {
+      "artboard": 0,
+      "component": 318
+    },
+    "motorcycle-rear-fender-p3": {
+      "artboard": 0,
+      "component": 319
+    },
+    "motorcycle-seat-top-p0": {
+      "artboard": 0,
+      "component": 324
+    },
+    "motorcycle-seat-top-p1": {
+      "artboard": 0,
+      "component": 325
+    },
+    "motorcycle-seat-top-p2": {
+      "artboard": 0,
+      "component": 326
+    },
+    "motorcycle-seat-top-p3": {
+      "artboard": 0,
+      "component": 327
+    },
+    "motorcycle-seat-top-p4": {
+      "artboard": 0,
+      "component": 328
+    },
+    "motorcycle-seat-top-p5": {
+      "artboard": 0,
+      "component": 329
+    },
+    "motorcycle-seat-top-p6": {
+      "artboard": 0,
+      "component": 330
+    },
+    "motorcycle-seat-top-p7": {
+      "artboard": 0,
+      "component": 331
+    },
+    "motorcycle-seat-p0": {
+      "artboard": 0,
+      "component": 336
+    },
+    "motorcycle-seat-p1": {
+      "artboard": 0,
+      "component": 337
+    },
+    "motorcycle-seat-p2": {
+      "artboard": 0,
+      "component": 338
+    },
+    "motorcycle-seat-p3": {
+      "artboard": 0,
+      "component": 339
+    },
+    "motorcycle-seat-p4": {
+      "artboard": 0,
+      "component": 340
+    },
+    "motorcycle-seat-p5": {
+      "artboard": 0,
+      "component": 341
+    },
+    "motorcycle-seat-p6": {
+      "artboard": 0,
+      "component": 342
+    },
+    "motorcycle-seat-p7": {
+      "artboard": 0,
+      "component": 343
+    },
+    "motorcycle-tank-stripe-p0": {
+      "artboard": 0,
+      "component": 348
+    },
+    "motorcycle-tank-stripe-p1": {
+      "artboard": 0,
+      "component": 349
+    },
+    "motorcycle-tank-stripe-p2": {
+      "artboard": 0,
+      "component": 350
+    },
+    "motorcycle-tank-stripe-p3": {
+      "artboard": 0,
+      "component": 351
+    },
+    "motorcycle-tank-stripe-p4": {
+      "artboard": 0,
+      "component": 352
+    },
+    "motorcycle-tank-stripe-p5": {
+      "artboard": 0,
+      "component": 353
+    },
+    "motorcycle-tank-stripe-p6": {
+      "artboard": 0,
+      "component": 354
+    },
+    "motorcycle-tank-stripe-p7": {
+      "artboard": 0,
+      "component": 355
+    },
+    "motorcycle-fuel-tank-p0": {
+      "artboard": 0,
+      "component": 360
+    },
+    "motorcycle-fuel-tank-p1": {
+      "artboard": 0,
+      "component": 361
+    },
+    "motorcycle-fuel-tank-p2": {
+      "artboard": 0,
+      "component": 362
+    },
+    "motorcycle-fuel-tank-p3": {
+      "artboard": 0,
+      "component": 363
+    },
+    "motorcycle-engine-core-p0": {
+      "artboard": 0,
+      "component": 368
+    },
+    "motorcycle-engine-core-p1": {
+      "artboard": 0,
+      "component": 369
+    },
+    "motorcycle-engine-core-p2": {
+      "artboard": 0,
+      "component": 370
+    },
+    "motorcycle-engine-core-p3": {
+      "artboard": 0,
+      "component": 371
+    },
+    "motorcycle-engine-core-p4": {
+      "artboard": 0,
+      "component": 372
+    },
+    "motorcycle-engine-core-p5": {
+      "artboard": 0,
+      "component": 373
+    },
+    "motorcycle-engine-core-p6": {
+      "artboard": 0,
+      "component": 374
+    },
+    "motorcycle-engine-core-p7": {
+      "artboard": 0,
+      "component": 375
+    },
+    "motorcycle-engine-fin-3-p0": {
+      "artboard": 0,
+      "component": 380
+    },
+    "motorcycle-engine-fin-3-p1": {
+      "artboard": 0,
+      "component": 381
+    },
+    "motorcycle-engine-fin-3-p2": {
+      "artboard": 0,
+      "component": 382
+    },
+    "motorcycle-engine-fin-3-p3": {
+      "artboard": 0,
+      "component": 383
+    },
+    "motorcycle-engine-fin-3-p4": {
+      "artboard": 0,
+      "component": 384
+    },
+    "motorcycle-engine-fin-3-p5": {
+      "artboard": 0,
+      "component": 385
+    },
+    "motorcycle-engine-fin-3-p6": {
+      "artboard": 0,
+      "component": 386
+    },
+    "motorcycle-engine-fin-3-p7": {
+      "artboard": 0,
+      "component": 387
+    },
+    "motorcycle-engine-fin-2-p0": {
+      "artboard": 0,
+      "component": 392
+    },
+    "motorcycle-engine-fin-2-p1": {
+      "artboard": 0,
+      "component": 393
+    },
+    "motorcycle-engine-fin-2-p2": {
+      "artboard": 0,
+      "component": 394
+    },
+    "motorcycle-engine-fin-2-p3": {
+      "artboard": 0,
+      "component": 395
+    },
+    "motorcycle-engine-fin-2-p4": {
+      "artboard": 0,
+      "component": 396
+    },
+    "motorcycle-engine-fin-2-p5": {
+      "artboard": 0,
+      "component": 397
+    },
+    "motorcycle-engine-fin-2-p6": {
+      "artboard": 0,
+      "component": 398
+    },
+    "motorcycle-engine-fin-2-p7": {
+      "artboard": 0,
+      "component": 399
+    },
+    "motorcycle-engine-fin-1-p0": {
+      "artboard": 0,
+      "component": 404
+    },
+    "motorcycle-engine-fin-1-p1": {
+      "artboard": 0,
+      "component": 405
+    },
+    "motorcycle-engine-fin-1-p2": {
+      "artboard": 0,
+      "component": 406
+    },
+    "motorcycle-engine-fin-1-p3": {
+      "artboard": 0,
+      "component": 407
+    },
+    "motorcycle-engine-fin-1-p4": {
+      "artboard": 0,
+      "component": 408
+    },
+    "motorcycle-engine-fin-1-p5": {
+      "artboard": 0,
+      "component": 409
+    },
+    "motorcycle-engine-fin-1-p6": {
+      "artboard": 0,
+      "component": 410
+    },
+    "motorcycle-engine-fin-1-p7": {
+      "artboard": 0,
+      "component": 411
+    },
+    "motorcycle-engine-fin-0-p0": {
+      "artboard": 0,
+      "component": 416
+    },
+    "motorcycle-engine-fin-0-p1": {
+      "artboard": 0,
+      "component": 417
+    },
+    "motorcycle-engine-fin-0-p2": {
+      "artboard": 0,
+      "component": 418
+    },
+    "motorcycle-engine-fin-0-p3": {
+      "artboard": 0,
+      "component": 419
+    },
+    "motorcycle-engine-fin-0-p4": {
+      "artboard": 0,
+      "component": 420
+    },
+    "motorcycle-engine-fin-0-p5": {
+      "artboard": 0,
+      "component": 421
+    },
+    "motorcycle-engine-fin-0-p6": {
+      "artboard": 0,
+      "component": 422
+    },
+    "motorcycle-engine-fin-0-p7": {
+      "artboard": 0,
+      "component": 423
+    },
+    "motorcycle-engine-p0": {
+      "artboard": 0,
+      "component": 428
+    },
+    "motorcycle-engine-p1": {
+      "artboard": 0,
+      "component": 429
+    },
+    "motorcycle-engine-p2": {
+      "artboard": 0,
+      "component": 430
+    },
+    "motorcycle-engine-p3": {
+      "artboard": 0,
+      "component": 431
+    },
+    "motorcycle-front-fork-inner-p0": {
+      "artboard": 0,
+      "component": 436
+    },
+    "motorcycle-front-fork-inner-p1": {
+      "artboard": 0,
+      "component": 437
+    },
+    "motorcycle-front-fork-inner-p2": {
+      "artboard": 0,
+      "component": 438
+    },
+    "motorcycle-front-fork-inner-p3": {
+      "artboard": 0,
+      "component": 439
+    },
+    "motorcycle-front-fork-p0": {
+      "artboard": 0,
+      "component": 444
+    },
+    "motorcycle-front-fork-p1": {
+      "artboard": 0,
+      "component": 445
+    },
+    "motorcycle-front-fork-p2": {
+      "artboard": 0,
+      "component": 446
+    },
+    "motorcycle-front-fork-p3": {
+      "artboard": 0,
+      "component": 447
+    },
+    "motorcycle-frame-p0": {
+      "artboard": 0,
+      "component": 452
+    },
+    "motorcycle-frame-p1": {
+      "artboard": 0,
+      "component": 453
+    },
+    "motorcycle-frame-p2": {
+      "artboard": 0,
+      "component": 454
+    },
+    "motorcycle-frame-p3": {
+      "artboard": 0,
+      "component": 455
+    },
+    "motorcycle-frame-p4": {
+      "artboard": 0,
+      "component": 456
+    },
+    "motorcycle-frame-p5": {
+      "artboard": 0,
+      "component": 457
+    },
+    "motorcycle-swing-arm-p0": {
+      "artboard": 0,
+      "component": 462
+    },
+    "motorcycle-swing-arm-p1": {
+      "artboard": 0,
+      "component": 463
+    },
+    "motorcycle-swing-arm-p2": {
+      "artboard": 0,
+      "component": 464
+    },
+    "motorcycle-swing-arm-p3": {
+      "artboard": 0,
+      "component": 465
+    },
+    "motorcycle-front-hub-light-p0": {
+      "artboard": 0,
+      "component": 471
+    },
+    "motorcycle-front-hub-light-p1": {
+      "artboard": 0,
+      "component": 472
+    },
+    "motorcycle-front-hub-light-p2": {
+      "artboard": 0,
+      "component": 473
+    },
+    "motorcycle-front-hub-light-p3": {
+      "artboard": 0,
+      "component": 474
+    },
+    "motorcycle-front-hub-p0": {
+      "artboard": 0,
+      "component": 479
+    },
+    "motorcycle-front-hub-p1": {
+      "artboard": 0,
+      "component": 480
+    },
+    "motorcycle-front-hub-p2": {
+      "artboard": 0,
+      "component": 481
+    },
+    "motorcycle-front-hub-p3": {
+      "artboard": 0,
+      "component": 482
+    },
+    "motorcycle-front-spoke-5-p0": {
+      "artboard": 0,
+      "component": 487
+    },
+    "motorcycle-front-spoke-5-p1": {
+      "artboard": 0,
+      "component": 488
+    },
+    "motorcycle-front-spoke-5-p2": {
+      "artboard": 0,
+      "component": 489
+    },
+    "motorcycle-front-spoke-5-p3": {
+      "artboard": 0,
+      "component": 490
+    },
+    "motorcycle-front-spoke-5-p4": {
+      "artboard": 0,
+      "component": 491
+    },
+    "motorcycle-front-spoke-5-p5": {
+      "artboard": 0,
+      "component": 492
+    },
+    "motorcycle-front-spoke-5-p6": {
+      "artboard": 0,
+      "component": 493
+    },
+    "motorcycle-front-spoke-5-p7": {
+      "artboard": 0,
+      "component": 494
+    },
+    "motorcycle-front-spoke-4-p0": {
+      "artboard": 0,
+      "component": 499
+    },
+    "motorcycle-front-spoke-4-p1": {
+      "artboard": 0,
+      "component": 500
+    },
+    "motorcycle-front-spoke-4-p2": {
+      "artboard": 0,
+      "component": 501
+    },
+    "motorcycle-front-spoke-4-p3": {
+      "artboard": 0,
+      "component": 502
+    },
+    "motorcycle-front-spoke-4-p4": {
+      "artboard": 0,
+      "component": 503
+    },
+    "motorcycle-front-spoke-4-p5": {
+      "artboard": 0,
+      "component": 504
+    },
+    "motorcycle-front-spoke-4-p6": {
+      "artboard": 0,
+      "component": 505
+    },
+    "motorcycle-front-spoke-4-p7": {
+      "artboard": 0,
+      "component": 506
+    },
+    "motorcycle-front-spoke-3-p0": {
+      "artboard": 0,
+      "component": 511
+    },
+    "motorcycle-front-spoke-3-p1": {
+      "artboard": 0,
+      "component": 512
+    },
+    "motorcycle-front-spoke-3-p2": {
+      "artboard": 0,
+      "component": 513
+    },
+    "motorcycle-front-spoke-3-p3": {
+      "artboard": 0,
+      "component": 514
+    },
+    "motorcycle-front-spoke-3-p4": {
+      "artboard": 0,
+      "component": 515
+    },
+    "motorcycle-front-spoke-3-p5": {
+      "artboard": 0,
+      "component": 516
+    },
+    "motorcycle-front-spoke-3-p6": {
+      "artboard": 0,
+      "component": 517
+    },
+    "motorcycle-front-spoke-3-p7": {
+      "artboard": 0,
+      "component": 518
+    },
+    "motorcycle-front-spoke-2-p0": {
+      "artboard": 0,
+      "component": 523
+    },
+    "motorcycle-front-spoke-2-p1": {
+      "artboard": 0,
+      "component": 524
+    },
+    "motorcycle-front-spoke-2-p2": {
+      "artboard": 0,
+      "component": 525
+    },
+    "motorcycle-front-spoke-2-p3": {
+      "artboard": 0,
+      "component": 526
+    },
+    "motorcycle-front-spoke-2-p4": {
+      "artboard": 0,
+      "component": 527
+    },
+    "motorcycle-front-spoke-2-p5": {
+      "artboard": 0,
+      "component": 528
+    },
+    "motorcycle-front-spoke-2-p6": {
+      "artboard": 0,
+      "component": 529
+    },
+    "motorcycle-front-spoke-2-p7": {
+      "artboard": 0,
+      "component": 530
+    },
+    "motorcycle-front-spoke-1-p0": {
+      "artboard": 0,
+      "component": 535
+    },
+    "motorcycle-front-spoke-1-p1": {
+      "artboard": 0,
+      "component": 536
+    },
+    "motorcycle-front-spoke-1-p2": {
+      "artboard": 0,
+      "component": 537
+    },
+    "motorcycle-front-spoke-1-p3": {
+      "artboard": 0,
+      "component": 538
+    },
+    "motorcycle-front-spoke-1-p4": {
+      "artboard": 0,
+      "component": 539
+    },
+    "motorcycle-front-spoke-1-p5": {
+      "artboard": 0,
+      "component": 540
+    },
+    "motorcycle-front-spoke-1-p6": {
+      "artboard": 0,
+      "component": 541
+    },
+    "motorcycle-front-spoke-1-p7": {
+      "artboard": 0,
+      "component": 542
+    },
+    "motorcycle-front-spoke-0-p0": {
+      "artboard": 0,
+      "component": 547
+    },
+    "motorcycle-front-spoke-0-p1": {
+      "artboard": 0,
+      "component": 548
+    },
+    "motorcycle-front-spoke-0-p2": {
+      "artboard": 0,
+      "component": 549
+    },
+    "motorcycle-front-spoke-0-p3": {
+      "artboard": 0,
+      "component": 550
+    },
+    "motorcycle-front-spoke-0-p4": {
+      "artboard": 0,
+      "component": 551
+    },
+    "motorcycle-front-spoke-0-p5": {
+      "artboard": 0,
+      "component": 552
+    },
+    "motorcycle-front-spoke-0-p6": {
+      "artboard": 0,
+      "component": 553
+    },
+    "motorcycle-front-spoke-0-p7": {
+      "artboard": 0,
+      "component": 554
+    },
+    "motorcycle-front-hub-well-p0": {
+      "artboard": 0,
+      "component": 559
+    },
+    "motorcycle-front-hub-well-p1": {
+      "artboard": 0,
+      "component": 560
+    },
+    "motorcycle-front-hub-well-p2": {
+      "artboard": 0,
+      "component": 561
+    },
+    "motorcycle-front-hub-well-p3": {
+      "artboard": 0,
+      "component": 562
+    },
+    "motorcycle-front-rim-p0": {
+      "artboard": 0,
+      "component": 567
+    },
+    "motorcycle-front-rim-p1": {
+      "artboard": 0,
+      "component": 568
+    },
+    "motorcycle-front-rim-p2": {
+      "artboard": 0,
+      "component": 569
+    },
+    "motorcycle-front-rim-p3": {
+      "artboard": 0,
+      "component": 570
+    },
+    "motorcycle-front-tire-p0": {
+      "artboard": 0,
+      "component": 575
+    },
+    "motorcycle-front-tire-p1": {
+      "artboard": 0,
+      "component": 576
+    },
+    "motorcycle-front-tire-p2": {
+      "artboard": 0,
+      "component": 577
+    },
+    "motorcycle-front-tire-p3": {
+      "artboard": 0,
+      "component": 578
+    },
+    "motorcycle-rear-hub-light-p0": {
+      "artboard": 0,
+      "component": 584
+    },
+    "motorcycle-rear-hub-light-p1": {
+      "artboard": 0,
+      "component": 585
+    },
+    "motorcycle-rear-hub-light-p2": {
+      "artboard": 0,
+      "component": 586
+    },
+    "motorcycle-rear-hub-light-p3": {
+      "artboard": 0,
+      "component": 587
+    },
+    "motorcycle-rear-hub-p0": {
+      "artboard": 0,
+      "component": 592
+    },
+    "motorcycle-rear-hub-p1": {
+      "artboard": 0,
+      "component": 593
+    },
+    "motorcycle-rear-hub-p2": {
+      "artboard": 0,
+      "component": 594
+    },
+    "motorcycle-rear-hub-p3": {
+      "artboard": 0,
+      "component": 595
+    },
+    "motorcycle-rear-spoke-5-p0": {
+      "artboard": 0,
+      "component": 600
+    },
+    "motorcycle-rear-spoke-5-p1": {
+      "artboard": 0,
+      "component": 601
+    },
+    "motorcycle-rear-spoke-5-p2": {
+      "artboard": 0,
+      "component": 602
+    },
+    "motorcycle-rear-spoke-5-p3": {
+      "artboard": 0,
+      "component": 603
+    },
+    "motorcycle-rear-spoke-5-p4": {
+      "artboard": 0,
+      "component": 604
+    },
+    "motorcycle-rear-spoke-5-p5": {
+      "artboard": 0,
+      "component": 605
+    },
+    "motorcycle-rear-spoke-5-p6": {
+      "artboard": 0,
+      "component": 606
+    },
+    "motorcycle-rear-spoke-5-p7": {
+      "artboard": 0,
+      "component": 607
+    },
+    "motorcycle-rear-spoke-4-p0": {
+      "artboard": 0,
+      "component": 612
+    },
+    "motorcycle-rear-spoke-4-p1": {
+      "artboard": 0,
+      "component": 613
+    },
+    "motorcycle-rear-spoke-4-p2": {
+      "artboard": 0,
+      "component": 614
+    },
+    "motorcycle-rear-spoke-4-p3": {
+      "artboard": 0,
+      "component": 615
+    },
+    "motorcycle-rear-spoke-4-p4": {
+      "artboard": 0,
+      "component": 616
+    },
+    "motorcycle-rear-spoke-4-p5": {
+      "artboard": 0,
+      "component": 617
+    },
+    "motorcycle-rear-spoke-4-p6": {
+      "artboard": 0,
+      "component": 618
+    },
+    "motorcycle-rear-spoke-4-p7": {
+      "artboard": 0,
+      "component": 619
+    },
+    "motorcycle-rear-spoke-3-p0": {
+      "artboard": 0,
+      "component": 624
+    },
+    "motorcycle-rear-spoke-3-p1": {
+      "artboard": 0,
+      "component": 625
+    },
+    "motorcycle-rear-spoke-3-p2": {
+      "artboard": 0,
+      "component": 626
+    },
+    "motorcycle-rear-spoke-3-p3": {
+      "artboard": 0,
+      "component": 627
+    },
+    "motorcycle-rear-spoke-3-p4": {
+      "artboard": 0,
+      "component": 628
+    },
+    "motorcycle-rear-spoke-3-p5": {
+      "artboard": 0,
+      "component": 629
+    },
+    "motorcycle-rear-spoke-3-p6": {
+      "artboard": 0,
+      "component": 630
+    },
+    "motorcycle-rear-spoke-3-p7": {
+      "artboard": 0,
+      "component": 631
+    },
+    "motorcycle-rear-spoke-2-p0": {
+      "artboard": 0,
+      "component": 636
+    },
+    "motorcycle-rear-spoke-2-p1": {
+      "artboard": 0,
+      "component": 637
+    },
+    "motorcycle-rear-spoke-2-p2": {
+      "artboard": 0,
+      "component": 638
+    },
+    "motorcycle-rear-spoke-2-p3": {
+      "artboard": 0,
+      "component": 639
+    },
+    "motorcycle-rear-spoke-2-p4": {
+      "artboard": 0,
+      "component": 640
+    },
+    "motorcycle-rear-spoke-2-p5": {
+      "artboard": 0,
+      "component": 641
+    },
+    "motorcycle-rear-spoke-2-p6": {
+      "artboard": 0,
+      "component": 642
+    },
+    "motorcycle-rear-spoke-2-p7": {
+      "artboard": 0,
+      "component": 643
+    },
+    "motorcycle-rear-spoke-1-p0": {
+      "artboard": 0,
+      "component": 648
+    },
+    "motorcycle-rear-spoke-1-p1": {
+      "artboard": 0,
+      "component": 649
+    },
+    "motorcycle-rear-spoke-1-p2": {
+      "artboard": 0,
+      "component": 650
+    },
+    "motorcycle-rear-spoke-1-p3": {
+      "artboard": 0,
+      "component": 651
+    },
+    "motorcycle-rear-spoke-1-p4": {
+      "artboard": 0,
+      "component": 652
+    },
+    "motorcycle-rear-spoke-1-p5": {
+      "artboard": 0,
+      "component": 653
+    },
+    "motorcycle-rear-spoke-1-p6": {
+      "artboard": 0,
+      "component": 654
+    },
+    "motorcycle-rear-spoke-1-p7": {
+      "artboard": 0,
+      "component": 655
+    },
+    "motorcycle-rear-spoke-0-p0": {
+      "artboard": 0,
+      "component": 660
+    },
+    "motorcycle-rear-spoke-0-p1": {
+      "artboard": 0,
+      "component": 661
+    },
+    "motorcycle-rear-spoke-0-p2": {
+      "artboard": 0,
+      "component": 662
+    },
+    "motorcycle-rear-spoke-0-p3": {
+      "artboard": 0,
+      "component": 663
+    },
+    "motorcycle-rear-spoke-0-p4": {
+      "artboard": 0,
+      "component": 664
+    },
+    "motorcycle-rear-spoke-0-p5": {
+      "artboard": 0,
+      "component": 665
+    },
+    "motorcycle-rear-spoke-0-p6": {
+      "artboard": 0,
+      "component": 666
+    },
+    "motorcycle-rear-spoke-0-p7": {
+      "artboard": 0,
+      "component": 667
+    },
+    "motorcycle-rear-hub-well-p0": {
+      "artboard": 0,
+      "component": 672
+    },
+    "motorcycle-rear-hub-well-p1": {
+      "artboard": 0,
+      "component": 673
+    },
+    "motorcycle-rear-hub-well-p2": {
+      "artboard": 0,
+      "component": 674
+    },
+    "motorcycle-rear-hub-well-p3": {
+      "artboard": 0,
+      "component": 675
+    },
+    "motorcycle-rear-rim-p0": {
+      "artboard": 0,
+      "component": 680
+    },
+    "motorcycle-rear-rim-p1": {
+      "artboard": 0,
+      "component": 681
+    },
+    "motorcycle-rear-rim-p2": {
+      "artboard": 0,
+      "component": 682
+    },
+    "motorcycle-rear-rim-p3": {
+      "artboard": 0,
+      "component": 683
+    },
+    "motorcycle-rear-tire-p0": {
+      "artboard": 0,
+      "component": 688
+    },
+    "motorcycle-rear-tire-p1": {
+      "artboard": 0,
+      "component": 689
+    },
+    "motorcycle-rear-tire-p2": {
+      "artboard": 0,
+      "component": 690
+    },
+    "motorcycle-rear-tire-p3": {
+      "artboard": 0,
+      "component": 691
+    },
+    "motorcycle-bike-shadow-p0": {
+      "artboard": 0,
+      "component": 696
+    },
+    "motorcycle-bike-shadow-p1": {
+      "artboard": 0,
+      "component": 697
+    },
+    "motorcycle-bike-shadow-p2": {
+      "artboard": 0,
+      "component": 698
+    },
+    "motorcycle-bike-shadow-p3": {
+      "artboard": 0,
+      "component": 699
+    },
+    "motorcycle-road-dash-5-p0": {
+      "artboard": 0,
+      "component": 705
+    },
+    "motorcycle-road-dash-5-p1": {
+      "artboard": 0,
+      "component": 706
+    },
+    "motorcycle-road-dash-5-p2": {
+      "artboard": 0,
+      "component": 707
+    },
+    "motorcycle-road-dash-5-p3": {
+      "artboard": 0,
+      "component": 708
+    },
+    "motorcycle-road-dash-5-p4": {
+      "artboard": 0,
+      "component": 709
+    },
+    "motorcycle-road-dash-5-p5": {
+      "artboard": 0,
+      "component": 710
+    },
+    "motorcycle-road-dash-5-p6": {
+      "artboard": 0,
+      "component": 711
+    },
+    "motorcycle-road-dash-5-p7": {
+      "artboard": 0,
+      "component": 712
+    },
+    "motorcycle-road-dash-4-p0": {
+      "artboard": 0,
+      "component": 717
+    },
+    "motorcycle-road-dash-4-p1": {
+      "artboard": 0,
+      "component": 718
+    },
+    "motorcycle-road-dash-4-p2": {
+      "artboard": 0,
+      "component": 719
+    },
+    "motorcycle-road-dash-4-p3": {
+      "artboard": 0,
+      "component": 720
+    },
+    "motorcycle-road-dash-4-p4": {
+      "artboard": 0,
+      "component": 721
+    },
+    "motorcycle-road-dash-4-p5": {
+      "artboard": 0,
+      "component": 722
+    },
+    "motorcycle-road-dash-4-p6": {
+      "artboard": 0,
+      "component": 723
+    },
+    "motorcycle-road-dash-4-p7": {
+      "artboard": 0,
+      "component": 724
+    },
+    "motorcycle-road-dash-3-p0": {
+      "artboard": 0,
+      "component": 729
+    },
+    "motorcycle-road-dash-3-p1": {
+      "artboard": 0,
+      "component": 730
+    },
+    "motorcycle-road-dash-3-p2": {
+      "artboard": 0,
+      "component": 731
+    },
+    "motorcycle-road-dash-3-p3": {
+      "artboard": 0,
+      "component": 732
+    },
+    "motorcycle-road-dash-3-p4": {
+      "artboard": 0,
+      "component": 733
+    },
+    "motorcycle-road-dash-3-p5": {
+      "artboard": 0,
+      "component": 734
+    },
+    "motorcycle-road-dash-3-p6": {
+      "artboard": 0,
+      "component": 735
+    },
+    "motorcycle-road-dash-3-p7": {
+      "artboard": 0,
+      "component": 736
+    },
+    "motorcycle-road-dash-2-p0": {
+      "artboard": 0,
+      "component": 741
+    },
+    "motorcycle-road-dash-2-p1": {
+      "artboard": 0,
+      "component": 742
+    },
+    "motorcycle-road-dash-2-p2": {
+      "artboard": 0,
+      "component": 743
+    },
+    "motorcycle-road-dash-2-p3": {
+      "artboard": 0,
+      "component": 744
+    },
+    "motorcycle-road-dash-2-p4": {
+      "artboard": 0,
+      "component": 745
+    },
+    "motorcycle-road-dash-2-p5": {
+      "artboard": 0,
+      "component": 746
+    },
+    "motorcycle-road-dash-2-p6": {
+      "artboard": 0,
+      "component": 747
+    },
+    "motorcycle-road-dash-2-p7": {
+      "artboard": 0,
+      "component": 748
+    },
+    "motorcycle-road-dash-1-p0": {
+      "artboard": 0,
+      "component": 753
+    },
+    "motorcycle-road-dash-1-p1": {
+      "artboard": 0,
+      "component": 754
+    },
+    "motorcycle-road-dash-1-p2": {
+      "artboard": 0,
+      "component": 755
+    },
+    "motorcycle-road-dash-1-p3": {
+      "artboard": 0,
+      "component": 756
+    },
+    "motorcycle-road-dash-1-p4": {
+      "artboard": 0,
+      "component": 757
+    },
+    "motorcycle-road-dash-1-p5": {
+      "artboard": 0,
+      "component": 758
+    },
+    "motorcycle-road-dash-1-p6": {
+      "artboard": 0,
+      "component": 759
+    },
+    "motorcycle-road-dash-1-p7": {
+      "artboard": 0,
+      "component": 760
+    },
+    "motorcycle-road-dash-0-p0": {
+      "artboard": 0,
+      "component": 765
+    },
+    "motorcycle-road-dash-0-p1": {
+      "artboard": 0,
+      "component": 766
+    },
+    "motorcycle-road-dash-0-p2": {
+      "artboard": 0,
+      "component": 767
+    },
+    "motorcycle-road-dash-0-p3": {
+      "artboard": 0,
+      "component": 768
+    },
+    "motorcycle-road-dash-0-p4": {
+      "artboard": 0,
+      "component": 769
+    },
+    "motorcycle-road-dash-0-p5": {
+      "artboard": 0,
+      "component": 770
+    },
+    "motorcycle-road-dash-0-p6": {
+      "artboard": 0,
+      "component": 771
+    },
+    "motorcycle-road-dash-0-p7": {
+      "artboard": 0,
+      "component": 772
+    },
+    "motorcycle-road-edge-p0": {
+      "artboard": 0,
+      "component": 777
+    },
+    "motorcycle-road-edge-p1": {
+      "artboard": 0,
+      "component": 778
+    },
+    "motorcycle-road-edge-p2": {
+      "artboard": 0,
+      "component": 779
+    },
+    "motorcycle-road-edge-p3": {
+      "artboard": 0,
+      "component": 780
+    },
+    "motorcycle-road-edge-p4": {
+      "artboard": 0,
+      "component": 781
+    },
+    "motorcycle-road-edge-p5": {
+      "artboard": 0,
+      "component": 782
+    },
+    "motorcycle-road-edge-p6": {
+      "artboard": 0,
+      "component": 783
+    },
+    "motorcycle-road-edge-p7": {
+      "artboard": 0,
+      "component": 784
+    },
+    "motorcycle-road-p0": {
+      "artboard": 0,
+      "component": 789
+    },
+    "motorcycle-road-p1": {
+      "artboard": 0,
+      "component": 790
+    },
+    "motorcycle-road-p2": {
+      "artboard": 0,
+      "component": 791
+    },
+    "motorcycle-road-p3": {
+      "artboard": 0,
+      "component": 792
+    },
+    "motorcycle-road-p4": {
+      "artboard": 0,
+      "component": 793
+    },
+    "motorcycle-road-p5": {
+      "artboard": 0,
+      "component": 794
+    },
+    "motorcycle-road-p6": {
+      "artboard": 0,
+      "component": 795
+    },
+    "motorcycle-road-p7": {
+      "artboard": 0,
+      "component": 796
+    },
+    "motorcycle-near-hill-3-p0": {
+      "artboard": 0,
+      "component": 802
+    },
+    "motorcycle-near-hill-3-p1": {
+      "artboard": 0,
+      "component": 803
+    },
+    "motorcycle-near-hill-3-p2": {
+      "artboard": 0,
+      "component": 804
+    },
+    "motorcycle-near-hill-3-p3": {
+      "artboard": 0,
+      "component": 805
+    },
+    "motorcycle-near-hill-3-p4": {
+      "artboard": 0,
+      "component": 806
+    },
+    "motorcycle-near-hill-3-p5": {
+      "artboard": 0,
+      "component": 807
+    },
+    "motorcycle-near-hill-2-p0": {
+      "artboard": 0,
+      "component": 812
+    },
+    "motorcycle-near-hill-2-p1": {
+      "artboard": 0,
+      "component": 813
+    },
+    "motorcycle-near-hill-2-p2": {
+      "artboard": 0,
+      "component": 814
+    },
+    "motorcycle-near-hill-2-p3": {
+      "artboard": 0,
+      "component": 815
+    },
+    "motorcycle-near-hill-2-p4": {
+      "artboard": 0,
+      "component": 816
+    },
+    "motorcycle-near-hill-2-p5": {
+      "artboard": 0,
+      "component": 817
+    },
+    "motorcycle-near-hill-1-p0": {
+      "artboard": 0,
+      "component": 822
+    },
+    "motorcycle-near-hill-1-p1": {
+      "artboard": 0,
+      "component": 823
+    },
+    "motorcycle-near-hill-1-p2": {
+      "artboard": 0,
+      "component": 824
+    },
+    "motorcycle-near-hill-1-p3": {
+      "artboard": 0,
+      "component": 825
+    },
+    "motorcycle-near-hill-1-p4": {
+      "artboard": 0,
+      "component": 826
+    },
+    "motorcycle-near-hill-1-p5": {
+      "artboard": 0,
+      "component": 827
+    },
+    "motorcycle-near-hill-0-p0": {
+      "artboard": 0,
+      "component": 832
+    },
+    "motorcycle-near-hill-0-p1": {
+      "artboard": 0,
+      "component": 833
+    },
+    "motorcycle-near-hill-0-p2": {
+      "artboard": 0,
+      "component": 834
+    },
+    "motorcycle-near-hill-0-p3": {
+      "artboard": 0,
+      "component": 835
+    },
+    "motorcycle-near-hill-0-p4": {
+      "artboard": 0,
+      "component": 836
+    },
+    "motorcycle-near-hill-0-p5": {
+      "artboard": 0,
+      "component": 837
+    },
+    "motorcycle-cloud-3-p0": {
+      "artboard": 0,
+      "component": 843
+    },
+    "motorcycle-cloud-3-p1": {
+      "artboard": 0,
+      "component": 844
+    },
+    "motorcycle-cloud-3-p2": {
+      "artboard": 0,
+      "component": 845
+    },
+    "motorcycle-cloud-3-p3": {
+      "artboard": 0,
+      "component": 846
+    },
+    "motorcycle-far-hill-3-p0": {
+      "artboard": 0,
+      "component": 851
+    },
+    "motorcycle-far-hill-3-p1": {
+      "artboard": 0,
+      "component": 852
+    },
+    "motorcycle-far-hill-3-p2": {
+      "artboard": 0,
+      "component": 853
+    },
+    "motorcycle-far-hill-3-p3": {
+      "artboard": 0,
+      "component": 854
+    },
+    "motorcycle-far-hill-3-p4": {
+      "artboard": 0,
+      "component": 855
+    },
+    "motorcycle-far-hill-3-p5": {
+      "artboard": 0,
+      "component": 856
+    },
+    "motorcycle-cloud-2-p0": {
+      "artboard": 0,
+      "component": 861
+    },
+    "motorcycle-cloud-2-p1": {
+      "artboard": 0,
+      "component": 862
+    },
+    "motorcycle-cloud-2-p2": {
+      "artboard": 0,
+      "component": 863
+    },
+    "motorcycle-cloud-2-p3": {
+      "artboard": 0,
+      "component": 864
+    },
+    "motorcycle-far-hill-2-p0": {
+      "artboard": 0,
+      "component": 869
+    },
+    "motorcycle-far-hill-2-p1": {
+      "artboard": 0,
+      "component": 870
+    },
+    "motorcycle-far-hill-2-p2": {
+      "artboard": 0,
+      "component": 871
+    },
+    "motorcycle-far-hill-2-p3": {
+      "artboard": 0,
+      "component": 872
+    },
+    "motorcycle-far-hill-2-p4": {
+      "artboard": 0,
+      "component": 873
+    },
+    "motorcycle-far-hill-2-p5": {
+      "artboard": 0,
+      "component": 874
+    },
+    "motorcycle-cloud-1-p0": {
+      "artboard": 0,
+      "component": 879
+    },
+    "motorcycle-cloud-1-p1": {
+      "artboard": 0,
+      "component": 880
+    },
+    "motorcycle-cloud-1-p2": {
+      "artboard": 0,
+      "component": 881
+    },
+    "motorcycle-cloud-1-p3": {
+      "artboard": 0,
+      "component": 882
+    },
+    "motorcycle-far-hill-1-p0": {
+      "artboard": 0,
+      "component": 887
+    },
+    "motorcycle-far-hill-1-p1": {
+      "artboard": 0,
+      "component": 888
+    },
+    "motorcycle-far-hill-1-p2": {
+      "artboard": 0,
+      "component": 889
+    },
+    "motorcycle-far-hill-1-p3": {
+      "artboard": 0,
+      "component": 890
+    },
+    "motorcycle-far-hill-1-p4": {
+      "artboard": 0,
+      "component": 891
+    },
+    "motorcycle-far-hill-1-p5": {
+      "artboard": 0,
+      "component": 892
+    },
+    "motorcycle-cloud-0-p0": {
+      "artboard": 0,
+      "component": 897
+    },
+    "motorcycle-cloud-0-p1": {
+      "artboard": 0,
+      "component": 898
+    },
+    "motorcycle-cloud-0-p2": {
+      "artboard": 0,
+      "component": 899
+    },
+    "motorcycle-cloud-0-p3": {
+      "artboard": 0,
+      "component": 900
+    },
+    "motorcycle-far-hill-0-p0": {
+      "artboard": 0,
+      "component": 905
+    },
+    "motorcycle-far-hill-0-p1": {
+      "artboard": 0,
+      "component": 906
+    },
+    "motorcycle-far-hill-0-p2": {
+      "artboard": 0,
+      "component": 907
+    },
+    "motorcycle-far-hill-0-p3": {
+      "artboard": 0,
+      "component": 908
+    },
+    "motorcycle-far-hill-0-p4": {
+      "artboard": 0,
+      "component": 909
+    },
+    "motorcycle-far-hill-0-p5": {
+      "artboard": 0,
+      "component": 910
+    },
+    "motorcycle-sun-p0": {
+      "artboard": 0,
+      "component": 915
+    },
+    "motorcycle-sun-p1": {
+      "artboard": 0,
+      "component": 916
+    },
+    "motorcycle-sun-p2": {
+      "artboard": 0,
+      "component": 917
+    },
+    "motorcycle-sun-p3": {
+      "artboard": 0,
+      "component": 918
+    },
+    "motorcycle-sky-p0": {
+      "artboard": 0,
+      "component": 923
+    },
+    "motorcycle-sky-p1": {
+      "artboard": 0,
+      "component": 924
+    },
+    "motorcycle-sky-p2": {
+      "artboard": 0,
+      "component": 925
+    },
+    "motorcycle-sky-p3": {
+      "artboard": 0,
+      "component": 926
+    },
+    "motorcycle-sky-p4": {
+      "artboard": 0,
+      "component": 927
+    },
+    "motorcycle-sky-p5": {
+      "artboard": 0,
+      "component": 928
+    },
+    "motorcycle-sky-p6": {
+      "artboard": 0,
+      "component": 929
+    },
+    "motorcycle-sky-p7": {
+      "artboard": 0,
+      "component": 930
+    }
+  },
+  "animations": {
+    "motorcycle-ride": {
+      "artboard": 0,
+      "index": 0,
+      "name": "Ride",
+      "fps": 60,
+      "duration": 120,
+      "playback": {
+        "mode": "loop",
+        "iterations": 0,
+        "speed": 1
+      },
+      "repeatPolicy": "native",
+      "trackScope": [
+        {
+          "targetId": "motorcycle-rear-wheel",
+          "property": "rotation"
+        },
+        {
+          "targetId": "motorcycle-front-wheel",
+          "property": "rotation"
+        },
+        {
+          "targetId": "motorcycle-road-markings",
+          "property": "x"
+        },
+        {
+          "targetId": "motorcycle-foreground",
+          "property": "x"
+        },
+        {
+          "targetId": "motorcycle-background",
+          "property": "x"
+        },
+        {
+          "targetId": "motorcycle-midground",
+          "property": "x"
+        },
+        {
+          "targetId": "motorcycle-chassis-and-rider",
+          "property": "y"
+        }
+      ]
+    },
+    "motorcycle-wheels": {
+      "artboard": 0,
+      "index": 1,
+      "name": "Wheels",
+      "fps": 60,
+      "duration": 60,
+      "playback": {
+        "mode": "loop",
+        "iterations": 0,
+        "speed": 1
+      },
+      "repeatPolicy": "native",
+      "trackScope": [
+        {
+          "targetId": "motorcycle-rear-wheel",
+          "property": "rotation"
+        },
+        {
+          "targetId": "motorcycle-front-wheel",
+          "property": "rotation"
+        }
+      ]
+    },
+    "motorcycle-asphalt": {
+      "artboard": 0,
+      "index": 2,
+      "name": "Asphalt",
+      "fps": 60,
+      "duration": 60,
+      "playback": {
+        "mode": "loop",
+        "iterations": 0,
+        "speed": 1
+      },
+      "repeatPolicy": "native",
+      "trackScope": [
+        {
+          "targetId": "motorcycle-road-markings",
+          "property": "x"
+        }
+      ]
+    },
+    "motorcycle-distance": {
+      "artboard": 0,
+      "index": 3,
+      "name": "Distant hills",
+      "fps": 60,
+      "duration": 120,
+      "playback": {
+        "mode": "loop",
+        "iterations": 0,
+        "speed": 1
+      },
+      "repeatPolicy": "native",
+      "trackScope": [
+        {
+          "targetId": "motorcycle-background",
+          "property": "x"
+        }
+      ]
+    },
+    "motorcycle-passing": {
+      "artboard": 0,
+      "index": 4,
+      "name": "Passing hills",
+      "fps": 60,
+      "duration": 120,
+      "playback": {
+        "mode": "loop",
+        "iterations": 0,
+        "speed": 1
+      },
+      "repeatPolicy": "native",
+      "trackScope": [
+        {
+          "targetId": "motorcycle-midground",
+          "property": "x"
+        }
+      ]
+    },
+    "motorcycle-roadside": {
+      "artboard": 0,
+      "index": 5,
+      "name": "Roadside",
+      "fps": 60,
+      "duration": 60,
+      "playback": {
+        "mode": "loop",
+        "iterations": 0,
+        "speed": 1
+      },
+      "repeatPolicy": "native",
+      "trackScope": [
+        {
+          "targetId": "motorcycle-foreground",
+          "property": "x"
+        }
+      ]
+    },
+    "motorcycle-bump": {
+      "artboard": 0,
+      "index": 6,
+      "name": "Suspension bump",
+      "fps": 60,
+      "duration": 48,
+      "playback": {
+        "mode": "once",
+        "iterations": 1,
+        "speed": 1
+      },
+      "repeatPolicy": "native",
+      "trackScope": [
+        {
+          "targetId": "motorcycle-chassis-and-rider",
+          "property": "y"
+        },
+        {
+          "targetId": "motorcycle-chassis-and-rider",
+          "property": "rotation"
+        },
+        {
+          "targetId": "motorcycle-front-wheel",
+          "property": "y"
+        },
+        {
+          "targetId": "motorcycle-rear-wheel",
+          "property": "y"
+        }
+      ]
+    },
+    "motorcycle-sunlight": {
+      "artboard": 0,
+      "index": 7,
+      "name": "Sunlight",
+      "fps": 60,
+      "duration": 180,
+      "playback": {
+        "mode": "ping-pong",
+        "iterations": 0,
+        "speed": 1
+      },
+      "repeatPolicy": "native",
+      "trackScope": [
+        {
+          "targetId": "motorcycle-sun",
+          "property": "y"
+        }
+      ]
+    },
+    "motorcycle-light": {
+      "artboard": 0,
+      "index": 8,
+      "name": "Headlight",
+      "fps": 60,
+      "duration": 1,
+      "playback": {
+        "mode": "once",
+        "iterations": 1,
+        "speed": 1
+      },
+      "repeatPolicy": "native",
+      "trackScope": [
+        {
+          "targetId": "motorcycle-headlight",
+          "property": "fill"
+        },
+        {
+          "targetId": "motorcycle-headlight-beam",
+          "property": "fill"
+        }
+      ]
+    },
+    "motorcycle-brake": {
+      "artboard": 0,
+      "index": 9,
+      "name": "Brake light",
+      "fps": 60,
+      "duration": 1,
+      "playback": {
+        "mode": "once",
+        "iterations": 1,
+        "speed": 1
+      },
+      "repeatPolicy": "native",
+      "trackScope": [
+        {
+          "targetId": "motorcycle-tail-light",
+          "property": "fill"
+        }
+      ]
+    },
+    "motorcycle-indicator": {
+      "artboard": 0,
+      "index": 10,
+      "name": "Turn signal",
+      "fps": 60,
+      "duration": 60,
+      "playback": {
+        "mode": "loop",
+        "iterations": 3,
+        "speed": 1
+      },
+      "repeatPolicy": "host",
+      "trackScope": [
+        {
+          "targetId": "motorcycle-turn-indicator",
+          "property": "fill"
+        }
+      ]
+    }
+  },
+  "machines": {}
+}

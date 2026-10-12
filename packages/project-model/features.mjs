@@ -1,6 +1,7 @@
 import { paintProperties, isColorProperty } from "./advanced.mjs";
 import { validatePaint } from "./paint.mjs";
 import { inverse } from "./primitives.mjs";
+import { validatePlayback } from './playback.mjs';
 export const ANIMATABLE = [
   "x",
   "y",
@@ -177,7 +178,7 @@ export function validateFeatures(
         "artboardId",
         "fps",
         "duration",
-        "loop",
+        ...(a && Object.hasOwn(a, 'playback') ? ['playback'] : ['loop']),
         "tracks",
       ])
     )
@@ -191,7 +192,8 @@ export function validateFeatures(
       problem(path, "fps must be 1 to 240");
     if (!Number.isInteger(a.duration) || a.duration < 1)
       problem(path, "duration must be positive frames");
-    if (typeof a.loop !== "boolean") problem(path, "loop must be boolean");
+    if (Object.hasOwn(a, 'playback')) validatePlayback(a.playback, path + '.playback', problem);
+    else if (typeof a.loop !== "boolean") problem(path, "loop must be boolean");
     if (!arr(a.tracks, path + ".tracks")) continue;
     const tracks = new Set();
     for (const t of a.tracks) {

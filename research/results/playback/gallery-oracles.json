@@ -1,0 +1,1951 @@
+{
+  "checkedAt": "2026-10-12T09:46:41.904Z",
+  "runtimeVersion": "2.44.0",
+  "scope": "Original showcase export pixels against Evir evaluated source at selected keyframes; boolean/number/AND/trigger/listener/reset outcomes. Cloud graphics, not mobile/device performance.",
+  "backends": [
+    {
+      "backend": "canvas",
+      "diagnostics": {
+        "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "contexts": [
+          {
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "unmaskedRendererAvailable": true,
+            "contextLost": false,
+            "errors": [],
+            "extensions": [
+              "EXT_clip_control",
+              "EXT_color_buffer_float",
+              "EXT_color_buffer_half_float",
+              "EXT_conservative_depth",
+              "EXT_depth_clamp",
+              "EXT_float_blend",
+              "EXT_polygon_offset_clamp",
+              "EXT_texture_compression_bptc",
+              "EXT_texture_compression_rgtc",
+              "EXT_texture_filter_anisotropic",
+              "EXT_texture_mirror_clamp_to_edge",
+              "NV_shader_noperspective_interpolation",
+              "OES_draw_buffers_indexed",
+              "OES_sample_variables",
+              "OES_shader_multisample_interpolation",
+              "OES_texture_float_linear",
+              "OVR_multiview2",
+              "WEBGL_clip_cull_distance",
+              "WEBGL_compressed_texture_astc",
+              "WEBGL_compressed_texture_etc",
+              "WEBGL_compressed_texture_etc1",
+              "WEBGL_compressed_texture_s3tc",
+              "WEBGL_compressed_texture_s3tc_srgb",
+              "WEBGL_debug_renderer_info",
+              "WEBGL_debug_shaders",
+              "WEBGL_lose_context",
+              "WEBGL_multi_draw",
+              "WEBGL_polygon_mode",
+              "WEBGL_stencil_texturing"
+            ]
+          }
+        ]
+      },
+      "checks": [
+        {
+          "example": "milo",
+          "label": "Idle native time 0s",
+          "mae": 0.007106781005859375,
+          "expectedCovered": 12953,
+          "runtimeCovered": 12943
+        },
+        {
+          "example": "milo",
+          "label": "Idle native time 0.5s",
+          "mae": 0.00882720947265625,
+          "expectedCovered": 13005,
+          "runtimeCovered": 12999
+        },
+        {
+          "example": "milo",
+          "label": "Idle native time 1s",
+          "mae": 0.008785247802734375,
+          "expectedCovered": 13029,
+          "runtimeCovered": 13020
+        },
+        {
+          "example": "milo",
+          "label": "Idle native time 1.5s",
+          "mae": 0.00882720947265625,
+          "expectedCovered": 13005,
+          "runtimeCovered": 12999
+        },
+        {
+          "example": "milo",
+          "label": "Hello native time 0s",
+          "mae": 0.007106781005859375,
+          "expectedCovered": 12912,
+          "runtimeCovered": 12902
+        },
+        {
+          "example": "milo",
+          "label": "Hello native time 0.5s",
+          "mae": 0.00882720947265625,
+          "expectedCovered": 13010,
+          "runtimeCovered": 13004
+        },
+        {
+          "example": "milo",
+          "label": "Hello native time 1s",
+          "mae": 0.008785247802734375,
+          "expectedCovered": 12957,
+          "runtimeCovered": 12948
+        },
+        {
+          "example": "milo",
+          "label": "Hello native time 1.5s",
+          "mae": 0.00882720947265625,
+          "expectedCovered": 13010,
+          "runtimeCovered": 13004
+        },
+        {
+          "example": "milo",
+          "label": "machine entry",
+          "mae": 0.007106781005859375,
+          "expectedCovered": 12953,
+          "runtimeCovered": 12943
+        },
+        {
+          "example": "milo",
+          "label": "isWaving=true",
+          "mae": 0.007106781005859375,
+          "expectedCovered": 12912,
+          "runtimeCovered": 12902
+        },
+        {
+          "example": "milo",
+          "label": "isWaving=false",
+          "mae": 0.007106781005859375,
+          "expectedCovered": 12953,
+          "runtimeCovered": 12943
+        },
+        {
+          "example": "orbit",
+          "label": "Orbit native time 0s",
+          "mae": 0.2523918151855469,
+          "expectedCovered": 26340,
+          "runtimeCovered": 26334
+        },
+        {
+          "example": "orbit",
+          "label": "Orbit native time 0.5s",
+          "mae": 0.24283218383789062,
+          "expectedCovered": 26332,
+          "runtimeCovered": 26327
+        },
+        {
+          "example": "orbit",
+          "label": "Orbit native time 1s",
+          "mae": 0.25209808349609375,
+          "expectedCovered": 26340,
+          "runtimeCovered": 26334
+        },
+        {
+          "example": "orbit",
+          "label": "Orbit native time 1.5s",
+          "mae": 0.232666015625,
+          "expectedCovered": 26333,
+          "runtimeCovered": 26324
+        },
+        {
+          "example": "bloom",
+          "label": "Breeze native time 0s",
+          "mae": 0.1868743896484375,
+          "expectedCovered": 28646,
+          "runtimeCovered": 28640
+        },
+        {
+          "example": "bloom",
+          "label": "Breeze native time 0.5s",
+          "mae": 0.18527984619140625,
+          "expectedCovered": 28646,
+          "runtimeCovered": 28640
+        },
+        {
+          "example": "bloom",
+          "label": "Breeze native time 1s",
+          "mae": 0.18527984619140625,
+          "expectedCovered": 28646,
+          "runtimeCovered": 28640
+        },
+        {
+          "example": "bloom",
+          "label": "Breeze native time 1.5s",
+          "mae": 0.18527984619140625,
+          "expectedCovered": 28646,
+          "runtimeCovered": 28640
+        },
+        {
+          "example": "tempo",
+          "label": "Rhythm native time 0s",
+          "mae": 0.0350494384765625,
+          "expectedCovered": 35746,
+          "runtimeCovered": 35738
+        },
+        {
+          "example": "tempo",
+          "label": "Rhythm native time 0.5s",
+          "mae": 0.051513671875,
+          "expectedCovered": 35746,
+          "runtimeCovered": 35738
+        },
+        {
+          "example": "tempo",
+          "label": "Rhythm native time 1s",
+          "mae": 0.034717559814453125,
+          "expectedCovered": 35746,
+          "runtimeCovered": 35738
+        },
+        {
+          "example": "tempo",
+          "label": "Rhythm native time 1.5s",
+          "mae": 0.0588531494140625,
+          "expectedCovered": 35746,
+          "runtimeCovered": 35738
+        },
+        {
+          "example": "signal",
+          "label": "Waiting native time 0s",
+          "mae": 0.03704071044921875,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36833
+        },
+        {
+          "example": "signal",
+          "label": "Waiting native time 0.5s",
+          "mae": 0.03704071044921875,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36833
+        },
+        {
+          "example": "signal",
+          "label": "Waiting native time 1s",
+          "mae": 0.03704071044921875,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36833
+        },
+        {
+          "example": "signal",
+          "label": "Waiting native time 1.5s",
+          "mae": 0.03704071044921875,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36833
+        },
+        {
+          "example": "signal",
+          "label": "Ready native time 0s",
+          "mae": 0.0408172607421875,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36833
+        },
+        {
+          "example": "signal",
+          "label": "Ready native time 0.5s",
+          "mae": 0.0408172607421875,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36833
+        },
+        {
+          "example": "signal",
+          "label": "Ready native time 1s",
+          "mae": 0.0408172607421875,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36833
+        },
+        {
+          "example": "signal",
+          "label": "Ready native time 1.5s",
+          "mae": 0.0408172607421875,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36833
+        },
+        {
+          "example": "signal",
+          "label": "Celebrating native time 0s",
+          "mae": 0.038707733154296875,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36833
+        },
+        {
+          "example": "signal",
+          "label": "Celebrating native time 0.5s",
+          "mae": 0.038707733154296875,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36833
+        },
+        {
+          "example": "signal",
+          "label": "Celebrating native time 1s",
+          "mae": 0.038707733154296875,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36833
+        },
+        {
+          "example": "signal",
+          "label": "Celebrating native time 1.5s",
+          "mae": 0.038707733154296875,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36833
+        },
+        {
+          "example": "signal",
+          "label": "machine entry",
+          "mae": 0.03704071044921875,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36833
+        },
+        {
+          "example": "signal",
+          "label": "disabled AND guard",
+          "mae": 0.03704071044921875,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36833
+        },
+        {
+          "example": "signal",
+          "label": "ready AND conditions",
+          "mae": 0.0408172607421875,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36833
+        },
+        {
+          "example": "signal",
+          "label": "number return",
+          "mae": 0.03704071044921875,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36833
+        },
+        {
+          "example": "signal",
+          "label": "trigger celebration",
+          "mae": 0.038707733154296875,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36833
+        },
+        {
+          "example": "signal",
+          "label": "reset defaults",
+          "mae": 0.03704071044921875,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36833
+        },
+        {
+          "example": "signal",
+          "label": "pad click listener",
+          "mae": 0.038707733154296875,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36833
+        },
+        {
+          "example": "gather",
+          "label": "Glow native time 0s",
+          "mae": 0.01990509033203125,
+          "expectedCovered": 41790,
+          "runtimeCovered": 41786
+        },
+        {
+          "example": "gather",
+          "label": "Glow native time 0.5s",
+          "mae": 0.01982879638671875,
+          "expectedCovered": 41790,
+          "runtimeCovered": 41786
+        },
+        {
+          "example": "gather",
+          "label": "Glow native time 1s",
+          "mae": 0.019824981689453125,
+          "expectedCovered": 41790,
+          "runtimeCovered": 41786
+        },
+        {
+          "example": "gather",
+          "label": "Glow native time 1.5s",
+          "mae": 0.0200347900390625,
+          "expectedCovered": 41790,
+          "runtimeCovered": 41786
+        },
+        {
+          "example": "gather",
+          "label": "aligned composition frame 0",
+          "mae": 0.01990509033203125,
+          "expectedCovered": 41790,
+          "runtimeCovered": 41786
+        },
+        {
+          "example": "gather",
+          "label": "aligned composition frame 60",
+          "mae": 0.019824981689453125,
+          "expectedCovered": 41790,
+          "runtimeCovered": 41786
+        },
+        {
+          "example": "wisp",
+          "label": "Drift native time 0s",
+          "mae": 0.20211029052734375,
+          "expectedCovered": 29880,
+          "runtimeCovered": 29870
+        },
+        {
+          "example": "wisp",
+          "label": "Drift native time 0.5s",
+          "mae": 0.20079803466796875,
+          "expectedCovered": 29880,
+          "runtimeCovered": 29870
+        },
+        {
+          "example": "wisp",
+          "label": "Drift native time 1s",
+          "mae": 0.20103073120117188,
+          "expectedCovered": 29880,
+          "runtimeCovered": 29870
+        },
+        {
+          "example": "wisp",
+          "label": "Drift native time 1.5s",
+          "mae": 0.20079803466796875,
+          "expectedCovered": 29880,
+          "runtimeCovered": 29870
+        },
+        {
+          "example": "dawn",
+          "label": "Rise native time 0s",
+          "mae": 0.020782470703125,
+          "expectedCovered": 41259,
+          "runtimeCovered": 41257
+        },
+        {
+          "example": "dawn",
+          "label": "Rise native time 0.5s",
+          "mae": 0.027080535888671875,
+          "expectedCovered": 41259,
+          "runtimeCovered": 41257
+        },
+        {
+          "example": "dawn",
+          "label": "Rise native time 1s",
+          "mae": 0.020782470703125,
+          "expectedCovered": 41259,
+          "runtimeCovered": 41257
+        },
+        {
+          "example": "dawn",
+          "label": "Rise native time 1.5s",
+          "mae": 0.027080535888671875,
+          "expectedCovered": 41259,
+          "runtimeCovered": 41257
+        },
+        {
+          "example": "canopy",
+          "label": "Glow native time 0s",
+          "mae": 0,
+          "expectedCovered": 28224,
+          "runtimeCovered": 28224
+        },
+        {
+          "example": "canopy",
+          "label": "Glow native time 0.5s",
+          "mae": 0,
+          "expectedCovered": 28224,
+          "runtimeCovered": 28224
+        },
+        {
+          "example": "canopy",
+          "label": "Glow native time 1s",
+          "mae": 0,
+          "expectedCovered": 28224,
+          "runtimeCovered": 28224
+        },
+        {
+          "example": "canopy",
+          "label": "Glow native time 1.5s",
+          "mae": 0,
+          "expectedCovered": 28224,
+          "runtimeCovered": 28224
+        },
+        {
+          "example": "halo",
+          "label": "rest",
+          "mae": 15.879058837890625,
+          "expectedCovered": 19348,
+          "runtimeCovered": 12544
+        },
+        {
+          "example": "reach",
+          "label": "Reach native time 0s",
+          "mae": 0,
+          "expectedCovered": 2086,
+          "runtimeCovered": 2086
+        },
+        {
+          "example": "reach",
+          "label": "Reach native time 0.5s",
+          "mae": 0,
+          "expectedCovered": 1990,
+          "runtimeCovered": 1990
+        },
+        {
+          "example": "reach",
+          "label": "Reach native time 1s",
+          "mae": 0,
+          "expectedCovered": 1961,
+          "runtimeCovered": 1961
+        },
+        {
+          "example": "reach",
+          "label": "Reach native time 1.5s",
+          "mae": 0,
+          "expectedCovered": 1961,
+          "runtimeCovered": 1961
+        },
+        {
+          "example": "kite",
+          "label": "Flutter native time 0s",
+          "mae": 0.05600738525390625,
+          "expectedCovered": 25600,
+          "runtimeCovered": 25600
+        },
+        {
+          "example": "kite",
+          "label": "Flutter native time 0.5s",
+          "mae": 0.8679885864257812,
+          "expectedCovered": 25890,
+          "runtimeCovered": 25597
+        },
+        {
+          "example": "kite",
+          "label": "Flutter native time 1s",
+          "mae": 0.9041061401367188,
+          "expectedCovered": 25906,
+          "runtimeCovered": 25598
+        },
+        {
+          "example": "kite",
+          "label": "Flutter native time 1.5s",
+          "mae": 0.9041061401367188,
+          "expectedCovered": 25906,
+          "runtimeCovered": 25598
+        },
+        {
+          "example": "caption",
+          "label": "Type native time 0s",
+          "mae": 0.09711456298828125,
+          "expectedCovered": 773,
+          "runtimeCovered": 787
+        },
+        {
+          "example": "caption",
+          "label": "Type native time 0.5s",
+          "mae": 0.1117095947265625,
+          "expectedCovered": 1053,
+          "runtimeCovered": 1059
+        },
+        {
+          "example": "caption",
+          "label": "Type native time 1s",
+          "mae": 0.2801666259765625,
+          "expectedCovered": 1359,
+          "runtimeCovered": 1360
+        },
+        {
+          "example": "caption",
+          "label": "Type native time 1.5s",
+          "mae": 0.2801666259765625,
+          "expectedCovered": 1359,
+          "runtimeCovered": 1360
+        },
+        {
+          "example": "blend",
+          "label": "Left native time 0s",
+          "mae": 0,
+          "expectedCovered": 1400,
+          "runtimeCovered": 1400
+        },
+        {
+          "example": "blend",
+          "label": "Left native time 0.5s",
+          "mae": 0,
+          "expectedCovered": 1400,
+          "runtimeCovered": 1400
+        },
+        {
+          "example": "blend",
+          "label": "Left native time 1s",
+          "mae": 0,
+          "expectedCovered": 1400,
+          "runtimeCovered": 1400
+        },
+        {
+          "example": "blend",
+          "label": "Left native time 1.5s",
+          "mae": 0,
+          "expectedCovered": 1400,
+          "runtimeCovered": 1400
+        },
+        {
+          "example": "blend",
+          "label": "Right native time 0s",
+          "mae": 0,
+          "expectedCovered": 1400,
+          "runtimeCovered": 1400
+        },
+        {
+          "example": "blend",
+          "label": "Right native time 0.5s",
+          "mae": 0,
+          "expectedCovered": 1400,
+          "runtimeCovered": 1400
+        },
+        {
+          "example": "blend",
+          "label": "Right native time 1s",
+          "mae": 0,
+          "expectedCovered": 1400,
+          "runtimeCovered": 1400
+        },
+        {
+          "example": "blend",
+          "label": "Right native time 1.5s",
+          "mae": 0,
+          "expectedCovered": 1400,
+          "runtimeCovered": 1400
+        },
+        {
+          "example": "blend",
+          "label": "machine entry",
+          "mae": 0,
+          "expectedCovered": 1400,
+          "runtimeCovered": 1400
+        },
+        {
+          "example": "blend",
+          "label": "exit time still guarded",
+          "mae": 0,
+          "expectedCovered": 1400,
+          "runtimeCovered": 1400
+        },
+        {
+          "example": "arrange",
+          "label": "rest",
+          "mae": 0.009029388427734375,
+          "expectedCovered": 43410,
+          "runtimeCovered": 43409
+        },
+        {
+          "example": "motorcycle",
+          "label": "Ride native time 0s",
+          "mae": 0.003276824951171875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Ride native time 0.5s",
+          "mae": 0.00311279296875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Ride native time 1s",
+          "mae": 0.0031280517578125,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Ride native time 1.5s",
+          "mae": 0.003143310546875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Wheels native time 0s",
+          "mae": 0.003276824951171875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Wheels native time 0.5s",
+          "mae": 0.003276824951171875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Wheels native time 1s",
+          "mae": 0.003276824951171875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Wheels native time 1.5s",
+          "mae": 0.003276824951171875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Asphalt native time 0s",
+          "mae": 0.003276824951171875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Asphalt native time 0.5s",
+          "mae": 0.003276824951171875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Asphalt native time 1s",
+          "mae": 0.003276824951171875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Asphalt native time 1.5s",
+          "mae": 0.003276824951171875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Distant hills native time 0s",
+          "mae": 0.003276824951171875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Distant hills native time 0.5s",
+          "mae": 0.00311279296875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Distant hills native time 1s",
+          "mae": 0.00312042236328125,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Distant hills native time 1.5s",
+          "mae": 0.003143310546875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Passing hills native time 0s",
+          "mae": 0.003276824951171875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Passing hills native time 0.5s",
+          "mae": 0.003276824951171875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Passing hills native time 1s",
+          "mae": 0.003276824951171875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Passing hills native time 1.5s",
+          "mae": 0.003276824951171875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Roadside native time 0s",
+          "mae": 0.003276824951171875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Roadside native time 0.5s",
+          "mae": 0.003276824951171875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Roadside native time 1s",
+          "mae": 0.003276824951171875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Roadside native time 1.5s",
+          "mae": 0.003276824951171875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Suspension bump native time 0s",
+          "mae": 0.003276824951171875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Suspension bump native time 0.5s",
+          "mae": 0.007579803466796875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Suspension bump native time 1s",
+          "mae": 0.003276824951171875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Suspension bump native time 1.5s",
+          "mae": 0.003276824951171875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Sunlight native time 0s",
+          "mae": 0.003276824951171875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Sunlight native time 0.5s",
+          "mae": 0.00321197509765625,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Sunlight native time 1s",
+          "mae": 0.00321197509765625,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Sunlight native time 1.5s",
+          "mae": 0.003177642822265625,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Headlight native time 0s",
+          "mae": 0.003276824951171875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Headlight native time 0.5s",
+          "mae": 0.003276824951171875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Headlight native time 1s",
+          "mae": 0.003276824951171875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Headlight native time 1.5s",
+          "mae": 0.003276824951171875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Brake light native time 0s",
+          "mae": 0.003276824951171875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Brake light native time 0.5s",
+          "mae": 0.003276824951171875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Brake light native time 1s",
+          "mae": 0.003276824951171875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Brake light native time 1.5s",
+          "mae": 0.003276824951171875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Turn signal native time 0s",
+          "mae": 0.003276824951171875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Turn signal native time 0.5s",
+          "mae": 0.003276824951171875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Turn signal native time 1s",
+          "mae": 0.003276824951171875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Turn signal native time 1.5s",
+          "mae": 0.003276824951171875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        }
+      ]
+    },
+    {
+      "backend": "webgl2",
+      "diagnostics": {
+        "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "contexts": [
+          {
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "unmaskedRendererAvailable": true,
+            "contextLost": false,
+            "errors": [],
+            "extensions": [
+              "EXT_clip_control",
+              "EXT_color_buffer_float",
+              "EXT_color_buffer_half_float",
+              "EXT_conservative_depth",
+              "EXT_depth_clamp",
+              "EXT_float_blend",
+              "EXT_polygon_offset_clamp",
+              "EXT_texture_compression_bptc",
+              "EXT_texture_compression_rgtc",
+              "EXT_texture_filter_anisotropic",
+              "EXT_texture_mirror_clamp_to_edge",
+              "NV_shader_noperspective_interpolation",
+              "OES_draw_buffers_indexed",
+              "OES_sample_variables",
+              "OES_shader_multisample_interpolation",
+              "OES_texture_float_linear",
+              "OVR_multiview2",
+              "WEBGL_clip_cull_distance",
+              "WEBGL_compressed_texture_astc",
+              "WEBGL_compressed_texture_etc",
+              "WEBGL_compressed_texture_etc1",
+              "WEBGL_compressed_texture_s3tc",
+              "WEBGL_compressed_texture_s3tc_srgb",
+              "WEBGL_debug_renderer_info",
+              "WEBGL_debug_shaders",
+              "WEBGL_lose_context",
+              "WEBGL_multi_draw",
+              "WEBGL_polygon_mode",
+              "WEBGL_stencil_texturing"
+            ]
+          },
+          {
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "unmaskedRendererAvailable": true,
+            "contextLost": false,
+            "errors": [],
+            "extensions": [
+              "EXT_clip_control",
+              "EXT_color_buffer_float",
+              "EXT_color_buffer_half_float",
+              "EXT_conservative_depth",
+              "EXT_depth_clamp",
+              "EXT_float_blend",
+              "EXT_polygon_offset_clamp",
+              "EXT_texture_compression_bptc",
+              "EXT_texture_compression_rgtc",
+              "EXT_texture_filter_anisotropic",
+              "EXT_texture_mirror_clamp_to_edge",
+              "NV_shader_noperspective_interpolation",
+              "OES_draw_buffers_indexed",
+              "OES_sample_variables",
+              "OES_shader_multisample_interpolation",
+              "OES_texture_float_linear",
+              "OVR_multiview2",
+              "WEBGL_clip_cull_distance",
+              "WEBGL_compressed_texture_astc",
+              "WEBGL_compressed_texture_etc",
+              "WEBGL_compressed_texture_etc1",
+              "WEBGL_compressed_texture_s3tc",
+              "WEBGL_compressed_texture_s3tc_srgb",
+              "WEBGL_debug_renderer_info",
+              "WEBGL_debug_shaders",
+              "WEBGL_lose_context",
+              "WEBGL_multi_draw",
+              "WEBGL_polygon_mode",
+              "WEBGL_stencil_texturing"
+            ]
+          }
+        ]
+      },
+      "checks": [
+        {
+          "example": "milo",
+          "label": "Idle native time 0s",
+          "mae": 0.3080902099609375,
+          "expectedCovered": 12953,
+          "runtimeCovered": 12809
+        },
+        {
+          "example": "milo",
+          "label": "Idle native time 0.5s",
+          "mae": 0.3068962097167969,
+          "expectedCovered": 13005,
+          "runtimeCovered": 12838
+        },
+        {
+          "example": "milo",
+          "label": "Idle native time 1s",
+          "mae": 0.3204193115234375,
+          "expectedCovered": 13029,
+          "runtimeCovered": 12846
+        },
+        {
+          "example": "milo",
+          "label": "Idle native time 1.5s",
+          "mae": 0.3068962097167969,
+          "expectedCovered": 13005,
+          "runtimeCovered": 12838
+        },
+        {
+          "example": "milo",
+          "label": "Hello native time 0s",
+          "mae": 0.3044242858886719,
+          "expectedCovered": 12912,
+          "runtimeCovered": 12760
+        },
+        {
+          "example": "milo",
+          "label": "Hello native time 0.5s",
+          "mae": 0.3133964538574219,
+          "expectedCovered": 13010,
+          "runtimeCovered": 12852
+        },
+        {
+          "example": "milo",
+          "label": "Hello native time 1s",
+          "mae": 0.31923675537109375,
+          "expectedCovered": 12957,
+          "runtimeCovered": 12777
+        },
+        {
+          "example": "milo",
+          "label": "Hello native time 1.5s",
+          "mae": 0.3133964538574219,
+          "expectedCovered": 13010,
+          "runtimeCovered": 12852
+        },
+        {
+          "example": "milo",
+          "label": "machine entry",
+          "mae": 0.3080902099609375,
+          "expectedCovered": 12953,
+          "runtimeCovered": 12809
+        },
+        {
+          "example": "milo",
+          "label": "isWaving=true",
+          "mae": 0.3044242858886719,
+          "expectedCovered": 12912,
+          "runtimeCovered": 12760
+        },
+        {
+          "example": "milo",
+          "label": "isWaving=false",
+          "mae": 0.3080902099609375,
+          "expectedCovered": 12953,
+          "runtimeCovered": 12809
+        },
+        {
+          "example": "orbit",
+          "label": "Orbit native time 0s",
+          "mae": 0.6636276245117188,
+          "expectedCovered": 26340,
+          "runtimeCovered": 26168
+        },
+        {
+          "example": "orbit",
+          "label": "Orbit native time 0.5s",
+          "mae": 0.6620140075683594,
+          "expectedCovered": 26332,
+          "runtimeCovered": 26169
+        },
+        {
+          "example": "orbit",
+          "label": "Orbit native time 1s",
+          "mae": 0.6637077331542969,
+          "expectedCovered": 26340,
+          "runtimeCovered": 26168
+        },
+        {
+          "example": "orbit",
+          "label": "Orbit native time 1.5s",
+          "mae": 0.6655426025390625,
+          "expectedCovered": 26333,
+          "runtimeCovered": 26169
+        },
+        {
+          "example": "bloom",
+          "label": "Breeze native time 0s",
+          "mae": 0.58526611328125,
+          "expectedCovered": 28646,
+          "runtimeCovered": 28474
+        },
+        {
+          "example": "bloom",
+          "label": "Breeze native time 0.5s",
+          "mae": 0.6110076904296875,
+          "expectedCovered": 28646,
+          "runtimeCovered": 28474
+        },
+        {
+          "example": "bloom",
+          "label": "Breeze native time 1s",
+          "mae": 0.5891990661621094,
+          "expectedCovered": 28646,
+          "runtimeCovered": 28474
+        },
+        {
+          "example": "bloom",
+          "label": "Breeze native time 1.5s",
+          "mae": 0.6124496459960938,
+          "expectedCovered": 28646,
+          "runtimeCovered": 28474
+        },
+        {
+          "example": "tempo",
+          "label": "Rhythm native time 0s",
+          "mae": 0.12002182006835938,
+          "expectedCovered": 35746,
+          "runtimeCovered": 35712
+        },
+        {
+          "example": "tempo",
+          "label": "Rhythm native time 0.5s",
+          "mae": 0.13648605346679688,
+          "expectedCovered": 35746,
+          "runtimeCovered": 35712
+        },
+        {
+          "example": "tempo",
+          "label": "Rhythm native time 1s",
+          "mae": 0.11894607543945312,
+          "expectedCovered": 35746,
+          "runtimeCovered": 35712
+        },
+        {
+          "example": "tempo",
+          "label": "Rhythm native time 1.5s",
+          "mae": 0.14382553100585938,
+          "expectedCovered": 35746,
+          "runtimeCovered": 35712
+        },
+        {
+          "example": "signal",
+          "label": "Waiting native time 0s",
+          "mae": 0.18720626831054688,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36792
+        },
+        {
+          "example": "signal",
+          "label": "Waiting native time 0.5s",
+          "mae": 0.18720626831054688,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36792
+        },
+        {
+          "example": "signal",
+          "label": "Waiting native time 1s",
+          "mae": 0.18720626831054688,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36792
+        },
+        {
+          "example": "signal",
+          "label": "Waiting native time 1.5s",
+          "mae": 0.18720626831054688,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36792
+        },
+        {
+          "example": "signal",
+          "label": "Ready native time 0s",
+          "mae": 0.2544975280761719,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36792
+        },
+        {
+          "example": "signal",
+          "label": "Ready native time 0.5s",
+          "mae": 0.2544975280761719,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36792
+        },
+        {
+          "example": "signal",
+          "label": "Ready native time 1s",
+          "mae": 0.2544975280761719,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36792
+        },
+        {
+          "example": "signal",
+          "label": "Ready native time 1.5s",
+          "mae": 0.2544975280761719,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36792
+        },
+        {
+          "example": "signal",
+          "label": "Celebrating native time 0s",
+          "mae": 0.24815750122070312,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36792
+        },
+        {
+          "example": "signal",
+          "label": "Celebrating native time 0.5s",
+          "mae": 0.24697494506835938,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36792
+        },
+        {
+          "example": "signal",
+          "label": "Celebrating native time 1s",
+          "mae": 0.24815750122070312,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36792
+        },
+        {
+          "example": "signal",
+          "label": "Celebrating native time 1.5s",
+          "mae": 0.24697494506835938,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36792
+        },
+        {
+          "example": "signal",
+          "label": "machine entry",
+          "mae": 0.18720626831054688,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36792
+        },
+        {
+          "example": "signal",
+          "label": "disabled AND guard",
+          "mae": 0.18720626831054688,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36792
+        },
+        {
+          "example": "signal",
+          "label": "ready AND conditions",
+          "mae": 0.2544975280761719,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36792
+        },
+        {
+          "example": "signal",
+          "label": "number return",
+          "mae": 0.18720626831054688,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36792
+        },
+        {
+          "example": "signal",
+          "label": "trigger celebration",
+          "mae": 0.24815750122070312,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36792
+        },
+        {
+          "example": "signal",
+          "label": "reset defaults",
+          "mae": 0.18720626831054688,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36792
+        },
+        {
+          "example": "signal",
+          "label": "pad click listener",
+          "mae": 0.24815750122070312,
+          "expectedCovered": 36840,
+          "runtimeCovered": 36792
+        },
+        {
+          "example": "gather",
+          "label": "Glow native time 0s",
+          "mae": 0.19293594360351562,
+          "expectedCovered": 41790,
+          "runtimeCovered": 41756
+        },
+        {
+          "example": "gather",
+          "label": "Glow native time 0.5s",
+          "mae": 0.19118118286132812,
+          "expectedCovered": 41790,
+          "runtimeCovered": 41756
+        },
+        {
+          "example": "gather",
+          "label": "Glow native time 1s",
+          "mae": 0.18954086303710938,
+          "expectedCovered": 41790,
+          "runtimeCovered": 41756
+        },
+        {
+          "example": "gather",
+          "label": "Glow native time 1.5s",
+          "mae": 0.19124984741210938,
+          "expectedCovered": 41790,
+          "runtimeCovered": 41756
+        },
+        {
+          "example": "gather",
+          "label": "aligned composition frame 0",
+          "mae": 0.19293594360351562,
+          "expectedCovered": 41790,
+          "runtimeCovered": 41756
+        },
+        {
+          "example": "gather",
+          "label": "aligned composition frame 60",
+          "mae": 0.18954086303710938,
+          "expectedCovered": 41790,
+          "runtimeCovered": 41756
+        },
+        {
+          "example": "wisp",
+          "label": "Drift native time 0s",
+          "mae": 0.8212966918945312,
+          "expectedCovered": 29880,
+          "runtimeCovered": 29688
+        },
+        {
+          "example": "wisp",
+          "label": "Drift native time 0.5s",
+          "mae": 0.8184356689453125,
+          "expectedCovered": 29880,
+          "runtimeCovered": 29688
+        },
+        {
+          "example": "wisp",
+          "label": "Drift native time 1s",
+          "mae": 0.8106040954589844,
+          "expectedCovered": 29880,
+          "runtimeCovered": 29688
+        },
+        {
+          "example": "wisp",
+          "label": "Drift native time 1.5s",
+          "mae": 0.8184356689453125,
+          "expectedCovered": 29880,
+          "runtimeCovered": 29688
+        },
+        {
+          "example": "dawn",
+          "label": "Rise native time 0s",
+          "mae": 0.24494171142578125,
+          "expectedCovered": 41259,
+          "runtimeCovered": 41236
+        },
+        {
+          "example": "dawn",
+          "label": "Rise native time 0.5s",
+          "mae": 0.24979782104492188,
+          "expectedCovered": 41259,
+          "runtimeCovered": 41236
+        },
+        {
+          "example": "dawn",
+          "label": "Rise native time 1s",
+          "mae": 0.2509269714355469,
+          "expectedCovered": 41259,
+          "runtimeCovered": 41236
+        },
+        {
+          "example": "dawn",
+          "label": "Rise native time 1.5s",
+          "mae": 0.24979782104492188,
+          "expectedCovered": 41259,
+          "runtimeCovered": 41236
+        },
+        {
+          "example": "canopy",
+          "label": "Glow native time 0s",
+          "mae": 0.08093643188476562,
+          "expectedCovered": 28224,
+          "runtimeCovered": 28224
+        },
+        {
+          "example": "canopy",
+          "label": "Glow native time 0.5s",
+          "mae": 0.06731033325195312,
+          "expectedCovered": 28224,
+          "runtimeCovered": 28224
+        },
+        {
+          "example": "canopy",
+          "label": "Glow native time 1s",
+          "mae": 0.030792236328125,
+          "expectedCovered": 28224,
+          "runtimeCovered": 28224
+        },
+        {
+          "example": "canopy",
+          "label": "Glow native time 1.5s",
+          "mae": 0.030792236328125,
+          "expectedCovered": 28224,
+          "runtimeCovered": 28224
+        },
+        {
+          "example": "halo",
+          "label": "rest",
+          "mae": 5.075374603271484,
+          "expectedCovered": 19348,
+          "runtimeCovered": 21247
+        },
+        {
+          "example": "reach",
+          "label": "Reach native time 0s",
+          "mae": 0.15870285034179688,
+          "expectedCovered": 2086,
+          "runtimeCovered": 1999
+        },
+        {
+          "example": "reach",
+          "label": "Reach native time 0.5s",
+          "mae": 0.11363983154296875,
+          "expectedCovered": 1990,
+          "runtimeCovered": 1922
+        },
+        {
+          "example": "reach",
+          "label": "Reach native time 1s",
+          "mae": 0.12505340576171875,
+          "expectedCovered": 1961,
+          "runtimeCovered": 1891
+        },
+        {
+          "example": "reach",
+          "label": "Reach native time 1.5s",
+          "mae": 0.12505340576171875,
+          "expectedCovered": 1961,
+          "runtimeCovered": 1891
+        },
+        {
+          "example": "kite",
+          "label": "Flutter native time 0s",
+          "mae": 0.054790496826171875,
+          "expectedCovered": 25600,
+          "runtimeCovered": 25600
+        },
+        {
+          "example": "kite",
+          "label": "Flutter native time 0.5s",
+          "mae": 0.294158935546875,
+          "expectedCovered": 25890,
+          "runtimeCovered": 25847
+        },
+        {
+          "example": "kite",
+          "label": "Flutter native time 1s",
+          "mae": 0.3230743408203125,
+          "expectedCovered": 25906,
+          "runtimeCovered": 25850
+        },
+        {
+          "example": "kite",
+          "label": "Flutter native time 1.5s",
+          "mae": 0.3230743408203125,
+          "expectedCovered": 25906,
+          "runtimeCovered": 25850
+        },
+        {
+          "example": "caption",
+          "label": "Type native time 0s",
+          "mae": 0.11307525634765625,
+          "expectedCovered": 773,
+          "runtimeCovered": 731
+        },
+        {
+          "example": "caption",
+          "label": "Type native time 0.5s",
+          "mae": 0.16352462768554688,
+          "expectedCovered": 1053,
+          "runtimeCovered": 991
+        },
+        {
+          "example": "caption",
+          "label": "Type native time 1s",
+          "mae": 0.3363761901855469,
+          "expectedCovered": 1359,
+          "runtimeCovered": 1274
+        },
+        {
+          "example": "caption",
+          "label": "Type native time 1.5s",
+          "mae": 0.3363761901855469,
+          "expectedCovered": 1359,
+          "runtimeCovered": 1274
+        },
+        {
+          "example": "blend",
+          "label": "Left native time 0s",
+          "mae": 0,
+          "expectedCovered": 1400,
+          "runtimeCovered": 1400
+        },
+        {
+          "example": "blend",
+          "label": "Left native time 0.5s",
+          "mae": 0,
+          "expectedCovered": 1400,
+          "runtimeCovered": 1400
+        },
+        {
+          "example": "blend",
+          "label": "Left native time 1s",
+          "mae": 0,
+          "expectedCovered": 1400,
+          "runtimeCovered": 1400
+        },
+        {
+          "example": "blend",
+          "label": "Left native time 1.5s",
+          "mae": 0,
+          "expectedCovered": 1400,
+          "runtimeCovered": 1400
+        },
+        {
+          "example": "blend",
+          "label": "Right native time 0s",
+          "mae": 0,
+          "expectedCovered": 1400,
+          "runtimeCovered": 1400
+        },
+        {
+          "example": "blend",
+          "label": "Right native time 0.5s",
+          "mae": 0,
+          "expectedCovered": 1400,
+          "runtimeCovered": 1400
+        },
+        {
+          "example": "blend",
+          "label": "Right native time 1s",
+          "mae": 0,
+          "expectedCovered": 1400,
+          "runtimeCovered": 1400
+        },
+        {
+          "example": "blend",
+          "label": "Right native time 1.5s",
+          "mae": 0,
+          "expectedCovered": 1400,
+          "runtimeCovered": 1400
+        },
+        {
+          "example": "blend",
+          "label": "machine entry",
+          "mae": 0,
+          "expectedCovered": 1400,
+          "runtimeCovered": 1400
+        },
+        {
+          "example": "blend",
+          "label": "exit time still guarded",
+          "mae": 0,
+          "expectedCovered": 1400,
+          "runtimeCovered": 1400
+        },
+        {
+          "example": "arrange",
+          "label": "rest",
+          "mae": 0.21924591064453125,
+          "expectedCovered": 43410,
+          "runtimeCovered": 43370
+        },
+        {
+          "example": "motorcycle",
+          "label": "Ride native time 0s",
+          "mae": 0.3355751037597656,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Ride native time 0.5s",
+          "mae": 0.33257293701171875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Ride native time 1s",
+          "mae": 0.3486747741699219,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Ride native time 1.5s",
+          "mae": 0.33429718017578125,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Wheels native time 0s",
+          "mae": 0.3355751037597656,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Wheels native time 0.5s",
+          "mae": 0.3355751037597656,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Wheels native time 1s",
+          "mae": 0.3355751037597656,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Wheels native time 1.5s",
+          "mae": 0.3355751037597656,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Asphalt native time 0s",
+          "mae": 0.3355751037597656,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Asphalt native time 0.5s",
+          "mae": 0.3355751037597656,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Asphalt native time 1s",
+          "mae": 0.3355751037597656,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Asphalt native time 1.5s",
+          "mae": 0.3355751037597656,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Distant hills native time 0s",
+          "mae": 0.3355751037597656,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Distant hills native time 0.5s",
+          "mae": 0.3360557556152344,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Distant hills native time 1s",
+          "mae": 0.3340797424316406,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Distant hills native time 1.5s",
+          "mae": 0.3376655578613281,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Passing hills native time 0s",
+          "mae": 0.3355751037597656,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Passing hills native time 0.5s",
+          "mae": 0.3316802978515625,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Passing hills native time 1s",
+          "mae": 0.3333168029785156,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Passing hills native time 1.5s",
+          "mae": 0.33438873291015625,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Roadside native time 0s",
+          "mae": 0.3355751037597656,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Roadside native time 0.5s",
+          "mae": 0.3355751037597656,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Roadside native time 1s",
+          "mae": 0.3355751037597656,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Roadside native time 1.5s",
+          "mae": 0.3355751037597656,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Suspension bump native time 0s",
+          "mae": 0.3355751037597656,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Suspension bump native time 0.5s",
+          "mae": 0.3623199462890625,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Suspension bump native time 1s",
+          "mae": 0.3355751037597656,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Suspension bump native time 1.5s",
+          "mae": 0.3355751037597656,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Sunlight native time 0s",
+          "mae": 0.3355751037597656,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Sunlight native time 0.5s",
+          "mae": 0.33602142333984375,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Sunlight native time 1s",
+          "mae": 0.3353729248046875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Sunlight native time 1.5s",
+          "mae": 0.3360595703125,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Headlight native time 0s",
+          "mae": 0.3435516357421875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Headlight native time 0.5s",
+          "mae": 0.3435516357421875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Headlight native time 1s",
+          "mae": 0.3435516357421875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Headlight native time 1.5s",
+          "mae": 0.3435516357421875,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Brake light native time 0s",
+          "mae": 0.3351783752441406,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Brake light native time 0.5s",
+          "mae": 0.3351783752441406,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Brake light native time 1s",
+          "mae": 0.3351783752441406,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Brake light native time 1.5s",
+          "mae": 0.3351783752441406,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Turn signal native time 0s",
+          "mae": 0.3356781005859375,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Turn signal native time 0.5s",
+          "mae": 0.3355751037597656,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Turn signal native time 1s",
+          "mae": 0.3356781005859375,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        },
+        {
+          "example": "motorcycle",
+          "label": "Turn signal native time 1.5s",
+          "mae": 0.3355751037597656,
+          "expectedCovered": 65536,
+          "runtimeCovered": 65536
+        }
+      ]
+    }
+  ],
+  "fixtures": {
+    "milo": "c1db8a16bc72af40f2ade97f08ddbba8d3e8ba17c13f77736191d94d0c471199",
+    "orbit": "22c7afa65992ed8652e109051e3280f3f62b6f0e5b9a0c0b486ddd8654d6822c",
+    "bloom": "606c696bc3fa77d70b1c9354f6db2ea2bd4c54ee0604ecee7cc9dd18206f9ca8",
+    "tempo": "75af08e98c313d30dbeb59fbbb622a613931639602090bcb04d200c016224971",
+    "signal": "8d73bef975e2d346466b54b91893532880e202f9513e9a509133aecdb213f6f1",
+    "gather": "cf6fff5dc14297df38d9002c28c7d21614cdd196b8d7fdff1b03f49beb17c51c",
+    "wisp": "0dd3a1f36d2b8f1ef963041048b87cf8ec827983da917f7cfd8016be11fc2f90",
+    "dawn": "6fe56c01b1f73ea9647e5e53f88cc1d2fbc09bba5e9e7d56b605220be1da9346",
+    "canopy": "7a611e1b13cc59d495eeb2c2a6f52155c94d828b242ca68a0e98a1b3496b8e65",
+    "halo": "4198d908aaf8fa497544ef5ef8b9fddd48f8f6d7cc0649ea037b823acd4c7a3f",
+    "reach": "18957fa2c6a0184bea966c99fdd073f034ae78388364dd043dbb500775ee6b4f",
+    "kite": "5f18e1a666aff3a6556d57dc21dad7c6644b1684b926ae0700ff7a13a7fb198b",
+    "caption": "99227ec819f3f24427134c72aa0627caab0ff395298a175300dd6049957487b8",
+    "blend": "632fe930f4050183917d9ff1a749f9cefb9dbf5d5283509e7222def209c15f80",
+    "arrange": "b7000b8f0e52bba8b01756a2267b1a140f75c777e56f388b9e59336814effd89",
+    "motorcycle": "5fd6f55203fb1e4b51a41b70af9d542332878950a230999d176d58fec5a90499"
+  }
+}
