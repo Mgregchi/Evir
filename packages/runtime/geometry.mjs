@@ -6,6 +6,7 @@ import {
   mapPoint,
 } from "@evir/project-model";
 export { mapPoint } from "@evir/project-model";
+const skinContexts = new WeakMap();
 export function quantize(influences) {
   const total = influences.reduce((v, [b, w]) => v + w, 0);
   if (!Number.isFinite(total) || total <= 0)
@@ -19,25 +20,55 @@ export function quantize(influences) {
   for (let i = 0; i < remaining; i++) bytes[ranks[i]]++;
   return influences.map(([b, w], i) => [b, bytes[i] / 255]);
 }
-export function controlMatrix(p, n, pointId, control) {
-  if (!n.geometry.skin) return worldTransform(p, n.id);
+export function controlMatrix(p, n, pointId, control, resolve) {
+  const read = resolve || ((id) => worldTransform(p, id));
+  if (!n.geometry.skin) return read(n.id);
   const skin = n.geometry.skin,
-    w = skin.weights.find((v) => v.pointId === pointId)[control],
     matrix = [0, 0, 0, 0, 0, 0];
+  let context;
+  if (resolve) {
+    let skins = skinContexts.get(resolve);
+    if (!skins) {
+      skins = new WeakMap();
+      skinContexts.set(resolve, skins);
+    }
+    context = skins.get(skin);
+    if (!context) {
+      context = {
+        weights: new Map(skin.weights.map((w) => [w.pointId, w])),
+        bones: new Map(
+          skin.bones.map((b) => [
+            b.boneId,
+            multiply(read(b.boneId), inverse(b.bind)),
+          ]),
+        ),
+      };
+      skins.set(skin, context);
+    }
+  }
+  const w = (
+    context
+      ? context.weights.get(pointId)
+      : skin.weights.find((v) => v.pointId === pointId)
+  )[control];
   for (const [boneId, weight] of quantize(w)) {
-    const bind = skin.bones.find((b) => b.boneId === boneId).bind,
-      m = multiply(worldTransform(p, boneId), inverse(bind));
+    const m = context
+      ? context.bones.get(boneId)
+      : multiply(
+          read(boneId),
+          inverse(skin.bones.find((b) => b.boneId === boneId).bind),
+        );
     m.forEach((v, i) => (matrix[i] += v * weight));
   }
   return multiply(matrix, skin.bindWorld);
 }
-export function worldPoints(p, n) {
+export function worldPoints(p, n, resolve) {
   return n.geometry.points.map((v) => ({
     id: v.id,
     ...Object.fromEntries(
       ["anchor", "in", "out"].map((k) => [
         k,
-        mapPoint(controlMatrix(p, n, v.id, k), v[k]),
+        mapPoint(controlMatrix(p, n, v.id, k, resolve), v[k]),
       ]),
     ),
   }));

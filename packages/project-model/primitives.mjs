@@ -48,3 +48,35 @@ export function worldTransform(p, nodeId) {
     ? local
     : multiply(worldTransform(p, n.parentId), local);
 }
+
+// Create once for one unchanged pose. Never retain across mutations or frames.
+export function transformResolver(p) {
+  const nodes = new Map(p.nodes.map((n) => [n.id, n]));
+  const matrices = new Map();
+  return function resolve(id) {
+    const chain = [],
+      seen = new Set();
+    let current = id;
+    while (current !== null && !matrices.has(current)) {
+      const n = nodes.get(current);
+      if (!n) throw new ProjectError([`node ${current}: not found`]);
+      if (seen.has(current))
+        throw new ProjectError(["transform: parent cycle"]);
+      seen.add(current);
+      chain.push(n);
+      current = n.parentId;
+    }
+    let parent = current === null ? [1, 0, 0, 1, 0, 0] : matrices.get(current);
+    for (const n of chain.reverse()) {
+      const local = [...n.transform],
+        owner = nodes.get(n.parentId);
+      if (n.kind === "bone" && owner?.kind === "bone") {
+        local[4] = owner.geometry.length;
+        local[5] = 0;
+      }
+      parent = Object.freeze(multiply(parent, local));
+      matrices.set(n.id, parent);
+    }
+    return matrices.get(id);
+  };
+}

@@ -173,6 +173,12 @@ a {
 .layer-row.selected {
   background: #2d4941;
 }
+.layer-row[data-drop="above"] { box-shadow: 0 -2px #89e4c4; }
+.layer-row[data-drop="below"] { box-shadow: 0 2px #89e4c4; }
+.layer-row[data-drop="inside"] { outline: 2px solid #89e4c4; outline-offset: -2px; }
+.layer-select[draggable="true"] { cursor: grab; }
+.layer-pagination { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; gap: 6px; padding: 6px; background: var(--panel); border-bottom: 1px solid var(--line); }
+.layer-pagination span { flex: 1; font-size: 12px; color: var(--muted); }
 .layer-row.selected .layer-select {
   color: #c2fbe7;
 }
@@ -495,9 +501,11 @@ dd {
 }
 .machine-graph svg {
   width: 100%;
-  min-width: 600px;
+  min-width: 0;
   min-height: 160px;
 }
+.machine-graph [role="button"] { cursor: grab; touch-action: none; }
+.machine-graph [role="button"]:focus-visible rect { stroke: #89e4c4; stroke-width: 3; }
 .transition-line {
   fill: none;
   stroke: #8a9da9;

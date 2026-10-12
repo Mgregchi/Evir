@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-10-12T00:05:11.282Z",
+  "phase": "after",
+  "baselineCommit": "7375759",
+  "nodeVersion": "v24.19.0",
+  "cpuModel": "AMD EPYC 9V74 80-Core Processor",
+  "nodeCount": 1000,
+  "historyEdits": 30,
+  "retainedAssetBytes": 131072,
+  "sceneOrderIterations": 100,
+  "fixtureSha256": "7fb8ce943895d535ea36b07c14c20c2ce9b0cde5bf7982a87067d43447befc0f",
+  "samples": [
+    {
+      "historyMs": 196.492843,
+      "retainedHeapDelta": 1978584,
+      "traversalMs": 10.492164000000002
+    },
+    {
+      "historyMs": 252.09132,
+      "retainedHeapDelta": 1978680,
+      "traversalMs": 10.852755000000002
+    },
+    {
+      "historyMs": 200.91419199999999,
+      "retainedHeapDelta": 1978648,
+      "traversalMs": 13.059289000000035
+    }
+  ],
+  "scope": "Cloud Node process; three fresh-process trials, forced-GC heap delta. Baseline History/traversal loaded from pinned Git source; current model validation is shared. No browser/device/GPU FPS or memory claim."
+}

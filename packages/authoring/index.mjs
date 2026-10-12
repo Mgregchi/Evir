@@ -1,6 +1,18 @@
-import { ProjectError, newId as id, newId, worldTransform, multiply, inverse, validateProject, upgradeAdvanced } from "@evir/project-model";
+import {
+  ProjectError,
+  newId as id,
+  newId,
+  worldTransform,
+  multiply,
+  inverse,
+  validateProject,
+  upgradeAdvanced,
+} from "@evir/project-model";
+import { shareState } from "./shared-state.mjs";
 import { quantize, components } from "@evir/runtime/geometry";
-const copy=x=>structuredClone(x), clone=copy, identity=()=>[1,0,0,1,0,0];
+const copy = (x) => structuredClone(x),
+  clone = copy,
+  identity = () => [1, 0, 0, 1, 0, 0];
 export function pathGeometry() {
   const k = 0.5522847498 * 60;
   return {
@@ -93,6 +105,37 @@ export function reparent(p, nodeId, parentId) {
     ancestor = p.nodes.find((n) => n.id === ancestor.parentId);
   }
   const before = worldTransform(p, nodeId);
+  const oldParent = p.nodes.find((v) => v.id === n.parentId);
+  const oldSpace = oldParent ? worldTransform(p, oldParent.id) : identity();
+  const newSpace = parent ? worldTransform(p, parent.id) : identity();
+  const basis = multiply(inverse(newSpace), oldSpace);
+  const ancestorIds = new Set();
+  for (const start of [oldParent, parent])
+    for (let v = start; v; v = p.nodes.find((q) => q.id === v.parentId))
+      ancestorIds.add(v.id);
+  const poseProperties = new Set([
+    "x",
+    "y",
+    "rotation",
+    "scaleX",
+    "scaleY",
+    "length",
+  ]);
+  const tracks = (p.animations || [])
+    .flatMap((a) => a.tracks)
+    .filter((t) => poseProperties.has(t.property));
+  if (tracks.some((t) => ancestorIds.has(t.targetId)))
+    throw new ProjectError([
+      "reparent: animated parents need animation-key rebasing; choose static parents or keep the current parent",
+    ]);
+  const ownTracks = tracks.filter((t) => t.targetId === nodeId);
+  if (
+    ownTracks.length &&
+    basis.slice(0, 4).some((v, i) => Math.abs(v - [1, 0, 0, 1][i]) > 1e-8)
+  )
+    throw new ProjectError([
+      "reparent: changed parent rotation/scale needs animation-key rebasing; only matching static parent bases are supported for animated layers",
+    ]);
   const local = parent
     ? multiply(inverse(worldTransform(p, parentId)), before)
     : before;
@@ -110,6 +153,9 @@ export function reparent(p, nodeId, parentId) {
     local[5] = 0;
   }
   n.transform = local;
+  for (const t of ownTracks)
+    if (t.property === "x" || t.property === "y")
+      for (const k of t.keys) k.value += basis[t.property === "x" ? 4 : 5];
   n.parentId = parentId;
   n.order =
     Math.max(
@@ -151,10 +197,16 @@ export function removeSubtree(p, nodeId) {
   if (p.machines)
     for (const m of p.machines)
       m.listeners = m.listeners.filter((l) => !removed.has(l.targetId));
-  if(p.advanced){
-    p.advanced.clips=p.advanced.clips.filter(c=>!removed.has(c.targetId)&&!removed.has(c.maskId));
-    p.advanced.feathers=p.advanced.feathers.filter(c=>!removed.has(c.targetId));
-    p.advanced.ik=p.advanced.ik.filter(c=>!removed.has(c.boneId)&&!removed.has(c.targetId));
+  if (p.advanced) {
+    p.advanced.clips = p.advanced.clips.filter(
+      (c) => !removed.has(c.targetId) && !removed.has(c.maskId),
+    );
+    p.advanced.feathers = p.advanced.feathers.filter(
+      (c) => !removed.has(c.targetId),
+    );
+    p.advanced.ik = p.advanced.ik.filter(
+      (c) => !removed.has(c.boneId) && !removed.has(c.targetId),
+    );
   }
   p.nodes = p.nodes.filter((n) => !removed.has(n.id));
   for (const k of ["locked", "hidden"])
@@ -180,15 +232,19 @@ export class History {
   #undo = [];
   #redo = [];
   #limit;
+  #revision = 0;
   constructor(project, limit = 100) {
     validateProject(project);
     if (!Number.isInteger(limit) || limit < 1)
       throw new RangeError("history limit must be positive");
-    this.#project = copy(project);
+    this.#project = shareState(undefined, copy(project));
     this.#limit = limit;
   }
   get active() {
     return this.#pending !== null;
+  }
+  get revision() {
+    return this.#revision;
   }
   get canUndo() {
     return !this.active && this.#undo.length > 0;
@@ -207,8 +263,8 @@ export class History {
       throw new ProjectError(["transaction: another edit is active"]);
     this.#pending = {
       label,
-      before: copy(this.#project),
-      after: copy(this.#project),
+      before: this.#project,
+      after: this.#project,
     };
   }
   preview(edit) {
@@ -217,17 +273,19 @@ export class History {
     const candidate = copy(this.#pending.after);
     edit(candidate);
     validateProject(candidate);
-    this.#pending.after = copy(candidate);
+    this.#pending.after = shareState(this.#pending.after, candidate);
   }
   commit() {
     if (!this.active) throw new ProjectError(["transaction: no active edit"]);
     const t = this.#pending;
     this.#pending = null;
-    if (JSON.stringify(t.before) === JSON.stringify(t.after)) return false;
+    t.after = shareState(t.before, t.after);
+    if (t.before === t.after) return false;
     this.#project = t.after;
     this.#undo.push(t);
     if (this.#undo.length > this.#limit) this.#undo.shift();
     this.#redo = [];
+    this.#revision++;
     return true;
   }
   cancel() {
@@ -250,6 +308,7 @@ export class History {
     if (t) {
       this.#project = t.before;
       this.#redo.push(t);
+      this.#revision++;
     }
   }
   redo() {
@@ -259,6 +318,7 @@ export class History {
     if (t) {
       this.#project = t.after;
       this.#undo.push(t);
+      this.#revision++;
     }
   }
 }
@@ -315,7 +375,7 @@ export function bindPath(p, nodeId, boneIds) {
   const n = p.nodes.find((n) => n.id === nodeId);
   if (n.kind !== "path" || !boneIds.length || boneIds.length > 4)
     throw Error("Select a path and one to four bones");
-  if(typeof n.geometry.fill!=="string")upgradeAdvanced(p);
+  if (typeof n.geometry.fill !== "string") upgradeAdvanced(p);
   const bindWorld = worldTransform(p, nodeId),
     bones = boneIds.map((boneId) => {
       const bone = p.nodes.find((v) => v.id === boneId);
@@ -408,7 +468,7 @@ export function setKey(
   value,
   easing = { type: "linear", curve: null },
 ) {
-  if(property.startsWith("paint."))upgradeAdvanced(p);
+  if (property.startsWith("paint.")) upgradeAdvanced(p);
   const a = p.animations.find((a) => a.id === animationId);
   let t = a.tracks.find(
     (t) => t.targetId === targetId && t.property === property,

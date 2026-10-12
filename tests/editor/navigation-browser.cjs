@@ -113,6 +113,10 @@ const { chromium } = require("playwright");
         );
         await page.keyboard.press("Escape");
         assert((await page.locator("#stage").boundingBox()).width >= 240);
+        await page
+          .getByRole("status")
+          .filter({ hasText: "Saved in this browser" })
+          .waitFor();
         await page.reload();
         await page.waitForFunction(() => evirStudio);
         assert.equal(

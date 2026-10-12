@@ -173,6 +173,10 @@ const { chromium } = require("playwright");
       );
       // Browser preference survives reload, but does not enter editable source.
       assert(!Object.hasOwn(aligned.editor, "snapping"));
+      await page
+        .getByRole("status")
+        .filter({ hasText: "Saved in this browser" })
+        .waitFor();
       await page.reload();
       await page.waitForFunction(() => window.evirStudio);
       assert(await page.locator("#snap-alignment").isChecked());
