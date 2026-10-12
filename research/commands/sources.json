@@ -1,0 +1,42 @@
+{
+  "retrievedAt": "2026-10-12",
+  "sources": [
+    {
+      "url": "https://modelcontextprotocol.io/specification/2025-11-25/server/tools",
+      "status": 200,
+      "bytes": 693348,
+      "sha256": "2fe86589f76421bf868e2866174cc21342e26f2d1623b0f231df7d11ef2f5365"
+    },
+    {
+      "url": "https://modelcontextprotocol.io/specification/2025-11-25/basic/transports",
+      "status": 200,
+      "bytes": 376763,
+      "sha256": "6810d123adb115a6a3f33f7744c87fdb7f7e299835a3a1388a5cba026669a9eb"
+    },
+    {
+      "url": "https://modelcontextprotocol.io/specification/2025-11-25/basic/lifecycle",
+      "status": 200,
+      "bytes": 440827,
+      "sha256": "1eaeeb0139e705a8090b122a4fe70fa553574e30dc528588a9547e5b649800bd"
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Broadcast_Channel_API",
+      "status": 200,
+      "bytes": 152677,
+      "sha256": "4bae84ee3a9b54e3ff253d6bd9ecfacb41f5372584e0846b374608ba86824d89"
+    }
+  ],
+  "failedSources": [
+    {
+      "url": "https://modelcontextprotocol.io/specification/2025-11-25/schema.json",
+      "status": 404
+    }
+  ],
+  "decisions": [
+    "One shared command authority; bounded atomic operations and revision preconditions.",
+    "Local stdio MCP subset only; no remote pairing or hosted backend.",
+    "Studio explicitly grants a scoped local command session; browser capability access is not remote authentication.",
+    "Physical tests postponed by user; software checks and automated accessibility remain active.",
+    "BroadcastChannel is not implemented: same-origin broadcast alone is not explicit pairing or authentication."
+  ]
+}

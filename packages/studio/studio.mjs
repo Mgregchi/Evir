@@ -1,4 +1,6 @@
 import { mountAdvanced } from "./advanced.mjs";
+import { mountLiveCommands } from "./live-commands.mjs";
+let liveTools;
 import { ProjectRecovery, RecoveryQueue } from "./recovery.mjs";
 import { SceneAssets, sceneOrder } from "@evir/renderer-canvas";
 import { importRiv } from "@evir/format";
@@ -1005,6 +1007,7 @@ function clearLayerDrop() {
     delete row.dataset.drop;
 }
 function render() {
+  liveTools?.refresh();
   const p = project();
   setSelection(
     [...selectedIds].filter((id) =>
@@ -2329,3 +2332,5 @@ window.evirStudio = {
   mode: () => authoring.mode,
   guides: () => structuredClone(snapGuides),
 };
+liveTools = mountLiveCommands({history:()=>store,artboardId:()=>activeArtboard,ready:penReady,changed:()=>{render();persist();}});
+window.evirStudio.live = liveTools.api;

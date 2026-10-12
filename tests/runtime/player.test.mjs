@@ -66,3 +66,17 @@ test('format package embeds the pinned schema and preserves published showcase b
     assert.deepEqual(Buffer.from(compileProject(source).bytes),readFileSync(new URL(`../../apps/web/assets/examples/${name}.riv`,import.meta.url)));
   }
 });
+
+test('speculative runtime forks retain phase and machine state without mutating their parent',()=>{
+  const {p,a,m}=scenes();p.animations[0].playback={mode:'ping-pong',iterations:2,speed:1};delete p.animations[0].loop;
+  const player=createRuntime(p,{animationId:a});player.advance(2.5);const fork=player.fork();assert.deepEqual(fork.pose(),player.pose());assert.deepEqual(fork.playback,player.playback);
+  fork.setSpeed(2);fork.advance(.5);assert.equal(player.playback.speed,1);assert.notDeepEqual(fork.pose(),player.pose());
+  const machine=createRuntime(p,{machineId:m});machine.setInput('go',true);machine.advance(.25);const next=machine.fork();assert.deepEqual(next.pose(),machine.pose());
+  next.reset();assert.notDeepEqual(next.state,machine.state);assert.equal(machine.state.name,'Active');
+});
+
+test('runtime forks preserve an in-flight timed transition independently',async()=>{
+  const {p,m}=scenes(),{upgradeAdvanced}=await import('@evir/project-model');upgradeAdvanced(p);p.machines[0].transitions[1].durationMs=400;
+  const player=createRuntime(p,{machineId:m});player.setInput('go',true);player.advance(.1);const fork=player.fork();assert.deepEqual(fork.pose(),player.pose());
+  const held=player.pose();fork.advance(.2);assert.deepEqual(player.pose(),held);player.advance(.2);assert.deepEqual(fork.pose(),player.pose());
+});

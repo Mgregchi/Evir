@@ -9,7 +9,8 @@
     "@evir/authoring": "0.1.0",
     "@evir/runtime": "0.1.0",
     "@evir/renderer-canvas": "0.1.0",
-    "@evir/format": "0.1.0"
+    "@evir/format": "0.1.0",
+    "@evir/commands": "0.1.0"
   },
   "exports": {
     "./build": "./build.mjs"

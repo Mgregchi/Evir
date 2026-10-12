@@ -8,6 +8,7 @@ These are versioned npm workspaces with one source of truth. Applications consum
 | `@evir/runtime` | Playback API, animation evaluation, skinning, IK and conditional/timed/blended state machines |
 | `@evir/renderer-canvas` | Canvas2D vector/text/image/mesh drawing, embedded asset lifetime and the host rendering adapter |
 | `@evir/authoring` | Path/bone/key editing, binding, reparenting and undo transactions |
+| `@evir/commands` | Scoped atomic editing commands, revision/retry checks and transient audience control sessions |
 | `@evir/format` | Explicit `.riv` subset compiler, bounded editable import and pinned schema |
 
 The direction is `project-model` → `runtime` → renderer/authoring/format. The model validates animation/interaction data itself, so it no longer imports the playback evaluator. Applications select the packages they use. The public site bundles runtime/renderer previews; Studio additionally bundles authoring and export. A site build does not write editor or package release artifacts.
@@ -51,3 +52,5 @@ Backend services for accounts, collaboration, storage or agents remain a separat
 `@evir/studio` in `packages/studio` is the separately maintained authoring UI package, not a playback engine package. Its `./build` export is consumed by `@evir/web` to render `/editor/studio/` in the single hosted frontend. It has no separate hosting settings and is private to this workspace. The five engine packages above retain independent builds/releases and cannot depend on Studio or web.
 
 `@evir/ui` is a private frontend package for shared loading markup, feedback controls and styles. Web and Studio consume it; engine packages do not. It adds no service, environment variable or hosting target.
+
+Local live commands and the stdio MCP prototype are documented in [their contract](../docs/33-local-commands-and-mcp.md). Studio can opt in to commands against its real Undo history; the stdio process is an independent in-memory host. Neither implements hosted backend or remote pairing.

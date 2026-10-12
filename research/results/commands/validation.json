@@ -1,0 +1,53 @@
+{
+  "checkedAt": "2026-10-12T21:10:46.714274+00:00",
+  "baseCommit": "46c0dc0228ea855c2163a5cef0dcf4ab9da8d5ea",
+  "scope": "Local command/stdio protocol and Chromium software automation. All physical tests postponed by user. No hosted backend, remote pairing, named model-client, narration, human or screen-reader evidence.",
+  "environment": {
+    "node": "v24.19.0",
+    "riveRuntime": "2.44.0",
+    "chromium": "151.0.7922.173",
+    "rendering": "cloud software / SwiftShader"
+  },
+  "checks": {
+    "editorUnits": 62,
+    "runtimeUnits": 22,
+    "frontendUnits": 18,
+    "editorBrowserWorkflows": 13,
+    "liveToolViewportWidths": [
+      390,
+      1440
+    ],
+    "publicPageConfigurations": 22,
+    "galleryStudiesOpenedAndExported": 17,
+    "galleryComparisons": 264,
+    "compassNativeComparisons": 8,
+    "editorAuthoringComparisons": 40,
+    "advancedAuthoringComparisons": 66,
+    "nativePlaybackComparisons": 82
+  },
+  "commands": [
+    "npm run test:frontend",
+    "npm run test:runtime",
+    "npm run runtime:build",
+    "npm pack --workspace @evir/commands --dry-run",
+    "npm run test:editor",
+    "npm run validate:editor",
+    "npm run test:web",
+    "npm run test:experience",
+    "npm run web:build",
+    "node tests/editor/live-browser.cjs"
+  ],
+  "physicalTesting": {
+    "status": "postponed",
+    "instructionDate": "2026-10-12"
+  },
+  "ci": {
+    "status": "pending PR creation"
+  },
+  "artifacts": {
+    "compass.evir-project": "4b9c4f4b073e23a216dbaf4881298a92b31eb7ab5db90049d3fb501f88e99802",
+    "compass.riv": "c624ebd9ee40e20fb259c1198c9a235b0b375fa19b0f4964a66e6c92d3b37b62",
+    "compass.commands.json": "52527b4b4fc227181379417c923a8248f05584830eafb3f4d4109e8a9240591c",
+    "compass-poster.png": "b906d390b88927382c9a580b64d787ffda3b67dbde87a9beb3142263cecf4a55"
+  }
+}

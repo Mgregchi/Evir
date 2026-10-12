@@ -1,0 +1,1429 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 2,
+  "id": "compass-project",
+  "name": "Compass — a shared command lesson",
+  "artboards": [
+    {
+      "id": "compass-board",
+      "name": "Compass — a shared command lesson",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "compass-root",
+      "name": "root",
+      "kind": "group",
+      "geometry": null,
+      "parentId": null,
+      "artboardId": "compass-board",
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        256,
+        256
+      ]
+    },
+    {
+      "id": "compass-shadow",
+      "name": "shadow",
+      "kind": "path",
+      "geometry": {
+        "closed": true,
+        "fill": "#243f3320",
+        "skin": null,
+        "points": [
+          {
+            "id": "compass-shadow-p0",
+            "anchor": [
+              184,
+              0
+            ],
+            "in": [
+              184,
+              -101.6203939632
+            ],
+            "out": [
+              184,
+              101.6203939632
+            ]
+          },
+          {
+            "id": "compass-shadow-p1",
+            "anchor": [
+              0,
+              184
+            ],
+            "in": [
+              101.6203939632,
+              184
+            ],
+            "out": [
+              -101.6203939632,
+              184
+            ]
+          },
+          {
+            "id": "compass-shadow-p2",
+            "anchor": [
+              -184,
+              0
+            ],
+            "in": [
+              -184,
+              101.6203939632
+            ],
+            "out": [
+              -184,
+              -101.6203939632
+            ]
+          },
+          {
+            "id": "compass-shadow-p3",
+            "anchor": [
+              0,
+              -184
+            ],
+            "in": [
+              -101.6203939632,
+              -184
+            ],
+            "out": [
+              101.6203939632,
+              -184
+            ]
+          }
+        ]
+      },
+      "parentId": "compass-root",
+      "artboardId": "compass-board",
+      "order": 1,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        10
+      ]
+    },
+    {
+      "id": "compass-dial",
+      "name": "dial",
+      "kind": "path",
+      "geometry": {
+        "closed": true,
+        "fill": "#243f33",
+        "skin": null,
+        "points": [
+          {
+            "id": "compass-dial-p0",
+            "anchor": [
+              180,
+              0
+            ],
+            "in": [
+              180,
+              -99.411254964
+            ],
+            "out": [
+              180,
+              99.411254964
+            ]
+          },
+          {
+            "id": "compass-dial-p1",
+            "anchor": [
+              0,
+              180
+            ],
+            "in": [
+              99.411254964,
+              180
+            ],
+            "out": [
+              -99.411254964,
+              180
+            ]
+          },
+          {
+            "id": "compass-dial-p2",
+            "anchor": [
+              -180,
+              0
+            ],
+            "in": [
+              -180,
+              99.411254964
+            ],
+            "out": [
+              -180,
+              -99.411254964
+            ]
+          },
+          {
+            "id": "compass-dial-p3",
+            "anchor": [
+              0,
+              -180
+            ],
+            "in": [
+              -99.411254964,
+              -180
+            ],
+            "out": [
+              99.411254964,
+              -180
+            ]
+          }
+        ]
+      },
+      "parentId": "compass-root",
+      "artboardId": "compass-board",
+      "order": 2,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "compass-inner-dial",
+      "name": "inner dial",
+      "kind": "path",
+      "geometry": {
+        "closed": true,
+        "fill": "#c8ead8",
+        "skin": null,
+        "points": [
+          {
+            "id": "compass-inner-dial-p0",
+            "anchor": [
+              164,
+              0
+            ],
+            "in": [
+              164,
+              -90.57469896719999
+            ],
+            "out": [
+              164,
+              90.57469896719999
+            ]
+          },
+          {
+            "id": "compass-inner-dial-p1",
+            "anchor": [
+              0,
+              164
+            ],
+            "in": [
+              90.57469896719999,
+              164
+            ],
+            "out": [
+              -90.57469896719999,
+              164
+            ]
+          },
+          {
+            "id": "compass-inner-dial-p2",
+            "anchor": [
+              -164,
+              0
+            ],
+            "in": [
+              -164,
+              90.57469896719999
+            ],
+            "out": [
+              -164,
+              -90.57469896719999
+            ]
+          },
+          {
+            "id": "compass-inner-dial-p3",
+            "anchor": [
+              0,
+              -164
+            ],
+            "in": [
+              -90.57469896719999,
+              -164
+            ],
+            "out": [
+              90.57469896719999,
+              -164
+            ]
+          }
+        ]
+      },
+      "parentId": "compass-root",
+      "artboardId": "compass-board",
+      "order": 3,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "compass-face",
+      "name": "face",
+      "kind": "path",
+      "geometry": {
+        "closed": true,
+        "fill": "#eef2e8",
+        "skin": null,
+        "points": [
+          {
+            "id": "compass-face-p0",
+            "anchor": [
+              138,
+              0
+            ],
+            "in": [
+              138,
+              -76.2152954724
+            ],
+            "out": [
+              138,
+              76.2152954724
+            ]
+          },
+          {
+            "id": "compass-face-p1",
+            "anchor": [
+              0,
+              138
+            ],
+            "in": [
+              76.2152954724,
+              138
+            ],
+            "out": [
+              -76.2152954724,
+              138
+            ]
+          },
+          {
+            "id": "compass-face-p2",
+            "anchor": [
+              -138,
+              0
+            ],
+            "in": [
+              -138,
+              76.2152954724
+            ],
+            "out": [
+              -138,
+              -76.2152954724
+            ]
+          },
+          {
+            "id": "compass-face-p3",
+            "anchor": [
+              0,
+              -138
+            ],
+            "in": [
+              -76.2152954724,
+              -138
+            ],
+            "out": [
+              76.2152954724,
+              -138
+            ]
+          }
+        ]
+      },
+      "parentId": "compass-root",
+      "artboardId": "compass-board",
+      "order": 4,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "compass-marker-0",
+      "name": "marker 0",
+      "kind": "path",
+      "geometry": {
+        "closed": true,
+        "fill": "#34594b",
+        "skin": null,
+        "points": [
+          {
+            "id": "compass-marker-0-p0",
+            "anchor": [
+              6,
+              0
+            ],
+            "in": [
+              6,
+              -3.3137084987999996
+            ],
+            "out": [
+              6,
+              3.3137084987999996
+            ]
+          },
+          {
+            "id": "compass-marker-0-p1",
+            "anchor": [
+              0,
+              6
+            ],
+            "in": [
+              3.3137084987999996,
+              6
+            ],
+            "out": [
+              -3.3137084987999996,
+              6
+            ]
+          },
+          {
+            "id": "compass-marker-0-p2",
+            "anchor": [
+              -6,
+              0
+            ],
+            "in": [
+              -6,
+              3.3137084987999996
+            ],
+            "out": [
+              -6,
+              -3.3137084987999996
+            ]
+          },
+          {
+            "id": "compass-marker-0-p3",
+            "anchor": [
+              0,
+              -6
+            ],
+            "in": [
+              -3.3137084987999996,
+              -6
+            ],
+            "out": [
+              3.3137084987999996,
+              -6
+            ]
+          }
+        ]
+      },
+      "parentId": "compass-root",
+      "artboardId": "compass-board",
+      "order": 5,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        -152
+      ]
+    },
+    {
+      "id": "compass-marker-1",
+      "name": "marker 1",
+      "kind": "path",
+      "geometry": {
+        "closed": true,
+        "fill": "#34594b",
+        "skin": null,
+        "points": [
+          {
+            "id": "compass-marker-1-p0",
+            "anchor": [
+              3,
+              0
+            ],
+            "in": [
+              3,
+              -1.6568542493999998
+            ],
+            "out": [
+              3,
+              1.6568542493999998
+            ]
+          },
+          {
+            "id": "compass-marker-1-p1",
+            "anchor": [
+              0,
+              3
+            ],
+            "in": [
+              1.6568542493999998,
+              3
+            ],
+            "out": [
+              -1.6568542493999998,
+              3
+            ]
+          },
+          {
+            "id": "compass-marker-1-p2",
+            "anchor": [
+              -3,
+              0
+            ],
+            "in": [
+              -3,
+              1.6568542493999998
+            ],
+            "out": [
+              -3,
+              -1.6568542493999998
+            ]
+          },
+          {
+            "id": "compass-marker-1-p3",
+            "anchor": [
+              0,
+              -3
+            ],
+            "in": [
+              -1.6568542493999998,
+              -3
+            ],
+            "out": [
+              1.6568542493999998,
+              -3
+            ]
+          }
+        ]
+      },
+      "parentId": "compass-root",
+      "artboardId": "compass-board",
+      "order": 6,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        107.48023074035521,
+        -107.48023074035522
+      ]
+    },
+    {
+      "id": "compass-marker-2",
+      "name": "marker 2",
+      "kind": "path",
+      "geometry": {
+        "closed": true,
+        "fill": "#34594b",
+        "skin": null,
+        "points": [
+          {
+            "id": "compass-marker-2-p0",
+            "anchor": [
+              6,
+              0
+            ],
+            "in": [
+              6,
+              -3.3137084987999996
+            ],
+            "out": [
+              6,
+              3.3137084987999996
+            ]
+          },
+          {
+            "id": "compass-marker-2-p1",
+            "anchor": [
+              0,
+              6
+            ],
+            "in": [
+              3.3137084987999996,
+              6
+            ],
+            "out": [
+              -3.3137084987999996,
+              6
+            ]
+          },
+          {
+            "id": "compass-marker-2-p2",
+            "anchor": [
+              -6,
+              0
+            ],
+            "in": [
+              -6,
+              3.3137084987999996
+            ],
+            "out": [
+              -6,
+              -3.3137084987999996
+            ]
+          },
+          {
+            "id": "compass-marker-2-p3",
+            "anchor": [
+              0,
+              -6
+            ],
+            "in": [
+              -3.3137084987999996,
+              -6
+            ],
+            "out": [
+              3.3137084987999996,
+              -6
+            ]
+          }
+        ]
+      },
+      "parentId": "compass-root",
+      "artboardId": "compass-board",
+      "order": 7,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        152,
+        -9.307315673519884e-15
+      ]
+    },
+    {
+      "id": "compass-marker-3",
+      "name": "marker 3",
+      "kind": "path",
+      "geometry": {
+        "closed": true,
+        "fill": "#34594b",
+        "skin": null,
+        "points": [
+          {
+            "id": "compass-marker-3-p0",
+            "anchor": [
+              3,
+              0
+            ],
+            "in": [
+              3,
+              -1.6568542493999998
+            ],
+            "out": [
+              3,
+              1.6568542493999998
+            ]
+          },
+          {
+            "id": "compass-marker-3-p1",
+            "anchor": [
+              0,
+              3
+            ],
+            "in": [
+              1.6568542493999998,
+              3
+            ],
+            "out": [
+              -1.6568542493999998,
+              3
+            ]
+          },
+          {
+            "id": "compass-marker-3-p2",
+            "anchor": [
+              -3,
+              0
+            ],
+            "in": [
+              -3,
+              1.6568542493999998
+            ],
+            "out": [
+              -3,
+              -1.6568542493999998
+            ]
+          },
+          {
+            "id": "compass-marker-3-p3",
+            "anchor": [
+              0,
+              -3
+            ],
+            "in": [
+              -1.6568542493999998,
+              -3
+            ],
+            "out": [
+              1.6568542493999998,
+              -3
+            ]
+          }
+        ]
+      },
+      "parentId": "compass-root",
+      "artboardId": "compass-board",
+      "order": 8,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        107.48023074035522,
+        107.48023074035521
+      ]
+    },
+    {
+      "id": "compass-marker-4",
+      "name": "marker 4",
+      "kind": "path",
+      "geometry": {
+        "closed": true,
+        "fill": "#34594b",
+        "skin": null,
+        "points": [
+          {
+            "id": "compass-marker-4-p0",
+            "anchor": [
+              6,
+              0
+            ],
+            "in": [
+              6,
+              -3.3137084987999996
+            ],
+            "out": [
+              6,
+              3.3137084987999996
+            ]
+          },
+          {
+            "id": "compass-marker-4-p1",
+            "anchor": [
+              0,
+              6
+            ],
+            "in": [
+              3.3137084987999996,
+              6
+            ],
+            "out": [
+              -3.3137084987999996,
+              6
+            ]
+          },
+          {
+            "id": "compass-marker-4-p2",
+            "anchor": [
+              -6,
+              0
+            ],
+            "in": [
+              -6,
+              3.3137084987999996
+            ],
+            "out": [
+              -6,
+              -3.3137084987999996
+            ]
+          },
+          {
+            "id": "compass-marker-4-p3",
+            "anchor": [
+              0,
+              -6
+            ],
+            "in": [
+              -3.3137084987999996,
+              -6
+            ],
+            "out": [
+              3.3137084987999996,
+              -6
+            ]
+          }
+        ]
+      },
+      "parentId": "compass-root",
+      "artboardId": "compass-board",
+      "order": 9,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        1.8614631347039768e-14,
+        152
+      ]
+    },
+    {
+      "id": "compass-marker-5",
+      "name": "marker 5",
+      "kind": "path",
+      "geometry": {
+        "closed": true,
+        "fill": "#34594b",
+        "skin": null,
+        "points": [
+          {
+            "id": "compass-marker-5-p0",
+            "anchor": [
+              3,
+              0
+            ],
+            "in": [
+              3,
+              -1.6568542493999998
+            ],
+            "out": [
+              3,
+              1.6568542493999998
+            ]
+          },
+          {
+            "id": "compass-marker-5-p1",
+            "anchor": [
+              0,
+              3
+            ],
+            "in": [
+              1.6568542493999998,
+              3
+            ],
+            "out": [
+              -1.6568542493999998,
+              3
+            ]
+          },
+          {
+            "id": "compass-marker-5-p2",
+            "anchor": [
+              -3,
+              0
+            ],
+            "in": [
+              -3,
+              1.6568542493999998
+            ],
+            "out": [
+              -3,
+              -1.6568542493999998
+            ]
+          },
+          {
+            "id": "compass-marker-5-p3",
+            "anchor": [
+              0,
+              -3
+            ],
+            "in": [
+              -1.6568542493999998,
+              -3
+            ],
+            "out": [
+              1.6568542493999998,
+              -3
+            ]
+          }
+        ]
+      },
+      "parentId": "compass-root",
+      "artboardId": "compass-board",
+      "order": 10,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -107.48023074035521,
+        107.48023074035525
+      ]
+    },
+    {
+      "id": "compass-marker-6",
+      "name": "marker 6",
+      "kind": "path",
+      "geometry": {
+        "closed": true,
+        "fill": "#34594b",
+        "skin": null,
+        "points": [
+          {
+            "id": "compass-marker-6-p0",
+            "anchor": [
+              6,
+              0
+            ],
+            "in": [
+              6,
+              -3.3137084987999996
+            ],
+            "out": [
+              6,
+              3.3137084987999996
+            ]
+          },
+          {
+            "id": "compass-marker-6-p1",
+            "anchor": [
+              0,
+              6
+            ],
+            "in": [
+              3.3137084987999996,
+              6
+            ],
+            "out": [
+              -3.3137084987999996,
+              6
+            ]
+          },
+          {
+            "id": "compass-marker-6-p2",
+            "anchor": [
+              -6,
+              0
+            ],
+            "in": [
+              -6,
+              3.3137084987999996
+            ],
+            "out": [
+              -6,
+              -3.3137084987999996
+            ]
+          },
+          {
+            "id": "compass-marker-6-p3",
+            "anchor": [
+              0,
+              -6
+            ],
+            "in": [
+              -3.3137084987999996,
+              -6
+            ],
+            "out": [
+              3.3137084987999996,
+              -6
+            ]
+          }
+        ]
+      },
+      "parentId": "compass-root",
+      "artboardId": "compass-board",
+      "order": 11,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -152,
+        2.7921947020559652e-14
+      ]
+    },
+    {
+      "id": "compass-marker-7",
+      "name": "marker 7",
+      "kind": "path",
+      "geometry": {
+        "closed": true,
+        "fill": "#34594b",
+        "skin": null,
+        "points": [
+          {
+            "id": "compass-marker-7-p0",
+            "anchor": [
+              3,
+              0
+            ],
+            "in": [
+              3,
+              -1.6568542493999998
+            ],
+            "out": [
+              3,
+              1.6568542493999998
+            ]
+          },
+          {
+            "id": "compass-marker-7-p1",
+            "anchor": [
+              0,
+              3
+            ],
+            "in": [
+              1.6568542493999998,
+              3
+            ],
+            "out": [
+              -1.6568542493999998,
+              3
+            ]
+          },
+          {
+            "id": "compass-marker-7-p2",
+            "anchor": [
+              -3,
+              0
+            ],
+            "in": [
+              -3,
+              1.6568542493999998
+            ],
+            "out": [
+              -3,
+              -1.6568542493999998
+            ]
+          },
+          {
+            "id": "compass-marker-7-p3",
+            "anchor": [
+              0,
+              -3
+            ],
+            "in": [
+              -1.6568542493999998,
+              -3
+            ],
+            "out": [
+              1.6568542493999998,
+              -3
+            ]
+          }
+        ]
+      },
+      "parentId": "compass-root",
+      "artboardId": "compass-board",
+      "order": 12,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -107.48023074035525,
+        -107.4802307403552
+      ]
+    },
+    {
+      "id": "compass-needle",
+      "name": "needle",
+      "kind": "group",
+      "geometry": null,
+      "parentId": "compass-root",
+      "artboardId": "compass-board",
+      "order": 13,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "compass-north",
+      "name": "north",
+      "kind": "path",
+      "geometry": {
+        "closed": true,
+        "fill": "#e7b093",
+        "skin": null,
+        "points": [
+          {
+            "id": "compass-north-p0",
+            "anchor": [
+              0,
+              -115
+            ],
+            "in": [
+              0,
+              -115
+            ],
+            "out": [
+              0,
+              -115
+            ]
+          },
+          {
+            "id": "compass-north-p1",
+            "anchor": [
+              18,
+              18
+            ],
+            "in": [
+              18,
+              18
+            ],
+            "out": [
+              18,
+              18
+            ]
+          },
+          {
+            "id": "compass-north-p2",
+            "anchor": [
+              0,
+              0
+            ],
+            "in": [
+              0,
+              0
+            ],
+            "out": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "compass-north-p3",
+            "anchor": [
+              -18,
+              18
+            ],
+            "in": [
+              -18,
+              18
+            ],
+            "out": [
+              -18,
+              18
+            ]
+          }
+        ]
+      },
+      "parentId": "compass-needle",
+      "artboardId": "compass-board",
+      "order": 14,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "compass-south",
+      "name": "south",
+      "kind": "path",
+      "geometry": {
+        "closed": true,
+        "fill": "#34594b",
+        "skin": null,
+        "points": [
+          {
+            "id": "compass-south-p0",
+            "anchor": [
+              0,
+              115
+            ],
+            "in": [
+              0,
+              115
+            ],
+            "out": [
+              0,
+              115
+            ]
+          },
+          {
+            "id": "compass-south-p1",
+            "anchor": [
+              18,
+              -18
+            ],
+            "in": [
+              18,
+              -18
+            ],
+            "out": [
+              18,
+              -18
+            ]
+          },
+          {
+            "id": "compass-south-p2",
+            "anchor": [
+              0,
+              0
+            ],
+            "in": [
+              0,
+              0
+            ],
+            "out": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "compass-south-p3",
+            "anchor": [
+              -18,
+              -18
+            ],
+            "in": [
+              -18,
+              -18
+            ],
+            "out": [
+              -18,
+              -18
+            ]
+          }
+        ]
+      },
+      "parentId": "compass-needle",
+      "artboardId": "compass-board",
+      "order": 15,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "compass-pivot",
+      "name": "pivot",
+      "kind": "path",
+      "geometry": {
+        "closed": true,
+        "fill": "#243f33",
+        "skin": null,
+        "points": [
+          {
+            "id": "compass-pivot-p0",
+            "anchor": [
+              12,
+              0
+            ],
+            "in": [
+              12,
+              -6.627416997599999
+            ],
+            "out": [
+              12,
+              6.627416997599999
+            ]
+          },
+          {
+            "id": "compass-pivot-p1",
+            "anchor": [
+              0,
+              12
+            ],
+            "in": [
+              6.627416997599999,
+              12
+            ],
+            "out": [
+              -6.627416997599999,
+              12
+            ]
+          },
+          {
+            "id": "compass-pivot-p2",
+            "anchor": [
+              -12,
+              0
+            ],
+            "in": [
+              -12,
+              6.627416997599999
+            ],
+            "out": [
+              -12,
+              -6.627416997599999
+            ]
+          },
+          {
+            "id": "compass-pivot-p3",
+            "anchor": [
+              0,
+              -12
+            ],
+            "in": [
+              -6.627416997599999,
+              -12
+            ],
+            "out": [
+              6.627416997599999,
+              -12
+            ]
+          }
+        ]
+      },
+      "parentId": "compass-root",
+      "artboardId": "compass-board",
+      "order": 16,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "compass-pivot-light",
+      "name": "pivot light",
+      "kind": "path",
+      "geometry": {
+        "closed": true,
+        "fill": "#c8ead8",
+        "skin": null,
+        "points": [
+          {
+            "id": "compass-pivot-light-p0",
+            "anchor": [
+              5,
+              0
+            ],
+            "in": [
+              5,
+              -2.761423749
+            ],
+            "out": [
+              5,
+              2.761423749
+            ]
+          },
+          {
+            "id": "compass-pivot-light-p1",
+            "anchor": [
+              0,
+              5
+            ],
+            "in": [
+              2.761423749,
+              5
+            ],
+            "out": [
+              -2.761423749,
+              5
+            ]
+          },
+          {
+            "id": "compass-pivot-light-p2",
+            "anchor": [
+              -5,
+              0
+            ],
+            "in": [
+              -5,
+              2.761423749
+            ],
+            "out": [
+              -5,
+              -2.761423749
+            ]
+          },
+          {
+            "id": "compass-pivot-light-p3",
+            "anchor": [
+              0,
+              -5
+            ],
+            "in": [
+              -2.761423749,
+              -5
+            ],
+            "out": [
+              2.761423749,
+              -5
+            ]
+          }
+        ]
+      },
+      "parentId": "compass-root",
+      "artboardId": "compass-board",
+      "order": 17,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "assets": [],
+  "animations": [
+    {
+      "id": "compass-turn",
+      "name": "Find north",
+      "artboardId": "compass-board",
+      "fps": 60,
+      "duration": 240,
+      "playback": {
+        "mode": "loop",
+        "iterations": 0,
+        "speed": 1
+      },
+      "tracks": [
+        {
+          "targetId": "compass-needle",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 240,
+              "value": 6.283185307179586,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "compass-board": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  }
+}
