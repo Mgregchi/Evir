@@ -42,7 +42,21 @@
     "instructionDate": "2026-10-12"
   },
   "ci": {
-    "status": "pending PR creation"
+    "status": "blocked before steps by GitHub account billing lock",
+    "observedImplementationCommit": "339076b80f409b222d11efa1a740eb7c32105a5d",
+    "annotation": "The job was not started because your account is locked due to a billing issue.",
+    "jobs": [
+      {
+        "workflow": "Runtime package validation",
+        "url": "https://github.com/Mgregchi/Evir/actions/runs/38309102822/job/115010206792",
+        "stepsRun": 0
+      },
+      {
+        "workflow": "Web and Studio validation",
+        "url": "https://github.com/Mgregchi/Evir/actions/runs/38309102819/job/115010206671",
+        "stepsRun": 0
+      }
+    ]
   },
   "artifacts": {
     "compass.evir-project": "4b9c4f4b073e23a216dbaf4881298a92b31eb7ab5db90049d3fb501f88e99802",
