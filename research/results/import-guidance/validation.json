@@ -36,7 +36,13 @@
   "browser": "151.0.7922.173",
   "physicalTesting": "postponed",
   "ci": {
-    "status": "pending PR creation"
+    "status": "blocked before execution by account billing lock",
+    "observedImplementationCommit": "6d84c124064e54499d08c92fe06d12cd764bb7ab",
+    "annotation": "The job was not started because your account is locked due to a billing issue.",
+    "jobs": [
+      "https://github.com/Mgregchi/Evir/actions/runs/38367378303/job/115195643529",
+      "https://github.com/Mgregchi/Evir/actions/runs/38367377686/job/115195641225"
+    ]
   },
   "privateArtworkRedistributed": false
 }
