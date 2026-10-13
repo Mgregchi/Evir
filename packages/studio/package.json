@@ -10,7 +10,8 @@
     "@evir/runtime": "0.1.0",
     "@evir/renderer-canvas": "0.1.0",
     "@evir/format": "0.1.0",
-    "@evir/commands": "0.1.0"
+    "@evir/commands": "0.1.0",
+    "@rive-app/canvas": "2.44.0"
   },
   "exports": {
     "./build": "./build.mjs"

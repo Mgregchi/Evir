@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-13T07:38:45.155Z",
+  "scope": "Original privately supplied export viewed in local Chromium software. No original bytes or artwork redistributed; physical tests postponed.",
+  "filename": "28745-54500-character-poses.riv",
+  "sha256": "60439694ed44eabfd80177303a92e6876c3fab205bc906ef888c91bf6ddf6965",
+  "viewer": {
+    "open": true,
+    "loading": false,
+    "playing": false,
+    "artboard": "new_JSON",
+    "animationNames": [
+      "FEAR",
+      "CRY",
+      "SHY",
+      "BOO",
+      "FLYING",
+      "SAD",
+      "HAPPY",
+      "IDLE",
+      "Scale_POP"
+    ],
+    "stateMachineNames": [
+      "State Machine 1"
+    ]
+  },
+  "coveredPixels": 19136,
+  "studioProjectUnchanged": true
+}

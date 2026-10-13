@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-10-13T08:08:04.491Z",
+  "widths": [
+    390,
+    1440
+  ],
+  "scope": "Chromium software automation; physical tests postponed. No human, screen-reader, remote pairing or model-client claim.",
+  "checks": [
+    "explicit local grant and Stop",
+    "command-authored compass with typed speed control",
+    "motion opt-in and pause",
+    "source/presentation isolation",
+    "invalid type/range/context rejection",
+    "rendered visual-ready cues",
+    "one-step shared Undo",
+    "closing revokes access",
+    "no page overflow",
+    "zero automated accessibility violations"
+  ],
+  "browserVersion": "151.0.7922.173"
+}

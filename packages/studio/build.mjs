@@ -9,7 +9,12 @@ export async function buildStudio({outDir,basePath,homeUrl}) {
   const sourceRoot=fileURLToPath(new URL('./',import.meta.url));
   const config={basePath,publicSiteUrl:homeUrl};
   await mkdir(outDir,{recursive:true});
-  await build({entryPoints:[path.join(sourceRoot,'studio.mjs')],bundle:true,format:'esm',platform:'browser',target:'es2022',outfile:path.join(outDir,'studio.mjs')});
+  await build({entryPoints:[path.join(sourceRoot,'studio.mjs')],bundle:true,splitting:true,format:'esm',platform:'browser',target:'es2022',outdir:outDir,chunkNames:'chunks/[name]-[hash]',outExtension:{'.js':'.mjs'}});
+  const runtimeDir=path.dirname(fileURLToPath(import.meta.resolve('@rive-app/canvas')));
+  await mkdir(path.join(outDir,'assets'),{recursive:true});
+  await cp(path.join(runtimeDir,'rive.wasm'),path.join(outDir,'assets/rive-view.wasm'));
+  await cp(path.join(runtimeDir,'rive_fallback.wasm'),path.join(outDir,'assets/rive-view-fallback.wasm'));
+  await cp(path.join(sourceRoot,'licenses/LICENSE.rive-runtime'),path.join(outDir,'assets/LICENSE.rive-runtime'));
   await writeFile(path.join(outDir,'studio.css'),(await readFile(path.join(sourceRoot,'studio.css'),'utf8'))+'\n'+(await readFile(new URL('../ui/styles.css',import.meta.url),'utf8')));
   await cp(new URL('../../assets/brand/',import.meta.url),path.join(outDir,'assets'),{recursive:true});
   await cp(new URL('../../assets/fonts/NotoSans-latin.ttf',import.meta.url),path.join(outDir,'assets/NotoSans-latin.ttf'));

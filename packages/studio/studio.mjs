@@ -1,6 +1,8 @@
 import { mountAdvanced } from "./advanced.mjs";
 import { mountLiveCommands } from "./live-commands.mjs";
-let liveTools;
+import { mountRiveViewer } from "./rive-viewer.mjs";
+import { showMcpGuide } from "./guidance.mjs";
+let liveTools, riveViewer;
 import { ProjectRecovery, RecoveryQueue } from "./recovery.mjs";
 import { SceneAssets, sceneOrder } from "@evir/renderer-canvas";
 import { importRiv } from "@evir/format";
@@ -2024,7 +2026,8 @@ async function save() {
   }
 }
 $("#save").onclick = save;
-$("#open").onclick = () => $("#file").click();
+$("#open").onclick = () => {$("#file").accept='.json,.evir-project,.riv,application/json';$("#file").click();};
+$("#import-riv").onclick = () => {$("#file").accept='.riv';$("#file").click();};
 $("#file").addEventListener("change", async (e) => {
   const file = e.target.files[0];
   e.target.value = "";
@@ -2045,7 +2048,8 @@ $("#file").addEventListener("change", async (e) => {
     persist();
     clearNotice();
   } catch (error) {
-    notice(error);
+    if(file.name.toLowerCase().endsWith('.riv')) riveViewer.open(file,{importError:error});
+    else notice(error);
   }
 });
 $("#new").onclick = async () => {
@@ -2334,3 +2338,8 @@ window.evirStudio = {
 };
 liveTools = mountLiveCommands({history:()=>store,artboardId:()=>activeArtboard,ready:penReady,changed:()=>{render();persist();}});
 window.evirStudio.live = liveTools.api;
+riveViewer = mountRiveViewer();
+window.evirStudio.originalRiv = {snapshot:riveViewer.snapshot};
+const mcpButton = element('button','MCP setup…');
+mcpButton.type='button'; mcpButton.onclick=showMcpGuide;
+$('#project-file-actions').append(mcpButton);

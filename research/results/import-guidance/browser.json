@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-10-13T07:54:29.962Z",
+  "widths": [
+    390,
+    1440
+  ],
+  "scope": "Chromium software automation, original Orbit with an unused converter; no physical or human evidence",
+  "checks": [
+    "prefixed hosting and WASM MIME",
+    "failed conversion preserves Studio source",
+    "clear feature diagnostics and read-only alternative",
+    "official renderer loaded on demand from same origin",
+    "paused original view, play, pause and reset pixels",
+    "exact original bytes download",
+    "viewer closes and disposes playback",
+    "supported .riv remains editable",
+    "malformed original reports failure",
+    "visible MCP setup with absolute-path configuration/download",
+    "no overflow and zero automated accessibility violations"
+  ],
+  "browserVersion": "151.0.7922.173"
+}
