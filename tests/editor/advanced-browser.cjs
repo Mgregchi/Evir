@@ -180,7 +180,7 @@ const { run } = require("../../tools/browser.cjs");
         await page.evaluate(() => evirStudio.snapshot().advanced.clips.length),
         1,
       );
-      // Unsupported streams are rejected before the replacement sheet.
+      // Unsupported streams now explain conversion failure in a sheet, before replacement.
       const before = await page.evaluate(() =>
         JSON.stringify(evirStudio.snapshot()),
       );
@@ -191,8 +191,8 @@ const { run } = require("../../tools/browser.cjs");
       });
       await page.waitForFunction(() =>
         document
-          .querySelector("#notice span")
-          .textContent.includes("Expected RIVE signature"),
+          .querySelector("#riv-import-sheet pre")
+          ?.textContent.includes("Expected RIVE signature"),
       );
       assert.equal(
         await page.locator("#replace-project").getAttribute("open"),
@@ -206,6 +206,7 @@ const { run } = require("../../tools/browser.cjs");
       await page.screenshot({
         path: `research/results/advanced-authoring/studio-${width}.png`,
       });
+      await page.getByRole('button',{name:'Back to Studio',exact:true}).click();
       results.push({
         width,
         flows: [

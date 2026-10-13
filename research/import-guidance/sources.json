@@ -1,0 +1,60 @@
+{
+  "reviewedAt": "2026-10-13",
+  "sources": [
+    {
+      "url": "https://rive.app/docs/runtimes/web/rive-parameters",
+      "status": 200,
+      "bytes": 726258,
+      "sha256": "ca44141bb727573a01e758fac85408323d0fc764b26536d211cdef98a23cf8c9"
+    },
+    {
+      "url": "https://rive.app/docs/runtimes/loading-assets",
+      "status": 200,
+      "bytes": 327609,
+      "sha256": "14729b1e05bae29861c246e3cefd57625fea03e4e53a92675288c7a9e5548f46"
+    },
+    {
+      "url": "https://rive.app/docs/runtimes/asset-loading",
+      "status": 404,
+      "bytes": 6704,
+      "sha256": "53eaee09042d152075a59494025b991a50f5577cfce81bdfccc81ab720578a54"
+    },
+    {
+      "url": "https://modelcontextprotocol.io/docs/develop/connect-local-servers",
+      "status": 200,
+      "bytes": 479842,
+      "sha256": "2abaa56717bc2f0d5f01d4b4613eabadb1bbff2a7eb53ad3bcfe43bf04d9a9f6"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-wasm/master/LICENSE",
+      "status": 200,
+      "bytes": 1066,
+      "sha256": "8a1efa755d19446b51a18e1c15f6308728da0b36283c4d38050698ad6954b69a"
+    }
+  ],
+  "pinnedRuntime": "@rive-app/canvas@2.44.0",
+  "decisions": [
+    "Do not skip unknown converters when converting editable scenes.",
+    "Use a separate lazy-loaded official-runtime viewer with explicit read-only mode.",
+    "Keep original bytes and Studio source unchanged when conversion rejects.",
+    "MCP is a desktop stdio process; publish in-app setup and distinguish its separate in-memory project.",
+    "Physical tests remain postponed."
+  ],
+  "normalizerSource": {
+    "repository": "rive-app/rive-runtime",
+    "commit": "7aa93402a27c800db8a36acc8672612c100ea9b1",
+    "path": "src/data_bind/converters/data_converter_system_normalizer.cpp",
+    "sha256": "d4f254361a9afa3a2b315fe9718d42edddfd4d8f64d9b659edc176a1e3b97bfe",
+    "finding": "Direction-dependent conversion is behavioral; removing it is not a lossless editable import."
+  },
+  "runtimeDefinitions": {
+    "rive.d.ts": {
+      "package": "@rive-app/canvas@2.44.0",
+      "sha256": "89c1c99d20f665544ae39472db46e74919aa29036084bd39a6a9b9655cf9e066"
+    },
+    "runtimeLoader.d.ts": {
+      "package": "@rive-app/canvas@2.44.0",
+      "sha256": "935db6674d36f09564112ffb37e2082fb16eafaabce618dd9d0de46a82b5941f"
+    }
+  }
+}

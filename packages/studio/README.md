@@ -63,3 +63,9 @@ Advanced 2D contracts, source/runtime versions, asset preparation/disposal, auth
 Current workflow controls and IndexedDB recovery are documented in [workflow/recovery](../../docs/31-studio-workflow-and-recovery.md).
 
 Playback modes/counts/speed, independent timeline layers, the Sunday motorcycle and native export policy are documented in [playback and motorcycle contracts](../../docs/32-animation-playback-and-motorcycle.md).
+
+## Import/view and agent guidance
+
+**Import .riv for editing** converts the supported subset; **View .riv file** keeps the original read-only with an optional, lazy official Rive runtime. Unsupported conversion offers original viewing and byte-exact download without replacing your project.
+
+**Live tools** has a guided Compass demo and local motion selection. **MCP setup** generates a desktop stdio-client configuration; it does not connect an agent to the open Studio tab. See [the walkthrough and limits](../../docs/34-import-viewing-and-agent-guidance.md). Physical tests remain postponed.

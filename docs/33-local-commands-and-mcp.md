@@ -59,6 +59,8 @@ Patches apply 1–64 operations as one validated Undo transaction. Invalid geome
 
 Audience manifests contain 1–16 controls bound to one animation or one machine. Slider/checkbox/button types match speed/number/boolean/trigger contracts. Labels render as text; there is no agent-supplied HTML or JavaScript. Range/step values and stable binding IDs validate together. Session controls, play state and live inputs do not enter `.evir-project` or `.riv` exports.
 
+For a guided walkthrough and desktop configuration generator, use **Project menu → MCP setup…**. [Import/viewing and agent guidance](34-import-viewing-and-agent-guidance.md) explains the current boundary and updated Studio workflow.
+
 ## Studio workflow and readiness
 
 Grant access, then **Add compass lesson**. The complete scene is one Undo entry; repeated additions use new IDs and free sibling orders. The preview's **Pointer speed** slider comes from the shared manifest. Check **Allow preview motion**, then **Play preview**. Movement is opt-in even if reduced motion is not requested. Play/pause and controls stay in the sheet; the ordinary authoring stage remains available after closing it. A sheet provides labeled controls, keyboard focus containment, custom errors and a responsive single-column layout. Closing it or selecting Stop revokes access and disposes resources. Replacing the project/artboard never retargets the grant.

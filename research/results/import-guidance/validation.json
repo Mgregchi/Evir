@@ -1,0 +1,42 @@
+{
+  "checkedAt": "2026-10-13T08:08:59.867445+00:00",
+  "baseCommit": "61da6fe8943b27add968073613738b185d73af3b",
+  "scope": "Software Chromium and local MCP protocol. Physical tests postponed. No full editable import, live MCP-to-Studio bridge, named agent-client or human accessibility claim.",
+  "checks": {
+    "editorUnits": 64,
+    "editorBrowserWorkflows": 14,
+    "frontendUnits": 18,
+    "localMcpProtocolTests": 1,
+    "publicPageConfigurations": 22,
+    "nativeAuthoringComparisons": 40,
+    "nativeAdvancedComparisons": 66,
+    "nativePlaybackComparisons": 82,
+    "guidanceWidths": [
+      390,
+      1440
+    ],
+    "prefixHosting": "/Evir/ with application/wasm",
+    "originalCharacterPoses": "rendered, nine animations and one machine, source unchanged"
+  },
+  "editorValidation": "All unit/workflows passed across the initial run and focused continuation after updating the legacy toast expectation to the new import sheet.",
+  "commands": [
+    "npm run test:editor (initial run; legacy toast assertion updated)",
+    "node tests/editor/advanced-browser.cjs",
+    "node tests/editor/workflow-browser.cjs",
+    "node tests/editor/playback-browser.cjs",
+    "node tests/editor/live-browser.cjs",
+    "node tests/editor/import-guidance-browser.cjs",
+    "npm run validate:editor",
+    "npm run test:frontend",
+    "node --test tests/runtime/mcp.test.mjs",
+    "node tests/site/browser.cjs",
+    "npm run test:experience"
+  ],
+  "runtime": "@rive-app/canvas@2.44.0",
+  "browser": "151.0.7922.173",
+  "physicalTesting": "postponed",
+  "ci": {
+    "status": "pending PR creation"
+  },
+  "privateArtworkRedistributed": false
+}
