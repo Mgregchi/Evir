@@ -11,7 +11,8 @@
     "@evir/ui": "0.1.0",
     "@evir/runtime": "0.1.0",
     "@evir/renderer-canvas": "0.1.0",
-    "@evir/studio": "0.1.0"
+    "@evir/studio": "0.1.0",
+    "@evir/commands": "0.1.0"
   },
   "devDependencies": {
     "@evir/project-model": "0.1.0",

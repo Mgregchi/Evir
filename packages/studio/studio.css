@@ -1538,3 +1538,17 @@ body > #notice {
 #paint-error { color: #ffc4b4; overflow-wrap: anywhere; }
 #paint-sheet .field-pair { min-width: 0; }
 #paint-sheet input { min-width: 0; }
+
+/* Local live-tool controls remain secondary to the editing workspace. */
+#live-tools-sheet { width: min(940px, calc(100vw - 32px)); max-width: none; }
+.live-tools-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; }
+.live-tools-grid section { min-width: 0; }
+.live-tools-grid canvas { width: 100%; height: auto; display: block; border: 1px solid var(--line); border-radius: 12px; background: #eef2e8; }
+.live-tools-grid label, .live-controls label { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin: 12px 0; }
+.live-tools-grid textarea { width: 100%; min-width: 0; padding: 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); color: var(--text); font: 13px/1.5 monospace; }
+.live-tools-grid pre { white-space: pre-wrap; overflow-wrap: anywhere; max-height: 200px; overflow: auto; font: 12px/1.5 monospace; }
+.live-tools-grid input[type=range] { flex: 1; min-width: 140px; min-height: 44px; accent-color: var(--accent); }
+.live-tools-grid input[type=checkbox] { width: 24px; height: 24px; }
+.live-controls output { min-width: 36px; font-variant-numeric: tabular-nums; }
+@media(max-width: 850px) { #live-tools-sheet { width: 100%; } }
+@media(max-width: 700px) { .live-tools-grid { grid-template-columns: minmax(0, 1fr); gap: 16px; } }

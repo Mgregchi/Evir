@@ -36,6 +36,11 @@ export class AnimationClock {
     this.#speed = playbackSettings(animation).speed;
   }
   get speed() { return this.#speed; }
+  fork() {
+    const next = new AnimationClock(this.#animation);
+    next.#speed = this.#speed; next.#frames = this.#frames; next.#scrubFrame = this.#scrubFrame;
+    return next;
+  }
   get state() { const result = sample(this.#animation, this.#frames); return this.#scrubFrame === null ? result : {...result,frame:this.#scrubFrame}; }
   advance(seconds) {
     delta(seconds);

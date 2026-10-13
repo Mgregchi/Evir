@@ -34,6 +34,16 @@ export class RuntimePlayer {
     return { id: state.id, name: state.name };
   }
   snapshot() { return structuredClone(this.#project); }
+  // Independent presentation state for speculative commands; source stays immutable.
+  fork() {
+    const next = new RuntimePlayer(this.#project, {artboardId:this.#artboard.id,
+      ...(this.#animation ? {animationId:this.#animation.id} : {}),
+      ...(this.#machine ? {machineId:this.#machine.machine.id} : {})});
+    if (this.#clock) next.#clock = this.#clock.fork();
+    if (this.#machine) for (const key of ['stateId','time','mixing','inputs'])
+      next.#machine[key] = structuredClone(this.#machine[key]);
+    return next;
+  }
   get playback() { return this.#clock ? {...this.#clock.state, speed:this.#clock.speed} : null; }
   setSpeed(value) {
     if (!this.#clock) throw new ProjectError(['runtime: no active animation']);

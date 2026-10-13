@@ -1,3 +1,5 @@
+import {CommandSession} from '@evir/commands';
+import {compassLesson} from '@evir/commands/example';
 import {suite} from './advanced-examples.mjs';
 import {motorcycle} from './motorcycle-scene.mjs';
 import { fitFreehand } from '../../packages/studio/freehand.mjs';
@@ -250,7 +252,13 @@ function arrange() {
   }
   return p;
 }
-const factories={milo,orbit,bloom,tempo,signal,gather,wisp,dawn,arrange,motorcycle:()=>motorcycle(project)};
+function compass() {
+  const {p}=project('compass','Compass — a shared command lesson');
+  const session=new CommandSession(p,{sessionId:'compass-generation'}),lesson=compassLesson(p.artboards[0].id);
+  const r=session.execute({schemaVersion:1,context:session.context,requestId:'build-compass',expectedRevision:0,operation:'patch',payload:{commands:lesson.commands}});
+  if(!r.ok)throw Error(JSON.stringify(r));return session.snapshot();
+}
+const factories={compass,milo,orbit,bloom,tempo,signal,gather,wisp,dawn,arrange,motorcycle:()=>motorcycle(project)};
 for(const original of await suite()){
  const p=structuredClone(original);p.artboards[0].width=p.artboards[0].height=512;
  for(const n of p.nodes){n.transform[4]*=2;n.transform[5]*=2;const g=n.geometry;if(!g)continue;
@@ -270,6 +278,7 @@ for(const name of exampleIds) {
   const compiled=compileProject(p);
   await writeFile(`${output}${name}.evir-project`,JSON.stringify(p,null,2)+'\n');
   await writeFile(`${output}${name}.riv`,compiled.bytes);
+  if(name==='compass') await writeFile(`${output}${name}.commands.json`,JSON.stringify(compassLesson(p.artboards[0].id),null,2)+'\n');
   if(name==='motorcycle') {
     await writeFile(`${output}${name}.riv-map.json`,JSON.stringify(compiled.mapping,null,2)+'\n');
     await writeFile(`${output}${name}-controller.mjs`,await (await import('node:fs/promises')).readFile(new URL('./motorcycle.mjs',import.meta.url)));

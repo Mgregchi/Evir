@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 const root=new URL('../../',import.meta.url);
-const names=['project-model','runtime','renderer-canvas','authoring','format'];
+const names=['project-model','runtime','renderer-canvas','authoring','format','commands'];
 test('package imports have an acyclic graph and cannot reach applications, tools or Rive runtime dependencies',()=>{
   const graph=new Map();
   for(const name of names) {

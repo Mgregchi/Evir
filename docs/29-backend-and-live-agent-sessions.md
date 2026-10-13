@@ -1,6 +1,6 @@
 # Backend and live agent sessions — proposed architecture
 
-Research reviewed 11 October 2026. This records the user's live teaching/storytelling vision and the backend recommendation. **Proposal, not a shipped backend, MCP server, collaboration system or AI integration.** Today's independent engine packages run locally; Studio's project persistence is browser-local. See the [earlier agent/platform research](15-ai-agent-authoring-research.md) and [retrieval provenance](../research/live-agent-sessions/sources.json).
+Research reviewed 11 October 2026. This records the user's live teaching/storytelling vision and the backend recommendation. **Hosted architecture remains a proposal.** A [local command/MCP prototype](33-local-commands-and-mcp.md) now implements initial tooling; there is still no shipped backend, remote pairing, collaboration service or model/narration integration. Today's independent engine packages run locally; Studio's project persistence is browser-local. See the [earlier agent/platform research](15-ai-agent-authoring-research.md) and [retrieval provenance](../research/live-agent-sessions/sources.json).
 
 ## What the backend would own
 
@@ -20,9 +20,9 @@ Cloudflare's primary source overviews describe transactional Durable Object stor
 
 ## Agent tools, not agent-specific scene formats
 
-An external agent pairs to an explicit project/session/artboard with scoped, revocable access. It should not infer the target from whichever Studio tab happens to have focus. The same serializable command layer must serve human editing, backend requests and MCP tools. Today Studio accepts JavaScript callbacks in history transactions; those are **not** already a remote command API. Extracting bounded declarative commands is the first engineering prerequisite.
+An external agent pairs to an explicit project/session/artboard with scoped, revocable access. It should not infer the target from whichever Studio tab happens to have focus. The same serializable command layer must serve human editing, backend requests and MCP tools. Today Studio accepts JavaScript callbacks in history transactions; those are **not** already a remote command API. The bounded command package now implements an initial subset alongside existing human editing callbacks. Migrating all human operations and adding remote coordination remain later work.
 
-Proposed tool names below are design examples, not discoverable tools today:
+The table below records the original proposed tools. The local prototype now exposes the declared subset in [its contract](33-local-commands-and-mcp.md); frame capture remains proposed.
 
 | Tool | Purpose |
 | --- | --- |
