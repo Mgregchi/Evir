@@ -47,16 +47,17 @@ if(!process.env.CHROMIUM_PATH && !fs.existsSync('/usr/bin/chromium'))process.env
           const evaluated=animation.playback?playbackSample({...animation,playback:{...animation.playback,iterations:animation.playback.mode==='once'?1:0}},frame/animation.fps).frame:frame;
           await compare(animation,evaluated,`${animation.name} native time ${frame/animation.fps}s`);
         }
-        if(name==='gather') {
+        if(name==='gather'||name==='measure') {
           const {alignmentMoves,applyAlignment}=await import('../../packages/studio/alignment.mjs');
           const {compileProject}=await import('@evir/format');
-          const aligned=structuredClone(project),ids=[1,2,3].map(i=>`gather-card-${i}`);
-          applyAlignment(aligned,alignmentMoves(aligned,ids,'left'));
-          const dir='research/results/studio-snapping';fs.mkdirSync(dir,{recursive:true});
-          fs.writeFileSync(`${dir}/gather-aligned.evir-project`,JSON.stringify(aligned,null,2)+'\n');
-          fs.writeFileSync(`${dir}/gather-aligned.riv`,compileProject(aligned).bytes);
+          const aligned=structuredClone(project),ids=name==='gather'?[1,2,3].map(i=>`gather-card-${i}`):['measure-card-1','measure-reference-card','measure-card-3'];
+          if(name==='measure')aligned.editor.locked.push('measure-reference-card');
+          applyAlignment(aligned,alignmentMoves(aligned,ids,name==='gather'?'left':'top',name==='measure'?'measure-reference-card':null));
+          const dir=name==='gather'?'research/results/studio-snapping':'research/results/studio-guides';fs.mkdirSync(dir,{recursive:true});
+          fs.writeFileSync(`${dir}/${name}-aligned.evir-project`,JSON.stringify(aligned,null,2)+'\n');
+          fs.writeFileSync(`${dir}/${name}-aligned.riv`,compileProject(aligned).bytes);
           for(const frame of [0,60]) {
-            await load({src:`/${dir}/gather-aligned.riv`,animations:aligned.animations[0].name});
+            await load({src:`/${dir}/${name}-aligned.riv`,animations:aligned.animations[0].name});
             await page.evaluate(({name,seconds})=>{player.scrub(name,seconds);player.drawFrame();},{name:aligned.animations[0].name,seconds:frame/60});
             await compare(aligned.animations[0],frame,`aligned composition frame ${frame}`,aligned);
           }

@@ -3,6 +3,7 @@ import {compassLesson} from '@evir/commands/example';
 import {suite} from './advanced-examples.mjs';
 import {motorcycle} from './motorcycle-scene.mjs';
 import { fitFreehand } from '../../packages/studio/freehand.mjs';
+import { defaultGuides } from '../../packages/studio/guides.mjs';
 import { exampleIds } from './examples.mjs';
 import { createProject, validateProject } from '@evir/project-model';
 import { setKey, bindPath, setWeight } from '@evir/authoring';
@@ -258,7 +259,22 @@ function compass() {
   const r=session.execute({schemaVersion:1,context:session.context,requestId:'build-compass',expectedRevision:0,operation:'patch',payload:{commands:lesson.commands}});
   if(!r.ok)throw Error(JSON.stringify(r));return session.snapshot();
 }
-const factories={compass,milo,orbit,bloom,tempo,signal,gather,wisp,dawn,arrange,motorcycle:()=>motorcycle(project)};
+function measure() {
+  const {p,node,box,oval,anim,key}=project('measure','Measure — a little balance');
+  box('backdrop',32,40,448,432,34,'#e8efe7');
+  box('rail',68,340,376,10,5,'#cedcd1');
+  for(const [i,x,y,color] of [[1,66,190,'#e6ba98'],[2,206,130,'#294d40'],[3,346,215,'#90d4b5']]) {
+    const card=node(i===2?'reference-card':`card-${i}`,'group',null,null,x,y);
+    box(`card-${i}-body`,0,0,100,150,24,color,card);
+    box(`card-${i}-label`,20,106,60,7,3,i===2?'#a4d9bf':'#426b58',card);
+    oval(`card-${i}-symbol`,50,52,23,23,i===2?'#a4d9bf':'#426b58',card);
+    oval(`card-${i}-center`,50,52,9,9,color,card);
+  }
+  const glow=oval('balance-indicator',256,398,12,12,'#87bba2');
+  const a=anim('breathe','Balance');key(a,glow,'scaleX',[[0,1],[60,1.3],[120,1]]);key(a,glow,'scaleY',[[0,1],[60,1.3],[120,1]]);
+  return p;
+}
+const factories={measure,compass,milo,orbit,bloom,tempo,signal,gather,wisp,dawn,arrange,motorcycle:()=>motorcycle(project)};
 for(const original of await suite()){
  const p=structuredClone(original);p.artboards[0].width=p.artboards[0].height=512;
  for(const n of p.nodes){n.transform[4]*=2;n.transform[5]*=2;const g=n.geometry;if(!g)continue;
@@ -279,6 +295,11 @@ for(const name of exampleIds) {
   await writeFile(`${output}${name}.evir-project`,JSON.stringify(p,null,2)+'\n');
   await writeFile(`${output}${name}.riv`,compiled.bytes);
   if(name==='compass') await writeFile(`${output}${name}.commands.json`,JSON.stringify(compassLesson(p.artboards[0].id),null,2)+'\n');
+  if(name==='measure') {
+    const guides=defaultGuides();guides.rulers=true;guides.grid={visible:true,snap:true,spacing:32,originX:0,originY:0};
+    guides.guides=[{id:'measure-center',axis:'x',position:256,visible:true},{id:'measure-top',axis:'y',position:130,visible:true}];
+    await writeFile(`${output}${name}.guides.json`,JSON.stringify(guides,null,2)+'\n');
+  }
   if(name==='motorcycle') {
     await writeFile(`${output}${name}.riv-map.json`,JSON.stringify(compiled.mapping,null,2)+'\n');
     await writeFile(`${output}${name}-controller.mjs`,await (await import('node:fs/promises')).readFile(new URL('./motorcycle.mjs',import.meta.url)));

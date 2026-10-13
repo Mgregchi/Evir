@@ -1570,3 +1570,11 @@ body > #notice {
 .live-badge { color: var(--accent); font-size: 12px; }
 @media(max-width:850px) { .guidance-sheet, .rive-view-sheet { width: 100%; } }
 .live-tools-grid select { width: 100%; min-height: 44px; padding: 8px; color: var(--text); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; }
+.guide-manager fieldset { min-width: 0; margin: 16px 0; padding: 12px; border: 1px solid var(--line); border-radius: 12px; }
+.guide-manager legend { padding: 0 6px; }
+.guide-manager .field { gap: 12px; }
+.guide-manager .field:has(input[type=checkbox]) { flex-direction: row; align-items: center; justify-content: space-between; min-height: 44px; }
+.guide-manager input[type=checkbox] { width: 24px; height: 24px; flex: 0 0 24px; accent-color: var(--accent); }
+.guide-manager input[type=number] { max-width: 160px; }
+.guide-row { padding: 8px 0 16px; border-bottom: 1px solid var(--line); margin-bottom: 12px; }
+.guide-manager input[type=file] { max-width: 100%; min-width: 0; }

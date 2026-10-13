@@ -99,7 +99,7 @@ export function snapMove(box, targets, dx, dy, zoom, bypass = false) {
 
 // One selected root aligns to its artboard; several roots align to their union.
 // Prepare all members before changing anything, preserving atomic rejection.
-export function alignmentMoves(p, ids, alignment) {
+export function alignmentMoves(p, ids, alignment, keyId = null) {
   const rules = {
     left: ["x", 0],
     center: ["x", 1],
@@ -115,10 +115,15 @@ export function alignmentMoves(p, ids, alignment) {
     throw Error("Show the selected layers before aligning them.");
   if (new Set(roots.map((n) => n.artboardId)).size !== 1)
     throw Error("Align layers on the same artboard.");
-  const prepared = prepareSelectionMove(p, ids);
+  const key = keyId && roots.find((n) => n.id === keyId);
+  if (keyId && (!key || roots.length < 2))
+    throw Error("Choose a selected independent layer as the alignment reference.");
+  // The key is stationary, so it may be locked. Every moving member still
+  // passes the normal lock/affine checks before any source mutation.
+  const prepared = prepareSelectionMove(p, roots.filter((n) => n.id !== keyId).map((n) => n.id));
   const a = p.artboards.find((a) => a.id === roots[0].artboardId);
   const reference =
-    roots.length === 1
+    key ? nodeBounds(p, key) : roots.length === 1
       ? { x: 0, y: 0, width: a.width, height: a.height }
       : selectionBounds(p, ids);
   const [axis, index] = rules[alignment];

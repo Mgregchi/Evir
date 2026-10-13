@@ -1,0 +1,43 @@
+[
+  {
+    "name": "rive",
+    "url": "https://rive.app/docs/editor/design/rulers-and-guides",
+    "accessed": "2026-10-13",
+    "httpStatus": 200,
+    "bytes": 356255,
+    "sha256": "954f2e6ec4726ce67256d363cdebba45c616dc64b92009b39594c42b243a6a44"
+  },
+  {
+    "name": "penpot",
+    "url": "https://help.penpot.app/user-guide/first-steps/the-interface/",
+    "accessed": "2026-10-13",
+    "httpStatus": 200,
+    "bytes": 41624,
+    "sha256": "5d626e5212832d6a94ea3641debe9f1acd84e81c76adde498e839a5e4304ee07"
+  },
+  {
+    "name": "dragging",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html",
+    "accessed": "2026-10-13",
+    "httpStatus": 200,
+    "bytes": 48929,
+    "sha256": "c3905630a35b6e8246aba32c1769f3ff82b217d464d41e4b1b2a34b9df5771c6"
+  },
+  {
+    "name": "adobe",
+    "url": "https://helpx.adobe.com/illustrator/using/moving-aligning-distributing-objects.html",
+    "accessed": "2026-10-13",
+    "httpStatus": 200,
+    "bytes": 506424,
+    "sha256": "7ca3b00570ba545b6fd879c4df40db3d18953d0b62a6deed71f48a44cba3652c"
+  },
+  {
+    "name": "rive-alignment",
+    "url": "https://rive.app/docs/editor/fundamentals/align-and-distribute",
+    "accessed": "2026-10-13",
+    "httpStatus": 200,
+    "bytes": 299685,
+    "sha256": "03605e8f645d72692c0b379ade79854caa631d655902f687d6f8d87097973c27",
+    "priorResearch": "docs/26-studio-alignment-and-snapping.md"
+  }
+]
