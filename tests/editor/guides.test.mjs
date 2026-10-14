@@ -23,7 +23,7 @@ test("Guide presets strictly validate bounded positions, counts, flags and IDs",
   assert.deepEqual(parseGuidePreset(JSON.stringify(s)), s);
   for (const change of [
     (v) => (v.extra = true),
-    (v) => (v.version = 2),
+    (v) => (v.version = 3),
     (v) => (v.visible = "true"),
     (v) => (v.grid.spacing = 0),
     (v) => (v.grid.originX = Infinity),

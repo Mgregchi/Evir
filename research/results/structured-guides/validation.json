@@ -1,0 +1,125 @@
+{
+  "checkedAt": "2026-10-14T19:53:36.542319+00:00",
+  "scope": "Structured authoring guides and fixed-reference distribution, plus the original Loom study. Guide preferences are separate from source/native exports; no runtime/format/backend change.",
+  "research": "research/structured-guides/sources.json",
+  "environment": {
+    "node": "24.19.0",
+    "npm": "11.9.0",
+    "chromium": "151.0.7922.173",
+    "playwright": "1.63.0",
+    "riveRuntime": "2.44.0",
+    "axe": "4.14.0",
+    "rendering": "Linux headless Chromium; ANGLE Vulkan SwiftShader software. No physical GPU/device measurements."
+  },
+  "sourceSHA256": {
+    "packages/studio/guides.mjs": "7dfcfb06116e892b1f2ca33db0ef7c6d35a0beb457a0616e4d491d90433f793f",
+    "packages/studio/guide-components.mjs": "ec39066655fa20b19cffbe2270f5c54ecd4bd3b3051d889b3af4f26cb8659e25",
+    "packages/studio/guide-controls.mjs": "9b7d78f5d11d05e6190dce42752182c8ec0736b92897e584e1ed180ca7cf26e4",
+    "packages/studio/alignment.mjs": "1b6521f1280d4cc0f9e66cfcc3645daa7d62a6da079d5997b1b11fa25007b018",
+    "packages/studio/studio.mjs": "6d438f6171b64ddb675785c2735773ea26331de897ea5b7882df6d65b66e533c",
+    "packages/studio/studio.css": "9913070fd901d30fb02c78a751cf65bfe349d6e4b2c57aa92552a65e7e446c74",
+    "apps/web/generate-examples.mjs": "a4b1a135fae08a50e0367d676ae99af5c83fd7a5fc54914a4c860f6f5bae93fd",
+    "tests/editor/structured-guides.test.mjs": "89e4862484e10f9db64005fe44d46f44905dd24d399cb82414ea6667ac5e47ab",
+    "tests/editor/structured-guides-browser.cjs": "18969af96277ba3593fb72acb838ee8fab7c0d86accef6519e88d32539a2b576",
+    "tests/site/examples.cjs": "5ba15e704b2d044958d20a354593fef752046cc9f5634a4e27e17221a9252441"
+  },
+  "fixtureSHA256": {
+    "apps/web/assets/examples/loom.evir-project": "1b0ff9abe7a613ea0bb64777dcd2129f7386cf3e405c13a3eaeb51dbed26abcd",
+    "apps/web/assets/examples/loom.riv": "d7419a1d0cc10ce7a0d519233beca5f55b734b3060a5cdf73548094c8fbabb13",
+    "apps/web/assets/examples/loom.guides.json": "0f4ac66a4c2f72ad70134c1df6649b958d861cb2ae09f63b82bb2f0725c3d075",
+    "apps/web/assets/loom-poster.png": "bbf7200a9e40995a07534c518817321e8c0887436a2aad3325e1251b379e4d3f",
+    "research/results/structured-guides/loom-spaced.evir-project": "84e1878a01e82e3dcc03304ba87872d3263a39cc660ab910ef81f0a6883e39b7",
+    "research/results/structured-guides/loom-spaced.riv": "46129b83bdc0e5d4d636e0ae6042c6391f7b20908acaa51a55376d1ff169b676",
+    "research/results/structured-guides/loom-spaced-oracle.evir-project": "edcd13c3bca7580d54c828657238a65e979a06bbf4bf095d9d87259ad959e21a",
+    "research/results/structured-guides/loom-spaced-oracle.riv": "46129b83bdc0e5d4d636e0ae6042c6391f7b20908acaa51a55376d1ff169b676"
+  },
+  "checks": [
+    {
+      "label": "editor",
+      "command": "npm run test:editor",
+      "exitCode": 0,
+      "seconds": 199.52
+    },
+    {
+      "label": "guide-followup",
+      "command": "node tests/editor/structured-guides-browser.cjs",
+      "exitCode": 0,
+      "seconds": 21.74
+    },
+    {
+      "label": "native",
+      "command": "npm run validate:editor",
+      "exitCode": 0,
+      "seconds": 266.72
+    },
+    {
+      "label": "frontend",
+      "command": "npm run test:frontend",
+      "exitCode": 0,
+      "seconds": 1.19
+    },
+    {
+      "label": "web",
+      "command": "npm run test:web",
+      "exitCode": 0,
+      "seconds": 509.82
+    },
+    {
+      "label": "experience",
+      "command": "npm run test:experience",
+      "exitCode": 0,
+      "seconds": 4.62
+    }
+  ],
+  "followup": [
+    {
+      "label": "final-build",
+      "command": "npm run web:build",
+      "exitCode": 0,
+      "seconds": 0.73
+    },
+    {
+      "label": "final-guide",
+      "command": "node tests/editor/structured-guides-browser.cjs",
+      "exitCode": 0,
+      "seconds": 22.13
+    },
+    {
+      "label": "final-legacy-guide",
+      "command": "node tests/editor/guides-browser.cjs",
+      "exitCode": 0,
+      "seconds": 13.66
+    }
+  ],
+  "executionNotes": [
+    "Environment restart interrupted the check runner after the full editor suite completed. Its passing result was retained; remaining checks were resumed, without claiming an interrupted suite passed.",
+    "The focused guide follow-up added two-root vertical spacing and Undo. Final targeted runs cover the sheet header/footer/label presentation refinements; new and legacy guide workflows both passed."
+  ],
+  "counts": {
+    "editorUnitTests": 84,
+    "frontendUnitTests": 21,
+    "editorBrowserWorkflows": 17,
+    "publicPageConfigurationChecks": 22,
+    "galleryStudies": 20,
+    "selectedAuthoringPlaybackComparisons": 188,
+    "selectedGalleryComparisons": 300,
+    "loomOfficialComparisonsPerBackend": 6
+  },
+  "browser": "research/results/structured-guides/browser.json",
+  "native": "research/results/structured-guides/native.json",
+  "gallery": "research/results/public-site/examples.json",
+  "notClaimed": [
+    "Physical devices/GPU/memory performance",
+    "Human or screen-reader usability",
+    "Runtime layout/reflow or full renderer parity",
+    "General Rive Editor-file import",
+    "Hosted backend/collaboration services"
+  ],
+  "deferredByUser": [
+    "All physical-device testing",
+    "Hosted backend implementation"
+  ],
+  "ci": {
+    "status": "Not yet checked on the new PR"
+  }
+}

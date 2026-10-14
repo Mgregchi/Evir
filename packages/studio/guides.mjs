@@ -3,13 +3,14 @@ import { snapMove } from "./alignment.mjs";
 export const GUIDE_CACHE = "evir.studio.guides.v1";
 export const defaultGuides = () => ({
   format: "evir-guides",
-  version: 1,
+  version: 2,
   visible: true,
   rulers: false,
   locked: false,
   snap: true,
   grid: { visible: false, snap: false, spacing: 32, originX: 0, originY: 0 },
   guides: [],
+  components: [],
 });
 const exact = (value, keys) =>
   value &&
@@ -19,12 +20,21 @@ const exact = (value, keys) =>
 const position = (v) =>
   typeof v === "number" && Number.isFinite(v) && Math.abs(v) <= 1e6;
 export function validateGuides(value) {
+  // Version 1 has exactly the former fields; upgrade without changing its guides.
+  if (
+    value?.version === 1 &&
+    exact(
+      value,
+      Object.keys(defaultGuides()).filter((k) => k !== "components"),
+    )
+  )
+    value = { ...value, version: 2, components: [] };
   if (
     !exact(value, Object.keys(defaultGuides())) ||
     value.format !== "evir-guides" ||
-    value.version !== 1
+    value.version !== 2
   )
-    throw Error("Choose an Evir guide preset (version 1).");
+    throw Error("Choose an Evir guide preset (version 1 or 2).");
   for (const key of ["visible", "rulers", "locked", "snap"])
     if (typeof value[key] !== "boolean")
       throw Error("Guide switches must be true or false.");
@@ -60,7 +70,113 @@ export function validateGuides(value) {
       );
     ids.add(g.id);
   }
+  if (!Array.isArray(value.components) || value.components.length > 8)
+    throw Error("Use at most eight row/column guide components.");
+  for (const c of value.components) {
+    if (
+      !exact(c, [
+        "id",
+        "axis",
+        "count",
+        "mode",
+        "size",
+        "gap",
+        "margin",
+        "align",
+        "visible",
+        "snap",
+      ]) ||
+      typeof c.id !== "string" ||
+      !/^[\w-]{1,80}$/.test(c.id) ||
+      ids.has(c.id) ||
+      !["x", "y"].includes(c.axis) ||
+      !Number.isInteger(c.count) ||
+      c.count < 1 ||
+      c.count > 32 ||
+      !["fixed", "stretch"].includes(c.mode) ||
+      !Number.isFinite(c.size) ||
+      c.size < 1 ||
+      c.size > 10000 ||
+      !Number.isFinite(c.gap) ||
+      c.gap < 0 ||
+      c.gap > 10000 ||
+      !position(c.margin) ||
+      c.margin < 0 ||
+      !["start", "center", "end"].includes(c.align) ||
+      typeof c.visible !== "boolean" ||
+      typeof c.snap !== "boolean"
+    )
+      throw Error(
+        "Guide components need unique IDs, 1–32 tracks, valid sizing/alignment, width/height 1–10,000, gutters 0–10,000 and margins 0–1,000,000.",
+      );
+    ids.add(c.id);
+  }
   return structuredClone(value);
+}
+
+export const newGuideComponent = (axis) => ({
+  id: crypto.randomUUID(),
+  axis,
+  count: 3,
+  mode: "stretch",
+  size: 96,
+  gap: 24,
+  margin: 48,
+  align: "center",
+  visible: true,
+  snap: true,
+});
+
+// A bounded geometric overlay, independent of scene nodes or runtime layout.
+export function componentBands(c, board) {
+  const extent = board[c.axis === "x" ? "width" : "height"],
+    inner = extent - 2 * c.margin;
+  const size =
+    c.mode === "stretch" ? (inner - (c.count - 1) * c.gap) / c.count : c.size;
+  const span = c.count * size + (c.count - 1) * c.gap;
+  if (
+    !Number.isInteger(c.count) ||
+    c.count < 1 ||
+    c.count > 32 ||
+    !Number.isFinite(inner) ||
+    !Number.isFinite(size) ||
+    size <= 0 ||
+    !Number.isFinite(span) ||
+    span - inner > Math.max(1, extent) * 1e-12 ||
+    c.gap < 0 ||
+    c.margin < 0
+  )
+    throw Error(
+      "Tracks and gutters must fit between the artboard margins. Reduce count, size, gutter or margin.",
+    );
+  const offset =
+    c.mode === "stretch" || c.align === "start"
+      ? 0
+      : c.align === "end"
+        ? inner - span
+        : (inner - span) / 2;
+  return Array.from({ length: c.count }, (_, i) => {
+    const start = c.margin + offset + i * (size + c.gap);
+    return {
+      id: c.id,
+      axis: c.axis,
+      start,
+      end: start + size,
+      center: start + size / 2,
+    };
+  });
+}
+export function layoutBands(settings, board, strict = false) {
+  const bands = [];
+  for (const c of settings.components || []) {
+    try {
+      const generated = componentBands(c, board);
+      if (c.visible) bands.push(...generated);
+    } catch (error) {
+      if (strict) throw error;
+    } // Resized artboards can invalidate an old preference.
+  }
+  return bands;
 }
 export function parseGuidePreset(text) {
   if (
@@ -128,7 +244,11 @@ export function guidePreferences(storage, warning = () => {}) {
   };
 }
 export const canSnapGuides = (s) =>
-  s.visible && ((s.snap && s.guides.some((g) => g.visible)) || s.grid.snap);
+  s.visible &&
+  ((s.snap &&
+    (s.guides.some((g) => g.visible) ||
+      (s.components || []).some((c) => c.visible && c.snap))) ||
+    s.grid.snap);
 
 export function snapWithGuides(
   box,
@@ -153,6 +273,24 @@ export function snapWithGuides(
       height: board.height,
     };
   for (const axis of ["x", "y"]) {
+    if (settings.snap) {
+      const enabled = new Set(
+        (settings.components || [])
+          .filter((c) => c.visible && c.snap)
+          .map((c) => c.id),
+      );
+      for (const band of layoutBands(settings, board))
+        if (band.axis === axis && enabled.has(band.id))
+          for (const value of [band.start, band.center, band.end])
+            combined[axis].push({
+              value,
+              box: {
+                ...reference,
+                id: band.id,
+                name: axis === "x" ? "Column guide" : "Row guide",
+              },
+            });
+    }
     if (settings.snap)
       for (const g of settings.guides)
         if (g.visible && g.axis === axis)

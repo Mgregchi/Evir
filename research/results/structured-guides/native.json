@@ -1,0 +1,2556 @@
+{
+  "checkedAt": "2026-10-14T19:38:20.157Z",
+  "scope": "Selected software export/render/clock regressions. Official Rive 2.44.0; Chromium/SwiftShader, no physical GPU/device or human claim.",
+  "authoringPlaybackComparisons": 188,
+  "galleryComparisons": 300,
+  "records": [
+    {
+      "originPath": "research/results/editor-authoring-canvas.json",
+      "result": {
+        "runtime": "2.44.0",
+        "backend": "canvas",
+        "diagnostics": {
+          "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+          "contexts": [
+            {
+              "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+              "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+              "unmaskedRendererAvailable": true,
+              "contextLost": false,
+              "errors": [],
+              "extensions": [
+                "EXT_clip_control",
+                "EXT_color_buffer_float",
+                "EXT_color_buffer_half_float",
+                "EXT_conservative_depth",
+                "EXT_depth_clamp",
+                "EXT_float_blend",
+                "EXT_polygon_offset_clamp",
+                "EXT_texture_compression_bptc",
+                "EXT_texture_compression_rgtc",
+                "EXT_texture_filter_anisotropic",
+                "EXT_texture_mirror_clamp_to_edge",
+                "NV_shader_noperspective_interpolation",
+                "OES_draw_buffers_indexed",
+                "OES_sample_variables",
+                "OES_shader_multisample_interpolation",
+                "OES_texture_float_linear",
+                "OVR_multiview2",
+                "WEBGL_clip_cull_distance",
+                "WEBGL_compressed_texture_astc",
+                "WEBGL_compressed_texture_etc",
+                "WEBGL_compressed_texture_etc1",
+                "WEBGL_compressed_texture_s3tc",
+                "WEBGL_compressed_texture_s3tc_srgb",
+                "WEBGL_debug_renderer_info",
+                "WEBGL_debug_shaders",
+                "WEBGL_lose_context",
+                "WEBGL_multi_draw",
+                "WEBGL_polygon_mode",
+                "WEBGL_stencil_texturing"
+              ]
+            }
+          ]
+        },
+        "fixtureSHA256": {
+          "authoring": "64aba43bac6f8d86caeb3618aacf73a9a38e40260f675629aae4adee88121228",
+          "browser-authored": "0f34c5e53f351a4cca6bd6b9031c75a62566e4bb4bbccac2f00f8f77349dab1b"
+        },
+        "checks": [
+          {
+            "label": "rest",
+            "mae": 0.0009307861328125,
+            "expectedCovered": 11488,
+            "runtimeCovered": 11488
+          },
+          {
+            "label": "Bend 0",
+            "mae": 0.0009307861328125,
+            "expectedCovered": 11488,
+            "runtimeCovered": 11488
+          },
+          {
+            "label": "Bend 15",
+            "mae": 0,
+            "expectedCovered": 11398,
+            "runtimeCovered": 11398
+          },
+          {
+            "label": "Bend 30",
+            "mae": 0,
+            "expectedCovered": 9784,
+            "runtimeCovered": 9784
+          },
+          {
+            "label": "Bend 60",
+            "mae": 0,
+            "expectedCovered": 5996,
+            "runtimeCovered": 5996
+          },
+          {
+            "label": "Active 30",
+            "mae": 0,
+            "expectedCovered": 9500,
+            "runtimeCovered": 9500
+          },
+          {
+            "label": "Active 60",
+            "mae": 0,
+            "expectedCovered": 10353,
+            "runtimeCovered": 10353
+          },
+          {
+            "label": "entry",
+            "mae": 0.0009307861328125,
+            "expectedCovered": 11488,
+            "runtimeCovered": 11488
+          },
+          {
+            "label": "AND guard",
+            "mae": 0.0009307861328125,
+            "expectedCovered": 11488,
+            "runtimeCovered": 11488
+          },
+          {
+            "label": "numeric transition",
+            "mae": 0,
+            "expectedCovered": 9500,
+            "runtimeCovered": 9500
+          },
+          {
+            "label": "bool false + numeric return",
+            "mae": 0.0009307861328125,
+            "expectedCovered": 11488,
+            "runtimeCovered": 11488
+          },
+          {
+            "label": "trigger",
+            "mae": 0,
+            "expectedCovered": 9500,
+            "runtimeCovered": 9500
+          },
+          {
+            "label": "reset",
+            "mae": 0.0009307861328125,
+            "expectedCovered": 11488,
+            "runtimeCovered": 11488
+          },
+          {
+            "label": "click listener",
+            "mae": 0,
+            "expectedCovered": 9500,
+            "runtimeCovered": 9500
+          },
+          {
+            "label": "browser authored Animation 1 0",
+            "mae": 0.007640838623046875,
+            "expectedCovered": 7062,
+            "runtimeCovered": 7062
+          },
+          {
+            "label": "browser authored Animation 1 30",
+            "mae": 0.008106231689453125,
+            "expectedCovered": 7043,
+            "runtimeCovered": 7043
+          },
+          {
+            "label": "browser authored Animation 1 60",
+            "mae": 0.00846099853515625,
+            "expectedCovered": 7035,
+            "runtimeCovered": 7035
+          },
+          {
+            "label": "browser authored Active 0",
+            "mae": 0.013851165771484375,
+            "expectedCovered": 7133,
+            "runtimeCovered": 7131
+          },
+          {
+            "label": "browser authored Active 30",
+            "mae": 0.013851165771484375,
+            "expectedCovered": 7133,
+            "runtimeCovered": 7131
+          },
+          {
+            "label": "browser authored Active 60",
+            "mae": 0.013851165771484375,
+            "expectedCovered": 7133,
+            "runtimeCovered": 7131
+          }
+        ],
+        "exportBytes": 1115,
+        "scope": "2D fills, animated gradients, clipping, outer feather, embedded PNG/TTF assets, single-line text, textured meshes, one/two-bone unit-scale IK, four-influence skinning, typed keys, one-layer timed transitions, 1D blends and click listeners. No universal Rive compatibility."
+      }
+    },
+    {
+      "originPath": "research/results/editor-authoring-webgl2.json",
+      "result": {
+        "runtime": "2.44.0",
+        "backend": "webgl2",
+        "diagnostics": {
+          "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+          "contexts": [
+            {
+              "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+              "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+              "unmaskedRendererAvailable": true,
+              "contextLost": false,
+              "errors": [],
+              "extensions": [
+                "EXT_clip_control",
+                "EXT_color_buffer_float",
+                "EXT_color_buffer_half_float",
+                "EXT_conservative_depth",
+                "EXT_depth_clamp",
+                "EXT_float_blend",
+                "EXT_polygon_offset_clamp",
+                "EXT_texture_compression_bptc",
+                "EXT_texture_compression_rgtc",
+                "EXT_texture_filter_anisotropic",
+                "EXT_texture_mirror_clamp_to_edge",
+                "NV_shader_noperspective_interpolation",
+                "OES_draw_buffers_indexed",
+                "OES_sample_variables",
+                "OES_shader_multisample_interpolation",
+                "OES_texture_float_linear",
+                "OVR_multiview2",
+                "WEBGL_clip_cull_distance",
+                "WEBGL_compressed_texture_astc",
+                "WEBGL_compressed_texture_etc",
+                "WEBGL_compressed_texture_etc1",
+                "WEBGL_compressed_texture_s3tc",
+                "WEBGL_compressed_texture_s3tc_srgb",
+                "WEBGL_debug_renderer_info",
+                "WEBGL_debug_shaders",
+                "WEBGL_lose_context",
+                "WEBGL_multi_draw",
+                "WEBGL_polygon_mode",
+                "WEBGL_stencil_texturing"
+              ]
+            },
+            {
+              "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+              "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+              "unmaskedRendererAvailable": true,
+              "contextLost": false,
+              "errors": [],
+              "extensions": [
+                "EXT_clip_control",
+                "EXT_color_buffer_float",
+                "EXT_color_buffer_half_float",
+                "EXT_conservative_depth",
+                "EXT_depth_clamp",
+                "EXT_float_blend",
+                "EXT_polygon_offset_clamp",
+                "EXT_texture_compression_bptc",
+                "EXT_texture_compression_rgtc",
+                "EXT_texture_filter_anisotropic",
+                "EXT_texture_mirror_clamp_to_edge",
+                "NV_shader_noperspective_interpolation",
+                "OES_draw_buffers_indexed",
+                "OES_sample_variables",
+                "OES_shader_multisample_interpolation",
+                "OES_texture_float_linear",
+                "OVR_multiview2",
+                "WEBGL_clip_cull_distance",
+                "WEBGL_compressed_texture_astc",
+                "WEBGL_compressed_texture_etc",
+                "WEBGL_compressed_texture_etc1",
+                "WEBGL_compressed_texture_s3tc",
+                "WEBGL_compressed_texture_s3tc_srgb",
+                "WEBGL_debug_renderer_info",
+                "WEBGL_debug_shaders",
+                "WEBGL_lose_context",
+                "WEBGL_multi_draw",
+                "WEBGL_polygon_mode",
+                "WEBGL_stencil_texturing"
+              ]
+            }
+          ]
+        },
+        "fixtureSHA256": {
+          "authoring": "64aba43bac6f8d86caeb3618aacf73a9a38e40260f675629aae4adee88121228",
+          "browser-authored": "0f34c5e53f351a4cca6bd6b9031c75a62566e4bb4bbccac2f00f8f77349dab1b"
+        },
+        "checks": [
+          {
+            "label": "rest",
+            "mae": 0.16790008544921875,
+            "expectedCovered": 11488,
+            "runtimeCovered": 11400
+          },
+          {
+            "label": "Bend 0",
+            "mae": 0.16790008544921875,
+            "expectedCovered": 11488,
+            "runtimeCovered": 11400
+          },
+          {
+            "label": "Bend 15",
+            "mae": 0.22022247314453125,
+            "expectedCovered": 11398,
+            "runtimeCovered": 11286
+          },
+          {
+            "label": "Bend 30",
+            "mae": 0.13883590698242188,
+            "expectedCovered": 9784,
+            "runtimeCovered": 9716
+          },
+          {
+            "label": "Bend 60",
+            "mae": 0.119232177734375,
+            "expectedCovered": 5996,
+            "runtimeCovered": 5940
+          },
+          {
+            "label": "Active 30",
+            "mae": 0.13967514038085938,
+            "expectedCovered": 9500,
+            "runtimeCovered": 9434
+          },
+          {
+            "label": "Active 60",
+            "mae": 0.14490127563476562,
+            "expectedCovered": 10353,
+            "runtimeCovered": 10281
+          },
+          {
+            "label": "entry",
+            "mae": 0.16790008544921875,
+            "expectedCovered": 11488,
+            "runtimeCovered": 11400
+          },
+          {
+            "label": "AND guard",
+            "mae": 0.16790008544921875,
+            "expectedCovered": 11488,
+            "runtimeCovered": 11400
+          },
+          {
+            "label": "numeric transition",
+            "mae": 0.13967514038085938,
+            "expectedCovered": 9500,
+            "runtimeCovered": 9434
+          },
+          {
+            "label": "bool false + numeric return",
+            "mae": 0.16790008544921875,
+            "expectedCovered": 11488,
+            "runtimeCovered": 11400
+          },
+          {
+            "label": "trigger",
+            "mae": 0.13967514038085938,
+            "expectedCovered": 9500,
+            "runtimeCovered": 9434
+          },
+          {
+            "label": "reset",
+            "mae": 0.16790008544921875,
+            "expectedCovered": 11488,
+            "runtimeCovered": 11400
+          },
+          {
+            "label": "click listener",
+            "mae": 0.13967514038085938,
+            "expectedCovered": 9500,
+            "runtimeCovered": 9434
+          },
+          {
+            "label": "browser authored Animation 1 0",
+            "mae": 0.049419403076171875,
+            "expectedCovered": 7062,
+            "runtimeCovered": 7059
+          },
+          {
+            "label": "browser authored Animation 1 30",
+            "mae": 0.045627593994140625,
+            "expectedCovered": 7043,
+            "runtimeCovered": 7041
+          },
+          {
+            "label": "browser authored Animation 1 60",
+            "mae": 0.04761505126953125,
+            "expectedCovered": 7035,
+            "runtimeCovered": 7034
+          },
+          {
+            "label": "browser authored Active 0",
+            "mae": 0.050273895263671875,
+            "expectedCovered": 7133,
+            "runtimeCovered": 7129
+          },
+          {
+            "label": "browser authored Active 30",
+            "mae": 0.050273895263671875,
+            "expectedCovered": 7133,
+            "runtimeCovered": 7129
+          },
+          {
+            "label": "browser authored Active 60",
+            "mae": 0.050273895263671875,
+            "expectedCovered": 7133,
+            "runtimeCovered": 7129
+          }
+        ],
+        "exportBytes": 1115,
+        "scope": "2D fills, animated gradients, clipping, outer feather, embedded PNG/TTF assets, single-line text, textured meshes, one/two-bone unit-scale IK, four-influence skinning, typed keys, one-layer timed transitions, 1D blends and click listeners. No universal Rive compatibility."
+      }
+    },
+    {
+      "originPath": "research/results/advanced-authoring/canvas.json",
+      "result": {
+        "checkedAt": "2026-10-14T19:35:29.683Z",
+        "runtimeVersion": "2.44.0",
+        "browserVersion": "151.0.7922.173",
+        "diagnostics": {
+          "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+          "contexts": [
+            {
+              "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+              "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+              "unmaskedRendererAvailable": true,
+              "contextLost": false,
+              "errors": [],
+              "extensions": [
+                "EXT_clip_control",
+                "EXT_color_buffer_float",
+                "EXT_color_buffer_half_float",
+                "EXT_conservative_depth",
+                "EXT_depth_clamp",
+                "EXT_float_blend",
+                "EXT_polygon_offset_clamp",
+                "EXT_texture_compression_bptc",
+                "EXT_texture_compression_rgtc",
+                "EXT_texture_filter_anisotropic",
+                "EXT_texture_mirror_clamp_to_edge",
+                "NV_shader_noperspective_interpolation",
+                "OES_draw_buffers_indexed",
+                "OES_sample_variables",
+                "OES_shader_multisample_interpolation",
+                "OES_texture_float_linear",
+                "OVR_multiview2",
+                "WEBGL_clip_cull_distance",
+                "WEBGL_compressed_texture_astc",
+                "WEBGL_compressed_texture_etc",
+                "WEBGL_compressed_texture_etc1",
+                "WEBGL_compressed_texture_s3tc",
+                "WEBGL_compressed_texture_s3tc_srgb",
+                "WEBGL_debug_renderer_info",
+                "WEBGL_debug_shaders",
+                "WEBGL_lose_context",
+                "WEBGL_multi_draw",
+                "WEBGL_polygon_mode",
+                "WEBGL_stencil_texturing"
+              ]
+            }
+          ]
+        },
+        "fixtures": {
+          "canopy": {
+            "evir-project": "9ca6c4513fd3b4a7b1dafd2c570d58d64b8ac1b19c16e4179c6f73ce0d8e7ce1",
+            "riv": "be2f513d4f5f8170ea756b452bbc09fc95b35d1f895f41949d4467a3e496b405"
+          },
+          "halo": {
+            "evir-project": "d63f9f7b07f57a80e3d228783d059f138b04d085c8dc5b3094d6e6a22649ccdd",
+            "riv": "575a2b87b5a5d0593699e8add17a422c0d3f45c546decc7d1691b154eda77447"
+          },
+          "reach": {
+            "evir-project": "d46c353072686f7a2f959a1a89d0c1e4d428bdafa76a57f433c0763ba3458ad2",
+            "riv": "12a89853cf3d193bc29c3921893dc21ddcf3fbed6947e08d128c1de502307dfc"
+          },
+          "kite": {
+            "evir-project": "81b00b771572e3a7e9048fdc95f36f5a03c1accddf0498f39ced150bd4ea6527",
+            "riv": "8697a82a88bb69a1e6988544b5af9704f281ba53db7a092abb8273c0ff899350"
+          },
+          "caption": {
+            "evir-project": "5b9f68d97c230bfab9c0f4f7d1e20d18a8372d9d030c05433f510775d5594719",
+            "riv": "b35f4f55a2c7a78b5355d342b8338dfb54ed796f7d0296244bb14c98b4b0ca75"
+          },
+          "blend": {
+            "evir-project": "526485faf8c88d87aad378149b6862c97f74d836ac4c5d16520259286db74159",
+            "riv": "57a8d0355e9925065a196dfe76b8381ab2da7e0494931ffc5610f6057a4a392c"
+          },
+          "reach-one-bone": {
+            "evir-project": "70255644d64497b8da5c14f016dbd9045062cfb42bebf5dadc736047e1c34556",
+            "riv": "a59d216b8babc120cde2ab355d3002c9d155c217f3bbf9117060a8572912cc0c"
+          },
+          "reach-inverted": {
+            "evir-project": "9007640c2b016d9675471f46d55322f3ac9d7eb8099377f6e11b04e15895345b",
+            "riv": "993b7d205f3bdf2e9af5760f2837432a8be20b291e24ecffc483b3f83f9f0d31"
+          },
+          "reach-half-strength": {
+            "evir-project": "e454410601c905c257f7ccecbe1a3739b7773e1127594babef58440710f729c1",
+            "riv": "bb0256fd4e7c36f94bd89f4863ac2c591e4cc466215429a5b8a3be8290426415"
+          }
+        },
+        "environment": "headless Chromium; software rendering; no physical-device evidence",
+        "results": [
+          {
+            "scene": "canopy",
+            "frame": 0,
+            "mae": 0,
+            "covered": 28224,
+            "backend": "canvas"
+          },
+          {
+            "scene": "canopy",
+            "frame": 30,
+            "mae": 0,
+            "covered": 28224,
+            "backend": "canvas"
+          },
+          {
+            "scene": "canopy",
+            "frame": 60,
+            "mae": 0,
+            "covered": 28224,
+            "backend": "canvas"
+          },
+          {
+            "scene": "halo",
+            "frame": 0,
+            "mae": 15.879058837890625,
+            "covered": 12544,
+            "backend": "canvas",
+            "comparison": "Approximate Canvas blur; Canvas oracle ignores feather; WebGL2 oracle feathers"
+          },
+          {
+            "scene": "halo",
+            "frame": 30,
+            "mae": 15.879058837890625,
+            "covered": 12544,
+            "backend": "canvas",
+            "comparison": "Approximate Canvas blur; Canvas oracle ignores feather; WebGL2 oracle feathers"
+          },
+          {
+            "scene": "halo",
+            "frame": 60,
+            "mae": 15.879058837890625,
+            "covered": 12544,
+            "backend": "canvas",
+            "comparison": "Approximate Canvas blur; Canvas oracle ignores feather; WebGL2 oracle feathers"
+          },
+          {
+            "scene": "reach",
+            "frame": 0,
+            "mae": 0,
+            "covered": 2086,
+            "backend": "canvas"
+          },
+          {
+            "scene": "reach",
+            "frame": 30,
+            "mae": 0,
+            "covered": 1990,
+            "backend": "canvas"
+          },
+          {
+            "scene": "reach",
+            "frame": 60,
+            "mae": 0,
+            "covered": 1961,
+            "backend": "canvas"
+          },
+          {
+            "scene": "kite",
+            "frame": 0,
+            "mae": 0.05600738525390625,
+            "covered": 25600,
+            "backend": "canvas"
+          },
+          {
+            "scene": "kite",
+            "frame": 30,
+            "mae": 0.8679885864257812,
+            "covered": 25597,
+            "backend": "canvas"
+          },
+          {
+            "scene": "kite",
+            "frame": 60,
+            "mae": 0.9041061401367188,
+            "covered": 25598,
+            "backend": "canvas"
+          },
+          {
+            "scene": "caption",
+            "frame": 0,
+            "mae": 0.09711456298828125,
+            "covered": 787,
+            "backend": "canvas"
+          },
+          {
+            "scene": "caption",
+            "frame": 30,
+            "mae": 0.1117095947265625,
+            "covered": 1059,
+            "backend": "canvas"
+          },
+          {
+            "scene": "caption",
+            "frame": 60,
+            "mae": 0.2801666259765625,
+            "covered": 1360,
+            "backend": "canvas"
+          },
+          {
+            "scene": "blend",
+            "frame": 0,
+            "mae": 0,
+            "covered": 1400,
+            "backend": "canvas"
+          },
+          {
+            "scene": "blend",
+            "frame": 30,
+            "mae": 0,
+            "covered": 1400,
+            "backend": "canvas"
+          },
+          {
+            "scene": "blend",
+            "frame": 60,
+            "mae": 0,
+            "covered": 1400,
+            "backend": "canvas"
+          },
+          {
+            "scene": "reach-one-bone",
+            "frame": 0,
+            "mae": 0,
+            "covered": 1949,
+            "backend": "canvas"
+          },
+          {
+            "scene": "reach-one-bone",
+            "frame": 30,
+            "mae": 0,
+            "covered": 1928,
+            "backend": "canvas"
+          },
+          {
+            "scene": "reach-one-bone",
+            "frame": 60,
+            "mae": 0,
+            "covered": 1907,
+            "backend": "canvas"
+          },
+          {
+            "scene": "reach-inverted",
+            "frame": 0,
+            "mae": 0,
+            "covered": 2086,
+            "backend": "canvas"
+          },
+          {
+            "scene": "reach-inverted",
+            "frame": 30,
+            "mae": 0,
+            "covered": 1988,
+            "backend": "canvas"
+          },
+          {
+            "scene": "reach-inverted",
+            "frame": 60,
+            "mae": 0,
+            "covered": 1961,
+            "backend": "canvas"
+          },
+          {
+            "scene": "reach-half-strength",
+            "frame": 0,
+            "mae": 0,
+            "covered": 2056,
+            "backend": "canvas"
+          },
+          {
+            "scene": "reach-half-strength",
+            "frame": 30,
+            "mae": 0,
+            "covered": 2059,
+            "backend": "canvas"
+          },
+          {
+            "scene": "reach-half-strength",
+            "frame": 60,
+            "mae": 0,
+            "covered": 2035,
+            "backend": "canvas"
+          },
+          {
+            "scene": "blend-machine",
+            "dt": 0,
+            "level": null,
+            "mae": 0,
+            "backend": "canvas"
+          },
+          {
+            "scene": "blend-machine",
+            "dt": 0.1,
+            "level": null,
+            "mae": 0,
+            "backend": "canvas"
+          },
+          {
+            "scene": "blend-machine",
+            "dt": 0.1,
+            "level": null,
+            "mae": 0,
+            "backend": "canvas"
+          },
+          {
+            "scene": "blend-machine",
+            "dt": 0.2,
+            "level": null,
+            "mae": 0,
+            "backend": "canvas"
+          },
+          {
+            "scene": "blend-machine",
+            "dt": 0.2,
+            "level": null,
+            "mae": 0,
+            "backend": "canvas"
+          },
+          {
+            "scene": "blend-machine",
+            "dt": 0,
+            "level": 0.25,
+            "mae": 0.0006103515625,
+            "backend": "canvas"
+          }
+        ]
+      }
+    },
+    {
+      "originPath": "research/results/advanced-authoring/webgl2.json",
+      "result": {
+        "checkedAt": "2026-10-14T19:36:03.411Z",
+        "runtimeVersion": "2.44.0",
+        "browserVersion": "151.0.7922.173",
+        "diagnostics": {
+          "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+          "contexts": [
+            {
+              "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+              "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+              "unmaskedRendererAvailable": true,
+              "contextLost": false,
+              "errors": [],
+              "extensions": [
+                "EXT_clip_control",
+                "EXT_color_buffer_float",
+                "EXT_color_buffer_half_float",
+                "EXT_conservative_depth",
+                "EXT_depth_clamp",
+                "EXT_float_blend",
+                "EXT_polygon_offset_clamp",
+                "EXT_texture_compression_bptc",
+                "EXT_texture_compression_rgtc",
+                "EXT_texture_filter_anisotropic",
+                "EXT_texture_mirror_clamp_to_edge",
+                "NV_shader_noperspective_interpolation",
+                "OES_draw_buffers_indexed",
+                "OES_sample_variables",
+                "OES_shader_multisample_interpolation",
+                "OES_texture_float_linear",
+                "OVR_multiview2",
+                "WEBGL_clip_cull_distance",
+                "WEBGL_compressed_texture_astc",
+                "WEBGL_compressed_texture_etc",
+                "WEBGL_compressed_texture_etc1",
+                "WEBGL_compressed_texture_s3tc",
+                "WEBGL_compressed_texture_s3tc_srgb",
+                "WEBGL_debug_renderer_info",
+                "WEBGL_debug_shaders",
+                "WEBGL_lose_context",
+                "WEBGL_multi_draw",
+                "WEBGL_polygon_mode",
+                "WEBGL_stencil_texturing"
+              ]
+            },
+            {
+              "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+              "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+              "unmaskedRendererAvailable": true,
+              "contextLost": false,
+              "errors": [],
+              "extensions": [
+                "EXT_clip_control",
+                "EXT_color_buffer_float",
+                "EXT_color_buffer_half_float",
+                "EXT_conservative_depth",
+                "EXT_depth_clamp",
+                "EXT_float_blend",
+                "EXT_polygon_offset_clamp",
+                "EXT_texture_compression_bptc",
+                "EXT_texture_compression_rgtc",
+                "EXT_texture_filter_anisotropic",
+                "EXT_texture_mirror_clamp_to_edge",
+                "NV_shader_noperspective_interpolation",
+                "OES_draw_buffers_indexed",
+                "OES_sample_variables",
+                "OES_shader_multisample_interpolation",
+                "OES_texture_float_linear",
+                "OVR_multiview2",
+                "WEBGL_clip_cull_distance",
+                "WEBGL_compressed_texture_astc",
+                "WEBGL_compressed_texture_etc",
+                "WEBGL_compressed_texture_etc1",
+                "WEBGL_compressed_texture_s3tc",
+                "WEBGL_compressed_texture_s3tc_srgb",
+                "WEBGL_debug_renderer_info",
+                "WEBGL_debug_shaders",
+                "WEBGL_lose_context",
+                "WEBGL_multi_draw",
+                "WEBGL_polygon_mode",
+                "WEBGL_stencil_texturing"
+              ]
+            }
+          ]
+        },
+        "fixtures": {
+          "canopy": {
+            "evir-project": "9ca6c4513fd3b4a7b1dafd2c570d58d64b8ac1b19c16e4179c6f73ce0d8e7ce1",
+            "riv": "be2f513d4f5f8170ea756b452bbc09fc95b35d1f895f41949d4467a3e496b405"
+          },
+          "halo": {
+            "evir-project": "d63f9f7b07f57a80e3d228783d059f138b04d085c8dc5b3094d6e6a22649ccdd",
+            "riv": "575a2b87b5a5d0593699e8add17a422c0d3f45c546decc7d1691b154eda77447"
+          },
+          "reach": {
+            "evir-project": "d46c353072686f7a2f959a1a89d0c1e4d428bdafa76a57f433c0763ba3458ad2",
+            "riv": "12a89853cf3d193bc29c3921893dc21ddcf3fbed6947e08d128c1de502307dfc"
+          },
+          "kite": {
+            "evir-project": "81b00b771572e3a7e9048fdc95f36f5a03c1accddf0498f39ced150bd4ea6527",
+            "riv": "8697a82a88bb69a1e6988544b5af9704f281ba53db7a092abb8273c0ff899350"
+          },
+          "caption": {
+            "evir-project": "5b9f68d97c230bfab9c0f4f7d1e20d18a8372d9d030c05433f510775d5594719",
+            "riv": "b35f4f55a2c7a78b5355d342b8338dfb54ed796f7d0296244bb14c98b4b0ca75"
+          },
+          "blend": {
+            "evir-project": "526485faf8c88d87aad378149b6862c97f74d836ac4c5d16520259286db74159",
+            "riv": "57a8d0355e9925065a196dfe76b8381ab2da7e0494931ffc5610f6057a4a392c"
+          },
+          "reach-one-bone": {
+            "evir-project": "70255644d64497b8da5c14f016dbd9045062cfb42bebf5dadc736047e1c34556",
+            "riv": "a59d216b8babc120cde2ab355d3002c9d155c217f3bbf9117060a8572912cc0c"
+          },
+          "reach-inverted": {
+            "evir-project": "9007640c2b016d9675471f46d55322f3ac9d7eb8099377f6e11b04e15895345b",
+            "riv": "993b7d205f3bdf2e9af5760f2837432a8be20b291e24ecffc483b3f83f9f0d31"
+          },
+          "reach-half-strength": {
+            "evir-project": "e454410601c905c257f7ccecbe1a3739b7773e1127594babef58440710f729c1",
+            "riv": "bb0256fd4e7c36f94bd89f4863ac2c591e4cc466215429a5b8a3be8290426415"
+          }
+        },
+        "environment": "headless Chromium; software rendering; no physical-device evidence",
+        "results": [
+          {
+            "scene": "canopy",
+            "frame": 0,
+            "mae": 0.08093643188476562,
+            "covered": 28224,
+            "backend": "webgl2"
+          },
+          {
+            "scene": "canopy",
+            "frame": 30,
+            "mae": 0.06731033325195312,
+            "covered": 28224,
+            "backend": "webgl2"
+          },
+          {
+            "scene": "canopy",
+            "frame": 60,
+            "mae": 0.030792236328125,
+            "covered": 28224,
+            "backend": "webgl2"
+          },
+          {
+            "scene": "halo",
+            "frame": 0,
+            "mae": 5.075374603271484,
+            "covered": 21247,
+            "backend": "webgl2",
+            "comparison": "Approximate Canvas blur; Canvas oracle ignores feather; WebGL2 oracle feathers"
+          },
+          {
+            "scene": "halo",
+            "frame": 30,
+            "mae": 5.075374603271484,
+            "covered": 21247,
+            "backend": "webgl2",
+            "comparison": "Approximate Canvas blur; Canvas oracle ignores feather; WebGL2 oracle feathers"
+          },
+          {
+            "scene": "halo",
+            "frame": 60,
+            "mae": 5.075374603271484,
+            "covered": 21247,
+            "backend": "webgl2",
+            "comparison": "Approximate Canvas blur; Canvas oracle ignores feather; WebGL2 oracle feathers"
+          },
+          {
+            "scene": "reach",
+            "frame": 0,
+            "mae": 0.15870285034179688,
+            "covered": 1999,
+            "backend": "webgl2"
+          },
+          {
+            "scene": "reach",
+            "frame": 30,
+            "mae": 0.11363983154296875,
+            "covered": 1922,
+            "backend": "webgl2"
+          },
+          {
+            "scene": "reach",
+            "frame": 60,
+            "mae": 0.12505340576171875,
+            "covered": 1891,
+            "backend": "webgl2"
+          },
+          {
+            "scene": "kite",
+            "frame": 0,
+            "mae": 0.054790496826171875,
+            "covered": 25600,
+            "backend": "webgl2"
+          },
+          {
+            "scene": "kite",
+            "frame": 30,
+            "mae": 0.294158935546875,
+            "covered": 25847,
+            "backend": "webgl2"
+          },
+          {
+            "scene": "kite",
+            "frame": 60,
+            "mae": 0.3230743408203125,
+            "covered": 25850,
+            "backend": "webgl2"
+          },
+          {
+            "scene": "caption",
+            "frame": 0,
+            "mae": 0.11307525634765625,
+            "covered": 731,
+            "backend": "webgl2"
+          },
+          {
+            "scene": "caption",
+            "frame": 30,
+            "mae": 0.16352462768554688,
+            "covered": 991,
+            "backend": "webgl2"
+          },
+          {
+            "scene": "caption",
+            "frame": 60,
+            "mae": 0.3363761901855469,
+            "covered": 1274,
+            "backend": "webgl2"
+          },
+          {
+            "scene": "blend",
+            "frame": 0,
+            "mae": 0,
+            "covered": 1400,
+            "backend": "webgl2"
+          },
+          {
+            "scene": "blend",
+            "frame": 30,
+            "mae": 0,
+            "covered": 1400,
+            "backend": "webgl2"
+          },
+          {
+            "scene": "blend",
+            "frame": 60,
+            "mae": 0,
+            "covered": 1400,
+            "backend": "webgl2"
+          },
+          {
+            "scene": "reach-one-bone",
+            "frame": 0,
+            "mae": 0.06675338745117188,
+            "covered": 1924,
+            "backend": "webgl2"
+          },
+          {
+            "scene": "reach-one-bone",
+            "frame": 30,
+            "mae": 0.0484466552734375,
+            "covered": 1911,
+            "backend": "webgl2"
+          },
+          {
+            "scene": "reach-one-bone",
+            "frame": 60,
+            "mae": 0.0670013427734375,
+            "covered": 1882,
+            "backend": "webgl2"
+          },
+          {
+            "scene": "reach-inverted",
+            "frame": 0,
+            "mae": 0.15870285034179688,
+            "covered": 1999,
+            "backend": "webgl2"
+          },
+          {
+            "scene": "reach-inverted",
+            "frame": 30,
+            "mae": 0.13115692138671875,
+            "covered": 1930,
+            "backend": "webgl2"
+          },
+          {
+            "scene": "reach-inverted",
+            "frame": 60,
+            "mae": 0.12163543701171875,
+            "covered": 1903,
+            "backend": "webgl2"
+          },
+          {
+            "scene": "reach-half-strength",
+            "frame": 0,
+            "mae": 0.13363265991210938,
+            "covered": 1998,
+            "backend": "webgl2"
+          },
+          {
+            "scene": "reach-half-strength",
+            "frame": 30,
+            "mae": 0.14795303344726562,
+            "covered": 1990,
+            "backend": "webgl2"
+          },
+          {
+            "scene": "reach-half-strength",
+            "frame": 60,
+            "mae": 0.11024093627929688,
+            "covered": 1983,
+            "backend": "webgl2"
+          },
+          {
+            "scene": "blend-machine",
+            "dt": 0,
+            "level": null,
+            "mae": 0,
+            "backend": "webgl2"
+          },
+          {
+            "scene": "blend-machine",
+            "dt": 0.1,
+            "level": null,
+            "mae": 0,
+            "backend": "webgl2"
+          },
+          {
+            "scene": "blend-machine",
+            "dt": 0.1,
+            "level": null,
+            "mae": 0,
+            "backend": "webgl2"
+          },
+          {
+            "scene": "blend-machine",
+            "dt": 0.2,
+            "level": null,
+            "mae": 0,
+            "backend": "webgl2"
+          },
+          {
+            "scene": "blend-machine",
+            "dt": 0.2,
+            "level": null,
+            "mae": 0,
+            "backend": "webgl2"
+          },
+          {
+            "scene": "blend-machine",
+            "dt": 0,
+            "level": 0.25,
+            "mae": 0.0006103515625,
+            "backend": "webgl2"
+          }
+        ]
+      }
+    },
+    {
+      "originPath": "research/results/playback/native-canvas.json",
+      "result": {
+        "checkedAt": "2026-10-14T19:36:04.029Z",
+        "runtimeVersion": "2.44.0",
+        "backend": "canvas",
+        "scope": "Native instance advancement for modes/speed; fixed counts applied by explicit Evir map clock adapter. Software graphics, not device performance.",
+        "checks": [
+          {
+            "scene": "playback-once-1",
+            "adapter": false,
+            "dt": 0,
+            "frame": 0,
+            "nativeFrame": 0,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-once-1",
+            "adapter": false,
+            "dt": 0.25,
+            "frame": 22.5,
+            "nativeFrame": 22.5,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1518,
+            "actualCovered": 1518
+          },
+          {
+            "scene": "playback-once-1",
+            "adapter": false,
+            "dt": 0.25,
+            "frame": 45,
+            "nativeFrame": 45,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-once-1",
+            "adapter": false,
+            "dt": 0.25,
+            "frame": 60,
+            "nativeFrame": 60,
+            "completed": true,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-once-1",
+            "adapter": false,
+            "dt": 0.25,
+            "frame": 60,
+            "nativeFrame": 60,
+            "completed": true,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-once-1",
+            "adapter": false,
+            "dt": 0.5,
+            "frame": 60,
+            "nativeFrame": 60,
+            "completed": true,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-once-1",
+            "adapter": false,
+            "dt": 1.75,
+            "frame": 60,
+            "nativeFrame": 60,
+            "completed": true,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-loop-0",
+            "adapter": false,
+            "dt": 0,
+            "frame": 0,
+            "nativeFrame": 0,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-loop-0",
+            "adapter": false,
+            "dt": 0.25,
+            "frame": 22.5,
+            "nativeFrame": 22.5,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1518,
+            "actualCovered": 1518
+          },
+          {
+            "scene": "playback-loop-0",
+            "adapter": false,
+            "dt": 0.25,
+            "frame": 45,
+            "nativeFrame": 45,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-loop-0",
+            "adapter": false,
+            "dt": 0.25,
+            "frame": 7.5,
+            "nativeFrame": 7.5,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1518,
+            "actualCovered": 1518
+          },
+          {
+            "scene": "playback-loop-0",
+            "adapter": false,
+            "dt": 0.25,
+            "frame": 30,
+            "nativeFrame": 30,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-loop-0",
+            "adapter": false,
+            "dt": 0.5,
+            "frame": 15,
+            "nativeFrame": 15,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-loop-0",
+            "adapter": false,
+            "dt": 1.75,
+            "frame": 52.5,
+            "nativeFrame": 52.5,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1518,
+            "actualCovered": 1518
+          },
+          {
+            "scene": "playback-ping-pong-0",
+            "adapter": false,
+            "dt": 0,
+            "frame": 0,
+            "nativeFrame": 0,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-ping-pong-0",
+            "adapter": false,
+            "dt": 0.25,
+            "frame": 22.5,
+            "nativeFrame": 22.5,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1518,
+            "actualCovered": 1518
+          },
+          {
+            "scene": "playback-ping-pong-0",
+            "adapter": false,
+            "dt": 0.25,
+            "frame": 45,
+            "nativeFrame": 45,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-ping-pong-0",
+            "adapter": false,
+            "dt": 0.25,
+            "frame": 52.5,
+            "nativeFrame": 52.5,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1518,
+            "actualCovered": 1518
+          },
+          {
+            "scene": "playback-ping-pong-0",
+            "adapter": false,
+            "dt": 0.25,
+            "frame": 30,
+            "nativeFrame": 30,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-ping-pong-0",
+            "adapter": false,
+            "dt": 0.5,
+            "frame": 15,
+            "nativeFrame": 15,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-ping-pong-0",
+            "adapter": false,
+            "dt": 1.75,
+            "frame": 52.5,
+            "nativeFrame": 52.5,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1518,
+            "actualCovered": 1518
+          },
+          {
+            "scene": "playback-loop-3",
+            "adapter": true,
+            "dt": 0,
+            "frame": 0,
+            "nativeFrame": 0,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-loop-3",
+            "adapter": true,
+            "dt": 0.5,
+            "frame": 37.5,
+            "nativeFrame": 37.5,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1518,
+            "actualCovered": 1518
+          },
+          {
+            "scene": "playback-loop-3",
+            "adapter": true,
+            "dt": 0.5,
+            "frame": 15,
+            "nativeFrame": 15,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-loop-3",
+            "adapter": true,
+            "dt": 0.5,
+            "frame": 52.5,
+            "nativeFrame": 52.5,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1518,
+            "actualCovered": 1518
+          },
+          {
+            "scene": "playback-loop-3",
+            "adapter": true,
+            "dt": 0.5,
+            "frame": 30,
+            "nativeFrame": 30,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-loop-3",
+            "adapter": true,
+            "dt": 0.5,
+            "frame": 60,
+            "nativeFrame": 60,
+            "completed": true,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-loop-3",
+            "adapter": true,
+            "dt": 0.5,
+            "frame": 60,
+            "nativeFrame": 60,
+            "completed": true,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-loop-3",
+            "adapter": true,
+            "dt": 0.5,
+            "frame": 60,
+            "nativeFrame": 60,
+            "completed": true,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-loop-3",
+            "adapter": true,
+            "dt": 1,
+            "frame": 60,
+            "nativeFrame": 60,
+            "completed": true,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-loop-3",
+            "adapter": true,
+            "dt": 1,
+            "frame": 60,
+            "nativeFrame": 60,
+            "completed": true,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-ping-pong-2",
+            "adapter": true,
+            "dt": 0,
+            "frame": 0,
+            "nativeFrame": 0,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-ping-pong-2",
+            "adapter": true,
+            "dt": 0.5,
+            "frame": 37.5,
+            "nativeFrame": 37.5,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1518,
+            "actualCovered": 1518
+          },
+          {
+            "scene": "playback-ping-pong-2",
+            "adapter": true,
+            "dt": 0.5,
+            "frame": 45,
+            "nativeFrame": 45,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-ping-pong-2",
+            "adapter": true,
+            "dt": 0.5,
+            "frame": 7.5,
+            "nativeFrame": 7.5,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1518,
+            "actualCovered": 1518
+          },
+          {
+            "scene": "playback-ping-pong-2",
+            "adapter": true,
+            "dt": 0.5,
+            "frame": 30,
+            "nativeFrame": 30,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-ping-pong-2",
+            "adapter": true,
+            "dt": 0.5,
+            "frame": 52.5,
+            "nativeFrame": 52.5,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1518,
+            "actualCovered": 1518
+          },
+          {
+            "scene": "playback-ping-pong-2",
+            "adapter": true,
+            "dt": 0.5,
+            "frame": 15,
+            "nativeFrame": 15,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-ping-pong-2",
+            "adapter": true,
+            "dt": 0.5,
+            "frame": 0,
+            "nativeFrame": 0,
+            "completed": true,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-ping-pong-2",
+            "adapter": true,
+            "dt": 1,
+            "frame": 0,
+            "nativeFrame": 0,
+            "completed": true,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-ping-pong-2",
+            "adapter": true,
+            "dt": 1,
+            "frame": 0,
+            "nativeFrame": 0,
+            "completed": true,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          }
+        ],
+        "browserVersion": "151.0.7922.173",
+        "diagnostics": {
+          "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+          "contexts": [
+            {
+              "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+              "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+              "unmaskedRendererAvailable": true,
+              "contextLost": false,
+              "errors": [],
+              "extensions": [
+                "EXT_clip_control",
+                "EXT_color_buffer_float",
+                "EXT_color_buffer_half_float",
+                "EXT_conservative_depth",
+                "EXT_depth_clamp",
+                "EXT_float_blend",
+                "EXT_polygon_offset_clamp",
+                "EXT_texture_compression_bptc",
+                "EXT_texture_compression_rgtc",
+                "EXT_texture_filter_anisotropic",
+                "EXT_texture_mirror_clamp_to_edge",
+                "NV_shader_noperspective_interpolation",
+                "OES_draw_buffers_indexed",
+                "OES_sample_variables",
+                "OES_shader_multisample_interpolation",
+                "OES_texture_float_linear",
+                "OVR_multiview2",
+                "WEBGL_clip_cull_distance",
+                "WEBGL_compressed_texture_astc",
+                "WEBGL_compressed_texture_etc",
+                "WEBGL_compressed_texture_etc1",
+                "WEBGL_compressed_texture_s3tc",
+                "WEBGL_compressed_texture_s3tc_srgb",
+                "WEBGL_debug_renderer_info",
+                "WEBGL_debug_shaders",
+                "WEBGL_lose_context",
+                "WEBGL_multi_draw",
+                "WEBGL_polygon_mode",
+                "WEBGL_stencil_texturing"
+              ]
+            }
+          ]
+        },
+        "fixtures": {
+          "playback-once-1": {
+            "riv": "4ea56b76343fb269f8a43d81d2e67d321d3e296ba0778f6cd6c7985af5b9ef2b",
+            "evir-project": "49e0c3c8d9f0e66fffe5b6bdc041019f40a00585fcc8bc1df06129edd0f3e3f1",
+            "riv-map.json": "92f3428e934f176c99665bcd59844a86a5fc005314d3f3ae7d8c7f405518dcb3"
+          },
+          "playback-loop-0": {
+            "riv": "d1bb2e45d63c975066c9d3f77631f1ef77da7ab397de413be328b2491bd2c0b8",
+            "evir-project": "d8bce0506f7c75d1f23b609b716a7aa7c50161d41ef48d8e636c2f3f3692a827",
+            "riv-map.json": "cd575ab22abcec88005cd8ed9e9ccaead3e922755d5d4e99ccfd89bd982d95b0"
+          },
+          "playback-ping-pong-0": {
+            "riv": "ea8a81932e5a6ec5efc50b238e578b4d30b367b3f772606000476e401f586663",
+            "evir-project": "7890258b9f1118dd1f14949a9f942410ea61a912cd7830eebc834a83f82b7f62",
+            "riv-map.json": "90093a5998ac26b8fa21b554ae47bfac2a1c33933492cd59f642054c896a0f4f"
+          },
+          "playback-loop-3": {
+            "riv": "dce2dae68e7de21cf479fd492738021edddd58be107ca14192e73441032e021b",
+            "evir-project": "656075d6bf0123c07413c1a1b1204a866e580537370e6333e68a8b50ec5971d6",
+            "riv-map.json": "61bf6d3c28f0b629dbda4e24d2f89d91bceb940b3089a82f8ef3a293be3177aa"
+          },
+          "playback-ping-pong-2": {
+            "riv": "d2732f058c09961637e720f0f103e01b7bf3fb60efe05a7958e894a4cb914384",
+            "evir-project": "e4bae05b22e6f54a97dbba1d192548ff8e46e624aa76db22313839d4a863ceda",
+            "riv-map.json": "ce7e6ac73e3398e03fe5fccb87fdb6bf4b3a6452144833ee1124ac44c34cf4c4"
+          }
+        }
+      }
+    },
+    {
+      "originPath": "research/results/playback/native-webgl2.json",
+      "result": {
+        "checkedAt": "2026-10-14T19:37:16.694Z",
+        "runtimeVersion": "2.44.0",
+        "backend": "webgl2",
+        "scope": "Native instance advancement for modes/speed; fixed counts applied by explicit Evir map clock adapter. Software graphics, not device performance.",
+        "checks": [
+          {
+            "scene": "playback-once-1",
+            "adapter": false,
+            "dt": 0,
+            "frame": 0,
+            "nativeFrame": 0,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-once-1",
+            "adapter": false,
+            "dt": 0.25,
+            "frame": 22.5,
+            "nativeFrame": 22.5,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1518,
+            "actualCovered": 1518
+          },
+          {
+            "scene": "playback-once-1",
+            "adapter": false,
+            "dt": 0.25,
+            "frame": 45,
+            "nativeFrame": 45,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-once-1",
+            "adapter": false,
+            "dt": 0.25,
+            "frame": 60,
+            "nativeFrame": 60,
+            "completed": true,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-once-1",
+            "adapter": false,
+            "dt": 0.25,
+            "frame": 60,
+            "nativeFrame": 60,
+            "completed": true,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-once-1",
+            "adapter": false,
+            "dt": 0.5,
+            "frame": 60,
+            "nativeFrame": 60,
+            "completed": true,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-once-1",
+            "adapter": false,
+            "dt": 1.75,
+            "frame": 60,
+            "nativeFrame": 60,
+            "completed": true,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-loop-0",
+            "adapter": false,
+            "dt": 0,
+            "frame": 0,
+            "nativeFrame": 0,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-loop-0",
+            "adapter": false,
+            "dt": 0.25,
+            "frame": 22.5,
+            "nativeFrame": 22.5,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1518,
+            "actualCovered": 1518
+          },
+          {
+            "scene": "playback-loop-0",
+            "adapter": false,
+            "dt": 0.25,
+            "frame": 45,
+            "nativeFrame": 45,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-loop-0",
+            "adapter": false,
+            "dt": 0.25,
+            "frame": 7.5,
+            "nativeFrame": 7.5,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1518,
+            "actualCovered": 1518
+          },
+          {
+            "scene": "playback-loop-0",
+            "adapter": false,
+            "dt": 0.25,
+            "frame": 30,
+            "nativeFrame": 30,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-loop-0",
+            "adapter": false,
+            "dt": 0.5,
+            "frame": 15,
+            "nativeFrame": 15,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-loop-0",
+            "adapter": false,
+            "dt": 1.75,
+            "frame": 52.5,
+            "nativeFrame": 52.5,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1518,
+            "actualCovered": 1518
+          },
+          {
+            "scene": "playback-ping-pong-0",
+            "adapter": false,
+            "dt": 0,
+            "frame": 0,
+            "nativeFrame": 0,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-ping-pong-0",
+            "adapter": false,
+            "dt": 0.25,
+            "frame": 22.5,
+            "nativeFrame": 22.5,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1518,
+            "actualCovered": 1518
+          },
+          {
+            "scene": "playback-ping-pong-0",
+            "adapter": false,
+            "dt": 0.25,
+            "frame": 45,
+            "nativeFrame": 45,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-ping-pong-0",
+            "adapter": false,
+            "dt": 0.25,
+            "frame": 52.5,
+            "nativeFrame": 52.5,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1518,
+            "actualCovered": 1518
+          },
+          {
+            "scene": "playback-ping-pong-0",
+            "adapter": false,
+            "dt": 0.25,
+            "frame": 30,
+            "nativeFrame": 30,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-ping-pong-0",
+            "adapter": false,
+            "dt": 0.5,
+            "frame": 15,
+            "nativeFrame": 15,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-ping-pong-0",
+            "adapter": false,
+            "dt": 1.75,
+            "frame": 52.5,
+            "nativeFrame": 52.5,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1518,
+            "actualCovered": 1518
+          },
+          {
+            "scene": "playback-loop-3",
+            "adapter": true,
+            "dt": 0,
+            "frame": 0,
+            "nativeFrame": 0,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-loop-3",
+            "adapter": true,
+            "dt": 0.5,
+            "frame": 37.5,
+            "nativeFrame": 37.5,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1518,
+            "actualCovered": 1518
+          },
+          {
+            "scene": "playback-loop-3",
+            "adapter": true,
+            "dt": 0.5,
+            "frame": 15,
+            "nativeFrame": 15,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-loop-3",
+            "adapter": true,
+            "dt": 0.5,
+            "frame": 52.5,
+            "nativeFrame": 52.5,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1518,
+            "actualCovered": 1518
+          },
+          {
+            "scene": "playback-loop-3",
+            "adapter": true,
+            "dt": 0.5,
+            "frame": 30,
+            "nativeFrame": 30,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-loop-3",
+            "adapter": true,
+            "dt": 0.5,
+            "frame": 60,
+            "nativeFrame": 60,
+            "completed": true,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-loop-3",
+            "adapter": true,
+            "dt": 0.5,
+            "frame": 60,
+            "nativeFrame": 60,
+            "completed": true,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-loop-3",
+            "adapter": true,
+            "dt": 0.5,
+            "frame": 60,
+            "nativeFrame": 60,
+            "completed": true,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-loop-3",
+            "adapter": true,
+            "dt": 1,
+            "frame": 60,
+            "nativeFrame": 60,
+            "completed": true,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-loop-3",
+            "adapter": true,
+            "dt": 1,
+            "frame": 60,
+            "nativeFrame": 60,
+            "completed": true,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-ping-pong-2",
+            "adapter": true,
+            "dt": 0,
+            "frame": 0,
+            "nativeFrame": 0,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-ping-pong-2",
+            "adapter": true,
+            "dt": 0.5,
+            "frame": 37.5,
+            "nativeFrame": 37.5,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1518,
+            "actualCovered": 1518
+          },
+          {
+            "scene": "playback-ping-pong-2",
+            "adapter": true,
+            "dt": 0.5,
+            "frame": 45,
+            "nativeFrame": 45,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-ping-pong-2",
+            "adapter": true,
+            "dt": 0.5,
+            "frame": 7.5,
+            "nativeFrame": 7.5,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1518,
+            "actualCovered": 1518
+          },
+          {
+            "scene": "playback-ping-pong-2",
+            "adapter": true,
+            "dt": 0.5,
+            "frame": 30,
+            "nativeFrame": 30,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-ping-pong-2",
+            "adapter": true,
+            "dt": 0.5,
+            "frame": 52.5,
+            "nativeFrame": 52.5,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1518,
+            "actualCovered": 1518
+          },
+          {
+            "scene": "playback-ping-pong-2",
+            "adapter": true,
+            "dt": 0.5,
+            "frame": 15,
+            "nativeFrame": 15,
+            "completed": false,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-ping-pong-2",
+            "adapter": true,
+            "dt": 0.5,
+            "frame": 0,
+            "nativeFrame": 0,
+            "completed": true,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-ping-pong-2",
+            "adapter": true,
+            "dt": 1,
+            "frame": 0,
+            "nativeFrame": 0,
+            "completed": true,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          },
+          {
+            "scene": "playback-ping-pong-2",
+            "adapter": true,
+            "dt": 1,
+            "frame": 0,
+            "nativeFrame": 0,
+            "completed": true,
+            "mae": 0,
+            "expectedCovered": 1472,
+            "actualCovered": 1472
+          }
+        ],
+        "browserVersion": "151.0.7922.173",
+        "diagnostics": {
+          "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+          "contexts": [
+            {
+              "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+              "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+              "unmaskedRendererAvailable": true,
+              "contextLost": false,
+              "errors": [],
+              "extensions": [
+                "EXT_clip_control",
+                "EXT_color_buffer_float",
+                "EXT_color_buffer_half_float",
+                "EXT_conservative_depth",
+                "EXT_depth_clamp",
+                "EXT_float_blend",
+                "EXT_polygon_offset_clamp",
+                "EXT_texture_compression_bptc",
+                "EXT_texture_compression_rgtc",
+                "EXT_texture_filter_anisotropic",
+                "EXT_texture_mirror_clamp_to_edge",
+                "NV_shader_noperspective_interpolation",
+                "OES_draw_buffers_indexed",
+                "OES_sample_variables",
+                "OES_shader_multisample_interpolation",
+                "OES_texture_float_linear",
+                "OVR_multiview2",
+                "WEBGL_clip_cull_distance",
+                "WEBGL_compressed_texture_astc",
+                "WEBGL_compressed_texture_etc",
+                "WEBGL_compressed_texture_etc1",
+                "WEBGL_compressed_texture_s3tc",
+                "WEBGL_compressed_texture_s3tc_srgb",
+                "WEBGL_debug_renderer_info",
+                "WEBGL_debug_shaders",
+                "WEBGL_lose_context",
+                "WEBGL_multi_draw",
+                "WEBGL_polygon_mode",
+                "WEBGL_stencil_texturing"
+              ]
+            },
+            {
+              "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+              "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+              "unmaskedRendererAvailable": true,
+              "contextLost": false,
+              "errors": [],
+              "extensions": [
+                "EXT_clip_control",
+                "EXT_color_buffer_float",
+                "EXT_color_buffer_half_float",
+                "EXT_conservative_depth",
+                "EXT_depth_clamp",
+                "EXT_float_blend",
+                "EXT_polygon_offset_clamp",
+                "EXT_texture_compression_bptc",
+                "EXT_texture_compression_rgtc",
+                "EXT_texture_filter_anisotropic",
+                "EXT_texture_mirror_clamp_to_edge",
+                "NV_shader_noperspective_interpolation",
+                "OES_draw_buffers_indexed",
+                "OES_sample_variables",
+                "OES_shader_multisample_interpolation",
+                "OES_texture_float_linear",
+                "OVR_multiview2",
+                "WEBGL_clip_cull_distance",
+                "WEBGL_compressed_texture_astc",
+                "WEBGL_compressed_texture_etc",
+                "WEBGL_compressed_texture_etc1",
+                "WEBGL_compressed_texture_s3tc",
+                "WEBGL_compressed_texture_s3tc_srgb",
+                "WEBGL_debug_renderer_info",
+                "WEBGL_debug_shaders",
+                "WEBGL_lose_context",
+                "WEBGL_multi_draw",
+                "WEBGL_polygon_mode",
+                "WEBGL_stencil_texturing"
+              ]
+            }
+          ]
+        },
+        "fixtures": {
+          "playback-once-1": {
+            "riv": "4ea56b76343fb269f8a43d81d2e67d321d3e296ba0778f6cd6c7985af5b9ef2b",
+            "evir-project": "49e0c3c8d9f0e66fffe5b6bdc041019f40a00585fcc8bc1df06129edd0f3e3f1",
+            "riv-map.json": "92f3428e934f176c99665bcd59844a86a5fc005314d3f3ae7d8c7f405518dcb3"
+          },
+          "playback-loop-0": {
+            "riv": "d1bb2e45d63c975066c9d3f77631f1ef77da7ab397de413be328b2491bd2c0b8",
+            "evir-project": "d8bce0506f7c75d1f23b609b716a7aa7c50161d41ef48d8e636c2f3f3692a827",
+            "riv-map.json": "cd575ab22abcec88005cd8ed9e9ccaead3e922755d5d4e99ccfd89bd982d95b0"
+          },
+          "playback-ping-pong-0": {
+            "riv": "ea8a81932e5a6ec5efc50b238e578b4d30b367b3f772606000476e401f586663",
+            "evir-project": "7890258b9f1118dd1f14949a9f942410ea61a912cd7830eebc834a83f82b7f62",
+            "riv-map.json": "90093a5998ac26b8fa21b554ae47bfac2a1c33933492cd59f642054c896a0f4f"
+          },
+          "playback-loop-3": {
+            "riv": "dce2dae68e7de21cf479fd492738021edddd58be107ca14192e73441032e021b",
+            "evir-project": "656075d6bf0123c07413c1a1b1204a866e580537370e6333e68a8b50ec5971d6",
+            "riv-map.json": "61bf6d3c28f0b629dbda4e24d2f89d91bceb940b3089a82f8ef3a293be3177aa"
+          },
+          "playback-ping-pong-2": {
+            "riv": "d2732f058c09961637e720f0f103e01b7bf3fb60efe05a7958e894a4cb914384",
+            "evir-project": "e4bae05b22e6f54a97dbba1d192548ff8e46e624aa76db22313839d4a863ceda",
+            "riv-map.json": "ce7e6ac73e3398e03fe5fccb87fdb6bf4b3a6452144833ee1124ac44c34cf4c4"
+          }
+        }
+      }
+    }
+  ],
+  "verifiedHistoricalFixtureReferences": [
+    {
+      "path": "research/fixtures/editor-authoring/authoring.riv",
+      "sha256": "64aba43bac6f8d86caeb3618aacf73a9a38e40260f675629aae4adee88121228"
+    },
+    {
+      "path": "research/fixtures/editor-authoring/browser-authored.riv",
+      "sha256": "0f34c5e53f351a4cca6bd6b9031c75a62566e4bb4bbccac2f00f8f77349dab1b"
+    },
+    {
+      "path": "research/fixtures/advanced-authoring/canopy.evir-project",
+      "sha256": "9ca6c4513fd3b4a7b1dafd2c570d58d64b8ac1b19c16e4179c6f73ce0d8e7ce1"
+    },
+    {
+      "path": "research/fixtures/advanced-authoring/canopy.riv",
+      "sha256": "be2f513d4f5f8170ea756b452bbc09fc95b35d1f895f41949d4467a3e496b405"
+    },
+    {
+      "path": "research/fixtures/advanced-authoring/halo.evir-project",
+      "sha256": "d63f9f7b07f57a80e3d228783d059f138b04d085c8dc5b3094d6e6a22649ccdd"
+    },
+    {
+      "path": "research/fixtures/advanced-authoring/halo.riv",
+      "sha256": "575a2b87b5a5d0593699e8add17a422c0d3f45c546decc7d1691b154eda77447"
+    },
+    {
+      "path": "research/fixtures/advanced-authoring/reach.evir-project",
+      "sha256": "d46c353072686f7a2f959a1a89d0c1e4d428bdafa76a57f433c0763ba3458ad2"
+    },
+    {
+      "path": "research/fixtures/advanced-authoring/reach.riv",
+      "sha256": "12a89853cf3d193bc29c3921893dc21ddcf3fbed6947e08d128c1de502307dfc"
+    },
+    {
+      "path": "research/fixtures/advanced-authoring/kite.evir-project",
+      "sha256": "81b00b771572e3a7e9048fdc95f36f5a03c1accddf0498f39ced150bd4ea6527"
+    },
+    {
+      "path": "research/fixtures/advanced-authoring/kite.riv",
+      "sha256": "8697a82a88bb69a1e6988544b5af9704f281ba53db7a092abb8273c0ff899350"
+    },
+    {
+      "path": "research/fixtures/advanced-authoring/caption.evir-project",
+      "sha256": "5b9f68d97c230bfab9c0f4f7d1e20d18a8372d9d030c05433f510775d5594719"
+    },
+    {
+      "path": "research/fixtures/advanced-authoring/caption.riv",
+      "sha256": "b35f4f55a2c7a78b5355d342b8338dfb54ed796f7d0296244bb14c98b4b0ca75"
+    },
+    {
+      "path": "research/fixtures/advanced-authoring/blend.evir-project",
+      "sha256": "526485faf8c88d87aad378149b6862c97f74d836ac4c5d16520259286db74159"
+    },
+    {
+      "path": "research/fixtures/advanced-authoring/blend.riv",
+      "sha256": "57a8d0355e9925065a196dfe76b8381ab2da7e0494931ffc5610f6057a4a392c"
+    },
+    {
+      "path": "research/fixtures/advanced-authoring/reach-one-bone.evir-project",
+      "sha256": "70255644d64497b8da5c14f016dbd9045062cfb42bebf5dadc736047e1c34556"
+    },
+    {
+      "path": "research/fixtures/advanced-authoring/reach-one-bone.riv",
+      "sha256": "a59d216b8babc120cde2ab355d3002c9d155c217f3bbf9117060a8572912cc0c"
+    },
+    {
+      "path": "research/fixtures/advanced-authoring/reach-inverted.evir-project",
+      "sha256": "9007640c2b016d9675471f46d55322f3ac9d7eb8099377f6e11b04e15895345b"
+    },
+    {
+      "path": "research/fixtures/advanced-authoring/reach-inverted.riv",
+      "sha256": "993b7d205f3bdf2e9af5760f2837432a8be20b291e24ecffc483b3f83f9f0d31"
+    },
+    {
+      "path": "research/fixtures/advanced-authoring/reach-half-strength.evir-project",
+      "sha256": "e454410601c905c257f7ccecbe1a3739b7773e1127594babef58440710f729c1"
+    },
+    {
+      "path": "research/fixtures/advanced-authoring/reach-half-strength.riv",
+      "sha256": "bb0256fd4e7c36f94bd89f4863ac2c591e4cc466215429a5b8a3be8290426415"
+    },
+    {
+      "path": "research/results/playback/fixtures/playback-once-1.riv",
+      "sha256": "4ea56b76343fb269f8a43d81d2e67d321d3e296ba0778f6cd6c7985af5b9ef2b"
+    },
+    {
+      "path": "research/results/playback/fixtures/playback-once-1.evir-project",
+      "sha256": "49e0c3c8d9f0e66fffe5b6bdc041019f40a00585fcc8bc1df06129edd0f3e3f1"
+    },
+    {
+      "path": "research/results/playback/fixtures/playback-once-1.riv-map.json",
+      "sha256": "92f3428e934f176c99665bcd59844a86a5fc005314d3f3ae7d8c7f405518dcb3"
+    },
+    {
+      "path": "research/results/playback/fixtures/playback-loop-0.riv",
+      "sha256": "d1bb2e45d63c975066c9d3f77631f1ef77da7ab397de413be328b2491bd2c0b8"
+    },
+    {
+      "path": "research/results/playback/fixtures/playback-loop-0.evir-project",
+      "sha256": "d8bce0506f7c75d1f23b609b716a7aa7c50161d41ef48d8e636c2f3f3692a827"
+    },
+    {
+      "path": "research/results/playback/fixtures/playback-loop-0.riv-map.json",
+      "sha256": "cd575ab22abcec88005cd8ed9e9ccaead3e922755d5d4e99ccfd89bd982d95b0"
+    },
+    {
+      "path": "research/results/playback/fixtures/playback-ping-pong-0.riv",
+      "sha256": "ea8a81932e5a6ec5efc50b238e578b4d30b367b3f772606000476e401f586663"
+    },
+    {
+      "path": "research/results/playback/fixtures/playback-ping-pong-0.evir-project",
+      "sha256": "7890258b9f1118dd1f14949a9f942410ea61a912cd7830eebc834a83f82b7f62"
+    },
+    {
+      "path": "research/results/playback/fixtures/playback-ping-pong-0.riv-map.json",
+      "sha256": "90093a5998ac26b8fa21b554ae47bfac2a1c33933492cd59f642054c896a0f4f"
+    },
+    {
+      "path": "research/results/playback/fixtures/playback-loop-3.riv",
+      "sha256": "dce2dae68e7de21cf479fd492738021edddd58be107ca14192e73441032e021b"
+    },
+    {
+      "path": "research/results/playback/fixtures/playback-loop-3.evir-project",
+      "sha256": "656075d6bf0123c07413c1a1b1204a866e580537370e6333e68a8b50ec5971d6"
+    },
+    {
+      "path": "research/results/playback/fixtures/playback-loop-3.riv-map.json",
+      "sha256": "61bf6d3c28f0b629dbda4e24d2f89d91bceb940b3089a82f8ef3a293be3177aa"
+    },
+    {
+      "path": "research/results/playback/fixtures/playback-ping-pong-2.riv",
+      "sha256": "d2732f058c09961637e720f0f103e01b7bf3fb60efe05a7958e894a4cb914384"
+    },
+    {
+      "path": "research/results/playback/fixtures/playback-ping-pong-2.evir-project",
+      "sha256": "e4bae05b22e6f54a97dbba1d192548ff8e46e624aa76db22313839d4a863ceda"
+    },
+    {
+      "path": "research/results/playback/fixtures/playback-ping-pong-2.riv-map.json",
+      "sha256": "ce7e6ac73e3398e03fe5fccb87fdb6bf4b3a6452144833ee1124ac44c34cf4c4"
+    }
+  ],
+  "loom": {
+    "canvas": {
+      "diagnostics": {
+        "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "contexts": [
+          {
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "unmaskedRendererAvailable": true,
+            "contextLost": false,
+            "errors": [],
+            "extensions": [
+              "EXT_clip_control",
+              "EXT_color_buffer_float",
+              "EXT_color_buffer_half_float",
+              "EXT_conservative_depth",
+              "EXT_depth_clamp",
+              "EXT_float_blend",
+              "EXT_polygon_offset_clamp",
+              "EXT_texture_compression_bptc",
+              "EXT_texture_compression_rgtc",
+              "EXT_texture_filter_anisotropic",
+              "EXT_texture_mirror_clamp_to_edge",
+              "NV_shader_noperspective_interpolation",
+              "OES_draw_buffers_indexed",
+              "OES_sample_variables",
+              "OES_shader_multisample_interpolation",
+              "OES_texture_float_linear",
+              "OVR_multiview2",
+              "WEBGL_clip_cull_distance",
+              "WEBGL_compressed_texture_astc",
+              "WEBGL_compressed_texture_etc",
+              "WEBGL_compressed_texture_etc1",
+              "WEBGL_compressed_texture_s3tc",
+              "WEBGL_compressed_texture_s3tc_srgb",
+              "WEBGL_debug_renderer_info",
+              "WEBGL_debug_shaders",
+              "WEBGL_lose_context",
+              "WEBGL_multi_draw",
+              "WEBGL_polygon_mode",
+              "WEBGL_stencil_texturing"
+            ]
+          }
+        ]
+      },
+      "checks": [
+        {
+          "example": "loom",
+          "label": "Weave native time 0s",
+          "mae": 0.010265350341796875,
+          "expectedCovered": 48182,
+          "runtimeCovered": 48180
+        },
+        {
+          "example": "loom",
+          "label": "Weave native time 0.5s",
+          "mae": 0.011081695556640625,
+          "expectedCovered": 48182,
+          "runtimeCovered": 48180
+        },
+        {
+          "example": "loom",
+          "label": "Weave native time 1s",
+          "mae": 0.010265350341796875,
+          "expectedCovered": 48182,
+          "runtimeCovered": 48180
+        },
+        {
+          "example": "loom",
+          "label": "Weave native time 1.5s",
+          "mae": 0.01096343994140625,
+          "expectedCovered": 48182,
+          "runtimeCovered": 48180
+        },
+        {
+          "example": "loom",
+          "label": "locked-reference gap 28",
+          "mae": 0.010265350341796875,
+          "expectedCovered": 48182,
+          "runtimeCovered": 48180
+        },
+        {
+          "example": "loom",
+          "label": "locked-reference gap 28",
+          "mae": 0.010265350341796875,
+          "expectedCovered": 48182,
+          "runtimeCovered": 48180
+        }
+      ]
+    },
+    "webgl2": {
+      "diagnostics": {
+        "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "contexts": [
+          {
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "unmaskedRendererAvailable": true,
+            "contextLost": false,
+            "errors": [],
+            "extensions": [
+              "EXT_clip_control",
+              "EXT_color_buffer_float",
+              "EXT_color_buffer_half_float",
+              "EXT_conservative_depth",
+              "EXT_depth_clamp",
+              "EXT_float_blend",
+              "EXT_polygon_offset_clamp",
+              "EXT_texture_compression_bptc",
+              "EXT_texture_compression_rgtc",
+              "EXT_texture_filter_anisotropic",
+              "EXT_texture_mirror_clamp_to_edge",
+              "NV_shader_noperspective_interpolation",
+              "OES_draw_buffers_indexed",
+              "OES_sample_variables",
+              "OES_shader_multisample_interpolation",
+              "OES_texture_float_linear",
+              "OVR_multiview2",
+              "WEBGL_clip_cull_distance",
+              "WEBGL_compressed_texture_astc",
+              "WEBGL_compressed_texture_etc",
+              "WEBGL_compressed_texture_etc1",
+              "WEBGL_compressed_texture_s3tc",
+              "WEBGL_compressed_texture_s3tc_srgb",
+              "WEBGL_debug_renderer_info",
+              "WEBGL_debug_shaders",
+              "WEBGL_lose_context",
+              "WEBGL_multi_draw",
+              "WEBGL_polygon_mode",
+              "WEBGL_stencil_texturing"
+            ]
+          },
+          {
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "unmaskedRendererAvailable": true,
+            "contextLost": false,
+            "errors": [],
+            "extensions": [
+              "EXT_clip_control",
+              "EXT_color_buffer_float",
+              "EXT_color_buffer_half_float",
+              "EXT_conservative_depth",
+              "EXT_depth_clamp",
+              "EXT_float_blend",
+              "EXT_polygon_offset_clamp",
+              "EXT_texture_compression_bptc",
+              "EXT_texture_compression_rgtc",
+              "EXT_texture_filter_anisotropic",
+              "EXT_texture_mirror_clamp_to_edge",
+              "NV_shader_noperspective_interpolation",
+              "OES_draw_buffers_indexed",
+              "OES_sample_variables",
+              "OES_shader_multisample_interpolation",
+              "OES_texture_float_linear",
+              "OVR_multiview2",
+              "WEBGL_clip_cull_distance",
+              "WEBGL_compressed_texture_astc",
+              "WEBGL_compressed_texture_etc",
+              "WEBGL_compressed_texture_etc1",
+              "WEBGL_compressed_texture_s3tc",
+              "WEBGL_compressed_texture_s3tc_srgb",
+              "WEBGL_debug_renderer_info",
+              "WEBGL_debug_shaders",
+              "WEBGL_lose_context",
+              "WEBGL_multi_draw",
+              "WEBGL_polygon_mode",
+              "WEBGL_stencil_texturing"
+            ]
+          }
+        ]
+      },
+      "checks": [
+        {
+          "example": "loom",
+          "label": "Weave native time 0s",
+          "mae": 0.2195892333984375,
+          "expectedCovered": 48182,
+          "runtimeCovered": 48158
+        },
+        {
+          "example": "loom",
+          "label": "Weave native time 0.5s",
+          "mae": 0.22640609741210938,
+          "expectedCovered": 48182,
+          "runtimeCovered": 48158
+        },
+        {
+          "example": "loom",
+          "label": "Weave native time 1s",
+          "mae": 0.2195892333984375,
+          "expectedCovered": 48182,
+          "runtimeCovered": 48158
+        },
+        {
+          "example": "loom",
+          "label": "Weave native time 1.5s",
+          "mae": 0.22781753540039062,
+          "expectedCovered": 48182,
+          "runtimeCovered": 48158
+        },
+        {
+          "example": "loom",
+          "label": "locked-reference gap 28",
+          "mae": 0.2195892333984375,
+          "expectedCovered": 48182,
+          "runtimeCovered": 48158
+        },
+        {
+          "example": "loom",
+          "label": "locked-reference gap 28",
+          "mae": 0.2195892333984375,
+          "expectedCovered": 48182,
+          "runtimeCovered": 48158
+        }
+      ]
+    }
+  }
+}

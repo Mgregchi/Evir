@@ -1,6 +1,6 @@
 {
   "format": "evir-guides",
-  "version": 1,
+  "version": 2,
   "visible": true,
   "rulers": true,
   "locked": false,
@@ -25,5 +25,6 @@
       "position": 130,
       "visible": true
     }
-  ]
+  ],
+  "components": []
 }

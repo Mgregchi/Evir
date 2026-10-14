@@ -1,0 +1,36 @@
+[
+  {
+    "id": "penpot",
+    "url": "https://raw.githubusercontent.com/penpot/penpot-docs/dae434432ed4a523ea1013666aa23451dbd12eb8/user-guide/workspace-basics/index.njk",
+    "accessed": "2026-10-14",
+    "httpStatus": 200,
+    "bytes": 14271,
+    "sha256": "1afecb63bf5669ddd2ba1ce4538f4782a2d03ce809cf8722cc77a0eb495ee06d",
+    "observed": "Board-level square, column and row guides are viewport-only; row/column parameters include count, alignment/stretch type, dimensions, gutter and margin."
+  },
+  {
+    "id": "adobe",
+    "url": "https://helpx.adobe.com/illustrator/using/moving-aligning-distributing-objects.html",
+    "accessed": "2026-10-14",
+    "httpStatus": 200,
+    "bytes": 507168,
+    "sha256": "6dc72f22d140c616b8c2c871702973a59cd1656572dccc2616afcdfb91e68f68",
+    "observed": "Alignment/distribution may use a selected key object and evenly spaced gaps. Evir explicitly defines its fixed-gap, stable-order behavior."
+  },
+  {
+    "id": "rive",
+    "url": "https://rive.app/docs/editor/layouts/layouts-overview",
+    "accessed": "2026-10-14",
+    "httpStatus": 200,
+    "bytes": 366511,
+    "sha256": "49d368767824a22a73ffddf724bfdfeec3b255abcf0410e51f0ef0591d568fcd",
+    "observed": "Rive layouts position responsive rows, columns, grids and stacks at runtime. Evir guide components remain separate authoring aids, not runtime layout containers."
+  },
+  {
+    "id": "figma-attempt",
+    "url": "https://help.figma.com/hc/en-us/articles/360040450513-Create-layout-guides",
+    "accessed": "2026-10-14",
+    "status": "Tunnel denied: 403",
+    "observed": "No feature claims taken from this response. Penpot primary documentation used instead."
+  }
+]

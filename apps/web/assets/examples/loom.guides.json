@@ -1,0 +1,42 @@
+{
+  "format": "evir-guides",
+  "version": 2,
+  "visible": true,
+  "rulers": true,
+  "locked": false,
+  "snap": true,
+  "grid": {
+    "visible": false,
+    "snap": false,
+    "spacing": 32,
+    "originX": 0,
+    "originY": 0
+  },
+  "guides": [],
+  "components": [
+    {
+      "id": "loom-columns",
+      "axis": "x",
+      "count": 3,
+      "mode": "fixed",
+      "size": 96,
+      "gap": 28,
+      "margin": 48,
+      "align": "center",
+      "visible": true,
+      "snap": true
+    },
+    {
+      "id": "loom-rows",
+      "axis": "y",
+      "count": 2,
+      "mode": "fixed",
+      "size": 100,
+      "gap": 38,
+      "margin": 48,
+      "align": "center",
+      "visible": true,
+      "snap": true
+    }
+  ]
+}

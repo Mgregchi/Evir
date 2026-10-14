@@ -1582,3 +1582,14 @@ body > #notice {
 .continuation-sheet input[type=checkbox] { width: 24px; height: 24px; flex: 0 0 24px; accent-color: var(--accent); }
 .continuation-sheet input[type=number] { max-width: 220px; }
 #advanced-sheet:has(.continuation-sheet) .dialog-actions { position: sticky; bottom: 0; background: var(--panel); padding-top: 12px; }
+
+.guide-manager details { border: 1px solid var(--line); border-radius: 10px; padding: 10px; margin-block: 10px; }
+.guide-manager summary { cursor: pointer; min-height: 28px; font-weight: 600; }
+.guide-manager .component-size { color: var(--muted); margin-block: 10px; overflow-wrap: anywhere; }
+#advanced-sheet:has(.guide-manager) .dialog-actions, #advanced-sheet:has(.distribution-sheet) .dialog-actions { position: sticky; bottom: 0; background: var(--panel); padding-top: 12px; }
+#advanced-sheet:has(.guide-manager) { --guide-edge: 28px; --guide-bottom: 28px; }
+#advanced-sheet:has(.guide-manager) > h2 { position: sticky; top: calc(-1 * var(--guide-edge)); background: var(--panel); z-index: 2; padding-block: 6px; border-bottom: 1px solid var(--line); }
+#advanced-sheet:has(.guide-manager) .dialog-actions { bottom: calc(-1 * var(--guide-bottom)); margin-bottom: calc(-1 * var(--guide-bottom)); padding-bottom: var(--guide-bottom); }
+@media (max-width: 850px) { #advanced-sheet:has(.guide-manager) { --guide-edge: 24px; --guide-bottom: max(24px, env(safe-area-inset-bottom)); } }
+.guide-manager details { scroll-margin-block: 40px; }
+#advanced-sheet:has(.guide-manager) .dialog-actions button:last-child, #advanced-sheet:has(.distribution-sheet) .dialog-actions button:last-child { background: var(--accent); color: #142b23; font-weight: 650; }

@@ -4,8 +4,10 @@ import {
   validateGuides,
   parseGuidePreset,
   gridLines,
+  layoutBands,
 } from "./guides.mjs";
 import { sheet } from "./advanced.mjs";
+import { componentControls } from "./guide-components.mjs";
 
 const el = (tag, text) => {
   const n = document.createElement(tag);
@@ -42,6 +44,7 @@ export function mountGuides(api) {
     const scope = [api.project().id, api.artboard().id];
     let draft = current(),
       edit = editing;
+    const expanded = new Set();
     sheet(
       "Guides & grid",
       (host) => {
@@ -117,6 +120,14 @@ export function mountGuides(api) {
               "p",
               "In Design with Select, enable editing and drag from the top ruler for a vertical guide or the left ruler for a horizontal guide. Drag a guide to move it; Escape cancels the gesture. Numeric positions below offer the same control without dragging. Locked guides can still snap layers.",
             ),
+          );
+          componentControls(
+            body,
+            draft,
+            api.artboard(),
+            field,
+            paint,
+            expanded,
           );
           const list = el("fieldset");
           list.append(el("legend", "Guide positions (artboard units)"));
@@ -272,6 +283,7 @@ export function mountGuides(api) {
       () => {
         if (scope[0] !== api.project().id || scope[1] !== api.artboard().id)
           throw Error("The artboard changed. Reopen Guides & grid.");
+        layoutBands(validateGuides(draft), api.artboard(), true);
         save(draft);
         editing = edit && !draft.locked;
         api.draw();
@@ -380,6 +392,24 @@ export function mountGuides(api) {
         ctx.lineTo(board.width, y);
       }
       ctx.stroke();
+      if (s.visible)
+        for (const band of layoutBands(s, board)) {
+          const axis = band.axis,
+            low = -camera[axis] / camera.zoom,
+            high =
+              (viewport[axis === "x" ? "width" : "height"] - camera[axis]) /
+              camera.zoom;
+          if (band.end < low || band.start > high) continue;
+          ctx.fillStyle = axis === "x" ? "#74cdb012" : "#edbd8012";
+          ctx.strokeStyle = axis === "x" ? "#74cdb06a" : "#edbd806a";
+          if (axis === "x") {
+            ctx.fillRect(band.start, 0, band.end - band.start, board.height);
+            ctx.strokeRect(band.start, 0, band.end - band.start, board.height);
+          } else {
+            ctx.fillRect(0, band.start, board.width, band.end - band.start);
+            ctx.strokeRect(0, band.start, board.width, band.end - band.start);
+          }
+        }
       ctx.restore();
       if (s.visible) {
         ctx.lineWidth = 1 / camera.zoom;
