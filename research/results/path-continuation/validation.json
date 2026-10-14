@@ -125,5 +125,15 @@
   },
   "physicalTests": "Postponed by explicit user instruction; none performed.",
   "humanAccessibility": "Automated focus/keyboard/WCAG checks; no human or screen-reader session.",
-  "backend": "Hosted services and remote MCP pairing remain deferred."
+  "backend": "Hosted services and remote MCP pairing remain deferred.",
+  "githubActions": {
+    "observedCodeHead": "f96595c9530af03efb2635c81447614bf667ec2a",
+    "status": "Blocked before execution",
+    "executedSteps": 0,
+    "reason": "The job was not started because your account is locked due to a billing issue.",
+    "jobs": [
+      "https://github.com/Mgregchi/Evir/actions/runs/38532907651/job/115748764562",
+      "https://github.com/Mgregchi/Evir/actions/runs/38532907703/job/115748764890"
+    ]
+  }
 }
