@@ -1578,3 +1578,7 @@ body > #notice {
 .guide-manager input[type=number] { max-width: 160px; }
 .guide-row { padding: 8px 0 16px; border-bottom: 1px solid var(--line); margin-bottom: 12px; }
 .guide-manager input[type=file] { max-width: 100%; min-width: 0; }
+.continuation-sheet .field:has(input[type=checkbox]) { flex-direction: row; align-items: center; justify-content: space-between; min-height: 44px; }
+.continuation-sheet input[type=checkbox] { width: 24px; height: 24px; flex: 0 0 24px; accent-color: var(--accent); }
+.continuation-sheet input[type=number] { max-width: 220px; }
+#advanced-sheet:has(.continuation-sheet) .dialog-actions { position: sticky; bottom: 0; background: var(--panel); padding-top: 12px; }

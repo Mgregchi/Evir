@@ -3,6 +3,8 @@ import { mountLiveCommands } from "./live-commands.mjs";
 import { mountRiveViewer } from "./rive-viewer.mjs";
 import { showMcpGuide } from "./guidance.mjs";
 import { mountGuides } from "./guide-controls.mjs";
+import { ContinuationDraft } from "./path-continuation.mjs";
+import { continuationControls, numericContinuation } from "./continuation-controls.mjs";
 import { canSnapGuides, snapWithGuides } from "./guides.mjs";
 let liveTools, riveViewer, canvasGuides, alignmentKey = null;
 import { ProjectRecovery, RecoveryQueue } from "./recovery.mjs";
@@ -343,12 +345,30 @@ function penReady() {
   return false;
 }
 function cancelPen() {
+  const extending = penDraft instanceof ContinuationDraft;
   penDraft = null;
   penPointerId = null;
   clearNotice();
+  if (extending) setTool("select");
   render();
+  if (extending) stage.focus();
 }
-function finishPen(closed = false) {
+function beginContinuation(id, options) {
+  if (authoring.mode !== "Design" || !penReady()) return false;
+  try {
+    cancelDrag();
+    const draft = new ContinuationDraft(store.committed(), id, options);
+    const shown = worldTransform(project(), id);
+    if (shown.some((v, i) => Math.abs(v - draft.matrix[i]) > 1e-9))
+      throw Error("A parent constraint is posing this path. Set the constraint strength to zero or choose a path outside that chain before continuing.");
+    setTool("pen");
+    penDraft = draft;
+    penPointerId = null;
+    render();
+    return true;
+  } catch (error) { notice(error); return false; }
+}
+function finishPen(closed) {
   if (!penDraft) return;
   const draft = penDraft;
   try {
@@ -356,9 +376,12 @@ function finishPen(closed = false) {
     penDraft = null;
     let id;
     if (
-      !edit("Draw path", (p) => {
-        id = addNode(p, "path", draft.parentId, draft.artboardId);
-        p.nodes.find((n) => n.id === id).geometry = geometry;
+      !edit(draft instanceof ContinuationDraft ? "Continue path" : "Draw path", (p) => {
+        if (draft instanceof ContinuationDraft) id = draft.apply(p, geometry);
+        else {
+          id = addNode(p, "path", draft.parentId, draft.artboardId);
+          p.nodes.find((n) => n.id === id).geometry = geometry;
+        }
       })
     ) {
       penDraft = draft;
@@ -379,12 +402,19 @@ function drawPen(zoom) {
   $("#drawing-options").hidden = tool !== "freehand";
   $("#drawing-options").disabled = Boolean(penDraft?.dragging);
   $("#pen-actions").hidden = !penDraft;
+  const extending = penDraft instanceof ContinuationDraft;
+  $("#numeric-path-point").hidden = !extending;
+  $("#numeric-path-point").disabled = Boolean(penDraft?.dragging);
+  $("#finish-path").textContent = extending ? "Finish extension" : "Finish path";
+  $("#cancel-path").textContent = extending ? "Cancel" : "Cancel path";
   $("#finish-path").disabled =
-    !penDraft || penDraft.points.length < 2 || penDraft.dragging;
+    !penDraft || penDraft.points.length < 2 || penDraft.dragging || (extending && !penDraft.addedCount);
   if (tool === "pen")
     $("#selection-status").textContent = penDraft
       ? `Unsaved draft · ${penDraft.points.length} ${penDraft.points.length === 1 ? "point" : "points"} · Enter to finish · Esc to cancel`
       : "Click for corners. Drag for curves. Click the first point to close.";
+  if (extending)
+    $("#selection-status").textContent = `Extending ${penDraft.endpoint} endpoint · ${penDraft.addedCount} new points · Finish or Cancel`;
   if (penDraft) {
     $("#undo").disabled = false;
     $("#redo").disabled = true;
@@ -934,6 +964,8 @@ function properties(p) {
   }
   if (!locked) {
     authoring?.editGeometry(p, n, host);
+    if (n.kind === "path" && authoring?.mode === "Design")
+      host.append(continuationControls(n, {start:beginContinuation, notice, visible:available(p,n,"hidden")}));
     advanced?.properties(p, n, host);
   }
   const hierarchy = section("Organization"),
@@ -1909,6 +1941,10 @@ $("#drawing-cancel").onclick = () => drawingSheet.close();
 drawingSheet.addEventListener("close", () => drawingOrigin?.focus());
 $("#finish-path").onclick = () => finishPen();
 $("#cancel-path").onclick = cancelPen;
+$("#numeric-path-point").onclick = () => {
+  if (!(penDraft instanceof ContinuationDraft) || penDraft.dragging) return;
+  numericContinuation(penDraft, render, notice, $("#numeric-path-point"));
+};
 $("#add-rectangle").onclick = () => add("rectangle");
 $("#empty-add").onclick = () => add("rectangle");
 $("#add-group").onclick = () => add("group");
@@ -2151,7 +2187,7 @@ window.addEventListener("keydown", (e) => {
     else select(node()?.parentId || null);
     return;
   }
-  if (penDraft && e.key === "Enter") {
+  if (penDraft && e.key === "Enter" && !e.target.closest("button,a")) {
     e.preventDefault();
     finishPen();
     return;
@@ -2373,6 +2409,7 @@ window.evirStudio = {
   guides: () => structuredClone(snapGuides),
   canvasGuides: () => canvasGuides.current(),
   guideEditing: () => canvasGuides.editing(),
+  pathDraft: () => penDraft instanceof ContinuationDraft ? {targetId:penDraft.targetId,endpoint:penDraft.endpoint,added:penDraft.addedCount,points:structuredClone(penDraft.points)} : null,
 };
 liveTools = mountLiveCommands({history:()=>store,artboardId:()=>activeArtboard,ready:penReady,changed:()=>{render();persist();}});
 window.evirStudio.live = liveTools.api;

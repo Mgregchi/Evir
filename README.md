@@ -153,4 +153,6 @@ The [Studio interaction guide and remaining-work plan](docs/25-studio-navigation
 
 [Persistent guides and key alignment](docs/35-persistent-guides-and-key-alignment.md) adds rulers, numeric guide editing, a uniform grid, portable presets and a fixed alignment reference. The original Measure gallery study demonstrates the workflow.
 
+[Path continuation](docs/36-path-continuation.md) extends open unskinned paths from either endpoint with Pen or numeric curves, preserving their identity and paint. Sprig adds an original completed study, starting project and point recipe.
+
 Static gradient authoring and the original Dawn study are documented in [gradient acceptance](docs/28-studio-gradient-paints.md). The proposed independent persistence/live-session backend, remote MCP tools and agent-defined audience controls are recorded in [backend and live agent sessions](docs/29-backend-and-live-agent-sessions.md); these services remain proposals, not shipped integrations.

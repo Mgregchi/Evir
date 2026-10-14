@@ -60,6 +60,8 @@ For snapping and Inspector alignment, see [the alignment guide](../../docs/26-st
 
 Use **Freehand / B** in Design, drag, release to review and choose **Finish path**. **Drawing options** opens a bottom sheet for smoothing/closure. Drafts stay outside saved history; interruption cancels active drawing. See [freehand contracts and limits](../../docs/27-studio-freehand-shapes.md).
 
+An open unskinned path has **Properties → Continue path…**. Extend from First or Last with Pen gestures or **Add point…** for numeric corners/curves; Finish preserves the existing layer and paint in one undoable edit. The gallery's Sprig starting project and recipe demonstrate the workflow. See [continuation and limits](../../docs/36-path-continuation.md).
+
 Advanced 2D contracts, source/runtime versions, asset preparation/disposal, authoring controls, import coverage and remaining limits are documented in [the current feature contract](../../docs/30-advanced-2d-authoring.md).
 
 Current workflow controls and IndexedDB recovery are documented in [workflow/recovery](../../docs/31-studio-workflow-and-recovery.md).

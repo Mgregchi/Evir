@@ -1,0 +1,41 @@
+[
+  {
+    "id": "rive-pen",
+    "url": "https://rive.app/docs/editor/fundamentals/pen-tool-overview",
+    "accessed": "2026-10-14",
+    "httpStatus": 200,
+    "bytes": 314247,
+    "sha256": "3dbc25d368df7c2569d045855a41cf5f3f892d6d415934cf3b0095799c709ead"
+  },
+  {
+    "id": "rive-vertices",
+    "url": "https://rive.app/docs/editor/fundamentals/edit-vertices",
+    "accessed": "2026-10-14",
+    "httpStatus": 200,
+    "bytes": 378990,
+    "sha256": "c70106ddc0f7926d4cd450aa957e1e070905335d9ba444deb84590ad1845b67a"
+  },
+  {
+    "id": "penpot",
+    "url": "https://raw.githubusercontent.com/penpot/penpot-docs/dae434432ed4a523ea1013666aa23451dbd12eb8/user-guide/objects/index.njk",
+    "accessed": "2026-10-14",
+    "httpStatus": 200,
+    "bytes": 10715,
+    "sha256": "7dea97ec04382494d5d916cf36752506e22e0bb115a24bf57dea57ea99ef5cfd"
+  },
+  {
+    "id": "dragging",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html",
+    "accessed": "2026-10-14",
+    "httpStatus": 200,
+    "bytes": 48929,
+    "sha256": "c3905630a35b6e8246aba32c1769f3ff82b217d464d41e4b1b2a34b9df5771c6"
+  },
+  {
+    "id": "penpot-help-attempt",
+    "url": "https://help.penpot.app/user-guide/designing/objects/",
+    "accessed": "2026-10-14",
+    "httpStatus": 404,
+    "evidence": "No feature claims taken from this response; official repository source used instead."
+  }
+]
