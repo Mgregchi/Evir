@@ -85,7 +85,23 @@
     "Hosted backend implementation"
   ],
   "ci": {
-    "status": "Not yet checked on this new PR"
+    "status": "Blocked before jobs started; no CI validation executed",
+    "observedCodeHead": "201b82a8401bc4a291cc620bfc6b92fca6dc9175",
+    "pr": "https://github.com/Mgregchi/Evir/pull/31",
+    "annotation": "The job was not started because your account is locked due to a billing issue.",
+    "jobs": [
+      {
+        "workflow": "Runtime package validation",
+        "url": "https://github.com/Mgregchi/Evir/actions/runs/38558601204/job/115833808018",
+        "executedSteps": 0
+      },
+      {
+        "workflow": "Web and Studio validation",
+        "url": "https://github.com/Mgregchi/Evir/actions/runs/38558601173/job/115833807876",
+        "executedSteps": 0
+      }
+    ],
+    "followupCommitScope": "Validation metadata only; tested application code unchanged."
   },
   "finalFollowup": [
     {
