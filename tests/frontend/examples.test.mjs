@@ -27,3 +27,11 @@ test('Measure provides a separately validated guide preset and three independent
  assert(ids.every(id=>p.nodes.some(n=>n.id===id&&n.kind==='group'&&n.parentId===null)));
  assert.equal(Object.hasOwn(p.editor,'guides'),false);
 });
+test('Sprig retains the open seed geometry and paint while its continuation recipe reproduces the finished study',async()=>{
+ const {ContinuationDraft}=await import('../../packages/studio/path-continuation.mjs');
+ const final=source('sprig'),start=source('sprig-start'),recipe=JSON.parse(fs.readFileSync(new URL('../../apps/web/assets/examples/sprig.continuation.json',import.meta.url)));
+ validateProject(start);assert.deepEqual(Buffer.from(compileProject(start).bytes),fs.readFileSync(new URL('../../apps/web/assets/examples/sprig-start.riv',import.meta.url)));
+ const draft=new ContinuationDraft(start,recipe.nodeId,{endpoint:recipe.endpoint,closed:recipe.closed});
+ for(const [i,point]of recipe.points.entries()){draft.appendLocal(point.anchor,point.out);draft.points.at(-1).id=`sprig-extension-point-${i+1}`;}
+ draft.apply(start,draft.geometry());assert.deepEqual(start,final);
+});

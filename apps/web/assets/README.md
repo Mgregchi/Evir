@@ -15,3 +15,5 @@ Example artwork and website source are original project contributions. Existing 
 Wisp’s organic outlines are generated sampled loops fitted with Studio’s freehand algorithm, not captured human handwriting. Its poster is a real Canvas render; all point IDs in its source/export are deterministic.
 
 `measure-poster.png` is a real Canvas capture of the original Measure composition in `examples/measure.evir-project`. `measure.riv` is its Evir-compiled native export. `measure.guides.json` is a separate Studio guide preset; guides are excluded from scene/native exports. The three cards and Balance loop contain no supplied third-party artwork.
+
+`sprig-poster.png` is a real Canvas capture of the original Sprig plant. `sprig.evir-project` / `.riv` contain the completed six-point leaf and Breeze loop; `sprig-start.evir-project` / `.riv` retain its three-point open seed. `sprig.continuation.json` is a readable numeric point recipe, not an importer or runtime feature. All artwork is original project work; no uploaded research scene is redistributed.

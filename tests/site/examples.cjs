@@ -62,6 +62,14 @@ if(!process.env.CHROMIUM_PATH && !fs.existsSync('/usr/bin/chromium'))process.env
             await compare(aligned.animations[0],frame,`aligned composition frame ${frame}`,aligned);
           }
         }
+        if(name==='sprig') {
+          const seed=JSON.parse(fs.readFileSync(path.join(__dirname,'../../apps/web/assets/examples/sprig-start.evir-project')));
+          for(const frame of [0,60]) {
+            await load({src:'/apps/web/assets/examples/sprig-start.riv',animations:seed.animations[0].name});
+            await page.evaluate(({name,seconds})=>{player.scrub(name,seconds);player.drawFrame();},{name:seed.animations[0].name,seconds:frame/60});
+            await compare(seed.animations[0],frame,`open seed frame ${frame}`,seed);
+          }
+        }
         if(project.machines.length) {
           const machine=project.machines[0];await load({stateMachines:machine.name});
           const advance=()=>page.evaluate(()=>{player.stopRendering();player.animator.stateMachines[0].advanceAndApply(0);player.lastRenderTime=document.timeline.currentTime;player.drawFrame();player.stopRendering();});

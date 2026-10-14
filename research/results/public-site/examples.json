@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-13T18:28:00.075Z",
+  "checkedAt": "2026-10-14T07:47:09.788Z",
   "runtimeVersion": "2.44.0",
   "scope": "Original showcase export pixels against Evir evaluated source at selected keyframes; boolean/number/AND/trigger/listener/reset outcomes. Cloud graphics, not mobile/device performance.",
   "backends": [
@@ -1012,6 +1012,48 @@
           "example": "measure",
           "label": "aligned composition frame 60",
           "mae": 0.019866943359375,
+          "expectedCovered": 48182,
+          "runtimeCovered": 48180
+        },
+        {
+          "example": "sprig",
+          "label": "Breeze native time 0s",
+          "mae": 0.0111236572265625,
+          "expectedCovered": 48182,
+          "runtimeCovered": 48180
+        },
+        {
+          "example": "sprig",
+          "label": "Breeze native time 0.5s",
+          "mae": 0.011333465576171875,
+          "expectedCovered": 48182,
+          "runtimeCovered": 48180
+        },
+        {
+          "example": "sprig",
+          "label": "Breeze native time 1s",
+          "mae": 0.0113983154296875,
+          "expectedCovered": 48182,
+          "runtimeCovered": 48180
+        },
+        {
+          "example": "sprig",
+          "label": "Breeze native time 1.5s",
+          "mae": 0.011333465576171875,
+          "expectedCovered": 48182,
+          "runtimeCovered": 48180
+        },
+        {
+          "example": "sprig",
+          "label": "open seed frame 0",
+          "mae": 0.0111236572265625,
+          "expectedCovered": 48182,
+          "runtimeCovered": 48180
+        },
+        {
+          "example": "sprig",
+          "label": "open seed frame 60",
+          "mae": 0.01143646240234375,
           "expectedCovered": 48182,
           "runtimeCovered": 48180
         }
@@ -2066,6 +2108,48 @@
           "mae": 0.1678619384765625,
           "expectedCovered": 48182,
           "runtimeCovered": 48158
+        },
+        {
+          "example": "sprig",
+          "label": "Breeze native time 0s",
+          "mae": 0.11112213134765625,
+          "expectedCovered": 48182,
+          "runtimeCovered": 48158
+        },
+        {
+          "example": "sprig",
+          "label": "Breeze native time 0.5s",
+          "mae": 0.1111602783203125,
+          "expectedCovered": 48182,
+          "runtimeCovered": 48158
+        },
+        {
+          "example": "sprig",
+          "label": "Breeze native time 1s",
+          "mae": 0.11061859130859375,
+          "expectedCovered": 48182,
+          "runtimeCovered": 48158
+        },
+        {
+          "example": "sprig",
+          "label": "Breeze native time 1.5s",
+          "mae": 0.1111602783203125,
+          "expectedCovered": 48182,
+          "runtimeCovered": 48158
+        },
+        {
+          "example": "sprig",
+          "label": "open seed frame 0",
+          "mae": 0.11759567260742188,
+          "expectedCovered": 48182,
+          "runtimeCovered": 48158
+        },
+        {
+          "example": "sprig",
+          "label": "open seed frame 60",
+          "mae": 0.11537551879882812,
+          "expectedCovered": 48182,
+          "runtimeCovered": 48158
         }
       ]
     }
@@ -2088,6 +2172,7 @@
     "arrange": "b7000b8f0e52bba8b01756a2267b1a140f75c777e56f388b9e59336814effd89",
     "motorcycle": "5fd6f55203fb1e4b51a41b70af9d542332878950a230999d176d58fec5a90499",
     "compass": "c624ebd9ee40e20fb259c1198c9a235b0b375fa19b0f4964a66e6c92d3b37b62",
-    "measure": "0e43cd4dbe386ede67b80c11f37a41d6c96ad8cee1aa3595d55fd435ce8269c3"
+    "measure": "0e43cd4dbe386ede67b80c11f37a41d6c96ad8cee1aa3595d55fd435ce8269c3",
+    "sprig": "f2a19bfbf1a4b7d3b4521e553dca581465e86b62eefba0c3bd8e87bfb8ba092f"
   }
 }

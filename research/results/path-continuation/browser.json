@@ -1,0 +1,61 @@
+{
+  "scope": "Cloud Chromium automated workflow, not physical or human accessibility evidence",
+  "results": [
+    {
+      "width": 320,
+      "height": 844,
+      "endpointChoice": true,
+      "numericCurve": true,
+      "nativeButtonKeyboard": true,
+      "pointCancel": true,
+      "originalPointsProtected": true,
+      "paintAndIdsRetained": true,
+      "oneUndo": true,
+      "firstEndpointClosed": true,
+      "recoveryExcludesDraft": true,
+      "axeViolations": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "endpointChoice": true,
+      "numericCurve": true,
+      "nativeButtonKeyboard": true,
+      "pointCancel": true,
+      "originalPointsProtected": true,
+      "paintAndIdsRetained": true,
+      "oneUndo": true,
+      "firstEndpointClosed": true,
+      "recoveryExcludesDraft": true,
+      "axeViolations": 0
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "endpointChoice": true,
+      "numericCurve": true,
+      "nativeButtonKeyboard": true,
+      "pointCancel": true,
+      "originalPointsProtected": true,
+      "paintAndIdsRetained": true,
+      "oneUndo": true,
+      "firstEndpointClosed": true,
+      "recoveryExcludesDraft": true,
+      "axeViolations": 0
+    },
+    {
+      "width": 1440,
+      "height": 844,
+      "endpointChoice": true,
+      "numericCurve": true,
+      "nativeButtonKeyboard": true,
+      "pointCancel": true,
+      "originalPointsProtected": true,
+      "paintAndIdsRetained": true,
+      "oneUndo": true,
+      "firstEndpointClosed": true,
+      "recoveryExcludesDraft": true,
+      "axeViolations": 0
+    }
+  ]
+}

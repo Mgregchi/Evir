@@ -4,6 +4,7 @@ import {suite} from './advanced-examples.mjs';
 import {motorcycle} from './motorcycle-scene.mjs';
 import { fitFreehand } from '../../packages/studio/freehand.mjs';
 import { defaultGuides } from '../../packages/studio/guides.mjs';
+import { ContinuationDraft } from '../../packages/studio/path-continuation.mjs';
 import { exampleIds } from './examples.mjs';
 import { createProject, validateProject } from '@evir/project-model';
 import { setKey, bindPath, setWeight } from '@evir/authoring';
@@ -274,7 +275,33 @@ function measure() {
   const a=anim('breathe','Balance');key(a,glow,'scaleX',[[0,1],[60,1.3],[120,1]]);key(a,glow,'scaleY',[[0,1],[60,1.3],[120,1]]);
   return p;
 }
-const factories={measure,compass,milo,orbit,bloom,tempo,signal,gather,wisp,dawn,arrange,motorcycle:()=>motorcycle(project)};
+let sprigSeed;
+const sprigRecipe=[{anchor:[45,35],out:[26,56]},{anchor:[-10,65],out:[-43,60]},{anchor:[-60,35],out:[-74,15]}];
+function sprig() {
+  const {p,node,path,box,oval,anim,key}=project('sprig','Sprig — a story still growing');
+  box('backdrop',32,40,448,432,34,'#e8efe7');
+  oval('shadow',256,428,105,13,'#294d4020');
+  box('pot-rim',189,335,134,24,10,'#d49d79');
+  path('pot',[[[0,0]],[[118,0]],[[96,68]],[[22,68]]],'#e8bd9b',null,197,351);
+  const plant=node('plant','group',null,null,256,276);
+  box('stem',-5,-10,10,67,5,'#3c7555',plant);
+  const leaf=path('growing-leaf',[
+    [[-70,0],[-70,0],[-68,-35]],
+    [[-15,-70],[-44,-70],[8,-70]],
+    [[50,-25],[50,-52],[52,-15]],
+  ],'#90d4b5',plant);
+  p.nodes.find(n=>n.id===leaf).geometry.closed=false;
+  oval('leaf-heart',-10,-5,13,13,'#477d60',plant);
+  const breeze=anim('breeze','Breeze');key(breeze,plant,'rotation',[[0,-.08],[60,.08],[120,-.08]]);
+  sprigSeed=structuredClone(p);
+  const draft=new ContinuationDraft(p,leaf,{closed:true});
+  for(const [i,point] of sprigRecipe.entries()) {
+    draft.appendLocal(point.anchor,point.out);draft.points.at(-1).id=`sprig-extension-point-${i+1}`;
+  }
+  draft.apply(p,draft.geometry());
+  return p;
+}
+const factories={sprig,measure,compass,milo,orbit,bloom,tempo,signal,gather,wisp,dawn,arrange,motorcycle:()=>motorcycle(project)};
 for(const original of await suite()){
  const p=structuredClone(original);p.artboards[0].width=p.artboards[0].height=512;
  for(const n of p.nodes){n.transform[4]*=2;n.transform[5]*=2;const g=n.geometry;if(!g)continue;
@@ -299,6 +326,12 @@ for(const name of exampleIds) {
     const guides=defaultGuides();guides.rulers=true;guides.grid={visible:true,snap:true,spacing:32,originX:0,originY:0};
     guides.guides=[{id:'measure-center',axis:'x',position:256,visible:true},{id:'measure-top',axis:'y',position:130,visible:true}];
     await writeFile(`${output}${name}.guides.json`,JSON.stringify(guides,null,2)+'\n');
+  }
+  if(name==='sprig') {
+    validateProject(sprigSeed);
+    await writeFile(`${output}sprig-start.evir-project`,JSON.stringify(sprigSeed,null,2)+'\n');
+    await writeFile(`${output}sprig-start.riv`,compileProject(sprigSeed).bytes);
+    await writeFile(`${output}sprig.continuation.json`,JSON.stringify({format:'evir-continuation-recipe',version:1,nodeId:'sprig-growing-leaf',endpoint:'last',closed:true,points:sprigRecipe},null,2)+'\n');
   }
   if(name==='motorcycle') {
     await writeFile(`${output}${name}.riv-map.json`,JSON.stringify(compiled.mapping,null,2)+'\n');

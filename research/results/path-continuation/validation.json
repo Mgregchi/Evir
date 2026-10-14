@@ -1,0 +1,139 @@
+{
+  "checkedAt": "2026-10-14T08:07:15.152670+00:00",
+  "baseCommit": "68265327b6aba7079a87d0aabcdbf9badb0bc760",
+  "scope": "Existing open unskinned path continuation from either endpoint; Pen and numeric curves; original Sprig study. Software checks only.",
+  "checks": [
+    {
+      "name": "editor",
+      "command": "npm run test:editor",
+      "exitCode": 0,
+      "seconds": 172.88
+    },
+    {
+      "name": "native",
+      "command": "npm run validate:editor",
+      "exitCode": 0,
+      "seconds": 265.34
+    },
+    {
+      "name": "frontend",
+      "command": "npm run test:frontend",
+      "exitCode": 0,
+      "seconds": 1.19
+    },
+    {
+      "name": "web",
+      "command": "npm run test:web",
+      "exitCode": 0,
+      "seconds": 476.45
+    },
+    {
+      "name": "experience",
+      "command": "npm run test:experience",
+      "exitCode": 0,
+      "seconds": 4.32
+    }
+  ],
+  "followup": {
+    "commands": [
+      "npm run web:build",
+      "node tests/editor/continuation-browser.cjs"
+    ],
+    "exitCode": 0,
+    "note": "After the full suites, numeric-sheet input was adjusted to clear a previous validation message and sheet actions stay visible while scrolling. The final rebuilt app passed all four viewports, including error-clearing, action viewport bounds and button hit-testing assertions."
+  },
+  "counts": {
+    "editorUnits": 76,
+    "editorBrowserWorkflows": 16,
+    "frontendUnits": 20,
+    "publicPageConfigurations": 22,
+    "galleryStudies": 19,
+    "officialAuthoringComparisons": 188,
+    "officialGalleryComparisons": 288,
+    "totalSelectedOfficialComparisons": 476,
+    "newSprigComparisons": 12
+  },
+  "viewports": [
+    {
+      "width": 320,
+      "height": 844,
+      "endpointChoice": true,
+      "numericCurve": true,
+      "nativeButtonKeyboard": true,
+      "pointCancel": true,
+      "originalPointsProtected": true,
+      "paintAndIdsRetained": true,
+      "oneUndo": true,
+      "firstEndpointClosed": true,
+      "recoveryExcludesDraft": true,
+      "axeViolations": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "endpointChoice": true,
+      "numericCurve": true,
+      "nativeButtonKeyboard": true,
+      "pointCancel": true,
+      "originalPointsProtected": true,
+      "paintAndIdsRetained": true,
+      "oneUndo": true,
+      "firstEndpointClosed": true,
+      "recoveryExcludesDraft": true,
+      "axeViolations": 0
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "endpointChoice": true,
+      "numericCurve": true,
+      "nativeButtonKeyboard": true,
+      "pointCancel": true,
+      "originalPointsProtected": true,
+      "paintAndIdsRetained": true,
+      "oneUndo": true,
+      "firstEndpointClosed": true,
+      "recoveryExcludesDraft": true,
+      "axeViolations": 0
+    },
+    {
+      "width": 1440,
+      "height": 844,
+      "endpointChoice": true,
+      "numericCurve": true,
+      "nativeButtonKeyboard": true,
+      "pointCancel": true,
+      "originalPointsProtected": true,
+      "paintAndIdsRetained": true,
+      "oneUndo": true,
+      "firstEndpointClosed": true,
+      "recoveryExcludesDraft": true,
+      "axeViolations": 0
+    }
+  ],
+  "nativeEvidence": "native.json",
+  "galleryEvidence": "../public-site/examples.json",
+  "sourceRegister": "../../path-continuation/sources.json",
+  "codeSHA256": {
+    "packages/studio/path-continuation.mjs": "2dccf4cdf0fc766d96f25f38a784fe48fb95e788c9ae69514ab01dd5bd52554a",
+    "packages/studio/continuation-controls.mjs": "c4eace56afd261444cf6812fd36521f5cd76e56ae715c54294b82d7a06e1931c",
+    "packages/studio/studio.mjs": "71af88d74cd9588b467fb6539eadc72b86b40c92cda5c48430cee8d126602fbc",
+    "tests/editor/path-continuation.test.mjs": "9037f14047a18f378bdbe092f2b9f1a574e760e058ea796a0cf21ecf1fab6ee4",
+    "tests/editor/continuation-browser.cjs": "586c160d18f25c28d6150b651564a97d19e3714c66a9784ebe51bb931923dd49",
+    "packages/studio/studio.css": "0e52be5c06b570df4d6c6b06e6b5ae8d4f93b6a87b769aa6f09dd8d201f65f1a",
+    "packages/studio/index.html": "2640c7e2eb4421f6785740f3450b915cdf3a054750cd6e1aa25de5dfc0b35e29"
+  },
+  "physicalTests": "Postponed by explicit user instruction; none performed.",
+  "humanAccessibility": "Automated focus/keyboard/WCAG checks; no human or screen-reader session.",
+  "backend": "Hosted services and remote MCP pairing remain deferred.",
+  "githubActions": {
+    "observedCodeHead": "f96595c9530af03efb2635c81447614bf667ec2a",
+    "status": "Blocked before execution",
+    "executedSteps": 0,
+    "reason": "The job was not started because your account is locked due to a billing issue.",
+    "jobs": [
+      "https://github.com/Mgregchi/Evir/actions/runs/38532907651/job/115748764562",
+      "https://github.com/Mgregchi/Evir/actions/runs/38532907703/job/115748764890"
+    ]
+  }
+}

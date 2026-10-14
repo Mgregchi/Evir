@@ -1,0 +1,894 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 2,
+  "id": "sprig-project",
+  "name": "Sprig — a story still growing",
+  "artboards": [
+    {
+      "id": "sprig-board",
+      "name": "Sprig — a story still growing",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "sprig-backdrop",
+      "name": "backdrop",
+      "kind": "path",
+      "artboardId": "sprig-board",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        32,
+        40
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e8efe7",
+        "skin": null,
+        "points": [
+          {
+            "id": "sprig-backdrop-p0",
+            "anchor": [
+              34,
+              0
+            ],
+            "in": [
+              15.2223185068,
+              0
+            ],
+            "out": [
+              34,
+              0
+            ]
+          },
+          {
+            "id": "sprig-backdrop-p1",
+            "anchor": [
+              414,
+              0
+            ],
+            "in": [
+              414,
+              0
+            ],
+            "out": [
+              432.7776814932,
+              0
+            ]
+          },
+          {
+            "id": "sprig-backdrop-p2",
+            "anchor": [
+              448,
+              34
+            ],
+            "in": [
+              448,
+              15.2223185068
+            ],
+            "out": [
+              448,
+              34
+            ]
+          },
+          {
+            "id": "sprig-backdrop-p3",
+            "anchor": [
+              448,
+              398
+            ],
+            "in": [
+              448,
+              398
+            ],
+            "out": [
+              448,
+              416.7776814932
+            ]
+          },
+          {
+            "id": "sprig-backdrop-p4",
+            "anchor": [
+              414,
+              432
+            ],
+            "in": [
+              432.7776814932,
+              432
+            ],
+            "out": [
+              414,
+              432
+            ]
+          },
+          {
+            "id": "sprig-backdrop-p5",
+            "anchor": [
+              34,
+              432
+            ],
+            "in": [
+              34,
+              432
+            ],
+            "out": [
+              15.2223185068,
+              432
+            ]
+          },
+          {
+            "id": "sprig-backdrop-p6",
+            "anchor": [
+              0,
+              398
+            ],
+            "in": [
+              0,
+              416.7776814932
+            ],
+            "out": [
+              0,
+              398
+            ]
+          },
+          {
+            "id": "sprig-backdrop-p7",
+            "anchor": [
+              0,
+              34
+            ],
+            "in": [
+              0,
+              34
+            ],
+            "out": [
+              0,
+              15.2223185068
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "sprig-shadow",
+      "name": "shadow",
+      "kind": "path",
+      "artboardId": "sprig-board",
+      "parentId": null,
+      "order": 1,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        256,
+        428
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#294d4020",
+        "skin": null,
+        "points": [
+          {
+            "id": "sprig-shadow-p0",
+            "anchor": [
+              105,
+              0
+            ],
+            "in": [
+              105,
+              -7.179701747399999
+            ],
+            "out": [
+              105,
+              7.179701747399999
+            ]
+          },
+          {
+            "id": "sprig-shadow-p1",
+            "anchor": [
+              0,
+              13
+            ],
+            "in": [
+              57.989898729,
+              13
+            ],
+            "out": [
+              -57.989898729,
+              13
+            ]
+          },
+          {
+            "id": "sprig-shadow-p2",
+            "anchor": [
+              -105,
+              0
+            ],
+            "in": [
+              -105,
+              7.179701747399999
+            ],
+            "out": [
+              -105,
+              -7.179701747399999
+            ]
+          },
+          {
+            "id": "sprig-shadow-p3",
+            "anchor": [
+              0,
+              -13
+            ],
+            "in": [
+              -57.989898729,
+              -13
+            ],
+            "out": [
+              57.989898729,
+              -13
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "sprig-pot-rim",
+      "name": "pot rim",
+      "kind": "path",
+      "artboardId": "sprig-board",
+      "parentId": null,
+      "order": 2,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        189,
+        335
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#d49d79",
+        "skin": null,
+        "points": [
+          {
+            "id": "sprig-pot-rim-p0",
+            "anchor": [
+              10,
+              0
+            ],
+            "in": [
+              4.477152502,
+              0
+            ],
+            "out": [
+              10,
+              0
+            ]
+          },
+          {
+            "id": "sprig-pot-rim-p1",
+            "anchor": [
+              124,
+              0
+            ],
+            "in": [
+              124,
+              0
+            ],
+            "out": [
+              129.522847498,
+              0
+            ]
+          },
+          {
+            "id": "sprig-pot-rim-p2",
+            "anchor": [
+              134,
+              10
+            ],
+            "in": [
+              134,
+              4.477152502
+            ],
+            "out": [
+              134,
+              10
+            ]
+          },
+          {
+            "id": "sprig-pot-rim-p3",
+            "anchor": [
+              134,
+              14
+            ],
+            "in": [
+              134,
+              14
+            ],
+            "out": [
+              134,
+              19.522847498
+            ]
+          },
+          {
+            "id": "sprig-pot-rim-p4",
+            "anchor": [
+              124,
+              24
+            ],
+            "in": [
+              129.522847498,
+              24
+            ],
+            "out": [
+              124,
+              24
+            ]
+          },
+          {
+            "id": "sprig-pot-rim-p5",
+            "anchor": [
+              10,
+              24
+            ],
+            "in": [
+              10,
+              24
+            ],
+            "out": [
+              4.477152502,
+              24
+            ]
+          },
+          {
+            "id": "sprig-pot-rim-p6",
+            "anchor": [
+              0,
+              14
+            ],
+            "in": [
+              0,
+              19.522847498
+            ],
+            "out": [
+              0,
+              14
+            ]
+          },
+          {
+            "id": "sprig-pot-rim-p7",
+            "anchor": [
+              0,
+              10
+            ],
+            "in": [
+              0,
+              10
+            ],
+            "out": [
+              0,
+              4.477152502
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "sprig-pot",
+      "name": "pot",
+      "kind": "path",
+      "artboardId": "sprig-board",
+      "parentId": null,
+      "order": 3,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        197,
+        351
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e8bd9b",
+        "skin": null,
+        "points": [
+          {
+            "id": "sprig-pot-p0",
+            "anchor": [
+              0,
+              0
+            ],
+            "in": [
+              0,
+              0
+            ],
+            "out": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "sprig-pot-p1",
+            "anchor": [
+              118,
+              0
+            ],
+            "in": [
+              118,
+              0
+            ],
+            "out": [
+              118,
+              0
+            ]
+          },
+          {
+            "id": "sprig-pot-p2",
+            "anchor": [
+              96,
+              68
+            ],
+            "in": [
+              96,
+              68
+            ],
+            "out": [
+              96,
+              68
+            ]
+          },
+          {
+            "id": "sprig-pot-p3",
+            "anchor": [
+              22,
+              68
+            ],
+            "in": [
+              22,
+              68
+            ],
+            "out": [
+              22,
+              68
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "sprig-plant",
+      "name": "plant",
+      "kind": "group",
+      "artboardId": "sprig-board",
+      "parentId": null,
+      "order": 4,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        256,
+        276
+      ],
+      "geometry": null
+    },
+    {
+      "id": "sprig-stem",
+      "name": "stem",
+      "kind": "path",
+      "artboardId": "sprig-board",
+      "parentId": "sprig-plant",
+      "order": 5,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -5,
+        -10
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#3c7555",
+        "skin": null,
+        "points": [
+          {
+            "id": "sprig-stem-p0",
+            "anchor": [
+              5,
+              0
+            ],
+            "in": [
+              2.238576251,
+              0
+            ],
+            "out": [
+              5,
+              0
+            ]
+          },
+          {
+            "id": "sprig-stem-p1",
+            "anchor": [
+              5,
+              0
+            ],
+            "in": [
+              5,
+              0
+            ],
+            "out": [
+              7.761423749,
+              0
+            ]
+          },
+          {
+            "id": "sprig-stem-p2",
+            "anchor": [
+              10,
+              5
+            ],
+            "in": [
+              10,
+              2.238576251
+            ],
+            "out": [
+              10,
+              5
+            ]
+          },
+          {
+            "id": "sprig-stem-p3",
+            "anchor": [
+              10,
+              62
+            ],
+            "in": [
+              10,
+              62
+            ],
+            "out": [
+              10,
+              64.761423749
+            ]
+          },
+          {
+            "id": "sprig-stem-p4",
+            "anchor": [
+              5,
+              67
+            ],
+            "in": [
+              7.761423749,
+              67
+            ],
+            "out": [
+              5,
+              67
+            ]
+          },
+          {
+            "id": "sprig-stem-p5",
+            "anchor": [
+              5,
+              67
+            ],
+            "in": [
+              5,
+              67
+            ],
+            "out": [
+              2.238576251,
+              67
+            ]
+          },
+          {
+            "id": "sprig-stem-p6",
+            "anchor": [
+              0,
+              62
+            ],
+            "in": [
+              0,
+              64.761423749
+            ],
+            "out": [
+              0,
+              62
+            ]
+          },
+          {
+            "id": "sprig-stem-p7",
+            "anchor": [
+              0,
+              5
+            ],
+            "in": [
+              0,
+              5
+            ],
+            "out": [
+              0,
+              2.238576251
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "sprig-growing-leaf",
+      "name": "growing leaf",
+      "kind": "path",
+      "artboardId": "sprig-board",
+      "parentId": "sprig-plant",
+      "order": 6,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#90d4b5",
+        "skin": null,
+        "points": [
+          {
+            "id": "sprig-growing-leaf-p0",
+            "anchor": [
+              -70,
+              0
+            ],
+            "in": [
+              -70,
+              0
+            ],
+            "out": [
+              -68,
+              -35
+            ]
+          },
+          {
+            "id": "sprig-growing-leaf-p1",
+            "anchor": [
+              -15,
+              -70
+            ],
+            "in": [
+              -44,
+              -70
+            ],
+            "out": [
+              8,
+              -70
+            ]
+          },
+          {
+            "id": "sprig-growing-leaf-p2",
+            "anchor": [
+              50,
+              -25
+            ],
+            "in": [
+              50,
+              -52
+            ],
+            "out": [
+              52,
+              -15
+            ]
+          },
+          {
+            "id": "sprig-extension-point-1",
+            "anchor": [
+              45,
+              35
+            ],
+            "in": [
+              64,
+              14
+            ],
+            "out": [
+              26,
+              56
+            ]
+          },
+          {
+            "id": "sprig-extension-point-2",
+            "anchor": [
+              -10,
+              65
+            ],
+            "in": [
+              23,
+              70
+            ],
+            "out": [
+              -43,
+              60
+            ]
+          },
+          {
+            "id": "sprig-extension-point-3",
+            "anchor": [
+              -60,
+              35
+            ],
+            "in": [
+              -46,
+              55
+            ],
+            "out": [
+              -74,
+              15
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "sprig-leaf-heart",
+      "name": "leaf heart",
+      "kind": "path",
+      "artboardId": "sprig-board",
+      "parentId": "sprig-plant",
+      "order": 7,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -10,
+        -5
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#477d60",
+        "skin": null,
+        "points": [
+          {
+            "id": "sprig-leaf-heart-p0",
+            "anchor": [
+              13,
+              0
+            ],
+            "in": [
+              13,
+              -7.179701747399999
+            ],
+            "out": [
+              13,
+              7.179701747399999
+            ]
+          },
+          {
+            "id": "sprig-leaf-heart-p1",
+            "anchor": [
+              0,
+              13
+            ],
+            "in": [
+              7.179701747399999,
+              13
+            ],
+            "out": [
+              -7.179701747399999,
+              13
+            ]
+          },
+          {
+            "id": "sprig-leaf-heart-p2",
+            "anchor": [
+              -13,
+              0
+            ],
+            "in": [
+              -13,
+              7.179701747399999
+            ],
+            "out": [
+              -13,
+              -7.179701747399999
+            ]
+          },
+          {
+            "id": "sprig-leaf-heart-p3",
+            "anchor": [
+              0,
+              -13
+            ],
+            "in": [
+              -7.179701747399999,
+              -13
+            ],
+            "out": [
+              7.179701747399999,
+              -13
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [
+    {
+      "id": "sprig-breeze",
+      "name": "Breeze",
+      "artboardId": "sprig-board",
+      "fps": 60,
+      "duration": 120,
+      "loop": true,
+      "tracks": [
+        {
+          "targetId": "sprig-plant",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": -0.08,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 0.08,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": -0.08,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "sprig-board": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "format": "evir-continuation-recipe",
+  "version": 1,
+  "nodeId": "sprig-growing-leaf",
+  "endpoint": "last",
+  "closed": true,
+  "points": [
+    {
+      "anchor": [
+        45,
+        35
+      ],
+      "out": [
+        26,
+        56
+      ]
+    },
+    {
+      "anchor": [
+        -10,
+        65
+      ],
+      "out": [
+        -43,
+        60
+      ]
+    },
+    {
+      "anchor": [
+        -60,
+        35
+      ],
+      "out": [
+        -74,
+        15
+      ]
+    }
+  ]
+}
