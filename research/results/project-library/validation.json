@@ -1,0 +1,116 @@
+{
+  "checkedAt": "2026-10-14T11:42:44.186843+00:00",
+  "scope": "Browser-local project library, migration and stale-tab save prevention. No engine/format/backend changes.",
+  "research": "research/project-library/sources.json",
+  "environment": {
+    "node": "24.19.0",
+    "npm": "11.9.0",
+    "chromium": "151.0.7922.173",
+    "playwright": "1.63.0",
+    "riveRuntime": "2.44.0",
+    "axe": "4.14.0",
+    "rendering": "Linux headless Chromium; ANGLE Vulkan SwiftShader software. No physical GPU/device claim."
+  },
+  "sourceSHA256": {
+    "packages/studio/recovery.mjs": "07bfe7119c360007a27c015840298ccbca09533c4a85264dfd116368918d7146",
+    "packages/studio/project-library.mjs": "ef4b7fe3d3cdc5ebe7042ec01b92f921b3d407d5d6f6bef99fef10df70a67d0e",
+    "packages/studio/studio.mjs": "4b1d64b76ecfe5edcf5750389d20766bde685e2776c1354577192594ed328bab",
+    "packages/studio/studio.css": "58951a6f0e54e2cffda465527696184e7eb38073c88e36da9d22e414ac9c6b7a",
+    "packages/studio/index.html": "03188bdec1d75126e842c18c359b1455ee7b6a2a90e0237a95ea9147de6ef1a5",
+    "tests/editor/library-browser.cjs": "7fef2636b2eacea935d744e3523ebb0275d171678769815eab9b5a93d42e13d7"
+  },
+  "checks": [
+    {
+      "label": "editor",
+      "command": "npm run test:editor",
+      "exitCode": 0,
+      "seconds": 246.1
+    },
+    {
+      "label": "native",
+      "command": "npm run validate:editor",
+      "exitCode": 0,
+      "seconds": 266.17
+    },
+    {
+      "label": "frontend",
+      "command": "npm run test:frontend",
+      "exitCode": 0,
+      "seconds": 1.1
+    },
+    {
+      "label": "experience",
+      "command": "npm run test:experience",
+      "exitCode": 0,
+      "seconds": 4.28
+    }
+  ],
+  "editorFollowup": {
+    "command": "npm run test:editor",
+    "exitCode": 0,
+    "reason": "Rerun all editor workflows after adding async switching/edit guards. Final subsequent changes were copy indentation and preparation notice colors, verified by a rebuilt focused browser run."
+  },
+  "counts": {
+    "editorUnitTests": 76,
+    "editorBrowserWorkflows": 17,
+    "frontendUnitTests": 20,
+    "selectedOfficialRuntimeComparisons": 188
+  },
+  "browser": "research/results/project-library/browser.json",
+  "native": "research/results/project-library/native.json",
+  "largeRecovery": "research/results/project-library/large-recovery.json",
+  "workflows": [
+    "Imports/New retain previous source",
+    "Keyed records independent of authored project IDs",
+    "Search/20-row metadata paging",
+    "Four portrait/landscape/desktop sizes",
+    "Actual two-tab conflicts and whole-project copy/latest actions",
+    "Revision checks without BroadcastChannel",
+    "IndexedDB v1 migration",
+    "localStorage migration after durable commit",
+    "Aborted/quota transactions roll back source and revision",
+    "Late completions do not change active session",
+    "Delayed asset preparation, pending resize and command suppression",
+    "Keyboard opening/paging and restored focus",
+    "Zero automated sheet axe violations"
+  ],
+  "notClaimed": [
+    "Physical-device, GPU performance or heap measurements",
+    "Human or screen-reader testing",
+    "Collaborative merge/history/cloud accounts",
+    "General Rive Editor-file import or renderer feature parity"
+  ],
+  "deferredByUser": [
+    "All physical-device tests",
+    "Hosted backend implementation"
+  ],
+  "ci": {
+    "status": "Not yet checked on this new PR"
+  },
+  "finalFollowup": [
+    {
+      "label": "final-build",
+      "command": "npm run web:build",
+      "exitCode": 0,
+      "seconds": 0.64
+    },
+    {
+      "label": "final-library",
+      "command": "node tests/editor/library-browser.cjs",
+      "exitCode": 0,
+      "seconds": 82.74
+    },
+    {
+      "label": "final-experience",
+      "command": "npm run test:experience",
+      "exitCode": 0,
+      "seconds": 4.41
+    }
+  ],
+  "browserFixtureSHA256": {
+    "apps/web/assets/examples/sprig.evir-project": "2ecb423e70ebe0dab04b214214891b044baa042dd37d47e7582cbe31cd9d9fd4",
+    "apps/web/assets/examples/signal.evir-project": "7c8e77f232f33ba1ed15e9ea0546db46f776bb2283cff6ae60877270f1f72dbb",
+    "apps/web/assets/examples/caption.evir-project": "2975c7e051c476215028f3dd31baa855b16e615927aa5cc1c4f61a067f3ea877"
+  },
+  "browserFixtureScope": "Original MIT Evir studies; test names and browser entry keys are varied by the workflow. Node equality is checked against original source."
+}
