@@ -19,3 +19,11 @@ test('Tempo demonstrates distinct hold/linear/cubic timing and color changes',()
 test('Signal gates typed inputs, consumes early triggers and restores defaults on reset',()=>{
  const p=source('signal'),r=createRuntime(p,{machineId:'signal-flow'});assert.equal(r.state.name,'Waiting');r.setInput('celebrate',true);r.setInput('level',75);assert.equal(r.state.name,'Waiting');r.setInput('enabled',true);assert.equal(r.state.name,'Ready');r.setInput('level',20);assert.equal(r.state.name,'Waiting');r.setInput('level',75);r.click('signal-celebration-pad');assert.equal(r.state.name,'Celebrating');r.reset();assert.equal(r.state.name,'Waiting');r.setInput('level',75);assert.equal(r.state.name,'Waiting');
 });
+test('Measure provides a separately validated guide preset and three independent alignment roots',async()=>{
+ const {validateGuides}=await import('../../packages/studio/guides.mjs');
+ const p=source('measure'),preset=JSON.parse(fs.readFileSync(new URL('../../apps/web/assets/examples/measure.guides.json',import.meta.url)));
+ validateGuides(preset);assert.equal(preset.guides.length,2);assert.equal(preset.grid.spacing,32);
+ const ids=['measure-card-1','measure-reference-card','measure-card-3'];
+ assert(ids.every(id=>p.nodes.some(n=>n.id===id&&n.kind==='group'&&n.parentId===null)));
+ assert.equal(Object.hasOwn(p.editor,'guides'),false);
+});

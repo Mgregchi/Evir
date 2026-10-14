@@ -1,0 +1,29 @@
+{
+  "format": "evir-guides",
+  "version": 1,
+  "visible": true,
+  "rulers": true,
+  "locked": false,
+  "snap": true,
+  "grid": {
+    "visible": true,
+    "snap": true,
+    "spacing": 32,
+    "originX": 0,
+    "originY": 0
+  },
+  "guides": [
+    {
+      "id": "measure-center",
+      "axis": "x",
+      "position": 256,
+      "visible": true
+    },
+    {
+      "id": "measure-top",
+      "axis": "y",
+      "position": 130,
+      "visible": true
+    }
+  ]
+}

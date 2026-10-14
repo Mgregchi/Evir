@@ -1,0 +1,1909 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 2,
+  "id": "measure-project",
+  "name": "Measure — a little balance",
+  "artboards": [
+    {
+      "id": "measure-board",
+      "name": "Measure — a little balance",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "measure-backdrop",
+      "name": "backdrop",
+      "kind": "path",
+      "artboardId": "measure-board",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        32,
+        40
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e8efe7",
+        "skin": null,
+        "points": [
+          {
+            "id": "measure-backdrop-p0",
+            "anchor": [
+              34,
+              0
+            ],
+            "in": [
+              15.2223185068,
+              0
+            ],
+            "out": [
+              34,
+              0
+            ]
+          },
+          {
+            "id": "measure-backdrop-p1",
+            "anchor": [
+              414,
+              0
+            ],
+            "in": [
+              414,
+              0
+            ],
+            "out": [
+              432.7776814932,
+              0
+            ]
+          },
+          {
+            "id": "measure-backdrop-p2",
+            "anchor": [
+              448,
+              34
+            ],
+            "in": [
+              448,
+              15.2223185068
+            ],
+            "out": [
+              448,
+              34
+            ]
+          },
+          {
+            "id": "measure-backdrop-p3",
+            "anchor": [
+              448,
+              398
+            ],
+            "in": [
+              448,
+              398
+            ],
+            "out": [
+              448,
+              416.7776814932
+            ]
+          },
+          {
+            "id": "measure-backdrop-p4",
+            "anchor": [
+              414,
+              432
+            ],
+            "in": [
+              432.7776814932,
+              432
+            ],
+            "out": [
+              414,
+              432
+            ]
+          },
+          {
+            "id": "measure-backdrop-p5",
+            "anchor": [
+              34,
+              432
+            ],
+            "in": [
+              34,
+              432
+            ],
+            "out": [
+              15.2223185068,
+              432
+            ]
+          },
+          {
+            "id": "measure-backdrop-p6",
+            "anchor": [
+              0,
+              398
+            ],
+            "in": [
+              0,
+              416.7776814932
+            ],
+            "out": [
+              0,
+              398
+            ]
+          },
+          {
+            "id": "measure-backdrop-p7",
+            "anchor": [
+              0,
+              34
+            ],
+            "in": [
+              0,
+              34
+            ],
+            "out": [
+              0,
+              15.2223185068
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "measure-rail",
+      "name": "rail",
+      "kind": "path",
+      "artboardId": "measure-board",
+      "parentId": null,
+      "order": 1,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        68,
+        340
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#cedcd1",
+        "skin": null,
+        "points": [
+          {
+            "id": "measure-rail-p0",
+            "anchor": [
+              5,
+              0
+            ],
+            "in": [
+              2.238576251,
+              0
+            ],
+            "out": [
+              5,
+              0
+            ]
+          },
+          {
+            "id": "measure-rail-p1",
+            "anchor": [
+              371,
+              0
+            ],
+            "in": [
+              371,
+              0
+            ],
+            "out": [
+              373.761423749,
+              0
+            ]
+          },
+          {
+            "id": "measure-rail-p2",
+            "anchor": [
+              376,
+              5
+            ],
+            "in": [
+              376,
+              2.238576251
+            ],
+            "out": [
+              376,
+              5
+            ]
+          },
+          {
+            "id": "measure-rail-p3",
+            "anchor": [
+              376,
+              5
+            ],
+            "in": [
+              376,
+              5
+            ],
+            "out": [
+              376,
+              7.761423749
+            ]
+          },
+          {
+            "id": "measure-rail-p4",
+            "anchor": [
+              371,
+              10
+            ],
+            "in": [
+              373.761423749,
+              10
+            ],
+            "out": [
+              371,
+              10
+            ]
+          },
+          {
+            "id": "measure-rail-p5",
+            "anchor": [
+              5,
+              10
+            ],
+            "in": [
+              5,
+              10
+            ],
+            "out": [
+              2.238576251,
+              10
+            ]
+          },
+          {
+            "id": "measure-rail-p6",
+            "anchor": [
+              0,
+              5
+            ],
+            "in": [
+              0,
+              7.761423749
+            ],
+            "out": [
+              0,
+              5
+            ]
+          },
+          {
+            "id": "measure-rail-p7",
+            "anchor": [
+              0,
+              5
+            ],
+            "in": [
+              0,
+              5
+            ],
+            "out": [
+              0,
+              2.238576251
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "measure-card-1",
+      "name": "card 1",
+      "kind": "group",
+      "artboardId": "measure-board",
+      "parentId": null,
+      "order": 2,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        66,
+        130
+      ],
+      "geometry": null
+    },
+    {
+      "id": "measure-card-1-body",
+      "name": "card 1 body",
+      "kind": "path",
+      "artboardId": "measure-board",
+      "parentId": "measure-card-1",
+      "order": 3,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e6ba98",
+        "skin": null,
+        "points": [
+          {
+            "id": "measure-card-1-body-p0",
+            "anchor": [
+              24,
+              0
+            ],
+            "in": [
+              10.745166004800002,
+              0
+            ],
+            "out": [
+              24,
+              0
+            ]
+          },
+          {
+            "id": "measure-card-1-body-p1",
+            "anchor": [
+              76,
+              0
+            ],
+            "in": [
+              76,
+              0
+            ],
+            "out": [
+              89.2548339952,
+              0
+            ]
+          },
+          {
+            "id": "measure-card-1-body-p2",
+            "anchor": [
+              100,
+              24
+            ],
+            "in": [
+              100,
+              10.745166004800002
+            ],
+            "out": [
+              100,
+              24
+            ]
+          },
+          {
+            "id": "measure-card-1-body-p3",
+            "anchor": [
+              100,
+              126
+            ],
+            "in": [
+              100,
+              126
+            ],
+            "out": [
+              100,
+              139.2548339952
+            ]
+          },
+          {
+            "id": "measure-card-1-body-p4",
+            "anchor": [
+              76,
+              150
+            ],
+            "in": [
+              89.2548339952,
+              150
+            ],
+            "out": [
+              76,
+              150
+            ]
+          },
+          {
+            "id": "measure-card-1-body-p5",
+            "anchor": [
+              24,
+              150
+            ],
+            "in": [
+              24,
+              150
+            ],
+            "out": [
+              10.745166004800002,
+              150
+            ]
+          },
+          {
+            "id": "measure-card-1-body-p6",
+            "anchor": [
+              0,
+              126
+            ],
+            "in": [
+              0,
+              139.2548339952
+            ],
+            "out": [
+              0,
+              126
+            ]
+          },
+          {
+            "id": "measure-card-1-body-p7",
+            "anchor": [
+              0,
+              24
+            ],
+            "in": [
+              0,
+              24
+            ],
+            "out": [
+              0,
+              10.745166004800002
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "measure-card-1-label",
+      "name": "card 1 label",
+      "kind": "path",
+      "artboardId": "measure-board",
+      "parentId": "measure-card-1",
+      "order": 4,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        20,
+        106
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#426b58",
+        "skin": null,
+        "points": [
+          {
+            "id": "measure-card-1-label-p0",
+            "anchor": [
+              3,
+              0
+            ],
+            "in": [
+              1.3431457506000002,
+              0
+            ],
+            "out": [
+              3,
+              0
+            ]
+          },
+          {
+            "id": "measure-card-1-label-p1",
+            "anchor": [
+              57,
+              0
+            ],
+            "in": [
+              57,
+              0
+            ],
+            "out": [
+              58.6568542494,
+              0
+            ]
+          },
+          {
+            "id": "measure-card-1-label-p2",
+            "anchor": [
+              60,
+              3
+            ],
+            "in": [
+              60,
+              1.3431457506000002
+            ],
+            "out": [
+              60,
+              3
+            ]
+          },
+          {
+            "id": "measure-card-1-label-p3",
+            "anchor": [
+              60,
+              4
+            ],
+            "in": [
+              60,
+              4
+            ],
+            "out": [
+              60,
+              5.6568542494
+            ]
+          },
+          {
+            "id": "measure-card-1-label-p4",
+            "anchor": [
+              57,
+              7
+            ],
+            "in": [
+              58.6568542494,
+              7
+            ],
+            "out": [
+              57,
+              7
+            ]
+          },
+          {
+            "id": "measure-card-1-label-p5",
+            "anchor": [
+              3,
+              7
+            ],
+            "in": [
+              3,
+              7
+            ],
+            "out": [
+              1.3431457506000002,
+              7
+            ]
+          },
+          {
+            "id": "measure-card-1-label-p6",
+            "anchor": [
+              0,
+              4
+            ],
+            "in": [
+              0,
+              5.6568542494
+            ],
+            "out": [
+              0,
+              4
+            ]
+          },
+          {
+            "id": "measure-card-1-label-p7",
+            "anchor": [
+              0,
+              3
+            ],
+            "in": [
+              0,
+              3
+            ],
+            "out": [
+              0,
+              1.3431457506000002
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "measure-card-1-symbol",
+      "name": "card 1 symbol",
+      "kind": "path",
+      "artboardId": "measure-board",
+      "parentId": "measure-card-1",
+      "order": 5,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        50,
+        52
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#426b58",
+        "skin": null,
+        "points": [
+          {
+            "id": "measure-card-1-symbol-p0",
+            "anchor": [
+              23,
+              0
+            ],
+            "in": [
+              23,
+              -12.7025492454
+            ],
+            "out": [
+              23,
+              12.7025492454
+            ]
+          },
+          {
+            "id": "measure-card-1-symbol-p1",
+            "anchor": [
+              0,
+              23
+            ],
+            "in": [
+              12.7025492454,
+              23
+            ],
+            "out": [
+              -12.7025492454,
+              23
+            ]
+          },
+          {
+            "id": "measure-card-1-symbol-p2",
+            "anchor": [
+              -23,
+              0
+            ],
+            "in": [
+              -23,
+              12.7025492454
+            ],
+            "out": [
+              -23,
+              -12.7025492454
+            ]
+          },
+          {
+            "id": "measure-card-1-symbol-p3",
+            "anchor": [
+              0,
+              -23
+            ],
+            "in": [
+              -12.7025492454,
+              -23
+            ],
+            "out": [
+              12.7025492454,
+              -23
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "measure-card-1-center",
+      "name": "card 1 center",
+      "kind": "path",
+      "artboardId": "measure-board",
+      "parentId": "measure-card-1",
+      "order": 6,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        50,
+        52
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e6ba98",
+        "skin": null,
+        "points": [
+          {
+            "id": "measure-card-1-center-p0",
+            "anchor": [
+              9,
+              0
+            ],
+            "in": [
+              9,
+              -4.9705627482
+            ],
+            "out": [
+              9,
+              4.9705627482
+            ]
+          },
+          {
+            "id": "measure-card-1-center-p1",
+            "anchor": [
+              0,
+              9
+            ],
+            "in": [
+              4.9705627482,
+              9
+            ],
+            "out": [
+              -4.9705627482,
+              9
+            ]
+          },
+          {
+            "id": "measure-card-1-center-p2",
+            "anchor": [
+              -9,
+              0
+            ],
+            "in": [
+              -9,
+              4.9705627482
+            ],
+            "out": [
+              -9,
+              -4.9705627482
+            ]
+          },
+          {
+            "id": "measure-card-1-center-p3",
+            "anchor": [
+              0,
+              -9
+            ],
+            "in": [
+              -4.9705627482,
+              -9
+            ],
+            "out": [
+              4.9705627482,
+              -9
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "measure-reference-card",
+      "name": "reference card",
+      "kind": "group",
+      "artboardId": "measure-board",
+      "parentId": null,
+      "order": 7,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        206,
+        130
+      ],
+      "geometry": null
+    },
+    {
+      "id": "measure-card-2-body",
+      "name": "card 2 body",
+      "kind": "path",
+      "artboardId": "measure-board",
+      "parentId": "measure-reference-card",
+      "order": 8,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#294d40",
+        "skin": null,
+        "points": [
+          {
+            "id": "measure-card-2-body-p0",
+            "anchor": [
+              24,
+              0
+            ],
+            "in": [
+              10.745166004800002,
+              0
+            ],
+            "out": [
+              24,
+              0
+            ]
+          },
+          {
+            "id": "measure-card-2-body-p1",
+            "anchor": [
+              76,
+              0
+            ],
+            "in": [
+              76,
+              0
+            ],
+            "out": [
+              89.2548339952,
+              0
+            ]
+          },
+          {
+            "id": "measure-card-2-body-p2",
+            "anchor": [
+              100,
+              24
+            ],
+            "in": [
+              100,
+              10.745166004800002
+            ],
+            "out": [
+              100,
+              24
+            ]
+          },
+          {
+            "id": "measure-card-2-body-p3",
+            "anchor": [
+              100,
+              126
+            ],
+            "in": [
+              100,
+              126
+            ],
+            "out": [
+              100,
+              139.2548339952
+            ]
+          },
+          {
+            "id": "measure-card-2-body-p4",
+            "anchor": [
+              76,
+              150
+            ],
+            "in": [
+              89.2548339952,
+              150
+            ],
+            "out": [
+              76,
+              150
+            ]
+          },
+          {
+            "id": "measure-card-2-body-p5",
+            "anchor": [
+              24,
+              150
+            ],
+            "in": [
+              24,
+              150
+            ],
+            "out": [
+              10.745166004800002,
+              150
+            ]
+          },
+          {
+            "id": "measure-card-2-body-p6",
+            "anchor": [
+              0,
+              126
+            ],
+            "in": [
+              0,
+              139.2548339952
+            ],
+            "out": [
+              0,
+              126
+            ]
+          },
+          {
+            "id": "measure-card-2-body-p7",
+            "anchor": [
+              0,
+              24
+            ],
+            "in": [
+              0,
+              24
+            ],
+            "out": [
+              0,
+              10.745166004800002
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "measure-card-2-label",
+      "name": "card 2 label",
+      "kind": "path",
+      "artboardId": "measure-board",
+      "parentId": "measure-reference-card",
+      "order": 9,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        20,
+        106
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#a4d9bf",
+        "skin": null,
+        "points": [
+          {
+            "id": "measure-card-2-label-p0",
+            "anchor": [
+              3,
+              0
+            ],
+            "in": [
+              1.3431457506000002,
+              0
+            ],
+            "out": [
+              3,
+              0
+            ]
+          },
+          {
+            "id": "measure-card-2-label-p1",
+            "anchor": [
+              57,
+              0
+            ],
+            "in": [
+              57,
+              0
+            ],
+            "out": [
+              58.6568542494,
+              0
+            ]
+          },
+          {
+            "id": "measure-card-2-label-p2",
+            "anchor": [
+              60,
+              3
+            ],
+            "in": [
+              60,
+              1.3431457506000002
+            ],
+            "out": [
+              60,
+              3
+            ]
+          },
+          {
+            "id": "measure-card-2-label-p3",
+            "anchor": [
+              60,
+              4
+            ],
+            "in": [
+              60,
+              4
+            ],
+            "out": [
+              60,
+              5.6568542494
+            ]
+          },
+          {
+            "id": "measure-card-2-label-p4",
+            "anchor": [
+              57,
+              7
+            ],
+            "in": [
+              58.6568542494,
+              7
+            ],
+            "out": [
+              57,
+              7
+            ]
+          },
+          {
+            "id": "measure-card-2-label-p5",
+            "anchor": [
+              3,
+              7
+            ],
+            "in": [
+              3,
+              7
+            ],
+            "out": [
+              1.3431457506000002,
+              7
+            ]
+          },
+          {
+            "id": "measure-card-2-label-p6",
+            "anchor": [
+              0,
+              4
+            ],
+            "in": [
+              0,
+              5.6568542494
+            ],
+            "out": [
+              0,
+              4
+            ]
+          },
+          {
+            "id": "measure-card-2-label-p7",
+            "anchor": [
+              0,
+              3
+            ],
+            "in": [
+              0,
+              3
+            ],
+            "out": [
+              0,
+              1.3431457506000002
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "measure-card-2-symbol",
+      "name": "card 2 symbol",
+      "kind": "path",
+      "artboardId": "measure-board",
+      "parentId": "measure-reference-card",
+      "order": 10,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        50,
+        52
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#a4d9bf",
+        "skin": null,
+        "points": [
+          {
+            "id": "measure-card-2-symbol-p0",
+            "anchor": [
+              23,
+              0
+            ],
+            "in": [
+              23,
+              -12.7025492454
+            ],
+            "out": [
+              23,
+              12.7025492454
+            ]
+          },
+          {
+            "id": "measure-card-2-symbol-p1",
+            "anchor": [
+              0,
+              23
+            ],
+            "in": [
+              12.7025492454,
+              23
+            ],
+            "out": [
+              -12.7025492454,
+              23
+            ]
+          },
+          {
+            "id": "measure-card-2-symbol-p2",
+            "anchor": [
+              -23,
+              0
+            ],
+            "in": [
+              -23,
+              12.7025492454
+            ],
+            "out": [
+              -23,
+              -12.7025492454
+            ]
+          },
+          {
+            "id": "measure-card-2-symbol-p3",
+            "anchor": [
+              0,
+              -23
+            ],
+            "in": [
+              -12.7025492454,
+              -23
+            ],
+            "out": [
+              12.7025492454,
+              -23
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "measure-card-2-center",
+      "name": "card 2 center",
+      "kind": "path",
+      "artboardId": "measure-board",
+      "parentId": "measure-reference-card",
+      "order": 11,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        50,
+        52
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#294d40",
+        "skin": null,
+        "points": [
+          {
+            "id": "measure-card-2-center-p0",
+            "anchor": [
+              9,
+              0
+            ],
+            "in": [
+              9,
+              -4.9705627482
+            ],
+            "out": [
+              9,
+              4.9705627482
+            ]
+          },
+          {
+            "id": "measure-card-2-center-p1",
+            "anchor": [
+              0,
+              9
+            ],
+            "in": [
+              4.9705627482,
+              9
+            ],
+            "out": [
+              -4.9705627482,
+              9
+            ]
+          },
+          {
+            "id": "measure-card-2-center-p2",
+            "anchor": [
+              -9,
+              0
+            ],
+            "in": [
+              -9,
+              4.9705627482
+            ],
+            "out": [
+              -9,
+              -4.9705627482
+            ]
+          },
+          {
+            "id": "measure-card-2-center-p3",
+            "anchor": [
+              0,
+              -9
+            ],
+            "in": [
+              -4.9705627482,
+              -9
+            ],
+            "out": [
+              4.9705627482,
+              -9
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "measure-card-3",
+      "name": "card 3",
+      "kind": "group",
+      "artboardId": "measure-board",
+      "parentId": null,
+      "order": 12,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        346,
+        130
+      ],
+      "geometry": null
+    },
+    {
+      "id": "measure-card-3-body",
+      "name": "card 3 body",
+      "kind": "path",
+      "artboardId": "measure-board",
+      "parentId": "measure-card-3",
+      "order": 13,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#90d4b5",
+        "skin": null,
+        "points": [
+          {
+            "id": "measure-card-3-body-p0",
+            "anchor": [
+              24,
+              0
+            ],
+            "in": [
+              10.745166004800002,
+              0
+            ],
+            "out": [
+              24,
+              0
+            ]
+          },
+          {
+            "id": "measure-card-3-body-p1",
+            "anchor": [
+              76,
+              0
+            ],
+            "in": [
+              76,
+              0
+            ],
+            "out": [
+              89.2548339952,
+              0
+            ]
+          },
+          {
+            "id": "measure-card-3-body-p2",
+            "anchor": [
+              100,
+              24
+            ],
+            "in": [
+              100,
+              10.745166004800002
+            ],
+            "out": [
+              100,
+              24
+            ]
+          },
+          {
+            "id": "measure-card-3-body-p3",
+            "anchor": [
+              100,
+              126
+            ],
+            "in": [
+              100,
+              126
+            ],
+            "out": [
+              100,
+              139.2548339952
+            ]
+          },
+          {
+            "id": "measure-card-3-body-p4",
+            "anchor": [
+              76,
+              150
+            ],
+            "in": [
+              89.2548339952,
+              150
+            ],
+            "out": [
+              76,
+              150
+            ]
+          },
+          {
+            "id": "measure-card-3-body-p5",
+            "anchor": [
+              24,
+              150
+            ],
+            "in": [
+              24,
+              150
+            ],
+            "out": [
+              10.745166004800002,
+              150
+            ]
+          },
+          {
+            "id": "measure-card-3-body-p6",
+            "anchor": [
+              0,
+              126
+            ],
+            "in": [
+              0,
+              139.2548339952
+            ],
+            "out": [
+              0,
+              126
+            ]
+          },
+          {
+            "id": "measure-card-3-body-p7",
+            "anchor": [
+              0,
+              24
+            ],
+            "in": [
+              0,
+              24
+            ],
+            "out": [
+              0,
+              10.745166004800002
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "measure-card-3-label",
+      "name": "card 3 label",
+      "kind": "path",
+      "artboardId": "measure-board",
+      "parentId": "measure-card-3",
+      "order": 14,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        20,
+        106
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#426b58",
+        "skin": null,
+        "points": [
+          {
+            "id": "measure-card-3-label-p0",
+            "anchor": [
+              3,
+              0
+            ],
+            "in": [
+              1.3431457506000002,
+              0
+            ],
+            "out": [
+              3,
+              0
+            ]
+          },
+          {
+            "id": "measure-card-3-label-p1",
+            "anchor": [
+              57,
+              0
+            ],
+            "in": [
+              57,
+              0
+            ],
+            "out": [
+              58.6568542494,
+              0
+            ]
+          },
+          {
+            "id": "measure-card-3-label-p2",
+            "anchor": [
+              60,
+              3
+            ],
+            "in": [
+              60,
+              1.3431457506000002
+            ],
+            "out": [
+              60,
+              3
+            ]
+          },
+          {
+            "id": "measure-card-3-label-p3",
+            "anchor": [
+              60,
+              4
+            ],
+            "in": [
+              60,
+              4
+            ],
+            "out": [
+              60,
+              5.6568542494
+            ]
+          },
+          {
+            "id": "measure-card-3-label-p4",
+            "anchor": [
+              57,
+              7
+            ],
+            "in": [
+              58.6568542494,
+              7
+            ],
+            "out": [
+              57,
+              7
+            ]
+          },
+          {
+            "id": "measure-card-3-label-p5",
+            "anchor": [
+              3,
+              7
+            ],
+            "in": [
+              3,
+              7
+            ],
+            "out": [
+              1.3431457506000002,
+              7
+            ]
+          },
+          {
+            "id": "measure-card-3-label-p6",
+            "anchor": [
+              0,
+              4
+            ],
+            "in": [
+              0,
+              5.6568542494
+            ],
+            "out": [
+              0,
+              4
+            ]
+          },
+          {
+            "id": "measure-card-3-label-p7",
+            "anchor": [
+              0,
+              3
+            ],
+            "in": [
+              0,
+              3
+            ],
+            "out": [
+              0,
+              1.3431457506000002
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "measure-card-3-symbol",
+      "name": "card 3 symbol",
+      "kind": "path",
+      "artboardId": "measure-board",
+      "parentId": "measure-card-3",
+      "order": 15,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        50,
+        52
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#426b58",
+        "skin": null,
+        "points": [
+          {
+            "id": "measure-card-3-symbol-p0",
+            "anchor": [
+              23,
+              0
+            ],
+            "in": [
+              23,
+              -12.7025492454
+            ],
+            "out": [
+              23,
+              12.7025492454
+            ]
+          },
+          {
+            "id": "measure-card-3-symbol-p1",
+            "anchor": [
+              0,
+              23
+            ],
+            "in": [
+              12.7025492454,
+              23
+            ],
+            "out": [
+              -12.7025492454,
+              23
+            ]
+          },
+          {
+            "id": "measure-card-3-symbol-p2",
+            "anchor": [
+              -23,
+              0
+            ],
+            "in": [
+              -23,
+              12.7025492454
+            ],
+            "out": [
+              -23,
+              -12.7025492454
+            ]
+          },
+          {
+            "id": "measure-card-3-symbol-p3",
+            "anchor": [
+              0,
+              -23
+            ],
+            "in": [
+              -12.7025492454,
+              -23
+            ],
+            "out": [
+              12.7025492454,
+              -23
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "measure-card-3-center",
+      "name": "card 3 center",
+      "kind": "path",
+      "artboardId": "measure-board",
+      "parentId": "measure-card-3",
+      "order": 16,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        50,
+        52
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#90d4b5",
+        "skin": null,
+        "points": [
+          {
+            "id": "measure-card-3-center-p0",
+            "anchor": [
+              9,
+              0
+            ],
+            "in": [
+              9,
+              -4.9705627482
+            ],
+            "out": [
+              9,
+              4.9705627482
+            ]
+          },
+          {
+            "id": "measure-card-3-center-p1",
+            "anchor": [
+              0,
+              9
+            ],
+            "in": [
+              4.9705627482,
+              9
+            ],
+            "out": [
+              -4.9705627482,
+              9
+            ]
+          },
+          {
+            "id": "measure-card-3-center-p2",
+            "anchor": [
+              -9,
+              0
+            ],
+            "in": [
+              -9,
+              4.9705627482
+            ],
+            "out": [
+              -9,
+              -4.9705627482
+            ]
+          },
+          {
+            "id": "measure-card-3-center-p3",
+            "anchor": [
+              0,
+              -9
+            ],
+            "in": [
+              -4.9705627482,
+              -9
+            ],
+            "out": [
+              4.9705627482,
+              -9
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "measure-balance-indicator",
+      "name": "balance indicator",
+      "kind": "path",
+      "artboardId": "measure-board",
+      "parentId": null,
+      "order": 17,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        256,
+        398
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#87bba2",
+        "skin": null,
+        "points": [
+          {
+            "id": "measure-balance-indicator-p0",
+            "anchor": [
+              12,
+              0
+            ],
+            "in": [
+              12,
+              -6.627416997599999
+            ],
+            "out": [
+              12,
+              6.627416997599999
+            ]
+          },
+          {
+            "id": "measure-balance-indicator-p1",
+            "anchor": [
+              0,
+              12
+            ],
+            "in": [
+              6.627416997599999,
+              12
+            ],
+            "out": [
+              -6.627416997599999,
+              12
+            ]
+          },
+          {
+            "id": "measure-balance-indicator-p2",
+            "anchor": [
+              -12,
+              0
+            ],
+            "in": [
+              -12,
+              6.627416997599999
+            ],
+            "out": [
+              -12,
+              -6.627416997599999
+            ]
+          },
+          {
+            "id": "measure-balance-indicator-p3",
+            "anchor": [
+              0,
+              -12
+            ],
+            "in": [
+              -6.627416997599999,
+              -12
+            ],
+            "out": [
+              6.627416997599999,
+              -12
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [
+    {
+      "id": "measure-breathe",
+      "name": "Balance",
+      "artboardId": "measure-board",
+      "fps": 60,
+      "duration": 120,
+      "loop": true,
+      "tracks": [
+        {
+          "targetId": "measure-balance-indicator",
+          "property": "scaleX",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 1.3,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "measure-balance-indicator",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 1.3,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "machines": [],
+  "editor": {
+    "locked": [
+      "measure-reference-card"
+    ],
+    "hidden": [],
+    "cameras": {
+      "measure-board": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  }
+}

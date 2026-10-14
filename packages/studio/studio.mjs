@@ -2,7 +2,9 @@ import { mountAdvanced } from "./advanced.mjs";
 import { mountLiveCommands } from "./live-commands.mjs";
 import { mountRiveViewer } from "./rive-viewer.mjs";
 import { showMcpGuide } from "./guidance.mjs";
-let liveTools, riveViewer;
+import { mountGuides } from "./guide-controls.mjs";
+import { canSnapGuides, snapWithGuides } from "./guides.mjs";
+let liveTools, riveViewer, canvasGuides, alignmentKey = null;
 import { ProjectRecovery, RecoveryQueue } from "./recovery.mjs";
 import { SceneAssets, sceneOrder } from "@evir/renderer-canvas";
 import { importRiv } from "@evir/format";
@@ -31,7 +33,6 @@ import { mountLayout } from "./layout.mjs";
 import { touchFrame, gestureCamera } from "./navigation.mjs";
 import {
   snapTargets,
-  snapMove,
   alignmentMoves,
   applyAlignment,
   distributionMoves,
@@ -300,6 +301,7 @@ function node() {
 function setSelection(ids) {
   selectedIds = new Set(ids);
   selected = [...selectedIds].at(-1) || null;
+  if (!selectedIds.has(alignmentKey)) alignmentKey = null;
 }
 function select(id, additive = false) {
   if (!penReady()) return;
@@ -533,6 +535,12 @@ function draw() {
   }
   if (tool !== "pen" && selectedIds.size <= 1)
     authoring?.overlay(ctx, p, n, c.zoom);
+  const reference = p.nodes.find((n) => n.id === alignmentKey);
+  if (reference && authoring?.mode === "Design" && selectedIds.has(reference.id)) {
+    const b = bounds(p, reference);
+    ctx.save(); ctx.strokeStyle = "#edbd80"; ctx.lineWidth = 2 / c.zoom;
+    ctx.strokeRect(b.x, b.y, b.width, b.height); ctx.restore();
+  }
   if (drag?.kind === "marquee") {
     ctx.strokeStyle = "#308c70";
     ctx.fillStyle = "#308c7018";
@@ -563,6 +571,7 @@ function draw() {
   }
   drawPen(c.zoom);
   ctx.restore();
+  canvasGuides?.draw(ctx, c, r);
   $("#zoom").textContent = Math.round(c.zoom * 100) + "%";
   $("#empty-stage").hidden =
     tool === "pen" || p.nodes.some((n) => n.artboardId === activeArtboard);
@@ -649,14 +658,27 @@ function action(text, fn, disabled = false, cls) {
 }
 function alignmentPanel(p) {
   const group = section("Alignment");
+  const roots = selectionRoots(p, selectedIds);
+  if (!roots.some((n) => n.id === alignmentKey)) alignmentKey = null;
   group.append(
     element(
       "p",
       selectionRoots(p, selectedIds).length === 1
         ? "Align to the artboard."
-        : "Align selected layers to each other.",
+        : alignmentKey ? "Keep the reference fixed; align the other selected layers to it." : "Align selected layers to each other.",
     ),
   );
+  if (roots.length > 1) {
+    const label = element("label", undefined, "field"), reference = element("select");
+    label.append(element("span", "Alignment reference"));
+    reference.setAttribute("aria-label", "Alignment reference");
+    for (const [id, name] of [["", "Selection bounds"], ...roots.map((n) => [n.id, `Keep ${n.name} fixed`])]) {
+      const option = element("option", name); option.value = id; reference.append(option);
+    }
+    reference.value = alignmentKey || "";
+    reference.onchange = () => { alignmentKey = reference.value || null; render(); document.querySelector('[aria-label="Alignment reference"]')?.focus(); };
+    label.append(reference); group.append(label);
+  }
   const controls = element("div", undefined, "alignment-controls");
   for (const [id, label] of [
     ["left", "Left"],
@@ -671,7 +693,7 @@ function alignmentPanel(p) {
       () => {
         if (authoring.mode !== "Design" || !penReady()) return;
         try {
-          const moves = alignmentMoves(project(), selectedIds, id);
+          const moves = alignmentMoves(project(), selectedIds, id, alignmentKey);
           if (!edit(`Align ${id}`, (p) => applyAlignment(p, moves), true))
             return;
           // Rendering replaces the Inspector; restore the activated control's focus.
@@ -682,7 +704,7 @@ function alignmentPanel(p) {
       },
       authoring?.mode !== "Design" ||
         selectionRoots(p, selectedIds).some(
-          (n) => !available(p, n, "locked") || !available(p, n, "hidden"),
+          (n) => (n.id !== alignmentKey && !available(p, n, "locked")) || !available(p, n, "hidden"),
         ),
     );
     button.dataset.alignment = id;
@@ -1367,6 +1389,10 @@ stage.addEventListener("pointerdown", (e) => {
     e.preventDefault();
     return;
   }
+  if (authoring.mode === "Design" && tool === "select" && !penDraft && canvasGuides?.begin(start, c)) {
+    drag = { kind: "guide", start, c, pointerId: e.pointerId };
+    stage.setPointerCapture(e.pointerId); e.preventDefault(); draw(); return;
+  }
   const p = project(),
     world = { x: (start.x - c.x) / c.zoom, y: (start.y - c.y) / c.zoom };
   if (["pen", "freehand"].includes(tool)) {
@@ -1488,13 +1514,15 @@ stage.addEventListener("pointerdown", (e) => {
       c,
       prepared,
       snapBox:
-        authoring.mode === "Design" && snapping
+        authoring.mode === "Design" && (snapping || canSnapGuides(canvasGuides.current()))
           ? selectionBounds(p, selectedIds)
           : null,
       snapTargets:
         authoring.mode === "Design" && snapping
           ? snapTargets(p, selectedIds, activeArtboard)
           : null,
+      guideSettings: canvasGuides.current(),
+      guideBoard: { ...artboard(p) },
       id: n.id,
       pointerId: e.pointerId,
     };
@@ -1569,6 +1597,7 @@ stage.addEventListener("pointermove", (e) => {
     draw();
     return;
   }
+  if (drag.kind === "guide") { canvasGuides.move(now); draw(); return; }
   if (drag.kind === "marquee") {
     const world = {
       x: (now.x - drag.c.x) / drag.c.zoom,
@@ -1611,9 +1640,11 @@ stage.addEventListener("pointermove", (e) => {
         } else raw[drag.control] = local;
       } else {
         const authoredTransform = [...n.transform];
-        const snapped = snapMove(
+        const snapped = snapWithGuides(
           drag.snapBox,
           drag.snapTargets,
+          drag.guideSettings,
+          drag.guideBoard,
           dx,
           dy,
           drag.c.zoom,
@@ -1676,7 +1707,8 @@ function finishDrag(e) {
     return;
   }
   if (!drag || e.pointerId !== drag.pointerId) return;
-  if (!["pan", "marquee"].includes(drag.kind)) store.commit();
+  if (drag.kind === "guide") canvasGuides.finish();
+  else if (!["pan", "marquee"].includes(drag.kind)) store.commit();
   drag = null;
   updateGuides();
   render();
@@ -1691,6 +1723,7 @@ function cancelDrag() {
   }
   if (!drag) return;
   if (drag.kind === "marquee") setSelection(drag.before);
+  else if (drag.kind === "guide") canvasGuides.cancel();
   else if (drag.kind !== "pan") store.cancel();
   else cameras[activeArtboard] = drag.c;
   drag = null;
@@ -2080,6 +2113,7 @@ $("#shortcuts").onclick = () => $("#help").showModal();
 $("#close-help").onclick = () => $("#help").close();
 window.addEventListener("keydown", (e) => {
   if (
+    document.querySelector("dialog[open]") ||
     $("#help").open ||
     $("#replace-project").open ||
     $("#mobile-panel").open ||
@@ -2112,6 +2146,7 @@ window.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     if (penDraft) cancelPen();
     else if (drag) cancelDrag();
+    else if (canvasGuides?.escape()) return;
     else if (["pen", "freehand"].includes(tool)) setTool("select");
     else select(node()?.parentId || null);
     return;
@@ -2319,6 +2354,7 @@ window.addEventListener("pagehide", (e) => {
 mountPanels();
 mountDisclosures();
 mountLayout({ notice });
+canvasGuides = mountGuides({project, artboard, ready:penReady, cancel:cancelDrag, draw, notice, editable:()=>authoring.mode === "Design" && tool === "select"});
 render();
 document.body.classList.remove("studio-booting");
 $("#studio-loading").hidden = true;
@@ -2335,6 +2371,8 @@ window.evirStudio = {
   pose: () => structuredClone(project()),
   mode: () => authoring.mode,
   guides: () => structuredClone(snapGuides),
+  canvasGuides: () => canvasGuides.current(),
+  guideEditing: () => canvasGuides.editing(),
 };
 liveTools = mountLiveCommands({history:()=>store,artboardId:()=>activeArtboard,ready:penReady,changed:()=>{render();persist();}});
 window.evirStudio.live = liveTools.api;

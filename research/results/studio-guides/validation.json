@@ -1,0 +1,147 @@
+{
+  "checkedAt": "2026-10-13T18:38:44.059840+00:00",
+  "baseCommit": "456aaf5c8cce10ca993535b04acd38cd468c55d9",
+  "scope": "Persistent manual guides, uniform grid and fixed-reference alignment; original Measure study. Local software checks only.",
+  "checks": [
+    {
+      "name": "editor",
+      "command": "npm run test:editor",
+      "exitCode": 0,
+      "seconds": 159.57
+    },
+    {
+      "name": "native",
+      "command": "npm run validate:editor",
+      "exitCode": 0,
+      "seconds": 267.28
+    },
+    {
+      "name": "frontend",
+      "command": "npm run test:frontend",
+      "exitCode": 0,
+      "seconds": 1.26
+    },
+    {
+      "name": "web",
+      "command": "npm run test:web",
+      "exitCode": 0,
+      "seconds": 463.68
+    },
+    {
+      "name": "experience",
+      "command": "npm run test:experience",
+      "exitCode": 0,
+      "seconds": 4.37
+    }
+  ],
+  "followup": {
+    "commands": [
+      "npm run web:build",
+      "node tests/editor/guides-browser.cjs",
+      "node --test tests/editor/guides.test.mjs"
+    ],
+    "exitCode": 0,
+    "note": "After the full suites, sheet opener and lock-toggle focus restoration were corrected and verified on the final rebuilt app at all four guide viewports. Test/source formatting has no behavioral changes."
+  },
+  "counts": {
+    "editorUnits": 70,
+    "editorBrowserWorkflows": 15,
+    "frontendUnits": 19,
+    "publicPageConfigurations": 22,
+    "galleryStudies": 18,
+    "officialAuthoringComparisons": 188,
+    "officialGalleryComparisons": 276,
+    "totalSelectedOfficialComparisons": 464,
+    "newMeasureComparisons": 12
+  },
+  "guideViewports": [
+    {
+      "width": 320,
+      "height": 844,
+      "numericGuides": true,
+      "rulerCreation": true,
+      "guideMoveCancel": true,
+      "presetDownload": true,
+      "presetImport": true,
+      "gridPointerSnap": true,
+      "invalidPresetRejected": true,
+      "sourceExportUnchanged": true,
+      "keyReferenceFixed": true,
+      "oneUndo": true,
+      "recovery": true,
+      "axeViolations": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "numericGuides": true,
+      "rulerCreation": true,
+      "guideMoveCancel": true,
+      "presetDownload": true,
+      "presetImport": true,
+      "gridPointerSnap": true,
+      "invalidPresetRejected": true,
+      "sourceExportUnchanged": true,
+      "keyReferenceFixed": true,
+      "oneUndo": true,
+      "recovery": true,
+      "axeViolations": 0
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "numericGuides": true,
+      "rulerCreation": true,
+      "guideMoveCancel": true,
+      "presetDownload": true,
+      "presetImport": true,
+      "gridPointerSnap": true,
+      "invalidPresetRejected": true,
+      "sourceExportUnchanged": true,
+      "keyReferenceFixed": true,
+      "oneUndo": true,
+      "recovery": true,
+      "axeViolations": 0
+    },
+    {
+      "width": 1440,
+      "height": 844,
+      "numericGuides": true,
+      "rulerCreation": true,
+      "guideMoveCancel": true,
+      "presetDownload": true,
+      "presetImport": true,
+      "gridPointerSnap": true,
+      "invalidPresetRejected": true,
+      "sourceExportUnchanged": true,
+      "keyReferenceFixed": true,
+      "oneUndo": true,
+      "recovery": true,
+      "axeViolations": 0
+    }
+  ],
+  "nativeEvidence": "native.json",
+  "galleryEvidence": "../public-site/examples.json",
+  "sourceRegister": "../../studio-guides/sources.json",
+  "codeSHA256": {
+    "packages/studio/guides.mjs": "2b92049363da1b6ae81995490ec257d31b329772e189bef0de9127e970ba2e80",
+    "packages/studio/guide-controls.mjs": "d005f9e36ac08e8de3f9ce49cdb606b4a18540f8d067d3ebe1999bddafc6fc00",
+    "packages/studio/alignment.mjs": "7e683cb5cb52208d7ade0785d77ee8c04dfde191a265b40b132bc4cf9fcc4c3f",
+    "packages/studio/studio.mjs": "8db855a00db83fbdb6be2a2a012d1fb5e185960ee37c2049893f43fb016c6b63",
+    "tests/editor/guides.test.mjs": "45c2fa6cd166afec848cde9e30e8e679384a44b602bc09e29e252c7725450701",
+    "tests/editor/guides-browser.cjs": "6d1d7827b6e50275b55da8bdcb1ef3913a61790e951c123b23a79996a88e0e79"
+  },
+  "physicalTests": "Postponed by explicit user instruction; no physical measurement performed.",
+  "humanAccessibility": "Automated accessibility and focus checks only; no human or screen-reader session.",
+  "backend": "Hosted services and remote MCP pairing remain deferred.",
+  "githubActions": {
+    "observedCodeHead": "ff7851caabe46663a762b877c953f6d36362c59e",
+    "status": "Blocked before execution",
+    "executedSteps": 0,
+    "reason": "The job was not started because your account is locked due to a billing issue.",
+    "jobs": [
+      "https://github.com/Mgregchi/Evir/actions/runs/38448546698/job/115473222209",
+      "https://github.com/Mgregchi/Evir/actions/runs/38448546766/job/115473222426"
+    ]
+  }
+}

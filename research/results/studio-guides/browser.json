@@ -1,0 +1,69 @@
+{
+  "scope": "Cloud Chromium automated checks; no physical device or human accessibility claim",
+  "results": [
+    {
+      "width": 320,
+      "height": 844,
+      "numericGuides": true,
+      "rulerCreation": true,
+      "guideMoveCancel": true,
+      "presetDownload": true,
+      "presetImport": true,
+      "gridPointerSnap": true,
+      "invalidPresetRejected": true,
+      "sourceExportUnchanged": true,
+      "keyReferenceFixed": true,
+      "oneUndo": true,
+      "recovery": true,
+      "axeViolations": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "numericGuides": true,
+      "rulerCreation": true,
+      "guideMoveCancel": true,
+      "presetDownload": true,
+      "presetImport": true,
+      "gridPointerSnap": true,
+      "invalidPresetRejected": true,
+      "sourceExportUnchanged": true,
+      "keyReferenceFixed": true,
+      "oneUndo": true,
+      "recovery": true,
+      "axeViolations": 0
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "numericGuides": true,
+      "rulerCreation": true,
+      "guideMoveCancel": true,
+      "presetDownload": true,
+      "presetImport": true,
+      "gridPointerSnap": true,
+      "invalidPresetRejected": true,
+      "sourceExportUnchanged": true,
+      "keyReferenceFixed": true,
+      "oneUndo": true,
+      "recovery": true,
+      "axeViolations": 0
+    },
+    {
+      "width": 1440,
+      "height": 844,
+      "numericGuides": true,
+      "rulerCreation": true,
+      "guideMoveCancel": true,
+      "presetDownload": true,
+      "presetImport": true,
+      "gridPointerSnap": true,
+      "invalidPresetRejected": true,
+      "sourceExportUnchanged": true,
+      "keyReferenceFixed": true,
+      "oneUndo": true,
+      "recovery": true,
+      "axeViolations": 0
+    }
+  ]
+}

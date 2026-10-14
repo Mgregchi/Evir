@@ -13,3 +13,5 @@ Example artwork and website source are original project contributions. Existing 
 [Gallery research and acceptance](../../../docs/23-growing-showcase-gallery.md) records each study’s supported features. Posters are actual Canvas renders; each study includes editable source and an Evir-compiled `.riv`.
 
 Wisp’s organic outlines are generated sampled loops fitted with Studio’s freehand algorithm, not captured human handwriting. Its poster is a real Canvas render; all point IDs in its source/export are deterministic.
+
+`measure-poster.png` is a real Canvas capture of the original Measure composition in `examples/measure.evir-project`. `measure.riv` is its Evir-compiled native export. `measure.guides.json` is a separate Studio guide preset; guides are excluded from scene/native exports. The three cards and Balance loop contain no supplied third-party artwork.

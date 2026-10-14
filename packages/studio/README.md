@@ -56,6 +56,8 @@ For workspace navigation, panel widths and layer organization, see [the interact
 
 For snapping and Inspector alignment, see [the alignment guide](../../docs/26-studio-alignment-and-snapping.md). Canvas view stores its snapping toggle as a separate browser preference; temporary guide overlays never enter the project or runtime export.
 
+**Canvas view → Guides & grid** adds artboard-specific rulers, persistent manual guides, a uniform grid and portable guide presets. **Properties → Alignment reference** keeps one selected root fixed while aligning the others. Guide preferences remain browser-local and outside scene files; see [the guide walkthrough and limits](../../docs/35-persistent-guides-and-key-alignment.md).
+
 Use **Freehand / B** in Design, drag, release to review and choose **Finish path**. **Drawing options** opens a bottom sheet for smoothing/closure. Drafts stay outside saved history; interruption cancels active drawing. See [freehand contracts and limits](../../docs/27-studio-freehand-shapes.md).
 
 Advanced 2D contracts, source/runtime versions, asset preparation/disposal, authoring controls, import coverage and remaining limits are documented in [the current feature contract](../../docs/30-advanced-2d-authoring.md).
