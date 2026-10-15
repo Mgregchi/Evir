@@ -31,6 +31,7 @@ import { paintControls } from "./paint.mjs";
 import { mountAuthoring } from "./authoring.mjs";
 import { PenDraft } from "./pen.mjs";
 import { FreehandDraft } from "./freehand.mjs";
+import { brushOutline, pointerPressure } from "./brush.mjs";
 import { mountPanels, mountDisclosures } from "./panels.mjs";
 import { mountLayout } from "./layout.mjs";
 import { touchFrame, gestureCamera } from "./navigation.mjs";
@@ -137,7 +138,7 @@ $("#snap-alignment").addEventListener("change", (e) => {
     localStorage.setItem(SNAP_CACHE, String(snapping));
   } catch {}
 });
-const drawingSettings = { smoothing: 2, closed: true };
+const drawingSettings = { smoothing: 2, closed: true, style: "shape", width: 16, pressure: true };
 const touches = new Map();
 let touchGesture = null,
   touchNavigation = false,
@@ -432,14 +433,21 @@ function drawPen(zoom) {
   }
   if (tool === "freehand") {
     $("#selection-status").textContent = penDraft
-      ? `Unsaved shape · ${penDraft.samples.length} samples · ${penDraft.points.length} points · Esc to cancel`
-      : "Drag a shape, then review and finish. Solid fill, no brush stroke.";
+      ? `Unsaved ${penDraft.style === "brush" ? "brush outline" : "shape"} · ${penDraft.samples.length} samples · ${penDraft.points.length} points · Esc to cancel`
+      : drawingSettings.style === "brush" ? "Drag a brush stroke, then review its editable outline." : "Drag a shape, then review and finish. Drawing options adds a brush.";
     $("#finish-path").disabled =
-      !penDraft || penDraft.dragging || penDraft.samples.length < 3;
+      !penDraft || penDraft.dragging || penDraft.samples.length < (penDraft.style === "brush" ? 2 : 3);
   }
   if (penDraft instanceof FreehandDraft && penDraft.dragging) {
     ctx.strokeStyle = "#89e4c4";
     ctx.lineWidth = 1.5 / zoom;
+    if (penDraft.style === "brush") {
+      const outline = brushOutline(penDraft.brushSamples(), penDraft);
+      ctx.beginPath();
+      outline.forEach((p, i) => i ? ctx.lineTo(...p) : ctx.moveTo(...p));
+      ctx.closePath(); ctx.fillStyle = "#64d9ad"; ctx.fill();
+      return;
+    }
     ctx.beginPath();
     penDraft.samples.forEach((p, i) =>
       i ? ctx.lineTo(...p) : ctx.moveTo(...p),
@@ -451,7 +459,10 @@ function drawPen(zoom) {
   const points = penDraft.worldPoints();
   ctx.lineWidth = 1.5 / zoom;
   ctx.strokeStyle = "#308c70";
-  pathOnContext(ctx, points, false);
+  pathOnContext(ctx, points, penDraft instanceof FreehandDraft && penDraft.style === "brush");
+  if (penDraft instanceof FreehandDraft && penDraft.style === "brush") {
+    ctx.fillStyle = "#64d9ad80"; ctx.fill();
+  }
   ctx.stroke();
   if (penDraft.hover) {
     const hover = mapPoint(penDraft.matrix, penDraft.hover),
@@ -1482,7 +1493,7 @@ stage.addEventListener("pointerdown", (e) => {
           ...drawingSettings,
         });
       }
-      if (penDraft.down(world, c.zoom) === "close") finishPen(true);
+      if (penDraft.down({ ...world, pressure: pointerPressure(e) }, c.zoom) === "close") finishPen(true);
       else {
         penPointerId = e.pointerId;
         stage.setPointerCapture(e.pointerId);
@@ -1633,6 +1644,7 @@ stage.addEventListener("pointermove", (e) => {
           penDraft.move({
             x: (pos.x - c.x) / c.zoom,
             y: (pos.y - c.y) / c.zoom,
+            pressure: pointerPressure(event, penDraft.pressures.at(-1)),
           });
         }
       } else
@@ -1758,7 +1770,7 @@ function finishDrag(e) {
     } catch (error) {
       if (
         penDraft instanceof FreehandDraft &&
-        (penDraft.samples.length < 3 || penDraft.samples.length >= 4096)
+        (penDraft.samples.length < (penDraft.style === "brush" ? 2 : 3) || penDraft.samples.length >= 4096)
       )
         cancelPen();
       notice(error);
@@ -1937,32 +1949,36 @@ $("#drawing-options").onclick = () => {
   drawingOrigin = document.activeElement;
   $("#drawing-smoothing").value = drawingSettings.smoothing;
   $("#drawing-closed").checked = drawingSettings.closed;
+  $("#drawing-style").value = drawingSettings.style;
+  $("#drawing-width").value = drawingSettings.width;
+  $("#drawing-pressure").checked = drawingSettings.pressure;
+  drawingVisibility();
   $("#drawing-error").textContent = "";
   drawingSheet.showModal();
 };
+function drawingVisibility() {
+  const brush = $("#drawing-style").value === "brush";
+  $("#drawing-brush-options").hidden = !brush;
+  $("#drawing-closed-field").hidden = brush;
+}
+$("#drawing-style").onchange = drawingVisibility;
 $("#drawing-apply").onclick = () => {
-  const smoothing = $("#drawing-smoothing");
-  const value = Number(smoothing.value);
-  if (!Number.isFinite(value) || value < 0.5 || value > 8) {
-    $("#drawing-error").textContent =
-      "Choose smoothing between 0.5 and 8 screen pixels.";
-    smoothing.focus();
+  const options = {
+    smoothing: Number($("#drawing-smoothing").value),
+    closed: $("#drawing-closed").checked,
+    style: $("#drawing-style").value,
+    width: Number($("#drawing-width").value),
+    pressure: $("#drawing-pressure").checked,
+  };
+  try {
+    if (penDraft instanceof FreehandDraft) penDraft.configure(options);
+    else new FreehandDraft({ artboardId: activeArtboard, zoom: camera().zoom, ...options });
+  } catch (error) {
+    $("#drawing-error").textContent = error.message;
+    (/width/.test(error.message) ? $("#drawing-width") : $("#drawing-smoothing")).focus();
     return;
   }
-  if (penDraft instanceof FreehandDraft) {
-    const previous = { tolerance: penDraft.tolerance, closed: penDraft.closed };
-    penDraft.tolerance = value / penDraft.zoom;
-    penDraft.closed = $("#drawing-closed").checked;
-    try {
-      penDraft.refit();
-    } catch (error) {
-      Object.assign(penDraft, previous);
-      $("#drawing-error").textContent = error.message;
-      return;
-    }
-  }
-  drawingSettings.smoothing = value;
-  drawingSettings.closed = $("#drawing-closed").checked;
+  Object.assign(drawingSettings, options);
   drawingSheet.close();
   draw();
 };

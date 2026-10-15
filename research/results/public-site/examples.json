@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-14T19:38:20.157Z",
+  "checkedAt": "2026-10-15T22:59:42.621Z",
   "runtimeVersion": "2.44.0",
   "scope": "Original showcase export pixels against Evir evaluated source at selected keyframes; boolean/number/AND/trigger/listener/reset outcomes. Cloud graphics, not mobile/device performance.",
   "backends": [
@@ -1098,6 +1098,34 @@
           "mae": 0.010265350341796875,
           "expectedCovered": 48182,
           "runtimeCovered": 48180
+        },
+        {
+          "example": "ribbon",
+          "label": "Float native time 0s",
+          "mae": 0.01935577392578125,
+          "expectedCovered": 50818,
+          "runtimeCovered": 50815
+        },
+        {
+          "example": "ribbon",
+          "label": "Float native time 0.5s",
+          "mae": 0.019451141357421875,
+          "expectedCovered": 50818,
+          "runtimeCovered": 50815
+        },
+        {
+          "example": "ribbon",
+          "label": "Float native time 1s",
+          "mae": 0.019367218017578125,
+          "expectedCovered": 50818,
+          "runtimeCovered": 50815
+        },
+        {
+          "example": "ribbon",
+          "label": "Float native time 1.5s",
+          "mae": 0.019451141357421875,
+          "expectedCovered": 50818,
+          "runtimeCovered": 50815
         }
       ]
     },
@@ -2234,6 +2262,34 @@
           "mae": 0.2195892333984375,
           "expectedCovered": 48182,
           "runtimeCovered": 48158
+        },
+        {
+          "example": "ribbon",
+          "label": "Float native time 0s",
+          "mae": 0.21567153930664062,
+          "expectedCovered": 50818,
+          "runtimeCovered": 50792
+        },
+        {
+          "example": "ribbon",
+          "label": "Float native time 0.5s",
+          "mae": 0.21413803100585938,
+          "expectedCovered": 50818,
+          "runtimeCovered": 50792
+        },
+        {
+          "example": "ribbon",
+          "label": "Float native time 1s",
+          "mae": 0.2152557373046875,
+          "expectedCovered": 50818,
+          "runtimeCovered": 50792
+        },
+        {
+          "example": "ribbon",
+          "label": "Float native time 1.5s",
+          "mae": 0.21413803100585938,
+          "expectedCovered": 50818,
+          "runtimeCovered": 50792
         }
       ]
     }
@@ -2258,6 +2314,7 @@
     "compass": "c624ebd9ee40e20fb259c1198c9a235b0b375fa19b0f4964a66e6c92d3b37b62",
     "measure": "0e43cd4dbe386ede67b80c11f37a41d6c96ad8cee1aa3595d55fd435ce8269c3",
     "sprig": "f2a19bfbf1a4b7d3b4521e553dca581465e86b62eefba0c3bd8e87bfb8ba092f",
-    "loom": "d7419a1d0cc10ce7a0d519233beca5f55b734b3060a5cdf73548094c8fbabb13"
+    "loom": "d7419a1d0cc10ce7a0d519233beca5f55b734b3060a5cdf73548094c8fbabb13",
+    "ribbon": "6791a797e79719fe94678dc07c1d76502b910b04ffbac9a7ec0359f6886a0d4f"
   }
 }

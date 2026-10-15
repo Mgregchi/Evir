@@ -4,14 +4,15 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "@evir/ui": "0.1.0",
-    "@evir/project-model": "0.1.0",
     "@evir/authoring": "0.1.0",
-    "@evir/runtime": "0.1.0",
-    "@evir/renderer-canvas": "0.1.0",
-    "@evir/format": "0.1.0",
     "@evir/commands": "0.1.0",
-    "@rive-app/canvas": "2.44.0"
+    "@evir/format": "0.1.0",
+    "@evir/project-model": "0.1.0",
+    "@evir/renderer-canvas": "0.1.0",
+    "@evir/runtime": "0.1.0",
+    "@evir/ui": "0.1.0",
+    "@rive-app/canvas": "2.44.0",
+    "perfect-freehand": "1.2.3"
   },
   "exports": {
     "./build": "./build.mjs"

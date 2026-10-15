@@ -1,0 +1,55 @@
+[
+  {
+    "url": "https://www.w3.org/TR/pointerevents3/",
+    "sha256": "552c4d85256fbeb1a54aea79f03d9ae7e1f99bcbbc65fcf35c3b355574deb6e5",
+    "bytes": 595222,
+    "accessed": "2026-10-15",
+    "observed": "Pressure is normalized to [0,1]. Unsupported pressure uses 0.5 while active and zero otherwise. Coalesced events may expose finer movement samples. Evir accepts real pen pressure, fixed midpoint for mouse/touch and retains the previous pressure at release."
+  },
+  {
+    "url": "https://rive.app/docs/editor/shapes/paint",
+    "error": "HTTP Error 404: Not Found",
+    "accessed": "2026-10-15",
+    "observed": "Attempt returned 404. No feature claim taken from it; canonical documentation discovered through the official llms.txt index instead."
+  },
+  {
+    "url": "https://raw.githubusercontent.com/steveruizok/perfect-freehand/main/README.md",
+    "sha256": "f04f49ababee8ebeec9eb55fffa901919464782c6bb3a58cf9c009fd9a0561aa",
+    "bytes": 13114,
+    "accessed": "2026-10-15",
+    "observed": "getStroke accepts [x,y,pressure] samples; simulatePressure:false consumes explicit pressure. Outlines, caps, thinning and streamline are options. Mutable main documentation was inspected alongside the pinned installed 1.2.3 API; not a Rive feature claim."
+  },
+  {
+    "url": "https://rive.app/docs/editor/shapes/strokes",
+    "error": "HTTP Error 404: Not Found",
+    "accessed": "2026-10-15",
+    "observed": "Attempt returned 404. No feature claim taken from it; canonical documentation discovered through the official llms.txt index instead."
+  },
+  {
+    "url": "https://registry.npmjs.org/perfect-freehand/1.2.3",
+    "sha256": "20b0c0bb30fe7e7c9c02d306ab9c8d1b58bf2059b0987c7cbdd58d1e8ab5faed",
+    "bytes": 2317,
+    "accessed": "2026-10-15",
+    "observed": "Installed exact version 1.2.3 with npm integrity verification; MIT dependency used for bounded outline construction. No upstream source copied into Evir modules."
+  },
+  {
+    "url": "https://raw.githubusercontent.com/steveruizok/perfect-freehand/main/LICENSE",
+    "sha256": "6a5ac82b42ce0af6a1e5fe39b46f0b52f1368e81e437175e8d9ae21569c8688e",
+    "bytes": 1073,
+    "accessed": "2026-10-15",
+    "observed": "MIT terms inspected. The installed package license is retained and copied into the Studio build."
+  },
+  {
+    "url": "https://rive.app/docs/editor/fundamentals/fill-and-stroke.md",
+    "sha256": "b242ef5e1c8faf3f229d016f26c61f0cf3540b2e3f9bc3c7d671c5f2edee29bb",
+    "bytes": 15479,
+    "accessed": "2026-10-15",
+    "observed": "Rive distinguishes fills from stroke paints; stroke width, caps, joins and gradients are separate properties. Evir brush bakes a generated outline into existing filled paths. Native stroke paints, trim paths and multiple paints remain unsupported."
+  },
+  {
+    "path": "node_modules/perfect-freehand/dist/esm/index.mjs",
+    "package": "perfect-freehand@1.2.3",
+    "sha256": "a02e221f71a757e46915a51d8f5ffc8d1788d9134e063b3edd21f429c973d46c",
+    "observed": "Actual pinned implementation used. Dependency integrity retained in package-lock.json; license in packages/studio/licenses/LICENSE.perfect-freehand."
+  }
+]

@@ -1,0 +1,102 @@
+{
+  "checkedAt": "2026-10-15T22:54:45.874Z",
+  "scope": "Real Chromium IndexedDB and two browser tabs; automated software evidence, no physical/human claim",
+  "results": [
+    {
+      "width": 320,
+      "height": 844,
+      "checks": [
+        "separate imports retained",
+        "search",
+        "keyboard open",
+        "four-viewport reflow",
+        "axe sheet zero violations",
+        "cross-tab conflict",
+        "save separate copy",
+        "reload copy",
+        "open latest",
+        "New retains previous project"
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "checks": [
+        "separate imports retained",
+        "search",
+        "keyboard open",
+        "four-viewport reflow",
+        "axe sheet zero violations",
+        "cross-tab conflict",
+        "save separate copy",
+        "reload copy",
+        "open latest",
+        "New retains previous project"
+      ]
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "checks": [
+        "separate imports retained",
+        "search",
+        "keyboard open",
+        "four-viewport reflow",
+        "axe sheet zero violations",
+        "cross-tab conflict",
+        "save separate copy",
+        "reload copy",
+        "open latest",
+        "New retains previous project",
+        "conflicts protected without BroadcastChannel"
+      ]
+    },
+    {
+      "width": 1440,
+      "height": 844,
+      "checks": [
+        "separate imports retained",
+        "search",
+        "keyboard open",
+        "four-viewport reflow",
+        "axe sheet zero violations",
+        "cross-tab conflict",
+        "save separate copy",
+        "reload copy",
+        "open latest",
+        "New retains previous project",
+        "asset preparation keeps old source/save target",
+        "busy controls and keyboard guard",
+        "preparation feedback and resume"
+      ]
+    },
+    {
+      "storage": {
+        "migration": "v1 current source retained exactly",
+        "race": [
+          "fulfilled",
+          "rejected"
+        ],
+        "paging": [
+          20,
+          20,
+          3
+        ],
+        "listing": "metadata only",
+        "preparation": "read without adoption retains active save target",
+        "abort": "retained source",
+        "quota": "source and revision rollback",
+        "staleCompletion": "cannot change active session"
+      }
+    },
+    {
+      "libraryUI": [
+        "20-row bound",
+        "next/previous pages",
+        "last-page disabled Next",
+        "keyboard paging",
+        "Done restores Project menu focus"
+      ]
+    }
+  ]
+}
