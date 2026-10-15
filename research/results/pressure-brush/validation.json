@@ -91,5 +91,24 @@
     "Inner feather/offsets, text/layout/external assets and broader editable Editor-file import",
     "Large control virtualization and expanded local command coverage/host orchestration",
     "Matched external Editor exports and human/accessibility sessions are not fabricated; physical tests postponed; hosted backend deferred"
-  ]
+  ],
+  "ci": {
+    "status": "Blocked before either job started; no remote CI validation executed",
+    "observedCodeHead": "11eb24dff44f53e359916319805c56597cfc755e",
+    "pr": "https://github.com/Mgregchi/Evir/pull/33",
+    "annotation": "The job was not started because your account is locked due to a billing issue.",
+    "jobs": [
+      {
+        "workflow": "Runtime package validation",
+        "url": "https://github.com/Mgregchi/Evir/actions/runs/38821802277/job/116719883770",
+        "executedSteps": 0
+      },
+      {
+        "workflow": "Web and Studio validation",
+        "url": "https://github.com/Mgregchi/Evir/actions/runs/38821802344/job/116719883997",
+        "executedSteps": 0
+      }
+    ],
+    "followupCommitScope": "Validation metadata only; tested application code unchanged."
+  }
 }
