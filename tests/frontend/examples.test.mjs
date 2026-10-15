@@ -35,3 +35,16 @@ test('Sprig retains the open seed geometry and paint while its continuation reci
  for(const [i,point]of recipe.points.entries()){draft.appendLocal(point.anchor,point.out);draft.points.at(-1).id=`sprig-extension-point-${i+1}`;}
  draft.apply(start,draft.geometry());assert.deepEqual(start,final);
 });
+test('Loom has reusable row/column guides and fixed-key spacing that fits the authored weave bands',async()=>{
+ const {componentBands,validateGuides}=await import('../../packages/studio/guides.mjs');
+ const {distributionMoves,applyAlignment}=await import('../../packages/studio/alignment.mjs');
+ const {nodeBounds}=await import('@evir/renderer-canvas');
+ const p=source('loom'),preset=JSON.parse(fs.readFileSync(new URL('../../apps/web/assets/examples/loom.guides.json',import.meta.url)));validateGuides(preset);
+ assert.equal(preset.components.length,2);assert.equal(preset.components[1].axis,'y');
+ const ids=['loom-patch-1-1','loom-reference-patch','loom-patch-1-3'],before=structuredClone(p.nodes.find(n=>n.id===ids[1]));p.editor.locked.push(ids[1]);
+ applyAlignment(p,distributionMoves(p,ids,'x',{keyId:ids[1],gap:28}));
+ assert.deepEqual(p.nodes.find(n=>n.id===ids[1]),before);
+ const bands=componentBands(preset.components[0],p.artboards[0]);
+ ids.forEach((id,i)=>{const box=nodeBounds(p,p.nodes.find(n=>n.id===id));assert.equal(box.x,bands[i].start);assert.equal(box.x+box.width,bands[i].end);});
+ assert.equal(Object.hasOwn(p.editor,'guides'),false);
+});

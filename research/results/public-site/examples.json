@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-14T07:47:09.788Z",
+  "checkedAt": "2026-10-14T19:38:20.157Z",
   "runtimeVersion": "2.44.0",
   "scope": "Original showcase export pixels against Evir evaluated source at selected keyframes; boolean/number/AND/trigger/listener/reset outcomes. Cloud graphics, not mobile/device performance.",
   "backends": [
@@ -1054,6 +1054,48 @@
           "example": "sprig",
           "label": "open seed frame 60",
           "mae": 0.01143646240234375,
+          "expectedCovered": 48182,
+          "runtimeCovered": 48180
+        },
+        {
+          "example": "loom",
+          "label": "Weave native time 0s",
+          "mae": 0.010265350341796875,
+          "expectedCovered": 48182,
+          "runtimeCovered": 48180
+        },
+        {
+          "example": "loom",
+          "label": "Weave native time 0.5s",
+          "mae": 0.011081695556640625,
+          "expectedCovered": 48182,
+          "runtimeCovered": 48180
+        },
+        {
+          "example": "loom",
+          "label": "Weave native time 1s",
+          "mae": 0.010265350341796875,
+          "expectedCovered": 48182,
+          "runtimeCovered": 48180
+        },
+        {
+          "example": "loom",
+          "label": "Weave native time 1.5s",
+          "mae": 0.01096343994140625,
+          "expectedCovered": 48182,
+          "runtimeCovered": 48180
+        },
+        {
+          "example": "loom",
+          "label": "locked-reference gap 28",
+          "mae": 0.010265350341796875,
+          "expectedCovered": 48182,
+          "runtimeCovered": 48180
+        },
+        {
+          "example": "loom",
+          "label": "locked-reference gap 28",
+          "mae": 0.010265350341796875,
           "expectedCovered": 48182,
           "runtimeCovered": 48180
         }
@@ -2150,6 +2192,48 @@
           "mae": 0.11537551879882812,
           "expectedCovered": 48182,
           "runtimeCovered": 48158
+        },
+        {
+          "example": "loom",
+          "label": "Weave native time 0s",
+          "mae": 0.2195892333984375,
+          "expectedCovered": 48182,
+          "runtimeCovered": 48158
+        },
+        {
+          "example": "loom",
+          "label": "Weave native time 0.5s",
+          "mae": 0.22640609741210938,
+          "expectedCovered": 48182,
+          "runtimeCovered": 48158
+        },
+        {
+          "example": "loom",
+          "label": "Weave native time 1s",
+          "mae": 0.2195892333984375,
+          "expectedCovered": 48182,
+          "runtimeCovered": 48158
+        },
+        {
+          "example": "loom",
+          "label": "Weave native time 1.5s",
+          "mae": 0.22781753540039062,
+          "expectedCovered": 48182,
+          "runtimeCovered": 48158
+        },
+        {
+          "example": "loom",
+          "label": "locked-reference gap 28",
+          "mae": 0.2195892333984375,
+          "expectedCovered": 48182,
+          "runtimeCovered": 48158
+        },
+        {
+          "example": "loom",
+          "label": "locked-reference gap 28",
+          "mae": 0.2195892333984375,
+          "expectedCovered": 48182,
+          "runtimeCovered": 48158
         }
       ]
     }
@@ -2173,6 +2257,7 @@
     "motorcycle": "5fd6f55203fb1e4b51a41b70af9d542332878950a230999d176d58fec5a90499",
     "compass": "c624ebd9ee40e20fb259c1198c9a235b0b375fa19b0f4964a66e6c92d3b37b62",
     "measure": "0e43cd4dbe386ede67b80c11f37a41d6c96ad8cee1aa3595d55fd435ce8269c3",
-    "sprig": "f2a19bfbf1a4b7d3b4521e553dca581465e86b62eefba0c3bd8e87bfb8ba092f"
+    "sprig": "f2a19bfbf1a4b7d3b4521e553dca581465e86b62eefba0c3bd8e87bfb8ba092f",
+    "loom": "d7419a1d0cc10ce7a0d519233beca5f55b734b3060a5cdf73548094c8fbabb13"
   }
 }

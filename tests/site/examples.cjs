@@ -62,6 +62,23 @@ if(!process.env.CHROMIUM_PATH && !fs.existsSync('/usr/bin/chromium'))process.env
             await compare(aligned.animations[0],frame,`aligned composition frame ${frame}`,aligned);
           }
         }
+        if(name==='loom') {
+          const {distributionMoves,applyAlignment}=await import('../../packages/studio/alignment.mjs');
+          const {compileProject}=await import('@evir/format');
+          const spaced=structuredClone(project),ids=['loom-patch-1-1','loom-reference-patch','loom-patch-1-3'];
+          spaced.editor.locked.push('loom-reference-patch');
+          applyAlignment(spaced,distributionMoves(spaced,ids,'x',{keyId:'loom-reference-patch',gap:28}));
+          const out=path.join(__dirname,'../../research/results/structured-guides');fs.mkdirSync(out,{recursive:true});
+          const bytes=compileProject(spaced).bytes;
+          fs.writeFileSync(path.join(out,'loom-spaced-oracle.evir-project'),JSON.stringify(spaced,null,2)+'\n');
+          fs.writeFileSync(path.join(out,'loom-spaced-oracle.riv'),bytes);
+          const uiFile=path.join(out,'loom-spaced.riv');if(fs.existsSync(uiFile))assert.deepEqual(fs.readFileSync(uiFile),Buffer.from(bytes));
+          for(const frame of [0,60]) {
+            await load({src:'/research/results/structured-guides/loom-spaced-oracle.riv',animations:spaced.animations[0].name});
+            await page.evaluate(frame=>{player.scrub('Weave',frame/60);player.drawFrame();},frame);
+            await compare(spaced.animations[0],frame,'locked-reference gap 28',spaced);
+          }
+        }
         if(name==='sprig') {
           const seed=JSON.parse(fs.readFileSync(path.join(__dirname,'../../apps/web/assets/examples/sprig-start.evir-project')));
           for(const frame of [0,60]) {

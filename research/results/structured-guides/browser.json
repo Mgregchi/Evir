@@ -1,0 +1,87 @@
+{
+  "checkedAt": "2026-10-14T19:49:52.728Z",
+  "scope": "Automated Chromium software workflows, no physical-device/human testing",
+  "results": [
+    {
+      "width": 320,
+      "height": 844,
+      "checks": [
+        "v2 preset import/download/reload",
+        "component numeric validation and fit rejection",
+        "duplicate/remove",
+        "lock",
+        "zero sheet axe violations",
+        "reflow",
+        "source/export excludes guides",
+        "actual pointer snapping and Alt bypass",
+        "fixed-gap locked reference",
+        "blank/negative rejection",
+        "Cancel preserves source/preferences",
+        "one-step Undo/Redo",
+        "keyboard focus after Apply",
+        "official-compatible exported spaced scene"
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "checks": [
+        "v2 preset import/download/reload",
+        "component numeric validation and fit rejection",
+        "duplicate/remove",
+        "lock",
+        "zero sheet axe violations",
+        "reflow",
+        "source/export excludes guides",
+        "actual pointer snapping and Alt bypass",
+        "fixed-gap locked reference",
+        "blank/negative rejection",
+        "Cancel preserves source/preferences",
+        "one-step Undo/Redo",
+        "keyboard focus after Apply",
+        "official-compatible exported spaced scene"
+      ]
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "checks": [
+        "v2 preset import/download/reload",
+        "component numeric validation and fit rejection",
+        "duplicate/remove",
+        "lock",
+        "zero sheet axe violations",
+        "reflow",
+        "source/export excludes guides",
+        "actual pointer snapping and Alt bypass",
+        "fixed-gap locked reference",
+        "blank/negative rejection",
+        "Cancel preserves source/preferences",
+        "one-step Undo/Redo",
+        "keyboard focus after Apply",
+        "official-compatible exported spaced scene"
+      ]
+    },
+    {
+      "width": 1440,
+      "height": 844,
+      "checks": [
+        "v2 preset import/download/reload",
+        "component numeric validation and fit rejection",
+        "duplicate/remove",
+        "lock",
+        "zero sheet axe violations",
+        "reflow",
+        "source/export excludes guides",
+        "actual pointer snapping and Alt bypass",
+        "fixed-gap locked reference",
+        "blank/negative rejection",
+        "Cancel preserves source/preferences",
+        "one-step Undo/Redo",
+        "keyboard focus after Apply",
+        "official-compatible exported spaced scene",
+        "two-root vertical spacing and Undo"
+      ]
+    }
+  ]
+}

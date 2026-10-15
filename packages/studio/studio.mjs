@@ -1,4 +1,4 @@
-import { mountAdvanced } from "./advanced.mjs";
+import { mountAdvanced, sheet } from "./advanced.mjs";
 import { mountLiveCommands } from "./live-commands.mjs";
 import { mountRiveViewer } from "./rive-viewer.mjs";
 import { showMcpGuide } from "./guidance.mjs";
@@ -756,6 +756,29 @@ function alignmentPanel(p) {
       `Distribute ${label}`,
       () => {
         try {
+          if (authoring?.mode !== "Design" || !penReady()) return;
+          if (alignmentKey) {
+            const ids = [...selectedIds], keyId = alignmentKey, scope = p.id,
+              revision = store.revision, key = p.nodes.find(n=>n.id === keyId);
+            let gap = 24;
+            const dialog = sheet(`Set ${label} spacing`, host => {
+              host.className = "distribution-sheet";
+              host.append(element("p", `Keep ${key.name} where it is. Give the other selected layers equal ${label} gaps, in their current order.`));
+              const gapLabel = element("label", undefined, "field"), input = element("input");
+              input.type = "number"; input.step = "any"; input.value = gap;
+              input.min = "0"; input.max = "1000000"; input.setAttribute("aria-label", "Fixed gap");
+              input.oninput = () => {gap = input.value.trim() === "" ? NaN : input.valueAsNumber;};
+              gapLabel.append(element("span", "Fixed gap"), input);
+              host.append(gapLabel, element("p", "Gap uses artboard units. Apply makes one undoable change; Cancel keeps the current positions."));
+            }, () => {
+              if (store.revision !== revision || project().id !== scope || authoring.mode !== "Design")
+                throw Error("The project changed. Close this sheet and review the selection.");
+              const moves = distributionMoves(project(), ids, axis, {keyId, gap});
+              return edit(`Space ${label} around reference`, q=>applyAlignment(q,moves), true);
+            }, notice, distribute);
+            dialog.addEventListener("close",()=>document.querySelector(`[data-distribution="${axis}"]`)?.focus(),{once:true});
+            return;
+          }
           const moves = distributionMoves(project(), selectedIds, axis);
           if (
             edit(`Distribute ${label}`, (q) => applyAlignment(q, moves), true)
@@ -765,7 +788,7 @@ function alignmentPanel(p) {
           notice(e);
         }
       },
-      authoring?.mode !== "Design" || selectionRoots(p, selectedIds).length < 3,
+      authoring?.mode !== "Design" || roots.length < (alignmentKey ? 2 : 3),
     );
     distribute.dataset.distribution = axis;
     group.append(distribute);

@@ -3,7 +3,7 @@ import {compassLesson} from '@evir/commands/example';
 import {suite} from './advanced-examples.mjs';
 import {motorcycle} from './motorcycle-scene.mjs';
 import { fitFreehand } from '../../packages/studio/freehand.mjs';
-import { defaultGuides } from '../../packages/studio/guides.mjs';
+import { defaultGuides, componentBands } from '../../packages/studio/guides.mjs';
 import { ContinuationDraft } from '../../packages/studio/path-continuation.mjs';
 import { exampleIds } from './examples.mjs';
 import { createProject, validateProject } from '@evir/project-model';
@@ -301,7 +301,36 @@ function sprig() {
   draft.apply(p,draft.geometry());
   return p;
 }
-const factories={sprig,measure,compass,milo,orbit,bloom,tempo,signal,gather,wisp,dawn,arrange,motorcycle:()=>motorcycle(project)};
+let loomPreset;
+function loom() {
+  const {p,node,box,oval,path,anim,key}=project('loom','Loom — a little room to weave');
+  box('backdrop',32,40,448,432,34,'#e8efe7');
+  box('top-thread',84,98,344,5,2,'#b6d6c1');
+  loomPreset=defaultGuides();loomPreset.rulers=true;
+  loomPreset.components=[
+    {id:'loom-columns',axis:'x',count:3,mode:'fixed',size:96,gap:28,margin:48,align:'center',visible:true,snap:true},
+    {id:'loom-rows',axis:'y',count:2,mode:'fixed',size:100,gap:38,margin:48,align:'center',visible:true,snap:true},
+  ];
+  const columns=componentBands(loomPreset.components[0],p.artboards[0]), rows=componentBands(loomPreset.components[1],p.artboards[0]);
+  for(let row=0;row<2;row++) for(let col=0;col<3;col++) {
+    const id=row===0&&col===1?'reference-patch':`patch-${row+1}-${col+1}`;
+    const dx=[[-18,0,14],[-9,6,9]][row][col],dy=[[-10,0,8],[7,-8,0]][row][col];
+    const root=node(id,'group',null,null,columns[col].start+dx,rows[row].start+dy);
+    const colors=['#e5b893','#294d40','#90d4b5'],fill=colors[(row+col)%3],thread=fill==='#294d40'?'#b7dfc6':'#47795d';
+    box(`${id}-cloth`,0,0,96,100,15,fill,root);
+    for(let k=0;k<3;k++) {
+      box(`${id}-warp-${k}`,18+23*k,14,8,72,4,thread,root);
+      box(`${id}-weft-${k}`,12,24+22*k,72,7,3,thread,root);
+      for(let j=0;j<3;j++) if((j+k)%2===0)box(`${id}-over-${k}-${j}`,18+23*k,22+22*j,8,12,3,fill,root);
+    }
+  }
+  const spindle=node('spindle','group',null,null,256,421);
+  oval('spindle-ring',0,0,18,18,'#d6ab84',spindle);oval('spindle-heart',0,0,8,8,'#e8efe7',spindle);
+  box('needle',-2,-24,4,48,2,'#47795d',spindle);
+  const a=anim('weave','Weave');key(a,spindle,'rotation',[[0,0],[120,Math.PI*2]]);
+  return p;
+}
+const factories={loom,sprig,measure,compass,milo,orbit,bloom,tempo,signal,gather,wisp,dawn,arrange,motorcycle:()=>motorcycle(project)};
 for(const original of await suite()){
  const p=structuredClone(original);p.artboards[0].width=p.artboards[0].height=512;
  for(const n of p.nodes){n.transform[4]*=2;n.transform[5]*=2;const g=n.geometry;if(!g)continue;
@@ -327,6 +356,7 @@ for(const name of exampleIds) {
     guides.guides=[{id:'measure-center',axis:'x',position:256,visible:true},{id:'measure-top',axis:'y',position:130,visible:true}];
     await writeFile(`${output}${name}.guides.json`,JSON.stringify(guides,null,2)+'\n');
   }
+  if(name==='loom') await writeFile(`${output}loom.guides.json`,JSON.stringify(loomPreset,null,2)+'\n');
   if(name==='sprig') {
     validateProject(sprigSeed);
     await writeFile(`${output}sprig-start.evir-project`,JSON.stringify(sprigSeed,null,2)+'\n');

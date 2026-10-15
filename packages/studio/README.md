@@ -73,3 +73,5 @@ Playback modes/counts/speed, independent timeline layers, the Sunday motorcycle 
 **Import .riv for editing** converts the supported subset; **View .riv file** keeps the original read-only with an optional, lazy official Rive runtime. Unsupported conversion offers original viewing and byte-exact download without replacing your project.
 
 **Live tools** has a guided Compass demo and local motion selection. **MCP setup** generates a desktop stdio-client configuration; it does not connect an agent to the open Studio tab. See [the walkthrough and limits](../../docs/34-import-viewing-and-agent-guidance.md). Physical tests remain postponed.
+
+**Rows & columns** in Guides & grid adds reusable fixed/stretch guide patterns with count, gutters, margins and alignment. With a selected Alignment reference, Distribute horizontal/vertical opens a numeric fixed-gap sheet and keeps that reference stationary. Old guide presets migrate; patterns stay outside source/native exports. [Loom and the guide walkthrough](../../docs/38-structured-guides-and-reference-spacing.md) demonstrate the workflow.

@@ -117,13 +117,19 @@ export function alignmentMoves(p, ids, alignment, keyId = null) {
     throw Error("Align layers on the same artboard.");
   const key = keyId && roots.find((n) => n.id === keyId);
   if (keyId && (!key || roots.length < 2))
-    throw Error("Choose a selected independent layer as the alignment reference.");
+    throw Error(
+      "Choose a selected independent layer as the alignment reference.",
+    );
   // The key is stationary, so it may be locked. Every moving member still
   // passes the normal lock/affine checks before any source mutation.
-  const prepared = prepareSelectionMove(p, roots.filter((n) => n.id !== keyId).map((n) => n.id));
+  const prepared = prepareSelectionMove(
+    p,
+    roots.filter((n) => n.id !== keyId).map((n) => n.id),
+  );
   const a = p.artboards.find((a) => a.id === roots[0].artboardId);
-  const reference =
-    key ? nodeBounds(p, key) : roots.length === 1
+  const reference = key
+    ? nodeBounds(p, key)
+    : roots.length === 1
       ? { x: 0, y: 0, width: a.width, height: a.height }
       : selectionBounds(p, ids);
   const [axis, index] = rules[alignment];
@@ -149,20 +155,60 @@ export function applyAlignment(p, moves) {
 
 // Keep the outermost edges fixed and equalize the gaps, including negative
 // gaps when the selection overlaps. All members are prepared before mutation.
-export function distributionMoves(p, ids, axis) {
+export function distributionMoves(p, ids, axis, fixed = null) {
   if (!["x", "y"].includes(axis)) throw Error("Choose a distribution axis.");
   const roots = selectionRoots(p, ids);
-  if (roots.length < 3)
-    throw Error("Select at least three independent layers.");
+  if (roots.length < (fixed ? 2 : 3))
+    throw Error(
+      fixed
+        ? "Select at least two independent layers."
+        : "Select at least three independent layers.",
+    );
   if (new Set(roots.map((n) => n.artboardId)).size !== 1)
     throw Error("Distribute layers on the same artboard.");
   if (roots.some((n) => !available(p, n, "hidden")))
     throw Error("Show the selected layers before distributing them.");
-  const prepared = new Map(prepareSelectionMove(p, ids).map((v) => [v.id, v]));
+  if (
+    fixed &&
+    (!roots.some((n) => n.id === fixed.keyId) ||
+      !Number.isFinite(fixed.gap) ||
+      fixed.gap < 0 ||
+      fixed.gap > 1e6)
+  )
+    throw Error(
+      "Choose a selected independent reference and a finite gap between 0 and 1,000,000.",
+    );
+  const prepared = new Map(
+    prepareSelectionMove(
+      p,
+      roots.filter((n) => n.id !== fixed?.keyId).map((n) => n.id),
+    ).map((v) => [v.id, v]),
+  );
   const size = axis === "x" ? "width" : "height";
   const ordered = roots
     .map((n) => ({ n, box: nodeBounds(p, n) }))
     .sort((a, b) => a.box[axis] - b.box[axis] || a.n.order - b.n.order);
+  if (fixed) {
+    const index = ordered.findIndex((v) => v.n.id === fixed.keyId),
+      positions = new Map();
+    let at = ordered[index].box[axis];
+    for (let i = index - 1; i >= 0; i--) {
+      at -= ordered[i].box[size] + fixed.gap;
+      positions.set(ordered[i].n.id, at);
+    }
+    at = ordered[index].box[axis] + ordered[index].box[size] + fixed.gap;
+    for (let i = index + 1; i < ordered.length; i++) {
+      positions.set(ordered[i].n.id, at);
+      at += ordered[i].box[size] + fixed.gap;
+    }
+    return ordered
+      .filter((v) => v.n.id !== fixed.keyId)
+      .map(({ n, box }) => ({
+        prepared: prepared.get(n.id),
+        dx: axis === "x" ? positions.get(n.id) - box[axis] : 0,
+        dy: axis === "y" ? positions.get(n.id) - box[axis] : 0,
+      }));
+  }
   const first = ordered[0].box[axis],
     last = ordered.at(-1).box;
   const gap =
