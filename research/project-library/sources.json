@@ -1,0 +1,29 @@
+[
+  {
+    "id": "rive-files",
+    "url": "https://rive.app/docs/editor/interface-overview/file-browser",
+    "accessed": "2026-10-14",
+    "httpStatus": 200,
+    "bytes": 344710,
+    "sha256": "8a42b925799f5e2a071b78fc3b605601a633e769b708d6361d1bb83c9a6fe92e",
+    "observed": "The file browser documents recent files, search, file organization and download actions. This supports a visible project collection; it does not imply Evir cloud accounts."
+  },
+  {
+    "id": "indexeddb",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB",
+    "accessed": "2026-10-14",
+    "httpStatus": 200,
+    "bytes": 204823,
+    "sha256": "1375e399e18ad12dc68d05849d9d19d16b4fc0f8023b1ac81586a18eda81b681",
+    "observed": "Database schema updates use version-change transactions. Read/write transactions sharing stores serialize. Commit completion differs from request success; old connections can block upgrades."
+  },
+  {
+    "id": "broadcast",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel",
+    "accessed": "2026-10-14",
+    "httpStatus": 200,
+    "bytes": 152805,
+    "sha256": "4f99e1784a0ce828ac389f81f97a5fd3fb0de3954942ec6a5be547feb96a3006",
+    "observed": "Messages reach listening contexts on the same origin, excluding the sending object. Notifications are advisory; persisted revision checks enforce safe saves."
+  }
+]

@@ -7,7 +7,8 @@ import { ContinuationDraft } from "./path-continuation.mjs";
 import { continuationControls, numericContinuation } from "./continuation-controls.mjs";
 import { canSnapGuides, snapWithGuides } from "./guides.mjs";
 let liveTools, riveViewer, canvasGuides, alignmentKey = null;
-import { ProjectRecovery, RecoveryQueue } from "./recovery.mjs";
+import { ProjectRecovery, RecoveryQueue, RecoveryConflict } from "./recovery.mjs";
+import { mountProjectLibrary } from "./project-library.mjs";
 import { SceneAssets, sceneOrder } from "@evir/renderer-canvas";
 import { importRiv } from "@evir/format";
 const sceneAssets = new SceneAssets();
@@ -161,6 +162,7 @@ let store,
   stageSize = null,
   generation = 0,
   savedGeneration = -1,
+  projectSwitchPending = false,
   status = "Local project";
 const canvas = $("#scene"),
   ctx = canvas.getContext("2d"),
@@ -234,18 +236,21 @@ async function persist() {
   return recoveryQueue.request();
 }
 const recovery = new ProjectRecovery();
+let library;
 const recoveryQueue = new RecoveryQueue({
-  sample: () => ({ project: bundle(), generation }),
-  write: (record) => recovery.write(record.project),
+  sample: () => ({ project: bundle(), generation, session: recovery.session() }),
+  write: (record) => recovery.write(record.project, record.session),
   saved: (record) => {
     if (record.generation === generation) {
       savedGeneration = generation;
       setStatus("Saved in this browser");
+      library?.saved(recovery.session());
     }
   },
   failed: (error, record) => {
     if (!record || record.generation === generation) {
       setStatus("Not saved in browser");
+      if (error instanceof RecoveryConflict) { library?.conflict(); return; }
       notice(
         `Your changes are still open. Download a project copy. ${error.message}`,
       );
@@ -276,7 +281,7 @@ function install(p) {
   drag = null;
   penDraft = null;
   penPointerId = null;
-  setTool("select");
+  setTool("select", true);
   render();
 }
 function edit(label, fn, direct = false) {
@@ -317,8 +322,8 @@ function select(id, additive = false) {
   for (const parent of ancestors(project(), id)) collapsedLayers.delete(parent);
   render();
 }
-function setTool(next) {
-  if (next !== tool && !penReady()) return;
+function setTool(next, installing = false) {
+  if (!installing && next !== tool && !penReady()) return;
   if (["pen", "freehand"].includes(next) && authoring?.mode !== "Design") {
     notice("Return to Design to draw a path");
     return;
@@ -340,6 +345,7 @@ function toolCursor() {
       : "default";
 }
 function penReady() {
+  if (projectSwitchPending) { notice("Wait for this project to finish opening."); return false; }
   if (!penDraft) return true;
   notice("Finish or cancel your path before continuing.");
   return false;
@@ -606,7 +612,7 @@ function draw() {
   $("#empty-stage").hidden =
     tool === "pen" || p.nodes.some((n) => n.artboardId === activeArtboard);
 }
-function fit() {
+function fit(saveView = true) {
   fittedView = true;
   const r = stage.getBoundingClientRect(),
     a = artboard();
@@ -621,7 +627,7 @@ function fit() {
     y: (r.height - a.height * zoom) / 2,
   };
   draw();
-  persist();
+  if (saveView) persist();
 }
 function fitSelection() {
   fittedView = false;
@@ -2124,6 +2130,7 @@ $("#file").addEventListener("change", async (e) => {
   const file = e.target.files[0];
   e.target.value = "";
   if (!file) return;
+  let decoded = false;
   try {
     if (
       file.name.toLowerCase().endsWith(".riv") &&
@@ -2133,30 +2140,111 @@ $("#file").addEventListener("change", async (e) => {
     const next = file.name.toLowerCase().endsWith(".riv")
       ? await importRiv(await file.arrayBuffer())
       : await openProject(await file.text());
+    decoded = true;
     cancelDrag();
     if (!(await askReplace("Open another project?", "Open project"))) return;
-    await sceneAssets.load(next);
-    install(next);
-    persist();
-    clearNotice();
+    await switchProject(async () => {
+      await preserveCurrent();
+      await sceneAssets.load(next);
+      recovery.fresh();
+      library?.clear();
+      install(next);
+      persist();
+      clearNotice();
+    });
   } catch (error) {
-    if(file.name.toLowerCase().endsWith('.riv')) riveViewer.open(file,{importError:error});
+    if(!decoded && file.name.toLowerCase().endsWith('.riv')) riveViewer.open(file,{importError:error});
     else notice(error);
   }
 });
 $("#new").onclick = async () => {
   if (!(await askReplace("Start a new project?", "Create project"))) return;
-  cancelDrag();
-  const next = createProject();
-  await sceneAssets.load(next);
-  install(next);
-  fit();
-  clearNotice();
+  try {
+    await switchProject(async () => {
+      await preserveCurrent();
+      const next = createProject();
+      await sceneAssets.load(next);
+      recovery.fresh();
+      library?.clear();
+      install(next);
+      fit();
+      clearNotice();
+    });
+  } catch(error) {notice(error);}
 };
+async function preserveCurrent() {
+  if (penDraft) throw Error("Finish or cancel your drawing before switching projects.");
+  if (generation === savedGeneration) return;
+  const done = persist();
+  await recoveryQueue.flush();
+  if (!(await done)) throw Error("Keep this project open. Save a separate copy or download a backup before switching.");
+}
+const switchingNotice = element("div");
+switchingNotice.id = "project-switch-status";
+switchingNotice.className = "evir-toast";
+switchingNotice.setAttribute("role", "status");
+switchingNotice.hidden = true;
+switchingNotice.append(element("span", "Opening your project…"));
+document.body.append(switchingNotice);
+async function switchProject(operation) {
+  if (!penReady()) return false;
+  cancelDrag();
+  authoring?.beginMove();
+  projectSwitchPending = true;
+  const shells = [...document.querySelectorAll(".topbar,.toolbar,.tool-rail,#workspace,#recovery-conflict")];
+  for (const shell of shells) shell.inert = true;
+  $("#workspace").setAttribute("aria-busy", "true");
+  switchingNotice.hidden = false;
+  try { await operation(); }
+  finally {
+    projectSwitchPending = false;
+    for (const shell of shells) shell.inert = false;
+    $("#workspace").setAttribute("aria-busy", "false");
+    switchingNotice.hidden = true;
+    render();
+    stage.focus();
+  }
+}
+async function openSaved(key, latest = false) {
+  if (!penReady()) return;
+  if (!(await askReplace(latest ? "Open the latest saved version?" : "Open a saved project?", "Open project"))) return;
+  await switchProject(async () => {
+    if (!latest) await preserveCurrent();
+    // Keep queued saves attached to the old entry while validation/assets await.
+    const cached = await recovery.read(key, { adopt: false });
+    const next = await openProject(JSON.stringify(cached.project));
+    await sceneAssets.load(next);
+    recovery.active = cached.session;
+    install(next);
+    library.clear();
+    setStatus("Saved in this browser");
+    savedGeneration = generation;
+  });
+}
+library = mountProjectLibrary({
+  recovery, notice, ready: penReady, status: setStatus,
+  open: key => openSaved(key),
+  latest: () => openSaved(recovery.session().key, true),
+  copy: async () => {
+    await switchProject(async () => {
+      // Drain the old revision before allocating a distinct browser entry.
+      await recoveryQueue.flush();
+      recoveryQueue.cancel();
+      recovery.fresh();
+      const done = persist();
+      await recoveryQueue.flush();
+      if (!(await done)) throw Error("Copy could not be saved. Download a project backup.");
+      library.clear();
+    });
+  },
+});
 function askReplace(title, action) {
   const dialog = $("#replace-project");
   $("#replace-title").textContent = title;
   $("#replace-confirm").textContent = action;
+  $("#replace-description").textContent = title === "Open the latest saved version?"
+    ? "This replaces your canvas with the other tab's saved version. Download your edits first if you want to keep them."
+    : "Studio keeps your committed project in this browser before switching. Download a copy for a backup outside this browser.";
   dialog.returnValue = "";
   dialog.showModal();
   return new Promise((resolve) =>
@@ -2171,6 +2259,7 @@ $("#save-before-replace").onclick = save;
 $("#shortcuts").onclick = () => $("#help").showModal();
 $("#close-help").onclick = () => $("#help").close();
 window.addEventListener("keydown", (e) => {
+  if (projectSwitchPending) return;
   if (
     document.querySelector("dialog[open]") ||
     $("#help").open ||
@@ -2330,7 +2419,7 @@ window.addEventListener("beforeunload", (e) => {
 });
 new ResizeObserver(() => {
   const r = stage.getBoundingClientRect();
-  if (store) {
+  if (store && !projectSwitchPending) {
     // Fit views stay fitted; manually panned views retain their world-space center.
     cancelDrag();
     resetTouches();
@@ -2371,11 +2460,11 @@ else {
     c.x + a.width * c.zoom <= r.width - 20 &&
     c.y + a.height * c.zoom <= r.height - 20;
   fittedView = false;
-  if (!fits) fit();
-  setStatus("Restored from this browser");
+  if (!fits) fit(false);
+  setStatus("Saved in this browser");
   savedGeneration = generation;
-  // Complete legacy migration and retain any adjusted recovery camera.
-  persist();
+  // Legacy storage is removed only after a durable library write.
+  if (recovery.session().revision === 0) persist();
 }
 $("#startup-step").textContent = "Getting your tools ready…";
 authoring = mountAuthoring({
@@ -2408,7 +2497,7 @@ advanced = mountAdvanced({
   notice,
 });
 window.addEventListener("pagehide", (e) => {
-  if (!e.persisted) sceneAssets.dispose();
+  if (!e.persisted) { sceneAssets.dispose(); library?.close(); }
 });
 mountPanels();
 mountDisclosures();

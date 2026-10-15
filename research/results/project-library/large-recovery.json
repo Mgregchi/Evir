@@ -1,0 +1,39 @@
+{
+  "checkedAt": "2026-10-14T11:38:07.962Z",
+  "scope": "Automated software Chromium; no physical-device/human evidence",
+  "results": [
+    {
+      "width": 390,
+      "checks": [
+        "distribution/undo",
+        "relative organization",
+        "key navigation",
+        "graph keyboard selection/focus/drag/undo",
+        "automated axe/reflow"
+      ]
+    },
+    {
+      "width": 1440,
+      "checks": [
+        "distribution/undo",
+        "relative organization",
+        "native desktop layer drag between visible rows",
+        "key navigation",
+        "graph keyboard selection/focus/drag/undo",
+        "automated axe/reflow"
+      ]
+    },
+    {
+      "recovery": [
+        "legacy migration after durable commit",
+        "1000-node panel bounded to 120 rows",
+        "cross-page keyboard/search selection",
+        "4 MiB asset/over-5 MiB encoded project reload",
+        "aborted transaction retains previous durable project"
+      ],
+      "inputProjectBytes": 5785915,
+      "inputProjectSha256": "e923476fffdc6c4751d799545b5d808fe149ec1477f8cbae0c45588079aa3326",
+      "scope": "Real headless browser storage, not device memory"
+    }
+  ]
+}
