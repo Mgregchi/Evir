@@ -281,7 +281,7 @@ export function nodeBounds(p, n) {
   // Conservative local miter/round/square envelope, transformed per shape.
   for (const v of nodes.filter(v => !isHidden(p,v) && v.geometry?.stroke)) {
     const s=v.geometry.stroke, pad=s.width*(s.join==="miter"?2:Math.SQRT1_2),m=worldTransform(p,v.id);
-    const source=v.kind==="path"?v.geometry.points.flatMap(p=>[p.anchor,p.in,p.out]):[[0,0],[v.geometry.width,v.geometry.height]];
+    const source=v.kind==="path"?v.geometry.points.flatMap(p=>[p.anchor,p.in,p.out]):[[0,0],[v.geometry.width,0],[v.geometry.width,v.geometry.height],[0,v.geometry.height]];
     for(const point of source)for(const dx of [-pad,pad])for(const dy of [-pad,pad])points.push(mapPoint(m,[point[0]+dx,point[1]+dy]));
   }
   const xs = points.map((v) => v[0]),

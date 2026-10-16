@@ -77,3 +77,11 @@ test('tiny dash construction stays bounded and keyed rectangle sizes cannot bypa
   assert.throws(()=>validateProject(rectangle),/effect budget/);
   rectangle.animations[0].tracks[0].keys[0]={frame:0,value:100,easing:{type:'cubic',curve:[.2,-1,.8,2]}};assert.throws(()=>validateProject(rectangle),/value handles/);
 });
+
+test('thin rotated rectangle stroke bounds include all four painted corners',()=>{
+  const p=strokeCases().find(p=>p.name==='stroke-rectangle'),n=p.nodes[0],c=Math.SQRT1_2;
+  n.transform=[c,c,-c,c,100,100];n.geometry.stroke.width=2;
+  const b=nodeBounds(p,n);
+  assert(b.x<=100-c*98,'lower-left painted corner extends beyond the original geometry');
+  assert(b.x+b.width>=100+c*130,'upper-right painted corner extends beyond the original geometry');
+});
