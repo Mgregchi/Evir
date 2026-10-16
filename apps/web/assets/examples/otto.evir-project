@@ -1,0 +1,6373 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 2,
+  "id": "otto-project",
+  "name": "Otto — a rhythm of his own",
+  "artboards": [
+    {
+      "id": "otto-board",
+      "name": "Otto — a rhythm of his own",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "otto-paper",
+      "name": "paper",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f3efe6",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-paper-p0",
+            "anchor": [
+              0,
+              0
+            ],
+            "in": [
+              0,
+              0
+            ],
+            "out": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "otto-paper-p1",
+            "anchor": [
+              512,
+              0
+            ],
+            "in": [
+              512,
+              0
+            ],
+            "out": [
+              512,
+              0
+            ]
+          },
+          {
+            "id": "otto-paper-p2",
+            "anchor": [
+              512,
+              0
+            ],
+            "in": [
+              512,
+              0
+            ],
+            "out": [
+              512,
+              0
+            ]
+          },
+          {
+            "id": "otto-paper-p3",
+            "anchor": [
+              512,
+              512
+            ],
+            "in": [
+              512,
+              512
+            ],
+            "out": [
+              512,
+              512
+            ]
+          },
+          {
+            "id": "otto-paper-p4",
+            "anchor": [
+              512,
+              512
+            ],
+            "in": [
+              512,
+              512
+            ],
+            "out": [
+              512,
+              512
+            ]
+          },
+          {
+            "id": "otto-paper-p5",
+            "anchor": [
+              0,
+              512
+            ],
+            "in": [
+              0,
+              512
+            ],
+            "out": [
+              0,
+              512
+            ]
+          },
+          {
+            "id": "otto-paper-p6",
+            "anchor": [
+              0,
+              512
+            ],
+            "in": [
+              0,
+              512
+            ],
+            "out": [
+              0,
+              512
+            ]
+          },
+          {
+            "id": "otto-paper-p7",
+            "anchor": [
+              0,
+              0
+            ],
+            "in": [
+              0,
+              0
+            ],
+            "out": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-color-field",
+      "name": "color field",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": null,
+      "order": 1,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        256,
+        254
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#dfebe3",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-color-field-p0",
+            "anchor": [
+              181,
+              0
+            ],
+            "in": [
+              181,
+              -99.96353971379999
+            ],
+            "out": [
+              181,
+              99.96353971379999
+            ]
+          },
+          {
+            "id": "otto-color-field-p1",
+            "anchor": [
+              0,
+              181
+            ],
+            "in": [
+              99.96353971379999,
+              181
+            ],
+            "out": [
+              -99.96353971379999,
+              181
+            ]
+          },
+          {
+            "id": "otto-color-field-p2",
+            "anchor": [
+              -181,
+              0
+            ],
+            "in": [
+              -181,
+              99.96353971379999
+            ],
+            "out": [
+              -181,
+              -99.96353971379999
+            ]
+          },
+          {
+            "id": "otto-color-field-p3",
+            "anchor": [
+              0,
+              -181
+            ],
+            "in": [
+              -99.96353971379999,
+              -181
+            ],
+            "out": [
+              99.96353971379999,
+              -181
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-ground-shadow",
+      "name": "ground shadow",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": null,
+      "order": 2,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        256,
+        453
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#26374718",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-ground-shadow-p0",
+            "anchor": [
+              106,
+              0
+            ],
+            "in": [
+              106,
+              -6.0751322478
+            ],
+            "out": [
+              106,
+              6.0751322478
+            ]
+          },
+          {
+            "id": "otto-ground-shadow-p1",
+            "anchor": [
+              0,
+              11
+            ],
+            "in": [
+              58.5421834788,
+              11
+            ],
+            "out": [
+              -58.5421834788,
+              11
+            ]
+          },
+          {
+            "id": "otto-ground-shadow-p2",
+            "anchor": [
+              -106,
+              0
+            ],
+            "in": [
+              -106,
+              6.0751322478
+            ],
+            "out": [
+              -106,
+              -6.0751322478
+            ]
+          },
+          {
+            "id": "otto-ground-shadow-p3",
+            "anchor": [
+              0,
+              -11
+            ],
+            "in": [
+              -58.5421834788,
+              -11
+            ],
+            "out": [
+              58.5421834788,
+              -11
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-orange-beat",
+      "name": "orange beat",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": null,
+      "order": 3,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        100,
+        157
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#d17c50",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-orange-beat-p0",
+            "anchor": [
+              0,
+              -11
+            ],
+            "in": [
+              -1.3333333333333333,
+              -5
+            ],
+            "out": [
+              1.3333333333333333,
+              -5
+            ]
+          },
+          {
+            "id": "otto-orange-beat-p1",
+            "anchor": [
+              11,
+              0
+            ],
+            "in": [
+              5,
+              -1.3333333333333333
+            ],
+            "out": [
+              5,
+              1.3333333333333333
+            ]
+          },
+          {
+            "id": "otto-orange-beat-p2",
+            "anchor": [
+              0,
+              11
+            ],
+            "in": [
+              1.3333333333333333,
+              5
+            ],
+            "out": [
+              -1.3333333333333333,
+              5
+            ]
+          },
+          {
+            "id": "otto-orange-beat-p3",
+            "anchor": [
+              -11,
+              0
+            ],
+            "in": [
+              -5,
+              1.3333333333333333
+            ],
+            "out": [
+              -5,
+              -1.3333333333333333
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-mint-beat",
+      "name": "mint beat",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": null,
+      "order": 4,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        409,
+        214
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#6ba58e",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-mint-beat-p0",
+            "anchor": [
+              0,
+              -9
+            ],
+            "in": [
+              -1.3333333333333333,
+              -4.333333333333333
+            ],
+            "out": [
+              1.3333333333333333,
+              -4.333333333333333
+            ]
+          },
+          {
+            "id": "otto-mint-beat-p1",
+            "anchor": [
+              9,
+              0
+            ],
+            "in": [
+              4.333333333333333,
+              -1.3333333333333333
+            ],
+            "out": [
+              4.333333333333333,
+              1.3333333333333333
+            ]
+          },
+          {
+            "id": "otto-mint-beat-p2",
+            "anchor": [
+              0,
+              9
+            ],
+            "in": [
+              1.3333333333333333,
+              4.333333333333333
+            ],
+            "out": [
+              -1.3333333333333333,
+              4.333333333333333
+            ]
+          },
+          {
+            "id": "otto-mint-beat-p3",
+            "anchor": [
+              -9,
+              0
+            ],
+            "in": [
+              -4.333333333333333,
+              1.3333333333333333
+            ],
+            "out": [
+              -4.333333333333333,
+              -1.3333333333333333
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-character",
+      "name": "character",
+      "kind": "group",
+      "artboardId": "otto-board",
+      "parentId": null,
+      "order": 5,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        252,
+        288
+      ],
+      "geometry": null
+    },
+    {
+      "id": "otto-back-trouser",
+      "name": "back trouser",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-character",
+      "order": 6,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#354a55",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-back-trouser-p0",
+            "anchor": [
+              -38,
+              35
+            ],
+            "in": [
+              -44,
+              66
+            ],
+            "out": [
+              -38,
+              35
+            ]
+          },
+          {
+            "id": "otto-back-trouser-p1",
+            "anchor": [
+              17,
+              38
+            ],
+            "in": [
+              17,
+              38
+            ],
+            "out": [
+              9,
+              80
+            ]
+          },
+          {
+            "id": "otto-back-trouser-p2",
+            "anchor": [
+              -34,
+              147
+            ],
+            "in": [
+              -13,
+              105
+            ],
+            "out": [
+              -34,
+              147
+            ]
+          },
+          {
+            "id": "otto-back-trouser-p3",
+            "anchor": [
+              -65,
+              142
+            ],
+            "in": [
+              -65,
+              142
+            ],
+            "out": [
+              -59,
+              103
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-front-trouser",
+      "name": "front trouser",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-character",
+      "order": 7,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#233a43",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-front-trouser-p0",
+            "anchor": [
+              6,
+              38
+            ],
+            "in": [
+              6,
+              38
+            ],
+            "out": [
+              6,
+              38
+            ]
+          },
+          {
+            "id": "otto-front-trouser-p1",
+            "anchor": [
+              54,
+              33
+            ],
+            "in": [
+              54,
+              33
+            ],
+            "out": [
+              64,
+              72
+            ]
+          },
+          {
+            "id": "otto-front-trouser-p2",
+            "anchor": [
+              62,
+              151
+            ],
+            "in": [
+              50,
+              119
+            ],
+            "out": [
+              62,
+              151
+            ]
+          },
+          {
+            "id": "otto-front-trouser-p3",
+            "anchor": [
+              27,
+              156
+            ],
+            "in": [
+              27,
+              156
+            ],
+            "out": [
+              13,
+              120
+            ]
+          },
+          {
+            "id": "otto-front-trouser-p4",
+            "anchor": [
+              -1,
+              72
+            ],
+            "in": [
+              14,
+              89
+            ],
+            "out": [
+              -1,
+              72
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-back-sock",
+      "name": "back sock",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-character",
+      "order": 8,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#fff5e1",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-back-sock-p0",
+            "anchor": [
+              -64,
+              135
+            ],
+            "in": [
+              -64,
+              135
+            ],
+            "out": [
+              -64,
+              135
+            ]
+          },
+          {
+            "id": "otto-back-sock-p1",
+            "anchor": [
+              -35,
+              142
+            ],
+            "in": [
+              -35,
+              142
+            ],
+            "out": [
+              -35,
+              142
+            ]
+          },
+          {
+            "id": "otto-back-sock-p2",
+            "anchor": [
+              -41,
+              157
+            ],
+            "in": [
+              -41,
+              157
+            ],
+            "out": [
+              -41,
+              157
+            ]
+          },
+          {
+            "id": "otto-back-sock-p3",
+            "anchor": [
+              -68,
+              150
+            ],
+            "in": [
+              -68,
+              150
+            ],
+            "out": [
+              -68,
+              150
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-front-sock",
+      "name": "front sock",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-character",
+      "order": 9,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#fff5e1",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-front-sock-p0",
+            "anchor": [
+              28,
+              147
+            ],
+            "in": [
+              28,
+              147
+            ],
+            "out": [
+              28,
+              147
+            ]
+          },
+          {
+            "id": "otto-front-sock-p1",
+            "anchor": [
+              60,
+              144
+            ],
+            "in": [
+              60,
+              144
+            ],
+            "out": [
+              60,
+              144
+            ]
+          },
+          {
+            "id": "otto-front-sock-p2",
+            "anchor": [
+              65,
+              162
+            ],
+            "in": [
+              65,
+              162
+            ],
+            "out": [
+              65,
+              162
+            ]
+          },
+          {
+            "id": "otto-front-sock-p3",
+            "anchor": [
+              34,
+              166
+            ],
+            "in": [
+              34,
+              166
+            ],
+            "out": [
+              34,
+              166
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-left-sneaker",
+      "name": "left sneaker",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-character",
+      "order": 10,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#7eac91",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-left-sneaker-p0",
+            "anchor": [
+              -66,
+              146
+            ],
+            "in": [
+              -66,
+              146
+            ],
+            "out": [
+              -66,
+              146
+            ]
+          },
+          {
+            "id": "otto-left-sneaker-p1",
+            "anchor": [
+              -39,
+              155
+            ],
+            "in": [
+              -39,
+              155
+            ],
+            "out": [
+              -33,
+              167
+            ]
+          },
+          {
+            "id": "otto-left-sneaker-p2",
+            "anchor": [
+              -18,
+              173
+            ],
+            "in": [
+              -18,
+              164
+            ],
+            "out": [
+              -39.33333333333333,
+              180.33333333333334
+            ]
+          },
+          {
+            "id": "otto-left-sneaker-p3",
+            "anchor": [
+              -83,
+              170
+            ],
+            "in": [
+              -61,
+              179.33333333333334
+            ],
+            "out": [
+              -83,
+              170
+            ]
+          },
+          {
+            "id": "otto-left-sneaker-p4",
+            "anchor": [
+              -80,
+              162
+            ],
+            "in": [
+              -80,
+              162
+            ],
+            "out": [
+              -80,
+              162
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-left-sole",
+      "name": "left sole",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-character",
+      "order": 11,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e8dfc9",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-left-sole-p0",
+            "anchor": [
+              -83,
+              166
+            ],
+            "in": [
+              -83,
+              166
+            ],
+            "out": [
+              -62.33333333333333,
+              176
+            ]
+          },
+          {
+            "id": "otto-left-sole-p1",
+            "anchor": [
+              -18,
+              170
+            ],
+            "in": [
+              -40.66666666666667,
+              177.33333333333334
+            ],
+            "out": [
+              -18,
+              170
+            ]
+          },
+          {
+            "id": "otto-left-sole-p2",
+            "anchor": [
+              -17,
+              176
+            ],
+            "in": [
+              -17,
+              176
+            ],
+            "out": [
+              -41.66666666666667,
+              182
+            ]
+          },
+          {
+            "id": "otto-left-sole-p3",
+            "anchor": [
+              -85,
+              172
+            ],
+            "in": [
+              -64.33333333333333,
+              180.66666666666666
+            ],
+            "out": [
+              -85,
+              172
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-right-sneaker",
+      "name": "right sneaker",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-character",
+      "order": 12,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#7eac91",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-right-sneaker-p0",
+            "anchor": [
+              32,
+              158
+            ],
+            "in": [
+              32,
+              158
+            ],
+            "out": [
+              32,
+              158
+            ]
+          },
+          {
+            "id": "otto-right-sneaker-p1",
+            "anchor": [
+              61,
+              155
+            ],
+            "in": [
+              61,
+              155
+            ],
+            "out": [
+              72,
+              166
+            ]
+          },
+          {
+            "id": "otto-right-sneaker-p2",
+            "anchor": [
+              96,
+              173
+            ],
+            "in": [
+              91,
+              162
+            ],
+            "out": [
+              82,
+              184
+            ]
+          },
+          {
+            "id": "otto-right-sneaker-p3",
+            "anchor": [
+              30,
+              177
+            ],
+            "in": [
+              45,
+              182
+            ],
+            "out": [
+              30,
+              177
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-right-sole",
+      "name": "right sole",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-character",
+      "order": 13,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e8dfc9",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-right-sole-p0",
+            "anchor": [
+              30,
+              173
+            ],
+            "in": [
+              30,
+              173
+            ],
+            "out": [
+              52.66666666666667,
+              180.33333333333334
+            ]
+          },
+          {
+            "id": "otto-right-sole-p1",
+            "anchor": [
+              96,
+              171
+            ],
+            "in": [
+              74.66666666666667,
+              179.66666666666666
+            ],
+            "out": [
+              96,
+              171
+            ]
+          },
+          {
+            "id": "otto-right-sole-p2",
+            "anchor": [
+              98,
+              177
+            ],
+            "in": [
+              98,
+              177
+            ],
+            "out": [
+              74.66666666666667,
+              185.66666666666666
+            ]
+          },
+          {
+            "id": "otto-right-sole-p3",
+            "anchor": [
+              29,
+              178
+            ],
+            "in": [
+              51.66666666666667,
+              186
+            ],
+            "out": [
+              29,
+              178
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-shirt",
+      "name": "shirt",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-character",
+      "order": 14,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#fff3db",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-shirt-p0",
+            "anchor": [
+              -35,
+              -79
+            ],
+            "in": [
+              -35,
+              -79
+            ],
+            "out": [
+              -35,
+              -79
+            ]
+          },
+          {
+            "id": "otto-shirt-p1",
+            "anchor": [
+              30,
+              -85
+            ],
+            "in": [
+              30,
+              -85
+            ],
+            "out": [
+              30,
+              -85
+            ]
+          },
+          {
+            "id": "otto-shirt-p2",
+            "anchor": [
+              55,
+              47
+            ],
+            "in": [
+              55,
+              47
+            ],
+            "out": [
+              19,
+              61
+            ]
+          },
+          {
+            "id": "otto-shirt-p3",
+            "anchor": [
+              -43,
+              43
+            ],
+            "in": [
+              -13.666666666666668,
+              59.66666666666667
+            ],
+            "out": [
+              -43,
+              43
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-left-arm",
+      "name": "left arm",
+      "kind": "group",
+      "artboardId": "otto-board",
+      "parentId": "otto-character",
+      "order": 15,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -37,
+        -67
+      ],
+      "geometry": null
+    },
+    {
+      "id": "otto-left-sleeve",
+      "name": "left sleeve",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-left-arm",
+      "order": 16,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#ce7951",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-left-sleeve-p0",
+            "anchor": [
+              5,
+              -10
+            ],
+            "in": [
+              5,
+              -10
+            ],
+            "out": [
+              -25,
+              -11
+            ]
+          },
+          {
+            "id": "otto-left-sleeve-p1",
+            "anchor": [
+              -29,
+              51
+            ],
+            "in": [
+              -32,
+              22
+            ],
+            "out": [
+              -29,
+              51
+            ]
+          },
+          {
+            "id": "otto-left-sleeve-p2",
+            "anchor": [
+              -12,
+              57
+            ],
+            "in": [
+              -12,
+              57
+            ],
+            "out": [
+              2,
+              32
+            ]
+          },
+          {
+            "id": "otto-left-sleeve-p3",
+            "anchor": [
+              10,
+              2
+            ],
+            "in": [
+              7,
+              12
+            ],
+            "out": [
+              10,
+              2
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-left-wrist",
+      "name": "left wrist",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-left-arm",
+      "order": 17,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#a25d43",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-left-wrist-p0",
+            "anchor": [
+              -28,
+              46
+            ],
+            "in": [
+              -28,
+              46
+            ],
+            "out": [
+              -28,
+              46
+            ]
+          },
+          {
+            "id": "otto-left-wrist-p1",
+            "anchor": [
+              -13,
+              52
+            ],
+            "in": [
+              -13,
+              52
+            ],
+            "out": [
+              -13,
+              52
+            ]
+          },
+          {
+            "id": "otto-left-wrist-p2",
+            "anchor": [
+              -18,
+              68
+            ],
+            "in": [
+              -18,
+              68
+            ],
+            "out": [
+              -18,
+              68
+            ]
+          },
+          {
+            "id": "otto-left-wrist-p3",
+            "anchor": [
+              -33,
+              63
+            ],
+            "in": [
+              -33,
+              63
+            ],
+            "out": [
+              -33,
+              63
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-left-hand",
+      "name": "left hand",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-left-arm",
+      "order": 18,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#9c553f",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-left-hand-p0",
+            "anchor": [
+              -33,
+              61
+            ],
+            "in": [
+              -33,
+              61
+            ],
+            "out": [
+              -23,
+              61.666666666666664
+            ]
+          },
+          {
+            "id": "otto-left-hand-p1",
+            "anchor": [
+              -16,
+              75
+            ],
+            "in": [
+              -17.333333333333332,
+              66.33333333333333
+            ],
+            "out": [
+              -16,
+              75
+            ]
+          },
+          {
+            "id": "otto-left-hand-p2",
+            "anchor": [
+              -15,
+              88
+            ],
+            "in": [
+              -15,
+              88
+            ],
+            "out": [
+              -17.666666666666668,
+              91.33333333333333
+            ]
+          },
+          {
+            "id": "otto-left-hand-p3",
+            "anchor": [
+              -23,
+              82
+            ],
+            "in": [
+              -20.333333333333332,
+              89.33333333333333
+            ],
+            "out": [
+              -23,
+              82
+            ]
+          },
+          {
+            "id": "otto-left-hand-p4",
+            "anchor": [
+              -26,
+              92
+            ],
+            "in": [
+              -26,
+              92
+            ],
+            "out": [
+              -30,
+              94
+            ]
+          },
+          {
+            "id": "otto-left-hand-p5",
+            "anchor": [
+              -34,
+              86
+            ],
+            "in": [
+              -32.666666666666664,
+              92
+            ],
+            "out": [
+              -34,
+              86
+            ]
+          },
+          {
+            "id": "otto-left-hand-p6",
+            "anchor": [
+              -37,
+              91
+            ],
+            "in": [
+              -37,
+              91
+            ],
+            "out": [
+              -41,
+              91
+            ]
+          },
+          {
+            "id": "otto-left-hand-p7",
+            "anchor": [
+              -41,
+              81
+            ],
+            "in": [
+              -42.333333333333336,
+              87.66666666666667
+            ],
+            "out": [
+              -41,
+              81
+            ]
+          },
+          {
+            "id": "otto-left-hand-p8",
+            "anchor": [
+              -42,
+              73
+            ],
+            "in": [
+              -42,
+              73
+            ],
+            "out": [
+              -42,
+              73
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-right-arm",
+      "name": "right arm",
+      "kind": "group",
+      "artboardId": "otto-board",
+      "parentId": "otto-character",
+      "order": 19,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        38,
+        -68
+      ],
+      "geometry": null
+    },
+    {
+      "id": "otto-right-sleeve",
+      "name": "right sleeve",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-right-arm",
+      "order": 20,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e18c5b",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-right-sleeve-p0",
+            "anchor": [
+              -8,
+              -7
+            ],
+            "in": [
+              -8,
+              -7
+            ],
+            "out": [
+              8,
+              -13
+            ]
+          },
+          {
+            "id": "otto-right-sleeve-p1",
+            "anchor": [
+              25,
+              13
+            ],
+            "in": [
+              22,
+              -1
+            ],
+            "out": [
+              25,
+              13
+            ]
+          },
+          {
+            "id": "otto-right-sleeve-p2",
+            "anchor": [
+              34,
+              37
+            ],
+            "in": [
+              34,
+              37
+            ],
+            "out": [
+              34,
+              37
+            ]
+          },
+          {
+            "id": "otto-right-sleeve-p3",
+            "anchor": [
+              60,
+              51
+            ],
+            "in": [
+              60,
+              51
+            ],
+            "out": [
+              60,
+              51
+            ]
+          },
+          {
+            "id": "otto-right-sleeve-p4",
+            "anchor": [
+              52,
+              69
+            ],
+            "in": [
+              52,
+              69
+            ],
+            "out": [
+              28,
+              67
+            ]
+          },
+          {
+            "id": "otto-right-sleeve-p5",
+            "anchor": [
+              -2,
+              35
+            ],
+            "in": [
+              4,
+              52
+            ],
+            "out": [
+              -2,
+              35
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-right-cuff",
+      "name": "right cuff",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-right-arm",
+      "order": 21,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#b86446",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-right-cuff-p0",
+            "anchor": [
+              54,
+              45
+            ],
+            "in": [
+              54,
+              45
+            ],
+            "out": [
+              54,
+              45
+            ]
+          },
+          {
+            "id": "otto-right-cuff-p1",
+            "anchor": [
+              67,
+              51
+            ],
+            "in": [
+              67,
+              51
+            ],
+            "out": [
+              67,
+              51
+            ]
+          },
+          {
+            "id": "otto-right-cuff-p2",
+            "anchor": [
+              59,
+              70
+            ],
+            "in": [
+              59,
+              70
+            ],
+            "out": [
+              59,
+              70
+            ]
+          },
+          {
+            "id": "otto-right-cuff-p3",
+            "anchor": [
+              48,
+              66
+            ],
+            "in": [
+              48,
+              66
+            ],
+            "out": [
+              48,
+              66
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-right-hand",
+      "name": "right hand",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-right-arm",
+      "order": 22,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#a96448",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-right-hand-p0",
+            "anchor": [
+              64,
+              51
+            ],
+            "in": [
+              64,
+              51
+            ],
+            "out": [
+              73,
+              50
+            ]
+          },
+          {
+            "id": "otto-right-hand-p1",
+            "anchor": [
+              85,
+              48
+            ],
+            "in": [
+              80,
+              53
+            ],
+            "out": [
+              85,
+              48
+            ]
+          },
+          {
+            "id": "otto-right-hand-p2",
+            "anchor": [
+              95,
+              35
+            ],
+            "in": [
+              95,
+              35
+            ],
+            "out": [
+              99.66666666666667,
+              33.666666666666664
+            ]
+          },
+          {
+            "id": "otto-right-hand-p3",
+            "anchor": [
+              101,
+              40
+            ],
+            "in": [
+              101.66666666666667,
+              35.333333333333336
+            ],
+            "out": [
+              101,
+              40
+            ]
+          },
+          {
+            "id": "otto-right-hand-p4",
+            "anchor": [
+              92,
+              55
+            ],
+            "in": [
+              92,
+              55
+            ],
+            "out": [
+              92,
+              55
+            ]
+          },
+          {
+            "id": "otto-right-hand-p5",
+            "anchor": [
+              108,
+              47
+            ],
+            "in": [
+              108,
+              47
+            ],
+            "out": [
+              113.33333333333333,
+              47.666666666666664
+            ]
+          },
+          {
+            "id": "otto-right-hand-p6",
+            "anchor": [
+              110,
+              55
+            ],
+            "in": [
+              114,
+              50.333333333333336
+            ],
+            "out": [
+              110,
+              55
+            ]
+          },
+          {
+            "id": "otto-right-hand-p7",
+            "anchor": [
+              97,
+              64
+            ],
+            "in": [
+              97,
+              64
+            ],
+            "out": [
+              97,
+              64
+            ]
+          },
+          {
+            "id": "otto-right-hand-p8",
+            "anchor": [
+              108,
+              62
+            ],
+            "in": [
+              108,
+              62
+            ],
+            "out": [
+              114,
+              64.66666666666667
+            ]
+          },
+          {
+            "id": "otto-right-hand-p9",
+            "anchor": [
+              107,
+              70
+            ],
+            "in": [
+              113.66666666666667,
+              67.33333333333333
+            ],
+            "out": [
+              107,
+              70
+            ]
+          },
+          {
+            "id": "otto-right-hand-p10",
+            "anchor": [
+              94,
+              72
+            ],
+            "in": [
+              94,
+              72
+            ],
+            "out": [
+              101.33333333333333,
+              73.33333333333333
+            ]
+          },
+          {
+            "id": "otto-right-hand-p11",
+            "anchor": [
+              103,
+              80
+            ],
+            "in": [
+              104.33333333333333,
+              76
+            ],
+            "out": [
+              91,
+              87
+            ]
+          },
+          {
+            "id": "otto-right-hand-p12",
+            "anchor": [
+              61,
+              69
+            ],
+            "in": [
+              77,
+              72
+            ],
+            "out": [
+              61,
+              69
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-jacket-left",
+      "name": "jacket left",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-character",
+      "order": 23,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e09261",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-jacket-left-p0",
+            "anchor": [
+              -38,
+              -86
+            ],
+            "in": [
+              -56,
+              -48
+            ],
+            "out": [
+              -38,
+              -86
+            ]
+          },
+          {
+            "id": "otto-jacket-left-p1",
+            "anchor": [
+              -10,
+              -83
+            ],
+            "in": [
+              -10,
+              -83
+            ],
+            "out": [
+              -14,
+              -45
+            ]
+          },
+          {
+            "id": "otto-jacket-left-p2",
+            "anchor": [
+              -19,
+              47
+            ],
+            "in": [
+              -11,
+              -5
+            ],
+            "out": [
+              -19,
+              47
+            ]
+          },
+          {
+            "id": "otto-jacket-left-p3",
+            "anchor": [
+              -50,
+              43
+            ],
+            "in": [
+              -50,
+              43
+            ],
+            "out": [
+              -48,
+              14
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-jacket-right",
+      "name": "jacket right",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-character",
+      "order": 24,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#eaa26c",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-jacket-right-p0",
+            "anchor": [
+              14,
+              -86
+            ],
+            "in": [
+              9,
+              -43
+            ],
+            "out": [
+              14,
+              -86
+            ]
+          },
+          {
+            "id": "otto-jacket-right-p1",
+            "anchor": [
+              38,
+              -86
+            ],
+            "in": [
+              38,
+              -86
+            ],
+            "out": [
+              48,
+              -45
+            ]
+          },
+          {
+            "id": "otto-jacket-right-p2",
+            "anchor": [
+              58,
+              45
+            ],
+            "in": [
+              57,
+              -8
+            ],
+            "out": [
+              58,
+              45
+            ]
+          },
+          {
+            "id": "otto-jacket-right-p3",
+            "anchor": [
+              19,
+              51
+            ],
+            "in": [
+              19,
+              51
+            ],
+            "out": [
+              22,
+              4
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-lapel-left",
+      "name": "lapel left",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-character",
+      "order": 25,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f6b980",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-lapel-left-p0",
+            "anchor": [
+              -38,
+              -84
+            ],
+            "in": [
+              -38,
+              -84
+            ],
+            "out": [
+              -38,
+              -84
+            ]
+          },
+          {
+            "id": "otto-lapel-left-p1",
+            "anchor": [
+              -11,
+              -85
+            ],
+            "in": [
+              -11,
+              -85
+            ],
+            "out": [
+              -11,
+              -85
+            ]
+          },
+          {
+            "id": "otto-lapel-left-p2",
+            "anchor": [
+              -18,
+              -49
+            ],
+            "in": [
+              -18,
+              -49
+            ],
+            "out": [
+              -18,
+              -49
+            ]
+          },
+          {
+            "id": "otto-lapel-left-p3",
+            "anchor": [
+              -30,
+              -57
+            ],
+            "in": [
+              -30,
+              -57
+            ],
+            "out": [
+              -30,
+              -57
+            ]
+          },
+          {
+            "id": "otto-lapel-left-p4",
+            "anchor": [
+              -28,
+              -66
+            ],
+            "in": [
+              -28,
+              -66
+            ],
+            "out": [
+              -28,
+              -66
+            ]
+          },
+          {
+            "id": "otto-lapel-left-p5",
+            "anchor": [
+              -41,
+              -67
+            ],
+            "in": [
+              -41,
+              -67
+            ],
+            "out": [
+              -41,
+              -67
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-lapel-right",
+      "name": "lapel right",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-character",
+      "order": 26,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f6b980",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-lapel-right-p0",
+            "anchor": [
+              15,
+              -85
+            ],
+            "in": [
+              15,
+              -85
+            ],
+            "out": [
+              15,
+              -85
+            ]
+          },
+          {
+            "id": "otto-lapel-right-p1",
+            "anchor": [
+              34,
+              -86
+            ],
+            "in": [
+              34,
+              -86
+            ],
+            "out": [
+              34,
+              -86
+            ]
+          },
+          {
+            "id": "otto-lapel-right-p2",
+            "anchor": [
+              46,
+              -69
+            ],
+            "in": [
+              46,
+              -69
+            ],
+            "out": [
+              46,
+              -69
+            ]
+          },
+          {
+            "id": "otto-lapel-right-p3",
+            "anchor": [
+              30,
+              -67
+            ],
+            "in": [
+              30,
+              -67
+            ],
+            "out": [
+              30,
+              -67
+            ]
+          },
+          {
+            "id": "otto-lapel-right-p4",
+            "anchor": [
+              34,
+              -56
+            ],
+            "in": [
+              34,
+              -56
+            ],
+            "out": [
+              34,
+              -56
+            ]
+          },
+          {
+            "id": "otto-lapel-right-p5",
+            "anchor": [
+              21,
+              -45
+            ],
+            "in": [
+              21,
+              -45
+            ],
+            "out": [
+              21,
+              -45
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-pocket-seam",
+      "name": "pocket seam",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-character",
+      "order": 27,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#b86f4b",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-pocket-seam-p0",
+            "anchor": [
+              29,
+              -24
+            ],
+            "in": [
+              29,
+              -24
+            ],
+            "out": [
+              29,
+              -24
+            ]
+          },
+          {
+            "id": "otto-pocket-seam-p1",
+            "anchor": [
+              48,
+              -26
+            ],
+            "in": [
+              48,
+              -26
+            ],
+            "out": [
+              48,
+              -26
+            ]
+          },
+          {
+            "id": "otto-pocket-seam-p2",
+            "anchor": [
+              49,
+              -22
+            ],
+            "in": [
+              49,
+              -22
+            ],
+            "out": [
+              49,
+              -22
+            ]
+          },
+          {
+            "id": "otto-pocket-seam-p3",
+            "anchor": [
+              30,
+              -20
+            ],
+            "in": [
+              30,
+              -20
+            ],
+            "out": [
+              30,
+              -20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-jacket-button",
+      "name": "jacket button",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-character",
+      "order": 28,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        9,
+        13
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#a96149",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-jacket-button-p0",
+            "anchor": [
+              2.5,
+              0
+            ],
+            "in": [
+              2.5,
+              -1.3807118745
+            ],
+            "out": [
+              2.5,
+              1.3807118745
+            ]
+          },
+          {
+            "id": "otto-jacket-button-p1",
+            "anchor": [
+              0,
+              2.5
+            ],
+            "in": [
+              1.3807118745,
+              2.5
+            ],
+            "out": [
+              -1.3807118745,
+              2.5
+            ]
+          },
+          {
+            "id": "otto-jacket-button-p2",
+            "anchor": [
+              -2.5,
+              0
+            ],
+            "in": [
+              -2.5,
+              1.3807118745
+            ],
+            "out": [
+              -2.5,
+              -1.3807118745
+            ]
+          },
+          {
+            "id": "otto-jacket-button-p3",
+            "anchor": [
+              0,
+              -2.5
+            ],
+            "in": [
+              -1.3807118745,
+              -2.5
+            ],
+            "out": [
+              1.3807118745,
+              -2.5
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-tee-line",
+      "name": "tee line",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-character",
+      "order": 29,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#d2c4ac",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-tee-line-p0",
+            "anchor": [
+              -3,
+              -62
+            ],
+            "in": [
+              -3,
+              -62
+            ],
+            "out": [
+              1.666666666666667,
+              -59.333333333333336
+            ]
+          },
+          {
+            "id": "otto-tee-line-p1",
+            "anchor": [
+              13,
+              -62
+            ],
+            "in": [
+              7,
+              -59.333333333333336
+            ],
+            "out": [
+              13,
+              -62
+            ]
+          },
+          {
+            "id": "otto-tee-line-p2",
+            "anchor": [
+              13,
+              -58
+            ],
+            "in": [
+              13,
+              -58
+            ],
+            "out": [
+              7,
+              -55.333333333333336
+            ]
+          },
+          {
+            "id": "otto-tee-line-p3",
+            "anchor": [
+              -3,
+              -59
+            ],
+            "in": [
+              1.666666666666667,
+              -55.666666666666664
+            ],
+            "out": [
+              -3,
+              -59
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-head",
+      "name": "head",
+      "kind": "group",
+      "artboardId": "otto-board",
+      "parentId": "otto-character",
+      "order": 30,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -5,
+        -140
+      ],
+      "geometry": null
+    },
+    {
+      "id": "otto-neck",
+      "name": "neck",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-head",
+      "order": 31,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#9b5842",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-neck-p0",
+            "anchor": [
+              -12,
+              28
+            ],
+            "in": [
+              -12,
+              28
+            ],
+            "out": [
+              -12,
+              28
+            ]
+          },
+          {
+            "id": "otto-neck-p1",
+            "anchor": [
+              20,
+              24
+            ],
+            "in": [
+              20,
+              24
+            ],
+            "out": [
+              20,
+              24
+            ]
+          },
+          {
+            "id": "otto-neck-p2",
+            "anchor": [
+              24,
+              62
+            ],
+            "in": [
+              24,
+              62
+            ],
+            "out": [
+              11.333333333333334,
+              70
+            ]
+          },
+          {
+            "id": "otto-neck-p3",
+            "anchor": [
+              -14,
+              59
+            ],
+            "in": [
+              -1.333333333333334,
+              69
+            ],
+            "out": [
+              -14,
+              59
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-neck-shade",
+      "name": "neck shade",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-head",
+      "order": 32,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#7c4436",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-neck-shade-p0",
+            "anchor": [
+              -11,
+              29
+            ],
+            "in": [
+              -11,
+              29
+            ],
+            "out": [
+              -11,
+              29
+            ]
+          },
+          {
+            "id": "otto-neck-shade-p1",
+            "anchor": [
+              20,
+              29
+            ],
+            "in": [
+              20,
+              29
+            ],
+            "out": [
+              20,
+              29
+            ]
+          },
+          {
+            "id": "otto-neck-shade-p2",
+            "anchor": [
+              20,
+              49
+            ],
+            "in": [
+              20,
+              49
+            ],
+            "out": [
+              9.333333333333334,
+              52.333333333333336
+            ]
+          },
+          {
+            "id": "otto-neck-shade-p3",
+            "anchor": [
+              -11,
+              42
+            ],
+            "in": [
+              -1,
+              50
+            ],
+            "out": [
+              -11,
+              42
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-headphone-band",
+      "name": "headphone band",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-head",
+      "order": 33,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#577b77",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-headphone-band-p0",
+            "anchor": [
+              -51,
+              -2
+            ],
+            "in": [
+              -51,
+              -2
+            ],
+            "out": [
+              -66,
+              -69
+            ]
+          },
+          {
+            "id": "otto-headphone-band-p1",
+            "anchor": [
+              43,
+              -37
+            ],
+            "in": [
+              14,
+              -89
+            ],
+            "out": [
+              43,
+              -37
+            ]
+          },
+          {
+            "id": "otto-headphone-band-p2",
+            "anchor": [
+              37,
+              -30
+            ],
+            "in": [
+              37,
+              -30
+            ],
+            "out": [
+              9,
+              -75
+            ]
+          },
+          {
+            "id": "otto-headphone-band-p3",
+            "anchor": [
+              -43,
+              -2
+            ],
+            "in": [
+              -51,
+              -55
+            ],
+            "out": [
+              -43,
+              -2
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-back-ear",
+      "name": "back ear",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-head",
+      "order": 34,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        36,
+        1
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#a35e45",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-back-ear-p0",
+            "anchor": [
+              12,
+              0
+            ],
+            "in": [
+              12,
+              -9.9411254964
+            ],
+            "out": [
+              12,
+              9.9411254964
+            ]
+          },
+          {
+            "id": "otto-back-ear-p1",
+            "anchor": [
+              0,
+              18
+            ],
+            "in": [
+              6.627416997599999,
+              18
+            ],
+            "out": [
+              -6.627416997599999,
+              18
+            ]
+          },
+          {
+            "id": "otto-back-ear-p2",
+            "anchor": [
+              -12,
+              0
+            ],
+            "in": [
+              -12,
+              9.9411254964
+            ],
+            "out": [
+              -12,
+              -9.9411254964
+            ]
+          },
+          {
+            "id": "otto-back-ear-p3",
+            "anchor": [
+              0,
+              -18
+            ],
+            "in": [
+              -6.627416997599999,
+              -18
+            ],
+            "out": [
+              6.627416997599999,
+              -18
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-face",
+      "name": "face",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-head",
+      "order": 35,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#b57250",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-face-p0",
+            "anchor": [
+              -36,
+              -34
+            ],
+            "in": [
+              -47,
+              -16
+            ],
+            "out": [
+              -22,
+              -54
+            ]
+          },
+          {
+            "id": "otto-face-p1",
+            "anchor": [
+              32,
+              -28
+            ],
+            "in": [
+              21,
+              -51
+            ],
+            "out": [
+              32,
+              -28
+            ]
+          },
+          {
+            "id": "otto-face-p2",
+            "anchor": [
+              37,
+              -2
+            ],
+            "in": [
+              37,
+              -2
+            ],
+            "out": [
+              37,
+              -2
+            ]
+          },
+          {
+            "id": "otto-face-p3",
+            "anchor": [
+              48,
+              12
+            ],
+            "in": [
+              48,
+              12
+            ],
+            "out": [
+              47.333333333333336,
+              16
+            ]
+          },
+          {
+            "id": "otto-face-p4",
+            "anchor": [
+              35,
+              18
+            ],
+            "in": [
+              43,
+              18
+            ],
+            "out": [
+              35,
+              18
+            ]
+          },
+          {
+            "id": "otto-face-p5",
+            "anchor": [
+              33,
+              32
+            ],
+            "in": [
+              33,
+              32
+            ],
+            "out": [
+              12,
+              49
+            ]
+          },
+          {
+            "id": "otto-face-p6",
+            "anchor": [
+              -29,
+              25
+            ],
+            "in": [
+              -14,
+              45
+            ],
+            "out": [
+              -44,
+              8
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-face-shade",
+      "name": "face shade",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-head",
+      "order": 36,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#9d5b43",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-face-shade-p0",
+            "anchor": [
+              -38,
+              -22
+            ],
+            "in": [
+              -45,
+              -8
+            ],
+            "out": [
+              -41,
+              0
+            ]
+          },
+          {
+            "id": "otto-face-shade-p1",
+            "anchor": [
+              -8,
+              28
+            ],
+            "in": [
+              -26,
+              23
+            ],
+            "out": [
+              5,
+              35
+            ]
+          },
+          {
+            "id": "otto-face-shade-p2",
+            "anchor": [
+              34,
+              22
+            ],
+            "in": [
+              21,
+              32
+            ],
+            "out": [
+              34,
+              22
+            ]
+          },
+          {
+            "id": "otto-face-shade-p3",
+            "anchor": [
+              33,
+              33
+            ],
+            "in": [
+              33,
+              33
+            ],
+            "out": [
+              11,
+              49
+            ]
+          },
+          {
+            "id": "otto-face-shade-p4",
+            "anchor": [
+              -29,
+              25
+            ],
+            "in": [
+              -14,
+              45
+            ],
+            "out": [
+              -41,
+              12
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-hair",
+      "name": "hair",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-head",
+      "order": 37,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#293b3e",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-hair-p0",
+            "anchor": [
+              -43,
+              3
+            ],
+            "in": [
+              -43,
+              3
+            ],
+            "out": [
+              -62,
+              -12
+            ]
+          },
+          {
+            "id": "otto-hair-p1",
+            "anchor": [
+              -49,
+              -49
+            ],
+            "in": [
+              -62,
+              -43
+            ],
+            "out": [
+              -57,
+              -65
+            ]
+          },
+          {
+            "id": "otto-hair-p2",
+            "anchor": [
+              -23,
+              -68
+            ],
+            "in": [
+              -37,
+              -74
+            ],
+            "out": [
+              -20,
+              -85
+            ]
+          },
+          {
+            "id": "otto-hair-p3",
+            "anchor": [
+              13,
+              -71
+            ],
+            "in": [
+              5,
+              -84
+            ],
+            "out": [
+              27,
+              -84
+            ]
+          },
+          {
+            "id": "otto-hair-p4",
+            "anchor": [
+              40,
+              -55
+            ],
+            "in": [
+              45,
+              -68
+            ],
+            "out": [
+              58,
+              -48
+            ]
+          },
+          {
+            "id": "otto-hair-p5",
+            "anchor": [
+              37,
+              -24
+            ],
+            "in": [
+              53,
+              -30
+            ],
+            "out": [
+              26,
+              -18
+            ]
+          },
+          {
+            "id": "otto-hair-p6",
+            "anchor": [
+              7,
+              -37
+            ],
+            "in": [
+              13,
+              -25
+            ],
+            "out": [
+              2,
+              -21
+            ]
+          },
+          {
+            "id": "otto-hair-p7",
+            "anchor": [
+              -28,
+              -26
+            ],
+            "in": [
+              -16,
+              -19
+            ],
+            "out": [
+              -28,
+              -26
+            ]
+          },
+          {
+            "id": "otto-hair-p8",
+            "anchor": [
+              -30,
+              -2
+            ],
+            "in": [
+              -30,
+              -2
+            ],
+            "out": [
+              -30,
+              -2
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-curl-light",
+      "name": "curl light",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-head",
+      "order": 38,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#3e5253",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-curl-light-p0",
+            "anchor": [
+              -43,
+              -46
+            ],
+            "in": [
+              -43,
+              -46
+            ],
+            "out": [
+              -30,
+              -61
+            ]
+          },
+          {
+            "id": "otto-curl-light-p1",
+            "anchor": [
+              -8,
+              -38
+            ],
+            "in": [
+              -11,
+              -49
+            ],
+            "out": [
+              -21,
+              -49
+            ]
+          },
+          {
+            "id": "otto-curl-light-p2",
+            "anchor": [
+              -38,
+              -33
+            ],
+            "in": [
+              -31,
+              -46
+            ],
+            "out": [
+              -38,
+              -33
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-headphone-pad",
+      "name": "headphone pad",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-head",
+      "order": 39,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -37,
+        6
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#334c4d",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-headphone-pad-p0",
+            "anchor": [
+              16,
+              0
+            ],
+            "in": [
+              16,
+              -11.5979797458
+            ],
+            "out": [
+              16,
+              11.5979797458
+            ]
+          },
+          {
+            "id": "otto-headphone-pad-p1",
+            "anchor": [
+              0,
+              21
+            ],
+            "in": [
+              8.8365559968,
+              21
+            ],
+            "out": [
+              -8.8365559968,
+              21
+            ]
+          },
+          {
+            "id": "otto-headphone-pad-p2",
+            "anchor": [
+              -16,
+              0
+            ],
+            "in": [
+              -16,
+              11.5979797458
+            ],
+            "out": [
+              -16,
+              -11.5979797458
+            ]
+          },
+          {
+            "id": "otto-headphone-pad-p3",
+            "anchor": [
+              0,
+              -21
+            ],
+            "in": [
+              -8.8365559968,
+              -21
+            ],
+            "out": [
+              8.8365559968,
+              -21
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-headphone-shell",
+      "name": "headphone shell",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-head",
+      "order": 40,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -41,
+        4
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#8bbca2",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-headphone-shell-p0",
+            "anchor": [
+              11,
+              0
+            ],
+            "in": [
+              11,
+              -8.8365559968
+            ],
+            "out": [
+              11,
+              8.8365559968
+            ]
+          },
+          {
+            "id": "otto-headphone-shell-p1",
+            "anchor": [
+              0,
+              16
+            ],
+            "in": [
+              6.0751322478,
+              16
+            ],
+            "out": [
+              -6.0751322478,
+              16
+            ]
+          },
+          {
+            "id": "otto-headphone-shell-p2",
+            "anchor": [
+              -11,
+              0
+            ],
+            "in": [
+              -11,
+              8.8365559968
+            ],
+            "out": [
+              -11,
+              -8.8365559968
+            ]
+          },
+          {
+            "id": "otto-headphone-shell-p3",
+            "anchor": [
+              0,
+              -16
+            ],
+            "in": [
+              -6.0751322478,
+              -16
+            ],
+            "out": [
+              6.0751322478,
+              -16
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-headphone-inset",
+      "name": "headphone inset",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-head",
+      "order": 41,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -42,
+        4
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#bdd7be",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-headphone-inset-p0",
+            "anchor": [
+              6,
+              0
+            ],
+            "in": [
+              6,
+              -5.522847498
+            ],
+            "out": [
+              6,
+              5.522847498
+            ]
+          },
+          {
+            "id": "otto-headphone-inset-p1",
+            "anchor": [
+              0,
+              10
+            ],
+            "in": [
+              3.3137084987999996,
+              10
+            ],
+            "out": [
+              -3.3137084987999996,
+              10
+            ]
+          },
+          {
+            "id": "otto-headphone-inset-p2",
+            "anchor": [
+              -6,
+              0
+            ],
+            "in": [
+              -6,
+              5.522847498
+            ],
+            "out": [
+              -6,
+              -5.522847498
+            ]
+          },
+          {
+            "id": "otto-headphone-inset-p3",
+            "anchor": [
+              0,
+              -10
+            ],
+            "in": [
+              -3.3137084987999996,
+              -10
+            ],
+            "out": [
+              3.3137084987999996,
+              -10
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-left-eye",
+      "name": "left eye",
+      "kind": "group",
+      "artboardId": "otto-board",
+      "parentId": "otto-head",
+      "order": 42,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -7,
+        -7
+      ],
+      "geometry": null
+    },
+    {
+      "id": "otto-left-eye-white",
+      "name": "left eye white",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-left-eye",
+      "order": 43,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#fff9ec",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-left-eye-white-p0",
+            "anchor": [
+              8,
+              0
+            ],
+            "in": [
+              8,
+              -5.522847498
+            ],
+            "out": [
+              8,
+              5.522847498
+            ]
+          },
+          {
+            "id": "otto-left-eye-white-p1",
+            "anchor": [
+              0,
+              10
+            ],
+            "in": [
+              4.4182779984,
+              10
+            ],
+            "out": [
+              -4.4182779984,
+              10
+            ]
+          },
+          {
+            "id": "otto-left-eye-white-p2",
+            "anchor": [
+              -8,
+              0
+            ],
+            "in": [
+              -8,
+              5.522847498
+            ],
+            "out": [
+              -8,
+              -5.522847498
+            ]
+          },
+          {
+            "id": "otto-left-eye-white-p3",
+            "anchor": [
+              0,
+              -10
+            ],
+            "in": [
+              -4.4182779984,
+              -10
+            ],
+            "out": [
+              4.4182779984,
+              -10
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-left-eye-iris",
+      "name": "left eye iris",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-left-eye",
+      "order": 44,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        2,
+        1
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#283a3d",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-left-eye-iris-p0",
+            "anchor": [
+              4.56,
+              0
+            ],
+            "in": [
+              4.56,
+              -3.9764501985599994
+            ],
+            "out": [
+              4.56,
+              3.9764501985599994
+            ]
+          },
+          {
+            "id": "otto-left-eye-iris-p1",
+            "anchor": [
+              0,
+              7.199999999999999
+            ],
+            "in": [
+              2.5184184590879997,
+              7.199999999999999
+            ],
+            "out": [
+              -2.5184184590879997,
+              7.199999999999999
+            ]
+          },
+          {
+            "id": "otto-left-eye-iris-p2",
+            "anchor": [
+              -4.56,
+              0
+            ],
+            "in": [
+              -4.56,
+              3.9764501985599994
+            ],
+            "out": [
+              -4.56,
+              -3.9764501985599994
+            ]
+          },
+          {
+            "id": "otto-left-eye-iris-p3",
+            "anchor": [
+              0,
+              -7.199999999999999
+            ],
+            "in": [
+              -2.5184184590879997,
+              -7.199999999999999
+            ],
+            "out": [
+              2.5184184590879997,
+              -7.199999999999999
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-left-eye-shine",
+      "name": "left eye shine",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-left-eye",
+      "order": 45,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        -5
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#ffffff",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-left-eye-shine-p0",
+            "anchor": [
+              1.6,
+              0
+            ],
+            "in": [
+              1.6,
+              -0.9941125496399998
+            ],
+            "out": [
+              1.6,
+              0.9941125496399998
+            ]
+          },
+          {
+            "id": "otto-left-eye-shine-p1",
+            "anchor": [
+              0,
+              1.7999999999999998
+            ],
+            "in": [
+              0.88365559968,
+              1.7999999999999998
+            ],
+            "out": [
+              -0.88365559968,
+              1.7999999999999998
+            ]
+          },
+          {
+            "id": "otto-left-eye-shine-p2",
+            "anchor": [
+              -1.6,
+              0
+            ],
+            "in": [
+              -1.6,
+              0.9941125496399998
+            ],
+            "out": [
+              -1.6,
+              -0.9941125496399998
+            ]
+          },
+          {
+            "id": "otto-left-eye-shine-p3",
+            "anchor": [
+              0,
+              -1.7999999999999998
+            ],
+            "in": [
+              -0.88365559968,
+              -1.7999999999999998
+            ],
+            "out": [
+              0.88365559968,
+              -1.7999999999999998
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-right-eye",
+      "name": "right eye",
+      "kind": "group",
+      "artboardId": "otto-board",
+      "parentId": "otto-head",
+      "order": 46,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        23,
+        -10
+      ],
+      "geometry": null
+    },
+    {
+      "id": "otto-right-eye-white",
+      "name": "right eye white",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-right-eye",
+      "order": 47,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#fff9ec",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-right-eye-white-p0",
+            "anchor": [
+              7,
+              0
+            ],
+            "in": [
+              7,
+              -4.9705627482
+            ],
+            "out": [
+              7,
+              4.9705627482
+            ]
+          },
+          {
+            "id": "otto-right-eye-white-p1",
+            "anchor": [
+              0,
+              9
+            ],
+            "in": [
+              3.8659932485999997,
+              9
+            ],
+            "out": [
+              -3.8659932485999997,
+              9
+            ]
+          },
+          {
+            "id": "otto-right-eye-white-p2",
+            "anchor": [
+              -7,
+              0
+            ],
+            "in": [
+              -7,
+              4.9705627482
+            ],
+            "out": [
+              -7,
+              -4.9705627482
+            ]
+          },
+          {
+            "id": "otto-right-eye-white-p3",
+            "anchor": [
+              0,
+              -9
+            ],
+            "in": [
+              -3.8659932485999997,
+              -9
+            ],
+            "out": [
+              3.8659932485999997,
+              -9
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-right-eye-iris",
+      "name": "right eye iris",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-right-eye",
+      "order": 48,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#283a3d",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-right-eye-iris-p0",
+            "anchor": [
+              3.9899999999999998,
+              0
+            ],
+            "in": [
+              3.9899999999999998,
+              -3.5788051787039996
+            ],
+            "out": [
+              3.9899999999999998,
+              3.5788051787039996
+            ]
+          },
+          {
+            "id": "otto-right-eye-iris-p1",
+            "anchor": [
+              0,
+              6.4799999999999995
+            ],
+            "in": [
+              2.2036161517019996,
+              6.4799999999999995
+            ],
+            "out": [
+              -2.2036161517019996,
+              6.4799999999999995
+            ]
+          },
+          {
+            "id": "otto-right-eye-iris-p2",
+            "anchor": [
+              -3.9899999999999998,
+              0
+            ],
+            "in": [
+              -3.9899999999999998,
+              3.5788051787039996
+            ],
+            "out": [
+              -3.9899999999999998,
+              -3.5788051787039996
+            ]
+          },
+          {
+            "id": "otto-right-eye-iris-p3",
+            "anchor": [
+              0,
+              -6.4799999999999995
+            ],
+            "in": [
+              -2.2036161517019996,
+              -6.4799999999999995
+            ],
+            "out": [
+              2.2036161517019996,
+              -6.4799999999999995
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-right-eye-shine",
+      "name": "right eye shine",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-right-eye",
+      "order": 49,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -1,
+        -5
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#ffffff",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-right-eye-shine-p0",
+            "anchor": [
+              1.4000000000000001,
+              0
+            ],
+            "in": [
+              1.4000000000000001,
+              -0.8947012946759999
+            ],
+            "out": [
+              1.4000000000000001,
+              0.8947012946759999
+            ]
+          },
+          {
+            "id": "otto-right-eye-shine-p1",
+            "anchor": [
+              0,
+              1.6199999999999999
+            ],
+            "in": [
+              0.7731986497200001,
+              1.6199999999999999
+            ],
+            "out": [
+              -0.7731986497200001,
+              1.6199999999999999
+            ]
+          },
+          {
+            "id": "otto-right-eye-shine-p2",
+            "anchor": [
+              -1.4000000000000001,
+              0
+            ],
+            "in": [
+              -1.4000000000000001,
+              0.8947012946759999
+            ],
+            "out": [
+              -1.4000000000000001,
+              -0.8947012946759999
+            ]
+          },
+          {
+            "id": "otto-right-eye-shine-p3",
+            "anchor": [
+              0,
+              -1.6199999999999999
+            ],
+            "in": [
+              -0.7731986497200001,
+              -1.6199999999999999
+            ],
+            "out": [
+              0.7731986497200001,
+              -1.6199999999999999
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-left-brow",
+      "name": "left brow",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-head",
+      "order": 50,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#293b3e",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-left-brow-p0",
+            "anchor": [
+              -18,
+              -23
+            ],
+            "in": [
+              -18,
+              -23
+            ],
+            "out": [
+              -10,
+              -27.666666666666668
+            ]
+          },
+          {
+            "id": "otto-left-brow-p1",
+            "anchor": [
+              4,
+              -23
+            ],
+            "in": [
+              -2.666666666666667,
+              -27.666666666666668
+            ],
+            "out": [
+              4,
+              -23
+            ]
+          },
+          {
+            "id": "otto-left-brow-p2",
+            "anchor": [
+              3,
+              -19
+            ],
+            "in": [
+              3,
+              -19
+            ],
+            "out": [
+              -3.666666666666667,
+              -23
+            ]
+          },
+          {
+            "id": "otto-left-brow-p3",
+            "anchor": [
+              -16,
+              -19
+            ],
+            "in": [
+              -10,
+              -23
+            ],
+            "out": [
+              -16,
+              -19
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-right-brow",
+      "name": "right brow",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-head",
+      "order": 51,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#293b3e",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-right-brow-p0",
+            "anchor": [
+              13,
+              -27
+            ],
+            "in": [
+              13,
+              -27
+            ],
+            "out": [
+              21,
+              -30.333333333333332
+            ]
+          },
+          {
+            "id": "otto-right-brow-p1",
+            "anchor": [
+              31,
+              -23
+            ],
+            "in": [
+              27,
+              -29
+            ],
+            "out": [
+              31,
+              -23
+            ]
+          },
+          {
+            "id": "otto-right-brow-p2",
+            "anchor": [
+              28,
+              -20
+            ],
+            "in": [
+              28,
+              -20
+            ],
+            "out": [
+              24.666666666666668,
+              -24.666666666666668
+            ]
+          },
+          {
+            "id": "otto-right-brow-p3",
+            "anchor": [
+              14,
+              -23
+            ],
+            "in": [
+              20,
+              -25.666666666666668
+            ],
+            "out": [
+              14,
+              -23
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-nose-light",
+      "name": "nose light",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-head",
+      "order": 52,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#cc8b62",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-nose-light-p0",
+            "anchor": [
+              27,
+              1
+            ],
+            "in": [
+              27,
+              1
+            ],
+            "out": [
+              27,
+              1
+            ]
+          },
+          {
+            "id": "otto-nose-light-p1",
+            "anchor": [
+              36,
+              10
+            ],
+            "in": [
+              36,
+              10
+            ],
+            "out": [
+              36,
+              10
+            ]
+          },
+          {
+            "id": "otto-nose-light-p2",
+            "anchor": [
+              27,
+              11
+            ],
+            "in": [
+              27,
+              11
+            ],
+            "out": [
+              27,
+              11
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-smile",
+      "name": "smile",
+      "kind": "group",
+      "artboardId": "otto-board",
+      "parentId": "otto-head",
+      "order": 53,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        13,
+        25
+      ],
+      "geometry": null
+    },
+    {
+      "id": "otto-mouth",
+      "name": "mouth",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-smile",
+      "order": 54,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#633b32",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-mouth-p0",
+            "anchor": [
+              -10,
+              -4
+            ],
+            "in": [
+              -10,
+              -4
+            ],
+            "out": [
+              -2.666666666666667,
+              -1.3333333333333335
+            ]
+          },
+          {
+            "id": "otto-mouth-p1",
+            "anchor": [
+              14,
+              -7
+            ],
+            "in": [
+              5.333333333333334,
+              -2.333333333333333
+            ],
+            "out": [
+              13,
+              10
+            ]
+          },
+          {
+            "id": "otto-mouth-p2",
+            "anchor": [
+              -10,
+              -4
+            ],
+            "in": [
+              -7,
+              15
+            ],
+            "out": [
+              -10,
+              -4
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "otto-teeth",
+      "name": "teeth",
+      "kind": "path",
+      "artboardId": "otto-board",
+      "parentId": "otto-smile",
+      "order": 55,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#fff3db",
+        "skin": null,
+        "points": [
+          {
+            "id": "otto-teeth-p0",
+            "anchor": [
+              -5,
+              -1
+            ],
+            "in": [
+              -5,
+              -1
+            ],
+            "out": [
+              1,
+              -0.33333333333333337
+            ]
+          },
+          {
+            "id": "otto-teeth-p1",
+            "anchor": [
+              11,
+              -3
+            ],
+            "in": [
+              6.333333333333333,
+              -1
+            ],
+            "out": [
+              11,
+              -3
+            ]
+          },
+          {
+            "id": "otto-teeth-p2",
+            "anchor": [
+              9,
+              1
+            ],
+            "in": [
+              9,
+              1
+            ],
+            "out": [
+              3.666666666666667,
+              4.333333333333334
+            ]
+          },
+          {
+            "id": "otto-teeth-p3",
+            "anchor": [
+              -4,
+              3
+            ],
+            "in": [
+              -0.6666666666666665,
+              5
+            ],
+            "out": [
+              -4,
+              3
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [
+    {
+      "id": "otto-calm",
+      "name": "Calm",
+      "artboardId": "otto-board",
+      "fps": 60,
+      "duration": 120,
+      "loop": true,
+      "tracks": [
+        {
+          "targetId": "otto-character",
+          "property": "y",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 288,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 30,
+              "value": 286,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 283,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 90,
+              "value": 286,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 288,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "otto-character",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 1.015,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "otto-character",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "otto-head",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": -0.1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": -0.065,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": -0.1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "otto-right-arm",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0.1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 30,
+              "value": 0.125,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 0.07500000000000001,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 90,
+              "value": 0.125,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0.1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "otto-left-arm",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 0.035,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "otto-left-eye",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 40,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 46,
+              "value": 0.08,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 52,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "otto-right-eye",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 40,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 46,
+              "value": 0.08,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 52,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "otto-smile",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 1.05,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "otto-hello",
+      "name": "Hello",
+      "artboardId": "otto-board",
+      "fps": 60,
+      "duration": 120,
+      "loop": true,
+      "tracks": [
+        {
+          "targetId": "otto-character",
+          "property": "y",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 288,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 30,
+              "value": 286,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 283,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 90,
+              "value": 286,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 288,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "otto-character",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 1.015,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "otto-character",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "otto-head",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": -0.16,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": -0.065,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": -0.16,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "otto-right-arm",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": -1.6,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 30,
+              "value": -1.4200000000000002,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": -1.78,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 90,
+              "value": -1.4200000000000002,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": -1.6,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "otto-left-arm",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 0.035,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "otto-left-eye",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 40,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 46,
+              "value": 0.08,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 52,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "otto-right-eye",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 40,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 46,
+              "value": 0.08,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 52,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "otto-smile",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1.15,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 1.2,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1.15,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "otto-delight",
+      "name": "Delight",
+      "artboardId": "otto-board",
+      "fps": 60,
+      "duration": 120,
+      "loop": true,
+      "tracks": [
+        {
+          "targetId": "otto-character",
+          "property": "y",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 282,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 30,
+              "value": 274.8,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 264,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 90,
+              "value": 274.8,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 282,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "otto-character",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1.025,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 0.97,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1.025,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "otto-character",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": -0.035,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 0.045,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": -0.035,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "otto-head",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": -0.1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": -0.2,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": -0.1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "otto-right-arm",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": -1.6,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 30,
+              "value": -1.48,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": -1.7200000000000002,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 90,
+              "value": -1.48,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": -1.6,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "otto-left-arm",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0.25,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": -0.12,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0.25,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "otto-left-eye",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 40,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 46,
+              "value": 0.08,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 52,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "otto-right-eye",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 40,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 46,
+              "value": 0.08,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 52,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "otto-smile",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1.65,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 1.85,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1.65,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "machines": [
+    {
+      "id": "otto-expressions",
+      "name": "Expressions",
+      "artboardId": "otto-board",
+      "inputs": [
+        {
+          "id": "otto-expression-input",
+          "name": "expression",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "states": [
+        {
+          "id": "otto-state-0",
+          "name": "Calm",
+          "animationId": "otto-calm",
+          "position": [
+            40,
+            60
+          ]
+        },
+        {
+          "id": "otto-state-1",
+          "name": "Hello",
+          "animationId": "otto-hello",
+          "position": [
+            260,
+            60
+          ]
+        },
+        {
+          "id": "otto-state-2",
+          "name": "Delight",
+          "animationId": "otto-delight",
+          "position": [
+            480,
+            60
+          ]
+        }
+      ],
+      "entryStateId": "otto-state-0",
+      "transitions": [
+        {
+          "id": "otto-from-0-to-1",
+          "fromId": "otto-state-0",
+          "toId": "otto-state-1",
+          "conditions": [
+            {
+              "inputId": "otto-expression-input",
+              "op": "eq",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "otto-from-0-to-2",
+          "fromId": "otto-state-0",
+          "toId": "otto-state-2",
+          "conditions": [
+            {
+              "inputId": "otto-expression-input",
+              "op": "eq",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "id": "otto-from-1-to-0",
+          "fromId": "otto-state-1",
+          "toId": "otto-state-0",
+          "conditions": [
+            {
+              "inputId": "otto-expression-input",
+              "op": "eq",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": "otto-from-1-to-2",
+          "fromId": "otto-state-1",
+          "toId": "otto-state-2",
+          "conditions": [
+            {
+              "inputId": "otto-expression-input",
+              "op": "eq",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "id": "otto-from-2-to-0",
+          "fromId": "otto-state-2",
+          "toId": "otto-state-0",
+          "conditions": [
+            {
+              "inputId": "otto-expression-input",
+              "op": "eq",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": "otto-from-2-to-1",
+          "fromId": "otto-state-2",
+          "toId": "otto-state-1",
+          "conditions": [
+            {
+              "inputId": "otto-expression-input",
+              "op": "eq",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "listeners": []
+    }
+  ],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "otto-board": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  }
+}

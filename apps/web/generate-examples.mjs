@@ -1,6 +1,7 @@
 import {CommandSession} from '@evir/commands';
 import {compassLesson} from '@evir/commands/example';
 import {suite} from './advanced-examples.mjs';
+import {characterScenes} from './character-scenes.mjs';
 import {motorcycle} from './motorcycle-scene.mjs';
 import { fitFreehand } from '../../packages/studio/freehand.mjs';
 import { defaultGuides, componentBands } from '../../packages/studio/guides.mjs';
@@ -344,6 +345,7 @@ for(const original of await suite()){
  for(const f of p.advanced.feathers)f.strength*=2;
  factories[p.name]=()=>p;
 }
+Object.assign(factories,characterScenes(project));
 await mkdir(output,{recursive:true});
 for(const name of exampleIds) {
   const p=factories[name]();validateProject(p);

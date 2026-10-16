@@ -1,0 +1,42 @@
+{
+  "checkedAt": "2026-10-16T08:02:09.232Z",
+  "scope": "Actual vector-source browser renders, synthetic keyboard/pointer controls and automated WCAG checks. No physical-device or human/assistive-technology evidence.",
+  "viewports": [
+    {
+      "width": 320,
+      "height": 1000,
+      "expressions": 9,
+      "automatedAccessibilityViolations": 0
+    },
+    {
+      "width": 390,
+      "height": 1000,
+      "expressions": 9,
+      "automatedAccessibilityViolations": 0
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "expressions": 9,
+      "automatedAccessibilityViolations": 0
+    }
+  ],
+  "characters": [
+    "momo",
+    "nura",
+    "otto"
+  ],
+  "checks": [
+    "keyboard expression selection",
+    "number-driven state/pose changes",
+    "live motion changes vector pixels",
+    "reset restores exact image and pauses",
+    "paused players schedule zero callbacks",
+    "responsive original artwork and controls",
+    "automated WCAG checks",
+    "three lightweight home cards",
+    "poster fallback and disabled controls on failure",
+    "retry restores controls",
+    "no browser-default dialogs"
+  ]
+}

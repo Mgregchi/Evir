@@ -8,8 +8,8 @@ const {execFileSync}=require('node:child_process'),{chromium}=require('playwrigh
  const report={checkedAt:new Date().toISOString(),examples:examples.map(e=>({id:e.id,features:e.features})),viewportWidths:[320,390,1440],scope:'Original scenes, software browser and official export checks; not a mobile performance or usability study.'};
  try {
   const context=await browser.newContext({viewport:{width:1440,height:844},reducedMotion:'reduce'}),page=await context.newPage(),requests=[],errors=[];page.on('request',r=>{if(r.url().endsWith('.evir-project'))requests.push(r.url());});page.on('pageerror',e=>errors.push(e.message));
-  await page.goto(origin+'/examples/');await page.waitForFunction(()=>document.querySelector('.milo').dataset.ready==='true'&&document.querySelector('.orbit').dataset.ready==='true');
-  assert.equal(requests.length,2,'only visible previews initialize at entry');assert(requests.every(url=>/\/(milo|orbit)\.evir-project$/.test(url)));
+  await page.goto(origin+'/examples/');const first=examples.slice(0,2).map(e=>e.id);await page.waitForFunction(ids=>ids.every(id=>document.querySelector(`[data-preview=${id}]`).dataset.ready==='true'),first);
+  assert.equal(requests.length,2,'only visible previews initialize at entry');assert(requests.every(url=>first.some(id=>url.endsWith('/'+id+'.evir-project'))));
   for(const example of examples){const preview=page.locator(`[data-preview=${example.id}]`);await preview.scrollIntoViewIfNeeded();await page.waitForFunction(id=>document.querySelector(`[data-preview=${id}]`).dataset.ready==='true',example.id);assert.equal(await preview.getAttribute('data-playing'),'false');await page.locator(`#${example.id} summary`).click();assert(await page.locator(`#${example.id} details`).getAttribute('open')!==null);}
   assert.equal(requests.length,examples.length,'one project fetch per example');const signal=page.locator('.signal');
   await signal.scrollIntoViewIfNeeded();const level=signal.locator('.level-control'),enabled=signal.locator('.enabled-control'),state=signal.locator('.demo-state');

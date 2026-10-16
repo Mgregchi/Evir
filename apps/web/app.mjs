@@ -40,6 +40,7 @@ if(form)form.addEventListener('submit',e=>{
 function mountPreview(element) {
   const name=element.dataset.preview,canvas=element.querySelector('canvas'),poster=element.querySelector('.demo-poster');
   const toggle=element.querySelector('.motion-control'),wave=element.querySelector('.wave-control'),state=element.querySelector('.demo-state'),message=element.querySelector('.demo-message');
+  const expression=element.querySelector('.character-expression'),characterReset=element.querySelector('.character-reset');
   const blendInput=element.querySelector('.blend-input'),blendOn=element.querySelector('.blend-active');
   const loader=element.querySelector('.living-loader'),retry=element.querySelector('.retry-preview'),motion=matchMedia('(prefers-reduced-motion: reduce)');
   const enabled=element.querySelector('.enabled-control'),level=element.querySelector('.level-control'),celebrate=element.querySelector('.celebrate-control'),reset=element.querySelector('.reset-control');
@@ -62,6 +63,7 @@ function mountPreview(element) {
     loader.hidden=true;retry.hidden=false;element.setAttribute('aria-busy','false');delete element.dataset.ready;
     message.textContent='The live preview couldn’t wake up. Try again, or use the image and downloadable source.';
     toggle.disabled=true;if(wave)wave.disabled=true;for(const control of [enabled,level,celebrate,reset,blendInput,blendOn])if(control)control.disabled=true;
+    for(const control of [expression,characterReset])if(control)control.disabled=true;
     for(const control of element.querySelectorAll('[data-motor-control]'))control.disabled=true;
   }
   async function load() {
@@ -79,6 +81,7 @@ function mountPreview(element) {
       animated=Boolean(project.animations.length||project.machines.length);if(!animated)playing=false;
       draw();waving=false;if(blendInput){blendInput.disabled=false;blendOn.disabled=false;}
       if(enabled){enabled.checked=false;enabled.disabled=false;level.value='0';level.disabled=false;reset.disabled=false;element.querySelector('.level-value').textContent='0';}
+      if(expression){expression.value='0';expression.disabled=false;characterReset.disabled=false;}
       if(wave){wave.setAttribute('aria-pressed','false');wave.firstChild.textContent='Say hello ';state.textContent='Idle';wave.disabled=false;}
       if(motorcycle){for(const control of element.querySelectorAll('[data-motor-control]'))control.disabled=false;resetRideControls();}
       canvas.hidden=false;poster.hidden=true;loader.hidden=true;toggle.disabled=!animated;
@@ -90,6 +93,8 @@ function mountPreview(element) {
   motion.addEventListener('change',e=>{if(e.matches){playing=false;sync();}},options);
   wave?.addEventListener('click',()=>{try {waving=!waving;player.setInput('isWaving',waving);renderer.draw(player.advance(0),player.artboard.id);wave.setAttribute('aria-pressed',String(waving));wave.firstChild.textContent=waving?'Back to idle ':'Say hello ';state.textContent=waving?'Hello':'Idle';}catch{fail();}},options);
   function interact(operation) {try{operation();draw();}catch{fail();}}
+  expression?.addEventListener('change',()=>interact(()=>player.setInput('expression',Number(expression.value))),options);
+  characterReset?.addEventListener('click',()=>interact(()=>{player.reset();expression.value='0';playing=false;sync();}),options);
   blendInput?.addEventListener('input',()=>interact(()=>player.setInput('position',Number(blendInput.value))),options);
   blendOn?.addEventListener('change',()=>interact(()=>player.setInput('active',blendOn.checked)),options);
   enabled?.addEventListener('change',()=>interact(()=>player.setInput('enabled',enabled.checked)),options);

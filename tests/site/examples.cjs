@@ -40,7 +40,7 @@ if(!process.env.CHROMIUM_PATH && !fs.existsSync('/usr/bin/chromium'))process.env
           assert(name==='halo'||Math.abs(expectedCovered-runtimeCovered)<350,`${backend} ${name} ${label}: coverage`);
         };
         if(!project.animations.length){await load({});await compare(null,0,'rest');}
-        for(const animation of project.animations)for(const frame of [0,30,60,90]) {
+        for(const animation of project.animations)for(const frame of (['momo','nura','otto'].includes(name)?[0,30,46,60,90,120]:[0,30,60,90])) {
           await load({animations:animation.name});
           await page.evaluate(({name,seconds})=>{player.scrub(name,seconds);player.drawFrame();},{name:animation.name,seconds:frame/animation.fps});
           const {playbackSample}=await import('@evir/runtime');
@@ -105,6 +105,9 @@ if(!process.env.CHROMIUM_PATH && !fs.existsSync('/usr/bin/chromium'))process.env
             await input('enabled',true);await input('level',75);
             await page.evaluate(()=>{player.play('Flow');player.stopRendering();});
             const rect=await page.locator('#canvas').boundingBox();await page.mouse.click(rect.x+128,rect.y+193);await advance();await compare(project.animations[2],0,'pad click listener');
+          } else if(['momo','nura','otto'].includes(name)) {
+            for(const value of [1,2,0,2,1,0]){await input('expression',value);await compare(project.animations[value],0,`expression=${value}`);}
+            await load({stateMachines:machine.name});await advance();await compare(project.animations[0],0,'character reset defaults');
           } else if(name==='blend') {await input('position',1);await input('active',true);await compare(project.animations[0],0,'exit time still guarded');} else assert.fail(`Add declared machine-input scenarios for ${name}`);
         }
       }

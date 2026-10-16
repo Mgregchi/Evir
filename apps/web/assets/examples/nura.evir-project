@@ -1,0 +1,6757 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 2,
+  "id": "nura-project",
+  "name": "Nura — a warm little welcome",
+  "artboards": [
+    {
+      "id": "nura-board",
+      "name": "Nura — a warm little welcome",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "nura-paper",
+      "name": "paper",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f6f4ed",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-paper-p0",
+            "anchor": [
+              0,
+              0
+            ],
+            "in": [
+              0,
+              0
+            ],
+            "out": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "nura-paper-p1",
+            "anchor": [
+              512,
+              0
+            ],
+            "in": [
+              512,
+              0
+            ],
+            "out": [
+              512,
+              0
+            ]
+          },
+          {
+            "id": "nura-paper-p2",
+            "anchor": [
+              512,
+              0
+            ],
+            "in": [
+              512,
+              0
+            ],
+            "out": [
+              512,
+              0
+            ]
+          },
+          {
+            "id": "nura-paper-p3",
+            "anchor": [
+              512,
+              512
+            ],
+            "in": [
+              512,
+              512
+            ],
+            "out": [
+              512,
+              512
+            ]
+          },
+          {
+            "id": "nura-paper-p4",
+            "anchor": [
+              512,
+              512
+            ],
+            "in": [
+              512,
+              512
+            ],
+            "out": [
+              512,
+              512
+            ]
+          },
+          {
+            "id": "nura-paper-p5",
+            "anchor": [
+              0,
+              512
+            ],
+            "in": [
+              0,
+              512
+            ],
+            "out": [
+              0,
+              512
+            ]
+          },
+          {
+            "id": "nura-paper-p6",
+            "anchor": [
+              0,
+              512
+            ],
+            "in": [
+              0,
+              512
+            ],
+            "out": [
+              0,
+              512
+            ]
+          },
+          {
+            "id": "nura-paper-p7",
+            "anchor": [
+              0,
+              0
+            ],
+            "in": [
+              0,
+              0
+            ],
+            "out": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-color-field",
+      "name": "color field",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": null,
+      "order": 1,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        256,
+        254
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e4e7f4",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-color-field-p0",
+            "anchor": [
+              181,
+              0
+            ],
+            "in": [
+              181,
+              -99.96353971379999
+            ],
+            "out": [
+              181,
+              99.96353971379999
+            ]
+          },
+          {
+            "id": "nura-color-field-p1",
+            "anchor": [
+              0,
+              181
+            ],
+            "in": [
+              99.96353971379999,
+              181
+            ],
+            "out": [
+              -99.96353971379999,
+              181
+            ]
+          },
+          {
+            "id": "nura-color-field-p2",
+            "anchor": [
+              -181,
+              0
+            ],
+            "in": [
+              -181,
+              99.96353971379999
+            ],
+            "out": [
+              -181,
+              -99.96353971379999
+            ]
+          },
+          {
+            "id": "nura-color-field-p3",
+            "anchor": [
+              0,
+              -181
+            ],
+            "in": [
+              -99.96353971379999,
+              -181
+            ],
+            "out": [
+              99.96353971379999,
+              -181
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-ground-shadow",
+      "name": "ground shadow",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": null,
+      "order": 2,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        256,
+        453
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#26374718",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-ground-shadow-p0",
+            "anchor": [
+              106,
+              0
+            ],
+            "in": [
+              106,
+              -6.0751322478
+            ],
+            "out": [
+              106,
+              6.0751322478
+            ]
+          },
+          {
+            "id": "nura-ground-shadow-p1",
+            "anchor": [
+              0,
+              11
+            ],
+            "in": [
+              58.5421834788,
+              11
+            ],
+            "out": [
+              -58.5421834788,
+              11
+            ]
+          },
+          {
+            "id": "nura-ground-shadow-p2",
+            "anchor": [
+              -106,
+              0
+            ],
+            "in": [
+              -106,
+              6.0751322478
+            ],
+            "out": [
+              -106,
+              -6.0751322478
+            ]
+          },
+          {
+            "id": "nura-ground-shadow-p3",
+            "anchor": [
+              0,
+              -11
+            ],
+            "in": [
+              -58.5421834788,
+              -11
+            ],
+            "out": [
+              58.5421834788,
+              -11
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-peach-spark",
+      "name": "peach spark",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": null,
+      "order": 3,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        107,
+        229
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#dda37d",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-peach-spark-p0",
+            "anchor": [
+              0,
+              -12
+            ],
+            "in": [
+              -1.3333333333333333,
+              -5.333333333333333
+            ],
+            "out": [
+              1.3333333333333333,
+              -5.333333333333333
+            ]
+          },
+          {
+            "id": "nura-peach-spark-p1",
+            "anchor": [
+              12,
+              0
+            ],
+            "in": [
+              5.333333333333333,
+              -1.3333333333333333
+            ],
+            "out": [
+              5.333333333333333,
+              1.3333333333333333
+            ]
+          },
+          {
+            "id": "nura-peach-spark-p2",
+            "anchor": [
+              0,
+              12
+            ],
+            "in": [
+              1.3333333333333333,
+              5.333333333333333
+            ],
+            "out": [
+              -1.3333333333333333,
+              5.333333333333333
+            ]
+          },
+          {
+            "id": "nura-peach-spark-p3",
+            "anchor": [
+              -12,
+              0
+            ],
+            "in": [
+              -5.333333333333333,
+              1.3333333333333333
+            ],
+            "out": [
+              -5.333333333333333,
+              -1.3333333333333333
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-mint-spark",
+      "name": "mint spark",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": null,
+      "order": 4,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        399,
+        313
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#77ad94",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-mint-spark-p0",
+            "anchor": [
+              0,
+              -10
+            ],
+            "in": [
+              -1.3333333333333333,
+              -4.666666666666667
+            ],
+            "out": [
+              1.3333333333333333,
+              -4.666666666666667
+            ]
+          },
+          {
+            "id": "nura-mint-spark-p1",
+            "anchor": [
+              10,
+              0
+            ],
+            "in": [
+              4.666666666666667,
+              -1.3333333333333333
+            ],
+            "out": [
+              4.666666666666667,
+              1.3333333333333333
+            ]
+          },
+          {
+            "id": "nura-mint-spark-p2",
+            "anchor": [
+              0,
+              10
+            ],
+            "in": [
+              1.3333333333333333,
+              4.666666666666667
+            ],
+            "out": [
+              -1.3333333333333333,
+              4.666666666666667
+            ]
+          },
+          {
+            "id": "nura-mint-spark-p3",
+            "anchor": [
+              -10,
+              0
+            ],
+            "in": [
+              -4.666666666666667,
+              1.3333333333333333
+            ],
+            "out": [
+              -4.666666666666667,
+              -1.3333333333333333
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-floating-dot",
+      "name": "floating dot",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": null,
+      "order": 5,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        381,
+        98
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#b2bce6",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-floating-dot-p0",
+            "anchor": [
+              6,
+              0
+            ],
+            "in": [
+              6,
+              -3.3137084987999996
+            ],
+            "out": [
+              6,
+              3.3137084987999996
+            ]
+          },
+          {
+            "id": "nura-floating-dot-p1",
+            "anchor": [
+              0,
+              6
+            ],
+            "in": [
+              3.3137084987999996,
+              6
+            ],
+            "out": [
+              -3.3137084987999996,
+              6
+            ]
+          },
+          {
+            "id": "nura-floating-dot-p2",
+            "anchor": [
+              -6,
+              0
+            ],
+            "in": [
+              -6,
+              3.3137084987999996
+            ],
+            "out": [
+              -6,
+              -3.3137084987999996
+            ]
+          },
+          {
+            "id": "nura-floating-dot-p3",
+            "anchor": [
+              0,
+              -6
+            ],
+            "in": [
+              -3.3137084987999996,
+              -6
+            ],
+            "out": [
+              3.3137084987999996,
+              -6
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-character",
+      "name": "character",
+      "kind": "group",
+      "artboardId": "nura-board",
+      "parentId": null,
+      "order": 6,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        256,
+        285
+      ],
+      "geometry": null
+    },
+    {
+      "id": "nura-left-shoe",
+      "name": "left shoe",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-character",
+      "order": 7,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#354449",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-left-shoe-p0",
+            "anchor": [
+              -48,
+              137
+            ],
+            "in": [
+              -48,
+              137
+            ],
+            "out": [
+              -71,
+              135
+            ]
+          },
+          {
+            "id": "nura-left-shoe-p1",
+            "anchor": [
+              -77,
+              157
+            ],
+            "in": [
+              -79,
+              148
+            ],
+            "out": [
+              -57.66666666666667,
+              161.66666666666666
+            ]
+          },
+          {
+            "id": "nura-left-shoe-p2",
+            "anchor": [
+              -19,
+              156
+            ],
+            "in": [
+              -38.33333333333333,
+              161.33333333333334
+            ],
+            "out": [
+              -19,
+              156
+            ]
+          },
+          {
+            "id": "nura-left-shoe-p3",
+            "anchor": [
+              -18,
+              142
+            ],
+            "in": [
+              -18,
+              142
+            ],
+            "out": [
+              -18,
+              142
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-right-shoe",
+      "name": "right shoe",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-character",
+      "order": 8,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#354449",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-right-shoe-p0",
+            "anchor": [
+              17,
+              139
+            ],
+            "in": [
+              17,
+              139
+            ],
+            "out": [
+              17,
+              139
+            ]
+          },
+          {
+            "id": "nura-right-shoe-p1",
+            "anchor": [
+              48,
+              137
+            ],
+            "in": [
+              48,
+              137
+            ],
+            "out": [
+              68,
+              140
+            ]
+          },
+          {
+            "id": "nura-right-shoe-p2",
+            "anchor": [
+              73,
+              158
+            ],
+            "in": [
+              81,
+              151
+            ],
+            "out": [
+              55.66666666666667,
+              163.33333333333334
+            ]
+          },
+          {
+            "id": "nura-right-shoe-p3",
+            "anchor": [
+              16,
+              157
+            ],
+            "in": [
+              36.66666666666667,
+              163
+            ],
+            "out": [
+              16,
+              157
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-skirt",
+      "name": "skirt",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-character",
+      "order": 9,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#a5addb",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-skirt-p0",
+            "anchor": [
+              -49,
+              42
+            ],
+            "in": [
+              -49,
+              42
+            ],
+            "out": [
+              -62,
+              73
+            ]
+          },
+          {
+            "id": "nura-skirt-p1",
+            "anchor": [
+              -75,
+              142
+            ],
+            "in": [
+              -75,
+              111
+            ],
+            "out": [
+              -29,
+              158.66666666666666
+            ]
+          },
+          {
+            "id": "nura-skirt-p2",
+            "anchor": [
+              74,
+              141
+            ],
+            "in": [
+              20.666666666666664,
+              158.33333333333334
+            ],
+            "out": [
+              68,
+              100
+            ]
+          },
+          {
+            "id": "nura-skirt-p3",
+            "anchor": [
+              43,
+              41
+            ],
+            "in": [
+              57,
+              65
+            ],
+            "out": [
+              43,
+              41
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-skirt-side",
+      "name": "skirt side",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-character",
+      "order": 10,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#8692c5",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-skirt-side-p0",
+            "anchor": [
+              18,
+              45
+            ],
+            "in": [
+              31,
+              74
+            ],
+            "out": [
+              18,
+              45
+            ]
+          },
+          {
+            "id": "nura-skirt-side-p1",
+            "anchor": [
+              43,
+              41
+            ],
+            "in": [
+              43,
+              41
+            ],
+            "out": [
+              58,
+              65
+            ]
+          },
+          {
+            "id": "nura-skirt-side-p2",
+            "anchor": [
+              74,
+              141
+            ],
+            "in": [
+              68,
+              102
+            ],
+            "out": [
+              56.66666666666667,
+              147
+            ]
+          },
+          {
+            "id": "nura-skirt-side-p3",
+            "anchor": [
+              31,
+              150
+            ],
+            "in": [
+              42.333333333333336,
+              150
+            ],
+            "out": [
+              36,
+              110
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-skirt-fold-one",
+      "name": "skirt fold one",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-character",
+      "order": 11,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#7e8cbf",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-skirt-fold-one-p0",
+            "anchor": [
+              -36,
+              66
+            ],
+            "in": [
+              -36,
+              66
+            ],
+            "out": [
+              -46,
+              104
+            ]
+          },
+          {
+            "id": "nura-skirt-fold-one-p1",
+            "anchor": [
+              -49,
+              146
+            ],
+            "in": [
+              -48,
+              124
+            ],
+            "out": [
+              -49,
+              146
+            ]
+          },
+          {
+            "id": "nura-skirt-fold-one-p2",
+            "anchor": [
+              -45,
+              147
+            ],
+            "in": [
+              -45,
+              147
+            ],
+            "out": [
+              -43,
+              113
+            ]
+          },
+          {
+            "id": "nura-skirt-fold-one-p3",
+            "anchor": [
+              -33,
+              68
+            ],
+            "in": [
+              -37,
+              83
+            ],
+            "out": [
+              -33,
+              68
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-skirt-fold-two",
+      "name": "skirt fold two",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-character",
+      "order": 12,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#7e8cbf",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-skirt-fold-two-p0",
+            "anchor": [
+              2,
+              59
+            ],
+            "in": [
+              2,
+              59
+            ],
+            "out": [
+              -4,
+              101
+            ]
+          },
+          {
+            "id": "nura-skirt-fold-two-p1",
+            "anchor": [
+              2,
+              153
+            ],
+            "in": [
+              -2,
+              133
+            ],
+            "out": [
+              2,
+              153
+            ]
+          },
+          {
+            "id": "nura-skirt-fold-two-p2",
+            "anchor": [
+              6,
+              153
+            ],
+            "in": [
+              6,
+              153
+            ],
+            "out": [
+              3,
+              112
+            ]
+          },
+          {
+            "id": "nura-skirt-fold-two-p3",
+            "anchor": [
+              6,
+              60
+            ],
+            "in": [
+              3,
+              84
+            ],
+            "out": [
+              6,
+              60
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-blouse",
+      "name": "blouse",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-character",
+      "order": 13,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#4e7f72",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-blouse-p0",
+            "anchor": [
+              -45,
+              -49
+            ],
+            "in": [
+              -45,
+              -49
+            ],
+            "out": [
+              -61,
+              -34
+            ]
+          },
+          {
+            "id": "nura-blouse-p1",
+            "anchor": [
+              -54,
+              52
+            ],
+            "in": [
+              -66,
+              2
+            ],
+            "out": [
+              -18,
+              63.333333333333336
+            ]
+          },
+          {
+            "id": "nura-blouse-p2",
+            "anchor": [
+              54,
+              51
+            ],
+            "in": [
+              18,
+              63
+            ],
+            "out": [
+              60,
+              7
+            ]
+          },
+          {
+            "id": "nura-blouse-p3",
+            "anchor": [
+              41,
+              -47
+            ],
+            "in": [
+              60,
+              -27
+            ],
+            "out": [
+              41,
+              -47
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-blouse-light",
+      "name": "blouse light",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-character",
+      "order": 14,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#659a86",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-blouse-light-p0",
+            "anchor": [
+              -43,
+              -44
+            ],
+            "in": [
+              -43,
+              -44
+            ],
+            "out": [
+              -51,
+              -10.666666666666664
+            ]
+          },
+          {
+            "id": "nura-blouse-light-p1",
+            "anchor": [
+              -44,
+              49
+            ],
+            "in": [
+              -51.333333333333336,
+              20.333333333333332
+            ],
+            "out": [
+              -32.666666666666664,
+              53.666666666666664
+            ]
+          },
+          {
+            "id": "nura-blouse-light-p2",
+            "anchor": [
+              -14,
+              56
+            ],
+            "in": [
+              -22.666666666666664,
+              56
+            ],
+            "out": [
+              -14,
+              56
+            ]
+          },
+          {
+            "id": "nura-blouse-light-p3",
+            "anchor": [
+              -13,
+              -46
+            ],
+            "in": [
+              -13,
+              -46
+            ],
+            "out": [
+              -13,
+              -46
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-left-sleeve",
+      "name": "left sleeve",
+      "kind": "group",
+      "artboardId": "nura-board",
+      "parentId": "nura-character",
+      "order": 15,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -49,
+        -32
+      ],
+      "geometry": null
+    },
+    {
+      "id": "nura-sleeve",
+      "name": "sleeve",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-left-sleeve",
+      "order": 16,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#578a7a",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-sleeve-p0",
+            "anchor": [
+              6,
+              -7
+            ],
+            "in": [
+              6,
+              -7
+            ],
+            "out": [
+              -22,
+              -8
+            ]
+          },
+          {
+            "id": "nura-sleeve-p1",
+            "anchor": [
+              -29,
+              52
+            ],
+            "in": [
+              -27,
+              21
+            ],
+            "out": [
+              -25.666666666666668,
+              62.666666666666664
+            ]
+          },
+          {
+            "id": "nura-sleeve-p2",
+            "anchor": [
+              -7,
+              64
+            ],
+            "in": [
+              -18.333333333333336,
+              66.66666666666667
+            ],
+            "out": [
+              2,
+              41
+            ]
+          },
+          {
+            "id": "nura-sleeve-p3",
+            "anchor": [
+              12,
+              0
+            ],
+            "in": [
+              9,
+              18
+            ],
+            "out": [
+              12,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-left-cuff",
+      "name": "left cuff",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-left-sleeve",
+      "order": 17,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#356456",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-left-cuff-p0",
+            "anchor": [
+              -29,
+              49
+            ],
+            "in": [
+              -29,
+              49
+            ],
+            "out": [
+              -23,
+              55.666666666666664
+            ]
+          },
+          {
+            "id": "nura-left-cuff-p1",
+            "anchor": [
+              -6,
+              54
+            ],
+            "in": [
+              -15.333333333333334,
+              57.333333333333336
+            ],
+            "out": [
+              -6,
+              54
+            ]
+          },
+          {
+            "id": "nura-left-cuff-p2",
+            "anchor": [
+              -7,
+              65
+            ],
+            "in": [
+              -7,
+              65
+            ],
+            "out": [
+              -15.666666666666666,
+              68.33333333333333
+            ]
+          },
+          {
+            "id": "nura-left-cuff-p3",
+            "anchor": [
+              -30,
+              60
+            ],
+            "in": [
+              -23.333333333333332,
+              66.66666666666667
+            ],
+            "out": [
+              -30,
+              60
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-left-hand",
+      "name": "left hand",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-left-sleeve",
+      "order": 18,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#d9946c",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-left-hand-p0",
+            "anchor": [
+              -28,
+              62
+            ],
+            "in": [
+              -28,
+              62
+            ],
+            "out": [
+              -21.333333333333332,
+              66.66666666666667
+            ]
+          },
+          {
+            "id": "nura-left-hand-p1",
+            "anchor": [
+              -8,
+              64
+            ],
+            "in": [
+              -14.666666666666668,
+              67.33333333333333
+            ],
+            "out": [
+              -8,
+              64
+            ]
+          },
+          {
+            "id": "nura-left-hand-p2",
+            "anchor": [
+              -6,
+              81
+            ],
+            "in": [
+              -6,
+              81
+            ],
+            "out": [
+              -2,
+              93
+            ]
+          },
+          {
+            "id": "nura-left-hand-p3",
+            "anchor": [
+              -15,
+              84
+            ],
+            "in": [
+              -9,
+              94
+            ],
+            "out": [
+              -15,
+              84
+            ]
+          },
+          {
+            "id": "nura-left-hand-p4",
+            "anchor": [
+              -15,
+              101
+            ],
+            "in": [
+              -15,
+              101
+            ],
+            "out": [
+              -18.333333333333332,
+              104.33333333333333
+            ]
+          },
+          {
+            "id": "nura-left-hand-p5",
+            "anchor": [
+              -22,
+              94
+            ],
+            "in": [
+              -20.666666666666668,
+              102
+            ],
+            "out": [
+              -22,
+              94
+            ]
+          },
+          {
+            "id": "nura-left-hand-p6",
+            "anchor": [
+              -25,
+              101
+            ],
+            "in": [
+              -25,
+              101
+            ],
+            "out": [
+              -29,
+              103
+            ]
+          },
+          {
+            "id": "nura-left-hand-p7",
+            "anchor": [
+              -31,
+              92
+            ],
+            "in": [
+              -31,
+              100
+            ],
+            "out": [
+              -31,
+              92
+            ]
+          },
+          {
+            "id": "nura-left-hand-p8",
+            "anchor": [
+              -35,
+              95
+            ],
+            "in": [
+              -35,
+              95
+            ],
+            "out": [
+              -39,
+              94.33333333333333
+            ]
+          },
+          {
+            "id": "nura-left-hand-p9",
+            "anchor": [
+              -36,
+              79
+            ],
+            "in": [
+              -39.333333333333336,
+              89
+            ],
+            "out": [
+              -36,
+              79
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-waving-sleeve",
+      "name": "waving sleeve",
+      "kind": "group",
+      "artboardId": "nura-board",
+      "parentId": "nura-character",
+      "order": 19,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        50,
+        -34
+      ],
+      "geometry": null
+    },
+    {
+      "id": "nura-raised-sleeve",
+      "name": "raised sleeve",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-waving-sleeve",
+      "order": 20,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#578a7a",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-raised-sleeve-p0",
+            "anchor": [
+              -7,
+              -3
+            ],
+            "in": [
+              -7,
+              -3
+            ],
+            "out": [
+              11,
+              2
+            ]
+          },
+          {
+            "id": "nura-raised-sleeve-p1",
+            "anchor": [
+              21,
+              -29
+            ],
+            "in": [
+              21,
+              -9
+            ],
+            "out": [
+              21,
+              -29
+            ]
+          },
+          {
+            "id": "nura-raised-sleeve-p2",
+            "anchor": [
+              20,
+              -56
+            ],
+            "in": [
+              20,
+              -56
+            ],
+            "out": [
+              26,
+              -63.333333333333336
+            ]
+          },
+          {
+            "id": "nura-raised-sleeve-p3",
+            "anchor": [
+              43,
+              -58
+            ],
+            "in": [
+              33.666666666666664,
+              -64
+            ],
+            "out": [
+              52,
+              -27
+            ]
+          },
+          {
+            "id": "nura-raised-sleeve-p4",
+            "anchor": [
+              28,
+              12
+            ],
+            "in": [
+              44,
+              -3
+            ],
+            "out": [
+              14,
+              23.333333333333336
+            ]
+          },
+          {
+            "id": "nura-raised-sleeve-p5",
+            "anchor": [
+              -11,
+              14
+            ],
+            "in": [
+              1,
+              24
+            ],
+            "out": [
+              -11,
+              14
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-raised-cuff",
+      "name": "raised cuff",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-waving-sleeve",
+      "order": 21,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#356456",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-raised-cuff-p0",
+            "anchor": [
+              19,
+              -54
+            ],
+            "in": [
+              19,
+              -54
+            ],
+            "out": [
+              25.666666666666668,
+              -49.333333333333336
+            ]
+          },
+          {
+            "id": "nura-raised-cuff-p1",
+            "anchor": [
+              44,
+              -53
+            ],
+            "in": [
+              34,
+              -49
+            ],
+            "out": [
+              44,
+              -53
+            ]
+          },
+          {
+            "id": "nura-raised-cuff-p2",
+            "anchor": [
+              44,
+              -66
+            ],
+            "in": [
+              44,
+              -66
+            ],
+            "out": [
+              35.333333333333336,
+              -71.33333333333333
+            ]
+          },
+          {
+            "id": "nura-raised-cuff-p3",
+            "anchor": [
+              19,
+              -67
+            ],
+            "in": [
+              27,
+              -71.66666666666667
+            ],
+            "out": [
+              19,
+              -67
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-waving-hand",
+      "name": "waving hand",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-waving-sleeve",
+      "order": 22,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e7ab80",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-waving-hand-p0",
+            "anchor": [
+              22,
+              -65
+            ],
+            "in": [
+              22,
+              -65
+            ],
+            "out": [
+              15,
+              -76
+            ]
+          },
+          {
+            "id": "nura-waving-hand-p1",
+            "anchor": [
+              15,
+              -89
+            ],
+            "in": [
+              11,
+              -86
+            ],
+            "out": [
+              19,
+              -91.66666666666667
+            ]
+          },
+          {
+            "id": "nura-waving-hand-p2",
+            "anchor": [
+              26,
+              -80
+            ],
+            "in": [
+              22.666666666666668,
+              -88.66666666666667
+            ],
+            "out": [
+              26,
+              -80
+            ]
+          },
+          {
+            "id": "nura-waving-hand-p3",
+            "anchor": [
+              24,
+              -104
+            ],
+            "in": [
+              24,
+              -104
+            ],
+            "out": [
+              24.666666666666668,
+              -110
+            ]
+          },
+          {
+            "id": "nura-waving-hand-p4",
+            "anchor": [
+              31,
+              -107
+            ],
+            "in": [
+              27,
+              -111
+            ],
+            "out": [
+              31,
+              -107
+            ]
+          },
+          {
+            "id": "nura-waving-hand-p5",
+            "anchor": [
+              35,
+              -84
+            ],
+            "in": [
+              35,
+              -84
+            ],
+            "out": [
+              35,
+              -84
+            ]
+          },
+          {
+            "id": "nura-waving-hand-p6",
+            "anchor": [
+              36,
+              -112
+            ],
+            "in": [
+              36,
+              -112
+            ],
+            "out": [
+              39.333333333333336,
+              -116.66666666666667
+            ]
+          },
+          {
+            "id": "nura-waving-hand-p7",
+            "anchor": [
+              45,
+              -110
+            ],
+            "in": [
+              42.333333333333336,
+              -116
+            ],
+            "out": [
+              45,
+              -110
+            ]
+          },
+          {
+            "id": "nura-waving-hand-p8",
+            "anchor": [
+              46,
+              -85
+            ],
+            "in": [
+              46,
+              -85
+            ],
+            "out": [
+              46,
+              -85
+            ]
+          },
+          {
+            "id": "nura-waving-hand-p9",
+            "anchor": [
+              51,
+              -103
+            ],
+            "in": [
+              51,
+              -103
+            ],
+            "out": [
+              55,
+              -105.66666666666667
+            ]
+          },
+          {
+            "id": "nura-waving-hand-p10",
+            "anchor": [
+              58,
+              -98
+            ],
+            "in": [
+              57.333333333333336,
+              -104
+            ],
+            "out": [
+              58,
+              -98
+            ]
+          },
+          {
+            "id": "nura-waving-hand-p11",
+            "anchor": [
+              54,
+              -78
+            ],
+            "in": [
+              54,
+              -78
+            ],
+            "out": [
+              64,
+              -94
+            ]
+          },
+          {
+            "id": "nura-waving-hand-p12",
+            "anchor": [
+              62,
+              -71
+            ],
+            "in": [
+              71,
+              -86
+            ],
+            "out": [
+              56.666666666666664,
+              -60.333333333333336
+            ]
+          },
+          {
+            "id": "nura-waving-hand-p13",
+            "anchor": [
+              41,
+              -56
+            ],
+            "in": [
+              49.666666666666664,
+              -55.333333333333336
+            ],
+            "out": [
+              41,
+              -56
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-palm-crease",
+      "name": "palm crease",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-waving-sleeve",
+      "order": 23,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#bb7657",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-palm-crease-p0",
+            "anchor": [
+              27,
+              -72
+            ],
+            "in": [
+              27,
+              -72
+            ],
+            "out": [
+              31.666666666666668,
+              -80
+            ]
+          },
+          {
+            "id": "nura-palm-crease-p1",
+            "anchor": [
+              46,
+              -74
+            ],
+            "in": [
+              38,
+              -80.66666666666667
+            ],
+            "out": [
+              46,
+              -74
+            ]
+          },
+          {
+            "id": "nura-palm-crease-p2",
+            "anchor": [
+              45,
+              -71
+            ],
+            "in": [
+              45,
+              -71
+            ],
+            "out": [
+              38.333333333333336,
+              -76.33333333333333
+            ]
+          },
+          {
+            "id": "nura-palm-crease-p3",
+            "anchor": [
+              29,
+              -68
+            ],
+            "in": [
+              33,
+              -75.33333333333333
+            ],
+            "out": [
+              29,
+              -68
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-scarf-root",
+      "name": "scarf root",
+      "kind": "bone",
+      "artboardId": "nura-board",
+      "parentId": "nura-character",
+      "order": 24,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -20,
+        -7
+      ],
+      "geometry": {
+        "length": 45
+      }
+    },
+    {
+      "id": "nura-scarf-tip",
+      "name": "scarf tip",
+      "kind": "bone",
+      "artboardId": "nura-board",
+      "parentId": "nura-scarf-root",
+      "order": 25,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "length": 45
+      }
+    },
+    {
+      "id": "nura-floating-scarf",
+      "name": "floating scarf",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-character",
+      "order": 26,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#8297cb",
+        "skin": {
+          "bindWorld": [
+            1,
+            0,
+            0,
+            1,
+            256,
+            285
+          ],
+          "bones": [
+            {
+              "boneId": "nura-scarf-root",
+              "bind": [
+                1,
+                0,
+                0,
+                1,
+                236,
+                278
+              ]
+            },
+            {
+              "boneId": "nura-scarf-tip",
+              "bind": [
+                1,
+                0,
+                0,
+                1,
+                281,
+                278
+              ]
+            }
+          ],
+          "weights": [
+            {
+              "pointId": "nura-floating-scarf-p0",
+              "anchor": [
+                [
+                  "nura-scarf-root",
+                  1
+                ],
+                [
+                  "nura-scarf-tip",
+                  0
+                ]
+              ],
+              "in": [
+                [
+                  "nura-scarf-root",
+                  1
+                ],
+                [
+                  "nura-scarf-tip",
+                  0
+                ]
+              ],
+              "out": [
+                [
+                  "nura-scarf-root",
+                  0.8627450980392157
+                ],
+                [
+                  "nura-scarf-tip",
+                  0.13725490196078433
+                ]
+              ]
+            },
+            {
+              "pointId": "nura-floating-scarf-p1",
+              "anchor": [
+                [
+                  "nura-scarf-root",
+                  0.09803921568627451
+                ],
+                [
+                  "nura-scarf-tip",
+                  0.9019607843137255
+                ]
+              ],
+              "in": [
+                [
+                  "nura-scarf-root",
+                  0.4823529411764706
+                ],
+                [
+                  "nura-scarf-tip",
+                  0.5176470588235295
+                ]
+              ],
+              "out": [
+                [
+                  "nura-scarf-root",
+                  0.4
+                ],
+                [
+                  "nura-scarf-tip",
+                  0.6
+                ]
+              ]
+            },
+            {
+              "pointId": "nura-floating-scarf-p2",
+              "anchor": [
+                [
+                  "nura-scarf-root",
+                  0.8901960784313725
+                ],
+                [
+                  "nura-scarf-tip",
+                  0.10980392156862745
+                ]
+              ],
+              "in": [
+                [
+                  "nura-scarf-root",
+                  0.4470588235294118
+                ],
+                [
+                  "nura-scarf-tip",
+                  0.5529411764705883
+                ]
+              ],
+              "out": [
+                [
+                  "nura-scarf-root",
+                  0.8352941176470589
+                ],
+                [
+                  "nura-scarf-tip",
+                  0.16470588235294117
+                ]
+              ]
+            }
+          ]
+        },
+        "points": [
+          {
+            "id": "nura-floating-scarf-p0",
+            "anchor": [
+              -24,
+              -20
+            ],
+            "in": [
+              -12,
+              21
+            ],
+            "out": [
+              5,
+              -12
+            ]
+          },
+          {
+            "id": "nura-floating-scarf-p1",
+            "anchor": [
+              93,
+              39
+            ],
+            "in": [
+              47,
+              -4
+            ],
+            "out": [
+              56,
+              40
+            ]
+          },
+          {
+            "id": "nura-floating-scarf-p2",
+            "anchor": [
+              2,
+              82
+            ],
+            "in": [
+              51,
+              70
+            ],
+            "out": [
+              8,
+              51
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-scarf-fold",
+      "name": "scarf fold",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-character",
+      "order": 27,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#6179b0",
+        "skin": {
+          "bindWorld": [
+            1,
+            0,
+            0,
+            1,
+            256,
+            285
+          ],
+          "bones": [
+            {
+              "boneId": "nura-scarf-root",
+              "bind": [
+                1,
+                0,
+                0,
+                1,
+                236,
+                278
+              ]
+            },
+            {
+              "boneId": "nura-scarf-tip",
+              "bind": [
+                1,
+                0,
+                0,
+                1,
+                281,
+                278
+              ]
+            }
+          ],
+          "weights": [
+            {
+              "pointId": "nura-scarf-fold-p0",
+              "anchor": [
+                [
+                  "nura-scarf-root",
+                  0.9803921568627451
+                ],
+                [
+                  "nura-scarf-tip",
+                  0.0196078431372549
+                ]
+              ],
+              "in": [
+                [
+                  "nura-scarf-root",
+                  0.8823529411764706
+                ],
+                [
+                  "nura-scarf-tip",
+                  0.11764705882352941
+                ]
+              ],
+              "out": [
+                [
+                  "nura-scarf-root",
+                  0.807843137254902
+                ],
+                [
+                  "nura-scarf-tip",
+                  0.19215686274509805
+                ]
+              ]
+            },
+            {
+              "pointId": "nura-scarf-fold-p1",
+              "anchor": [
+                [
+                  "nura-scarf-root",
+                  0.2823529411764706
+                ],
+                [
+                  "nura-scarf-tip",
+                  0.7176470588235294
+                ]
+              ],
+              "in": [
+                [
+                  "nura-scarf-root",
+                  0.4823529411764706
+                ],
+                [
+                  "nura-scarf-tip",
+                  0.5176470588235295
+                ]
+              ],
+              "out": [
+                [
+                  "nura-scarf-root",
+                  0.6
+                ],
+                [
+                  "nura-scarf-tip",
+                  0.4
+                ]
+              ]
+            },
+            {
+              "pointId": "nura-scarf-fold-p2",
+              "anchor": [
+                [
+                  "nura-scarf-root",
+                  0.8823529411764706
+                ],
+                [
+                  "nura-scarf-tip",
+                  0.11764705882352941
+                ]
+              ],
+              "in": [
+                [
+                  "nura-scarf-root",
+                  0.807843137254902
+                ],
+                [
+                  "nura-scarf-tip",
+                  0.19215686274509805
+                ]
+              ],
+              "out": [
+                [
+                  "nura-scarf-root",
+                  0.8823529411764706
+                ],
+                [
+                  "nura-scarf-tip",
+                  0.11764705882352941
+                ]
+              ]
+            },
+            {
+              "pointId": "nura-scarf-fold-p3",
+              "anchor": [
+                [
+                  "nura-scarf-root",
+                  0.8901960784313725
+                ],
+                [
+                  "nura-scarf-tip",
+                  0.10980392156862745
+                ]
+              ],
+              "in": [
+                [
+                  "nura-scarf-root",
+                  0.8901960784313725
+                ],
+                [
+                  "nura-scarf-tip",
+                  0.10980392156862745
+                ]
+              ],
+              "out": [
+                [
+                  "nura-scarf-root",
+                  0.792156862745098
+                ],
+                [
+                  "nura-scarf-tip",
+                  0.20784313725490197
+                ]
+              ]
+            }
+          ]
+        },
+        "points": [
+          {
+            "id": "nura-scarf-fold-p0",
+            "anchor": [
+              -8,
+              0
+            ],
+            "in": [
+              3,
+              19
+            ],
+            "out": [
+              11,
+              14
+            ]
+          },
+          {
+            "id": "nura-scarf-fold-p1",
+            "anchor": [
+              69,
+              36
+            ],
+            "in": [
+              47,
+              29
+            ],
+            "out": [
+              34,
+              26
+            ]
+          },
+          {
+            "id": "nura-scarf-fold-p2",
+            "anchor": [
+              3,
+              60
+            ],
+            "in": [
+              11,
+              34
+            ],
+            "out": [
+              3,
+              60
+            ]
+          },
+          {
+            "id": "nura-scarf-fold-p3",
+            "anchor": [
+              2,
+              48
+            ],
+            "in": [
+              2,
+              48
+            ],
+            "out": [
+              13,
+              27
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-head",
+      "name": "head",
+      "kind": "group",
+      "artboardId": "nura-board",
+      "parentId": "nura-character",
+      "order": 28,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        -113
+      ],
+      "geometry": null
+    },
+    {
+      "id": "nura-hijab-outline",
+      "name": "hijab outline",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-head",
+      "order": 29,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#4b577d",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-hijab-outline-p0",
+            "anchor": [
+              -74,
+              58
+            ],
+            "in": [
+              -74,
+              58
+            ],
+            "out": [
+              -94,
+              20
+            ]
+          },
+          {
+            "id": "nura-hijab-outline-p1",
+            "anchor": [
+              -58,
+              -85
+            ],
+            "in": [
+              -92,
+              -58
+            ],
+            "out": [
+              -28,
+              -114
+            ]
+          },
+          {
+            "id": "nura-hijab-outline-p2",
+            "anchor": [
+              66,
+              -68
+            ],
+            "in": [
+              37,
+              -104
+            ],
+            "out": [
+              86,
+              -42
+            ]
+          },
+          {
+            "id": "nura-hijab-outline-p3",
+            "anchor": [
+              75,
+              56
+            ],
+            "in": [
+              89,
+              12
+            ],
+            "out": [
+              75,
+              56
+            ]
+          },
+          {
+            "id": "nura-hijab-outline-p4",
+            "anchor": [
+              83,
+              73
+            ],
+            "in": [
+              83,
+              73
+            ],
+            "out": [
+              57,
+              86
+            ]
+          },
+          {
+            "id": "nura-hijab-outline-p5",
+            "anchor": [
+              4,
+              74
+            ],
+            "in": [
+              31,
+              82
+            ],
+            "out": [
+              -28,
+              84
+            ]
+          },
+          {
+            "id": "nura-hijab-outline-p6",
+            "anchor": [
+              -80,
+              70
+            ],
+            "in": [
+              -60,
+              79
+            ],
+            "out": [
+              -80,
+              70
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-hijab",
+      "name": "hijab",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-head",
+      "order": 30,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#91a2d4",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-hijab-p0",
+            "anchor": [
+              -67,
+              53
+            ],
+            "in": [
+              -67,
+              53
+            ],
+            "out": [
+              -84,
+              12
+            ]
+          },
+          {
+            "id": "nura-hijab-p1",
+            "anchor": [
+              -52,
+              -78
+            ],
+            "in": [
+              -80,
+              -54
+            ],
+            "out": [
+              -22,
+              -103
+            ]
+          },
+          {
+            "id": "nura-hijab-p2",
+            "anchor": [
+              59,
+              -63
+            ],
+            "in": [
+              34,
+              -95
+            ],
+            "out": [
+              78,
+              -37
+            ]
+          },
+          {
+            "id": "nura-hijab-p3",
+            "anchor": [
+              67,
+              53
+            ],
+            "in": [
+              80,
+              12
+            ],
+            "out": [
+              67,
+              53
+            ]
+          },
+          {
+            "id": "nura-hijab-p4",
+            "anchor": [
+              73,
+              67
+            ],
+            "in": [
+              73,
+              67
+            ],
+            "out": [
+              49,
+              77
+            ]
+          },
+          {
+            "id": "nura-hijab-p5",
+            "anchor": [
+              3,
+              67
+            ],
+            "in": [
+              25,
+              72
+            ],
+            "out": [
+              -25,
+              76
+            ]
+          },
+          {
+            "id": "nura-hijab-p6",
+            "anchor": [
+              -71,
+              64
+            ],
+            "in": [
+              -52,
+              70
+            ],
+            "out": [
+              -71,
+              64
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-face",
+      "name": "face",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-head",
+      "order": 31,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e7ab80",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-face-p0",
+            "anchor": [
+              -50,
+              -48
+            ],
+            "in": [
+              -62,
+              -14
+            ],
+            "out": [
+              -29,
+              -71
+            ]
+          },
+          {
+            "id": "nura-face-p1",
+            "anchor": [
+              40,
+              -43
+            ],
+            "in": [
+              9,
+              -74
+            ],
+            "out": [
+              58,
+              -23
+            ]
+          },
+          {
+            "id": "nura-face-p2",
+            "anchor": [
+              52,
+              35
+            ],
+            "in": [
+              62,
+              7
+            ],
+            "out": [
+              39,
+              65
+            ]
+          },
+          {
+            "id": "nura-face-p3",
+            "anchor": [
+              -34,
+              53
+            ],
+            "in": [
+              -3,
+              77
+            ],
+            "out": [
+              -55,
+              36
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-face-shade",
+      "name": "face shade",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-head",
+      "order": 32,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#d3936d",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-face-shade-p0",
+            "anchor": [
+              44,
+              -28
+            ],
+            "in": [
+              57,
+              -12
+            ],
+            "out": [
+              66,
+              1
+            ]
+          },
+          {
+            "id": "nura-face-shade-p1",
+            "anchor": [
+              25,
+              55
+            ],
+            "in": [
+              53,
+              43
+            ],
+            "out": [
+              7.666666666666668,
+              67
+            ]
+          },
+          {
+            "id": "nura-face-shade-p2",
+            "anchor": [
+              -28,
+              56
+            ],
+            "in": [
+              -10,
+              67.33333333333333
+            ],
+            "out": [
+              3,
+              80
+            ]
+          },
+          {
+            "id": "nura-face-shade-p3",
+            "anchor": [
+              54,
+              37
+            ],
+            "in": [
+              44,
+              66
+            ],
+            "out": [
+              64,
+              9
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-scarf-sweep",
+      "name": "scarf sweep",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-head",
+      "order": 33,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#aebde9",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-scarf-sweep-p0",
+            "anchor": [
+              -63,
+              -43
+            ],
+            "in": [
+              -63,
+              -43
+            ],
+            "out": [
+              -58,
+              -82
+            ]
+          },
+          {
+            "id": "nura-scarf-sweep-p1",
+            "anchor": [
+              21,
+              -79
+            ],
+            "in": [
+              -17,
+              -98
+            ],
+            "out": [
+              43,
+              -68
+            ]
+          },
+          {
+            "id": "nura-scarf-sweep-p2",
+            "anchor": [
+              67,
+              -20
+            ],
+            "in": [
+              60,
+              -48
+            ],
+            "out": [
+              48,
+              -48
+            ]
+          },
+          {
+            "id": "nura-scarf-sweep-p3",
+            "anchor": [
+              -5,
+              -66
+            ],
+            "in": [
+              23,
+              -48
+            ],
+            "out": [
+              -19,
+              -44
+            ]
+          },
+          {
+            "id": "nura-scarf-sweep-p4",
+            "anchor": [
+              -63,
+              -13
+            ],
+            "in": [
+              -45,
+              -33
+            ],
+            "out": [
+              -63,
+              -13
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-left-glasses-frame",
+      "name": "left glasses frame",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-head",
+      "order": 34,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -28,
+        3
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#3b414f",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-left-glasses-frame-p0",
+            "anchor": [
+              28,
+              0
+            ],
+            "in": [
+              28,
+              -16.568542494
+            ],
+            "out": [
+              28,
+              16.568542494
+            ]
+          },
+          {
+            "id": "nura-left-glasses-frame-p1",
+            "anchor": [
+              0,
+              30
+            ],
+            "in": [
+              15.463972994399999,
+              30
+            ],
+            "out": [
+              -15.463972994399999,
+              30
+            ]
+          },
+          {
+            "id": "nura-left-glasses-frame-p2",
+            "anchor": [
+              -28,
+              0
+            ],
+            "in": [
+              -28,
+              16.568542494
+            ],
+            "out": [
+              -28,
+              -16.568542494
+            ]
+          },
+          {
+            "id": "nura-left-glasses-frame-p3",
+            "anchor": [
+              0,
+              -30
+            ],
+            "in": [
+              -15.463972994399999,
+              -30
+            ],
+            "out": [
+              15.463972994399999,
+              -30
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-left-lens",
+      "name": "left lens",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-head",
+      "order": 35,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -28,
+        3
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#edb68c",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-left-lens-p0",
+            "anchor": [
+              24.5,
+              0
+            ],
+            "in": [
+              24.5,
+              -14.6355458697
+            ],
+            "out": [
+              24.5,
+              14.6355458697
+            ]
+          },
+          {
+            "id": "nura-left-lens-p1",
+            "anchor": [
+              0,
+              26.5
+            ],
+            "in": [
+              13.5309763701,
+              26.5
+            ],
+            "out": [
+              -13.5309763701,
+              26.5
+            ]
+          },
+          {
+            "id": "nura-left-lens-p2",
+            "anchor": [
+              -24.5,
+              0
+            ],
+            "in": [
+              -24.5,
+              14.6355458697
+            ],
+            "out": [
+              -24.5,
+              -14.6355458697
+            ]
+          },
+          {
+            "id": "nura-left-lens-p3",
+            "anchor": [
+              0,
+              -26.5
+            ],
+            "in": [
+              -13.5309763701,
+              -26.5
+            ],
+            "out": [
+              13.5309763701,
+              -26.5
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-right-glasses-frame",
+      "name": "right glasses frame",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-head",
+      "order": 36,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        30,
+        3
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#3b414f",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-right-glasses-frame-p0",
+            "anchor": [
+              28,
+              0
+            ],
+            "in": [
+              28,
+              -16.568542494
+            ],
+            "out": [
+              28,
+              16.568542494
+            ]
+          },
+          {
+            "id": "nura-right-glasses-frame-p1",
+            "anchor": [
+              0,
+              30
+            ],
+            "in": [
+              15.463972994399999,
+              30
+            ],
+            "out": [
+              -15.463972994399999,
+              30
+            ]
+          },
+          {
+            "id": "nura-right-glasses-frame-p2",
+            "anchor": [
+              -28,
+              0
+            ],
+            "in": [
+              -28,
+              16.568542494
+            ],
+            "out": [
+              -28,
+              -16.568542494
+            ]
+          },
+          {
+            "id": "nura-right-glasses-frame-p3",
+            "anchor": [
+              0,
+              -30
+            ],
+            "in": [
+              -15.463972994399999,
+              -30
+            ],
+            "out": [
+              15.463972994399999,
+              -30
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-right-lens",
+      "name": "right lens",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-head",
+      "order": 37,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        30,
+        3
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#edb68c",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-right-lens-p0",
+            "anchor": [
+              24.5,
+              0
+            ],
+            "in": [
+              24.5,
+              -14.6355458697
+            ],
+            "out": [
+              24.5,
+              14.6355458697
+            ]
+          },
+          {
+            "id": "nura-right-lens-p1",
+            "anchor": [
+              0,
+              26.5
+            ],
+            "in": [
+              13.5309763701,
+              26.5
+            ],
+            "out": [
+              -13.5309763701,
+              26.5
+            ]
+          },
+          {
+            "id": "nura-right-lens-p2",
+            "anchor": [
+              -24.5,
+              0
+            ],
+            "in": [
+              -24.5,
+              14.6355458697
+            ],
+            "out": [
+              -24.5,
+              -14.6355458697
+            ]
+          },
+          {
+            "id": "nura-right-lens-p3",
+            "anchor": [
+              0,
+              -26.5
+            ],
+            "in": [
+              -13.5309763701,
+              -26.5
+            ],
+            "out": [
+              13.5309763701,
+              -26.5
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-left-eye",
+      "name": "left eye",
+      "kind": "group",
+      "artboardId": "nura-board",
+      "parentId": "nura-head",
+      "order": 38,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -28,
+        1
+      ],
+      "geometry": null
+    },
+    {
+      "id": "nura-left-eye-white",
+      "name": "left eye white",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-left-eye",
+      "order": 39,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#fff9ec",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-left-eye-white-p0",
+            "anchor": [
+              14,
+              0
+            ],
+            "in": [
+              14,
+              -9.9411254964
+            ],
+            "out": [
+              14,
+              9.9411254964
+            ]
+          },
+          {
+            "id": "nura-left-eye-white-p1",
+            "anchor": [
+              0,
+              18
+            ],
+            "in": [
+              7.731986497199999,
+              18
+            ],
+            "out": [
+              -7.731986497199999,
+              18
+            ]
+          },
+          {
+            "id": "nura-left-eye-white-p2",
+            "anchor": [
+              -14,
+              0
+            ],
+            "in": [
+              -14,
+              9.9411254964
+            ],
+            "out": [
+              -14,
+              -9.9411254964
+            ]
+          },
+          {
+            "id": "nura-left-eye-white-p3",
+            "anchor": [
+              0,
+              -18
+            ],
+            "in": [
+              -7.731986497199999,
+              -18
+            ],
+            "out": [
+              7.731986497199999,
+              -18
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-left-eye-iris",
+      "name": "left eye iris",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-left-eye",
+      "order": 40,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#48392f",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-left-eye-iris-p0",
+            "anchor": [
+              7.9799999999999995,
+              0
+            ],
+            "in": [
+              7.9799999999999995,
+              -7.157610357407999
+            ],
+            "out": [
+              7.9799999999999995,
+              7.157610357407999
+            ]
+          },
+          {
+            "id": "nura-left-eye-iris-p1",
+            "anchor": [
+              0,
+              12.959999999999999
+            ],
+            "in": [
+              4.407232303403999,
+              12.959999999999999
+            ],
+            "out": [
+              -4.407232303403999,
+              12.959999999999999
+            ]
+          },
+          {
+            "id": "nura-left-eye-iris-p2",
+            "anchor": [
+              -7.9799999999999995,
+              0
+            ],
+            "in": [
+              -7.9799999999999995,
+              7.157610357407999
+            ],
+            "out": [
+              -7.9799999999999995,
+              -7.157610357407999
+            ]
+          },
+          {
+            "id": "nura-left-eye-iris-p3",
+            "anchor": [
+              0,
+              -12.959999999999999
+            ],
+            "in": [
+              -4.407232303403999,
+              -12.959999999999999
+            ],
+            "out": [
+              4.407232303403999,
+              -12.959999999999999
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-left-eye-shine",
+      "name": "left eye shine",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-left-eye",
+      "order": 41,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -1,
+        -5
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#ffffff",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-left-eye-shine-p0",
+            "anchor": [
+              2.8000000000000003,
+              0
+            ],
+            "in": [
+              2.8000000000000003,
+              -1.7894025893519998
+            ],
+            "out": [
+              2.8000000000000003,
+              1.7894025893519998
+            ]
+          },
+          {
+            "id": "nura-left-eye-shine-p1",
+            "anchor": [
+              0,
+              3.2399999999999998
+            ],
+            "in": [
+              1.5463972994400002,
+              3.2399999999999998
+            ],
+            "out": [
+              -1.5463972994400002,
+              3.2399999999999998
+            ]
+          },
+          {
+            "id": "nura-left-eye-shine-p2",
+            "anchor": [
+              -2.8000000000000003,
+              0
+            ],
+            "in": [
+              -2.8000000000000003,
+              1.7894025893519998
+            ],
+            "out": [
+              -2.8000000000000003,
+              -1.7894025893519998
+            ]
+          },
+          {
+            "id": "nura-left-eye-shine-p3",
+            "anchor": [
+              0,
+              -3.2399999999999998
+            ],
+            "in": [
+              -1.5463972994400002,
+              -3.2399999999999998
+            ],
+            "out": [
+              1.5463972994400002,
+              -3.2399999999999998
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-right-eye",
+      "name": "right eye",
+      "kind": "group",
+      "artboardId": "nura-board",
+      "parentId": "nura-head",
+      "order": 42,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        30,
+        1
+      ],
+      "geometry": null
+    },
+    {
+      "id": "nura-right-eye-white",
+      "name": "right eye white",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-right-eye",
+      "order": 43,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#fff9ec",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-right-eye-white-p0",
+            "anchor": [
+              14,
+              0
+            ],
+            "in": [
+              14,
+              -9.9411254964
+            ],
+            "out": [
+              14,
+              9.9411254964
+            ]
+          },
+          {
+            "id": "nura-right-eye-white-p1",
+            "anchor": [
+              0,
+              18
+            ],
+            "in": [
+              7.731986497199999,
+              18
+            ],
+            "out": [
+              -7.731986497199999,
+              18
+            ]
+          },
+          {
+            "id": "nura-right-eye-white-p2",
+            "anchor": [
+              -14,
+              0
+            ],
+            "in": [
+              -14,
+              9.9411254964
+            ],
+            "out": [
+              -14,
+              -9.9411254964
+            ]
+          },
+          {
+            "id": "nura-right-eye-white-p3",
+            "anchor": [
+              0,
+              -18
+            ],
+            "in": [
+              -7.731986497199999,
+              -18
+            ],
+            "out": [
+              7.731986497199999,
+              -18
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-right-eye-iris",
+      "name": "right eye iris",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-right-eye",
+      "order": 44,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#48392f",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-right-eye-iris-p0",
+            "anchor": [
+              7.9799999999999995,
+              0
+            ],
+            "in": [
+              7.9799999999999995,
+              -7.157610357407999
+            ],
+            "out": [
+              7.9799999999999995,
+              7.157610357407999
+            ]
+          },
+          {
+            "id": "nura-right-eye-iris-p1",
+            "anchor": [
+              0,
+              12.959999999999999
+            ],
+            "in": [
+              4.407232303403999,
+              12.959999999999999
+            ],
+            "out": [
+              -4.407232303403999,
+              12.959999999999999
+            ]
+          },
+          {
+            "id": "nura-right-eye-iris-p2",
+            "anchor": [
+              -7.9799999999999995,
+              0
+            ],
+            "in": [
+              -7.9799999999999995,
+              7.157610357407999
+            ],
+            "out": [
+              -7.9799999999999995,
+              -7.157610357407999
+            ]
+          },
+          {
+            "id": "nura-right-eye-iris-p3",
+            "anchor": [
+              0,
+              -12.959999999999999
+            ],
+            "in": [
+              -4.407232303403999,
+              -12.959999999999999
+            ],
+            "out": [
+              4.407232303403999,
+              -12.959999999999999
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-right-eye-shine",
+      "name": "right eye shine",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-right-eye",
+      "order": 45,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -1,
+        -5
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#ffffff",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-right-eye-shine-p0",
+            "anchor": [
+              2.8000000000000003,
+              0
+            ],
+            "in": [
+              2.8000000000000003,
+              -1.7894025893519998
+            ],
+            "out": [
+              2.8000000000000003,
+              1.7894025893519998
+            ]
+          },
+          {
+            "id": "nura-right-eye-shine-p1",
+            "anchor": [
+              0,
+              3.2399999999999998
+            ],
+            "in": [
+              1.5463972994400002,
+              3.2399999999999998
+            ],
+            "out": [
+              -1.5463972994400002,
+              3.2399999999999998
+            ]
+          },
+          {
+            "id": "nura-right-eye-shine-p2",
+            "anchor": [
+              -2.8000000000000003,
+              0
+            ],
+            "in": [
+              -2.8000000000000003,
+              1.7894025893519998
+            ],
+            "out": [
+              -2.8000000000000003,
+              -1.7894025893519998
+            ]
+          },
+          {
+            "id": "nura-right-eye-shine-p3",
+            "anchor": [
+              0,
+              -3.2399999999999998
+            ],
+            "in": [
+              -1.5463972994400002,
+              -3.2399999999999998
+            ],
+            "out": [
+              1.5463972994400002,
+              -3.2399999999999998
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-glasses-bridge",
+      "name": "glasses bridge",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-head",
+      "order": 46,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#3b414f",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-glasses-bridge-p0",
+            "anchor": [
+              -3,
+              -4
+            ],
+            "in": [
+              -3,
+              -4
+            ],
+            "out": [
+              -0.3333333333333335,
+              -7.333333333333334
+            ]
+          },
+          {
+            "id": "nura-glasses-bridge-p1",
+            "anchor": [
+              6,
+              -4
+            ],
+            "in": [
+              2.6666666666666665,
+              -7.333333333333334
+            ],
+            "out": [
+              6,
+              -4
+            ]
+          },
+          {
+            "id": "nura-glasses-bridge-p2",
+            "anchor": [
+              6,
+              0
+            ],
+            "in": [
+              6,
+              0
+            ],
+            "out": [
+              2.6666666666666665,
+              -3.3333333333333335
+            ]
+          },
+          {
+            "id": "nura-glasses-bridge-p3",
+            "anchor": [
+              -3,
+              0
+            ],
+            "in": [
+              -0.3333333333333335,
+              -3.3333333333333335
+            ],
+            "out": [
+              -3,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-left-lens-shine",
+      "name": "left lens shine",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-head",
+      "order": 47,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#fff6df",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-left-lens-shine-p0",
+            "anchor": [
+              -49,
+              -4
+            ],
+            "in": [
+              -49,
+              -4
+            ],
+            "out": [
+              -47,
+              -12.666666666666666
+            ]
+          },
+          {
+            "id": "nura-left-lens-shine-p1",
+            "anchor": [
+              -37,
+              -18
+            ],
+            "in": [
+              -43,
+              -17.333333333333332
+            ],
+            "out": [
+              -37,
+              -18
+            ]
+          },
+          {
+            "id": "nura-left-lens-shine-p2",
+            "anchor": [
+              -39,
+              -15
+            ],
+            "in": [
+              -39,
+              -15
+            ],
+            "out": [
+              -42.333333333333336,
+              -13
+            ]
+          },
+          {
+            "id": "nura-left-lens-shine-p3",
+            "anchor": [
+              -46,
+              -3
+            ],
+            "in": [
+              -44.666666666666664,
+              -9
+            ],
+            "out": [
+              -46,
+              -3
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-right-lens-shine",
+      "name": "right lens shine",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-head",
+      "order": 48,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#fff6df",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-right-lens-shine-p0",
+            "anchor": [
+              9,
+              -4
+            ],
+            "in": [
+              9,
+              -4
+            ],
+            "out": [
+              11,
+              -12.666666666666666
+            ]
+          },
+          {
+            "id": "nura-right-lens-shine-p1",
+            "anchor": [
+              21,
+              -18
+            ],
+            "in": [
+              15,
+              -17.333333333333332
+            ],
+            "out": [
+              21,
+              -18
+            ]
+          },
+          {
+            "id": "nura-right-lens-shine-p2",
+            "anchor": [
+              19,
+              -15
+            ],
+            "in": [
+              19,
+              -15
+            ],
+            "out": [
+              15.666666666666666,
+              -13
+            ]
+          },
+          {
+            "id": "nura-right-lens-shine-p3",
+            "anchor": [
+              12,
+              -3
+            ],
+            "in": [
+              13.333333333333334,
+              -9
+            ],
+            "out": [
+              12,
+              -3
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-left-brow",
+      "name": "left brow",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-head",
+      "order": 49,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#6e493c",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-left-brow-p0",
+            "anchor": [
+              -44,
+              -28
+            ],
+            "in": [
+              -44,
+              -28
+            ],
+            "out": [
+              -34.666666666666664,
+              -36.666666666666664
+            ]
+          },
+          {
+            "id": "nura-left-brow-p1",
+            "anchor": [
+              -15,
+              -29
+            ],
+            "in": [
+              -25,
+              -37
+            ],
+            "out": [
+              -15,
+              -29
+            ]
+          },
+          {
+            "id": "nura-left-brow-p2",
+            "anchor": [
+              -16,
+              -25
+            ],
+            "in": [
+              -16,
+              -25
+            ],
+            "out": [
+              -26,
+              -31
+            ]
+          },
+          {
+            "id": "nura-left-brow-p3",
+            "anchor": [
+              -43,
+              -24
+            ],
+            "in": [
+              -35,
+              -30.666666666666668
+            ],
+            "out": [
+              -43,
+              -24
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-right-brow",
+      "name": "right brow",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-head",
+      "order": 50,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#6e493c",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-right-brow-p0",
+            "anchor": [
+              15,
+              -29
+            ],
+            "in": [
+              15,
+              -29
+            ],
+            "out": [
+              25.666666666666664,
+              -36.333333333333336
+            ]
+          },
+          {
+            "id": "nura-right-brow-p1",
+            "anchor": [
+              46,
+              -27
+            ],
+            "in": [
+              36,
+              -35.666666666666664
+            ],
+            "out": [
+              46,
+              -27
+            ]
+          },
+          {
+            "id": "nura-right-brow-p2",
+            "anchor": [
+              45,
+              -23
+            ],
+            "in": [
+              45,
+              -23
+            ],
+            "out": [
+              35,
+              -30.333333333333332
+            ]
+          },
+          {
+            "id": "nura-right-brow-p3",
+            "anchor": [
+              16,
+              -25
+            ],
+            "in": [
+              25.333333333333336,
+              -31
+            ],
+            "out": [
+              16,
+              -25
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-left-blush",
+      "name": "left blush",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-head",
+      "order": 51,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -46,
+        33
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#d98578",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-left-blush-p0",
+            "anchor": [
+              10,
+              0
+            ],
+            "in": [
+              10,
+              -2.761423749
+            ],
+            "out": [
+              10,
+              2.761423749
+            ]
+          },
+          {
+            "id": "nura-left-blush-p1",
+            "anchor": [
+              0,
+              5
+            ],
+            "in": [
+              5.522847498,
+              5
+            ],
+            "out": [
+              -5.522847498,
+              5
+            ]
+          },
+          {
+            "id": "nura-left-blush-p2",
+            "anchor": [
+              -10,
+              0
+            ],
+            "in": [
+              -10,
+              2.761423749
+            ],
+            "out": [
+              -10,
+              -2.761423749
+            ]
+          },
+          {
+            "id": "nura-left-blush-p3",
+            "anchor": [
+              0,
+              -5
+            ],
+            "in": [
+              -5.522847498,
+              -5
+            ],
+            "out": [
+              5.522847498,
+              -5
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-right-blush",
+      "name": "right blush",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-head",
+      "order": 52,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        45,
+        34
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#d98578",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-right-blush-p0",
+            "anchor": [
+              10,
+              0
+            ],
+            "in": [
+              10,
+              -2.761423749
+            ],
+            "out": [
+              10,
+              2.761423749
+            ]
+          },
+          {
+            "id": "nura-right-blush-p1",
+            "anchor": [
+              0,
+              5
+            ],
+            "in": [
+              5.522847498,
+              5
+            ],
+            "out": [
+              -5.522847498,
+              5
+            ]
+          },
+          {
+            "id": "nura-right-blush-p2",
+            "anchor": [
+              -10,
+              0
+            ],
+            "in": [
+              -10,
+              2.761423749
+            ],
+            "out": [
+              -10,
+              -2.761423749
+            ]
+          },
+          {
+            "id": "nura-right-blush-p3",
+            "anchor": [
+              0,
+              -5
+            ],
+            "in": [
+              -5.522847498,
+              -5
+            ],
+            "out": [
+              5.522847498,
+              -5
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-nose",
+      "name": "nose",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-head",
+      "order": 53,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#bc7556",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-nose-p0",
+            "anchor": [
+              1,
+              15
+            ],
+            "in": [
+              1,
+              15
+            ],
+            "out": [
+              -1.6666666666666665,
+              21.666666666666668
+            ]
+          },
+          {
+            "id": "nura-nose-p1",
+            "anchor": [
+              4,
+              25
+            ],
+            "in": [
+              -0.666666666666667,
+              25
+            ],
+            "out": [
+              4,
+              25
+            ]
+          },
+          {
+            "id": "nura-nose-p2",
+            "anchor": [
+              3,
+              28
+            ],
+            "in": [
+              3,
+              28
+            ],
+            "out": [
+              -3.666666666666667,
+              27.333333333333332
+            ]
+          },
+          {
+            "id": "nura-nose-p3",
+            "anchor": [
+              -2,
+              15
+            ],
+            "in": [
+              -5.333333333333334,
+              23
+            ],
+            "out": [
+              -2,
+              15
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-smile",
+      "name": "smile",
+      "kind": "group",
+      "artboardId": "nura-board",
+      "parentId": "nura-head",
+      "order": 54,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        38
+      ],
+      "geometry": null
+    },
+    {
+      "id": "nura-mouth",
+      "name": "mouth",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-smile",
+      "order": 55,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#713f3b",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-mouth-p0",
+            "anchor": [
+              -11,
+              -2
+            ],
+            "in": [
+              -11,
+              -2
+            ],
+            "out": [
+              -3.666666666666667,
+              2
+            ]
+          },
+          {
+            "id": "nura-mouth-p1",
+            "anchor": [
+              12,
+              -2
+            ],
+            "in": [
+              4,
+              2
+            ],
+            "out": [
+              13,
+              12
+            ]
+          },
+          {
+            "id": "nura-mouth-p2",
+            "anchor": [
+              -11,
+              -2
+            ],
+            "in": [
+              -10,
+              16
+            ],
+            "out": [
+              -11,
+              -2
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-smile-light",
+      "name": "smile light",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-smile",
+      "order": 56,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#ed9f91",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-smile-light-p0",
+            "anchor": [
+              -5,
+              8
+            ],
+            "in": [
+              -5,
+              8
+            ],
+            "out": [
+              -0.33333333333333304,
+              4.666666666666666
+            ]
+          },
+          {
+            "id": "nura-smile-light-p1",
+            "anchor": [
+              8,
+              8
+            ],
+            "in": [
+              4,
+              4.666666666666666
+            ],
+            "out": [
+              3.333333333333333,
+              12
+            ]
+          },
+          {
+            "id": "nura-smile-light-p2",
+            "anchor": [
+              -5,
+              8
+            ],
+            "in": [
+              -1,
+              12
+            ],
+            "out": [
+              -5,
+              8
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nura-scarf-pin",
+      "name": "scarf pin",
+      "kind": "path",
+      "artboardId": "nura-board",
+      "parentId": "nura-head",
+      "order": 57,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        58,
+        60
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#ebc58e",
+        "skin": null,
+        "points": [
+          {
+            "id": "nura-scarf-pin-p0",
+            "anchor": [
+              5.5,
+              0
+            ],
+            "in": [
+              5.5,
+              -3.0375661239
+            ],
+            "out": [
+              5.5,
+              3.0375661239
+            ]
+          },
+          {
+            "id": "nura-scarf-pin-p1",
+            "anchor": [
+              0,
+              5.5
+            ],
+            "in": [
+              3.0375661239,
+              5.5
+            ],
+            "out": [
+              -3.0375661239,
+              5.5
+            ]
+          },
+          {
+            "id": "nura-scarf-pin-p2",
+            "anchor": [
+              -5.5,
+              0
+            ],
+            "in": [
+              -5.5,
+              3.0375661239
+            ],
+            "out": [
+              -5.5,
+              -3.0375661239
+            ]
+          },
+          {
+            "id": "nura-scarf-pin-p3",
+            "anchor": [
+              0,
+              -5.5
+            ],
+            "in": [
+              -3.0375661239,
+              -5.5
+            ],
+            "out": [
+              3.0375661239,
+              -5.5
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [
+    {
+      "id": "nura-calm",
+      "name": "Calm",
+      "artboardId": "nura-board",
+      "fps": 60,
+      "duration": 120,
+      "loop": true,
+      "tracks": [
+        {
+          "targetId": "nura-character",
+          "property": "y",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 285,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 30,
+              "value": 283,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 280,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 90,
+              "value": 283,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 285,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "nura-character",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 1.015,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "nura-character",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "nura-head",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 0.035,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "nura-waving-sleeve",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1.85,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 30,
+              "value": 1.875,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 1.8250000000000002,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 90,
+              "value": 1.875,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1.85,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "nura-left-sleeve",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 0.035,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "nura-left-eye",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 40,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 46,
+              "value": 0.08,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 52,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "nura-right-eye",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 40,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 46,
+              "value": 0.08,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 52,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "nura-smile",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 1.05,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "nura-scarf-tip",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": -0.025,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 0.04,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": -0.025,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nura-hello",
+      "name": "Hello",
+      "artboardId": "nura-board",
+      "fps": 60,
+      "duration": 120,
+      "loop": true,
+      "tracks": [
+        {
+          "targetId": "nura-character",
+          "property": "y",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 285,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 30,
+              "value": 283,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 280,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 90,
+              "value": 283,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 285,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "nura-character",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 1.015,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "nura-character",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "nura-head",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": -0.06,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 0.035,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": -0.06,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "nura-waving-sleeve",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 30,
+              "value": 0.18,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": -0.18,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 90,
+              "value": 0.18,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "nura-left-sleeve",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 0.035,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "nura-left-eye",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 40,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 46,
+              "value": 0.08,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 52,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "nura-right-eye",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 40,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 46,
+              "value": 0.08,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 52,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "nura-smile",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1.15,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 1.2,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1.15,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "nura-scarf-tip",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": -0.025,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 0.09,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": -0.025,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nura-delight",
+      "name": "Delight",
+      "artboardId": "nura-board",
+      "fps": 60,
+      "duration": 120,
+      "loop": true,
+      "tracks": [
+        {
+          "targetId": "nura-character",
+          "property": "y",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 279,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 30,
+              "value": 271.8,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 261,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 90,
+              "value": 271.8,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 279,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "nura-character",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1.025,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 0.97,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1.025,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "nura-character",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": -0.035,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 0.045,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": -0.035,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "nura-head",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": -0.1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "nura-waving-sleeve",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 30,
+              "value": 0.12,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": -0.12,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 90,
+              "value": 0.12,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "nura-left-sleeve",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0.25,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": -0.12,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0.25,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "nura-left-eye",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 40,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 46,
+              "value": 0.08,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 52,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "nura-right-eye",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 40,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 46,
+              "value": 0.08,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 52,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "nura-smile",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1.65,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 1.85,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1.65,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "nura-scarf-tip",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": -0.025,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 0.14,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": -0.025,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "machines": [
+    {
+      "id": "nura-expressions",
+      "name": "Expressions",
+      "artboardId": "nura-board",
+      "inputs": [
+        {
+          "id": "nura-expression-input",
+          "name": "expression",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "states": [
+        {
+          "id": "nura-state-0",
+          "name": "Calm",
+          "animationId": "nura-calm",
+          "position": [
+            40,
+            60
+          ]
+        },
+        {
+          "id": "nura-state-1",
+          "name": "Hello",
+          "animationId": "nura-hello",
+          "position": [
+            260,
+            60
+          ]
+        },
+        {
+          "id": "nura-state-2",
+          "name": "Delight",
+          "animationId": "nura-delight",
+          "position": [
+            480,
+            60
+          ]
+        }
+      ],
+      "entryStateId": "nura-state-0",
+      "transitions": [
+        {
+          "id": "nura-from-0-to-1",
+          "fromId": "nura-state-0",
+          "toId": "nura-state-1",
+          "conditions": [
+            {
+              "inputId": "nura-expression-input",
+              "op": "eq",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "nura-from-0-to-2",
+          "fromId": "nura-state-0",
+          "toId": "nura-state-2",
+          "conditions": [
+            {
+              "inputId": "nura-expression-input",
+              "op": "eq",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "id": "nura-from-1-to-0",
+          "fromId": "nura-state-1",
+          "toId": "nura-state-0",
+          "conditions": [
+            {
+              "inputId": "nura-expression-input",
+              "op": "eq",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": "nura-from-1-to-2",
+          "fromId": "nura-state-1",
+          "toId": "nura-state-2",
+          "conditions": [
+            {
+              "inputId": "nura-expression-input",
+              "op": "eq",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "id": "nura-from-2-to-0",
+          "fromId": "nura-state-2",
+          "toId": "nura-state-0",
+          "conditions": [
+            {
+              "inputId": "nura-expression-input",
+              "op": "eq",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": "nura-from-2-to-1",
+          "fromId": "nura-state-2",
+          "toId": "nura-state-1",
+          "conditions": [
+            {
+              "inputId": "nura-expression-input",
+              "op": "eq",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "listeners": []
+    }
+  ],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "nura-board": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  }
+}

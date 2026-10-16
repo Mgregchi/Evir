@@ -39,6 +39,8 @@ Browser touch dispatch is not a physical-device measurement. Automated accessibi
 
 This is the consolidated list requested by the user. Historical research documents describe their earlier snapshots; use this list for subsequent work.
 
+The [expressive vector-character collection](40-expressive-vector-characters.md) adds original Momo/Nura/Otto art, named editable layers, three expression loops, discrete interaction controls and a weighted scarf. It uses the existing engine subset; native stroke paints, broader import, richer rigging/blending and text/layout remain open. Pressure-brush work is separately proposed in PR #33 until merged. Physical testing remains postponed and hosted backend remains deferred.
+
 | Area | Status and next step | Completion evidence |
 | --- | --- | --- |
 | Panel/layer/navigation workflows | Implemented in this increment: widths, hierarchy and bulk organization, touch navigation, bottom sheets. Relative layer placement/dragging, graph selection/navigation/dragging, key navigation and matching-static-parent key rebasing are implemented in [workflow/recovery](31-studio-workflow-and-recovery.md). General animation rebasing remains open. | Unit/browser tasks, original source/export checks, user feedback. |
