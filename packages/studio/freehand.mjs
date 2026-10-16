@@ -1,5 +1,5 @@
 import { PenDraft } from "./pen.mjs";
-import { newId } from "@evir/project-model";
+import { defaultStroke, newId } from "@evir/project-model";
 import { mapPoint } from "@evir/runtime/geometry";
 import { brushOutline } from "./brush.mjs";
 
@@ -164,7 +164,7 @@ export class FreehandDraft extends PenDraft {
     } = options;
     if (!Number.isFinite(smoothing) || smoothing < 0.5 || smoothing > 8)
       throw Error("Choose smoothing between 0.5 and 8 screen pixels.");
-    if (!["shape", "brush"].includes(style) || typeof closed !== "boolean")
+    if (!["shape", "brush", "stroke"].includes(style) || typeof closed !== "boolean")
       throw Error("Invalid drawing style.");
     brushOutline([], { width, pressure });
     const previous = {
@@ -242,7 +242,7 @@ export class FreehandDraft extends PenDraft {
           })
         : fitFreehand(this.samples, {
             tolerance: this.tolerance,
-            closed: this.closed,
+            closed: this.style === "stroke" ? false : this.closed,
           });
     this.points = geometry.points.map((p) =>
       Object.fromEntries([
@@ -258,6 +258,8 @@ export class FreehandDraft extends PenDraft {
     if (this.dragging)
       throw Error("Release the pointer before finishing the shape.");
     this.refit();
-    return super.geometry(this.style === "brush" || this.closed);
+    const geometry = super.geometry(this.style === "stroke" ? false : this.style === "brush" || this.closed);
+    if (this.style === "stroke") {geometry.fill=null;geometry.stroke={...defaultStroke("#64d9ad"),width:this.width};}
+    return geometry;
   }
 }

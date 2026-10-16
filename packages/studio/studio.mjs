@@ -1,3 +1,4 @@
+import { upgradeAdvanced } from "@evir/project-model";
 import { mountAdvanced, sheet } from "./advanced.mjs";
 import { mountLiveCommands } from "./live-commands.mjs";
 import { mountRiveViewer } from "./rive-viewer.mjs";
@@ -27,6 +28,8 @@ import {
   removeSubtree,
   reorder,
 } from "@evir/authoring";
+import { strokeControls } from "./stroke.mjs";
+import { strokePathOnContext, strokeStyle } from "@evir/renderer-canvas";
 import { paintControls } from "./paint.mjs";
 import { mountAuthoring } from "./authoring.mjs";
 import { PenDraft } from "./pen.mjs";
@@ -387,6 +390,7 @@ function finishPen(closed) {
         if (draft instanceof ContinuationDraft) id = draft.apply(p, geometry);
         else {
           id = addNode(p, "path", draft.parentId, draft.artboardId);
+          if (geometry.stroke) upgradeAdvanced(p);
           p.nodes.find((n) => n.id === id).geometry = geometry;
         }
       })
@@ -433,10 +437,10 @@ function drawPen(zoom) {
   }
   if (tool === "freehand") {
     $("#selection-status").textContent = penDraft
-      ? `Unsaved ${penDraft.style === "brush" ? "brush outline" : "shape"} · ${penDraft.samples.length} samples · ${penDraft.points.length} points · Esc to cancel`
-      : drawingSettings.style === "brush" ? "Drag a brush stroke, then review its editable outline." : "Drag a shape, then review and finish. Drawing options adds a brush.";
+      ? `Unsaved ${penDraft.style === "brush" ? "brush outline" : penDraft.style === "stroke" ? "centerline stroke" : "shape"} · ${penDraft.samples.length} samples · ${penDraft.points.length} points · Esc to cancel`
+      : drawingSettings.style === "stroke" ? "Draw an editable centerline. Change width later in Properties → Edit stroke." : drawingSettings.style === "brush" ? "Drag a brush stroke, then review its editable outline." : "Drag a shape, then review and finish. Drawing options adds a brush.";
     $("#finish-path").disabled =
-      !penDraft || penDraft.dragging || penDraft.samples.length < (penDraft.style === "brush" ? 2 : 3);
+      !penDraft || penDraft.dragging || penDraft.samples.length < (penDraft.style !== "shape" ? 2 : 3);
   }
   if (penDraft instanceof FreehandDraft && penDraft.dragging) {
     ctx.strokeStyle = "#89e4c4";
@@ -448,6 +452,11 @@ function drawPen(zoom) {
       ctx.closePath(); ctx.fillStyle = "#64d9ad"; ctx.fill();
       return;
     }
+    if (penDraft.style === "stroke") {
+      ctx.save();ctx.transform(...penDraft.matrix);ctx.lineWidth=penDraft.width;ctx.lineCap="round";ctx.lineJoin="round";ctx.beginPath();
+      penDraft.samples.forEach((p,i)=>{const local=mapPoint(penDraft.inverse,p);if(i)ctx.lineTo(...local);else ctx.moveTo(...local);});
+      ctx.stroke();ctx.restore();return;
+    }
     ctx.beginPath();
     penDraft.samples.forEach((p, i) =>
       i ? ctx.lineTo(...p) : ctx.moveTo(...p),
@@ -457,6 +466,10 @@ function drawPen(zoom) {
   }
   if (!penDraft?.points.length) return;
   const points = penDraft.worldPoints();
+  if (penDraft instanceof FreehandDraft && penDraft.style === "stroke") {
+    ctx.save();ctx.transform(...penDraft.matrix);const g=penDraft.geometry();
+    strokeStyle(ctx,g);strokePathOnContext(ctx,g);ctx.stroke();ctx.restore();
+  }
   ctx.lineWidth = 1.5 / zoom;
   ctx.strokeStyle = "#308c70";
   pathOnContext(ctx, points, penDraft instanceof FreehandDraft && penDraft.style === "brush");
@@ -1002,6 +1015,7 @@ function properties(p) {
     );
     host.append(size);
   }
+  if (["rectangle","path"].includes(n.kind)) host.append(strokeControls({project:p,node:n,commit:edit,notice,disabled:locked || authoring?.mode!=="Design"}));
   if (!locked) {
     authoring?.editGeometry(p, n, host);
     if (n.kind === "path" && authoring?.mode === "Design")
@@ -1383,7 +1397,14 @@ function coordinates(event) {
 function hit(p, world) {
   for (const { n } of flattened(p).reverse()) {
     if (!editable(p, n, "hidden") || !editable(p, n, "locked")) continue;
-    if (n.kind === "path") {
+    if (["path","rectangle"].includes(n.kind) && n.geometry.stroke?.width) {
+      try {
+        const local=mapPoint(inverse(worldTransform(p,n.id)),[world.x,world.y]);
+        hitContext.save();strokeStyle(hitContext,n.geometry);strokePathOnContext(hitContext,n.geometry);
+        const inside=hitContext.isPointInStroke(...local);hitContext.restore();if(inside)return n;
+      } catch {}
+    }
+    if (n.kind === "path" && n.geometry.fill !== null) {
       pathOnContext(hitContext, worldPoints(p, n), n.geometry.closed);
       if (hitContext.isPointInPath(world.x, world.y)) return n;
     }
@@ -1407,7 +1428,7 @@ function hit(p, world) {
       )
         return n;
     }
-    if (n.kind !== "rectangle") continue;
+    if (n.kind !== "rectangle" || n.geometry.fill === null) continue;
     try {
       const local = point(inverse(worldTransform(p, n.id)), world.x, world.y);
       if (
@@ -1770,7 +1791,7 @@ function finishDrag(e) {
     } catch (error) {
       if (
         penDraft instanceof FreehandDraft &&
-        (penDraft.samples.length < (penDraft.style === "brush" ? 2 : 3) || penDraft.samples.length >= 4096)
+        (penDraft.samples.length < (penDraft.style !== "shape" ? 2 : 3) || penDraft.samples.length >= 4096)
       )
         cancelPen();
       notice(error);
@@ -1957,9 +1978,12 @@ $("#drawing-options").onclick = () => {
   drawingSheet.showModal();
 };
 function drawingVisibility() {
-  const brush = $("#drawing-style").value === "brush";
-  $("#drawing-brush-options").hidden = !brush;
-  $("#drawing-closed-field").hidden = brush;
+  const style = $("#drawing-style").value,brush=style==="brush";
+  $("#drawing-brush-options").hidden = style==="shape";
+  $("#drawing-pressure-field").hidden = !brush;
+  $("#drawing-width-label").textContent=style==="stroke"?"Width (local units)":"Width (artboard units)";
+  $("#drawing-brush-note").textContent=brush?"Pen pressure varies width. Mouse and touch keep the chosen width. Round ends become editable outline points; width cannot be changed after finishing.":"Retain the curve with a constant width. After finishing, Edit stroke changes width, caps, joins, dashes and trim. Pen pressure applies to Brush outline.";
+  $("#drawing-closed-field").hidden = style!=="shape";
 }
 $("#drawing-style").onchange = drawingVisibility;
 $("#drawing-apply").onclick = () => {

@@ -2,6 +2,7 @@ import {
   worldTransform,
   inverse,
   mapPoint,
+  strokeValue,
   paintValue,
   isColorProperty,
   propertiesFor,
@@ -97,7 +98,7 @@ export function mixPoses(a, b, t) {
     ];
     for (const k of propertiesFor(n).filter(
       (k) =>
-        k.startsWith("paint.") ||
+        k.startsWith("paint.") || k.startsWith("stroke.") ||
         ["width", "height", "length", "fontSize", "fill"].includes(k),
     )) {
       const from = getValue(n, k),
@@ -105,7 +106,8 @@ export function mixPoses(a, b, t) {
         value = isColorProperty(k)
           ? mixColor(from, to, t)
           : from + (to - from) * t;
-      if (k.startsWith("paint.")) paintValue(n, k, value);
+      if (k.startsWith("stroke.")) strokeValue(n, k, value);
+      else if (k.startsWith("paint.")) paintValue(n, k, value);
       else n.geometry[k] = value;
     }
   }

@@ -1627,3 +1627,12 @@ body > #notice {
 #project-switch-status::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); animation: project-breathe 1.2s ease-in-out infinite alternate; }
 @keyframes project-breathe { from { opacity: .5; transform: scale(.8); } to { opacity: 1; transform: scale(1.1); } }
 @media (prefers-reduced-motion: reduce) { #project-switch-status::before { animation: none; } }
+
+/* Stroke drafts use the same gentle sheet entrance; actions stay reachable. */
+#stroke-sheet { --stroke-edge:28px; scroll-padding-block:56px 80px; }
+#stroke-sheet > h2 { position:sticky; top:calc(-1 * var(--stroke-edge)); z-index:2; background:var(--panel); padding-block:8px; border-bottom:1px solid var(--line); }
+#stroke-sheet .dialog-actions { position:sticky; bottom:calc(-1 * var(--stroke-edge)); z-index:2; background:var(--panel); padding-block:12px var(--stroke-edge); margin-bottom:calc(-1 * var(--stroke-edge)); }
+.stroke-fields .field { min-width:0; }
+@media (max-width:850px) {
+  dialog#stroke-sheet { --stroke-edge:24px; width:100%; max-width:none; max-height:85dvh; bottom:0; border-radius:18px 18px 0 0; padding:24px 20px max(24px,env(safe-area-inset-bottom)); }
+}

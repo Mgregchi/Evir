@@ -7,6 +7,7 @@ import {
   inverse,
   validateProject,
   upgradeAdvanced,
+  strokeValue,
 } from "@evir/project-model";
 import { shareState } from "./shared-state.mjs";
 import { quantize, components } from "@evir/runtime/geometry";
@@ -420,6 +421,7 @@ export function setWeight(p, nodeId, pointId, control, boneId, value) {
   );
 }
 export function setValue(n, property, value) {
+  if (property.startsWith("stroke.")) return strokeValue(n, property, value);
   if (["width", "height", "length", "fill"].includes(property)) {
     n.geometry[property] = value;
     return;
@@ -468,7 +470,7 @@ export function setKey(
   value,
   easing = { type: "linear", curve: null },
 ) {
-  if (property.startsWith("paint.")) upgradeAdvanced(p);
+  if (property.startsWith("paint.") || property.startsWith("stroke.")) upgradeAdvanced(p);
   const a = p.animations.find((a) => a.id === animationId);
   let t = a.tracks.find(
     (t) => t.targetId === targetId && t.property === property,

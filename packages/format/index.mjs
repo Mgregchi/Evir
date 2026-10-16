@@ -4,6 +4,7 @@ import {
   isColorProperty,
   pngSize,
   playbackSettings,
+  STROKE_CAPS, STROKE_JOINS,
 } from "@evir/project-model";
 import { components, quantize, getValue } from "@evir/runtime/geometry";
 const OP = { eq: 0, ne: 1, le: 2, ge: 3, lt: 4, gt: 5 }; // pinned TransitionConditionOp
@@ -384,6 +385,7 @@ export function compileProject(project, schema = runtimeSchema) {
           const feather = project.advanced?.feathers.find(
             (f) => f.targetId === n.id,
           );
+          if (n.geometry.fill !== null) {
           const fill = componentRecord("Fill", {
             parentId: index,
             ...(feather ? { fillRule: 2 } : {}),
@@ -435,6 +437,25 @@ export function compileProject(project, schema = runtimeSchema) {
                 type: "GradientStop",
                 property: "colorValue",
               });
+            }
+          }
+          }
+          const s = n.geometry.stroke;
+          if (s) {
+            const stroke = componentRecord("Stroke", {parentId:index, thickness:s.width,
+              cap:STROKE_CAPS.indexOf(s.cap), join:STROKE_JOINS.indexOf(s.join), transformAffectsStroke:true}).index;
+            targets.set(n.id+"/stroke.width",{index:stroke,type:"Stroke",property:"thickness"});
+            const solid=componentRecord("SolidColor",{parentId:stroke,colorValue:color(s.color)}).index;
+            targets.set(n.id+"/stroke.color",{index:solid,type:"SolidColor",property:"colorValue"});
+            if(s.trim.start!==0 || s.trim.end!==1 || s.trim.offset!==0 || project.animations.some(a=>a.tracks.some(t=>t.targetId===n.id && t.property.startsWith("stroke.trim")))) {
+            const trim=componentRecord("TrimPath",{parentId:stroke,start:s.trim.start,end:s.trim.end,offset:s.trim.offset,modeValue:1}).index;
+            for(const [property,field] of [["trimStart","start"],["trimEnd","end"],["trimOffset","offset"]])
+              targets.set(n.id+"/stroke."+property,{index:trim,type:"TrimPath",property:field});
+            }
+            if(s.dash.length) {
+              const dash=componentRecord("DashPath",{parentId:stroke,offset:s.dashOffset,offsetIsPercentage:false}).index;
+              for(const length of s.dash)componentRecord("Dash",{parentId:dash,length,lengthIsPercentage:false});
+              targets.set(n.id+"/stroke.dashOffset",{index:dash,type:"DashPath",property:"offset"});
             }
           }
         }

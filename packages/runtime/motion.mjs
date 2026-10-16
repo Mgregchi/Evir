@@ -1,4 +1,4 @@
-import { paintValue, isColorProperty } from "@evir/project-model";
+import { strokeValue, paintValue, isColorProperty } from "@evir/project-model";
 import { solveIK, mixPoses } from "./advanced.mjs";
 import { components } from "./geometry.mjs";
 import { playbackSample } from './playback.mjs';
@@ -96,7 +96,8 @@ export function evaluateLayers(p, layers, {applyConstraints = true} = {}) {
   }
   for (const [id, values] of changes)
     for (const [property, value] of Object.entries(values))
-      if (property.startsWith("paint."))
+      if (property.startsWith("stroke.")) strokeValue(pose.nodes.find(n => n.id === id), property, value);
+      else if (property.startsWith("paint."))
         paintValue(
           pose.nodes.find((n) => n.id === id),
           property,

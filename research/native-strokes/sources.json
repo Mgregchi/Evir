@@ -1,0 +1,172 @@
+{
+  "checkedAt": "2026-10-16T16:06:06.873982+00:00",
+  "sources": [
+    {
+      "name": "stroke",
+      "url": "https://raw.githubusercontent.com/rive-app/rive-cpp/master/src/shapes/paint/stroke.cpp",
+      "finalUrl": "https://raw.githubusercontent.com/rive-app/rive-cpp/master/src/shapes/paint/stroke.cpp",
+      "bytes": 3577,
+      "sha256": "c4a35251cb2e70bf2934babd26dee101b9c5bff7208ad6058eedf4c1410c9279",
+      "status": 200
+    },
+    {
+      "name": "stroke-header",
+      "url": "https://raw.githubusercontent.com/rive-app/rive-cpp/master/include/rive/generated/shapes/paint/stroke_base.hpp",
+      "finalUrl": "https://raw.githubusercontent.com/rive-app/rive-cpp/master/include/rive/generated/shapes/paint/stroke_base.hpp",
+      "bytes": 4331,
+      "sha256": "479dba1b8073e94d5ae2f910aa57157a60701a445725a0c3cbdc642152b0bb42",
+      "status": 200
+    },
+    {
+      "name": "dash",
+      "url": "https://raw.githubusercontent.com/rive-app/rive-cpp/master/src/shapes/paint/dash_path.cpp",
+      "finalUrl": "https://raw.githubusercontent.com/rive-app/rive-cpp/master/src/shapes/paint/dash_path.cpp",
+      "bytes": 6035,
+      "sha256": "a82d472fcf15b0a738fa7dda3be8db4891cdf24f151daadabcd1334b05746af3",
+      "status": 200
+    },
+    {
+      "name": "dash-header",
+      "url": "https://raw.githubusercontent.com/rive-app/rive-cpp/master/include/rive/generated/shapes/paint/dash_base.hpp",
+      "finalUrl": "https://raw.githubusercontent.com/rive-app/rive-cpp/master/include/rive/generated/shapes/paint/dash_base.hpp",
+      "bytes": 2382,
+      "sha256": "3c3c88795ce10bc98790132b4fc0ec3d8333ee2848cf901b5ee987bb796e0d9d",
+      "status": 200
+    },
+    {
+      "name": "trim",
+      "url": "https://raw.githubusercontent.com/rive-app/rive-cpp/master/src/shapes/paint/trim_path.cpp",
+      "finalUrl": "https://raw.githubusercontent.com/rive-app/rive-cpp/master/src/shapes/paint/trim_path.cpp",
+      "bytes": 8120,
+      "sha256": "8a4e0bf5219afab39ab585207be8051a2ab9d10c0901139737792284c4906e43",
+      "status": 200
+    },
+    {
+      "name": "renderer",
+      "url": "https://raw.githubusercontent.com/rive-app/rive-cpp/master/include/rive/renderer.hpp",
+      "finalUrl": "https://raw.githubusercontent.com/rive-app/rive-cpp/master/include/rive/renderer.hpp",
+      "bytes": 14354,
+      "sha256": "73cbad354954d49c829d5e17cfb8d8bafedc6587f935a214e04e642a0d34b1f4",
+      "status": 200
+    },
+    {
+      "name": "rive-docs",
+      "url": "https://rive.app/docs/editor/shapes/stroke.md",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "canvas",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash",
+      "finalUrl": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash",
+      "bytes": 162421,
+      "sha256": "32b573a673bab845af1bc4d2376efbbd4ede23a4559084485de6fdf40101dcb8",
+      "status": 200
+    },
+    {
+      "name": "aria",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/",
+      "finalUrl": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/",
+      "bytes": 43147,
+      "sha256": "9a5c9f28af1fc51649f55d72f1d46daf0d115bdad5ea363742d5c92120c662a4",
+      "status": 200
+    },
+    {
+      "name": "pinned-dash.cpp",
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/shapes/paint/dash.cpp",
+      "status": 200,
+      "bytes": 972,
+      "sha256": "29d1388edcf0650147b5a168a302fe261ede905a234dc48288eb2ff0671d1e32"
+    },
+    {
+      "name": "pinned-stroke_cap.hpp",
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/include/rive/shapes/paint/stroke_cap.hpp",
+      "status": 200,
+      "bytes": 396,
+      "sha256": "e67fff22c96a1ef98cfe9310cd58e51811bb56fb54d7285a9692dc5f16689a23"
+    },
+    {
+      "name": "pinned-stroke_join.hpp",
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/include/rive/shapes/paint/stroke_join.hpp",
+      "status": 200,
+      "bytes": 438,
+      "sha256": "c0918a593706a1da2544e3066b8c787ceb75995360e8ecd2eac83f7c4ddee1b1"
+    },
+    {
+      "name": "pinned-trim_path.cpp",
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/shapes/paint/trim_path.cpp",
+      "status": 200,
+      "bytes": 8120,
+      "sha256": "8a4e0bf5219afab39ab585207be8051a2ab9d10c0901139737792284c4906e43"
+    },
+    {
+      "name": "pinned-dash_path.cpp",
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/shapes/paint/dash_path.cpp",
+      "status": 200,
+      "bytes": 6035,
+      "sha256": "a82d472fcf15b0a738fa7dda3be8db4891cdf24f151daadabcd1334b05746af3"
+    },
+    {
+      "name": "pinned-stroke_base.hpp",
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/include/rive/generated/shapes/paint/stroke_base.hpp",
+      "status": 200,
+      "bytes": 4907,
+      "sha256": "db605ff51073fdc7099ecdbcfefa6f92cb915a42dc31ba471df8ba0f2d3bc5b5"
+    },
+    {
+      "name": "pinned-trim_path_base.hpp",
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/include/rive/generated/shapes/paint/trim_path_base.hpp",
+      "status": 200,
+      "bytes": 3788,
+      "sha256": "783f597cb607387f06da98de7f3ee1f63bc67523e9c5aab9013926b3aa326c15"
+    },
+    {
+      "name": "pinned-shape_paint.cpp",
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/shapes/paint/shape_paint.cpp",
+      "status": 200,
+      "bytes": 10787,
+      "sha256": "3fcb6d60e2fcf3e323262837c7a25004218399a13cf0399157a619d058133398"
+    },
+    {
+      "name": "rive-fill-stroke",
+      "url": "https://rive.app/docs/editor/fundamentals/fill-and-stroke.md",
+      "status": 200,
+      "bytes": 15479,
+      "sha256": "b242ef5e1c8faf3f229d016f26c61f0cf3540b2e3f9bc3c7d671c5f2edee29bb"
+    },
+    {
+      "name": "pinned-trim-header",
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/include/rive/shapes/paint/trim_path.hpp",
+      "status": 200,
+      "bytes": 1668,
+      "sha256": "cf26b89536e05edd9c850c760e2845a65ea65f4df887249afd64cbdd96b972fc"
+    },
+    {
+      "name": "pinned-dash-path-base",
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/include/rive/generated/shapes/paint/dash_path_base.hpp",
+      "status": 200,
+      "bytes": 2873,
+      "sha256": "4b9d0703f1f99a84eefbc60d9bf51db563b94d08842ad41a9f6329119084d7e9"
+    },
+    {
+      "name": "pinned-dash-base",
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/include/rive/generated/shapes/paint/dash_base.hpp",
+      "status": 200,
+      "bytes": 2750,
+      "sha256": "b51cfddf1f34184bc625833528439f20924d134c54ff7af9603e014c6f206a54"
+    },
+    {
+      "name": "official-js-default-animation",
+      "kind": "installed primary runtime implementation",
+      "package": "@rive-app/canvas",
+      "version": "2.44.0",
+      "path": "node_modules/@rive-app/canvas/rive.js",
+      "sha256": "e55ad4f1888ff9f42ce70490c1fee08adf071ac14c1b27b24ea701de57d457b5",
+      "observation": "Animator.prototype.atLeastOne initializes the first linear animation when none is specified, including paused loading. Static geometry comparisons therefore use separate animation-free exports."
+    }
+  ],
+  "notes": [
+    "The initial editor/shapes/stroke.md request returned 404; it supplied no evidence.",
+    "Pinned runtime trim_path.hpp defines sequential=1 and synchronized=2. An initial modeValue=0 failed native loading, was corrected, and both native backends passed.",
+    "Latest upstream material is exploratory; emitted field IDs follow the bundled schema commit and actual acceptance follows official JS runtime 2.44.0."
+  ]
+}

@@ -14,12 +14,12 @@ export function applyCommands(p,commands,board){
     if(c.op==='create_node'){
       requireShape(['node']);if(c.node?.artboardId!==board)fail('SCOPE','Node must belong to the paired artboard');
       if(c.node.parentId!==null)writable(p,node(p,c.node.parentId,board));
-      text(c.node.name,'Node name',160);p.nodes.push(structuredClone(c.node));changed.add(c.node.id);
+      text(c.node.name,'Node name',160);if(c.node.geometry?.stroke)upgradeAdvanced(p);p.nodes.push(structuredClone(c.node));changed.add(c.node.id);
     }else if(c.op==='update_node'){
       requireShape(['nodeId','changes']);const n=node(p,c.nodeId,board);writable(p,n);object(c.changes,[],['name','transform','geometry']);
       if(!Object.keys(c.changes).length)fail('INVALID_ARGUMENT','Node changes are empty');
       if('name'in c.changes)text(c.changes.name,'Node name',160);
-      Object.assign(n,structuredClone(c.changes));changed.add(n.id);
+      Object.assign(n,structuredClone(c.changes));if(n.geometry?.stroke)upgradeAdvanced(p);changed.add(n.id);
     }else if(c.op==='remove_node'){
       requireShape(['nodeId']);const n=node(p,c.nodeId,board);writable(p,n);
       const descendants=new Set([n.id]);for(let size=-1;size!==descendants.size;){size=descendants.size;for(const v of p.nodes)if(descendants.has(v.parentId)){writable(p,v);descendants.add(v.id);}}

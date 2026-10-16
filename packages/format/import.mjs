@@ -5,6 +5,7 @@ import {
   ProjectError,
   newId,
   encodeBase64,
+  defaultStroke, STROKE_CAPS, STROKE_JOINS,
 } from "@evir/project-model";
 import schema from "./schema/runtime.json" with { type: "json" };
 const types = new Map(
@@ -172,6 +173,7 @@ const editableTypes = new Set([
   "Skin",
   "Tendon",
   "Fill",
+  "Stroke", "TrimPath", "DashPath", "Dash",
   "SolidColor",
   "LinearGradient",
   "RadialGradient",
@@ -267,6 +269,10 @@ async function decodeProject(input) {
     Skin: [...common, "xx", "xy", "yx", "yy", "tx", "ty"],
     Tendon: [...common, "boneId", "xx", "xy", "yx", "yy", "tx", "ty"],
     Fill: [...common, "fillRule"],
+    Stroke: [...common,"thickness","cap","join","transformAffectsStroke","position"],
+    TrimPath: [...common,"start","end","offset","modeValue"],
+    DashPath: [...common,"offset","offsetIsPercentage"],
+    Dash: [...common,"length","lengthIsPercentage"],
     SolidColor: [...common, "colorValue"],
     LinearGradient: [...common, "startX", "startY", "endX", "endY"],
     RadialGradient: [...common, "startX", "startY", "endX", "endY"],
@@ -384,6 +390,11 @@ async function decodeProject(input) {
       childrenByParent.get(parent).push({ r, i });
     }
     const children = (id) => childrenByParent.get(id) ?? [];
+    for (const r of components) {
+      const parent=components[r.fields.parentId ?? 0];
+      const required={Stroke:"Shape",TrimPath:"Stroke",DashPath:"Stroke",Dash:"DashPath"}[r.type];
+      if(required && parent?.type!==required)fail(r,"unsupported stroke-effect parent; import would discard data");
+    }
     const single = (list, r, label) => {
       if (list.length !== 1) fail(r, "expected exactly one " + label);
       return list[0];
@@ -436,6 +447,37 @@ async function decodeProject(input) {
         })),
       };
     };
+    const stroke = (owner, node) => {
+      const list=children(owner).filter(v=>v.r.type==="Stroke");
+      if(!list.length)return null;
+      const {r,i}=single(list,components[owner],"stroke"),f=r.fields;
+      if(!(f.transformAffectsStroke ?? true) || (f.position ?? 0)!==0)fail(r,"only centered, transform-scaled strokes are editable");
+      const s=defaultStroke();s.width=f.thickness ?? 1;s.cap=STROKE_CAPS[f.cap ?? 0];s.join=STROKE_JOINS[f.join ?? 0];
+      const paint=single(children(i).filter(v=>["SolidColor","LinearGradient","RadialGradient"].includes(v.r.type)),r,"stroke paint");
+      if(paint.r.type!=="SolidColor")fail(paint.r,"gradient strokes are outside the editable subset");
+      s.color=color(paint.r.fields.colorValue ?? 0xff000000);
+      targets.set(i+"/47",{node,property:"stroke.width"});targets.set(paint.i+"/37",{node,property:"stroke.color"});
+      const trims=children(i).filter(v=>v.r.type==="TrimPath"),dashes=children(i).filter(v=>v.r.type==="DashPath");
+      if(trims.length) {
+        const t=single(trims,r,"trim effect");
+        if((t.r.fields.modeValue ?? 0)!==1)fail(t.r,"only sequential single-contour trim is editable");
+        s.trim={start:t.r.fields.start ?? 0,end:t.r.fields.end ?? 0,offset:t.r.fields.offset ?? 0};
+        for(const [key,property] of [[114,"stroke.trimStart"],[115,"stroke.trimEnd"],[116,"stroke.trimOffset"]]) targets.set(t.i+"/"+key,{node,property});
+      }
+      if(dashes.length) {
+        const d=single(dashes,r,"dash effect");
+        if(d.r.fields.offsetIsPercentage ?? false)fail(d.r,"percentage dash offsets are outside the editable subset");
+        if(trims.length && trims[0].i>d.i)fail(d.r,"only trim-before-dash effect order is editable");
+        s.dashOffset=d.r.fields.offset ?? 0;
+        s.dash=children(d.i).filter(v=>v.r.type==="Dash").map(v=>{
+          if(v.r.fields.lengthIsPercentage ?? false)fail(v.r,"percentage dash lengths are outside the editable subset");
+          return v.r.fields.length ?? 0;
+        });
+        if(!s.dash.length)fail(d.r,"empty dash effect would hide the stroke");
+        targets.set(d.i+"/690",{node,property:"stroke.dashOffset"});
+      }
+      return s;
+    };
     for (let i = 1; i < components.length; i++) {
       const r = components[i];
       if (
@@ -480,7 +522,10 @@ async function decodeProject(input) {
           r,
           "shape contour",
         );
-        n.geometry = { fill: fill(i, id) };
+        const fills=children(i).filter(v=>v.r.type==="Fill"),s=stroke(i,id);
+        if(fills.length>1 || (!fills.length && !s))fail(r,"expected one fill and/or one supported stroke");
+        if(s && fills.length && children(i).find(v=>v.r.type==="Stroke").i<fills[0].i)fail(r,"only fill-before-stroke paint order is editable");
+        n.geometry = {fill: fills.length ? fill(i,id) : null, ...(s ? {stroke:s} : {})};
         if (shape.r.type === "Rectangle") {
           n.kind = "rectangle";
           if (
