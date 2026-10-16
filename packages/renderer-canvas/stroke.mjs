@@ -87,7 +87,7 @@ export function strokeContours(g) {
   return dashed;
 }
 export function strokeStyle(ctx,g) {
-  const s=g.stroke;ctx.lineWidth=s.width;ctx.lineCap=s.cap;ctx.lineJoin=s.join;ctx.miterLimit=4;ctx.strokeStyle=s.color;
+  const s=g.stroke;ctx.setLineDash([]);ctx.lineDashOffset=0;ctx.lineWidth=s.width;ctx.lineCap=s.cap;ctx.lineJoin=s.join;ctx.miterLimit=4;ctx.strokeStyle=s.color;
 }
 export function strokePathOnContext(ctx,g) {
   ctx.beginPath();

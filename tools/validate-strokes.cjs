@@ -21,7 +21,7 @@ const {run}=require('./browser.cjs'),gpu=require('./gpu_diagnostics.cjs');
           player.stopRendering();if(animated)player.scrub(animation,frame/60);player.drawFrame();player.stopRendering();
         },{name:p.name,animated:frame!==null&&!!p.animations.length,frame,animation:p.animations[0]?.name});
         const expected=await page.evaluate(async({p,frame})=>{
-          const {CanvasRenderer,evaluate}=await import('/tools/.test-build/oracle.mjs');const c=document.createElement('canvas');c.width=c.height=256;const r=new CanvasRenderer(c.getContext('2d'));r.draw(evaluate(p,frame===null?undefined:p.animations[0]?.id,frame ?? 0),p.artboards[0].id);r.dispose();return Array.from(c.getContext('2d').getImageData(0,0,256,256).data);
+          const {CanvasRenderer,evaluate}=await import('/tools/.test-build/oracle.mjs');const c=document.createElement('canvas');c.width=c.height=256;const ctx=c.getContext('2d');ctx.setLineDash([3,20]);ctx.lineDashOffset=9;const r=new CanvasRenderer(ctx);r.draw(evaluate(p,frame===null?undefined:p.animations[0]?.id,frame ?? 0),p.artboards[0].id);if(ctx.getLineDash().join(',')!=='3,20'||ctx.lineDashOffset!==9)throw Error('Renderer changed host paint state');r.dispose();return Array.from(c.getContext('2d').getImageData(0,0,256,256).data);
         },{p,frame});
         const actual=backend==='canvas'?await page.evaluate(()=>Array.from(document.querySelector('#canvas').getContext('2d').getImageData(0,0,256,256).data)):PNG.sync.read(await page.locator('#canvas').screenshot({omitBackground:true})).data;
         let error=0,covered=0,expectedCovered=0;for(let i=0;i<actual.length;i++){error+=Math.abs(actual[i]-expected[i]);if(i%4===3){if(actual[i])covered++;if(expected[i])expectedCovered++;}}
