@@ -92,11 +92,22 @@ const { run } = require("../../tools/browser.cjs");
         await p.evaluate(() => evirStudio.snapshot().nodes),
         sprig.nodes,
       );
+      // Opening a project can schedule a fitted-camera recovery write after
+      // layout. Establish a settled revision before opening the competing tab.
+      await p.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+      await saved(p);
+      const revision = () => p.evaluate(async()=>{
+        const {ProjectRecovery}=await import('/packages/studio/recovery.mjs');
+        const recovery=new ProjectRecovery();
+        try{return (await recovery.read()).session;}finally{await recovery.close();}
+      });
+      const beforeOpening=await revision();
       // Two actual tabs share one revision. Opening the second tab must not write it.
       const other = await context.newPage();
       await other.goto(studio);
       await other.waitForFunction(() => window.evirStudio);
       await saved(other);
+      assert.deepEqual(await revision(),beforeOpening,"opening a second tab preserves the saved project revision");
       await p.locator("#project-name").fill("Sprig from first tab");
       await p.locator("#project-name").dispatchEvent("change");
       await saved(p);
