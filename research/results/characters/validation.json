@@ -127,5 +127,32 @@
     "Broader editable Editor-file import and renderer parity",
     "General rigging/weight painting, richer blending and text/layout",
     "Physical tests postponed; human/accessibility sessions unproven; hosted backend deferred"
-  ]
+  ],
+  "ci": {
+    "status": "Blocked before either job started; no remote CI validation executed",
+    "observedCodeHead": "619568ae1f232d635b471e2e64e0609bd711df98",
+    "pr": "https://github.com/Mgregchi/Evir/pull/34",
+    "annotation": "The job was not started because your account is locked due to a billing issue.",
+    "jobs": [
+      {
+        "workflow": "Runtime package validation",
+        "url": "https://github.com/Mgregchi/Evir/actions/runs/38871588319/job/116876688064",
+        "executedSteps": 0
+      },
+      {
+        "workflow": "Web and Studio validation",
+        "url": "https://github.com/Mgregchi/Evir/actions/runs/38871588155/job/116876687176",
+        "executedSteps": 0
+      }
+    ],
+    "followupCommitScope": "Validation metadata only; tested application code unchanged."
+  },
+  "integrationPreview": {
+    "command": "git merge-tree --write-tree --name-only HEAD feature/studio-pressure-brush",
+    "pressureHead": "b06eac404ebf3ba734525bd295e0c1d0ad61e77d",
+    "characterCodeHead": "619568ae1f232d635b471e2e64e0609bd711df98",
+    "exitCode": 0,
+    "conflicts": [],
+    "scope": "Preview tree only; no branch was merged."
+  }
 }
