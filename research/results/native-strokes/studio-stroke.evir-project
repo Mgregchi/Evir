@@ -1,0 +1,2330 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 3,
+  "id": "trace-project",
+  "name": "Trace — a little delivery",
+  "artboards": [
+    {
+      "id": "trace-board",
+      "name": "Trace — a little delivery",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "trace-paper",
+      "name": "paper",
+      "kind": "path",
+      "artboardId": "trace-board",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        24,
+        24
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#edf3e8",
+        "skin": null,
+        "points": [
+          {
+            "id": "trace-paper-p0",
+            "anchor": [
+              40,
+              0
+            ],
+            "in": [
+              17.908610008,
+              0
+            ],
+            "out": [
+              40,
+              0
+            ]
+          },
+          {
+            "id": "trace-paper-p1",
+            "anchor": [
+              424,
+              0
+            ],
+            "in": [
+              424,
+              0
+            ],
+            "out": [
+              446.091389992,
+              0
+            ]
+          },
+          {
+            "id": "trace-paper-p2",
+            "anchor": [
+              464,
+              40
+            ],
+            "in": [
+              464,
+              17.908610008
+            ],
+            "out": [
+              464,
+              40
+            ]
+          },
+          {
+            "id": "trace-paper-p3",
+            "anchor": [
+              464,
+              424
+            ],
+            "in": [
+              464,
+              424
+            ],
+            "out": [
+              464,
+              446.091389992
+            ]
+          },
+          {
+            "id": "trace-paper-p4",
+            "anchor": [
+              424,
+              464
+            ],
+            "in": [
+              446.091389992,
+              464
+            ],
+            "out": [
+              424,
+              464
+            ]
+          },
+          {
+            "id": "trace-paper-p5",
+            "anchor": [
+              40,
+              464
+            ],
+            "in": [
+              40,
+              464
+            ],
+            "out": [
+              17.908610008,
+              464
+            ]
+          },
+          {
+            "id": "trace-paper-p6",
+            "anchor": [
+              0,
+              424
+            ],
+            "in": [
+              0,
+              446.091389992
+            ],
+            "out": [
+              0,
+              424
+            ]
+          },
+          {
+            "id": "trace-paper-p7",
+            "anchor": [
+              0,
+              40
+            ],
+            "in": [
+              0,
+              40
+            ],
+            "out": [
+              0,
+              17.908610008
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "trace-peach-sun",
+      "name": "peach sun",
+      "kind": "path",
+      "artboardId": "trace-board",
+      "parentId": null,
+      "order": 1,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        370,
+        136
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e8b38e",
+        "skin": null,
+        "points": [
+          {
+            "id": "trace-peach-sun-p0",
+            "anchor": [
+              53,
+              0
+            ],
+            "in": [
+              53,
+              -29.2710917394
+            ],
+            "out": [
+              53,
+              29.2710917394
+            ]
+          },
+          {
+            "id": "trace-peach-sun-p1",
+            "anchor": [
+              0,
+              53
+            ],
+            "in": [
+              29.2710917394,
+              53
+            ],
+            "out": [
+              -29.2710917394,
+              53
+            ]
+          },
+          {
+            "id": "trace-peach-sun-p2",
+            "anchor": [
+              -53,
+              0
+            ],
+            "in": [
+              -53,
+              29.2710917394
+            ],
+            "out": [
+              -53,
+              -29.2710917394
+            ]
+          },
+          {
+            "id": "trace-peach-sun-p3",
+            "anchor": [
+              0,
+              -53
+            ],
+            "in": [
+              -29.2710917394,
+              -53
+            ],
+            "out": [
+              29.2710917394,
+              -53
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "trace-sun-center",
+      "name": "sun center",
+      "kind": "path",
+      "artboardId": "trace-board",
+      "parentId": null,
+      "order": 2,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        370,
+        136
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f4d6ad",
+        "skin": null,
+        "points": [
+          {
+            "id": "trace-sun-center-p0",
+            "anchor": [
+              38,
+              0
+            ],
+            "in": [
+              38,
+              -20.9868204924
+            ],
+            "out": [
+              38,
+              20.9868204924
+            ]
+          },
+          {
+            "id": "trace-sun-center-p1",
+            "anchor": [
+              0,
+              38
+            ],
+            "in": [
+              20.9868204924,
+              38
+            ],
+            "out": [
+              -20.9868204924,
+              38
+            ]
+          },
+          {
+            "id": "trace-sun-center-p2",
+            "anchor": [
+              -38,
+              0
+            ],
+            "in": [
+              -38,
+              20.9868204924
+            ],
+            "out": [
+              -38,
+              -20.9868204924
+            ]
+          },
+          {
+            "id": "trace-sun-center-p3",
+            "anchor": [
+              0,
+              -38
+            ],
+            "in": [
+              -20.9868204924,
+              -38
+            ],
+            "out": [
+              20.9868204924,
+              -38
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "trace-postcard",
+      "name": "postcard",
+      "kind": "group",
+      "artboardId": "trace-board",
+      "parentId": null,
+      "order": 3,
+      "transform": [
+        0.9928086358538663,
+        -0.11971220728891936,
+        0.11971220728891936,
+        0.9928086358538663,
+        256,
+        297
+      ],
+      "geometry": null
+    },
+    {
+      "id": "trace-card-shadow",
+      "name": "card shadow",
+      "kind": "path",
+      "artboardId": "trace-board",
+      "parentId": "trace-postcard",
+      "order": 4,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -153,
+        -100
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#244d3c18",
+        "skin": null,
+        "points": [
+          {
+            "id": "trace-card-shadow-p0",
+            "anchor": [
+              22,
+              0
+            ],
+            "in": [
+              9.8497355044,
+              0
+            ],
+            "out": [
+              22,
+              0
+            ]
+          },
+          {
+            "id": "trace-card-shadow-p1",
+            "anchor": [
+              292,
+              0
+            ],
+            "in": [
+              292,
+              0
+            ],
+            "out": [
+              304.1502644956,
+              0
+            ]
+          },
+          {
+            "id": "trace-card-shadow-p2",
+            "anchor": [
+              314,
+              22
+            ],
+            "in": [
+              314,
+              9.8497355044
+            ],
+            "out": [
+              314,
+              22
+            ]
+          },
+          {
+            "id": "trace-card-shadow-p3",
+            "anchor": [
+              314,
+              186
+            ],
+            "in": [
+              314,
+              186
+            ],
+            "out": [
+              314,
+              198.1502644956
+            ]
+          },
+          {
+            "id": "trace-card-shadow-p4",
+            "anchor": [
+              292,
+              208
+            ],
+            "in": [
+              304.1502644956,
+              208
+            ],
+            "out": [
+              292,
+              208
+            ]
+          },
+          {
+            "id": "trace-card-shadow-p5",
+            "anchor": [
+              22,
+              208
+            ],
+            "in": [
+              22,
+              208
+            ],
+            "out": [
+              9.8497355044,
+              208
+            ]
+          },
+          {
+            "id": "trace-card-shadow-p6",
+            "anchor": [
+              0,
+              186
+            ],
+            "in": [
+              0,
+              198.1502644956
+            ],
+            "out": [
+              0,
+              186
+            ]
+          },
+          {
+            "id": "trace-card-shadow-p7",
+            "anchor": [
+              0,
+              22
+            ],
+            "in": [
+              0,
+              22
+            ],
+            "out": [
+              0,
+              9.8497355044
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "trace-card",
+      "name": "card",
+      "kind": "path",
+      "artboardId": "trace-board",
+      "parentId": "trace-postcard",
+      "order": 5,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -161,
+        -111
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#fffcf1",
+        "skin": null,
+        "points": [
+          {
+            "id": "trace-card-p0",
+            "anchor": [
+              22,
+              0
+            ],
+            "in": [
+              9.8497355044,
+              0
+            ],
+            "out": [
+              22,
+              0
+            ]
+          },
+          {
+            "id": "trace-card-p1",
+            "anchor": [
+              292,
+              0
+            ],
+            "in": [
+              292,
+              0
+            ],
+            "out": [
+              304.1502644956,
+              0
+            ]
+          },
+          {
+            "id": "trace-card-p2",
+            "anchor": [
+              314,
+              22
+            ],
+            "in": [
+              314,
+              9.8497355044
+            ],
+            "out": [
+              314,
+              22
+            ]
+          },
+          {
+            "id": "trace-card-p3",
+            "anchor": [
+              314,
+              186
+            ],
+            "in": [
+              314,
+              186
+            ],
+            "out": [
+              314,
+              198.1502644956
+            ]
+          },
+          {
+            "id": "trace-card-p4",
+            "anchor": [
+              292,
+              208
+            ],
+            "in": [
+              304.1502644956,
+              208
+            ],
+            "out": [
+              292,
+              208
+            ]
+          },
+          {
+            "id": "trace-card-p5",
+            "anchor": [
+              22,
+              208
+            ],
+            "in": [
+              22,
+              208
+            ],
+            "out": [
+              9.8497355044,
+              208
+            ]
+          },
+          {
+            "id": "trace-card-p6",
+            "anchor": [
+              0,
+              186
+            ],
+            "in": [
+              0,
+              198.1502644956
+            ],
+            "out": [
+              0,
+              186
+            ]
+          },
+          {
+            "id": "trace-card-p7",
+            "anchor": [
+              0,
+              22
+            ],
+            "in": [
+              0,
+              22
+            ],
+            "out": [
+              0,
+              9.8497355044
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "trace-postage-border",
+      "name": "postage border",
+      "kind": "path",
+      "artboardId": "trace-board",
+      "parentId": "trace-postcard",
+      "order": 6,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": null,
+        "skin": null,
+        "points": [
+          {
+            "id": "trace-postage-border-p0",
+            "anchor": [
+              -140,
+              -90
+            ],
+            "in": [
+              -140,
+              -90
+            ],
+            "out": [
+              -140,
+              -90
+            ]
+          },
+          {
+            "id": "trace-postage-border-p1",
+            "anchor": [
+              132,
+              -90
+            ],
+            "in": [
+              132,
+              -90
+            ],
+            "out": [
+              132,
+              -90
+            ]
+          },
+          {
+            "id": "trace-postage-border-p2",
+            "anchor": [
+              132,
+              76
+            ],
+            "in": [
+              132,
+              76
+            ],
+            "out": [
+              132,
+              76
+            ]
+          },
+          {
+            "id": "trace-postage-border-p3",
+            "anchor": [
+              -140,
+              76
+            ],
+            "in": [
+              -140,
+              76
+            ],
+            "out": [
+              -140,
+              76
+            ]
+          }
+        ],
+        "stroke": {
+          "color": "#80af98",
+          "width": 2.5,
+          "cap": "butt",
+          "join": "round",
+          "dash": [
+            8,
+            8
+          ],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "trace-courier",
+      "name": "courier",
+      "kind": "group",
+      "artboardId": "trace-board",
+      "parentId": "trace-postcard",
+      "order": 7,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -60,
+        -15
+      ],
+      "geometry": null
+    },
+    {
+      "id": "trace-bird-body",
+      "name": "bird body",
+      "kind": "path",
+      "artboardId": "trace-board",
+      "parentId": "trace-courier",
+      "order": 8,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#9cd6b2",
+        "skin": null,
+        "points": [
+          {
+            "id": "trace-bird-body-p0",
+            "anchor": [
+              -51,
+              0
+            ],
+            "in": [
+              -58,
+              42
+            ],
+            "out": [
+              -49,
+              -42
+            ]
+          },
+          {
+            "id": "trace-bird-body-p1",
+            "anchor": [
+              10,
+              -39
+            ],
+            "in": [
+              -25,
+              -48
+            ],
+            "out": [
+              44,
+              -38
+            ]
+          },
+          {
+            "id": "trace-bird-body-p2",
+            "anchor": [
+              51,
+              -6
+            ],
+            "in": [
+              44,
+              -23
+            ],
+            "out": [
+              69,
+              8
+            ]
+          },
+          {
+            "id": "trace-bird-body-p3",
+            "anchor": [
+              15,
+              52
+            ],
+            "in": [
+              44,
+              38
+            ],
+            "out": [
+              -23,
+              57
+            ]
+          }
+        ],
+        "stroke": {
+          "color": "#284d40",
+          "width": 4,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "trace-folded-wing",
+      "name": "folded wing",
+      "kind": "path",
+      "artboardId": "trace-board",
+      "parentId": "trace-courier",
+      "order": 9,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": false,
+        "fill": null,
+        "skin": null,
+        "points": [
+          {
+            "id": "trace-folded-wing-p0",
+            "anchor": [
+              -34,
+              4
+            ],
+            "in": [
+              -34,
+              4
+            ],
+            "out": [
+              -5,
+              -14
+            ]
+          },
+          {
+            "id": "trace-folded-wing-p1",
+            "anchor": [
+              28,
+              12
+            ],
+            "in": [
+              18,
+              -12
+            ],
+            "out": [
+              7,
+              44
+            ]
+          },
+          {
+            "id": "trace-folded-wing-p2",
+            "anchor": [
+              -34,
+              4
+            ],
+            "in": [
+              -16,
+              38
+            ],
+            "out": [
+              -34,
+              4
+            ]
+          }
+        ],
+        "stroke": {
+          "color": "#397659",
+          "width": 3.5,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "trace-beak",
+      "name": "beak",
+      "kind": "path",
+      "artboardId": "trace-board",
+      "parentId": "trace-courier",
+      "order": 10,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#d9986d",
+        "skin": null,
+        "points": [
+          {
+            "id": "trace-beak-p0",
+            "anchor": [
+              49,
+              -12
+            ],
+            "in": [
+              49,
+              -12
+            ],
+            "out": [
+              49,
+              -12
+            ]
+          },
+          {
+            "id": "trace-beak-p1",
+            "anchor": [
+              70,
+              -4
+            ],
+            "in": [
+              70,
+              -4
+            ],
+            "out": [
+              70,
+              -4
+            ]
+          },
+          {
+            "id": "trace-beak-p2",
+            "anchor": [
+              50,
+              6
+            ],
+            "in": [
+              50,
+              6
+            ],
+            "out": [
+              50,
+              6
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "trace-bright-eye",
+      "name": "bright eye",
+      "kind": "path",
+      "artboardId": "trace-board",
+      "parentId": "trace-courier",
+      "order": 11,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        29,
+        -16
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#284d40",
+        "skin": null,
+        "points": [
+          {
+            "id": "trace-bright-eye-p0",
+            "anchor": [
+              4,
+              0
+            ],
+            "in": [
+              4,
+              -2.761423749
+            ],
+            "out": [
+              4,
+              2.761423749
+            ]
+          },
+          {
+            "id": "trace-bright-eye-p1",
+            "anchor": [
+              0,
+              5
+            ],
+            "in": [
+              2.2091389992,
+              5
+            ],
+            "out": [
+              -2.2091389992,
+              5
+            ]
+          },
+          {
+            "id": "trace-bright-eye-p2",
+            "anchor": [
+              -4,
+              0
+            ],
+            "in": [
+              -4,
+              2.761423749
+            ],
+            "out": [
+              -4,
+              -2.761423749
+            ]
+          },
+          {
+            "id": "trace-bright-eye-p3",
+            "anchor": [
+              0,
+              -5
+            ],
+            "in": [
+              -2.2091389992,
+              -5
+            ],
+            "out": [
+              2.2091389992,
+              -5
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "trace-eye-light",
+      "name": "eye light",
+      "kind": "path",
+      "artboardId": "trace-board",
+      "parentId": "trace-courier",
+      "order": 12,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        30,
+        -18
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#fffcf1",
+        "skin": null,
+        "points": [
+          {
+            "id": "trace-eye-light-p0",
+            "anchor": [
+              1.3,
+              0
+            ],
+            "in": [
+              1.3,
+              -0.8284271246999999
+            ],
+            "out": [
+              1.3,
+              0.8284271246999999
+            ]
+          },
+          {
+            "id": "trace-eye-light-p1",
+            "anchor": [
+              0,
+              1.5
+            ],
+            "in": [
+              0.71797017474,
+              1.5
+            ],
+            "out": [
+              -0.71797017474,
+              1.5
+            ]
+          },
+          {
+            "id": "trace-eye-light-p2",
+            "anchor": [
+              -1.3,
+              0
+            ],
+            "in": [
+              -1.3,
+              0.8284271246999999
+            ],
+            "out": [
+              -1.3,
+              -0.8284271246999999
+            ]
+          },
+          {
+            "id": "trace-eye-light-p3",
+            "anchor": [
+              0,
+              -1.5
+            ],
+            "in": [
+              -0.71797017474,
+              -1.5
+            ],
+            "out": [
+              0.71797017474,
+              -1.5
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "trace-left-foot",
+      "name": "left foot",
+      "kind": "path",
+      "artboardId": "trace-board",
+      "parentId": "trace-courier",
+      "order": 13,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": false,
+        "fill": null,
+        "skin": null,
+        "points": [
+          {
+            "id": "trace-left-foot-p0",
+            "anchor": [
+              -10,
+              48
+            ],
+            "in": [
+              -10,
+              48
+            ],
+            "out": [
+              -10,
+              48
+            ]
+          },
+          {
+            "id": "trace-left-foot-p1",
+            "anchor": [
+              -13,
+              62
+            ],
+            "in": [
+              -13,
+              62
+            ],
+            "out": [
+              -13,
+              62
+            ]
+          },
+          {
+            "id": "trace-left-foot-p2",
+            "anchor": [
+              -23,
+              62
+            ],
+            "in": [
+              -23,
+              62
+            ],
+            "out": [
+              -23,
+              62
+            ]
+          }
+        ],
+        "stroke": {
+          "color": "#284d40",
+          "width": 3,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "trace-right-foot",
+      "name": "right foot",
+      "kind": "path",
+      "artboardId": "trace-board",
+      "parentId": "trace-courier",
+      "order": 14,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": false,
+        "fill": null,
+        "skin": null,
+        "points": [
+          {
+            "id": "trace-right-foot-p0",
+            "anchor": [
+              7,
+              49
+            ],
+            "in": [
+              7,
+              49
+            ],
+            "out": [
+              7,
+              49
+            ]
+          },
+          {
+            "id": "trace-right-foot-p1",
+            "anchor": [
+              8,
+              62
+            ],
+            "in": [
+              8,
+              62
+            ],
+            "out": [
+              8,
+              62
+            ]
+          },
+          {
+            "id": "trace-right-foot-p2",
+            "anchor": [
+              17,
+              62
+            ],
+            "in": [
+              17,
+              62
+            ],
+            "out": [
+              17,
+              62
+            ]
+          }
+        ],
+        "stroke": {
+          "color": "#284d40",
+          "width": 3,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "trace-stamp",
+      "name": "stamp",
+      "kind": "path",
+      "artboardId": "trace-board",
+      "parentId": "trace-postcard",
+      "order": 15,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        72,
+        -67
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#dfac87",
+        "skin": null,
+        "points": [
+          {
+            "id": "trace-stamp-p0",
+            "anchor": [
+              5,
+              0
+            ],
+            "in": [
+              2.238576251,
+              0
+            ],
+            "out": [
+              5,
+              0
+            ]
+          },
+          {
+            "id": "trace-stamp-p1",
+            "anchor": [
+              36,
+              0
+            ],
+            "in": [
+              36,
+              0
+            ],
+            "out": [
+              38.761423749,
+              0
+            ]
+          },
+          {
+            "id": "trace-stamp-p2",
+            "anchor": [
+              41,
+              5
+            ],
+            "in": [
+              41,
+              2.238576251
+            ],
+            "out": [
+              41,
+              5
+            ]
+          },
+          {
+            "id": "trace-stamp-p3",
+            "anchor": [
+              41,
+              43
+            ],
+            "in": [
+              41,
+              43
+            ],
+            "out": [
+              41,
+              45.761423749
+            ]
+          },
+          {
+            "id": "trace-stamp-p4",
+            "anchor": [
+              36,
+              48
+            ],
+            "in": [
+              38.761423749,
+              48
+            ],
+            "out": [
+              36,
+              48
+            ]
+          },
+          {
+            "id": "trace-stamp-p5",
+            "anchor": [
+              5,
+              48
+            ],
+            "in": [
+              5,
+              48
+            ],
+            "out": [
+              2.238576251,
+              48
+            ]
+          },
+          {
+            "id": "trace-stamp-p6",
+            "anchor": [
+              0,
+              43
+            ],
+            "in": [
+              0,
+              45.761423749
+            ],
+            "out": [
+              0,
+              43
+            ]
+          },
+          {
+            "id": "trace-stamp-p7",
+            "anchor": [
+              0,
+              5
+            ],
+            "in": [
+              0,
+              5
+            ],
+            "out": [
+              0,
+              2.238576251
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "trace-stamp-mountain",
+      "name": "stamp mountain",
+      "kind": "path",
+      "artboardId": "trace-board",
+      "parentId": "trace-postcard",
+      "order": 16,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": false,
+        "fill": null,
+        "skin": null,
+        "points": [
+          {
+            "id": "trace-stamp-mountain-p0",
+            "anchor": [
+              80,
+              -32
+            ],
+            "in": [
+              80,
+              -32
+            ],
+            "out": [
+              80,
+              -32
+            ]
+          },
+          {
+            "id": "trace-stamp-mountain-p1",
+            "anchor": [
+              92,
+              -51
+            ],
+            "in": [
+              92,
+              -51
+            ],
+            "out": [
+              92,
+              -51
+            ]
+          },
+          {
+            "id": "trace-stamp-mountain-p2",
+            "anchor": [
+              106,
+              -32
+            ],
+            "in": [
+              106,
+              -32
+            ],
+            "out": [
+              106,
+              -32
+            ]
+          }
+        ],
+        "stroke": {
+          "color": "#734e38",
+          "width": 2.5,
+          "cap": "square",
+          "join": "bevel",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "trace-address-2",
+      "name": "address 2",
+      "kind": "path",
+      "artboardId": "trace-board",
+      "parentId": "trace-postcard",
+      "order": 17,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": false,
+        "fill": null,
+        "skin": null,
+        "points": [
+          {
+            "id": "trace-address-2-p0",
+            "anchor": [
+              47,
+              2
+            ],
+            "in": [
+              47,
+              2
+            ],
+            "out": [
+              47,
+              2
+            ]
+          },
+          {
+            "id": "trace-address-2-p1",
+            "anchor": [
+              110,
+              2
+            ],
+            "in": [
+              110,
+              2
+            ],
+            "out": [
+              110,
+              2
+            ]
+          }
+        ],
+        "stroke": {
+          "color": "#95b8a2",
+          "width": 3,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "trace-address-19",
+      "name": "address 19",
+      "kind": "path",
+      "artboardId": "trace-board",
+      "parentId": "trace-postcard",
+      "order": 18,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": false,
+        "fill": null,
+        "skin": null,
+        "points": [
+          {
+            "id": "trace-address-19-p0",
+            "anchor": [
+              47,
+              19
+            ],
+            "in": [
+              47,
+              19
+            ],
+            "out": [
+              47,
+              19
+            ]
+          },
+          {
+            "id": "trace-address-19-p1",
+            "anchor": [
+              110,
+              19
+            ],
+            "in": [
+              110,
+              19
+            ],
+            "out": [
+              110,
+              19
+            ]
+          }
+        ],
+        "stroke": {
+          "color": "#95b8a2",
+          "width": 3,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "trace-address-36",
+      "name": "address 36",
+      "kind": "path",
+      "artboardId": "trace-board",
+      "parentId": "trace-postcard",
+      "order": 19,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": false,
+        "fill": null,
+        "skin": null,
+        "points": [
+          {
+            "id": "trace-address-36-p0",
+            "anchor": [
+              47,
+              36
+            ],
+            "in": [
+              47,
+              36
+            ],
+            "out": [
+              47,
+              36
+            ]
+          },
+          {
+            "id": "trace-address-36-p1",
+            "anchor": [
+              110,
+              36
+            ],
+            "in": [
+              110,
+              36
+            ],
+            "out": [
+              110,
+              36
+            ]
+          }
+        ],
+        "stroke": {
+          "color": "#95b8a2",
+          "width": 3,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "trace-flight-trail",
+      "name": "flight trail",
+      "kind": "path",
+      "artboardId": "trace-board",
+      "parentId": null,
+      "order": 20,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": false,
+        "fill": null,
+        "skin": null,
+        "points": [
+          {
+            "id": "trace-flight-trail-p0",
+            "anchor": [
+              74,
+              161
+            ],
+            "in": [
+              74,
+              161
+            ],
+            "out": [
+              102,
+              190
+            ]
+          },
+          {
+            "id": "trace-flight-trail-p1",
+            "anchor": [
+              170,
+              121
+            ],
+            "in": [
+              117,
+              142
+            ],
+            "out": [
+              223,
+              77
+            ]
+          },
+          {
+            "id": "trace-flight-trail-p2",
+            "anchor": [
+              270,
+              173
+            ],
+            "in": [
+              284,
+              87
+            ],
+            "out": [
+              261,
+              217
+            ]
+          },
+          {
+            "id": "trace-flight-trail-p3",
+            "anchor": [
+              214,
+              167
+            ],
+            "in": [
+              221,
+              218
+            ],
+            "out": [
+              206,
+              120
+            ]
+          },
+          {
+            "id": "trace-flight-trail-p4",
+            "anchor": [
+              318,
+              103
+            ],
+            "in": [
+              266,
+              137
+            ],
+            "out": [
+              318,
+              103
+            ]
+          }
+        ],
+        "stroke": {
+          "color": "#3d8062",
+          "width": 12,
+          "cap": "square",
+          "join": "bevel",
+          "dash": [
+            18,
+            10
+          ],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0.1,
+            "end": 0.7,
+            "offset": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "trace-paper-plane",
+      "name": "paper plane",
+      "kind": "path",
+      "artboardId": "trace-board",
+      "parentId": null,
+      "order": 21,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": false,
+        "fill": "#fffcf1",
+        "skin": null,
+        "points": [
+          {
+            "id": "trace-paper-plane-p0",
+            "anchor": [
+              315,
+              103
+            ],
+            "in": [
+              315,
+              103
+            ],
+            "out": [
+              315,
+              103
+            ]
+          },
+          {
+            "id": "trace-paper-plane-p1",
+            "anchor": [
+              365,
+              79
+            ],
+            "in": [
+              365,
+              79
+            ],
+            "out": [
+              365,
+              79
+            ]
+          },
+          {
+            "id": "trace-paper-plane-p2",
+            "anchor": [
+              344,
+              127
+            ],
+            "in": [
+              344,
+              127
+            ],
+            "out": [
+              344,
+              127
+            ]
+          },
+          {
+            "id": "trace-paper-plane-p3",
+            "anchor": [
+              336,
+              108
+            ],
+            "in": [
+              336,
+              108
+            ],
+            "out": [
+              336,
+              108
+            ]
+          },
+          {
+            "id": "trace-paper-plane-p4",
+            "anchor": [
+              315,
+              103
+            ],
+            "in": [
+              315,
+              103
+            ],
+            "out": [
+              315,
+              103
+            ]
+          },
+          {
+            "id": "trace-paper-plane-p5",
+            "anchor": [
+              336,
+              108
+            ],
+            "in": [
+              336,
+              108
+            ],
+            "out": [
+              336,
+              108
+            ]
+          },
+          {
+            "id": "trace-paper-plane-p6",
+            "anchor": [
+              365,
+              79
+            ],
+            "in": [
+              365,
+              79
+            ],
+            "out": [
+              365,
+              79
+            ]
+          }
+        ],
+        "stroke": {
+          "color": "#284d40",
+          "width": 3.5,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "trace-hello-flourish",
+      "name": "hello flourish",
+      "kind": "path",
+      "artboardId": "trace-board",
+      "parentId": null,
+      "order": 22,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": false,
+        "fill": null,
+        "skin": null,
+        "points": [
+          {
+            "id": "trace-hello-flourish-p0",
+            "anchor": [
+              127,
+              432
+            ],
+            "in": [
+              127,
+              432
+            ],
+            "out": [
+              164,
+              397
+            ]
+          },
+          {
+            "id": "trace-hello-flourish-p1",
+            "anchor": [
+              252,
+              432
+            ],
+            "in": [
+              202,
+              465
+            ],
+            "out": [
+              287,
+              397
+            ]
+          },
+          {
+            "id": "trace-hello-flourish-p2",
+            "anchor": [
+              384,
+              427
+            ],
+            "in": [
+              333,
+              449
+            ],
+            "out": [
+              384,
+              427
+            ]
+          }
+        ],
+        "stroke": {
+          "color": "#b77a53",
+          "width": 5,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        }
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [
+    {
+      "id": "trace-delivery",
+      "name": "Delivery",
+      "artboardId": "trace-board",
+      "fps": 60,
+      "duration": 120,
+      "loop": true,
+      "tracks": [
+        {
+          "targetId": "trace-flight-trail",
+          "property": "stroke.trimEnd",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0.2,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0.2,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "trace-flight-trail",
+          "property": "stroke.width",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 3,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 5,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 3,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "trace-flight-trail",
+          "property": "stroke.color",
+          "keys": [
+            {
+              "frame": 0,
+              "value": "#3d8062",
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": "#d3956d",
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": "#3d8062",
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "trace-courier",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": -0.03,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 0.07,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": -0.03,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "trace-courier",
+          "property": "y",
+          "keys": [
+            {
+              "frame": 0,
+              "value": -15,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": -20,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": -15,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "trace-board": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  },
+  "advanced": {
+    "clips": [],
+    "feathers": [],
+    "ik": []
+  }
+}

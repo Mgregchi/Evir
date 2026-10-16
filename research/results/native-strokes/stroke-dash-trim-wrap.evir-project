@@ -1,0 +1,119 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 3,
+  "id": "stroke-dash-trim-wrap-project",
+  "name": "stroke-dash-trim-wrap",
+  "artboards": [
+    {
+      "id": "board",
+      "name": "Board",
+      "width": 256,
+      "height": 256
+    }
+  ],
+  "nodes": [
+    {
+      "id": "line",
+      "name": "Line",
+      "kind": "path",
+      "parentId": null,
+      "artboardId": "board",
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": false,
+        "skin": null,
+        "points": [
+          {
+            "id": "point-0",
+            "anchor": [
+              30,
+              174
+            ],
+            "in": [
+              30,
+              174
+            ],
+            "out": [
+              36,
+              34
+            ]
+          },
+          {
+            "id": "point-1",
+            "anchor": [
+              132,
+              96
+            ],
+            "in": [
+              76,
+              38
+            ],
+            "out": [
+              192,
+              154
+            ]
+          },
+          {
+            "id": "point-2",
+            "anchor": [
+              226,
+              72
+            ],
+            "in": [
+              223,
+              150
+            ],
+            "out": [
+              226,
+              72
+            ]
+          }
+        ],
+        "fill": null,
+        "stroke": {
+          "color": "#24594aff",
+          "width": 14,
+          "cap": "round",
+          "join": "round",
+          "dash": [
+            18,
+            12
+          ],
+          "dashOffset": -10,
+          "trim": {
+            "start": 0.1,
+            "end": 0.7,
+            "offset": 0.7
+          }
+        }
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "board": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  },
+  "advanced": {
+    "clips": [],
+    "feathers": [],
+    "ik": []
+  }
+}

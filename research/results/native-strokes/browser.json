@@ -1,0 +1,94 @@
+{
+  "checkedAt": "2026-10-16T21:07:18.681Z",
+  "scope": "Synthetic cloud Chromium editing, keyboard/pointer, downloads, recovery and automated WCAG checks; not physical or human testing.",
+  "viewports": [
+    {
+      "width": 320,
+      "height": 844,
+      "checks": [
+        "isolated stroke draft",
+        "invalid-number/dash rejection",
+        "reachable full-width sheet",
+        "focus/escape/cancel",
+        "single undo and redo",
+        "native download",
+        "browser recovery",
+        "editable .riv import",
+        "zero automated WCAG violations",
+        "no page overflow"
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "checks": [
+        "isolated stroke draft",
+        "invalid-number/dash rejection",
+        "reachable full-width sheet",
+        "focus/escape/cancel",
+        "single undo and redo",
+        "native download",
+        "browser recovery",
+        "editable .riv import",
+        "zero automated WCAG violations",
+        "no page overflow"
+      ]
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "checks": [
+        "isolated stroke draft",
+        "invalid-number/dash rejection",
+        "reachable full-width sheet",
+        "focus/escape/cancel",
+        "single undo and redo",
+        "native download",
+        "browser recovery",
+        "editable .riv import",
+        "zero automated WCAG violations",
+        "no page overflow"
+      ]
+    },
+    {
+      "width": 1024,
+      "height": 844,
+      "checks": [
+        "isolated stroke draft",
+        "invalid-number/dash rejection",
+        "reachable full-width sheet",
+        "focus/escape/cancel",
+        "single undo and redo",
+        "native download",
+        "browser recovery",
+        "editable .riv import",
+        "zero automated WCAG violations",
+        "no page overflow"
+      ]
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "checks": [
+        "isolated stroke draft",
+        "invalid-number/dash rejection",
+        "reachable full-width sheet",
+        "focus/escape/cancel",
+        "single undo and redo",
+        "native download",
+        "browser recovery",
+        "editable .riv import",
+        "zero automated WCAG violations",
+        "no page overflow"
+      ]
+    }
+  ],
+  "browser": "151.0.7922.173",
+  "freehand": [
+    "constant-width retained centerline",
+    "mouse capture",
+    "one-step undo/redo",
+    "stroke envelope hit selection",
+    "width editable after finishing"
+  ]
+}

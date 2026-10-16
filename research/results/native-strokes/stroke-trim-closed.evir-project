@@ -1,0 +1,131 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 3,
+  "id": "stroke-trim-closed-project",
+  "name": "stroke-trim-closed",
+  "artboards": [
+    {
+      "id": "board",
+      "name": "Board",
+      "width": 256,
+      "height": 256
+    }
+  ],
+  "nodes": [
+    {
+      "id": "line",
+      "name": "Line",
+      "kind": "path",
+      "parentId": null,
+      "artboardId": "board",
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "skin": null,
+        "points": [
+          {
+            "id": "point-0",
+            "anchor": [
+              48,
+              48
+            ],
+            "in": [
+              48,
+              48
+            ],
+            "out": [
+              48,
+              48
+            ]
+          },
+          {
+            "id": "point-1",
+            "anchor": [
+              208,
+              48
+            ],
+            "in": [
+              208,
+              48
+            ],
+            "out": [
+              208,
+              48
+            ]
+          },
+          {
+            "id": "point-2",
+            "anchor": [
+              208,
+              208
+            ],
+            "in": [
+              208,
+              208
+            ],
+            "out": [
+              208,
+              208
+            ]
+          },
+          {
+            "id": "point-3",
+            "anchor": [
+              48,
+              208
+            ],
+            "in": [
+              48,
+              208
+            ],
+            "out": [
+              48,
+              208
+            ]
+          }
+        ],
+        "fill": null,
+        "stroke": {
+          "color": "#24594aff",
+          "width": 14,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0.1,
+            "end": 0.7,
+            "offset": 0.65
+          }
+        }
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "board": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  },
+  "advanced": {
+    "clips": [],
+    "feathers": [],
+    "ik": []
+  }
+}
