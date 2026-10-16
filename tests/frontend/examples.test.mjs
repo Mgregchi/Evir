@@ -48,3 +48,10 @@ test('Loom has reusable row/column guides and fixed-key spacing that fits the au
  ids.forEach((id,i)=>{const box=nodeBounds(p,p.nodes.find(n=>n.id===id));assert.equal(box.x,bands[i].start);assert.equal(box.x+box.width,bands[i].end);});
  assert.equal(Object.hasOwn(p.editor,'guides'),false);
 });
+
+test('Ribbon uses bounded pressure outlines and a constant-width fallback, with no new runtime stroke fields',()=>{
+ const p=source('ribbon'),ribbons=p.nodes.filter(n=>n.kind==='path'&&n.name.includes('ribbon'));
+ assert.equal(ribbons.length,2);
+ for(const n of ribbons){assert(n.geometry.closed);assert(n.geometry.points.length<=256);assert(!Object.hasOwn(n.geometry,'width'));}
+ assert(p.nodes.some(n=>n.id==='ribbon-constant-thread'));assert.equal(p.animations[0].name,'Float');
+});

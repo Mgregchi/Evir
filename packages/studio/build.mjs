@@ -14,6 +14,7 @@ export async function buildStudio({outDir,basePath,homeUrl}) {
   await mkdir(path.join(outDir,'assets'),{recursive:true});
   await cp(path.join(runtimeDir,'rive.wasm'),path.join(outDir,'assets/rive-view.wasm'));
   await cp(path.join(runtimeDir,'rive_fallback.wasm'),path.join(outDir,'assets/rive-view-fallback.wasm'));
+  await cp(path.join(sourceRoot,'licenses/LICENSE.perfect-freehand'),path.join(outDir,'assets/LICENSE.perfect-freehand'));
   await cp(path.join(sourceRoot,'licenses/LICENSE.rive-runtime'),path.join(outDir,'assets/LICENSE.rive-runtime'));
   await writeFile(path.join(outDir,'studio.css'),(await readFile(path.join(sourceRoot,'studio.css'),'utf8'))+'\n'+(await readFile(new URL('../ui/styles.css',import.meta.url),'utf8')));
   await cp(new URL('../../assets/brand/',import.meta.url),path.join(outDir,'assets'),{recursive:true});

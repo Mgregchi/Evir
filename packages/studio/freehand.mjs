@@ -1,6 +1,7 @@
 import { PenDraft } from "./pen.mjs";
 import { newId } from "@evir/project-model";
 import { mapPoint } from "@evir/runtime/geometry";
+import { brushOutline } from "./brush.mjs";
 
 export const FREEHAND_LIMITS = Object.freeze({ samples: 4096, anchors: 256 });
 const distance = (a, b) => Math.hypot(a[0] - b[0], a[1] - b[1]);
@@ -122,6 +123,21 @@ export function fitFreehand(
   return { closed, fill: "#64d9ad", skin: null, points };
 }
 
+export function fitBrush(samples, options = {}) {
+  if (
+    samples.length < 2 ||
+    !samples.some((p) => distance(p, samples[0]) > 1e-9)
+  )
+    throw Error("Drag to draw a stroke before finishing.");
+  const outline = brushOutline(samples, options);
+  if (outline.length > FREEHAND_LIMITS.samples)
+    throw Error("This brush outline is too complex. Draw a shorter stroke.");
+  return fitFreehand(outline, {
+    tolerance: options.tolerance ?? 2,
+    closed: true,
+  });
+}
+
 export class FreehandDraft extends PenDraft {
   constructor(options) {
     super(options);
@@ -134,9 +150,46 @@ export class FreehandDraft extends PenDraft {
     )
       throw Error("Invalid freehand drawing options.");
     this.samples = [];
+    this.pressures = [];
     this.zoom = options.zoom;
-    this.tolerance = options.smoothing / this.zoom;
-    this.closed = options.closed;
+    this.configure(options, false);
+  }
+  configure(options, refit = true) {
+    const {
+      smoothing,
+      closed,
+      style = "shape",
+      width = 16,
+      pressure = true,
+    } = options;
+    if (!Number.isFinite(smoothing) || smoothing < 0.5 || smoothing > 8)
+      throw Error("Choose smoothing between 0.5 and 8 screen pixels.");
+    if (!["shape", "brush"].includes(style) || typeof closed !== "boolean")
+      throw Error("Invalid drawing style.");
+    brushOutline([], { width, pressure });
+    const previous = {
+      tolerance: this.tolerance,
+      closed: this.closed,
+      style: this.style,
+      width: this.width,
+      pressure: this.pressure,
+    };
+    Object.assign(this, {
+      tolerance: smoothing / this.zoom,
+      closed,
+      style,
+      width,
+      pressure,
+    });
+    try {
+      if (refit) this.refit();
+    } catch (error) {
+      Object.assign(this, previous);
+      throw error;
+    }
+  }
+  brushSamples() {
+    return this.samples.map((p, i) => [...p, this.pressures[i]]);
   }
   down(world) {
     this.dragging = true;
@@ -147,10 +200,24 @@ export class FreehandDraft extends PenDraft {
     if (!p.every(Number.isFinite))
       throw Error("Drawing coordinates must be finite.");
     const last = this.samples.at(-1);
-    if (last && distance(last, p) < (force ? 1e-9 : 0.75 / this.zoom)) return;
+    const pressure = world.pressure ?? this.pressures.at(-1) ?? 0.5;
+    if (!Number.isFinite(pressure) || pressure < 0 || pressure > 1)
+      throw Error("Pressure must be between 0 and 1.");
+    if (last && distance(last, p) < 1e-9) {
+      this.pressures[this.pressures.length - 1] = pressure;
+      return;
+    }
+    if (
+      last &&
+      !force &&
+      distance(last, p) < 0.75 / this.zoom &&
+      Math.abs(pressure - this.pressures.at(-1)) < 0.02
+    )
+      return;
     if (this.samples.length >= FREEHAND_LIMITS.samples)
       throw Error("This drawing is too long. Draw a shorter shape.");
     this.samples.push(p);
+    this.pressures.push(pressure);
   }
   move(world) {
     if (this.dragging) this.sample(world);
@@ -161,14 +228,22 @@ export class FreehandDraft extends PenDraft {
   }
   cancelGesture() {
     this.samples = [];
+    this.pressures = [];
     this.points = [];
     this.dragging = false;
   }
   refit() {
-    const geometry = fitFreehand(this.samples, {
-      tolerance: this.tolerance,
-      closed: this.closed,
-    });
+    const geometry =
+      this.style === "brush"
+        ? fitBrush(this.brushSamples(), {
+            tolerance: this.tolerance,
+            width: this.width,
+            pressure: this.pressure,
+          })
+        : fitFreehand(this.samples, {
+            tolerance: this.tolerance,
+            closed: this.closed,
+          });
     this.points = geometry.points.map((p) =>
       Object.fromEntries([
         ["id", p.id],
@@ -183,6 +258,6 @@ export class FreehandDraft extends PenDraft {
     if (this.dragging)
       throw Error("Release the pointer before finishing the shape.");
     this.refit();
-    return super.geometry(this.closed);
+    return super.geometry(this.style === "brush" || this.closed);
   }
 }

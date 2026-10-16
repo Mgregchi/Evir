@@ -431,11 +431,19 @@
       class="interaction-sheet"
       aria-labelledby="drawing-title"
     >
-      <h2 id="drawing-title">Freehand shape</h2>
+      <h2 id="drawing-title">Freehand drawing</h2>
       <p>
         Draw with a mouse, pen or one finger. Release to review editable points
         before finishing.
       </p>
+      <label class="field">Draw as<select id="drawing-style" aria-label="Draw as">
+        <option value="shape">Filled shape</option><option value="brush">Brush outline</option>
+      </select></label>
+      <fieldset id="drawing-brush-options" hidden><legend>Brush</legend>
+        <label class="field">Width (artboard units)<input id="drawing-width" type="number" min="1" max="256" step="1" value="16" aria-describedby="drawing-brush-note drawing-error" /></label>
+        <label class="drawing-close"><input id="drawing-pressure" type="checkbox" checked /><span>Use pen pressure</span></label>
+        <p id="drawing-brush-note">Pen pressure varies width. Mouse and touch keep the chosen width. Round ends become editable outline points; width cannot be changed after finishing.</p>
+      </fieldset>
       <label class="field"
         >Smoothing (screen pixels)<input
           id="drawing-smoothing"
@@ -450,14 +458,15 @@
         Lower values retain more detail. Higher values use fewer points. Up to
         4,096 samples and 256 editable points per shape.
       </p>
-      <label class="drawing-close"
+      <label class="drawing-close" id="drawing-closed-field"
         ><input id="drawing-closed" type="checkbox" checked /><span
           >Close the shape</span
         ></label
       >
       <p>
-        Paths use solid fills. Open curves do not add a brush stroke or
-        pressure-sensitive ink. Pen and numeric point controls remain available.
+        Brush strokes finish as closed filled outlines, rather than native
+        stroke paints. Shape mode keeps the existing open/closed fill behavior.
+        Pen and numeric point controls remain available.
       </p>
       <p id="drawing-error" role="alert"></p>
       <div class="dialog-actions">

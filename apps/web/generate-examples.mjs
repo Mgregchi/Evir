@@ -2,7 +2,7 @@ import {CommandSession} from '@evir/commands';
 import {compassLesson} from '@evir/commands/example';
 import {suite} from './advanced-examples.mjs';
 import {motorcycle} from './motorcycle-scene.mjs';
-import { fitFreehand } from '../../packages/studio/freehand.mjs';
+import { fitFreehand, fitBrush } from '../../packages/studio/freehand.mjs';
 import { defaultGuides, componentBands } from '../../packages/studio/guides.mjs';
 import { ContinuationDraft } from '../../packages/studio/path-continuation.mjs';
 import { exampleIds } from './examples.mjs';
@@ -275,6 +275,29 @@ function measure() {
   const a=anim('breathe','Balance');key(a,glow,'scaleX',[[0,1],[60,1.3],[120,1]]);key(a,glow,'scaleY',[[0,1],[60,1.3],[120,1]]);
   return p;
 }
+// Generated pressure samples, not a recording of human/stylus input.
+function ribbon() {
+  const {p,node,box,oval,anim,key}=project('ribbon','Ribbon — a little flourish');
+  box('paper',28,32,456,448,38,'#edf1e8');
+  const root=node('flourish','group',null,null,0,0);
+  const stroke=(id,samples,width,fill,pressure=true)=>{
+    const geometry=fitBrush(samples,{width,pressure,tolerance:1});geometry.fill=fill;
+    geometry.points.forEach((p,i)=>p.id=`ribbon-${id}-p${i}`);
+    return node(id,'path',geometry,root);
+  };
+  stroke('mint-ribbon',Array.from({length:241},(_,i)=>{
+    const t=i/240;return [95+320*t,200-65*Math.sin(t*Math.PI*2),.15+.8*Math.sin(t*Math.PI)**2];
+  }),35,'#69b996');
+  stroke('peach-ribbon',Array.from({length:201},(_,i)=>{
+    const t=i/200;return [110+285*t,320-36*Math.sin(t*Math.PI*2),.85-.7*t];
+  }),26,'#dca982');
+  stroke('constant-thread',Array.from({length:151},(_,i)=>{
+    const t=i/150;return [135+240*t,388+10*Math.sin(t*Math.PI*2),t];
+  }),8,'#385c48',false);
+  oval('seam',100,102,7,7,'#dca982',root);
+  const a=anim('float','Float');key(a,root,'y',[[0,0],[60,-7],[120,0]]);
+  return p;
+}
 let sprigSeed;
 const sprigRecipe=[{anchor:[45,35],out:[26,56]},{anchor:[-10,65],out:[-43,60]},{anchor:[-60,35],out:[-74,15]}];
 function sprig() {
@@ -330,7 +353,7 @@ function loom() {
   const a=anim('weave','Weave');key(a,spindle,'rotation',[[0,0],[120,Math.PI*2]]);
   return p;
 }
-const factories={loom,sprig,measure,compass,milo,orbit,bloom,tempo,signal,gather,wisp,dawn,arrange,motorcycle:()=>motorcycle(project)};
+const factories={ribbon,loom,sprig,measure,compass,milo,orbit,bloom,tempo,signal,gather,wisp,dawn,arrange,motorcycle:()=>motorcycle(project)};
 for(const original of await suite()){
  const p=structuredClone(original);p.artboards[0].width=p.artboards[0].height=512;
  for(const n of p.nodes){n.transform[4]*=2;n.transform[5]*=2;const g=n.geometry;if(!g)continue;

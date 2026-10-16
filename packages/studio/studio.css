@@ -1593,3 +1593,37 @@ body > #notice {
 @media (max-width: 850px) { #advanced-sheet:has(.guide-manager) { --guide-edge: 24px; --guide-bottom: max(24px, env(safe-area-inset-bottom)); } }
 .guide-manager details { scroll-margin-block: 40px; }
 #advanced-sheet:has(.guide-manager) .dialog-actions button:last-child, #advanced-sheet:has(.distribution-sheet) .dialog-actions button:last-child { background: var(--accent); color: #142b23; font-weight: 650; }
+
+#drawing-brush-options {
+  min-width: 0;
+  margin: 0 0 16px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+#drawing-brush-options legend { padding: 0 6px; }
+#drawing-brush-note { font-size: .875rem; }
+/* Keep drawing context and actions visible when the options body scrolls. */
+#drawing-sheet { --drawing-edge: 28px; --drawing-bottom: 28px; scroll-padding-block: 56px 76px; }
+#drawing-sheet > h2 { position: sticky; top: calc(-1 * var(--drawing-edge)); z-index: 2; background: var(--panel); padding-block: 8px; margin-top: 0; border-bottom: 1px solid var(--line); }
+#drawing-sheet .dialog-actions { position: sticky; bottom: calc(-1 * var(--drawing-bottom)); z-index: 2; background: var(--panel); padding-top: 12px; padding-bottom: var(--drawing-bottom); margin-bottom: calc(-1 * var(--drawing-bottom)); }
+#drawing-sheet input[type=checkbox] { accent-color: var(--accent); }
+@media(max-width:850px) {
+  dialog#drawing-sheet { --drawing-edge:24px; --drawing-bottom:max(24px, env(safe-area-inset-bottom)); width:100%; max-width:none; max-height:85dvh; bottom:0; border-radius:18px 18px 0 0; padding:24px 20px var(--drawing-bottom); }
+}
+
+/* Browser-local project library: metadata rows stay bounded to one page. */
+.project-library-sheet input { width: 100%; margin-block: 8px 16px; }
+.project-library-sheet article { border-top: 1px solid var(--line); padding: 12px 0; }
+.project-library-sheet h3 { overflow-wrap: anywhere; margin: 0; }
+.project-library-sheet article button { max-width: 100%; white-space: normal; overflow-wrap: anywhere; }
+.project-library-sheet article p { color: var(--muted); margin-block: 6px; }
+.project-library-sheet nav { display: flex; justify-content: space-between; gap: 12px; }
+#advanced-sheet:has(.project-library-sheet) .dialog-actions { position: sticky; bottom: 0; background: var(--panel); padding-top: 12px; }
+#recovery-conflict { position: fixed; z-index: 18; bottom: 48px; left: 50%; transform: translateX(-50%); width: min(680px, calc(100% - 24px)); background: var(--panel); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 40px #0006; padding: 10px 16px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+#recovery-conflict[hidden] { display: none; }
+#recovery-conflict p { flex: 1 1 260px; margin: 0; }
+#project-switch-status { background: #1e3b30; border-color: #79bb99; color: #d5f4e0; bottom: max(62px, env(safe-area-inset-bottom)); pointer-events: none; }
+#project-switch-status::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); animation: project-breathe 1.2s ease-in-out infinite alternate; }
+@keyframes project-breathe { from { opacity: .5; transform: scale(.8); } to { opacity: 1; transform: scale(1.1); } }
+@media (prefers-reduced-motion: reduce) { #project-switch-status::before { animation: none; } }

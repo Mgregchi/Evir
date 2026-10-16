@@ -1,0 +1,114 @@
+{
+  "checkedAt": "2026-10-15T23:08:02.828545+00:00",
+  "scope": "Pressure-aware brush outlines with no engine/format schema changes, Ribbon study and restored merged project-library test gate.",
+  "research": "research/pressure-brush/sources.json",
+  "syncedMain": "2956ff066e16aff2fa0a92999d05b1052b101b58",
+  "environment": {
+    "node": "v24.19.0",
+    "npm": "11.9.0",
+    "chromium": "Chromium 151.0.7922.173 built on Debian GNU/Linux 13 (trixie)",
+    "playwright": "1.63.0",
+    "riveRuntime": "2.44.0",
+    "perfectFreehand": "1.2.3",
+    "axe": "4.14.0",
+    "rendering": "Linux headless Chromium; ANGLE Vulkan SwiftShader software. No physical GPU/device/pen evidence."
+  },
+  "initialAttempt": {
+    "command": "npm run test:editor",
+    "exitCode": 1,
+    "seconds": 207.8,
+    "reason": "Restored library test caught missing merged library/conflict CSS: Fit intercepted Save a separate copy. Original merged styles restored from 811586cdc817fb5433432afe1120dd383b4e2f5f before all required checks were rerun."
+  },
+  "sourceSHA256": {
+    "package-lock.json": "6f6ebb5c68f766758f3f9990528cda86ede1cf7302f06b23e45f1b2cf0d5bffe",
+    "package.json": "0168aa731924a86261f9db847b35a241a7c64c9e1f5ccb1dbff6d9391348dbd9",
+    "packages/studio/package.json": "a9856f094a4665041bd0618417645a9cc434869eb1456c8f248da71c8e1323d0",
+    "packages/studio/brush.mjs": "5406fee6297cd5b1e7f736db09aa439a97344e725cfc731586f9ef076c271f8b",
+    "packages/studio/freehand.mjs": "4645e952fa5b790ef007365fcf457ea2481da3c6ef47a9315e6229c18e40eedc",
+    "packages/studio/studio.mjs": "cf97b6d14faec481eedac40db4133f7eda7e8e2f5461481e1a69c6caa0f5a13d",
+    "packages/studio/studio.css": "be35bd56b322bced50470dbae679a2c44e2da59ba2fc2d0dd4ae7e45cddb518c",
+    "packages/studio/index.html": "4489e8f1ead87903bfe83564bda43fd99090357bcc703cb359a91c412bfdc083",
+    "packages/studio/build.mjs": "da12d50ee821fcc7d0823f02b804688d7cbc0dfdf9c40580a1bebbaa08f51fa9",
+    "tests/editor/brush.test.mjs": "36f518520e0832d83bb9f7edd6d6e9013e436b7101cb4f94e13a3c2914551266",
+    "tests/editor/brush-browser.cjs": "b5db38d0687e71442c37006aca6d53efcfd2d8a3aeec23742dcdfe5ab7bd3048",
+    "tests/editor/library-browser.cjs": "7fef2636b2eacea935d744e3523ebb0275d171678769815eab9b5a93d42e13d7",
+    "tests/frontend/examples.test.mjs": "067e4e20ed3322c67932a32559ba5c2e4e3bb16aa64b4259a0789ffdb3c8b042",
+    "apps/web/generate-examples.mjs": "6924b49cbb47277e6e805a019b27b607233f8589d044dcdce07e9da44efc3909",
+    "apps/web/examples.mjs": "eb2931c001840f402d6c8c6f720f4ff29fdadc91895bd9fc96fd1951fd5f75d3"
+  },
+  "fixtureSHA256": {
+    "apps/web/assets/examples/ribbon.evir-project": "d4633f28130a7689ae243202dda2d927953b53aaec3e172b916c882bdd064e19",
+    "apps/web/assets/examples/ribbon.riv": "6791a797e79719fe94678dc07c1d76502b910b04ffbac9a7ec0359f6886a0d4f",
+    "apps/web/assets/ribbon-poster.png": "9138f372b6fca420b20ab709019bd85cb27e187dbfde72950184e6a345ec6d26",
+    "research/results/pressure-brush/authored.evir-project": "7d75d4daf624605b1354090e9b99124774610bd764b49f090a485e19c9d248eb",
+    "research/results/pressure-brush/authored.riv": "cd37a43fb5ae695332e8687573b72e9ad1435599eabf574cadc21ad5941132bf"
+  },
+  "checks": [
+    {
+      "name": "editor",
+      "command": "npm run test:editor",
+      "exitCode": 0,
+      "seconds": 282.32
+    },
+    {
+      "name": "native",
+      "command": "npm run validate:editor",
+      "exitCode": 0,
+      "seconds": 252.99
+    },
+    {
+      "name": "frontend",
+      "command": "npm run test:frontend",
+      "exitCode": 0,
+      "seconds": 1.16
+    },
+    {
+      "name": "web",
+      "command": "npm run test:web",
+      "exitCode": 0,
+      "seconds": 500.09
+    },
+    {
+      "name": "experience",
+      "command": "npm run test:experience",
+      "exitCode": 0,
+      "seconds": 4.23
+    }
+  ],
+  "summary": {
+    "editorUnitTests": 89,
+    "frontendUnitTests": 22,
+    "editorBrowserScripts": 19,
+    "brushViewports": 4,
+    "galleryStudies": 21,
+    "authoringPlaybackComparisons": 188,
+    "galleryComparisons": 308,
+    "brushDownloadedExportComparisons": 2
+  },
+  "remaining": [
+    "Native stroke paints/centerline editing, joins/caps/dashes/trim and richer path operations",
+    "General animated reparenting, graphical skin weights/general IK and richer blending",
+    "Inner feather/offsets, text/layout/external assets and broader editable Editor-file import",
+    "Large control virtualization and expanded local command coverage/host orchestration",
+    "Matched external Editor exports and human/accessibility sessions are not fabricated; physical tests postponed; hosted backend deferred"
+  ],
+  "ci": {
+    "status": "Blocked before either job started; no remote CI validation executed",
+    "observedCodeHead": "11eb24dff44f53e359916319805c56597cfc755e",
+    "pr": "https://github.com/Mgregchi/Evir/pull/33",
+    "annotation": "The job was not started because your account is locked due to a billing issue.",
+    "jobs": [
+      {
+        "workflow": "Runtime package validation",
+        "url": "https://github.com/Mgregchi/Evir/actions/runs/38821802277/job/116719883770",
+        "executedSteps": 0
+      },
+      {
+        "workflow": "Web and Studio validation",
+        "url": "https://github.com/Mgregchi/Evir/actions/runs/38821802344/job/116719883997",
+        "executedSteps": 0
+      }
+    ],
+    "followupCommitScope": "Validation metadata only; tested application code unchanged."
+  }
+}
