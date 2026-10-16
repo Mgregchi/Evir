@@ -1,5 +1,7 @@
 # Public showcase provenance
 
+Momo, Nura and Otto are original contemporary vector-character studies authored in `apps/web/character-scenes.mjs`. Their posters (`momo-poster.png`, `nura-poster.png`, `otto-poster.png`) are actual Canvas renders, not concept images or interface mockups. Their `.evir-project` sources contain only editable filled paths, groups and bones, with no raster/font assets; `.riv` exports carry the compatible artwork, three animation loops and number-driven Expressions machine. Nura's scarf uses the existing weighted path implementation. Supplied reference artwork guided general variety; no reference pixels or stock layers are redistributed. The Evir brand files remain unchanged.
+
 `milo-poster.png`, `orbit-poster.png`, `bloom-poster.png`, `tempo-poster.png` `signal-poster.png`, `gather-poster.png` and `wisp-poster.png` are browser captures of independently authored Evir projects in `examples/`. Their editable source uses Studio's project schema; their `.riv` files are built by Evir's existing subset compiler. No artwork from the supplied third-party Rive files is used here.
 
 `studio-overview.png`, `studio-paths.png`, `studio-animation.png` and `studio-interact.png` are real 1440×900 screenshots captured from Evir Studio with the Milo project open. They are not interface mockups. Reproduce with `npm run web:assets` in the repository environment.

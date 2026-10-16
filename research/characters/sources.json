@@ -1,0 +1,66 @@
+[
+  {
+    "id": "duolingo-design",
+    "url": "https://design.duolingo.com/illustration/shape-language",
+    "bytes": 92722,
+    "sha256": "0c4fd9ee738c88efc868de0e83896642d2eea1dee38d4635be9c864d4b0421b4",
+    "accessed": "2026-10-16",
+    "httpStatus": 200,
+    "observed": "This path returned the Duolingo Design article landing page rather than the requested shape-language guide. No shape-language rules are inferred from the response."
+  },
+  {
+    "id": "duolingo-blog",
+    "url": "https://blog.duolingo.com/world-character-visemes/",
+    "bytes": 120307,
+    "sha256": "8fece42ebbdf5ba236bf5ea0ff6345019a331bfb264908f57d3cabe7b628c664",
+    "accessed": "2026-10-16",
+    "httpStatus": 200,
+    "observed": "Duolingo describes character-specific visemes, idle blinks/head movement, state-driven reactions and runtime integration. Evir uses distinct expressions and existing number-driven states, not speech timing, automated visemes or a claim to reproduce Duolingo artwork."
+  },
+  {
+    "id": "rive-bones",
+    "url": "https://rive.app/docs/editor/manipulating-shapes/bones.md",
+    "bytes": 11372,
+    "sha256": "7497d6cd4e69c8a7df6567896f21a65d1febf792cc7fa1d1e40c072e871c2aa3",
+    "accessed": "2026-10-16",
+    "httpStatus": 200,
+    "observed": "Bone chains position and rotate hierarchies; skins deform artwork with weights. Nura uses an existing two-bone weighted scarf, alongside separately animated groups."
+  },
+  {
+    "id": "rive-animation",
+    "url": "https://rive.app/docs/editor/animate-mode/animate-mode.md",
+    "error": "HTTP Error 404: Not Found",
+    "accessed": "2026-10-16",
+    "observed": "Attempt returned 404. Canonical animate-mode-overview discovered through the official llms.txt index."
+  },
+  {
+    "id": "rive-easing",
+    "url": "https://rive.app/docs/editor/animate-mode/interpolation-easing.md",
+    "finalUrl": "https://rive.app/docs/editor/animate-mode/interpolation-easing.md",
+    "bytes": 6772,
+    "sha256": "5de8e01c4dd153295cc587a2374b6e3a1e9c3613e106fe0916fc7bbb4692ef7e",
+    "accessed": "2026-10-16",
+    "httpStatus": 200,
+    "observed": "Rive documents keyed interpolation and cubic easing. Evir uses its existing supported cubic interpolation for blinks, body motion, waves and scarf motion."
+  },
+  {
+    "id": "rive-animate",
+    "url": "https://rive.app/docs/editor/animate-mode/animate-mode-overview.md",
+    "finalUrl": "https://rive.app/docs/editor/animate-mode/animate-mode-overview.md",
+    "bytes": 4339,
+    "sha256": "e521802678909a67773bf46635418ef40699dee822d5c598f466e3118cd6e14e",
+    "accessed": "2026-10-16",
+    "httpStatus": 200,
+    "observed": "Animate Mode exposes timelines, keys and state machines; Evir examples remain editable scenes using the existing engine subset."
+  },
+  {
+    "id": "svg-curves",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths",
+    "finalUrl": "https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths",
+    "bytes": 223560,
+    "sha256": "ecbc2436e1d081df8efc90ac2fa83bf3ed50db4ce5a43127045eb5e5dc132e5d",
+    "accessed": "2026-10-16",
+    "httpStatus": 200,
+    "observed": "Cubic and quadratic path commands describe editable vector contours. The new authoring helper uses a private bounded absolute command subset only for original fixtures; it is not a general SVG importer."
+  }
+]

@@ -1,0 +1,158 @@
+{
+  "checkedAt": "2026-10-16T08:05:39.474465+00:00",
+  "scope": "Three original editable vector characters, expression controls and home/gallery presentation. No Studio/engine schema or backend implementation changes.",
+  "research": "research/characters/sources.json",
+  "baseMain": "2956ff066e16aff2fa0a92999d05b1052b101b58",
+  "pendingIndependentWork": "Pressure-brush PR #33 remains separate; this branch was created from main.",
+  "environment": {
+    "node": "v24.19.0",
+    "npm": "11.9.0",
+    "chromium": "Chromium 151.0.7922.173 built on Debian GNU/Linux 13 (trixie)",
+    "riveRuntime": "2.44.0",
+    "playwright": "1.63.0",
+    "axe": "4.14.0",
+    "rendering": "Linux headless Chromium; official-runtime WebGL uses ANGLE Vulkan SwiftShader software. No physical device/GPU or human claims."
+  },
+  "sourceSHA256": {
+    "apps/web/character-scenes.mjs": "91214cf3ac85d65452e7ea27dd753ad689dda138510e0449d003945ed21be6dc",
+    "apps/web/app.mjs": "1768ace433b5c03c49253810ee3b46c8e1cc4c28296791b025fb38e1d49cbd72",
+    "apps/web/content.mjs": "155ed10fe990179b9fa016be08024e4607566d52ce6ac3d0de9fe9e67c39ff68",
+    "apps/web/styles.css": "b676a6e4ee45f376799d6f5a5b4a4afbc06fbc211e5873d99dd8a3da624f87a2",
+    "apps/web/examples.mjs": "c718e77f998f2985d0099c4495308562d90e6d70c51ae2acab71ad737d95df9e",
+    "apps/web/generate-examples.mjs": "d81bee79ca4b31a1aadd5ef0650b5fd2a09bfe5486b25b7e3abd5540ce5c1d56",
+    "package.json": "f554445476d8b93b32d03a06ea5e9139115054d9c3d1488d2a0d7638971b1d6a",
+    "tests/frontend/characters.test.mjs": "1b57396f4e1d39497527bd82b177058dd2f2c6e0e3551467ef3ad305a0cb1a42",
+    "tests/site/characters.cjs": "d99cfd0b3115a5522fcc9dc88c534bb84bc9f4880a53cdce8302ab4c7297e1f0",
+    "tests/site/examples.cjs": "f5d25fc0178c3cc051ec8355c6bb318729d9b5e77524c1855ae93a261892a18d",
+    "tests/site/gallery.cjs": "02d68f4327fb2de65e4b28791732bf1c5974783c82df7670093e10f28d9b8636"
+  },
+  "fixtureSHA256": {
+    "apps/web/assets/examples/momo.evir-project": "ff02731a5b75310cd1d4ca310e74f53dceb446e692990420744ecadd05f81dd9",
+    "apps/web/assets/examples/momo.riv": "6b8d2726a7df4c0972acf26a2f1eb43f89caedf51d3a077a25241797a3f7061a",
+    "apps/web/assets/examples/nura.evir-project": "55608107a2f3c117476fcd5bd5b59815ab670559d09e15314f321cd9518d88e0",
+    "apps/web/assets/examples/nura.riv": "3ae037026ce8649268501bfbb4cabc259a0d4c0a3df4697219149f16cb75c6ee",
+    "apps/web/assets/examples/otto.evir-project": "572a8035f2eb385b93332c8c7cb9e17307be9ccf6535decf02f6252b880ce2ad",
+    "apps/web/assets/examples/otto.riv": "fc05f85ea6ee51ed959a9a5b4c8e35fc6b970c46a3b97ed6b2dba9b25a410872",
+    "apps/web/assets/momo-poster.png": "2842f3f0b7bd5721b8cdb6af0e00eda0a75d0453f75f3928ad927648cc94ae08",
+    "apps/web/assets/nura-poster.png": "676db437f792220eda81b5f093132a3961b12940c5efbf3458d396ac38dfba59",
+    "apps/web/assets/otto-poster.png": "be30d1acd4d73c172605f132c88fc149598fe496380b2f5745cb24251077b636"
+  },
+  "characters": {
+    "momo": {
+      "nodes": 36,
+      "paths": 29,
+      "bones": 0,
+      "assets": 0,
+      "animations": [
+        "Calm",
+        "Hello",
+        "Delight"
+      ],
+      "nativeBytes": 8349
+    },
+    "nura": {
+      "nodes": 58,
+      "paths": 49,
+      "bones": 2,
+      "assets": 0,
+      "animations": [
+        "Calm",
+        "Hello",
+        "Delight"
+      ],
+      "nativeBytes": 13696
+    },
+    "otto": {
+      "nodes": 56,
+      "paths": 49,
+      "bones": 0,
+      "assets": 0,
+      "animations": [
+        "Calm",
+        "Hello",
+        "Delight"
+      ],
+      "nativeBytes": 13244
+    }
+  },
+  "checks": [
+    {
+      "name": "build",
+      "command": "npm run web:build",
+      "exitCode": 0,
+      "seconds": 0.76
+    },
+    {
+      "name": "frontend",
+      "command": "npm run test:frontend",
+      "exitCode": 0,
+      "seconds": 1.49
+    },
+    {
+      "name": "web",
+      "command": "npm run test:web",
+      "exitCode": 0,
+      "seconds": 894.07
+    },
+    {
+      "name": "experience",
+      "command": "npm run test:experience",
+      "exitCode": 0,
+      "seconds": 4.43
+    },
+    {
+      "name": "reproduction",
+      "command": "node apps/web/generate-examples.mjs (all tested source/export hashes unchanged)",
+      "exitCode": 0,
+      "seconds": 0.3
+    }
+  ],
+  "summary": {
+    "frontendUnitTests": 25,
+    "galleryStudies": 23,
+    "allGalleryNativeComparisons": 456,
+    "newCharacterNativeComparisons": 156,
+    "newCharacterViewports": 3,
+    "newCharacterExpressionTimelines": 9,
+    "publicPageConfigurationChecks": 22
+  },
+  "evidence": {
+    "native": "research/results/characters/native.json",
+    "browser": "research/results/characters/browser.json",
+    "homeCollection": "research/results/characters/collection-1440.png",
+    "policy": "Retain fresh results within this increment; older shared report files remain historical snapshots."
+  },
+  "remaining": [
+    "Native stroke paints and richer path contracts",
+    "Broader editable Editor-file import and renderer parity",
+    "General rigging/weight painting, richer blending and text/layout",
+    "Physical tests postponed; human/accessibility sessions unproven; hosted backend deferred"
+  ],
+  "ci": {
+    "status": "Blocked before either job started; no remote CI validation executed",
+    "observedCodeHead": "619568ae1f232d635b471e2e64e0609bd711df98",
+    "pr": "https://github.com/Mgregchi/Evir/pull/34",
+    "annotation": "The job was not started because your account is locked due to a billing issue.",
+    "jobs": [
+      {
+        "workflow": "Runtime package validation",
+        "url": "https://github.com/Mgregchi/Evir/actions/runs/38871588319/job/116876688064",
+        "executedSteps": 0
+      },
+      {
+        "workflow": "Web and Studio validation",
+        "url": "https://github.com/Mgregchi/Evir/actions/runs/38871588155/job/116876687176",
+        "executedSteps": 0
+      }
+    ],
+    "followupCommitScope": "Validation metadata only; tested application code unchanged."
+  },
+  "integrationPreview": {
+    "command": "git merge-tree --write-tree --name-only HEAD feature/studio-pressure-brush",
+    "pressureHead": "b06eac404ebf3ba734525bd295e0c1d0ad61e77d",
+    "characterCodeHead": "619568ae1f232d635b471e2e64e0609bd711df98",
+    "exitCode": 0,
+    "conflicts": [],
+    "scope": "Preview tree only; no branch was merged."
+  }
+}

@@ -1,0 +1,4353 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 2,
+  "id": "momo-project",
+  "name": "Momo — a pocketful of joy",
+  "artboards": [
+    {
+      "id": "momo-board",
+      "name": "Momo — a pocketful of joy",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "momo-paper",
+      "name": "paper",
+      "kind": "path",
+      "artboardId": "momo-board",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#fff7e8",
+        "skin": null,
+        "points": [
+          {
+            "id": "momo-paper-p0",
+            "anchor": [
+              0,
+              0
+            ],
+            "in": [
+              0,
+              0
+            ],
+            "out": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "momo-paper-p1",
+            "anchor": [
+              512,
+              0
+            ],
+            "in": [
+              512,
+              0
+            ],
+            "out": [
+              512,
+              0
+            ]
+          },
+          {
+            "id": "momo-paper-p2",
+            "anchor": [
+              512,
+              0
+            ],
+            "in": [
+              512,
+              0
+            ],
+            "out": [
+              512,
+              0
+            ]
+          },
+          {
+            "id": "momo-paper-p3",
+            "anchor": [
+              512,
+              512
+            ],
+            "in": [
+              512,
+              512
+            ],
+            "out": [
+              512,
+              512
+            ]
+          },
+          {
+            "id": "momo-paper-p4",
+            "anchor": [
+              512,
+              512
+            ],
+            "in": [
+              512,
+              512
+            ],
+            "out": [
+              512,
+              512
+            ]
+          },
+          {
+            "id": "momo-paper-p5",
+            "anchor": [
+              0,
+              512
+            ],
+            "in": [
+              0,
+              512
+            ],
+            "out": [
+              0,
+              512
+            ]
+          },
+          {
+            "id": "momo-paper-p6",
+            "anchor": [
+              0,
+              512
+            ],
+            "in": [
+              0,
+              512
+            ],
+            "out": [
+              0,
+              512
+            ]
+          },
+          {
+            "id": "momo-paper-p7",
+            "anchor": [
+              0,
+              0
+            ],
+            "in": [
+              0,
+              0
+            ],
+            "out": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "momo-color-field",
+      "name": "color field",
+      "kind": "path",
+      "artboardId": "momo-board",
+      "parentId": null,
+      "order": 1,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        256,
+        254
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f4e1d7",
+        "skin": null,
+        "points": [
+          {
+            "id": "momo-color-field-p0",
+            "anchor": [
+              181,
+              0
+            ],
+            "in": [
+              181,
+              -99.96353971379999
+            ],
+            "out": [
+              181,
+              99.96353971379999
+            ]
+          },
+          {
+            "id": "momo-color-field-p1",
+            "anchor": [
+              0,
+              181
+            ],
+            "in": [
+              99.96353971379999,
+              181
+            ],
+            "out": [
+              -99.96353971379999,
+              181
+            ]
+          },
+          {
+            "id": "momo-color-field-p2",
+            "anchor": [
+              -181,
+              0
+            ],
+            "in": [
+              -181,
+              99.96353971379999
+            ],
+            "out": [
+              -181,
+              -99.96353971379999
+            ]
+          },
+          {
+            "id": "momo-color-field-p3",
+            "anchor": [
+              0,
+              -181
+            ],
+            "in": [
+              -99.96353971379999,
+              -181
+            ],
+            "out": [
+              99.96353971379999,
+              -181
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "momo-ground-shadow",
+      "name": "ground shadow",
+      "kind": "path",
+      "artboardId": "momo-board",
+      "parentId": null,
+      "order": 2,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        256,
+        453
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#26374718",
+        "skin": null,
+        "points": [
+          {
+            "id": "momo-ground-shadow-p0",
+            "anchor": [
+              106,
+              0
+            ],
+            "in": [
+              106,
+              -6.0751322478
+            ],
+            "out": [
+              106,
+              6.0751322478
+            ]
+          },
+          {
+            "id": "momo-ground-shadow-p1",
+            "anchor": [
+              0,
+              11
+            ],
+            "in": [
+              58.5421834788,
+              11
+            ],
+            "out": [
+              -58.5421834788,
+              11
+            ]
+          },
+          {
+            "id": "momo-ground-shadow-p2",
+            "anchor": [
+              -106,
+              0
+            ],
+            "in": [
+              -106,
+              6.0751322478
+            ],
+            "out": [
+              -106,
+              -6.0751322478
+            ]
+          },
+          {
+            "id": "momo-ground-shadow-p3",
+            "anchor": [
+              0,
+              -11
+            ],
+            "in": [
+              -58.5421834788,
+              -11
+            ],
+            "out": [
+              58.5421834788,
+              -11
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "momo-left-spark",
+      "name": "left spark",
+      "kind": "path",
+      "artboardId": "momo-board",
+      "parentId": null,
+      "order": 3,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        103,
+        175
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e59c73",
+        "skin": null,
+        "points": [
+          {
+            "id": "momo-left-spark-p0",
+            "anchor": [
+              0,
+              -14
+            ],
+            "in": [
+              -1.3333333333333333,
+              -6
+            ],
+            "out": [
+              1.3333333333333333,
+              -6
+            ]
+          },
+          {
+            "id": "momo-left-spark-p1",
+            "anchor": [
+              14,
+              0
+            ],
+            "in": [
+              6,
+              -1.3333333333333333
+            ],
+            "out": [
+              6,
+              1.3333333333333333
+            ]
+          },
+          {
+            "id": "momo-left-spark-p2",
+            "anchor": [
+              0,
+              14
+            ],
+            "in": [
+              1.3333333333333333,
+              6
+            ],
+            "out": [
+              -1.3333333333333333,
+              6
+            ]
+          },
+          {
+            "id": "momo-left-spark-p3",
+            "anchor": [
+              -14,
+              0
+            ],
+            "in": [
+              -6,
+              1.3333333333333333
+            ],
+            "out": [
+              -6,
+              -1.3333333333333333
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "momo-right-spark",
+      "name": "right spark",
+      "kind": "path",
+      "artboardId": "momo-board",
+      "parentId": null,
+      "order": 4,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        402,
+        269
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#a997d4",
+        "skin": null,
+        "points": [
+          {
+            "id": "momo-right-spark-p0",
+            "anchor": [
+              0,
+              -10
+            ],
+            "in": [
+              -1.3333333333333333,
+              -4.666666666666667
+            ],
+            "out": [
+              1.3333333333333333,
+              -4.666666666666667
+            ]
+          },
+          {
+            "id": "momo-right-spark-p1",
+            "anchor": [
+              10,
+              0
+            ],
+            "in": [
+              4.666666666666667,
+              -1.3333333333333333
+            ],
+            "out": [
+              4.666666666666667,
+              1.3333333333333333
+            ]
+          },
+          {
+            "id": "momo-right-spark-p2",
+            "anchor": [
+              0,
+              10
+            ],
+            "in": [
+              1.3333333333333333,
+              4.666666666666667
+            ],
+            "out": [
+              -1.3333333333333333,
+              4.666666666666667
+            ]
+          },
+          {
+            "id": "momo-right-spark-p3",
+            "anchor": [
+              -10,
+              0
+            ],
+            "in": [
+              -4.666666666666667,
+              1.3333333333333333
+            ],
+            "out": [
+              -4.666666666666667,
+              -1.3333333333333333
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "momo-small-orbit",
+      "name": "small orbit",
+      "kind": "path",
+      "artboardId": "momo-board",
+      "parentId": null,
+      "order": 5,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        395,
+        151
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#a997d4",
+        "skin": null,
+        "points": [
+          {
+            "id": "momo-small-orbit-p0",
+            "anchor": [
+              7,
+              0
+            ],
+            "in": [
+              7,
+              -3.8659932485999997
+            ],
+            "out": [
+              7,
+              3.8659932485999997
+            ]
+          },
+          {
+            "id": "momo-small-orbit-p1",
+            "anchor": [
+              0,
+              7
+            ],
+            "in": [
+              3.8659932485999997,
+              7
+            ],
+            "out": [
+              -3.8659932485999997,
+              7
+            ]
+          },
+          {
+            "id": "momo-small-orbit-p2",
+            "anchor": [
+              -7,
+              0
+            ],
+            "in": [
+              -7,
+              3.8659932485999997
+            ],
+            "out": [
+              -7,
+              -3.8659932485999997
+            ]
+          },
+          {
+            "id": "momo-small-orbit-p3",
+            "anchor": [
+              0,
+              -7
+            ],
+            "in": [
+              -3.8659932485999997,
+              -7
+            ],
+            "out": [
+              3.8659932485999997,
+              -7
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "momo-small-seed",
+      "name": "small seed",
+      "kind": "path",
+      "artboardId": "momo-board",
+      "parentId": null,
+      "order": 6,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        112,
+        329
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#669f8d",
+        "skin": null,
+        "points": [
+          {
+            "id": "momo-small-seed-p0",
+            "anchor": [
+              5,
+              0
+            ],
+            "in": [
+              5,
+              -2.761423749
+            ],
+            "out": [
+              5,
+              2.761423749
+            ]
+          },
+          {
+            "id": "momo-small-seed-p1",
+            "anchor": [
+              0,
+              5
+            ],
+            "in": [
+              2.761423749,
+              5
+            ],
+            "out": [
+              -2.761423749,
+              5
+            ]
+          },
+          {
+            "id": "momo-small-seed-p2",
+            "anchor": [
+              -5,
+              0
+            ],
+            "in": [
+              -5,
+              2.761423749
+            ],
+            "out": [
+              -5,
+              -2.761423749
+            ]
+          },
+          {
+            "id": "momo-small-seed-p3",
+            "anchor": [
+              0,
+              -5
+            ],
+            "in": [
+              -2.761423749,
+              -5
+            ],
+            "out": [
+              2.761423749,
+              -5
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "momo-character",
+      "name": "character",
+      "kind": "group",
+      "artboardId": "momo-board",
+      "parentId": null,
+      "order": 7,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        256,
+        319
+      ],
+      "geometry": null
+    },
+    {
+      "id": "momo-back-foot",
+      "name": "back foot",
+      "kind": "path",
+      "artboardId": "momo-board",
+      "parentId": "momo-character",
+      "order": 8,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#d97865",
+        "skin": null,
+        "points": [
+          {
+            "id": "momo-back-foot-p0",
+            "anchor": [
+              -59,
+              94
+            ],
+            "in": [
+              -59,
+              94
+            ],
+            "out": [
+              -91,
+              91
+            ]
+          },
+          {
+            "id": "momo-back-foot-p1",
+            "anchor": [
+              -101,
+              117
+            ],
+            "in": [
+              -108,
+              106
+            ],
+            "out": [
+              -95,
+              127
+            ]
+          },
+          {
+            "id": "momo-back-foot-p2",
+            "anchor": [
+              -34,
+              115
+            ],
+            "in": [
+              -58,
+              126
+            ],
+            "out": [
+              -34,
+              115
+            ]
+          },
+          {
+            "id": "momo-back-foot-p3",
+            "anchor": [
+              -32,
+              103
+            ],
+            "in": [
+              -32,
+              103
+            ],
+            "out": [
+              -32,
+              103
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "momo-front-foot",
+      "name": "front foot",
+      "kind": "path",
+      "artboardId": "momo-board",
+      "parentId": "momo-character",
+      "order": 9,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#d97865",
+        "skin": null,
+        "points": [
+          {
+            "id": "momo-front-foot-p0",
+            "anchor": [
+              30,
+              102
+            ],
+            "in": [
+              30,
+              102
+            ],
+            "out": [
+              58,
+              95
+            ]
+          },
+          {
+            "id": "momo-front-foot-p1",
+            "anchor": [
+              91,
+              115
+            ],
+            "in": [
+              85,
+              102
+            ],
+            "out": [
+              92,
+              127
+            ]
+          },
+          {
+            "id": "momo-front-foot-p2",
+            "anchor": [
+              30,
+              120
+            ],
+            "in": [
+              61,
+              131
+            ],
+            "out": [
+              30,
+              120
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "momo-left-flipper",
+      "name": "left flipper",
+      "kind": "group",
+      "artboardId": "momo-board",
+      "parentId": "momo-character",
+      "order": 10,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -90,
+        -7
+      ],
+      "geometry": null
+    },
+    {
+      "id": "momo-left-flipper-shape",
+      "name": "left flipper shape",
+      "kind": "path",
+      "artboardId": "momo-board",
+      "parentId": "momo-left-flipper",
+      "order": 11,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#419d8e",
+        "skin": null,
+        "points": [
+          {
+            "id": "momo-left-flipper-shape-p0",
+            "anchor": [
+              6,
+              -21
+            ],
+            "in": [
+              6,
+              -21
+            ],
+            "out": [
+              -18,
+              -32
+            ]
+          },
+          {
+            "id": "momo-left-flipper-shape-p1",
+            "anchor": [
+              -58,
+              0
+            ],
+            "in": [
+              -48,
+              -23
+            ],
+            "out": [
+              -68,
+              21
+            ]
+          },
+          {
+            "id": "momo-left-flipper-shape-p2",
+            "anchor": [
+              -43,
+              23
+            ],
+            "in": [
+              -57,
+              32
+            ],
+            "out": [
+              -24,
+              11
+            ]
+          },
+          {
+            "id": "momo-left-flipper-shape-p3",
+            "anchor": [
+              8,
+              9
+            ],
+            "in": [
+              -16,
+              7
+            ],
+            "out": [
+              8,
+              9
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "momo-waving-flipper",
+      "name": "waving flipper",
+      "kind": "group",
+      "artboardId": "momo-board",
+      "parentId": "momo-character",
+      "order": 12,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        88,
+        -21
+      ],
+      "geometry": null
+    },
+    {
+      "id": "momo-waving-flipper-shape",
+      "name": "waving flipper shape",
+      "kind": "path",
+      "artboardId": "momo-board",
+      "parentId": "momo-waving-flipper",
+      "order": 13,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#65bea5",
+        "skin": null,
+        "points": [
+          {
+            "id": "momo-waving-flipper-shape-p0",
+            "anchor": [
+              -4,
+              -18
+            ],
+            "in": [
+              -4,
+              -18
+            ],
+            "out": [
+              16,
+              -18
+            ]
+          },
+          {
+            "id": "momo-waving-flipper-shape-p1",
+            "anchor": [
+              43,
+              -56
+            ],
+            "in": [
+              28,
+              -39
+            ],
+            "out": [
+              55,
+              -71
+            ]
+          },
+          {
+            "id": "momo-waving-flipper-shape-p2",
+            "anchor": [
+              65,
+              -45
+            ],
+            "in": [
+              72,
+              -64
+            ],
+            "out": [
+              84,
+              -64
+            ]
+          },
+          {
+            "id": "momo-waving-flipper-shape-p3",
+            "anchor": [
+              84,
+              -34
+            ],
+            "in": [
+              96,
+              -55
+            ],
+            "out": [
+              107,
+              -41
+            ]
+          },
+          {
+            "id": "momo-waving-flipper-shape-p4",
+            "anchor": [
+              88,
+              -11
+            ],
+            "in": [
+              111,
+              -25
+            ],
+            "out": [
+              64,
+              3
+            ]
+          },
+          {
+            "id": "momo-waving-flipper-shape-p5",
+            "anchor": [
+              0,
+              18
+            ],
+            "in": [
+              36,
+              22
+            ],
+            "out": [
+              0,
+              18
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "momo-body-shadow",
+      "name": "body shadow",
+      "kind": "path",
+      "artboardId": "momo-board",
+      "parentId": "momo-character",
+      "order": 14,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#348f80",
+        "skin": null,
+        "points": [
+          {
+            "id": "momo-body-shadow-p0",
+            "anchor": [
+              -102,
+              73
+            ],
+            "in": [
+              -88,
+              119
+            ],
+            "out": [
+              -130,
+              7
+            ]
+          },
+          {
+            "id": "momo-body-shadow-p1",
+            "anchor": [
+              -59,
+              -137
+            ],
+            "in": [
+              -116,
+              -95
+            ],
+            "out": [
+              -44,
+              -162
+            ]
+          },
+          {
+            "id": "momo-body-shadow-p2",
+            "anchor": [
+              -30,
+              -191
+            ],
+            "in": [
+              -50,
+              -181
+            ],
+            "out": [
+              -8,
+              -202
+            ]
+          },
+          {
+            "id": "momo-body-shadow-p3",
+            "anchor": [
+              23,
+              -156
+            ],
+            "in": [
+              18,
+              -183
+            ],
+            "out": [
+              75,
+              -144
+            ]
+          },
+          {
+            "id": "momo-body-shadow-p4",
+            "anchor": [
+              116,
+              -31
+            ],
+            "in": [
+              112,
+              -91
+            ],
+            "out": [
+              126,
+              34
+            ]
+          },
+          {
+            "id": "momo-body-shadow-p5",
+            "anchor": [
+              70,
+              119
+            ],
+            "in": [
+              109,
+              106
+            ],
+            "out": [
+              42,
+              128
+            ]
+          },
+          {
+            "id": "momo-body-shadow-p6",
+            "anchor": [
+              1,
+              119
+            ],
+            "in": [
+              28,
+              111
+            ],
+            "out": [
+              -32,
+              135
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "momo-body",
+      "name": "body",
+      "kind": "path",
+      "artboardId": "momo-board",
+      "parentId": "momo-character",
+      "order": 15,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#81ceb3",
+        "skin": null,
+        "points": [
+          {
+            "id": "momo-body-p0",
+            "anchor": [
+              -93,
+              67
+            ],
+            "in": [
+              -80,
+              107
+            ],
+            "out": [
+              -116,
+              5
+            ]
+          },
+          {
+            "id": "momo-body-p1",
+            "anchor": [
+              -49,
+              -132
+            ],
+            "in": [
+              -100,
+              -93
+            ],
+            "out": [
+              -31,
+              -155
+            ]
+          },
+          {
+            "id": "momo-body-p2",
+            "anchor": [
+              -22,
+              -181
+            ],
+            "in": [
+              -35,
+              -177
+            ],
+            "out": [
+              -8,
+              -182
+            ]
+          },
+          {
+            "id": "momo-body-p3",
+            "anchor": [
+              7,
+              -143
+            ],
+            "in": [
+              5,
+              -162
+            ],
+            "out": [
+              67,
+              -135
+            ]
+          },
+          {
+            "id": "momo-body-p4",
+            "anchor": [
+              105,
+              -25
+            ],
+            "in": [
+              103,
+              -86
+            ],
+            "out": [
+              111,
+              33
+            ]
+          },
+          {
+            "id": "momo-body-p5",
+            "anchor": [
+              65,
+              107
+            ],
+            "in": [
+              99,
+              96
+            ],
+            "out": [
+              40,
+              117
+            ]
+          },
+          {
+            "id": "momo-body-p6",
+            "anchor": [
+              1,
+              109
+            ],
+            "in": [
+              27,
+              100
+            ],
+            "out": [
+              -31,
+              124
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "momo-body-light",
+      "name": "body light",
+      "kind": "path",
+      "artboardId": "momo-board",
+      "parentId": "momo-character",
+      "order": 16,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#b5e5cd",
+        "skin": null,
+        "points": [
+          {
+            "id": "momo-body-light-p0",
+            "anchor": [
+              -78,
+              -50
+            ],
+            "in": [
+              -88,
+              -23
+            ],
+            "out": [
+              -65,
+              -99
+            ]
+          },
+          {
+            "id": "momo-body-light-p1",
+            "anchor": [
+              -3,
+              -127
+            ],
+            "in": [
+              -37,
+              -124
+            ],
+            "out": [
+              28,
+              -129
+            ]
+          },
+          {
+            "id": "momo-body-light-p2",
+            "anchor": [
+              59,
+              -80
+            ],
+            "in": [
+              51,
+              -107
+            ],
+            "out": [
+              29,
+              -106
+            ]
+          },
+          {
+            "id": "momo-body-light-p3",
+            "anchor": [
+              -29,
+              -73
+            ],
+            "in": [
+              -8,
+              -102
+            ],
+            "out": [
+              -49,
+              -45
+            ]
+          },
+          {
+            "id": "momo-body-light-p4",
+            "anchor": [
+              -70,
+              12
+            ],
+            "in": [
+              -47,
+              -5
+            ],
+            "out": [
+              -89,
+              19
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "momo-belly",
+      "name": "belly",
+      "kind": "path",
+      "artboardId": "momo-board",
+      "parentId": "momo-character",
+      "order": 17,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#c1ead0",
+        "skin": null,
+        "points": [
+          {
+            "id": "momo-belly-p0",
+            "anchor": [
+              -64,
+              36
+            ],
+            "in": [
+              -61,
+              70
+            ],
+            "out": [
+              -69,
+              5
+            ]
+          },
+          {
+            "id": "momo-belly-p1",
+            "anchor": [
+              2,
+              -5
+            ],
+            "in": [
+              -43,
+              -6
+            ],
+            "out": [
+              45,
+              -6
+            ]
+          },
+          {
+            "id": "momo-belly-p2",
+            "anchor": [
+              67,
+              49
+            ],
+            "in": [
+              72,
+              15
+            ],
+            "out": [
+              64,
+              84
+            ]
+          },
+          {
+            "id": "momo-belly-p3",
+            "anchor": [
+              -2,
+              95
+            ],
+            "in": [
+              31,
+              98
+            ],
+            "out": [
+              -36,
+              92
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "momo-face",
+      "name": "face",
+      "kind": "group",
+      "artboardId": "momo-board",
+      "parentId": "momo-character",
+      "order": 18,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        4,
+        -51
+      ],
+      "geometry": null
+    },
+    {
+      "id": "momo-left-eye",
+      "name": "left eye",
+      "kind": "group",
+      "artboardId": "momo-board",
+      "parentId": "momo-face",
+      "order": 19,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -34,
+        -23
+      ],
+      "geometry": null
+    },
+    {
+      "id": "momo-left-eye-sclera",
+      "name": "left eye sclera",
+      "kind": "path",
+      "artboardId": "momo-board",
+      "parentId": "momo-left-eye",
+      "order": 20,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#fff9eb",
+        "skin": null,
+        "points": [
+          {
+            "id": "momo-left-eye-sclera-p0",
+            "anchor": [
+              19,
+              0
+            ],
+            "in": [
+              19,
+              -13.254833995199998
+            ],
+            "out": [
+              19,
+              13.254833995199998
+            ]
+          },
+          {
+            "id": "momo-left-eye-sclera-p1",
+            "anchor": [
+              0,
+              24
+            ],
+            "in": [
+              10.4934102462,
+              24
+            ],
+            "out": [
+              -10.4934102462,
+              24
+            ]
+          },
+          {
+            "id": "momo-left-eye-sclera-p2",
+            "anchor": [
+              -19,
+              0
+            ],
+            "in": [
+              -19,
+              13.254833995199998
+            ],
+            "out": [
+              -19,
+              -13.254833995199998
+            ]
+          },
+          {
+            "id": "momo-left-eye-sclera-p3",
+            "anchor": [
+              0,
+              -24
+            ],
+            "in": [
+              -10.4934102462,
+              -24
+            ],
+            "out": [
+              10.4934102462,
+              -24
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "momo-left-eye-pupil",
+      "name": "left eye pupil",
+      "kind": "path",
+      "artboardId": "momo-board",
+      "parentId": "momo-left-eye",
+      "order": 21,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        3,
+        2
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#233e3d",
+        "skin": null,
+        "points": [
+          {
+            "id": "momo-left-eye-pupil-p0",
+            "anchor": [
+              10,
+              0
+            ],
+            "in": [
+              10,
+              -8.284271247
+            ],
+            "out": [
+              10,
+              8.284271247
+            ]
+          },
+          {
+            "id": "momo-left-eye-pupil-p1",
+            "anchor": [
+              0,
+              15
+            ],
+            "in": [
+              5.522847498,
+              15
+            ],
+            "out": [
+              -5.522847498,
+              15
+            ]
+          },
+          {
+            "id": "momo-left-eye-pupil-p2",
+            "anchor": [
+              -10,
+              0
+            ],
+            "in": [
+              -10,
+              8.284271247
+            ],
+            "out": [
+              -10,
+              -8.284271247
+            ]
+          },
+          {
+            "id": "momo-left-eye-pupil-p3",
+            "anchor": [
+              0,
+              -15
+            ],
+            "in": [
+              -5.522847498,
+              -15
+            ],
+            "out": [
+              5.522847498,
+              -15
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "momo-left-eye-shine",
+      "name": "left eye shine",
+      "kind": "path",
+      "artboardId": "momo-board",
+      "parentId": "momo-left-eye",
+      "order": 22,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        5,
+        -5
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#ffffff",
+        "skin": null,
+        "points": [
+          {
+            "id": "momo-left-eye-shine-p0",
+            "anchor": [
+              4,
+              0
+            ],
+            "in": [
+              4,
+              -2.761423749
+            ],
+            "out": [
+              4,
+              2.761423749
+            ]
+          },
+          {
+            "id": "momo-left-eye-shine-p1",
+            "anchor": [
+              0,
+              5
+            ],
+            "in": [
+              2.2091389992,
+              5
+            ],
+            "out": [
+              -2.2091389992,
+              5
+            ]
+          },
+          {
+            "id": "momo-left-eye-shine-p2",
+            "anchor": [
+              -4,
+              0
+            ],
+            "in": [
+              -4,
+              2.761423749
+            ],
+            "out": [
+              -4,
+              -2.761423749
+            ]
+          },
+          {
+            "id": "momo-left-eye-shine-p3",
+            "anchor": [
+              0,
+              -5
+            ],
+            "in": [
+              -2.2091389992,
+              -5
+            ],
+            "out": [
+              2.2091389992,
+              -5
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "momo-right-eye",
+      "name": "right eye",
+      "kind": "group",
+      "artboardId": "momo-board",
+      "parentId": "momo-face",
+      "order": 23,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        34,
+        -23
+      ],
+      "geometry": null
+    },
+    {
+      "id": "momo-right-eye-sclera",
+      "name": "right eye sclera",
+      "kind": "path",
+      "artboardId": "momo-board",
+      "parentId": "momo-right-eye",
+      "order": 24,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#fff9eb",
+        "skin": null,
+        "points": [
+          {
+            "id": "momo-right-eye-sclera-p0",
+            "anchor": [
+              19,
+              0
+            ],
+            "in": [
+              19,
+              -13.254833995199998
+            ],
+            "out": [
+              19,
+              13.254833995199998
+            ]
+          },
+          {
+            "id": "momo-right-eye-sclera-p1",
+            "anchor": [
+              0,
+              24
+            ],
+            "in": [
+              10.4934102462,
+              24
+            ],
+            "out": [
+              -10.4934102462,
+              24
+            ]
+          },
+          {
+            "id": "momo-right-eye-sclera-p2",
+            "anchor": [
+              -19,
+              0
+            ],
+            "in": [
+              -19,
+              13.254833995199998
+            ],
+            "out": [
+              -19,
+              -13.254833995199998
+            ]
+          },
+          {
+            "id": "momo-right-eye-sclera-p3",
+            "anchor": [
+              0,
+              -24
+            ],
+            "in": [
+              -10.4934102462,
+              -24
+            ],
+            "out": [
+              10.4934102462,
+              -24
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "momo-right-eye-pupil",
+      "name": "right eye pupil",
+      "kind": "path",
+      "artboardId": "momo-board",
+      "parentId": "momo-right-eye",
+      "order": 25,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        3,
+        2
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#233e3d",
+        "skin": null,
+        "points": [
+          {
+            "id": "momo-right-eye-pupil-p0",
+            "anchor": [
+              10,
+              0
+            ],
+            "in": [
+              10,
+              -8.284271247
+            ],
+            "out": [
+              10,
+              8.284271247
+            ]
+          },
+          {
+            "id": "momo-right-eye-pupil-p1",
+            "anchor": [
+              0,
+              15
+            ],
+            "in": [
+              5.522847498,
+              15
+            ],
+            "out": [
+              -5.522847498,
+              15
+            ]
+          },
+          {
+            "id": "momo-right-eye-pupil-p2",
+            "anchor": [
+              -10,
+              0
+            ],
+            "in": [
+              -10,
+              8.284271247
+            ],
+            "out": [
+              -10,
+              -8.284271247
+            ]
+          },
+          {
+            "id": "momo-right-eye-pupil-p3",
+            "anchor": [
+              0,
+              -15
+            ],
+            "in": [
+              -5.522847498,
+              -15
+            ],
+            "out": [
+              5.522847498,
+              -15
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "momo-right-eye-shine",
+      "name": "right eye shine",
+      "kind": "path",
+      "artboardId": "momo-board",
+      "parentId": "momo-right-eye",
+      "order": 26,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        5,
+        -5
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#ffffff",
+        "skin": null,
+        "points": [
+          {
+            "id": "momo-right-eye-shine-p0",
+            "anchor": [
+              4,
+              0
+            ],
+            "in": [
+              4,
+              -2.761423749
+            ],
+            "out": [
+              4,
+              2.761423749
+            ]
+          },
+          {
+            "id": "momo-right-eye-shine-p1",
+            "anchor": [
+              0,
+              5
+            ],
+            "in": [
+              2.2091389992,
+              5
+            ],
+            "out": [
+              -2.2091389992,
+              5
+            ]
+          },
+          {
+            "id": "momo-right-eye-shine-p2",
+            "anchor": [
+              -4,
+              0
+            ],
+            "in": [
+              -4,
+              2.761423749
+            ],
+            "out": [
+              -4,
+              -2.761423749
+            ]
+          },
+          {
+            "id": "momo-right-eye-shine-p3",
+            "anchor": [
+              0,
+              -5
+            ],
+            "in": [
+              -2.2091389992,
+              -5
+            ],
+            "out": [
+              2.2091389992,
+              -5
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "momo-left-blush",
+      "name": "left blush",
+      "kind": "path",
+      "artboardId": "momo-board",
+      "parentId": "momo-face",
+      "order": 27,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -55,
+        12
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e49f8b",
+        "skin": null,
+        "points": [
+          {
+            "id": "momo-left-blush-p0",
+            "anchor": [
+              15,
+              0
+            ],
+            "in": [
+              15,
+              -4.4182779984
+            ],
+            "out": [
+              15,
+              4.4182779984
+            ]
+          },
+          {
+            "id": "momo-left-blush-p1",
+            "anchor": [
+              0,
+              8
+            ],
+            "in": [
+              8.284271247,
+              8
+            ],
+            "out": [
+              -8.284271247,
+              8
+            ]
+          },
+          {
+            "id": "momo-left-blush-p2",
+            "anchor": [
+              -15,
+              0
+            ],
+            "in": [
+              -15,
+              4.4182779984
+            ],
+            "out": [
+              -15,
+              -4.4182779984
+            ]
+          },
+          {
+            "id": "momo-left-blush-p3",
+            "anchor": [
+              0,
+              -8
+            ],
+            "in": [
+              -8.284271247,
+              -8
+            ],
+            "out": [
+              8.284271247,
+              -8
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "momo-right-blush",
+      "name": "right blush",
+      "kind": "path",
+      "artboardId": "momo-board",
+      "parentId": "momo-face",
+      "order": 28,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        56,
+        12
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e49f8b",
+        "skin": null,
+        "points": [
+          {
+            "id": "momo-right-blush-p0",
+            "anchor": [
+              15,
+              0
+            ],
+            "in": [
+              15,
+              -4.4182779984
+            ],
+            "out": [
+              15,
+              4.4182779984
+            ]
+          },
+          {
+            "id": "momo-right-blush-p1",
+            "anchor": [
+              0,
+              8
+            ],
+            "in": [
+              8.284271247,
+              8
+            ],
+            "out": [
+              -8.284271247,
+              8
+            ]
+          },
+          {
+            "id": "momo-right-blush-p2",
+            "anchor": [
+              -15,
+              0
+            ],
+            "in": [
+              -15,
+              4.4182779984
+            ],
+            "out": [
+              -15,
+              -4.4182779984
+            ]
+          },
+          {
+            "id": "momo-right-blush-p3",
+            "anchor": [
+              0,
+              -8
+            ],
+            "in": [
+              -8.284271247,
+              -8
+            ],
+            "out": [
+              8.284271247,
+              -8
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "momo-left-brow",
+      "name": "left brow",
+      "kind": "path",
+      "artboardId": "momo-board",
+      "parentId": "momo-face",
+      "order": 29,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#397f70",
+        "skin": null,
+        "points": [
+          {
+            "id": "momo-left-brow-p0",
+            "anchor": [
+              -54,
+              -54
+            ],
+            "in": [
+              -54,
+              -54
+            ],
+            "out": [
+              -44.666666666666664,
+              -64
+            ]
+          },
+          {
+            "id": "momo-left-brow-p1",
+            "anchor": [
+              -22,
+              -56
+            ],
+            "in": [
+              -34,
+              -64.66666666666667
+            ],
+            "out": [
+              -33.333333333333336,
+              -59.333333333333336
+            ]
+          },
+          {
+            "id": "momo-left-brow-p2",
+            "anchor": [
+              -51,
+              -50
+            ],
+            "in": [
+              -43,
+              -57.333333333333336
+            ],
+            "out": [
+              -51,
+              -50
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "momo-right-brow",
+      "name": "right brow",
+      "kind": "path",
+      "artboardId": "momo-board",
+      "parentId": "momo-face",
+      "order": 30,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#397f70",
+        "skin": null,
+        "points": [
+          {
+            "id": "momo-right-brow-p0",
+            "anchor": [
+              20,
+              -56
+            ],
+            "in": [
+              20,
+              -56
+            ],
+            "out": [
+              32,
+              -64.66666666666667
+            ]
+          },
+          {
+            "id": "momo-right-brow-p1",
+            "anchor": [
+              52,
+              -55
+            ],
+            "in": [
+              42.666666666666664,
+              -64.33333333333333
+            ],
+            "out": [
+              52,
+              -55
+            ]
+          },
+          {
+            "id": "momo-right-brow-p2",
+            "anchor": [
+              50,
+              -50
+            ],
+            "in": [
+              50,
+              -50
+            ],
+            "out": [
+              40,
+              -56.666666666666664
+            ]
+          },
+          {
+            "id": "momo-right-brow-p3",
+            "anchor": [
+              20,
+              -51
+            ],
+            "in": [
+              30,
+              -57
+            ],
+            "out": [
+              20,
+              -51
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "momo-smile",
+      "name": "smile",
+      "kind": "group",
+      "artboardId": "momo-board",
+      "parentId": "momo-face",
+      "order": 31,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        17
+      ],
+      "geometry": null
+    },
+    {
+      "id": "momo-mouth",
+      "name": "mouth",
+      "kind": "path",
+      "artboardId": "momo-board",
+      "parentId": "momo-smile",
+      "order": 32,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#26413d",
+        "skin": null,
+        "points": [
+          {
+            "id": "momo-mouth-p0",
+            "anchor": [
+              -28,
+              -4
+            ],
+            "in": [
+              -29,
+              14
+            ],
+            "out": [
+              -16,
+              2
+            ]
+          },
+          {
+            "id": "momo-mouth-p1",
+            "anchor": [
+              28,
+              -4
+            ],
+            "in": [
+              15,
+              2
+            ],
+            "out": [
+              31,
+              17
+            ]
+          },
+          {
+            "id": "momo-mouth-p2",
+            "anchor": [
+              1,
+              29
+            ],
+            "in": [
+              15,
+              29
+            ],
+            "out": [
+              -16,
+              28
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "momo-tooth",
+      "name": "tooth",
+      "kind": "path",
+      "artboardId": "momo-board",
+      "parentId": "momo-smile",
+      "order": 33,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#fff9e8",
+        "skin": null,
+        "points": [
+          {
+            "id": "momo-tooth-p0",
+            "anchor": [
+              -15,
+              0
+            ],
+            "in": [
+              -15,
+              0
+            ],
+            "out": [
+              -5,
+              2.6666666666666665
+            ]
+          },
+          {
+            "id": "momo-tooth-p1",
+            "anchor": [
+              15,
+              0
+            ],
+            "in": [
+              5,
+              2.6666666666666665
+            ],
+            "out": [
+              15,
+              0
+            ]
+          },
+          {
+            "id": "momo-tooth-p2",
+            "anchor": [
+              14,
+              7
+            ],
+            "in": [
+              14,
+              7
+            ],
+            "out": [
+              4.666666666666666,
+              10.333333333333334
+            ]
+          },
+          {
+            "id": "momo-tooth-p3",
+            "anchor": [
+              -14,
+              7
+            ],
+            "in": [
+              -4.666666666666666,
+              10.333333333333334
+            ],
+            "out": [
+              -14,
+              7
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "momo-tongue",
+      "name": "tongue",
+      "kind": "path",
+      "artboardId": "momo-board",
+      "parentId": "momo-smile",
+      "order": 34,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e6a092",
+        "skin": null,
+        "points": [
+          {
+            "id": "momo-tongue-p0",
+            "anchor": [
+              -13,
+              25
+            ],
+            "in": [
+              -13,
+              25
+            ],
+            "out": [
+              -9,
+              13
+            ]
+          },
+          {
+            "id": "momo-tongue-p1",
+            "anchor": [
+              16,
+              24
+            ],
+            "in": [
+              10,
+              11
+            ],
+            "out": [
+              6,
+              30.666666666666668
+            ]
+          },
+          {
+            "id": "momo-tongue-p2",
+            "anchor": [
+              -13,
+              25
+            ],
+            "in": [
+              -3.666666666666666,
+              31
+            ],
+            "out": [
+              -13,
+              25
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "momo-nose",
+      "name": "nose",
+      "kind": "path",
+      "artboardId": "momo-board",
+      "parentId": "momo-face",
+      "order": 35,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#397f70",
+        "skin": null,
+        "points": [
+          {
+            "id": "momo-nose-p0",
+            "anchor": [
+              -5,
+              3
+            ],
+            "in": [
+              -5,
+              3
+            ],
+            "out": [
+              -1.6666666666666665,
+              0.3333333333333335
+            ]
+          },
+          {
+            "id": "momo-nose-p1",
+            "anchor": [
+              5,
+              3
+            ],
+            "in": [
+              1.6666666666666665,
+              0.3333333333333335
+            ],
+            "out": [
+              1.6666666666666665,
+              7.666666666666667
+            ]
+          },
+          {
+            "id": "momo-nose-p2",
+            "anchor": [
+              -5,
+              3
+            ],
+            "in": [
+              -1.6666666666666665,
+              7.666666666666667
+            ],
+            "out": [
+              -5,
+              3
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [
+    {
+      "id": "momo-calm",
+      "name": "Calm",
+      "artboardId": "momo-board",
+      "fps": 60,
+      "duration": 120,
+      "loop": true,
+      "tracks": [
+        {
+          "targetId": "momo-character",
+          "property": "y",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 319,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 30,
+              "value": 317,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 314,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 90,
+              "value": 317,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 319,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "momo-character",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 1.015,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "momo-character",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "momo-face",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 0.035,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "momo-waving-flipper",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0.75,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 30,
+              "value": 0.775,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 0.725,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 90,
+              "value": 0.775,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0.75,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "momo-left-flipper",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 0.035,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "momo-left-eye",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 40,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 46,
+              "value": 0.08,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 52,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "momo-right-eye",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 40,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 46,
+              "value": 0.08,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 52,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "momo-smile",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 1.05,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "momo-hello",
+      "name": "Hello",
+      "artboardId": "momo-board",
+      "fps": 60,
+      "duration": 120,
+      "loop": true,
+      "tracks": [
+        {
+          "targetId": "momo-character",
+          "property": "y",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 319,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 30,
+              "value": 317,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 314,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 90,
+              "value": 317,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 319,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "momo-character",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 1.015,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "momo-character",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "momo-face",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": -0.06,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 0.035,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": -0.06,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "momo-waving-flipper",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": -0.55,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 30,
+              "value": -0.37000000000000005,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": -0.73,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 90,
+              "value": -0.37000000000000005,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": -0.55,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "momo-left-flipper",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 0.035,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "momo-left-eye",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 40,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 46,
+              "value": 0.08,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 52,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "momo-right-eye",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 40,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 46,
+              "value": 0.08,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 52,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "momo-smile",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1.15,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 1.2,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1.15,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "momo-delight",
+      "name": "Delight",
+      "artboardId": "momo-board",
+      "fps": 60,
+      "duration": 120,
+      "loop": true,
+      "tracks": [
+        {
+          "targetId": "momo-character",
+          "property": "y",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 313,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 30,
+              "value": 305.8,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 295,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 90,
+              "value": 305.8,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 313,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "momo-character",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1.025,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 0.97,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1.025,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "momo-character",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": -0.035,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 0.045,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": -0.035,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "momo-face",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": -0.1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "momo-waving-flipper",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": -0.55,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 30,
+              "value": -0.43000000000000005,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": -0.67,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 90,
+              "value": -0.43000000000000005,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": -0.55,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "momo-left-flipper",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0.25,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": -0.12,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0.25,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "momo-left-eye",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 40,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 46,
+              "value": 0.08,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 52,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "momo-right-eye",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 40,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 46,
+              "value": 0.08,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 52,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "momo-smile",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1.65,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 1.85,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1.65,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "machines": [
+    {
+      "id": "momo-expressions",
+      "name": "Expressions",
+      "artboardId": "momo-board",
+      "inputs": [
+        {
+          "id": "momo-expression-input",
+          "name": "expression",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "states": [
+        {
+          "id": "momo-state-0",
+          "name": "Calm",
+          "animationId": "momo-calm",
+          "position": [
+            40,
+            60
+          ]
+        },
+        {
+          "id": "momo-state-1",
+          "name": "Hello",
+          "animationId": "momo-hello",
+          "position": [
+            260,
+            60
+          ]
+        },
+        {
+          "id": "momo-state-2",
+          "name": "Delight",
+          "animationId": "momo-delight",
+          "position": [
+            480,
+            60
+          ]
+        }
+      ],
+      "entryStateId": "momo-state-0",
+      "transitions": [
+        {
+          "id": "momo-from-0-to-1",
+          "fromId": "momo-state-0",
+          "toId": "momo-state-1",
+          "conditions": [
+            {
+              "inputId": "momo-expression-input",
+              "op": "eq",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "momo-from-0-to-2",
+          "fromId": "momo-state-0",
+          "toId": "momo-state-2",
+          "conditions": [
+            {
+              "inputId": "momo-expression-input",
+              "op": "eq",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "id": "momo-from-1-to-0",
+          "fromId": "momo-state-1",
+          "toId": "momo-state-0",
+          "conditions": [
+            {
+              "inputId": "momo-expression-input",
+              "op": "eq",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": "momo-from-1-to-2",
+          "fromId": "momo-state-1",
+          "toId": "momo-state-2",
+          "conditions": [
+            {
+              "inputId": "momo-expression-input",
+              "op": "eq",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "id": "momo-from-2-to-0",
+          "fromId": "momo-state-2",
+          "toId": "momo-state-0",
+          "conditions": [
+            {
+              "inputId": "momo-expression-input",
+              "op": "eq",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": "momo-from-2-to-1",
+          "fromId": "momo-state-2",
+          "toId": "momo-state-1",
+          "conditions": [
+            {
+              "inputId": "momo-expression-input",
+              "op": "eq",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "listeners": []
+    }
+  ],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "momo-board": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  }
+}
