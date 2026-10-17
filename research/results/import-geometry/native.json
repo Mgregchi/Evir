@@ -1,0 +1,1027 @@
+{
+  "checkedAt": "2026-10-17T08:25:27.484Z",
+  "runtimeVersion": "2.44.0",
+  "method": "Independently encoded native contour records → editable import → Evir Canvas and native re-export, compared with the original in both official runtimes. Explicit named animation frames; static fixtures contain no animations.",
+  "thresholds": {
+    "mae": 1.5,
+    "coverageDifference": 250
+  },
+  "scope": "Cloud Chromium software rendering; no physical-device, human, GPU-performance or general Editor compatibility evidence.",
+  "fixtures": [
+    {
+      "name": "import-mixed-closed",
+      "nativeSha256": "62d78688cf4a09a348c32082e5664b5485e73a56766d052192fbc5bfa674b6ff",
+      "sourceSha256": "48cfe689de7688914613eedec6fc3af3d77724b0f3909c2198e1e5b7b844af13",
+      "reexportSha256": "8eb3ecb79c111d25220e098e3fd15a2721634b999ceca3ca153bc3799b488791"
+    },
+    {
+      "name": "import-mixed-open-stroke",
+      "nativeSha256": "1ba1cef089e3b742ca7326afd718a3be283051b71873fe50deae3d0115a43602",
+      "sourceSha256": "57be479fa9f2e9762dd3419c7c7ce4a7783db1dc325366ac44fefafacb90564e",
+      "reexportSha256": "914dfd104e15da9df83045c7a52f20b13265287d9b80153767e23d79f45c9efd"
+    },
+    {
+      "name": "import-mixed-transformed",
+      "nativeSha256": "402e5ef631f42d24eac893c104d36a737d16c10eee6bae0c64028d134d99041e",
+      "sourceSha256": "5f526bc2dcc03528ec3a8ece83765bda4321c6aeb703d7cba803f0c27885a194",
+      "reexportSha256": "24dd1e161c50dd83d68929bfb53c58b5aa2441867c36080f8ae5c166554d3b9e"
+    },
+    {
+      "name": "import-default-controls",
+      "nativeSha256": "0607b7155db656d581b36a17caa7640ad8bcf032e98597bd75b6e19b0d451e14",
+      "sourceSha256": "44b7ade0b4111a59555142ca1bdccb4536bc6fcf3d590a571ff056b08b3c95f0",
+      "reexportSha256": "01b1c82a83ae763eeed18bece44b4251e068d0d54b97c603149f7d1e1f741952"
+    },
+    {
+      "name": "import-ellipse-centered",
+      "nativeSha256": "ddb43868fe4c5d2d398a8b8a53ad0943d897da7b00bd399307f7a1f18c6faad8",
+      "sourceSha256": "27c685ee568b799ec6b713f694f889f0bb19cfe7d6852e6ad6fd2e0c8d0f8d69",
+      "reexportSha256": "93a269e06e89247e321b669f99da0dc9b52571ee73b31958dd94c04ace27cf65"
+    },
+    {
+      "name": "import-ellipse-origin",
+      "nativeSha256": "26351be047117ad21bfa18694a1d6075337afcbd635029d6214108f6c3879236",
+      "sourceSha256": "22dede2a72732d57c233625f90e2a2da2470f52aa5c003cbd861edb52dde2406",
+      "reexportSha256": "e2dea28d658422df4bd5b350c73e9507c68717f0654e19c2ef518e3dcddff89a"
+    },
+    {
+      "name": "import-ellipse-transformed",
+      "nativeSha256": "f03f056f1144d5a687069312b19b92719d5c468939307b8748ea69d3ba640fb9",
+      "sourceSha256": "3ea6fb5f6b20a36e79bf26d3129b78068f17e7177eb284cb0a02a5794885a61a",
+      "reexportSha256": "63fa5ad4de6d2d732bf9daf3ce6775a3bc597244429a66f4c267b0deae9513e1"
+    },
+    {
+      "name": "import-ellipse-animated-shape",
+      "nativeSha256": "11c8a60f34e4d32a25c8dad364e43fd0f160a5854280d49f14a9c49d94df06b0",
+      "sourceSha256": "70063f39bd91b4d9c5e8f70ba9a6936ad7d52b7d057a4c7b20ac32bc781a5e2b",
+      "reexportSha256": "370a802dfb1b0a6e5b7a4a1a51f877bba606bf07d771802bbf78574305625af0"
+    },
+    {
+      "name": "import-rectangle-centered",
+      "nativeSha256": "afbcc7eb96903b899bf6a307d36fa7602876b4851eba11b2baca394e3a2a1c8e",
+      "sourceSha256": "fe38ed1d6f70a2c938c4259555d7f9386901c7b40ca14a56d8ec849e26a4214a",
+      "reexportSha256": "8604f3a4d3d6516d877b56623bc5113256ce1c3800c70170833d6c6a1fd245ca"
+    },
+    {
+      "name": "import-rectangle-origin",
+      "nativeSha256": "eff2bd60356315ffe25daeb6be9163d2c60d4aa45224f6bb1825deedfee53ed7",
+      "sourceSha256": "1e19607a55422d57509db7be2487aeb4f4b34abeab135524e7f335445c6a7d8a",
+      "reexportSha256": "6d45017e69f16c284bef5c1ad1a30f016b830b57d874930c26f23e66cae75dd3"
+    },
+    {
+      "name": "import-rectangle-transformed",
+      "nativeSha256": "c8e732bcec62386df0afa3c97389c5c0046550e9c9066ae6251703fa4fca0a99",
+      "sourceSha256": "ce6f2862fb3fb3fd9ede1eb4741904ccc6a5e4f8ac1e20d092c3ed04ca13d8e4",
+      "reexportSha256": "8f8ff4396f5d63e29977deb165a438835d8f5bdb12dc3b7ce20cf54f55691b2f"
+    },
+    {
+      "name": "import-mixed-skinned",
+      "nativeSha256": "9ffaa75709c57245ef898f08f44f2544f2c0c4a5cbe3bf8eaf434da839eb9188",
+      "sourceSha256": "875a5be2329abefaa7bf7c5534d8349ce9f430184949e7b76af82854d5c86b18",
+      "reexportSha256": "3568cbd8ba09c7d6a448142f80e17dfb7036707bab6eac79bbb67f4b040024c6"
+    },
+    {
+      "name": "tide-native",
+      "nativeSha256": "db243b44bf2295cef128840811d09dbcea6e1daa1b9183cfcb87786267c84f80",
+      "sourceSha256": "93859dec410fad2fc0b79e83ffc960e080899bb9b610f7bd24064ac211887ec2",
+      "reexportSha256": "6f5d17e745477d5af04746c33169cc6009e5cf147350b742e40fcb3a793ce197"
+    }
+  ],
+  "backends": [
+    {
+      "backend": "canvas",
+      "checks": [
+        {
+          "scene": "import-mixed-closed",
+          "frame": null,
+          "target": "editable",
+          "mae": 0,
+          "covered": 19036,
+          "expectedCovered": 19036
+        },
+        {
+          "scene": "import-mixed-closed",
+          "frame": null,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 19036,
+          "expectedCovered": 19036
+        },
+        {
+          "scene": "import-mixed-open-stroke",
+          "frame": null,
+          "target": "editable",
+          "mae": 0,
+          "covered": 3889,
+          "expectedCovered": 3889
+        },
+        {
+          "scene": "import-mixed-open-stroke",
+          "frame": null,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 3889,
+          "expectedCovered": 3889
+        },
+        {
+          "scene": "import-mixed-transformed",
+          "frame": null,
+          "target": "editable",
+          "mae": 0.11864471435546875,
+          "covered": 12886,
+          "expectedCovered": 12909
+        },
+        {
+          "scene": "import-mixed-transformed",
+          "frame": null,
+          "target": "native-reexport",
+          "mae": 0.11864471435546875,
+          "covered": 12886,
+          "expectedCovered": 12909
+        },
+        {
+          "scene": "import-default-controls",
+          "frame": null,
+          "target": "editable",
+          "mae": 0,
+          "covered": 23999,
+          "expectedCovered": 23999
+        },
+        {
+          "scene": "import-default-controls",
+          "frame": null,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 23999,
+          "expectedCovered": 23999
+        },
+        {
+          "scene": "import-ellipse-centered",
+          "frame": null,
+          "target": "editable",
+          "mae": 0,
+          "covered": 8857,
+          "expectedCovered": 8857
+        },
+        {
+          "scene": "import-ellipse-centered",
+          "frame": null,
+          "target": "native-reexport",
+          "mae": 0.035747528076171875,
+          "covered": 8851,
+          "expectedCovered": 8857
+        },
+        {
+          "scene": "import-ellipse-origin",
+          "frame": null,
+          "target": "editable",
+          "mae": 0,
+          "covered": 10204,
+          "expectedCovered": 10204
+        },
+        {
+          "scene": "import-ellipse-origin",
+          "frame": null,
+          "target": "native-reexport",
+          "mae": 0.09173965454101562,
+          "covered": 10189,
+          "expectedCovered": 10204
+        },
+        {
+          "scene": "import-ellipse-transformed",
+          "frame": null,
+          "target": "editable",
+          "mae": 0,
+          "covered": 3814,
+          "expectedCovered": 3814
+        },
+        {
+          "scene": "import-ellipse-transformed",
+          "frame": null,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 3814,
+          "expectedCovered": 3814
+        },
+        {
+          "scene": "import-ellipse-animated-shape",
+          "frame": 0,
+          "target": "editable",
+          "mae": 0,
+          "covered": 4367,
+          "expectedCovered": 4367
+        },
+        {
+          "scene": "import-ellipse-animated-shape",
+          "frame": 0,
+          "target": "native-reexport",
+          "mae": 0.0463409423828125,
+          "covered": 4356,
+          "expectedCovered": 4367
+        },
+        {
+          "scene": "import-ellipse-animated-shape",
+          "frame": 30,
+          "target": "editable",
+          "mae": 0,
+          "covered": 4358,
+          "expectedCovered": 4358
+        },
+        {
+          "scene": "import-ellipse-animated-shape",
+          "frame": 30,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 4358,
+          "expectedCovered": 4358
+        },
+        {
+          "scene": "import-ellipse-animated-shape",
+          "frame": 60,
+          "target": "editable",
+          "mae": 0,
+          "covered": 4361,
+          "expectedCovered": 4361
+        },
+        {
+          "scene": "import-ellipse-animated-shape",
+          "frame": 60,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 4361,
+          "expectedCovered": 4361
+        },
+        {
+          "scene": "import-ellipse-animated-shape",
+          "frame": 90,
+          "target": "editable",
+          "mae": 0,
+          "covered": 4358,
+          "expectedCovered": 4358
+        },
+        {
+          "scene": "import-ellipse-animated-shape",
+          "frame": 90,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 4358,
+          "expectedCovered": 4358
+        },
+        {
+          "scene": "import-ellipse-animated-shape",
+          "frame": 120,
+          "target": "editable",
+          "mae": 0,
+          "covered": 4367,
+          "expectedCovered": 4367
+        },
+        {
+          "scene": "import-ellipse-animated-shape",
+          "frame": 120,
+          "target": "native-reexport",
+          "mae": 0.0463409423828125,
+          "covered": 4356,
+          "expectedCovered": 4367
+        },
+        {
+          "scene": "import-rectangle-centered",
+          "frame": null,
+          "target": "editable",
+          "mae": 0,
+          "covered": 13800,
+          "expectedCovered": 13800
+        },
+        {
+          "scene": "import-rectangle-centered",
+          "frame": null,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 13800,
+          "expectedCovered": 13800
+        },
+        {
+          "scene": "import-rectangle-origin",
+          "frame": null,
+          "target": "editable",
+          "mae": 0,
+          "covered": 3480,
+          "expectedCovered": 3480
+        },
+        {
+          "scene": "import-rectangle-origin",
+          "frame": null,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 3480,
+          "expectedCovered": 3480
+        },
+        {
+          "scene": "import-rectangle-transformed",
+          "frame": null,
+          "target": "editable",
+          "mae": 0.07877349853515625,
+          "covered": 8126,
+          "expectedCovered": 8140
+        },
+        {
+          "scene": "import-rectangle-transformed",
+          "frame": null,
+          "target": "native-reexport",
+          "mae": 0.07877349853515625,
+          "covered": 8126,
+          "expectedCovered": 8140
+        },
+        {
+          "scene": "import-mixed-skinned",
+          "frame": 0,
+          "target": "editable",
+          "mae": 0,
+          "covered": 19036,
+          "expectedCovered": 19036
+        },
+        {
+          "scene": "import-mixed-skinned",
+          "frame": 0,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 19036,
+          "expectedCovered": 19036
+        },
+        {
+          "scene": "import-mixed-skinned",
+          "frame": 30,
+          "target": "editable",
+          "mae": 0.000011444091796875,
+          "covered": 19333,
+          "expectedCovered": 19333
+        },
+        {
+          "scene": "import-mixed-skinned",
+          "frame": 30,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 19333,
+          "expectedCovered": 19333
+        },
+        {
+          "scene": "import-mixed-skinned",
+          "frame": 60,
+          "target": "editable",
+          "mae": 0,
+          "covered": 19380,
+          "expectedCovered": 19380
+        },
+        {
+          "scene": "import-mixed-skinned",
+          "frame": 60,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 19380,
+          "expectedCovered": 19380
+        },
+        {
+          "scene": "import-mixed-skinned",
+          "frame": 90,
+          "target": "editable",
+          "mae": 0.000011444091796875,
+          "covered": 19333,
+          "expectedCovered": 19333
+        },
+        {
+          "scene": "import-mixed-skinned",
+          "frame": 90,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 19333,
+          "expectedCovered": 19333
+        },
+        {
+          "scene": "import-mixed-skinned",
+          "frame": 120,
+          "target": "editable",
+          "mae": 0,
+          "covered": 19036,
+          "expectedCovered": 19036
+        },
+        {
+          "scene": "import-mixed-skinned",
+          "frame": 120,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 19036,
+          "expectedCovered": 19036
+        },
+        {
+          "scene": "tide-native",
+          "frame": 0,
+          "target": "editable",
+          "mae": 0.00090789794921875,
+          "covered": 65536,
+          "expectedCovered": 65536
+        },
+        {
+          "scene": "tide-native",
+          "frame": 0,
+          "target": "native-reexport",
+          "mae": 0.0081787109375,
+          "covered": 65536,
+          "expectedCovered": 65536
+        },
+        {
+          "scene": "tide-native",
+          "frame": 30,
+          "target": "editable",
+          "mae": 0.00048065185546875,
+          "covered": 65536,
+          "expectedCovered": 65536
+        },
+        {
+          "scene": "tide-native",
+          "frame": 30,
+          "target": "native-reexport",
+          "mae": 0.0081787109375,
+          "covered": 65536,
+          "expectedCovered": 65536
+        },
+        {
+          "scene": "tide-native",
+          "frame": 60,
+          "target": "editable",
+          "mae": 0.00048065185546875,
+          "covered": 65536,
+          "expectedCovered": 65536
+        },
+        {
+          "scene": "tide-native",
+          "frame": 60,
+          "target": "native-reexport",
+          "mae": 0.0081787109375,
+          "covered": 65536,
+          "expectedCovered": 65536
+        },
+        {
+          "scene": "tide-native",
+          "frame": 90,
+          "target": "editable",
+          "mae": 0.00048065185546875,
+          "covered": 65536,
+          "expectedCovered": 65536
+        },
+        {
+          "scene": "tide-native",
+          "frame": 90,
+          "target": "native-reexport",
+          "mae": 0.0081787109375,
+          "covered": 65536,
+          "expectedCovered": 65536
+        },
+        {
+          "scene": "tide-native",
+          "frame": 120,
+          "target": "editable",
+          "mae": 0.00090789794921875,
+          "covered": 65536,
+          "expectedCovered": 65536
+        },
+        {
+          "scene": "tide-native",
+          "frame": 120,
+          "target": "native-reexport",
+          "mae": 0.0081787109375,
+          "covered": 65536,
+          "expectedCovered": 65536
+        }
+      ],
+      "graphics": {
+        "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "contexts": [
+          {
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "unmaskedRendererAvailable": true,
+            "contextLost": false,
+            "errors": [],
+            "extensions": [
+              "EXT_clip_control",
+              "EXT_color_buffer_float",
+              "EXT_color_buffer_half_float",
+              "EXT_conservative_depth",
+              "EXT_depth_clamp",
+              "EXT_float_blend",
+              "EXT_polygon_offset_clamp",
+              "EXT_texture_compression_bptc",
+              "EXT_texture_compression_rgtc",
+              "EXT_texture_filter_anisotropic",
+              "EXT_texture_mirror_clamp_to_edge",
+              "NV_shader_noperspective_interpolation",
+              "OES_draw_buffers_indexed",
+              "OES_sample_variables",
+              "OES_shader_multisample_interpolation",
+              "OES_texture_float_linear",
+              "OVR_multiview2",
+              "WEBGL_clip_cull_distance",
+              "WEBGL_compressed_texture_astc",
+              "WEBGL_compressed_texture_etc",
+              "WEBGL_compressed_texture_etc1",
+              "WEBGL_compressed_texture_s3tc",
+              "WEBGL_compressed_texture_s3tc_srgb",
+              "WEBGL_debug_renderer_info",
+              "WEBGL_debug_shaders",
+              "WEBGL_lose_context",
+              "WEBGL_multi_draw",
+              "WEBGL_polygon_mode",
+              "WEBGL_stencil_texturing"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "backend": "webgl2",
+      "checks": [
+        {
+          "scene": "import-mixed-closed",
+          "frame": null,
+          "target": "editable",
+          "mae": 0.23672103881835938,
+          "covered": 19036,
+          "expectedCovered": 18948
+        },
+        {
+          "scene": "import-mixed-closed",
+          "frame": null,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 18948,
+          "expectedCovered": 18948
+        },
+        {
+          "scene": "import-mixed-open-stroke",
+          "frame": null,
+          "target": "editable",
+          "mae": 0.20711898803710938,
+          "covered": 3889,
+          "expectedCovered": 3752
+        },
+        {
+          "scene": "import-mixed-open-stroke",
+          "frame": null,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 3752,
+          "expectedCovered": 3752
+        },
+        {
+          "scene": "import-mixed-transformed",
+          "frame": null,
+          "target": "editable",
+          "mae": 0.23906326293945312,
+          "covered": 12886,
+          "expectedCovered": 12817
+        },
+        {
+          "scene": "import-mixed-transformed",
+          "frame": null,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 12817,
+          "expectedCovered": 12817
+        },
+        {
+          "scene": "import-default-controls",
+          "frame": null,
+          "target": "editable",
+          "mae": 0.1806182861328125,
+          "covered": 23999,
+          "expectedCovered": 23936
+        },
+        {
+          "scene": "import-default-controls",
+          "frame": null,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 23936,
+          "expectedCovered": 23936
+        },
+        {
+          "scene": "import-ellipse-centered",
+          "frame": null,
+          "target": "editable",
+          "mae": 0.23183059692382812,
+          "covered": 8857,
+          "expectedCovered": 8762
+        },
+        {
+          "scene": "import-ellipse-centered",
+          "frame": null,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 8762,
+          "expectedCovered": 8762
+        },
+        {
+          "scene": "import-ellipse-origin",
+          "frame": null,
+          "target": "editable",
+          "mae": 0.24648666381835938,
+          "covered": 10204,
+          "expectedCovered": 10112
+        },
+        {
+          "scene": "import-ellipse-origin",
+          "frame": null,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 10112,
+          "expectedCovered": 10112
+        },
+        {
+          "scene": "import-ellipse-transformed",
+          "frame": null,
+          "target": "editable",
+          "mae": 0.20342254638671875,
+          "covered": 3814,
+          "expectedCovered": 3705
+        },
+        {
+          "scene": "import-ellipse-transformed",
+          "frame": null,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 3705,
+          "expectedCovered": 3705
+        },
+        {
+          "scene": "import-ellipse-animated-shape",
+          "frame": 0,
+          "target": "editable",
+          "mae": 0.2124786376953125,
+          "covered": 4367,
+          "expectedCovered": 4292
+        },
+        {
+          "scene": "import-ellipse-animated-shape",
+          "frame": 0,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 4292,
+          "expectedCovered": 4292
+        },
+        {
+          "scene": "import-ellipse-animated-shape",
+          "frame": 30,
+          "target": "editable",
+          "mae": 0.16902923583984375,
+          "covered": 4358,
+          "expectedCovered": 4299
+        },
+        {
+          "scene": "import-ellipse-animated-shape",
+          "frame": 30,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 4299,
+          "expectedCovered": 4299
+        },
+        {
+          "scene": "import-ellipse-animated-shape",
+          "frame": 60,
+          "target": "editable",
+          "mae": 0.1864776611328125,
+          "covered": 4361,
+          "expectedCovered": 4293
+        },
+        {
+          "scene": "import-ellipse-animated-shape",
+          "frame": 60,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 4293,
+          "expectedCovered": 4293
+        },
+        {
+          "scene": "import-ellipse-animated-shape",
+          "frame": 90,
+          "target": "editable",
+          "mae": 0.16902923583984375,
+          "covered": 4358,
+          "expectedCovered": 4299
+        },
+        {
+          "scene": "import-ellipse-animated-shape",
+          "frame": 90,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 4299,
+          "expectedCovered": 4299
+        },
+        {
+          "scene": "import-ellipse-animated-shape",
+          "frame": 120,
+          "target": "editable",
+          "mae": 0.2124786376953125,
+          "covered": 4367,
+          "expectedCovered": 4292
+        },
+        {
+          "scene": "import-ellipse-animated-shape",
+          "frame": 120,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 4292,
+          "expectedCovered": 4292
+        },
+        {
+          "scene": "import-rectangle-centered",
+          "frame": null,
+          "target": "editable",
+          "mae": 0,
+          "covered": 13800,
+          "expectedCovered": 13800
+        },
+        {
+          "scene": "import-rectangle-centered",
+          "frame": null,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 13800,
+          "expectedCovered": 13800
+        },
+        {
+          "scene": "import-rectangle-origin",
+          "frame": null,
+          "target": "editable",
+          "mae": 0.0211029052734375,
+          "covered": 3480,
+          "expectedCovered": 3476
+        },
+        {
+          "scene": "import-rectangle-origin",
+          "frame": null,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 3476,
+          "expectedCovered": 3476
+        },
+        {
+          "scene": "import-rectangle-transformed",
+          "frame": null,
+          "target": "editable",
+          "mae": 0.2068328857421875,
+          "covered": 8126,
+          "expectedCovered": 8063
+        },
+        {
+          "scene": "import-rectangle-transformed",
+          "frame": null,
+          "target": "native-reexport",
+          "mae": 0.011104583740234375,
+          "covered": 8062,
+          "expectedCovered": 8063
+        },
+        {
+          "scene": "import-mixed-skinned",
+          "frame": 0,
+          "target": "editable",
+          "mae": 0.23672103881835938,
+          "covered": 19036,
+          "expectedCovered": 18948
+        },
+        {
+          "scene": "import-mixed-skinned",
+          "frame": 0,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 18948,
+          "expectedCovered": 18948
+        },
+        {
+          "scene": "import-mixed-skinned",
+          "frame": 30,
+          "target": "editable",
+          "mae": 0.26509857177734375,
+          "covered": 19333,
+          "expectedCovered": 19226
+        },
+        {
+          "scene": "import-mixed-skinned",
+          "frame": 30,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 19226,
+          "expectedCovered": 19226
+        },
+        {
+          "scene": "import-mixed-skinned",
+          "frame": 60,
+          "target": "editable",
+          "mae": 0.2945556640625,
+          "covered": 19380,
+          "expectedCovered": 19264
+        },
+        {
+          "scene": "import-mixed-skinned",
+          "frame": 60,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 19264,
+          "expectedCovered": 19264
+        },
+        {
+          "scene": "import-mixed-skinned",
+          "frame": 90,
+          "target": "editable",
+          "mae": 0.26509857177734375,
+          "covered": 19333,
+          "expectedCovered": 19226
+        },
+        {
+          "scene": "import-mixed-skinned",
+          "frame": 90,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 19226,
+          "expectedCovered": 19226
+        },
+        {
+          "scene": "import-mixed-skinned",
+          "frame": 120,
+          "target": "editable",
+          "mae": 0.23672103881835938,
+          "covered": 19036,
+          "expectedCovered": 18948
+        },
+        {
+          "scene": "import-mixed-skinned",
+          "frame": 120,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 18948,
+          "expectedCovered": 18948
+        },
+        {
+          "scene": "tide-native",
+          "frame": 0,
+          "target": "editable",
+          "mae": 0.33130645751953125,
+          "covered": 65536,
+          "expectedCovered": 65536
+        },
+        {
+          "scene": "tide-native",
+          "frame": 0,
+          "target": "native-reexport",
+          "mae": 0.004192352294921875,
+          "covered": 65536,
+          "expectedCovered": 65536
+        },
+        {
+          "scene": "tide-native",
+          "frame": 30,
+          "target": "editable",
+          "mae": 0.3286628723144531,
+          "covered": 65536,
+          "expectedCovered": 65536
+        },
+        {
+          "scene": "tide-native",
+          "frame": 30,
+          "target": "native-reexport",
+          "mae": 0.00537872314453125,
+          "covered": 65536,
+          "expectedCovered": 65536
+        },
+        {
+          "scene": "tide-native",
+          "frame": 60,
+          "target": "editable",
+          "mae": 0.3281517028808594,
+          "covered": 65536,
+          "expectedCovered": 65536
+        },
+        {
+          "scene": "tide-native",
+          "frame": 60,
+          "target": "native-reexport",
+          "mae": 0.00308990478515625,
+          "covered": 65536,
+          "expectedCovered": 65536
+        },
+        {
+          "scene": "tide-native",
+          "frame": 90,
+          "target": "editable",
+          "mae": 0.3286628723144531,
+          "covered": 65536,
+          "expectedCovered": 65536
+        },
+        {
+          "scene": "tide-native",
+          "frame": 90,
+          "target": "native-reexport",
+          "mae": 0.00537872314453125,
+          "covered": 65536,
+          "expectedCovered": 65536
+        },
+        {
+          "scene": "tide-native",
+          "frame": 120,
+          "target": "editable",
+          "mae": 0.33130645751953125,
+          "covered": 65536,
+          "expectedCovered": 65536
+        },
+        {
+          "scene": "tide-native",
+          "frame": 120,
+          "target": "native-reexport",
+          "mae": 0.004192352294921875,
+          "covered": 65536,
+          "expectedCovered": 65536
+        }
+      ],
+      "graphics": {
+        "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "contexts": [
+          {
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "unmaskedRendererAvailable": true,
+            "contextLost": false,
+            "errors": [],
+            "extensions": [
+              "EXT_clip_control",
+              "EXT_color_buffer_float",
+              "EXT_color_buffer_half_float",
+              "EXT_conservative_depth",
+              "EXT_depth_clamp",
+              "EXT_float_blend",
+              "EXT_polygon_offset_clamp",
+              "EXT_texture_compression_bptc",
+              "EXT_texture_compression_rgtc",
+              "EXT_texture_filter_anisotropic",
+              "EXT_texture_mirror_clamp_to_edge",
+              "NV_shader_noperspective_interpolation",
+              "OES_draw_buffers_indexed",
+              "OES_sample_variables",
+              "OES_shader_multisample_interpolation",
+              "OES_texture_float_linear",
+              "OVR_multiview2",
+              "WEBGL_clip_cull_distance",
+              "WEBGL_compressed_texture_astc",
+              "WEBGL_compressed_texture_etc",
+              "WEBGL_compressed_texture_etc1",
+              "WEBGL_compressed_texture_s3tc",
+              "WEBGL_compressed_texture_s3tc_srgb",
+              "WEBGL_debug_renderer_info",
+              "WEBGL_debug_shaders",
+              "WEBGL_lose_context",
+              "WEBGL_multi_draw",
+              "WEBGL_polygon_mode",
+              "WEBGL_stencil_texturing"
+            ]
+          },
+          {
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "unmaskedRendererAvailable": true,
+            "contextLost": false,
+            "errors": [],
+            "extensions": [
+              "EXT_clip_control",
+              "EXT_color_buffer_float",
+              "EXT_color_buffer_half_float",
+              "EXT_conservative_depth",
+              "EXT_depth_clamp",
+              "EXT_float_blend",
+              "EXT_polygon_offset_clamp",
+              "EXT_texture_compression_bptc",
+              "EXT_texture_compression_rgtc",
+              "EXT_texture_filter_anisotropic",
+              "EXT_texture_mirror_clamp_to_edge",
+              "NV_shader_noperspective_interpolation",
+              "OES_draw_buffers_indexed",
+              "OES_sample_variables",
+              "OES_shader_multisample_interpolation",
+              "OES_texture_float_linear",
+              "OVR_multiview2",
+              "WEBGL_clip_cull_distance",
+              "WEBGL_compressed_texture_astc",
+              "WEBGL_compressed_texture_etc",
+              "WEBGL_compressed_texture_etc1",
+              "WEBGL_compressed_texture_s3tc",
+              "WEBGL_compressed_texture_s3tc_srgb",
+              "WEBGL_debug_renderer_info",
+              "WEBGL_debug_shaders",
+              "WEBGL_lose_context",
+              "WEBGL_multi_draw",
+              "WEBGL_polygon_mode",
+              "WEBGL_stencil_texturing"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "browser": "151.0.7922.173"
+}

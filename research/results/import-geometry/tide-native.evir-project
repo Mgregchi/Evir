@@ -1,0 +1,2891 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 3,
+  "id": "tide-native-project",
+  "name": "tide-native",
+  "artboards": [
+    {
+      "id": "tide-native-artboard-1",
+      "name": "Tide — a shore-side hello",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "tide-native-node-1",
+      "name": "cream pebble",
+      "kind": "path",
+      "artboardId": "tide-native-artboard-1",
+      "parentId": null,
+      "order": 11,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "fill": "#fffbefff",
+        "closed": true,
+        "skin": null,
+        "points": [
+          {
+            "id": "tide-native-point-1",
+            "anchor": [
+              387,
+              434
+            ],
+            "in": [
+              383.686291501014,
+              434
+            ],
+            "out": [
+              390.313708498986,
+              434
+            ]
+          },
+          {
+            "id": "tide-native-point-2",
+            "anchor": [
+              393,
+              438
+            ],
+            "in": [
+              393,
+              435.790861000676
+            ],
+            "out": [
+              393,
+              440.209138999324
+            ]
+          },
+          {
+            "id": "tide-native-point-3",
+            "anchor": [
+              387,
+              442
+            ],
+            "in": [
+              390.313708498986,
+              442
+            ],
+            "out": [
+              383.686291501014,
+              442
+            ]
+          },
+          {
+            "id": "tide-native-point-4",
+            "anchor": [
+              381,
+              438
+            ],
+            "in": [
+              381,
+              440.209138999324
+            ],
+            "out": [
+              381,
+              435.790861000676
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tide-native-node-2",
+      "name": "mint pebble",
+      "kind": "path",
+      "artboardId": "tide-native-artboard-1",
+      "parentId": null,
+      "order": 10,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "fill": "#d8eee0ff",
+        "closed": true,
+        "skin": null,
+        "points": [
+          {
+            "id": "tide-native-point-5",
+            "anchor": [
+              362,
+              442.5
+            ],
+            "in": [
+              355.6487253769435,
+              442.5
+            ],
+            "out": [
+              368.3512746230565,
+              442.5
+            ]
+          },
+          {
+            "id": "tide-native-point-6",
+            "anchor": [
+              373.5,
+              448
+            ],
+            "in": [
+              373.5,
+              444.9624338759295
+            ],
+            "out": [
+              373.5,
+              451.0375661240705
+            ]
+          },
+          {
+            "id": "tide-native-point-7",
+            "anchor": [
+              362,
+              453.5
+            ],
+            "in": [
+              368.3512746230565,
+              453.5
+            ],
+            "out": [
+              355.6487253769435,
+              453.5
+            ]
+          },
+          {
+            "id": "tide-native-point-8",
+            "anchor": [
+              350.5,
+              448
+            ],
+            "in": [
+              350.5,
+              451.0375661240705
+            ],
+            "out": [
+              350.5,
+              444.9624338759295
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tide-native-node-3",
+      "name": "shore treasures",
+      "kind": "group",
+      "artboardId": "tide-native-artboard-1",
+      "parentId": null,
+      "order": 9,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        132,
+        427
+      ],
+      "geometry": null
+    },
+    {
+      "id": "tide-native-node-4",
+      "name": "shell ridge 10",
+      "kind": "path",
+      "artboardId": "tide-native-artboard-1",
+      "parentId": "tide-native-node-3",
+      "order": 3,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "fill": null,
+        "stroke": {
+          "color": "#bc8565ff",
+          "width": 2,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        },
+        "closed": false,
+        "skin": null,
+        "points": [
+          {
+            "id": "tide-native-point-9",
+            "anchor": [
+              0,
+              5
+            ],
+            "in": [
+              0,
+              5
+            ],
+            "out": [
+              0,
+              5
+            ]
+          },
+          {
+            "id": "tide-native-point-10",
+            "anchor": [
+              10,
+              -15
+            ],
+            "in": [
+              10,
+              -15
+            ],
+            "out": [
+              10,
+              -15
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tide-native-node-5",
+      "name": "shell ridge 0",
+      "kind": "path",
+      "artboardId": "tide-native-artboard-1",
+      "parentId": "tide-native-node-3",
+      "order": 2,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "fill": null,
+        "stroke": {
+          "color": "#bc8565ff",
+          "width": 2,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        },
+        "closed": false,
+        "skin": null,
+        "points": [
+          {
+            "id": "tide-native-point-11",
+            "anchor": [
+              0,
+              5
+            ],
+            "in": [
+              0,
+              5
+            ],
+            "out": [
+              0,
+              5
+            ]
+          },
+          {
+            "id": "tide-native-point-12",
+            "anchor": [
+              0,
+              -15
+            ],
+            "in": [
+              0,
+              -15
+            ],
+            "out": [
+              0,
+              -15
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tide-native-node-6",
+      "name": "shell ridge -10",
+      "kind": "path",
+      "artboardId": "tide-native-artboard-1",
+      "parentId": "tide-native-node-3",
+      "order": 1,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "fill": null,
+        "stroke": {
+          "color": "#bc8565ff",
+          "width": 2,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        },
+        "closed": false,
+        "skin": null,
+        "points": [
+          {
+            "id": "tide-native-point-13",
+            "anchor": [
+              0,
+              5
+            ],
+            "in": [
+              0,
+              5
+            ],
+            "out": [
+              0,
+              5
+            ]
+          },
+          {
+            "id": "tide-native-point-14",
+            "anchor": [
+              -10,
+              -15
+            ],
+            "in": [
+              -10,
+              -15
+            ],
+            "out": [
+              -10,
+              -15
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tide-native-node-7",
+      "name": "coral shell",
+      "kind": "path",
+      "artboardId": "tide-native-artboard-1",
+      "parentId": "tide-native-node-3",
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "fill": "#e8b394ff",
+        "stroke": {
+          "color": "#986e57ff",
+          "width": 2.5,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        },
+        "closed": true,
+        "skin": null,
+        "points": [
+          {
+            "id": "tide-native-point-15",
+            "anchor": [
+              -19,
+              6
+            ],
+            "in": [
+              -19,
+              6
+            ],
+            "out": [
+              -19,
+              6
+            ]
+          },
+          {
+            "id": "tide-native-point-16",
+            "anchor": [
+              -23,
+              -9
+            ],
+            "in": [
+              -25.139990996564975,
+              -1.2915346187051702
+            ],
+            "out": [
+              -20.860009003435025,
+              -16.70846538129483
+            ]
+          },
+          {
+            "id": "tide-native-point-17",
+            "anchor": [
+              0,
+              -23
+            ],
+            "in": [
+              -12,
+              -23
+            ],
+            "out": [
+              12,
+              -23
+            ]
+          },
+          {
+            "id": "tide-native-point-18",
+            "anchor": [
+              23,
+              -9
+            ],
+            "in": [
+              20.860009003435025,
+              -16.70846538129483
+            ],
+            "out": [
+              25.139990996564975,
+              -1.2915346187051702
+            ]
+          },
+          {
+            "id": "tide-native-point-19",
+            "anchor": [
+              19,
+              6
+            ],
+            "in": [
+              19,
+              6
+            ],
+            "out": [
+              19,
+              6
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tide-native-node-8",
+      "name": "Pebble",
+      "kind": "group",
+      "artboardId": "tide-native-artboard-1",
+      "parentId": null,
+      "order": 8,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        251,
+        282
+      ],
+      "geometry": null
+    },
+    {
+      "id": "tide-native-node-9",
+      "name": "right whisker low",
+      "kind": "path",
+      "artboardId": "tide-native-artboard-1",
+      "parentId": "tide-native-node-8",
+      "order": 17,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "fill": null,
+        "stroke": {
+          "color": "#284f4bff",
+          "width": 2.5,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        },
+        "closed": false,
+        "skin": null,
+        "points": [
+          {
+            "id": "tide-native-point-20",
+            "anchor": [
+              25,
+              -8
+            ],
+            "in": [
+              25,
+              -8
+            ],
+            "out": [
+              25,
+              -8
+            ]
+          },
+          {
+            "id": "tide-native-point-21",
+            "anchor": [
+              64,
+              -5
+            ],
+            "in": [
+              64,
+              -5
+            ],
+            "out": [
+              64,
+              -5
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tide-native-node-10",
+      "name": "right whisker top",
+      "kind": "path",
+      "artboardId": "tide-native-artboard-1",
+      "parentId": "tide-native-node-8",
+      "order": 16,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "fill": null,
+        "stroke": {
+          "color": "#284f4bff",
+          "width": 2.5,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        },
+        "closed": false,
+        "skin": null,
+        "points": [
+          {
+            "id": "tide-native-point-22",
+            "anchor": [
+              25,
+              -16
+            ],
+            "in": [
+              25,
+              -16
+            ],
+            "out": [
+              25,
+              -16
+            ]
+          },
+          {
+            "id": "tide-native-point-23",
+            "anchor": [
+              65,
+              -25
+            ],
+            "in": [
+              65,
+              -25
+            ],
+            "out": [
+              65,
+              -25
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tide-native-node-11",
+      "name": "left whisker low",
+      "kind": "path",
+      "artboardId": "tide-native-artboard-1",
+      "parentId": "tide-native-node-8",
+      "order": 15,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "fill": null,
+        "stroke": {
+          "color": "#284f4bff",
+          "width": 2.5,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        },
+        "closed": false,
+        "skin": null,
+        "points": [
+          {
+            "id": "tide-native-point-24",
+            "anchor": [
+              -24,
+              -8
+            ],
+            "in": [
+              -24,
+              -8
+            ],
+            "out": [
+              -24,
+              -8
+            ]
+          },
+          {
+            "id": "tide-native-point-25",
+            "anchor": [
+              -62,
+              -5
+            ],
+            "in": [
+              -62,
+              -5
+            ],
+            "out": [
+              -62,
+              -5
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tide-native-node-12",
+      "name": "left whisker top",
+      "kind": "path",
+      "artboardId": "tide-native-artboard-1",
+      "parentId": "tide-native-node-8",
+      "order": 14,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "fill": null,
+        "stroke": {
+          "color": "#284f4bff",
+          "width": 2.5,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        },
+        "closed": false,
+        "skin": null,
+        "points": [
+          {
+            "id": "tide-native-point-26",
+            "anchor": [
+              -23,
+              -16
+            ],
+            "in": [
+              -23,
+              -16
+            ],
+            "out": [
+              -23,
+              -16
+            ]
+          },
+          {
+            "id": "tide-native-point-27",
+            "anchor": [
+              -63,
+              -25
+            ],
+            "in": [
+              -63,
+              -25
+            ],
+            "out": [
+              -63,
+              -25
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tide-native-node-13",
+      "name": "little smile",
+      "kind": "path",
+      "artboardId": "tide-native-artboard-1",
+      "parentId": "tide-native-node-8",
+      "order": 13,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "fill": null,
+        "stroke": {
+          "color": "#284f4bff",
+          "width": 2.700000047683716,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        },
+        "closed": false,
+        "skin": null,
+        "points": [
+          {
+            "id": "tide-native-point-28",
+            "anchor": [
+              -11,
+              -8
+            ],
+            "in": [
+              -11,
+              -8
+            ],
+            "out": [
+              -11,
+              -8
+            ]
+          },
+          {
+            "id": "tide-native-point-29",
+            "anchor": [
+              0,
+              -3
+            ],
+            "in": [
+              -4,
+              -3
+            ],
+            "out": [
+              4,
+              -3
+            ]
+          },
+          {
+            "id": "tide-native-point-30",
+            "anchor": [
+              11,
+              -8
+            ],
+            "in": [
+              11,
+              -8
+            ],
+            "out": [
+              11,
+              -8
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tide-native-node-14",
+      "name": "heart nose",
+      "kind": "path",
+      "artboardId": "tide-native-artboard-1",
+      "parentId": "tide-native-node-8",
+      "order": 12,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "fill": "#284f4bff",
+        "closed": true,
+        "skin": null,
+        "points": [
+          {
+            "id": "tide-native-point-31",
+            "anchor": [
+              0,
+              -24
+            ],
+            "in": [
+              -8,
+              -24
+            ],
+            "out": [
+              8,
+              -24
+            ]
+          },
+          {
+            "id": "tide-native-point-32",
+            "anchor": [
+              8,
+              -20
+            ],
+            "in": [
+              8.51537816632715,
+              -23.96665921723473
+            ],
+            "out": [
+              7.613466375254637,
+              -17.02500558707395
+            ]
+          },
+          {
+            "id": "tide-native-point-33",
+            "anchor": [
+              0,
+              -13
+            ],
+            "in": [
+              0,
+              -13
+            ],
+            "out": [
+              0,
+              -13
+            ]
+          },
+          {
+            "id": "tide-native-point-34",
+            "anchor": [
+              -8,
+              -20
+            ],
+            "in": [
+              -7.613466375254637,
+              -17.02500558707395
+            ],
+            "out": [
+              -8.51537816632715,
+              -23.96665921723473
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tide-native-node-15",
+      "name": "muzzle",
+      "kind": "path",
+      "artboardId": "tide-native-artboard-1",
+      "parentId": "tide-native-node-8",
+      "order": 11,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "fill": "#edf2dfff",
+        "closed": true,
+        "skin": null,
+        "points": [
+          {
+            "id": "tide-native-point-35",
+            "anchor": [
+              1,
+              -32.5
+            ],
+            "in": [
+              -15.016257745098997,
+              -32.5
+            ],
+            "out": [
+              17.016257745098997,
+              -32.5
+            ]
+          },
+          {
+            "id": "tide-native-point-36",
+            "anchor": [
+              30,
+              -15
+            ],
+            "in": [
+              30,
+              -24.6649831220425
+            ],
+            "out": [
+              30,
+              -5.3350168779575
+            ]
+          },
+          {
+            "id": "tide-native-point-37",
+            "anchor": [
+              1,
+              2.5
+            ],
+            "in": [
+              17.016257745098997,
+              2.5
+            ],
+            "out": [
+              -15.016257745098997,
+              2.5
+            ]
+          },
+          {
+            "id": "tide-native-point-38",
+            "anchor": [
+              -28,
+              -15
+            ],
+            "in": [
+              -28,
+              -5.3350168779575
+            ],
+            "out": [
+              -28,
+              -24.6649831220425
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tide-native-node-16",
+      "name": "right cheek",
+      "kind": "path",
+      "artboardId": "tide-native-artboard-1",
+      "parentId": "tide-native-node-8",
+      "order": 10,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "fill": "#e8b394ff",
+        "closed": true,
+        "skin": null,
+        "points": [
+          {
+            "id": "tide-native-point-39",
+            "anchor": [
+              48,
+              -27
+            ],
+            "in": [
+              41.6487253769435,
+              -27
+            ],
+            "out": [
+              54.3512746230565,
+              -27
+            ]
+          },
+          {
+            "id": "tide-native-point-40",
+            "anchor": [
+              59.5,
+              -22
+            ],
+            "in": [
+              59.5,
+              -24.761423749155
+            ],
+            "out": [
+              59.5,
+              -19.238576250845
+            ]
+          },
+          {
+            "id": "tide-native-point-41",
+            "anchor": [
+              48,
+              -17
+            ],
+            "in": [
+              54.3512746230565,
+              -17
+            ],
+            "out": [
+              41.6487253769435,
+              -17
+            ]
+          },
+          {
+            "id": "tide-native-point-42",
+            "anchor": [
+              36.5,
+              -22
+            ],
+            "in": [
+              36.5,
+              -19.238576250845
+            ],
+            "out": [
+              36.5,
+              -24.761423749155
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tide-native-node-17",
+      "name": "left cheek",
+      "kind": "path",
+      "artboardId": "tide-native-artboard-1",
+      "parentId": "tide-native-node-8",
+      "order": 9,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "fill": "#e8b394ff",
+        "closed": true,
+        "skin": null,
+        "points": [
+          {
+            "id": "tide-native-point-43",
+            "anchor": [
+              -47,
+              -27
+            ],
+            "in": [
+              -53.3512746230565,
+              -27
+            ],
+            "out": [
+              -40.6487253769435,
+              -27
+            ]
+          },
+          {
+            "id": "tide-native-point-44",
+            "anchor": [
+              -35.5,
+              -22
+            ],
+            "in": [
+              -35.5,
+              -24.761423749155
+            ],
+            "out": [
+              -35.5,
+              -19.238576250845
+            ]
+          },
+          {
+            "id": "tide-native-point-45",
+            "anchor": [
+              -47,
+              -17
+            ],
+            "in": [
+              -40.6487253769435,
+              -17
+            ],
+            "out": [
+              -53.3512746230565,
+              -17
+            ]
+          },
+          {
+            "id": "tide-native-point-46",
+            "anchor": [
+              -58.5,
+              -22
+            ],
+            "in": [
+              -58.5,
+              -19.238576250845
+            ],
+            "out": [
+              -58.5,
+              -24.761423749155
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tide-native-node-18",
+      "name": "right glint",
+      "kind": "path",
+      "artboardId": "tide-native-artboard-1",
+      "parentId": "tide-native-node-8",
+      "order": 8,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "fill": "#fffbefff",
+        "closed": true,
+        "skin": null,
+        "points": [
+          {
+            "id": "tide-native-point-47",
+            "anchor": [
+              29,
+              -54.5
+            ],
+            "in": [
+              27.895430500338,
+              -54.5
+            ],
+            "out": [
+              30.104569499662,
+              -54.5
+            ]
+          },
+          {
+            "id": "tide-native-point-48",
+            "anchor": [
+              31,
+              -52
+            ],
+            "in": [
+              31,
+              -53.3807118745775
+            ],
+            "out": [
+              31,
+              -50.6192881254225
+            ]
+          },
+          {
+            "id": "tide-native-point-49",
+            "anchor": [
+              29,
+              -49.5
+            ],
+            "in": [
+              30.104569499662,
+              -49.5
+            ],
+            "out": [
+              27.895430500338,
+              -49.5
+            ]
+          },
+          {
+            "id": "tide-native-point-50",
+            "anchor": [
+              27,
+              -52
+            ],
+            "in": [
+              27,
+              -50.6192881254225
+            ],
+            "out": [
+              27,
+              -53.3807118745775
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tide-native-node-19",
+      "name": "left glint",
+      "kind": "path",
+      "artboardId": "tide-native-artboard-1",
+      "parentId": "tide-native-node-8",
+      "order": 7,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "fill": "#fffbefff",
+        "closed": true,
+        "skin": null,
+        "points": [
+          {
+            "id": "tide-native-point-51",
+            "anchor": [
+              -31,
+              -54.5
+            ],
+            "in": [
+              -32.104569499662,
+              -54.5
+            ],
+            "out": [
+              -29.895430500338,
+              -54.5
+            ]
+          },
+          {
+            "id": "tide-native-point-52",
+            "anchor": [
+              -29,
+              -52
+            ],
+            "in": [
+              -29,
+              -53.3807118745775
+            ],
+            "out": [
+              -29,
+              -50.6192881254225
+            ]
+          },
+          {
+            "id": "tide-native-point-53",
+            "anchor": [
+              -31,
+              -49.5
+            ],
+            "in": [
+              -29.895430500338,
+              -49.5
+            ],
+            "out": [
+              -32.104569499662,
+              -49.5
+            ]
+          },
+          {
+            "id": "tide-native-point-54",
+            "anchor": [
+              -33,
+              -52
+            ],
+            "in": [
+              -33,
+              -50.6192881254225
+            ],
+            "out": [
+              -33,
+              -53.3807118745775
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tide-native-node-20",
+      "name": "right eye",
+      "kind": "path",
+      "artboardId": "tide-native-artboard-1",
+      "parentId": "tide-native-node-8",
+      "order": 6,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "fill": "#284f4bff",
+        "closed": true,
+        "skin": null,
+        "points": [
+          {
+            "id": "tide-native-point-55",
+            "anchor": [
+              31,
+              -58
+            ],
+            "in": [
+              26.8578643762675,
+              -58
+            ],
+            "out": [
+              35.1421356237325,
+              -58
+            ]
+          },
+          {
+            "id": "tide-native-point-56",
+            "anchor": [
+              38.5,
+              -48
+            ],
+            "in": [
+              38.5,
+              -53.52284749831
+            ],
+            "out": [
+              38.5,
+              -42.47715250169
+            ]
+          },
+          {
+            "id": "tide-native-point-57",
+            "anchor": [
+              31,
+              -38
+            ],
+            "in": [
+              35.1421356237325,
+              -38
+            ],
+            "out": [
+              26.8578643762675,
+              -38
+            ]
+          },
+          {
+            "id": "tide-native-point-58",
+            "anchor": [
+              23.5,
+              -48
+            ],
+            "in": [
+              23.5,
+              -42.47715250169
+            ],
+            "out": [
+              23.5,
+              -53.52284749831
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tide-native-node-21",
+      "name": "left eye",
+      "kind": "path",
+      "artboardId": "tide-native-artboard-1",
+      "parentId": "tide-native-node-8",
+      "order": 5,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "fill": "#284f4bff",
+        "closed": true,
+        "skin": null,
+        "points": [
+          {
+            "id": "tide-native-point-59",
+            "anchor": [
+              -29,
+              -58
+            ],
+            "in": [
+              -33.1421356237325,
+              -58
+            ],
+            "out": [
+              -24.8578643762675,
+              -58
+            ]
+          },
+          {
+            "id": "tide-native-point-60",
+            "anchor": [
+              -21.5,
+              -48
+            ],
+            "in": [
+              -21.5,
+              -53.52284749831
+            ],
+            "out": [
+              -21.5,
+              -42.47715250169
+            ]
+          },
+          {
+            "id": "tide-native-point-61",
+            "anchor": [
+              -29,
+              -38
+            ],
+            "in": [
+              -24.8578643762675,
+              -38
+            ],
+            "out": [
+              -33.1421356237325,
+              -38
+            ]
+          },
+          {
+            "id": "tide-native-point-62",
+            "anchor": [
+              -36.5,
+              -48
+            ],
+            "in": [
+              -36.5,
+              -42.47715250169
+            ],
+            "out": [
+              -36.5,
+              -53.52284749831
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tide-native-node-22",
+      "name": "waving flipper",
+      "kind": "path",
+      "artboardId": "tide-native-artboard-1",
+      "parentId": "tide-native-node-8",
+      "order": 4,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "fill": "#a5d9c9ff",
+        "stroke": {
+          "color": "#284f4bff",
+          "width": 4,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        },
+        "closed": true,
+        "skin": null,
+        "points": [
+          {
+            "id": "tide-native-point-63",
+            "anchor": [
+              61,
+              23
+            ],
+            "in": [
+              46.143959173944054,
+              33.16356487530625
+            ],
+            "out": [
+              79.9827188332937,
+              10.013222659330898
+            ]
+          },
+          {
+            "id": "tide-native-point-64",
+            "anchor": [
+              109,
+              -37
+            ],
+            "in": [
+              103.56105067535381,
+              -5.4656087700439215
+            ],
+            "out": [
+              113.07921199348463,
+              -60.65079342246706
+            ]
+          },
+          {
+            "id": "tide-native-point-65",
+            "anchor": [
+              126,
+              -41
+            ],
+            "in": [
+              117.89546541197791,
+              -53.62206477211845
+            ],
+            "out": [
+              132.4836276704177,
+              -30.902348182305243
+            ]
+          },
+          {
+            "id": "tide-native-point-66",
+            "anchor": [
+              120,
+              17
+            ],
+            "in": [
+              131.61145851238928,
+              -2.853816540279162
+            ],
+            "out": [
+              104.34977330938835,
+              43.75949185863713
+            ]
+          },
+          {
+            "id": "tide-native-point-67",
+            "anchor": [
+              74,
+              58
+            ],
+            "in": [
+              91.32317562876753,
+              77.38833634262812
+            ],
+            "out": [
+              60.00820429984161,
+              42.340189877108045
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tide-native-node-23",
+      "name": "soft belly",
+      "kind": "path",
+      "artboardId": "tide-native-artboard-1",
+      "parentId": "tide-native-node-8",
+      "order": 3,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "fill": "#d8eee0ff",
+        "closed": true,
+        "skin": null,
+        "points": [
+          {
+            "id": "tide-native-point-68",
+            "anchor": [
+              -5,
+              10.5
+            ],
+            "in": [
+              -33.166522241381,
+              10.5
+            ],
+            "out": [
+              23.166522241381,
+              10.5
+            ]
+          },
+          {
+            "id": "tide-native-point-69",
+            "anchor": [
+              46,
+              61
+            ],
+            "in": [
+              46,
+              33.109620133534506
+            ],
+            "out": [
+              46,
+              88.8903798664655
+            ]
+          },
+          {
+            "id": "tide-native-point-70",
+            "anchor": [
+              -5,
+              111.5
+            ],
+            "in": [
+              23.166522241381,
+              111.5
+            ],
+            "out": [
+              -33.166522241381,
+              111.5
+            ]
+          },
+          {
+            "id": "tide-native-point-71",
+            "anchor": [
+              -56,
+              61
+            ],
+            "in": [
+              -56,
+              88.8903798664655
+            ],
+            "out": [
+              -56,
+              33.109620133534506
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tide-native-node-24",
+      "name": "soft silhouette",
+      "kind": "path",
+      "artboardId": "tide-native-artboard-1",
+      "parentId": "tide-native-node-8",
+      "order": 2,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "fill": "#a5d9c9ff",
+        "stroke": {
+          "color": "#284f4bff",
+          "width": 4.5,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        },
+        "closed": true,
+        "skin": null,
+        "points": [
+          {
+            "id": "tide-native-point-72",
+            "anchor": [
+              -83,
+              85
+            ],
+            "in": [
+              -76.18393855230761,
+              114.21542925136103
+            ],
+            "out": [
+              -94.81450650933348,
+              34.359922630974225
+            ]
+          },
+          {
+            "id": "tide-native-point-73",
+            "anchor": [
+              -62,
+              -64
+            ],
+            "in": [
+              -83.78412209923493,
+              -18.99497778729996
+            ],
+            "out": [
+              -46.751114530535546,
+              -95.50351554889002
+            ]
+          },
+          {
+            "id": "tide-native-point-74",
+            "anchor": [
+              -4,
+              -113
+            ],
+            "in": [
+              -40.881663138484164,
+              -115.95684361090984
+            ],
+            "out": [
+              32.881663138484164,
+              -110.04315638909016
+            ]
+          },
+          {
+            "id": "tide-native-point-75",
+            "anchor": [
+              61,
+              -65
+            ],
+            "in": [
+              47.667629449746116,
+              -97.36120973497009
+            ],
+            "out": [
+              79.66531877035544,
+              -19.69430637104187
+            ]
+          },
+          {
+            "id": "tide-native-point-76",
+            "anchor": [
+              85,
+              78
+            ],
+            "in": [
+              75.37502201246411,
+              33.01822815028904
+            ],
+            "out": [
+              91.27715955708862,
+              107.33593816285497
+            ]
+          },
+          {
+            "id": "tide-native-point-77",
+            "anchor": [
+              0,
+              124
+            ],
+            "in": [
+              45.80718272817356,
+              119.7926242730512
+            ],
+            "out": [
+              -48.79460768870662,
+              128.48176979609764
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tide-native-node-25",
+      "name": "tail fan",
+      "kind": "path",
+      "artboardId": "tide-native-artboard-1",
+      "parentId": "tide-native-node-8",
+      "order": 1,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "fill": "#a5d9c9ff",
+        "stroke": {
+          "color": "#284f4bff",
+          "width": 4,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        },
+        "closed": true,
+        "skin": null,
+        "points": [
+          {
+            "id": "tide-native-point-78",
+            "anchor": [
+              39,
+              103
+            ],
+            "in": [
+              39,
+              103
+            ],
+            "out": [
+              39,
+              103
+            ]
+          },
+          {
+            "id": "tide-native-point-79",
+            "anchor": [
+              100,
+              105
+            ],
+            "in": [
+              77.8945361996375,
+              114.34604034716645
+            ],
+            "out": [
+              121.18440280868073,
+              96.04337800063216
+            ]
+          },
+          {
+            "id": "tide-native-point-80",
+            "anchor": [
+              117,
+              119
+            ],
+            "in": [
+              112.28934976956337,
+              106.88349165780474
+            ],
+            "out": [
+              121.34829252040304,
+              130.18446923894948
+            ]
+          },
+          {
+            "id": "tide-native-point-81",
+            "anchor": [
+              88,
+              133
+            ],
+            "in": [
+              109.36108013525596,
+              127.73651679444372
+            ],
+            "out": [
+              74.40658536847347,
+              136.34948931262673
+            ]
+          },
+          {
+            "id": "tide-native-point-82",
+            "anchor": [
+              38,
+              128
+            ],
+            "in": [
+              38,
+              128
+            ],
+            "out": [
+              38,
+              128
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tide-native-node-26",
+      "name": "left flipper",
+      "kind": "path",
+      "artboardId": "tide-native-artboard-1",
+      "parentId": "tide-native-node-8",
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "fill": "#a5d9c9ff",
+        "stroke": {
+          "color": "#284f4bff",
+          "width": 4,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        },
+        "closed": true,
+        "skin": null,
+        "points": [
+          {
+            "id": "tide-native-point-83",
+            "anchor": [
+              -64,
+              31
+            ],
+            "in": [
+              -50.72691196074824,
+              18.841664015899543
+            ],
+            "out": [
+              -91.28356985846195,
+              55.99213507842872
+            ]
+          },
+          {
+            "id": "tide-native-point-84",
+            "anchor": [
+              -112,
+              81
+            ],
+            "in": [
+              -91.35297416116393,
+              62.08703291362151
+            ],
+            "out": [
+              -123.7983004793349,
+              91.80740976364486
+            ]
+          },
+          {
+            "id": "tide-native-point-85",
+            "anchor": [
+              -115,
+              96
+            ],
+            "in": [
+              -108.94184773266646,
+              106.35851297753695
+            ],
+            "out": [
+              -121.56299828961133,
+              84.7782776076683
+            ]
+          },
+          {
+            "id": "tide-native-point-86",
+            "anchor": [
+              -49,
+              69
+            ],
+            "in": [
+              -72.71010804388901,
+              88.9707480217219
+            ],
+            "out": [
+              -32.17347171078845,
+              54.82721108135864
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tide-native-node-27",
+      "name": "stone light",
+      "kind": "path",
+      "artboardId": "tide-native-artboard-1",
+      "parentId": null,
+      "order": 7,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "fill": "#98b1a2ff",
+        "closed": true,
+        "skin": null,
+        "points": [
+          {
+            "id": "tide-native-point-87",
+            "anchor": [
+              246,
+              386.5
+            ],
+            "in": [
+              183.039538519266,
+              386.5
+            ],
+            "out": [
+              308.960461480734,
+              386.5
+            ]
+          },
+          {
+            "id": "tide-native-point-88",
+            "anchor": [
+              360,
+              409
+            ],
+            "in": [
+              360,
+              396.5735931288025
+            ],
+            "out": [
+              360,
+              421.4264068711975
+            ]
+          },
+          {
+            "id": "tide-native-point-89",
+            "anchor": [
+              246,
+              431.5
+            ],
+            "in": [
+              308.960461480734,
+              431.5
+            ],
+            "out": [
+              183.039538519266,
+              431.5
+            ]
+          },
+          {
+            "id": "tide-native-point-90",
+            "anchor": [
+              132,
+              409
+            ],
+            "in": [
+              132,
+              421.4264068711975
+            ],
+            "out": [
+              132,
+              396.5735931288025
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tide-native-node-28",
+      "name": "resting stone",
+      "kind": "path",
+      "artboardId": "tide-native-artboard-1",
+      "parentId": null,
+      "order": 6,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "fill": "#648d87ff",
+        "closed": true,
+        "skin": null,
+        "points": [
+          {
+            "id": "tide-native-point-91",
+            "anchor": [
+              255,
+              389.5
+            ],
+            "in": [
+              187.3451181457025,
+              389.5
+            ],
+            "out": [
+              322.6548818542975,
+              389.5
+            ]
+          },
+          {
+            "id": "tide-native-point-92",
+            "anchor": [
+              377.5,
+              418
+            ],
+            "in": [
+              377.5,
+              402.2598846298165
+            ],
+            "out": [
+              377.5,
+              433.7401153701835
+            ]
+          },
+          {
+            "id": "tide-native-point-93",
+            "anchor": [
+              255,
+              446.5
+            ],
+            "in": [
+              322.6548818542975,
+              446.5
+            ],
+            "out": [
+              187.3451181457025,
+              446.5
+            ]
+          },
+          {
+            "id": "tide-native-point-94",
+            "anchor": [
+              132.5,
+              418
+            ],
+            "in": [
+              132.5,
+              433.7401153701835
+            ],
+            "out": [
+              132.5,
+              402.2598846298165
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tide-native-node-29",
+      "name": "near tide",
+      "kind": "path",
+      "artboardId": "tide-native-artboard-1",
+      "parentId": null,
+      "order": 5,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "fill": "#8ebeb7ff",
+        "closed": true,
+        "skin": null,
+        "points": [
+          {
+            "id": "tide-native-point-95",
+            "anchor": [
+              25,
+              390
+            ],
+            "in": [
+              25,
+              390
+            ],
+            "out": [
+              25,
+              390
+            ]
+          },
+          {
+            "id": "tide-native-point-96",
+            "anchor": [
+              162,
+              373
+            ],
+            "in": [
+              92,
+              373
+            ],
+            "out": [
+              227,
+              373
+            ]
+          },
+          {
+            "id": "tide-native-point-97",
+            "anchor": [
+              336,
+              387
+            ],
+            "in": [
+              269,
+              387
+            ],
+            "out": [
+              393,
+              387
+            ]
+          },
+          {
+            "id": "tide-native-point-98",
+            "anchor": [
+              487,
+              366
+            ],
+            "in": [
+              487,
+              366
+            ],
+            "out": [
+              487,
+              366
+            ]
+          },
+          {
+            "id": "tide-native-point-99",
+            "anchor": [
+              487,
+              488
+            ],
+            "in": [
+              487,
+              488
+            ],
+            "out": [
+              487,
+              488
+            ]
+          },
+          {
+            "id": "tide-native-point-100",
+            "anchor": [
+              25,
+              488
+            ],
+            "in": [
+              25,
+              488
+            ],
+            "out": [
+              25,
+              488
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tide-native-node-30",
+      "name": "far tide",
+      "kind": "path",
+      "artboardId": "tide-native-artboard-1",
+      "parentId": null,
+      "order": 4,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "fill": "#b7d3cdff",
+        "closed": true,
+        "skin": null,
+        "points": [
+          {
+            "id": "tide-native-point-101",
+            "anchor": [
+              50,
+              335
+            ],
+            "in": [
+              50,
+              335
+            ],
+            "out": [
+              50,
+              335
+            ]
+          },
+          {
+            "id": "tide-native-point-102",
+            "anchor": [
+              153,
+              319
+            ],
+            "in": [
+              92,
+              319
+            ],
+            "out": [
+              209,
+              319
+            ]
+          },
+          {
+            "id": "tide-native-point-103",
+            "anchor": [
+              338,
+              331
+            ],
+            "in": [
+              264,
+              331
+            ],
+            "out": [
+              403,
+              331
+            ]
+          },
+          {
+            "id": "tide-native-point-104",
+            "anchor": [
+              462,
+              319
+            ],
+            "in": [
+              462,
+              319
+            ],
+            "out": [
+              462,
+              319
+            ]
+          },
+          {
+            "id": "tide-native-point-105",
+            "anchor": [
+              462,
+              443
+            ],
+            "in": [
+              462,
+              443
+            ],
+            "out": [
+              462,
+              443
+            ]
+          },
+          {
+            "id": "tide-native-point-106",
+            "anchor": [
+              50,
+              443
+            ],
+            "in": [
+              50,
+              443
+            ],
+            "out": [
+              50,
+              443
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tide-native-node-31",
+      "name": "sun shimmer",
+      "kind": "path",
+      "artboardId": "tide-native-artboard-1",
+      "parentId": null,
+      "order": 3,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "fill": "#f1c9a8ff",
+        "closed": true,
+        "skin": null,
+        "points": [
+          {
+            "id": "tide-native-point-107",
+            "anchor": [
+              349,
+              101
+            ],
+            "in": [
+              335.745166004056,
+              101
+            ],
+            "out": [
+              362.254833995944,
+              101
+            ]
+          },
+          {
+            "id": "tide-native-point-108",
+            "anchor": [
+              373,
+              125
+            ],
+            "in": [
+              373,
+              111.745166004056
+            ],
+            "out": [
+              373,
+              138.254833995944
+            ]
+          },
+          {
+            "id": "tide-native-point-109",
+            "anchor": [
+              349,
+              149
+            ],
+            "in": [
+              362.254833995944,
+              149
+            ],
+            "out": [
+              335.745166004056,
+              149
+            ]
+          },
+          {
+            "id": "tide-native-point-110",
+            "anchor": [
+              325,
+              125
+            ],
+            "in": [
+              325,
+              138.254833995944
+            ],
+            "out": [
+              325,
+              111.745166004056
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tide-native-node-32",
+      "name": "setting sun",
+      "kind": "path",
+      "artboardId": "tide-native-artboard-1",
+      "parentId": null,
+      "order": 2,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "fill": "#e8b394ff",
+        "closed": true,
+        "skin": null,
+        "points": [
+          {
+            "id": "tide-native-point-111",
+            "anchor": [
+              357,
+              95
+            ],
+            "in": [
+              336.013179506422,
+              95
+            ],
+            "out": [
+              377.986820493578,
+              95
+            ]
+          },
+          {
+            "id": "tide-native-point-112",
+            "anchor": [
+              395,
+              133
+            ],
+            "in": [
+              395,
+              112.013179506422
+            ],
+            "out": [
+              395,
+              153.986820493578
+            ]
+          },
+          {
+            "id": "tide-native-point-113",
+            "anchor": [
+              357,
+              171
+            ],
+            "in": [
+              377.986820493578,
+              171
+            ],
+            "out": [
+              336.013179506422,
+              171
+            ]
+          },
+          {
+            "id": "tide-native-point-114",
+            "anchor": [
+              319,
+              133
+            ],
+            "in": [
+              319,
+              153.986820493578
+            ],
+            "out": [
+              319,
+              112.013179506422
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tide-native-node-33",
+      "name": "sea glass sky",
+      "kind": "path",
+      "artboardId": "tide-native-artboard-1",
+      "parentId": null,
+      "order": 1,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "fill": "#dcece3ff",
+        "closed": true,
+        "skin": null,
+        "points": [
+          {
+            "id": "tide-native-point-115",
+            "anchor": [
+              256,
+              36
+            ],
+            "in": [
+              141.677056784983,
+              36
+            ],
+            "out": [
+              370.322943215017,
+              36
+            ]
+          },
+          {
+            "id": "tide-native-point-116",
+            "anchor": [
+              463,
+              232
+            ],
+            "in": [
+              463,
+              123.75218903312401
+            ],
+            "out": [
+              463,
+              340.247810966876
+            ]
+          },
+          {
+            "id": "tide-native-point-117",
+            "anchor": [
+              256,
+              428
+            ],
+            "in": [
+              370.322943215017,
+              428
+            ],
+            "out": [
+              141.677056784983,
+              428
+            ]
+          },
+          {
+            "id": "tide-native-point-118",
+            "anchor": [
+              49,
+              232
+            ],
+            "in": [
+              49,
+              340.247810966876
+            ],
+            "out": [
+              49,
+              123.75218903312401
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tide-native-node-34",
+      "name": "shore paper",
+      "kind": "path",
+      "artboardId": "tide-native-artboard-1",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "fill": "#fffbefff",
+        "closed": true,
+        "skin": null,
+        "points": [
+          {
+            "id": "tide-native-point-119",
+            "anchor": [
+              0,
+              0
+            ],
+            "in": [
+              0,
+              0
+            ],
+            "out": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "tide-native-point-120",
+            "anchor": [
+              512,
+              0
+            ],
+            "in": [
+              512,
+              0
+            ],
+            "out": [
+              512,
+              0
+            ]
+          },
+          {
+            "id": "tide-native-point-121",
+            "anchor": [
+              512,
+              512
+            ],
+            "in": [
+              512,
+              512
+            ],
+            "out": [
+              512,
+              512
+            ]
+          },
+          {
+            "id": "tide-native-point-122",
+            "anchor": [
+              0,
+              512
+            ],
+            "in": [
+              0,
+              512
+            ],
+            "out": [
+              0,
+              512
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [
+    {
+      "id": "tide-native-animation-1",
+      "name": "Shore hello",
+      "artboardId": "tide-native-artboard-1",
+      "fps": 60,
+      "duration": 120,
+      "loop": true,
+      "tracks": [
+        {
+          "targetId": "tide-native-node-8",
+          "property": "y",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 282,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 60,
+              "value": 277,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 120,
+              "value": 282,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "tide-native-node-22",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 30,
+              "value": -0.11999999731779099,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 60,
+              "value": 0.03999999910593033,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 90,
+              "value": -0.11999999731779099,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "tide-native-artboard-1": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  },
+  "advanced": {
+    "clips": [],
+    "feathers": [],
+    "ik": []
+  }
+}
