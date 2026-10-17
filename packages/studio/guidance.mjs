@@ -2,6 +2,8 @@ export function explainImport(error){
   const diagnostic=String(error?.message||error),match=diagnostic.match(/^([^\n]+?) at byte (\d+):/);
   const type=match?.[1];let feature;
   if(type?.startsWith('DataConverter'))feature='data converters';
+  else if(/animated .* geometry cannot be preserved/.test(diagnostic))feature='animated contour geometry';
+  else if(['Ellipse','Rectangle','PointsPath','StraightVertex','CubicMirroredVertex','CubicAsymmetricVertex','CubicDetachedVertex'].includes(type))feature='contour features outside the supported static geometry subset';
   else if(type?.includes('ViewModel')||type?.includes('DataBind'))feature='data binding';
   else if(type?.includes('Audio'))feature='audio';
   else if(type?.includes('Text'))feature='text features';
