@@ -1,0 +1,15 @@
+{
+  "inspectedAt": "2026-10-17T08:11:18.885Z",
+  "source": "Previously supplied SOBO Editor export; artwork retains original ownership.",
+  "sha256": "bd15378a5fae9ab5f0f166be36df10e775a5ccee15200234d41f947098e4e29e",
+  "geometryTypeCounts": {
+    "Rectangle": 6,
+    "Ellipse": 360,
+    "PointsPath": 349,
+    "CubicMirroredVertex": 842,
+    "CubicDetachedVertex": 913,
+    "CubicAsymmetricVertex": 412
+  },
+  "editableImportDiagnostic": "DataConverterTrigger at byte 2306887: outside editable import subset; original file remains unchanged",
+  "scope": "Type-frequency evidence only; not matched Editor scenes or successful whole-file import. Nondefault flags, geometry keys, nested artboards, data contracts and other unsupported features remain explicit limits."
+}

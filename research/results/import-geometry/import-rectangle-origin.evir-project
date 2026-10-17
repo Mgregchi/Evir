@@ -1,0 +1,131 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 3,
+  "id": "import-rectangle-origin-project",
+  "name": "import-rectangle-origin",
+  "artboards": [
+    {
+      "id": "import-rectangle-origin-artboard-1",
+      "name": "Board",
+      "width": 256,
+      "height": 256
+    }
+  ],
+  "nodes": [
+    {
+      "id": "import-rectangle-origin-node-1",
+      "name": "Contour",
+      "kind": "path",
+      "artboardId": "import-rectangle-origin-artboard-1",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        42,
+        177
+      ],
+      "geometry": {
+        "fill": null,
+        "stroke": {
+          "color": "#275b49ff",
+          "width": 9,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        },
+        "closed": true,
+        "skin": null,
+        "points": [
+          {
+            "id": "import-rectangle-origin-point-1",
+            "anchor": [
+              21.000000312924385,
+              -84.00000333786011
+            ],
+            "in": [
+              21.000000312924385,
+              -84.00000333786011
+            ],
+            "out": [
+              21.000000312924385,
+              -84.00000333786011
+            ]
+          },
+          {
+            "id": "import-rectangle-origin-point-2",
+            "anchor": [
+              126.00000031292439,
+              -84.00000333786011
+            ],
+            "in": [
+              126.00000031292439,
+              -84.00000333786011
+            ],
+            "out": [
+              126.00000031292439,
+              -84.00000333786011
+            ]
+          },
+          {
+            "id": "import-rectangle-origin-point-3",
+            "anchor": [
+              126.00000031292439,
+              -14.000003337860107
+            ],
+            "in": [
+              126.00000031292439,
+              -14.000003337860107
+            ],
+            "out": [
+              126.00000031292439,
+              -14.000003337860107
+            ]
+          },
+          {
+            "id": "import-rectangle-origin-point-4",
+            "anchor": [
+              21.000000312924385,
+              -14.000003337860107
+            ],
+            "in": [
+              21.000000312924385,
+              -14.000003337860107
+            ],
+            "out": [
+              21.000000312924385,
+              -14.000003337860107
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "import-rectangle-origin-artboard-1": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  },
+  "advanced": {
+    "clips": [],
+    "feathers": [],
+    "ik": []
+  }
+}

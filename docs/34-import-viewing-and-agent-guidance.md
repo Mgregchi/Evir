@@ -2,6 +2,9 @@
 
 Research and implementation: 13 October 2026. This addresses the reported `DataConverterSystemNormalizer at byte 163` rejection and the missing Live tools/MCP instructions. All physical tests remain postponed.
 
+
+The [editable native contour expansion](42-editable-riv-contours.md) adds supported static ellipses, rectangle origins, contour transforms and mixed vertex types. Use Tide’s downloadable Native import sample to try them. Animated contour geometry still rejects with a specific explanation and the existing original-viewing alternative.
+
 ## Why that import failed
 
 The error matches `28745-54500-character-poses.riv`, one of the supplied exports. The [existing corpus inventory](../research/results/advanced-authoring/supplied-import.json) recorded the same type and byte offset. It is an editable conversion limit, not evidence of a corrupt file. Rive's normalizer performs direction-dependent data conversion; dropping it would change semantics. That export also contains many other features and exceeds the editable reader's record budget. Supporting one object alone would not make it a complete editable import.

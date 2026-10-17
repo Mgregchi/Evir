@@ -1,0 +1,131 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 3,
+  "id": "import-ellipse-transformed-project",
+  "name": "import-ellipse-transformed",
+  "artboards": [
+    {
+      "id": "import-ellipse-transformed-artboard-1",
+      "name": "Board",
+      "width": 256,
+      "height": 256
+    }
+  ],
+  "nodes": [
+    {
+      "id": "import-ellipse-transformed-node-1",
+      "name": "Contour",
+      "kind": "path",
+      "artboardId": "import-ellipse-transformed-artboard-1",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        128,
+        128
+      ],
+      "geometry": {
+        "fill": null,
+        "stroke": {
+          "color": "#275b49ff",
+          "width": 9,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        },
+        "closed": true,
+        "skin": null,
+        "points": [
+          {
+            "id": "import-ellipse-transformed-point-1",
+            "anchor": [
+              27.844453675476025,
+              -36.762301298448236
+            ],
+            "in": [
+              70.20440375256764,
+              -17.845511198275176
+            ],
+            "out": [
+              -14.515496401615593,
+              -55.679091398621296
+            ]
+          },
+          {
+            "id": "import-ellipse-transformed-point-2",
+            "anchor": [
+              -61.699474483142666,
+              -42.25187841228936
+            ],
+            "in": [
+              -54.60567859826652,
+              -58.136858789466686
+            ],
+            "out": [
+              -68.79327036801881,
+              -26.36689803511203
+            ]
+          },
+          {
+            "id": "import-ellipse-transformed-point-3",
+            "anchor": [
+              2.1555463245239768,
+              20.762301298448236
+            ],
+            "in": [
+              -40.20440375256764,
+              1.845511198275176
+            ],
+            "out": [
+              44.51549640161559,
+              39.679091398621296
+            ]
+          },
+          {
+            "id": "import-ellipse-transformed-point-4",
+            "anchor": [
+              91.69947448314267,
+              26.251878412289358
+            ],
+            "in": [
+              84.60567859826652,
+              42.136858789466686
+            ],
+            "out": [
+              98.79327036801881,
+              10.36689803511203
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "import-ellipse-transformed-artboard-1": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  },
+  "advanced": {
+    "clips": [],
+    "feathers": [],
+    "ik": []
+  }
+}
