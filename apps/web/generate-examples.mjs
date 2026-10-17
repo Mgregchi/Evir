@@ -1,6 +1,7 @@
 import {CommandSession} from '@evir/commands';
 import {compassLesson} from '@evir/commands/example';
 import {suite} from './advanced-examples.mjs';
+import {strokeStudy} from './stroke-scene.mjs';
 import {characterScenes} from './character-scenes.mjs';
 import {motorcycle} from './motorcycle-scene.mjs';
 import { fitFreehand, fitBrush } from '../../packages/studio/freehand.mjs';
@@ -354,7 +355,7 @@ function loom() {
   const a=anim('weave','Weave');key(a,spindle,'rotation',[[0,0],[120,Math.PI*2]]);
   return p;
 }
-const factories={ribbon,loom,sprig,measure,compass,milo,orbit,bloom,tempo,signal,gather,wisp,dawn,arrange,motorcycle:()=>motorcycle(project)};
+const factories={trace:()=>strokeStudy(project),ribbon,loom,sprig,measure,compass,milo,orbit,bloom,tempo,signal,gather,wisp,dawn,arrange,motorcycle:()=>motorcycle(project)};
 for(const original of await suite()){
  const p=structuredClone(original);p.artboards[0].width=p.artboards[0].height=512;
  for(const n of p.nodes){n.transform[4]*=2;n.transform[5]*=2;const g=n.geometry;if(!g)continue;

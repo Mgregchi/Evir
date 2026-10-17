@@ -1,0 +1,312 @@
+{
+  "checkedAt": "2026-10-16T21:10:39.785511+00:00",
+  "applicationCommit": "77ac9c5c0dc0394b1021b8ac77e73e576d83963f",
+  "baseMain": "087ed17fac7470cba2b6beddc30d0a93291a644e",
+  "pullRequest": "https://github.com/Mgregchi/Evir/pull/35",
+  "scope": "Native centered solid strokes and supported path effects. Cloud software graphics, synthetic input and automated accessibility; no full parity, physical-device, human/assistive-technology or hosted-backend claim.",
+  "environment": {
+    "node": "v24.19.0",
+    "npm": "11.9.0",
+    "os": "Linux",
+    "architecture": "x86_64",
+    "browser": "151.0.7922.173",
+    "officialRive": "2.44.0",
+    "graphics": {
+      "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+      "contexts": [
+        {
+          "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+          "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+          "unmaskedRendererAvailable": true,
+          "contextLost": false,
+          "errors": [],
+          "extensions": [
+            "EXT_clip_control",
+            "EXT_color_buffer_float",
+            "EXT_color_buffer_half_float",
+            "EXT_conservative_depth",
+            "EXT_depth_clamp",
+            "EXT_float_blend",
+            "EXT_polygon_offset_clamp",
+            "EXT_texture_compression_bptc",
+            "EXT_texture_compression_rgtc",
+            "EXT_texture_filter_anisotropic",
+            "EXT_texture_mirror_clamp_to_edge",
+            "NV_shader_noperspective_interpolation",
+            "OES_draw_buffers_indexed",
+            "OES_sample_variables",
+            "OES_shader_multisample_interpolation",
+            "OES_texture_float_linear",
+            "OVR_multiview2",
+            "WEBGL_clip_cull_distance",
+            "WEBGL_compressed_texture_astc",
+            "WEBGL_compressed_texture_etc",
+            "WEBGL_compressed_texture_etc1",
+            "WEBGL_compressed_texture_s3tc",
+            "WEBGL_compressed_texture_s3tc_srgb",
+            "WEBGL_debug_renderer_info",
+            "WEBGL_debug_shaders",
+            "WEBGL_lose_context",
+            "WEBGL_multi_draw",
+            "WEBGL_polygon_mode",
+            "WEBGL_stencil_texturing"
+          ]
+        },
+        {
+          "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+          "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+          "unmaskedRendererAvailable": true,
+          "contextLost": false,
+          "errors": [],
+          "extensions": [
+            "EXT_clip_control",
+            "EXT_color_buffer_float",
+            "EXT_color_buffer_half_float",
+            "EXT_conservative_depth",
+            "EXT_depth_clamp",
+            "EXT_float_blend",
+            "EXT_polygon_offset_clamp",
+            "EXT_texture_compression_bptc",
+            "EXT_texture_compression_rgtc",
+            "EXT_texture_filter_anisotropic",
+            "EXT_texture_mirror_clamp_to_edge",
+            "NV_shader_noperspective_interpolation",
+            "OES_draw_buffers_indexed",
+            "OES_sample_variables",
+            "OES_shader_multisample_interpolation",
+            "OES_texture_float_linear",
+            "OVR_multiview2",
+            "WEBGL_clip_cull_distance",
+            "WEBGL_compressed_texture_astc",
+            "WEBGL_compressed_texture_etc",
+            "WEBGL_compressed_texture_etc1",
+            "WEBGL_compressed_texture_s3tc",
+            "WEBGL_compressed_texture_s3tc_srgb",
+            "WEBGL_debug_renderer_info",
+            "WEBGL_debug_shaders",
+            "WEBGL_lose_context",
+            "WEBGL_multi_draw",
+            "WEBGL_polygon_mode",
+            "WEBGL_stencil_texturing"
+          ]
+        }
+      ]
+    }
+  },
+  "commands": [
+    {
+      "label": "runtime",
+      "command": "npm run test:runtime",
+      "startedAt": "2026-10-16T21:04:44.103055+00:00",
+      "exitCode": 0,
+      "seconds": 0.74,
+      "log": "evir-strokes-recheck-runtime.log",
+      "logSha256": "7b7c28d35d1567700cf16ba6b26a184af888c2eaf6cff26d77ca7f02203f0bc3"
+    },
+    {
+      "label": "runtime-build",
+      "command": "npm run runtime:build",
+      "startedAt": "2026-10-16T21:04:44.841069+00:00",
+      "exitCode": 0,
+      "seconds": 0.89,
+      "log": "evir-strokes-recheck-runtime-build.log",
+      "logSha256": "ff55dfde3812d6808cc3de4db3e93e64e3456192815974f840719eccba1d619b"
+    },
+    {
+      "label": "editor",
+      "command": "npm run test:editor",
+      "startedAt": "2026-10-16T21:04:45.728007+00:00",
+      "exitCode": 0,
+      "seconds": 300.68,
+      "log": "evir-strokes-recheck-editor.log",
+      "logSha256": "a8440fa60ba7fd5c2c245e708295d1765d9d0d3eb455d81eab36f7d5917615cd"
+    },
+    {
+      "label": "oracles-final",
+      "command": "npm run validate:editor",
+      "startedAt": "2026-10-16T20:58:35.648900+00:00",
+      "exitCode": 0,
+      "seconds": 368.19,
+      "log": "evir-strokes-oracles-final.log",
+      "logSha256": "20038238a2ffd34d570ac5dab50bb0ae73d538a0891c07b38f0ff792638e3112"
+    },
+    {
+      "label": "frontend",
+      "command": "npm run test:frontend",
+      "startedAt": "2026-10-16T16:08:32.309538+00:00",
+      "exitCode": 0,
+      "seconds": 1.23,
+      "log": "evir-strokes-final-frontend.log",
+      "logSha256": "64f363a5c80b7b3bd461cef4f584a3ed022e3b1fced3530dff07644fb9cf0810"
+    },
+    {
+      "label": "web",
+      "command": "npm run test:web",
+      "startedAt": "2026-10-16T16:18:52.352226+00:00",
+      "exitCode": 0,
+      "seconds": 952.55,
+      "log": "evir-strokes-final-web.log",
+      "logSha256": "db50f8f26307a4738e7dc7b7c808f827075bd5c360c2b8976c49be10790532c5"
+    },
+    {
+      "label": "experience",
+      "command": "npm run test:experience",
+      "startedAt": "2026-10-16T20:54:12.719690+00:00",
+      "exitCode": 0,
+      "seconds": 4.53,
+      "log": "evir-strokes-final-experience.log",
+      "logSha256": "d00e2e797550cda22653e4fd7e8e92363dc1f0ae553af8160394cba36885eded"
+    }
+  ],
+  "unitCounts": {
+    "editor": 92,
+    "runtime": 30,
+    "frontend": 26
+  },
+  "native": {
+    "focusedComparisons": 74,
+    "galleryComparisons": 472,
+    "backends": [
+      {
+        "name": "canvas",
+        "checks": 37,
+        "maxMAE": 0.23975372314453125
+      },
+      {
+        "name": "webgl2",
+        "checks": 37,
+        "maxMAE": 0.5135688781738281
+      }
+    ]
+  },
+  "galleryStudies": 25,
+  "traceNodes": 23,
+  "applicationInputsSha256": {
+    ".github/workflows/web.yml": "1196e59c9ff78ae0012d663e49586cb413b8599145ac42a721331402f15785c9",
+    "apps/web/assets/README.md": "425f78abbbc17aad790ee9aa07d2b4d57d9d06abe50f01e65d46384b7657d32a",
+    "apps/web/assets/examples/trace.evir-project": "c85616eb3ba102c5bf165c61dd76c864e6fa2b41fd7c80fc982d551965f69c8d",
+    "apps/web/assets/examples/trace.riv": "e906bee977c50e0c4e40e37bc21c354c7dfac933e2bfaeac37f598bb3790787a",
+    "apps/web/assets/trace-poster.png": "e8ed8f73b3c5dee1f91a591a21b1fa8a18b26ed38e213f25d4c6f74fa55ef29d",
+    "apps/web/content.mjs": "4ffb6d7592f98ba54f5173dededb25a4a2984c785ec7613244d299ad6716e861",
+    "apps/web/examples.mjs": "7227840ffe85cbfb56d4dc4adc1bc495a99896b2701b467dae6f7346fb876085",
+    "apps/web/generate-examples.mjs": "5d3745c522f12cfbc1dfa61b395cfe7b722c57459f42566a6e6bf763a7a47adf",
+    "apps/web/stroke-scene.mjs": "b8efa08d4f71ffc5bc0c73d03469dfd1c9419c57e5a17ca4800cf00614dfd5e1",
+    "package.json": "0402d770aae85d262d568a1853437c9b5442692bfe1b6ccfb11f9ff81175dabc",
+    "packages/authoring/index.mjs": "159f2ebed1fcf41110b7b2168f23e99534e526d19568572a04bbf9afbc72001e",
+    "packages/commands/operations.mjs": "812ffbdc8ed89885d2e21050898a46abf48bb2f1c0cb729b98081672c9e64b7d",
+    "packages/format/README.md": "c0d5f770d2e5a859f79700c312da7c472e42de33a0bdf0c24cb3788ae63c1e4b",
+    "packages/format/import.mjs": "0d0360258d733373197d086de1ab594d2438c167de90051f6ca565b6a2ea3060",
+    "packages/format/index.mjs": "dda4fc8ee112d63b7ddd0e4e24ad68bd4fb6c8cf0d524309b52f6bc922d2343c",
+    "packages/project-model/README.md": "86538be50ac07caf5eac903064f6850c5e031990a5b996c1f697efb6758a5cbb",
+    "packages/project-model/advanced.mjs": "0770d865fe7e9fe09478624846c3309a9d58ae9f4b3f84235b2c82d4049213b9",
+    "packages/project-model/features.mjs": "cdbfeb95f5f262f7280d0eea801008a1f7612a8dc60b4fb643cad9829ba962b7",
+    "packages/project-model/index.mjs": "e1bdb82fab1a630abceda9103912e3beeadc5754b5aa36e8e0bfcdcf2e2c73f0",
+    "packages/project-model/stroke.mjs": "e95ba750a8d61590b718011d8e3bfa5f49852c56a436743a4d65682ad98264b9",
+    "packages/renderer-canvas/README.md": "fae9e7f0423e77b2f294382a61860b02c2fb8118adde3230f0e52b458e5f38d5",
+    "packages/renderer-canvas/index.mjs": "f44da04f3a01a84d2df4e322e510d72adc9327f06d4f130092178d85368e3d5f",
+    "packages/renderer-canvas/stroke.mjs": "8bb5eb97230c7ab7d25ee44116a01da4579e9290bb5382cbbc8ae80d36e57b4a",
+    "packages/runtime/README.md": "0614cea9429db8f0f289c5941a17aba57469bd55b6cbb7630f9be00c5fe91026",
+    "packages/runtime/advanced.mjs": "b849b8ce328b0ef88133fd8b565582c403f1d69b2471eb56853509e00fb4a7f2",
+    "packages/runtime/geometry.mjs": "497765d9cad78231a352602615062d2cf5560175a94e80e1a097a41f508f45e3",
+    "packages/runtime/motion.mjs": "b54d8055be644a5082a883a2fe4310d31b83d7f954154d8cfe9a18c62b9009ab",
+    "packages/studio/README.md": "c5750fba895e9f4704b09490fa6d71d8310ceaf67c428c7b6a7da1dde8a92482",
+    "packages/studio/freehand.mjs": "a537e5da2388da72638fe63c02ddfa11af7177aebfe21284d057492bff097d73",
+    "packages/studio/index.html": "14afc91c84db4bda6d647f5da858f63ba8bd2e7e9572e8e413433abbadcf5182",
+    "packages/studio/paint.mjs": "3863030ed4f1a4b379884dc3755e87a67fec89ce0dbc13be8e10db3dd413ad63",
+    "packages/studio/stroke.mjs": "d16396d48ce378956e93a02a3b59e76a4c7259c46f3a22ae782924ddd3b192c4",
+    "packages/studio/studio.css": "8f2bacb5594c9b46a5f2fb577bcc9dc481174284c0faaeba6272799e9215a113",
+    "packages/studio/studio.mjs": "daddf432c0b6c3d83b48de81e4d07b4dc203ac0e55627e6d6d65b8ac4ee7dc10",
+    "tests/editor/library-browser.cjs": "8d1447f9c2c01a61597a2030e9ccdd50216b023d5d3f8a3b287378a3ad889db5",
+    "tests/editor/playback-browser.cjs": "5e57f477f3dfd46ff3af7ca3eefb7619fc52f2edf2bfb9992de4389056496164",
+    "tests/editor/stroke-browser.cjs": "d2d3628ccafb889200cd9502f8cf7b898fb45b1860cbad44703bcddc24a246dc",
+    "tests/editor/strokes.test.mjs": "04707ff6039bb6406aee95b8619710e3b40ed2d6a790096f43d69e31d71abebe",
+    "tests/fixtures/riv-records.mjs": "d22597643b916c8e80999e5efacaeb79a193a0b0ead14d04fda651c85be20954",
+    "tests/fixtures/strokes.mjs": "b6f67c2e0928a8f4ab08f04c94ef932139cf748cc434e82542987bee6b34a414",
+    "tests/runtime/strokes.test.mjs": "e5f6d762d524e0273f24b7c292f081ad12c9c015dcf5bf41c9546d643277dbeb",
+    "tools/validate-strokes.cjs": "8cab2f72524b16550ef53100eecbbf6c6298f2cb8c1dc0944cd0a8287c8eb2ba"
+  },
+  "initialFailures": [
+    {
+      "command": "npm run test:editor",
+      "exitCode": 1,
+      "seconds": 300.74,
+      "resolution": "The browser test used a rounded end-frame label as a completion signal during counted playback. It now also requires the Play state; the full editor rerun passed."
+    },
+    {
+      "command": "npm run validate:editor",
+      "exitCode": 1,
+      "seconds": 318.07,
+      "resolution": "The official high-level host initializes the first animation when no clip is selected. Static source checks now use separately generated animation-free exports; the full native authoring gate rerun passed."
+    },
+    {
+      "command": "npm run test:editor",
+      "exitCode": 1,
+      "seconds": 239.68,
+      "resolution": "A recovery wait timed out once; an isolated run passed. The fixture lacked a settled-save precondition before opening a competing tab. The test now waits for layout/saving and explicitly asserts an unchanged saved revision after the second tab opens; the full editor recheck passed."
+    }
+  ],
+  "ci": {
+    "applicationHead": "77ac9c5c0dc0394b1021b8ac77e73e576d83963f",
+    "status": "blocked before jobs started",
+    "reason": "The job was not started because your account is locked due to a billing issue.",
+    "jobs": [
+      {
+        "id": 117194976501,
+        "url": "https://github.com/Mgregchi/Evir/actions/runs/38966745600/job/117194976501",
+        "status": "completed",
+        "conclusion": "failure",
+        "annotations": [
+          "The job was not started because your account is locked due to a billing issue."
+        ]
+      },
+      {
+        "id": 117194975845,
+        "url": "https://github.com/Mgregchi/Evir/actions/runs/38966745481/job/117194975845",
+        "status": "completed",
+        "conclusion": "failure",
+        "annotations": [
+          "The job was not started because your account is locked due to a billing issue."
+        ]
+      }
+    ]
+  },
+  "remaining": [
+    "Gradient/skinned/noncentered/non-scaling/variable-width strokes and multiple paints",
+    "General path joins and gesture concatenation",
+    "Broader editable Rive Editor import, rigging/blends and rich text/layout",
+    "Physical testing postponed; human/assistive-technology evidence open; hosted backend deferred"
+  ],
+  "regressionFixes": [
+    {
+      "issue": "Paint bounds omitted two corners of a thin rotated rectangle stroke.",
+      "failingTestLogSha256": "1f34950e72b483fc44b43071926801204e9927aff2317350224eb2c05aa01f46",
+      "resolution": "Include all four rectangle corners in the transformed paint envelope. The focused regression and full runtime recheck passed."
+    }
+  ],
+  "reproduction": {
+    "command": "node apps/web/generate-examples.mjs",
+    "exitCode": 0,
+    "seconds": 0.29,
+    "verifiedFiles": 50,
+    "result": "All source and .riv hashes unchanged after regeneration."
+  },
+  "screenshotsSha256": {
+    "centerline-drawing-1440.png": "c1993c6b7ecfbca459122a24509825dcfdd3a818bc11b6fff8c0b5a4a6b94dd9",
+    "stroke-sheet-1024.png": "0bb893e315c34480b2cb6f9c83de34dd104dd7c5b3c1e7d14c75191c0384a6a4",
+    "stroke-sheet-1440.png": "6494281d83b2c218ee8bc0b2e0a31f2e6dd7b20b6dcee7e61e0edb50fc014ee0",
+    "stroke-sheet-320.png": "2bcd869b94a00caac38fc499752fc5d5409ed4f02ff3cdf388b223dbb240a7fa",
+    "stroke-sheet-390.png": "7f7944017f87adc7774a69d8f78bfca436bd9141340c5ac12b9c0e8e2edfe216",
+    "stroke-sheet-844.png": "a3557ff23dbb79f70179127962e7b4d522a2f6da7d7812d3fa36b80763cc7359",
+    "studio-trace-1440.png": "b25224f1ac950b72b9522af974c89ef47e99e66fc35c7e7e820f544d8c431bd4",
+    "studio-trace-390.png": "002c40f8568bcbf6df2619f3e917e521ef8d6114902a48d83502a1136f6bd35c"
+  },
+  "workspaceCapture": {
+    "command": "Actual Studio capture: import Trace, fit the artboard, select bird body/Edit points on desktop; capture desktop and narrow view.",
+    "exitCode": 0,
+    "widths": [
+      1440,
+      390
+    ],
+    "source": "apps/web/assets/examples/trace.evir-project"
+  }
+}

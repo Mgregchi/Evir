@@ -1,0 +1,787 @@
+{
+  "checkedAt": "2026-10-16T21:02:56.417Z",
+  "runtimeVersion": "2.44.0",
+  "scope": "Selected cloud software-rendered stroke cases; not physical-device, GPU or full-parity evidence.",
+  "fixtures": [
+    {
+      "name": "stroke-cap-butt",
+      "sourceSha256": "f8ba726b31cce7f3bd1b8fd9061f3897c407c45ab73fb384b5eafe70acc1929e",
+      "rivSha256": "57849239f27001226cd9db9af66adbeee7145d49f26d16ef4f777bf5093288c0"
+    },
+    {
+      "name": "stroke-cap-round",
+      "sourceSha256": "75480de0754e4b159803c38c6b638ab1d8eb6709b614fdc5d1892a5478b9e93e",
+      "rivSha256": "0edc44dcbadc3f9a0f179b77a5b6fc5b7d6713e6a9f091c7d897c13615257e15"
+    },
+    {
+      "name": "stroke-cap-square",
+      "sourceSha256": "1aa39d523975092fe254d6b96233d248ffbd2b2e7654b4c6d28b343e4a5a99e8",
+      "rivSha256": "b95260f427217b0ccc2a9af8226bd9a6b0fe0324320e78cbe066e53dfa5d6e54"
+    },
+    {
+      "name": "stroke-join-miter",
+      "sourceSha256": "3d03e07c42f26a2497ecfa522c9c052244384c42bb6d1d8ce0491532a9c6f4c6",
+      "rivSha256": "fb39fafb0abe96d01c0f27939a5c0d4aeb4d417c98110b48afd3ffd20411111a"
+    },
+    {
+      "name": "stroke-join-round",
+      "sourceSha256": "5a89db70c7c97e030513bdab8ad33984f389c0e23bd82baa2768db2f3bc9dfa9",
+      "rivSha256": "39961e9331364e9417c39df4c673c4d325936853b12f7ecbd86a279a545e6f6b"
+    },
+    {
+      "name": "stroke-join-bevel",
+      "sourceSha256": "71e018c1049bc3dfd95423f612ea2858ff7a304ccefa8aebe076df2aa93e0061",
+      "rivSha256": "63d482e765bfd93b7b4db0c2ee00832afc11c9993e505ba9d9a0ed5cf8de211e"
+    },
+    {
+      "name": "stroke-rectangle",
+      "sourceSha256": "23dab088d55bcc7043f65e05258f01e5a37b775f96b64792b2fa535f19d1f1d5",
+      "rivSha256": "b47ca8620fc9e10450014c3307f1fd35d74dd84a56a555d5e1c4b7a43381548f"
+    },
+    {
+      "name": "stroke-reflected",
+      "sourceSha256": "e4efa79e28001015c813eef8e9dec728601d55c527d65044aa9455ef39a8c236",
+      "rivSha256": "f7c17421c1cc019ce9173a9658b2344510ea1a3d4cffd92c26cea300a7d52f89"
+    },
+    {
+      "name": "stroke-dash",
+      "sourceSha256": "3ecb89e853820d02defd131637af2bcb14d6296d04fb6f194fadffde092db907",
+      "rivSha256": "d70de67ec1f169bfb493dcc09c526f8eb691435c94a645b206828a74007cea15"
+    },
+    {
+      "name": "stroke-dash-negative",
+      "sourceSha256": "54ccdd67a1d8beec6cb1696520ab8791b165741afab6ceea3e35f339d8a06ec4",
+      "rivSha256": "8a76834f6ee07a76e1d72d20f9c03e2f000a46b9b37a680c079887fff633a842"
+    },
+    {
+      "name": "stroke-dash-closed",
+      "sourceSha256": "bf03321e312b64683ed8c1f117a1123e6b6c7b422e6b71a7172689af6689fe55",
+      "rivSha256": "b52a21a5f383028e6f6d340ea8594536e737375c64ba8ae0508bcc28a09c2eb9"
+    },
+    {
+      "name": "stroke-trim",
+      "sourceSha256": "01d0d1b65874c0335fe0f7c8afd006a501f17fde71630da3568808032256894e",
+      "rivSha256": "ac452f1912689c8052fe750ceceb0dc976a46b67b15b7c514927f9d31a696491"
+    },
+    {
+      "name": "stroke-trim-wrap",
+      "sourceSha256": "7e9986d7ac83314e1c2e1a3d5ea0a2a78f3e3e0f89382cd22bb74c57d49b7a46",
+      "rivSha256": "99c6a811cfe16475193f03760cf9480ca2f646ba071d334ff98cabbd75cdcba8"
+    },
+    {
+      "name": "stroke-trim-reversed",
+      "sourceSha256": "1e2bafe83f65dc09dbb3c5a36fc34b016dc29ed9962c35f53aa596d2c75535fa",
+      "rivSha256": "9d8d89b7a3da2ed84cb5b37bf4623011a005276f05ff759b0876d48e2f39cde9"
+    },
+    {
+      "name": "stroke-trim-closed",
+      "sourceSha256": "ad9cfa696f3324547eaa7867f13b8f34f0363a7d197a3b45eeae156f93a552fd",
+      "rivSha256": "fd2e79ac0dc81ce332896e75f92fbf33363173bae71fb8411fb136fdb9ce2e52"
+    },
+    {
+      "name": "stroke-dash-trim",
+      "sourceSha256": "393f5c796c6a118e899d8341d04ab4701601e7a1e49134499da93e0246b6e7f0",
+      "rivSha256": "16e81424bd1c1db3e4abfa16c047cb3dd2f22b68c781183b6d3213901e82bfbb"
+    },
+    {
+      "name": "stroke-dash-trim-wrap",
+      "sourceSha256": "1a8f85ad85175cf36d0faeb1192056f0dd71f6edad3e3bc982b2138dbe53842a",
+      "rivSha256": "a58dfb1079e83c7d125f4f6ce92cb75dd4f8cdbea93930e6aab191488073431f"
+    },
+    {
+      "name": "stroke-alpha",
+      "sourceSha256": "f8462b5c2398f1d1edc624a43a5839856d3a12e78056b652e70588528ab41b08",
+      "rivSha256": "1251d4541797a34aed962cab3ed123d4411dc938d326d3bd0e5368977ea2c573"
+    },
+    {
+      "name": "stroke-hidden",
+      "sourceSha256": "7826c38566d78decb0a7be66de858e54ac263d385e44ff10a412ca2be6939043",
+      "rivSha256": "1cb03486e1e9e9f88d7568b080c94e8b77f39498bb6176d5bc4147a9f240d716"
+    },
+    {
+      "name": "stroke-animated",
+      "sourceSha256": "86d3327b12e2b57f5a789b39c8c319019a84710253d36493de338e0405cfbc65",
+      "rivSha256": "8f345d2354a6843fca3ea469ec0190aefcf31860eec78c52bc1de04da4ec89d3"
+    },
+    {
+      "name": "trace-study",
+      "sourceSha256": "e21875ad2e9afad654ffa68a13762786b47a31fdd756fc4417d8ea9b3d431d8f",
+      "rivSha256": "e906bee977c50e0c4e40e37bc21c354c7dfac933e2bfaeac37f598bb3790787a"
+    },
+    {
+      "name": "studio-stroke-oracle",
+      "sourceSha256": "256b1e3a2423b7b2d38194ac828b472fefa7e71d78d7470886f26a42d2e65104",
+      "rivSha256": "832f6961df8511a46f62ce133ae2c27709c6f64f32d899d337c95d299c9986db"
+    },
+    {
+      "name": "stroke-animated-rest",
+      "sourceSha256": "6a023f1677d6106d56853ca156996feb271d5ac21c0617551b953fbb9ae2b202",
+      "rivSha256": "d70de67ec1f169bfb493dcc09c526f8eb691435c94a645b206828a74007cea15"
+    },
+    {
+      "name": "trace-study-rest",
+      "sourceSha256": "3a04bd619e85bf327fec8d71e9bd00c73d85f58686ba01a32fd4706c5b367e3a",
+      "rivSha256": "87cebbf257d786fc8220465a0c03e0ac02d353bffce8f149e95e843f156adcc4"
+    },
+    {
+      "name": "studio-stroke-oracle-rest",
+      "sourceSha256": "8f6fc0c591cb33d5e3d6375c8914fbd92f6ea62090e2489a2712060307370453",
+      "rivSha256": "8a822b7311bd6da30575076983921fd3de52b540cb9aee70c0b5981ecfa559d8"
+    }
+  ],
+  "backends": [
+    {
+      "backend": "canvas",
+      "checks": [
+        {
+          "scene": "stroke-cap-butt",
+          "frame": null,
+          "mae": 0,
+          "covered": 5373,
+          "expectedCovered": 5373
+        },
+        {
+          "scene": "stroke-cap-round",
+          "frame": null,
+          "mae": 0,
+          "covered": 5533,
+          "expectedCovered": 5533
+        },
+        {
+          "scene": "stroke-cap-square",
+          "frame": null,
+          "mae": 0,
+          "covered": 5583,
+          "expectedCovered": 5583
+        },
+        {
+          "scene": "stroke-join-miter",
+          "frame": null,
+          "mae": 0,
+          "covered": 5106,
+          "expectedCovered": 5106
+        },
+        {
+          "scene": "stroke-join-round",
+          "frame": null,
+          "mae": 0,
+          "covered": 5091,
+          "expectedCovered": 5091
+        },
+        {
+          "scene": "stroke-join-bevel",
+          "frame": null,
+          "mae": 0,
+          "covered": 5073,
+          "expectedCovered": 5073
+        },
+        {
+          "scene": "stroke-rectangle",
+          "frame": null,
+          "mae": 0.041881561279296875,
+          "covered": 15893,
+          "expectedCovered": 15880
+        },
+        {
+          "scene": "stroke-reflected",
+          "frame": null,
+          "mae": 0,
+          "covered": 3338,
+          "expectedCovered": 3338
+        },
+        {
+          "scene": "stroke-dash",
+          "frame": null,
+          "mae": 0.11132049560546875,
+          "covered": 5128,
+          "expectedCovered": 5128
+        },
+        {
+          "scene": "stroke-dash-negative",
+          "frame": null,
+          "mae": 0.13370132446289062,
+          "covered": 5110,
+          "expectedCovered": 5111
+        },
+        {
+          "scene": "stroke-dash-closed",
+          "frame": null,
+          "mae": 0.056568145751953125,
+          "covered": 8148,
+          "expectedCovered": 8138
+        },
+        {
+          "scene": "stroke-trim",
+          "frame": null,
+          "mae": 0.08403396606445312,
+          "covered": 3401,
+          "expectedCovered": 3401
+        },
+        {
+          "scene": "stroke-trim-wrap",
+          "frame": null,
+          "mae": 0.060394287109375,
+          "covered": 3302,
+          "expectedCovered": 3289
+        },
+        {
+          "scene": "stroke-trim-reversed",
+          "frame": null,
+          "mae": 0.06220245361328125,
+          "covered": 3399,
+          "expectedCovered": 3391
+        },
+        {
+          "scene": "stroke-trim-closed",
+          "frame": null,
+          "mae": 0,
+          "covered": 5536,
+          "expectedCovered": 5536
+        },
+        {
+          "scene": "stroke-dash-trim",
+          "frame": null,
+          "mae": 0.14146804809570312,
+          "covered": 3077,
+          "expectedCovered": 3066
+        },
+        {
+          "scene": "stroke-dash-trim-wrap",
+          "frame": null,
+          "mae": 0.0939483642578125,
+          "covered": 3240,
+          "expectedCovered": 3257
+        },
+        {
+          "scene": "stroke-alpha",
+          "frame": null,
+          "mae": 0,
+          "covered": 5542,
+          "expectedCovered": 5542
+        },
+        {
+          "scene": "stroke-hidden",
+          "frame": null,
+          "mae": 0,
+          "covered": 0,
+          "expectedCovered": 0
+        },
+        {
+          "scene": "stroke-animated",
+          "frame": 0,
+          "mae": 0.014720916748046875,
+          "covered": 485,
+          "expectedCovered": 484
+        },
+        {
+          "scene": "stroke-animated",
+          "frame": 30,
+          "mae": 0.12965774536132812,
+          "covered": 2574,
+          "expectedCovered": 2578
+        },
+        {
+          "scene": "stroke-animated",
+          "frame": 60,
+          "mae": 0.23975372314453125,
+          "covered": 6449,
+          "expectedCovered": 6458
+        },
+        {
+          "scene": "stroke-animated",
+          "frame": 90,
+          "mae": 0.21579360961914062,
+          "covered": 4617,
+          "expectedCovered": 4632
+        },
+        {
+          "scene": "stroke-animated",
+          "frame": 120,
+          "mae": 0.08928298950195312,
+          "covered": 1973,
+          "expectedCovered": 1982
+        },
+        {
+          "scene": "trace-study",
+          "frame": 0,
+          "mae": 0.07177352905273438,
+          "covered": 53539,
+          "expectedCovered": 53544
+        },
+        {
+          "scene": "trace-study",
+          "frame": 30,
+          "mae": 0.090850830078125,
+          "covered": 53539,
+          "expectedCovered": 53544
+        },
+        {
+          "scene": "trace-study",
+          "frame": 60,
+          "mae": 0.054500579833984375,
+          "covered": 53539,
+          "expectedCovered": 53544
+        },
+        {
+          "scene": "trace-study",
+          "frame": 90,
+          "mae": 0.08962249755859375,
+          "covered": 53539,
+          "expectedCovered": 53544
+        },
+        {
+          "scene": "trace-study",
+          "frame": 120,
+          "mae": 0.07177352905273438,
+          "covered": 53539,
+          "expectedCovered": 53544
+        },
+        {
+          "scene": "studio-stroke-oracle",
+          "frame": 0,
+          "mae": 0.060764312744140625,
+          "covered": 53539,
+          "expectedCovered": 53544
+        },
+        {
+          "scene": "studio-stroke-oracle",
+          "frame": 30,
+          "mae": 0.073089599609375,
+          "covered": 53539,
+          "expectedCovered": 53544
+        },
+        {
+          "scene": "studio-stroke-oracle",
+          "frame": 60,
+          "mae": 0.08340835571289062,
+          "covered": 53539,
+          "expectedCovered": 53544
+        },
+        {
+          "scene": "studio-stroke-oracle",
+          "frame": 90,
+          "mae": 0.0724334716796875,
+          "covered": 53539,
+          "expectedCovered": 53544
+        },
+        {
+          "scene": "studio-stroke-oracle",
+          "frame": 120,
+          "mae": 0.060764312744140625,
+          "covered": 53539,
+          "expectedCovered": 53544
+        },
+        {
+          "scene": "stroke-animated-rest",
+          "frame": null,
+          "mae": 0.11132049560546875,
+          "covered": 5128,
+          "expectedCovered": 5128
+        },
+        {
+          "scene": "trace-study-rest",
+          "frame": null,
+          "mae": 0.073455810546875,
+          "covered": 53539,
+          "expectedCovered": 53544
+        },
+        {
+          "scene": "studio-stroke-oracle-rest",
+          "frame": null,
+          "mae": 0.08562088012695312,
+          "covered": 53539,
+          "expectedCovered": 53544
+        }
+      ],
+      "graphics": {
+        "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "contexts": [
+          {
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "unmaskedRendererAvailable": true,
+            "contextLost": false,
+            "errors": [],
+            "extensions": [
+              "EXT_clip_control",
+              "EXT_color_buffer_float",
+              "EXT_color_buffer_half_float",
+              "EXT_conservative_depth",
+              "EXT_depth_clamp",
+              "EXT_float_blend",
+              "EXT_polygon_offset_clamp",
+              "EXT_texture_compression_bptc",
+              "EXT_texture_compression_rgtc",
+              "EXT_texture_filter_anisotropic",
+              "EXT_texture_mirror_clamp_to_edge",
+              "NV_shader_noperspective_interpolation",
+              "OES_draw_buffers_indexed",
+              "OES_sample_variables",
+              "OES_shader_multisample_interpolation",
+              "OES_texture_float_linear",
+              "OVR_multiview2",
+              "WEBGL_clip_cull_distance",
+              "WEBGL_compressed_texture_astc",
+              "WEBGL_compressed_texture_etc",
+              "WEBGL_compressed_texture_etc1",
+              "WEBGL_compressed_texture_s3tc",
+              "WEBGL_compressed_texture_s3tc_srgb",
+              "WEBGL_debug_renderer_info",
+              "WEBGL_debug_shaders",
+              "WEBGL_lose_context",
+              "WEBGL_multi_draw",
+              "WEBGL_polygon_mode",
+              "WEBGL_stencil_texturing"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "backend": "webgl2",
+      "checks": [
+        {
+          "scene": "stroke-cap-butt",
+          "frame": null,
+          "mae": 0.1827850341796875,
+          "covered": 5305,
+          "expectedCovered": 5373
+        },
+        {
+          "scene": "stroke-cap-round",
+          "frame": null,
+          "mae": 0.1660919189453125,
+          "covered": 5441,
+          "expectedCovered": 5533
+        },
+        {
+          "scene": "stroke-cap-square",
+          "frame": null,
+          "mae": 0.16556549072265625,
+          "covered": 5491,
+          "expectedCovered": 5583
+        },
+        {
+          "scene": "stroke-join-miter",
+          "frame": null,
+          "mae": 0.19298934936523438,
+          "covered": 4923,
+          "expectedCovered": 5106
+        },
+        {
+          "scene": "stroke-join-round",
+          "frame": null,
+          "mae": 0.197174072265625,
+          "covered": 4899,
+          "expectedCovered": 5091
+        },
+        {
+          "scene": "stroke-join-bevel",
+          "frame": null,
+          "mae": 0.19964599609375,
+          "covered": 4883,
+          "expectedCovered": 5073
+        },
+        {
+          "scene": "stroke-rectangle",
+          "frame": null,
+          "mae": 0.132843017578125,
+          "covered": 15827,
+          "expectedCovered": 15880
+        },
+        {
+          "scene": "stroke-reflected",
+          "frame": null,
+          "mae": 0.148651123046875,
+          "covered": 3229,
+          "expectedCovered": 3338
+        },
+        {
+          "scene": "stroke-dash",
+          "frame": null,
+          "mae": 0.19268798828125,
+          "covered": 5007,
+          "expectedCovered": 5128
+        },
+        {
+          "scene": "stroke-dash-negative",
+          "frame": null,
+          "mae": 0.19552230834960938,
+          "covered": 4999,
+          "expectedCovered": 5111
+        },
+        {
+          "scene": "stroke-dash-closed",
+          "frame": null,
+          "mae": 0.12108230590820312,
+          "covered": 8075,
+          "expectedCovered": 8138
+        },
+        {
+          "scene": "stroke-trim",
+          "frame": null,
+          "mae": 0.10187149047851562,
+          "covered": 3330,
+          "expectedCovered": 3401
+        },
+        {
+          "scene": "stroke-trim-wrap",
+          "frame": null,
+          "mae": 0.08658218383789062,
+          "covered": 3237,
+          "expectedCovered": 3289
+        },
+        {
+          "scene": "stroke-trim-reversed",
+          "frame": null,
+          "mae": 0.10055160522460938,
+          "covered": 3326,
+          "expectedCovered": 3391
+        },
+        {
+          "scene": "stroke-trim-closed",
+          "frame": null,
+          "mae": 0.01514434814453125,
+          "covered": 5524,
+          "expectedCovered": 5536
+        },
+        {
+          "scene": "stroke-dash-trim",
+          "frame": null,
+          "mae": 0.16542434692382812,
+          "covered": 3011,
+          "expectedCovered": 3066
+        },
+        {
+          "scene": "stroke-dash-trim-wrap",
+          "frame": null,
+          "mae": 0.13959503173828125,
+          "covered": 3165,
+          "expectedCovered": 3257
+        },
+        {
+          "scene": "stroke-alpha",
+          "frame": null,
+          "mae": 0.13349151611328125,
+          "covered": 5441,
+          "expectedCovered": 5542
+        },
+        {
+          "scene": "stroke-hidden",
+          "frame": null,
+          "mae": 0,
+          "covered": 0,
+          "expectedCovered": 0
+        },
+        {
+          "scene": "stroke-animated",
+          "frame": 0,
+          "mae": 0.03606414794921875,
+          "covered": 463,
+          "expectedCovered": 484
+        },
+        {
+          "scene": "stroke-animated",
+          "frame": 30,
+          "mae": 0.16770553588867188,
+          "covered": 2513,
+          "expectedCovered": 2578
+        },
+        {
+          "scene": "stroke-animated",
+          "frame": 60,
+          "mae": 0.328521728515625,
+          "covered": 6346,
+          "expectedCovered": 6458
+        },
+        {
+          "scene": "stroke-animated",
+          "frame": 90,
+          "mae": 0.2909660339355469,
+          "covered": 4523,
+          "expectedCovered": 4632
+        },
+        {
+          "scene": "stroke-animated",
+          "frame": 120,
+          "mae": 0.181060791015625,
+          "covered": 1863,
+          "expectedCovered": 1982
+        },
+        {
+          "scene": "trace-study",
+          "frame": 0,
+          "mae": 0.4790382385253906,
+          "covered": 53512,
+          "expectedCovered": 53544
+        },
+        {
+          "scene": "trace-study",
+          "frame": 30,
+          "mae": 0.5062828063964844,
+          "covered": 53512,
+          "expectedCovered": 53544
+        },
+        {
+          "scene": "trace-study",
+          "frame": 60,
+          "mae": 0.5135688781738281,
+          "covered": 53512,
+          "expectedCovered": 53544
+        },
+        {
+          "scene": "trace-study",
+          "frame": 90,
+          "mae": 0.5051918029785156,
+          "covered": 53512,
+          "expectedCovered": 53544
+        },
+        {
+          "scene": "trace-study",
+          "frame": 120,
+          "mae": 0.4790382385253906,
+          "covered": 53512,
+          "expectedCovered": 53544
+        },
+        {
+          "scene": "studio-stroke-oracle",
+          "frame": 0,
+          "mae": 0.4675140380859375,
+          "covered": 53512,
+          "expectedCovered": 53544
+        },
+        {
+          "scene": "studio-stroke-oracle",
+          "frame": 30,
+          "mae": 0.4943962097167969,
+          "covered": 53512,
+          "expectedCovered": 53544
+        },
+        {
+          "scene": "studio-stroke-oracle",
+          "frame": 60,
+          "mae": 0.5071487426757812,
+          "covered": 53512,
+          "expectedCovered": 53544
+        },
+        {
+          "scene": "studio-stroke-oracle",
+          "frame": 90,
+          "mae": 0.4937095642089844,
+          "covered": 53512,
+          "expectedCovered": 53544
+        },
+        {
+          "scene": "studio-stroke-oracle",
+          "frame": 120,
+          "mae": 0.4675140380859375,
+          "covered": 53512,
+          "expectedCovered": 53544
+        },
+        {
+          "scene": "stroke-animated-rest",
+          "frame": null,
+          "mae": 0.19268798828125,
+          "covered": 5007,
+          "expectedCovered": 5128
+        },
+        {
+          "scene": "trace-study-rest",
+          "frame": null,
+          "mae": 0.47284698486328125,
+          "covered": 53512,
+          "expectedCovered": 53544
+        },
+        {
+          "scene": "studio-stroke-oracle-rest",
+          "frame": null,
+          "mae": 0.5039710998535156,
+          "covered": 53512,
+          "expectedCovered": 53544
+        }
+      ],
+      "graphics": {
+        "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "contexts": [
+          {
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "unmaskedRendererAvailable": true,
+            "contextLost": false,
+            "errors": [],
+            "extensions": [
+              "EXT_clip_control",
+              "EXT_color_buffer_float",
+              "EXT_color_buffer_half_float",
+              "EXT_conservative_depth",
+              "EXT_depth_clamp",
+              "EXT_float_blend",
+              "EXT_polygon_offset_clamp",
+              "EXT_texture_compression_bptc",
+              "EXT_texture_compression_rgtc",
+              "EXT_texture_filter_anisotropic",
+              "EXT_texture_mirror_clamp_to_edge",
+              "NV_shader_noperspective_interpolation",
+              "OES_draw_buffers_indexed",
+              "OES_sample_variables",
+              "OES_shader_multisample_interpolation",
+              "OES_texture_float_linear",
+              "OVR_multiview2",
+              "WEBGL_clip_cull_distance",
+              "WEBGL_compressed_texture_astc",
+              "WEBGL_compressed_texture_etc",
+              "WEBGL_compressed_texture_etc1",
+              "WEBGL_compressed_texture_s3tc",
+              "WEBGL_compressed_texture_s3tc_srgb",
+              "WEBGL_debug_renderer_info",
+              "WEBGL_debug_shaders",
+              "WEBGL_lose_context",
+              "WEBGL_multi_draw",
+              "WEBGL_polygon_mode",
+              "WEBGL_stencil_texturing"
+            ]
+          },
+          {
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "unmaskedRendererAvailable": true,
+            "contextLost": false,
+            "errors": [],
+            "extensions": [
+              "EXT_clip_control",
+              "EXT_color_buffer_float",
+              "EXT_color_buffer_half_float",
+              "EXT_conservative_depth",
+              "EXT_depth_clamp",
+              "EXT_float_blend",
+              "EXT_polygon_offset_clamp",
+              "EXT_texture_compression_bptc",
+              "EXT_texture_compression_rgtc",
+              "EXT_texture_filter_anisotropic",
+              "EXT_texture_mirror_clamp_to_edge",
+              "NV_shader_noperspective_interpolation",
+              "OES_draw_buffers_indexed",
+              "OES_sample_variables",
+              "OES_shader_multisample_interpolation",
+              "OES_texture_float_linear",
+              "OVR_multiview2",
+              "WEBGL_clip_cull_distance",
+              "WEBGL_compressed_texture_astc",
+              "WEBGL_compressed_texture_etc",
+              "WEBGL_compressed_texture_etc1",
+              "WEBGL_compressed_texture_s3tc",
+              "WEBGL_compressed_texture_s3tc_srgb",
+              "WEBGL_debug_renderer_info",
+              "WEBGL_debug_shaders",
+              "WEBGL_lose_context",
+              "WEBGL_multi_draw",
+              "WEBGL_polygon_mode",
+              "WEBGL_stencil_texturing"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "browser": "151.0.7922.173"
+}

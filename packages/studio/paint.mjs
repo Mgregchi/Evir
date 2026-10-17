@@ -36,7 +36,7 @@ export function paintControls({
       });
     field.append(input);
     host.append(field);
-  } else
+  } else if (fill !== null)
     host.append(
       el(
         "p",
@@ -75,8 +75,9 @@ function openPaintSheet({ project, node, commit, open }) {
     body = el("div");
   form.noValidate = true;
   const original = structuredClone(node.geometry.fill);
-  let kind = typeof original === "string" ? "solid" : original.type;
-  let solid = typeof original === "string" ? original : original.stops[0].color;
+  const initial = original ?? "#8fd9af";
+  let kind = typeof initial === "string" ? "solid" : initial.type;
+  let solid = typeof initial === "string" ? initial : initial.stops[0].color;
   const points =
     node.kind === "rectangle"
       ? [
@@ -87,7 +88,7 @@ function openPaintSheet({ project, node, commit, open }) {
   const xs = points.map((p) => p[0]),
     ys = points.map((p) => p[1]);
   let gradient =
-    typeof original === "string"
+    typeof initial === "string"
       ? {
           start: [Math.min(...xs), Math.min(...ys)],
           end: [Math.max(...xs), Math.max(...ys)],
@@ -96,7 +97,7 @@ function openPaintSheet({ project, node, commit, open }) {
             { position: 1, color: "#f5f3e7" },
           ],
         }
-      : structuredClone(original);
+      : structuredClone(initial);
   const field = (label, value, type, change) => {
     const wrap = el("label");
     wrap.className = "field";

@@ -1,3 +1,5 @@
+import { strokePathOnContext, strokeStyle } from "./stroke.mjs";
+export { strokePathOnContext, strokeStyle, strokeContours } from "./stroke.mjs";
 import { SceneAssets } from "./assets.mjs";
 export { SceneAssets } from "./assets.mjs";
 import {
@@ -109,12 +111,15 @@ export function drawScene(
       if (n.kind === "rectangle") {
         ctx.save();
         ctx.transform(...resolve(n.id));
-        ctx.fillStyle = paintOnContext(ctx, n.geometry.fill);
-        ctx.fillRect(0, 0, n.geometry.width, n.geometry.height);
+        if (n.geometry.fill !== null) {
+          ctx.fillStyle = paintOnContext(ctx, n.geometry.fill);
+          ctx.fillRect(0, 0, n.geometry.width, n.geometry.height);
+        }
+        if (n.geometry.stroke?.width) {strokeStyle(ctx,n.geometry);strokePathOnContext(ctx,n.geometry);ctx.stroke();}
         ctx.restore();
       } else if (n.kind === "path") {
         ctx.save();
-        const gradient = typeof n.geometry.fill !== "string";
+        const gradient = n.geometry.fill !== null && typeof n.geometry.fill !== "string";
         if (gradient) ctx.transform(...resolve(n.id));
         const points = worldPoints(p, n, resolve);
         const paintInverse = gradient ? inverse(resolve(n.id)) : null;
@@ -130,9 +135,12 @@ export function drawScene(
             }))
           : points;
         pathOnContext(ctx, local, n.geometry.closed);
-        ctx.fillStyle = paintOnContext(ctx, n.geometry.fill);
-        ctx.fill("nonzero");
+        if (n.geometry.fill !== null) {ctx.fillStyle = paintOnContext(ctx, n.geometry.fill);ctx.fill("nonzero");}
         ctx.restore();
+        if (n.geometry.stroke?.width) {
+          ctx.save();ctx.transform(...resolve(n.id));
+          strokeStyle(ctx,n.geometry);strokePathOnContext(ctx,n.geometry);ctx.stroke();ctx.restore();
+        }
       } else if (n.kind === "text") {
         ctx.save();
         ctx.transform(...resolve(n.id));
@@ -269,6 +277,12 @@ export function nodeBounds(p, n) {
   if (!points.length) {
     const [x, y] = mapPoint(worldTransform(p, n.id), [0, 0]);
     return { x: x - 12, y: y - 12, width: 24, height: 24 };
+  }
+  // Conservative local miter/round/square envelope, transformed per shape.
+  for (const v of nodes.filter(v => !isHidden(p,v) && v.geometry?.stroke)) {
+    const s=v.geometry.stroke, pad=s.width*(s.join==="miter"?2:Math.SQRT1_2),m=worldTransform(p,v.id);
+    const source=v.kind==="path"?v.geometry.points.flatMap(p=>[p.anchor,p.in,p.out]):[[0,0],[v.geometry.width,0],[v.geometry.width,v.geometry.height],[0,v.geometry.height]];
+    for(const point of source)for(const dx of [-pad,pad])for(const dy of [-pad,pad])points.push(mapPoint(m,[point[0]+dx,point[1]+dy]));
   }
   const xs = points.map((v) => v[0]),
     ys = points.map((v) => v[1]);

@@ -1,4 +1,4 @@
-import { paintValue } from "@evir/project-model";
+import { strokeValue, paintValue } from "@evir/project-model";
 import {
   worldTransform,
   multiply,
@@ -81,6 +81,7 @@ export function components(m) {
   return { x: m[4], y: m[5], rotation, scaleX: sx, scaleY: sy };
 }
 export function getValue(n, property) {
+  if (property.startsWith("stroke.")) return strokeValue(n, property);
   if (property.startsWith("paint.")) return paintValue(n, property);
   if (["width", "height", "length", "fontSize", "fill"].includes(property))
     return n.geometry[property];

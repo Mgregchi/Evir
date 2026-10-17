@@ -8,7 +8,7 @@ export function upgradeAdvanced(p) {
   return p;
 }
 export const isColorProperty = (p) =>
-  p === "fill" || /^paint\.stop\.\d+\.color$/.test(p);
+  p === "fill" || p === "stroke.color" || /^paint\.stop\.\d+\.color$/.test(p);
 export function paintProperties(n) {
   const f = n.geometry?.fill;
   return f && typeof f !== "string"

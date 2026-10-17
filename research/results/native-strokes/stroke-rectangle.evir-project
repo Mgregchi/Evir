@@ -1,0 +1,69 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 3,
+  "id": "stroke-rectangle-project",
+  "name": "stroke-rectangle",
+  "artboards": [
+    {
+      "id": "board",
+      "name": "Board",
+      "width": 256,
+      "height": 256
+    }
+  ],
+  "nodes": [
+    {
+      "id": "line",
+      "name": "Line",
+      "kind": "rectangle",
+      "parentId": null,
+      "artboardId": "board",
+      "order": 0,
+      "transform": [
+        0.98,
+        0.2,
+        -0.2,
+        0.98,
+        58,
+        38
+      ],
+      "geometry": {
+        "width": 128,
+        "height": 96,
+        "fill": "#f6c7a0ff",
+        "stroke": {
+          "color": "#24594aff",
+          "width": 14,
+          "cap": "round",
+          "join": "miter",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        }
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "board": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  },
+  "advanced": {
+    "clips": [],
+    "feathers": [],
+    "ik": []
+  }
+}

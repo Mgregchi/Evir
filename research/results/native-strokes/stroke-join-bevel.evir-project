@@ -1,0 +1,116 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 3,
+  "id": "stroke-join-bevel-project",
+  "name": "stroke-join-bevel",
+  "artboards": [
+    {
+      "id": "board",
+      "name": "Board",
+      "width": 256,
+      "height": 256
+    }
+  ],
+  "nodes": [
+    {
+      "id": "line",
+      "name": "Line",
+      "kind": "path",
+      "parentId": null,
+      "artboardId": "board",
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": false,
+        "skin": null,
+        "points": [
+          {
+            "id": "point-0",
+            "anchor": [
+              32,
+              190
+            ],
+            "in": [
+              32,
+              190
+            ],
+            "out": [
+              32,
+              190
+            ]
+          },
+          {
+            "id": "point-1",
+            "anchor": [
+              128,
+              60
+            ],
+            "in": [
+              128,
+              60
+            ],
+            "out": [
+              128,
+              60
+            ]
+          },
+          {
+            "id": "point-2",
+            "anchor": [
+              224,
+              190
+            ],
+            "in": [
+              224,
+              190
+            ],
+            "out": [
+              224,
+              190
+            ]
+          }
+        ],
+        "fill": null,
+        "stroke": {
+          "color": "#24594aff",
+          "width": 14,
+          "cap": "round",
+          "join": "bevel",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        }
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "board": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  },
+  "advanced": {
+    "clips": [],
+    "feathers": [],
+    "ik": []
+  }
+}

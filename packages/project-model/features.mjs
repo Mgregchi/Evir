@@ -1,3 +1,4 @@
+import { strokeProperties, validateStroke } from "./stroke.mjs";
 import { paintProperties, isColorProperty } from "./advanced.mjs";
 import { validatePaint } from "./paint.mjs";
 import { inverse } from "./primitives.mjs";
@@ -22,6 +23,7 @@ export function propertiesFor(n) {
     "scaleX",
     "scaleY",
     ...paintProperties(n),
+    ...strokeProperties(n),
     ...(n.kind === "rectangle"
       ? ["width", "height", ...fill]
       : n.kind === "path"
@@ -86,11 +88,12 @@ export function validateFeatures(
         );
     }
     if (n.kind !== "path") continue;
-    if (!rec(g, path + ".geometry", ["closed", "fill", "points", "skin"]))
+    if (!rec(g, path + ".geometry", ["closed", "fill", "points", "skin", ...(Object.hasOwn(g ?? {}, "stroke") ? ["stroke"] : [])]))
       continue;
     if (typeof g.closed !== "boolean")
       problem(path + ".closed", "expected boolean");
-    validatePaint(g.fill, path + ".fill", problem);
+    if (g.fill !== null || !g.stroke) validatePaint(g.fill, path + ".fill", problem);
+    validateStroke(n, p, problem);
     if (!p.advanced && g.skin !== null && typeof g.fill !== "string")
       problem(
         path + ".fill",
@@ -229,9 +232,14 @@ export function validateFeatures(
         previous = k.frame;
         if (!p.advanced && t.property.startsWith("paint."))
           problem(path, "paint keys require advanced source version 3");
+        if (t.property.startsWith("stroke.") && !p.advanced) problem(path, "stroke keys require advanced source");
         if (isColorProperty(t.property)) color(k.value, path + ".key");
         else if (
           !Number.isFinite(k.value) ||
+          (t.property === "stroke.width" && (k.value < 0 || k.value > 256)) ||
+          (["stroke.trimStart","stroke.trimEnd"].includes(t.property) && (k.value < 0 || k.value > 1)) ||
+          (t.property === "stroke.trimOffset" && Math.abs(k.value) > 1) ||
+          (t.property === "stroke.dashOffset" && Math.abs(k.value) > 16384) ||
           (["width", "height", "length", "fontSize"].includes(t.property) &&
             k.value <= 0) || (t.property === "fontSize" && k.value > 512) ||
           (t.property.endsWith(".position") && (k.value < 0 || k.value > 1))
@@ -242,6 +250,7 @@ export function validateFeatures(
           problem(path, "unsupported easing");
         if (k.easing.type === "cubic") {
           vec(k.easing.curve, path + ".curve", 4);
+          if ((t.property.startsWith("stroke.") || (n?.geometry?.stroke && ["width","height"].includes(t.property))) && !isColorProperty(t.property) && Array.isArray(k.easing.curve) && [k.easing.curve[1],k.easing.curve[3]].some(v=>v<0 || v>1)) problem(path,"stroke easing value handles must stay in [0,1]");
           if (
             Array.isArray(k.easing.curve) &&
             (!(k.easing.curve[0] >= 0 && k.easing.curve[0] <= 1) ||

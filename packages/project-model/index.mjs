@@ -12,6 +12,8 @@ export {
   paintValue,
   isColorProperty,
 } from "./advanced.mjs";
+import { validateStroke } from "./stroke.mjs";
+export { defaultStroke, strokeProperties, strokeValue, STROKE_CAPS, STROKE_JOINS } from "./stroke.mjs";
 import { validatePaint } from "./paint.mjs";
 export { validatePaint, MAX_GRADIENT_STOPS } from "./paint.mjs";
 import { validateFeatures } from "./features.mjs";
@@ -179,7 +181,7 @@ function validateDocument(p, runtime) {
     )
       problem(`${path}.transform`, "expected six finite affine values");
     if (n.kind === "rectangle") {
-      if (record(n.geometry, `${path}.geometry`, ["width", "height", "fill"])) {
+      if (record(n.geometry, `${path}.geometry`, ["width", "height", "fill", ...(Object.hasOwn(n.geometry ?? {}, "stroke") ? ["stroke"] : [])])) {
         positive(n.geometry.width, `${path}.geometry.width`);
         positive(n.geometry.height, `${path}.geometry.height`);
         if (sceneVersion === 1 && typeof n.geometry.fill !== "string")
@@ -187,7 +189,8 @@ function validateDocument(p, runtime) {
             `${path}.geometry.fill`,
             "gradients require source version 2",
           );
-        validatePaint(n.geometry.fill, `${path}.geometry.fill`, problem);
+        if (n.geometry.fill !== null || !n.geometry.stroke) validatePaint(n.geometry.fill, `${path}.geometry.fill`, problem);
+        validateStroke(n, p, problem);
       }
     } else if (n.kind === "group") {
       if (n.geometry !== null)
