@@ -23,6 +23,8 @@ const {run}=require('../../tools/browser.cjs');
    assert.equal(await page.locator('#advanced-sheet h2').evaluate(el=>el===document.activeElement),true);
    await page.screenshot({path:`${out}/join-overview-${width}.png`});
    assert.equal(await page.locator('.path-join-preview svg').count(),1);
+   assert.equal(await page.locator('.path-join-preview svg circle').count(),1);assert.equal(await page.locator('.path-join-preview svg rect').count(),1);
+   assert.match(await page.locator('.path-join-preview').innerText(),/Circle: kept endpoint. Square: other endpoint./);
    for(const first of['first','last'])for(const second of['first','last']){
     await page.getByLabel('Kept endpoint',{exact:true}).selectOption(first);await page.getByLabel('Other endpoint',{exact:true}).selectOption(second);
     assert.match(await page.locator('[data-join-status]').innerText(),/4 points/);assert.deepEqual((await snapshot()).nodes,before.nodes);
@@ -37,6 +39,7 @@ const {run}=require('../../tools/browser.cjs');
    if(width<=850)assert(Math.abs(sheet.width-width)<2);
    await page.screenshot({path:`${out}/join-sheet-${width}.png`});await apply.click();
    const after=await snapshot(),expected=structuredClone(before);joinPaths(expected,recipe.keepId,recipe.otherId,recipe.options);
+   assert.equal(await page.locator('#notice').getAttribute('data-kind'),'success');
    assert.deepEqual(after.nodes,expected.nodes);assert.deepEqual(after.animations,before.animations);assert(!after.nodes.some(n=>n.id===recipe.otherId));
    await page.waitForFunction(()=>document.activeElement===document.querySelector('#stage'));
    await press('Fit');await page.screenshot({path:`${out}/joined-${width}.png`});
@@ -51,7 +54,11 @@ const {run}=require('../../tools/browser.cjs');
    assert.match(await page.locator('[data-join-status]').innerText(),/3 points/);assert.deepEqual(mergeBefore.nodes,seed.nodes);
    await page.locator('#advanced-sheet').getByRole('button',{name:'Apply',exact:true}).click();
    const merged=await snapshot(),mergeExpected=structuredClone(mergeBefore);joinPaths(mergeExpected,recipe.keepId,recipe.otherId,{mode:'merge'});assert.deepEqual(merged.nodes,mergeExpected.nodes);
-   if(width===1440){fs.writeFileSync(`${out}/studio-merged.evir-project`,JSON.stringify(merged,null,2)+'\n');fs.writeFileSync(`${out}/studio-merged.riv`,compileProject(merged).bytes);}
+   if(width===1440){
+    const mergedDownload=page.waitForEvent('download');await press('Export .riv');const mergedBytes=fs.readFileSync(await(await mergedDownload).path());
+    assert.deepEqual(mergedBytes,Buffer.from(compileProject(merged).bytes));
+    fs.writeFileSync(`${out}/studio-merged.evir-project`,JSON.stringify(merged,null,2)+'\n');fs.writeFileSync(`${out}/studio-merged.riv`,mergedBytes);
+   }
    await press('Undo');assert.deepEqual((await snapshot()).nodes,seed.nodes);
    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
    report.viewports.push({width,height,checks:['all endpoint pairings preview without mutation','cancel and focus return','reachable bottom sheet','zero automated WCAG violations','bridge geometry and one-step history','merge geometry and one-step history','source animation retained','actual native download','durable recovery excludes sheet','no page overflow']});

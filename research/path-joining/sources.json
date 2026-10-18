@@ -32,6 +32,15 @@
       "status": 200,
       "bytes": 48929,
       "sha256": "c3905630a35b6e8246aba32c1769f3ff82b217d464d41e4b1b2a34b9df5771c6"
+    },
+    {
+      "id": "wcag-color",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html",
+      "finalUrl": "https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html",
+      "status": 200,
+      "bytes": 43779,
+      "sha256": "a9bab2b8f419ee379b1ab37985d70b03bd6568952251d2f8a55036198990c9e8",
+      "retrievedAt": "2026-10-18T16:16:19.955333+00:00"
     }
   ],
   "observations": [
@@ -50,6 +59,10 @@
     {
       "source": "wcag-drag",
       "observed": "A single-pointer alternative is required for non-essential dragging."
+    },
+    {
+      "source": "wcag-color",
+      "observed": "Use shape or text in addition to color to convey meaning."
     }
   ],
   "productChoices": [
@@ -57,6 +70,7 @@
     "Bridge keeps both endpoints and straightens only unused connector handles.",
     "Merge retains the kept endpoint and translates the donor endpoint outgoing handle before removing its point ID.",
     "Compatible adjacent open paths under the same parent; unsafe references and paints reject without mutation.",
-    "Bottom-sheet outline review with ordinary selects/buttons, one transaction, source-independent previews."
+    "Bottom-sheet outline review with ordinary selects/buttons, one transaction, source-independent previews.",
+    "Kept endpoint circle / other endpoint square plus visible text and SVG accessible name."
   ]
 }

@@ -8,6 +8,8 @@
 
 [WCAG dragging guidance](https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html) informs ordinary selectors and Apply/Cancel controls: this operation requires no drag gesture. The user's sheet preference determines presentation. The outline diagram, named endpoint selectors, bounded candidate list and explicit retained-layer identity are Evir product choices.
 
+[WCAG use of color](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) calls for shape or text in addition to color. The kept endpoint uses a circle and the other endpoint a square, with an accessible name and visible legend. Completion uses a success toast.
+
 ## Workflow
 
 1. In Design, select the open path whose layer ID, name, parent, transform and paint should stay. In **Properties → Connect paths**, choose **Join paths…**. Alternatively select two paths in Layers with Multiple or Shift; the first selected path is kept.
@@ -17,6 +19,8 @@
 5. Review the outline, endpoint markers, point count and gap in artboard units, then **Apply**. The preview shows authored geometry; it is not a paint/rendering oracle. Cancel changes no source. One Undo restores the two original layers; Redo restores the join. On compact screens, successful Apply closes the Properties drawer and returns focus to the stage. Cancel returns focus to the opener.
 
 The sheet starts at its heading, supports ordinary keyboard selection and contains focus through the existing dialog framework. Actions remain reachable in short landscape layouts. It uses the existing sheet transitions and reduced-motion rules. Preview SVGs are replaced when options change; they schedule no animation frames and never enter recovery or `.riv` exports. Scope/revision/mode/selection changes invalidate Apply; a canceled sheet's detached callback cannot make an edit. Browser stale-selection coverage deliberately injects a background selection event, rather than claiming that users can click through a modal.
+
+Each preview reads one source snapshot. Apply computes its validated join inside the history transaction without a duplicate preliminary plan. These are implementation bounds, not measured device performance.
 
 Live tools revoke their local session when closed. This increment does not add concurrent Live pairing, remote MCP access or hosted services.
 

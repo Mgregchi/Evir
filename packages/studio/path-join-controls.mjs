@@ -15,14 +15,15 @@ function preview(host,plan) {
   const x=Math.min(...all.map(v=>v[0])),y=Math.min(...all.map(v=>v[1])),w=Math.max(...all.map(v=>v[0]))-x,h=Math.max(...all.map(v=>v[1]))-y;
   const pad=Math.max(w,h,20)*.1,line=Math.max(w,h,20)/120;
   const svg=(tag,attrs)=>{const n=document.createElementNS('http://www.w3.org/2000/svg',tag);for(const[k,v]of Object.entries(attrs))n.setAttribute(k,String(v));return n;};
-  const root=svg('svg',{viewBox:`${x-pad} ${y-pad} ${w+2*pad} ${h+2*pad}`,role:'img','aria-label':'Joined path outline preview. Endpoint markers show the chosen connection.'});
+  const root=svg('svg',{viewBox:`${x-pad} ${y-pad} ${w+2*pad} ${h+2*pad}`,role:'img','aria-label':'Joined path outline preview. A circle marks the kept endpoint; a square marks the other endpoint.'});
   const coord=v=>v.map(x=>Number(x.toFixed(5))).join(' ');
   let d='M '+coord(points[0].anchor);
   for(let i=1;i<points.length;i++)d+=` C ${coord(points[i-1].out)} ${coord(points[i].in)} ${coord(points[i].anchor)}`;
   root.append(svg('path',{d,fill:'none',stroke:'#8ee2c6','stroke-width':line,'stroke-linecap':'round'}));
   root.append(svg('line',{x1:plan.from[0],y1:plan.from[1],x2:plan.to[0],y2:plan.to[1],stroke:'#efbf98','stroke-width':line,'stroke-dasharray':`${line*3} ${line*2}`}));
-  for(const [point,c]of[[plan.from,'#8ee2c6'],[plan.to,'#efbf98']])root.append(svg('circle',{cx:point[0],cy:point[1],r:line*2,fill:c}));
-  host.append(root);
+  root.append(svg('circle',{cx:plan.from[0],cy:plan.from[1],r:line*2,fill:'#8ee2c6'}));
+  root.append(svg('rect',{x:plan.to[0]-line*2.5,y:plan.to[1]-line*2.5,width:line*5,height:line*5,fill:'none',stroke:'#efbf98','stroke-width':line}));
+  host.append(root,el('p','Circle: kept endpoint. Square: other endpoint.'));
 }
 export function pathJoinControls(p,node,api,preferredOther=null) {
   const section=el('section');section.className='property-section';section.append(el('h3','Connect paths'));
@@ -59,7 +60,7 @@ export function pathJoinControls(p,node,api,preferredOther=null) {
       if(signal.aborted)return false;
       guard(api.project());
       applied=api.commit('Join paths',q=>joinPaths(q,node.id,other,options));
-      if(applied){api.select(node.id);api.notice('Paths joined. Undo restores both layers.');}
+      if(applied){api.select(node.id);api.notice('Paths joined. Undo restores both layers.','success');}
       return applied;
     },api.notice,button);
     const heading=dialog.querySelector('h2');heading.tabIndex=-1;heading.focus();dialog.scrollTop=0;

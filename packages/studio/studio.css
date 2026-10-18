@@ -1639,6 +1639,7 @@ body > #notice {
 .path-join-preview{min-height:5rem;display:grid;place-items:center;border:1px solid var(--line,#35413e);border-radius:12px;background:#15211e;overflow:hidden}
 .path-join-preview:empty{display:none}
 .path-join-preview svg{display:block;width:100%;height:150px}
+.path-join-preview p{margin:0;padding:0 12px 10px;color:var(--muted);font-size:.8rem;line-height:1.4;text-align:center}
 .path-join-sheet [data-join-status]{font-variant-numeric:tabular-nums}
 #advanced-sheet:has(.path-join-sheet){--join-edge:28px;width:min(560px,calc(100vw - 32px));scroll-padding-block:56px 80px}
 #advanced-sheet:has(.path-join-sheet)>h2{position:sticky;top:calc(-1 * var(--join-edge));z-index:2;background:var(--panel);padding-block:8px;border-bottom:1px solid var(--line)}
