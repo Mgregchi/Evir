@@ -1,0 +1,11 @@
+{
+  "format": "evir-path-join-recipe",
+  "version": 1,
+  "keepId": "outing-kite-string",
+  "otherId": "outing-upper-string",
+  "options": {
+    "keepEnd": "last",
+    "otherEnd": "first",
+    "mode": "bridge"
+  }
+}

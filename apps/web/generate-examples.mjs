@@ -2,6 +2,7 @@ import {CommandSession} from '@evir/commands';
 import {compassLesson} from '@evir/commands/example';
 import {suite} from './advanced-examples.mjs';
 import {strokeStudy} from './stroke-scene.mjs';
+import {joiningStudy} from './join-scene.mjs';
 import {characterScenes} from './character-scenes.mjs';
 import {motorcycle} from './motorcycle-scene.mjs';
 import { fitFreehand, fitBrush } from '../../packages/studio/freehand.mjs';
@@ -370,12 +371,19 @@ for(const original of await suite()){
  factories[p.name]=()=>p;
 }
 Object.assign(factories,characterScenes(project));
+const outingStudy=joiningStudy(project);factories.outing=()=>outingStudy.project;
 await mkdir(output,{recursive:true});
 for(const name of exampleIds) {
   const p=factories[name]();validateProject(p);
   const compiled=compileProject(p);
   await writeFile(`${output}${name}.evir-project`,JSON.stringify(p,null,2)+'\n');
   await writeFile(`${output}${name}.riv`,compiled.bytes);
+  if(name==='outing') {
+    validateProject(outingStudy.seed);
+    await writeFile(`${output}outing-start.evir-project`,JSON.stringify(outingStudy.seed,null,2)+'\n');
+    await writeFile(`${output}outing-start.riv`,compileProject(outingStudy.seed).bytes);
+    await writeFile(`${output}outing.joining.json`,JSON.stringify(outingStudy.recipe,null,2)+'\n');
+  }
   if(name==='compass') await writeFile(`${output}${name}.commands.json`,JSON.stringify(compassLesson(p.artboards[0].id),null,2)+'\n');
   if(name==='measure') {
     const guides=defaultGuides();guides.rulers=true;guides.grid={visible:true,snap:true,spacing:32,originX:0,originY:0};

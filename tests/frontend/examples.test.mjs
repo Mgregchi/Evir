@@ -2,6 +2,12 @@ import test from 'node:test';import assert from 'node:assert/strict';import fs f
 import {examples} from '../../apps/web/examples.mjs';
 import {validateProject} from '@evir/project-model';import {compileProject} from '@evir/format';import {evaluate,createRuntime} from '@evir/runtime';import {worldPoints} from '@evir/runtime/geometry';
 const source=id=>JSON.parse(fs.readFileSync(new URL(`../../apps/web/assets/examples/${id}.evir-project`,import.meta.url)));
+test('Outing starting paths and its explicit join recipe reproduce the published curved fox study',async()=>{
+ const {joinPaths}=await import('@evir/authoring'),seed=source('outing-start'),recipe=JSON.parse(fs.readFileSync(new URL('../../apps/web/assets/examples/outing.joining.json',import.meta.url)));
+ validateProject(seed);assert.deepEqual(Buffer.from(compileProject(seed).bytes),fs.readFileSync(new URL('../../apps/web/assets/examples/outing-start.riv',import.meta.url)));
+ assert.equal(seed.nodes.length,source('outing').nodes.length+1);joinPaths(seed,recipe.keepId,recipe.otherId,recipe.options);
+ assert.deepEqual(seed,source('outing'));assert(seed.nodes.filter(n=>n.kind==='path').length>20);
+});
 test('Every registered study has valid editable source and its exact compatible export',()=>{
  assert.equal(new Set(examples.map(e=>e.id)).size,examples.length);
  for(const example of examples){const p=source(example.id);validateProject(p);assert.equal(p.id,`${example.id}-project`);assert.deepEqual(Buffer.from(compileProject(p).bytes),fs.readFileSync(new URL(`../../apps/web/assets/examples/${example.id}.riv`,import.meta.url)));}

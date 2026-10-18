@@ -25,14 +25,23 @@ if(!process.env.CHROMIUM_PATH && !fs.existsSync('/usr/bin/chromium'))process.env
           await page.evaluate(()=>{player.stopRendering();player.drawFrame();});
         };
         const compare=async(animation,frame,label,source=project)=>{
-          const expected=await page.evaluate(async({project,id,frame})=>{
+          // Transfer identical raw RGBA bytes as one string. Per-pixel arrays
+          // make Playwright validate hundreds of thousands of protocol objects.
+          const expected=Buffer.from(await page.evaluate(async({project,id,frame})=>{
             const {evaluate}=await import('/tools/.test-build/oracle.mjs'),{drawScene,CanvasRenderer}=await import('/tools/.test-build/oracle.mjs');
             const c=document.createElement('canvas');c.width=c.height=256;const ctx=c.getContext('2d');ctx.scale(.5,.5);
             const r=new CanvasRenderer(ctx);await r.prepare(project);r.draw(evaluate(project,id,frame),project.artboards[0].id);r.dispose();
-            return Array.from(c.getContext('2d').getImageData(0,0,256,256).data);
-          },{project:source,id:animation?.id,frame});
-          const actual=backend==='canvas'?await page.evaluate(()=>Array.from(document.getElementById('canvas').getContext('2d').getImageData(0,0,256,256).data)):
+            const pixels=c.getContext('2d').getImageData(0,0,256,256).data;let binary='';
+            for(let i=0;i<pixels.length;i+=8192)binary+=String.fromCharCode(...pixels.subarray(i,i+8192));
+            return btoa(binary);
+          },{project:source,id:animation?.id,frame}),'base64');
+          const actual=backend==='canvas'?Buffer.from(await page.evaluate(()=>{
+            const pixels=document.getElementById('canvas').getContext('2d').getImageData(0,0,256,256).data;let binary='';
+            for(let i=0;i<pixels.length;i+=8192)binary+=String.fromCharCode(...pixels.subarray(i,i+8192));
+            return btoa(binary);
+          }),'base64'):
             PNG.sync.read(await page.locator('#canvas').screenshot({omitBackground:true})).data;
+          assert.equal(expected.length,256*256*4);assert.equal(actual.length,expected.length);
           let error=0,expectedCovered=0,runtimeCovered=0;
           for(let i=0;i<actual.length;i+=4){if(expected[i+3])expectedCovered++;if(actual[i+3])runtimeCovered++;for(let j=0;j<4;j++)error+=Math.abs(expected[i+j]-actual[i+j]);}
           const mae=error/actual.length;checks.push({example:name,label,mae,expectedCovered,runtimeCovered});

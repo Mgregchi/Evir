@@ -10,6 +10,7 @@ import {
   strokeValue,
 } from "@evir/project-model";
 import { shareState } from "./shared-state.mjs";
+export { joinPaths, planPathJoin, PATH_JOIN_LIMIT } from './path-joining.mjs';
 import { quantize, components } from "@evir/runtime/geometry";
 const copy = (x) => structuredClone(x),
   clone = copy,
