@@ -36,16 +36,16 @@ export function pathJoinControls(p,node,api,preferredOther=null) {
     'Keep this layer and connect another open path. Review endpoints before applying; Undo restores both layers.'));
   button.onclick=()=>{
     if(!api.ready()||api.mode()!=='Design')return;
-    const revision=api.revision(),scope=api.project().id,selection=api.selectionKey();
+    const revision=api.revision(),scope=p.id,selection=api.selectionKey();
     let other=candidates.find(n=>n.id===preferredOther)?.id||candidates[0].id;
     const options={keepEnd:'last',otherEnd:'first',mode:'bridge'};let applied=false;
-    const guard=()=>{if(api.revision()!==revision||api.project().id!==scope||api.mode()!=='Design'||api.selectionKey()!==selection)
+    const guard=current=>{if(api.revision()!==revision||current.id!==scope||api.mode()!=='Design'||api.selectionKey()!==selection)
       throw Error('The project or selection changed. Close this sheet and review the paths.');};
     const dialog=sheet('Join two paths',host=>{
       host.className='path-join-sheet';host.append(el('p',`Keep “${node.name}”: its layer ID, parent, transform and paint stay. The other layer is removed only when you Apply.`));
       const diagram=el('div');diagram.className='path-join-preview';const status=el('p');status.setAttribute('role','status');status.dataset.joinStatus='';
-      const update=()=>{try{guard();const plan=planPathJoin(api.project(),node.id,other,options);preview(diagram,plan);
-        const name=api.project().nodes.find(n=>n.id===other).name;
+      const update=()=>{try{const current=api.project();guard(current);const plan=planPathJoin(current,node.id,other,options);preview(diagram,plan);
+        const name=current.nodes.find(n=>n.id===other).name;
         status.textContent=`${plan.pointCount} points. Endpoint gap: ${Number(plan.gap.toFixed(3))} artboard units. ${options.mode==='merge'?`Merge moves only the chosen endpoint of “${name}” onto the kept endpoint; its outgoing handle moves with it.`:'Connect adds a straight segment; existing curve segments stay in place.'}`;
       }catch(e){diagram.replaceChildren();status.textContent=e.message;}};
       select(host,'Other path',candidates.map(n=>[n.id,n.name]),other,v=>{other=v;update();});
@@ -57,7 +57,7 @@ export function pathJoinControls(p,node,api,preferredOther=null) {
       update();
     },signal=>{
       if(signal.aborted)return false;
-      guard();planPathJoin(api.project(),node.id,other,options);
+      guard(api.project());
       applied=api.commit('Join paths',q=>joinPaths(q,node.id,other,options));
       if(applied){api.select(node.id);api.notice('Paths joined. Undo restores both layers.');}
       return applied;
