@@ -59,12 +59,20 @@ const { createHash } = require("node:crypto"),
           .update(
             await preview
               .locator("canvas")
-              .evaluate((c) =>
-                Array.from(
-                  c.getContext("2d").getImageData(0, 0, 512, 512).data,
-                ),
-              )
-              .then((v) => Buffer.from(v)),
+              .evaluate((c) => {
+                // Keep the SHA256 input byte-identical without a million
+                // per-pixel Playwright protocol objects for each pose.
+                const data = c.getContext("2d").getImageData(0, 0, 512, 512).data;
+                let binary = "";
+                for (let i = 0; i < data.length; i += 8192)
+                  binary += String.fromCharCode(...data.subarray(i, i + 8192));
+                return btoa(binary);
+              })
+              .then((v) => {
+                const data = Buffer.from(v, "base64");
+                assert.equal(data.length, 512 * 512 * 4);
+                return data;
+              }),
           )
           .digest("hex");
       for (const id of characterIds) {
