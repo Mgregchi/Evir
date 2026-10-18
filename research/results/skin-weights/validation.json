@@ -1,0 +1,193 @@
+{
+  "recordedAt": "2026-10-18T09:36:23.549409+00:00",
+  "baseCommit": "8efe5d21eaafa771cef170c821069d92ee386dd7",
+  "testedApplicationCommit": "d1c660a73f2c97cf3402c93ce9ec879f16f00962",
+  "galleryHarnessCommit": "8f74434e07169490dd9ba3594fc0295036d2e05d",
+  "characterHarnessCommit": "3ed7a258b2d9a998f054078e204b821d38cf74a7",
+  "incompleteAttempts": [
+    {
+      "recordedAt": "2026-10-18T09:17:51.412540+00:00",
+      "reason": "Canceled incomplete gallery run after CPU profiling showed Playwright protocol validation of per-pixel arrays dominated samples; replacing transport with byte-identical base64. No pass claimed.",
+      "rootPid": 29003,
+      "terminatedProcessCount": 15
+    },
+    {
+      "recordedAt": "2026-10-18T09:29:37.282135+00:00",
+      "reason": "Canvas/WebGL2 gallery, round trips and motorcycle stages passed; canceled during character checks to replace the same higher-resolution per-pixel protocol transfer with identical raw base64 before SHA256. No full-suite pass claimed.",
+      "terminatedProcessCount": 13
+    }
+  ],
+  "commands": [
+    {
+      "name": "runtime",
+      "command": "npm run test:runtime",
+      "startedAt": "2026-10-18T08:27:31.627397+00:00",
+      "elapsedSeconds": 1.8,
+      "exitCode": 0,
+      "commit": "d1c660a73f2c97cf3402c93ce9ec879f16f00962",
+      "log": "logs/runtime.log",
+      "logSha256": "e2d306587bfbabf4f5da0884f96cd0fb040471380ab1bc78a38e2b40fd9c0b2b"
+    },
+    {
+      "name": "runtime-build",
+      "command": "npm run runtime:build",
+      "startedAt": "2026-10-18T08:27:33.430970+00:00",
+      "elapsedSeconds": 1.75,
+      "exitCode": 0,
+      "commit": "d1c660a73f2c97cf3402c93ce9ec879f16f00962",
+      "log": "logs/runtime-build.log",
+      "logSha256": "ff55dfde3812d6808cc3de4db3e93e64e3456192815974f840719eccba1d619b"
+    },
+    {
+      "name": "frontend",
+      "command": "npm run test:frontend",
+      "startedAt": "2026-10-18T08:27:35.187000+00:00",
+      "elapsedSeconds": 3.14,
+      "exitCode": 0,
+      "commit": "d1c660a73f2c97cf3402c93ce9ec879f16f00962",
+      "log": "logs/frontend.log",
+      "logSha256": "9d78844d838b1ad83b46d004532623e40ca57a8930e7279c9bbc19a2a4ce4d55"
+    },
+    {
+      "name": "editor",
+      "command": "npm run test:editor",
+      "startedAt": "2026-10-18T08:27:38.326285+00:00",
+      "elapsedSeconds": 539.62,
+      "exitCode": 0,
+      "commit": "d1c660a73f2c97cf3402c93ce9ec879f16f00962",
+      "log": "logs/editor.log",
+      "logSha256": "95bb5dda01a16148f95903d0123313f1855da94580a34353b4f35a4b958bcce4"
+    },
+    {
+      "name": "oracles",
+      "command": "npm run validate:editor",
+      "startedAt": "2026-10-18T08:36:37.944212+00:00",
+      "elapsedSeconds": 1189.04,
+      "exitCode": 0,
+      "commit": "d1c660a73f2c97cf3402c93ce9ec879f16f00962",
+      "log": "logs/oracles.log",
+      "logSha256": "c0f954e36122a51f16523ac25c62b38558231e85b2ec7725bef8d6d504c03ca6"
+    },
+    {
+      "name": "web",
+      "command": "npm run test:web",
+      "startedAt": "2026-10-18T09:29:39.450190+00:00",
+      "elapsedSeconds": 385.61,
+      "exitCode": 0,
+      "commit": "3ed7a258b2d9a998f054078e204b821d38cf74a7",
+      "log": "logs/web.log",
+      "logSha256": "f2ff796fce24e1cf9a8b7013b22efd2dbc4b88b11d736e4af2b6307877377a28"
+    },
+    {
+      "name": "experience",
+      "command": "npm run test:experience",
+      "startedAt": "2026-10-18T09:36:05.065967+00:00",
+      "elapsedSeconds": 11.1,
+      "exitCode": 0,
+      "commit": "3ed7a258b2d9a998f054078e204b821d38cf74a7",
+      "log": "logs/experience.log",
+      "logSha256": "d00e2e797550cda22653e4fd7e8e92363dc1f0ae553af8160394cba36885eded"
+    }
+  ],
+  "unitCounts": {
+    "runtime": 30,
+    "frontend": 26,
+    "editor": 98
+  },
+  "editorBrowserSuites": 21,
+  "officialRuntimeVersion": "2.44.0",
+  "browser": "151.0.7922.173",
+  "node": "v24.19.0",
+  "graphics": "Cloud Chromium; WebGL2 runs on ANGLE/SwiftShader software rendering. Not physical-device/GPU performance evidence.",
+  "focusedNative": {
+    "fixtures": 4,
+    "comparisons": 24,
+    "backends": [
+      {
+        "backend": "canvas",
+        "comparisons": 12,
+        "maxMae": 0.24678802490234375,
+        "maxCoverageDifference": 6
+      },
+      {
+        "backend": "webgl2",
+        "comparisons": 12,
+        "maxMae": 0.9449806213378906,
+        "maxCoverageDifference": 194
+      }
+    ]
+  },
+  "gallery": {
+    "studies": 26,
+    "comparisons": 480
+  },
+  "regeneratedExamples": {
+    "fileCount": 54,
+    "allBytesReproduced": true,
+    "sha256": {
+      "arrange.evir-project": "cf281dc49fa2fa0de6bdf3159549af84b29bc3e6b25625de137174a690b8159d",
+      "arrange.riv": "b7000b8f0e52bba8b01756a2267b1a140f75c777e56f388b9e59336814effd89",
+      "blend.evir-project": "58ec678361d9452f0d8832f5c98a64d319343dc5065c411e72673950217e4127",
+      "blend.riv": "632fe930f4050183917d9ff1a749f9cefb9dbf5d5283509e7222def209c15f80",
+      "bloom.evir-project": "76a2e17b76fa58df5f631f81314887dad331f155c4f1e70d3ab234cc6fb5c85f",
+      "bloom.riv": "606c696bc3fa77d70b1c9354f6db2ea2bd4c54ee0604ecee7cc9dd18206f9ca8",
+      "canopy.evir-project": "3de89bbdb5595bc240b6344a7421e9e8891fab43147bd86aca4370500297ffcb",
+      "canopy.riv": "7a611e1b13cc59d495eeb2c2a6f52155c94d828b242ca68a0e98a1b3496b8e65",
+      "caption.evir-project": "2975c7e051c476215028f3dd31baa855b16e615927aa5cc1c4f61a067f3ea877",
+      "caption.riv": "99227ec819f3f24427134c72aa0627caab0ff395298a175300dd6049957487b8",
+      "compass.evir-project": "4b9c4f4b073e23a216dbaf4881298a92b31eb7ab5db90049d3fb501f88e99802",
+      "compass.riv": "c624ebd9ee40e20fb259c1198c9a235b0b375fa19b0f4964a66e6c92d3b37b62",
+      "dawn.evir-project": "b20f6dbf06672b641c869241b4b3e936a2af652e434bb4daa87962430e104c4b",
+      "dawn.riv": "6fe56c01b1f73ea9647e5e53f88cc1d2fbc09bba5e9e7d56b605220be1da9346",
+      "gather.evir-project": "88de6c0075ab2e536e5aae3aed6b224dea5d7361aa35164b840dbd9fed77d3ff",
+      "gather.riv": "cf6fff5dc14297df38d9002c28c7d21614cdd196b8d7fdff1b03f49beb17c51c",
+      "gust.evir-project": "72c4644772f2f1d09d61f5c4642575a32fdc864f97b9b7f5e4598c277f94c286",
+      "gust.riv": "a2f410d5a2ef109453986c36b683a3b8a743879c76d4dde34511d8a63cb2e910",
+      "halo.evir-project": "fdc70256f68cadf2b2f83adb6ac7e2958256616a89502a9ded063e99633877ec",
+      "halo.riv": "4198d908aaf8fa497544ef5ef8b9fddd48f8f6d7cc0649ea037b823acd4c7a3f",
+      "kite.evir-project": "4f8396343592805aa267d9f9129bdce5d836a4328d97982175c443745e5e1bc2",
+      "kite.riv": "5f18e1a666aff3a6556d57dc21dad7c6644b1684b926ae0700ff7a13a7fb198b",
+      "loom.evir-project": "1b0ff9abe7a613ea0bb64777dcd2129f7386cf3e405c13a3eaeb51dbed26abcd",
+      "loom.riv": "d7419a1d0cc10ce7a0d519233beca5f55b734b3060a5cdf73548094c8fbabb13",
+      "measure.evir-project": "f2eec027c9c62e64e97dc8375e77213a13bd0ff3fb4ed6d12b6a1a6c0203cda6",
+      "measure.riv": "0e43cd4dbe386ede67b80c11f37a41d6c96ad8cee1aa3595d55fd435ce8269c3",
+      "milo.evir-project": "6e50ffaba2057b9ef8138de6a807cc46eb354ff6fd7e07ba3212837e8ad05c79",
+      "milo.riv": "c1db8a16bc72af40f2ade97f08ddbba8d3e8ba17c13f77736191d94d0c471199",
+      "momo.evir-project": "ff02731a5b75310cd1d4ca310e74f53dceb446e692990420744ecadd05f81dd9",
+      "momo.riv": "6b8d2726a7df4c0972acf26a2f1eb43f89caedf51d3a077a25241797a3f7061a",
+      "motorcycle.evir-project": "bbfe5d7d6fb6b1b1b8dd070a5323d9cbbd577f11b627cc08cfd2fab4d0aed51f",
+      "motorcycle.riv": "5fd6f55203fb1e4b51a41b70af9d542332878950a230999d176d58fec5a90499",
+      "nura.evir-project": "55608107a2f3c117476fcd5bd5b59815ab670559d09e15314f321cd9518d88e0",
+      "nura.riv": "3ae037026ce8649268501bfbb4cabc259a0d4c0a3df4697219149f16cb75c6ee",
+      "orbit.evir-project": "6127f994b8248d46f470dbc56d9199b732737f07d7406ff602f1037c12407832",
+      "orbit.riv": "22c7afa65992ed8652e109051e3280f3f62b6f0e5b9a0c0b486ddd8654d6822c",
+      "otto.evir-project": "572a8035f2eb385b93332c8c7cb9e17307be9ccf6535decf02f6252b880ce2ad",
+      "otto.riv": "fc05f85ea6ee51ed959a9a5b4c8e35fc6b970c46a3b97ed6b2dba9b25a410872",
+      "reach.evir-project": "b16dfdcbe179d25c6a910ea6719fc5b11c77d4396daf2d5cd9a6ecdbe66c7e95",
+      "reach.riv": "18957fa2c6a0184bea966c99fdd073f034ae78388364dd043dbb500775ee6b4f",
+      "ribbon.evir-project": "d4633f28130a7689ae243202dda2d927953b53aaec3e172b916c882bdd064e19",
+      "ribbon.riv": "6791a797e79719fe94678dc07c1d76502b910b04ffbac9a7ec0359f6886a0d4f",
+      "signal.evir-project": "7c8e77f232f33ba1ed15e9ea0546db46f776bb2283cff6ae60877270f1f72dbb",
+      "signal.riv": "8d73bef975e2d346466b54b91893532880e202f9513e9a509133aecdb213f6f1",
+      "sprig-start.evir-project": "dee2fca0b620f9d55bdf3c0ea7092b7701243ce86ff8383febf78eb0f3d75272",
+      "sprig-start.riv": "450c9f7a6a1d4be132fb4da0affab9f182b05ada0ec542d39c6b4b844169f327",
+      "sprig.evir-project": "2ecb423e70ebe0dab04b214214891b044baa042dd37d47e7582cbe31cd9d9fd4",
+      "sprig.riv": "f2a19bfbf1a4b7d3b4521e553dca581465e86b62eefba0c3bd8e87bfb8ba092f",
+      "tempo.evir-project": "bc81399b3b5acf9588693944ca38661829c264fc0e25ca75819d3b9a9d01a7f9",
+      "tempo.riv": "75af08e98c313d30dbeb59fbbb622a613931639602090bcb04d200c016224971",
+      "trace.evir-project": "c85616eb3ba102c5bf165c61dd76c864e6fa2b41fd7c80fc982d551965f69c8d",
+      "trace.riv": "e906bee977c50e0c4e40e37bc21c354c7dfac933e2bfaeac37f598bb3790787a",
+      "wisp.evir-project": "527cca3d336d3ae1a06e15c2e82f75f526c6a8d0a3f2daa98e5b906febf8fac5",
+      "wisp.riv": "0dd3a1f36d2b8f1ef963041048b87cf8ec827983da917f7cfd8016be11fc2f90"
+    }
+  },
+  "preservedArtwork": "Existing brand files unchanged; Gust vector art and tiny generated weave are original MIT project work.",
+  "scopeLimits": [
+    "No auto weights, smoothing, influence locks, general IK or direct/nested blend graphs.",
+    "No physical-device/GPU or human/screen-reader certification.",
+    "Hosted backend remains deferred.",
+    "PR #36 contour import remains a separate unmerged increment.",
+    "GitHub Actions could not start because the account is locked for a billing issue; local validation completed."
+  ],
+  "restoredHistoricalGeneratedOutputs": 138
+}

@@ -1,0 +1,345 @@
+{
+  "checkedAt": "2026-10-18T08:54:34.675Z",
+  "runtimeVersion": "2.44.0",
+  "method": "Original three-bone vector/PNG study and actual Studio weight edits, animated named frames plus separate animation-free rest exports.",
+  "scope": "Cloud software rendering; not physical-device/GPU or moderated-user evidence.",
+  "fixtures": [
+    {
+      "name": "gust",
+      "sourceSha256": "72c4644772f2f1d09d61f5c4642575a32fdc864f97b9b7f5e4598c277f94c286",
+      "rivSha256": "a2f410d5a2ef109453986c36b683a3b8a743879c76d4dde34511d8a63cb2e910",
+      "assetSha256": [
+        "f36c06d2c9b1bf94392b0e433397ade559983433c67bd190337813ad3be71af7"
+      ]
+    },
+    {
+      "name": "gust-rest",
+      "sourceSha256": "cc3f2a31fb03a79c2c888b322328d5787025866e993075ed290845f024f06e69",
+      "rivSha256": "e8c835e86438c12ec1aba2a7451d6d72d736f6b741438b12c0b75448b17733b4",
+      "assetSha256": [
+        "f36c06d2c9b1bf94392b0e433397ade559983433c67bd190337813ad3be71af7"
+      ]
+    },
+    {
+      "name": "studio-weighted",
+      "sourceSha256": "d7b86f43d82ef3c39ebcd2526f666da69dea57acb6581ed4f675fbe26304ac59",
+      "rivSha256": "b5189b0fd2fa3b20cc70a9d2d6857ebefccc747b1aff2a9f49321a0603427510",
+      "assetSha256": [
+        "f36c06d2c9b1bf94392b0e433397ade559983433c67bd190337813ad3be71af7"
+      ]
+    },
+    {
+      "name": "studio-weighted-rest",
+      "sourceSha256": "6ee5b0ceac0acbfaeac87596747cecb757e72159fdc6a33ffe1d72036218266f",
+      "rivSha256": "ffe1deb711f1b56af7a190796622a95dcffb3a80d79bf9b0a21a50a3a0166b31",
+      "assetSha256": [
+        "f36c06d2c9b1bf94392b0e433397ade559983433c67bd190337813ad3be71af7"
+      ]
+    }
+  ],
+  "backends": [
+    {
+      "backend": "canvas",
+      "checks": [
+        {
+          "scene": "gust",
+          "frame": 0,
+          "mae": 0.24678802490234375,
+          "covered": 32737,
+          "expectedCovered": 32743
+        },
+        {
+          "scene": "gust",
+          "frame": 30,
+          "mae": 0.24324798583984375,
+          "covered": 32776,
+          "expectedCovered": 32781
+        },
+        {
+          "scene": "gust",
+          "frame": 60,
+          "mae": 0.24538040161132812,
+          "covered": 32877,
+          "expectedCovered": 32881
+        },
+        {
+          "scene": "gust",
+          "frame": 90,
+          "mae": 0.24324798583984375,
+          "covered": 32776,
+          "expectedCovered": 32781
+        },
+        {
+          "scene": "gust",
+          "frame": 120,
+          "mae": 0.24678802490234375,
+          "covered": 32737,
+          "expectedCovered": 32743
+        },
+        {
+          "scene": "gust-rest",
+          "frame": null,
+          "mae": 0.23093795776367188,
+          "covered": 32772,
+          "expectedCovered": 32777
+        },
+        {
+          "scene": "studio-weighted",
+          "frame": 0,
+          "mae": 0.24553298950195312,
+          "covered": 32737,
+          "expectedCovered": 32743
+        },
+        {
+          "scene": "studio-weighted",
+          "frame": 30,
+          "mae": 0.24199676513671875,
+          "covered": 32776,
+          "expectedCovered": 32781
+        },
+        {
+          "scene": "studio-weighted",
+          "frame": 60,
+          "mae": 0.24057769775390625,
+          "covered": 32877,
+          "expectedCovered": 32881
+        },
+        {
+          "scene": "studio-weighted",
+          "frame": 90,
+          "mae": 0.24199676513671875,
+          "covered": 32776,
+          "expectedCovered": 32781
+        },
+        {
+          "scene": "studio-weighted",
+          "frame": 120,
+          "mae": 0.24553298950195312,
+          "covered": 32737,
+          "expectedCovered": 32743
+        },
+        {
+          "scene": "studio-weighted-rest",
+          "frame": null,
+          "mae": 0.23093795776367188,
+          "covered": 32772,
+          "expectedCovered": 32777
+        }
+      ],
+      "graphics": {
+        "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "contexts": [
+          {
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "unmaskedRendererAvailable": true,
+            "contextLost": false,
+            "errors": [],
+            "extensions": [
+              "EXT_clip_control",
+              "EXT_color_buffer_float",
+              "EXT_color_buffer_half_float",
+              "EXT_conservative_depth",
+              "EXT_depth_clamp",
+              "EXT_float_blend",
+              "EXT_polygon_offset_clamp",
+              "EXT_texture_compression_bptc",
+              "EXT_texture_compression_rgtc",
+              "EXT_texture_filter_anisotropic",
+              "EXT_texture_mirror_clamp_to_edge",
+              "NV_shader_noperspective_interpolation",
+              "OES_draw_buffers_indexed",
+              "OES_sample_variables",
+              "OES_shader_multisample_interpolation",
+              "OES_texture_float_linear",
+              "OVR_multiview2",
+              "WEBGL_clip_cull_distance",
+              "WEBGL_compressed_texture_astc",
+              "WEBGL_compressed_texture_etc",
+              "WEBGL_compressed_texture_etc1",
+              "WEBGL_compressed_texture_s3tc",
+              "WEBGL_compressed_texture_s3tc_srgb",
+              "WEBGL_debug_renderer_info",
+              "WEBGL_debug_shaders",
+              "WEBGL_lose_context",
+              "WEBGL_multi_draw",
+              "WEBGL_polygon_mode",
+              "WEBGL_stencil_texturing"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "backend": "webgl2",
+      "checks": [
+        {
+          "scene": "gust",
+          "frame": 0,
+          "mae": 0.9359054565429688,
+          "covered": 32549,
+          "expectedCovered": 32743
+        },
+        {
+          "scene": "gust",
+          "frame": 30,
+          "mae": 0.917938232421875,
+          "covered": 32591,
+          "expectedCovered": 32781
+        },
+        {
+          "scene": "gust",
+          "frame": 60,
+          "mae": 0.92218017578125,
+          "covered": 32689,
+          "expectedCovered": 32881
+        },
+        {
+          "scene": "gust",
+          "frame": 90,
+          "mae": 0.917938232421875,
+          "covered": 32591,
+          "expectedCovered": 32781
+        },
+        {
+          "scene": "gust",
+          "frame": 120,
+          "mae": 0.9359054565429688,
+          "covered": 32549,
+          "expectedCovered": 32743
+        },
+        {
+          "scene": "gust-rest",
+          "frame": null,
+          "mae": 0.9176521301269531,
+          "covered": 32589,
+          "expectedCovered": 32777
+        },
+        {
+          "scene": "studio-weighted",
+          "frame": 0,
+          "mae": 0.9449806213378906,
+          "covered": 32549,
+          "expectedCovered": 32743
+        },
+        {
+          "scene": "studio-weighted",
+          "frame": 30,
+          "mae": 0.9104080200195312,
+          "covered": 32591,
+          "expectedCovered": 32781
+        },
+        {
+          "scene": "studio-weighted",
+          "frame": 60,
+          "mae": 0.9108924865722656,
+          "covered": 32689,
+          "expectedCovered": 32881
+        },
+        {
+          "scene": "studio-weighted",
+          "frame": 90,
+          "mae": 0.9104080200195312,
+          "covered": 32591,
+          "expectedCovered": 32781
+        },
+        {
+          "scene": "studio-weighted",
+          "frame": 120,
+          "mae": 0.9449806213378906,
+          "covered": 32549,
+          "expectedCovered": 32743
+        },
+        {
+          "scene": "studio-weighted-rest",
+          "frame": null,
+          "mae": 0.9176521301269531,
+          "covered": 32589,
+          "expectedCovered": 32777
+        }
+      ],
+      "graphics": {
+        "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "contexts": [
+          {
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "unmaskedRendererAvailable": true,
+            "contextLost": false,
+            "errors": [],
+            "extensions": [
+              "EXT_clip_control",
+              "EXT_color_buffer_float",
+              "EXT_color_buffer_half_float",
+              "EXT_conservative_depth",
+              "EXT_depth_clamp",
+              "EXT_float_blend",
+              "EXT_polygon_offset_clamp",
+              "EXT_texture_compression_bptc",
+              "EXT_texture_compression_rgtc",
+              "EXT_texture_filter_anisotropic",
+              "EXT_texture_mirror_clamp_to_edge",
+              "NV_shader_noperspective_interpolation",
+              "OES_draw_buffers_indexed",
+              "OES_sample_variables",
+              "OES_shader_multisample_interpolation",
+              "OES_texture_float_linear",
+              "OVR_multiview2",
+              "WEBGL_clip_cull_distance",
+              "WEBGL_compressed_texture_astc",
+              "WEBGL_compressed_texture_etc",
+              "WEBGL_compressed_texture_etc1",
+              "WEBGL_compressed_texture_s3tc",
+              "WEBGL_compressed_texture_s3tc_srgb",
+              "WEBGL_debug_renderer_info",
+              "WEBGL_debug_shaders",
+              "WEBGL_lose_context",
+              "WEBGL_multi_draw",
+              "WEBGL_polygon_mode",
+              "WEBGL_stencil_texturing"
+            ]
+          },
+          {
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "unmaskedRendererAvailable": true,
+            "contextLost": false,
+            "errors": [],
+            "extensions": [
+              "EXT_clip_control",
+              "EXT_color_buffer_float",
+              "EXT_color_buffer_half_float",
+              "EXT_conservative_depth",
+              "EXT_depth_clamp",
+              "EXT_float_blend",
+              "EXT_polygon_offset_clamp",
+              "EXT_texture_compression_bptc",
+              "EXT_texture_compression_rgtc",
+              "EXT_texture_filter_anisotropic",
+              "EXT_texture_mirror_clamp_to_edge",
+              "NV_shader_noperspective_interpolation",
+              "OES_draw_buffers_indexed",
+              "OES_sample_variables",
+              "OES_shader_multisample_interpolation",
+              "OES_texture_float_linear",
+              "OVR_multiview2",
+              "WEBGL_clip_cull_distance",
+              "WEBGL_compressed_texture_astc",
+              "WEBGL_compressed_texture_etc",
+              "WEBGL_compressed_texture_etc1",
+              "WEBGL_compressed_texture_s3tc",
+              "WEBGL_compressed_texture_s3tc_srgb",
+              "WEBGL_debug_renderer_info",
+              "WEBGL_debug_shaders",
+              "WEBGL_lose_context",
+              "WEBGL_multi_draw",
+              "WEBGL_polygon_mode",
+              "WEBGL_stencil_texturing"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "browser": "151.0.7922.173"
+}
