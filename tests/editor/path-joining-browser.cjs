@@ -46,6 +46,9 @@ const {run}=require('../../tools/browser.cjs');
    await press('Undo');assert.deepEqual((await snapshot()).nodes,before.nodes);await press('Redo');assert.deepEqual((await snapshot()).nodes,after.nodes);
    const download=page.waitForEvent('download');await press('Export .riv');const bytes=fs.readFileSync(await(await download).path());assert.deepEqual(bytes,Buffer.from(compileProject(await snapshot()).bytes));
    if(width===1440){fs.writeFileSync(`${out}/studio-joined.evir-project`,JSON.stringify(await snapshot(),null,2)+'\n');fs.writeFileSync(`${out}/studio-joined.riv`,bytes);}
+   // Recovery is asynchronous/debounced. Saved status confirms the IndexedDB
+   // transaction completed; page termination may interrupt a pending flush.
+   await page.waitForFunction(()=>document.querySelector('#save-status').textContent==='Saved in this browser');
    await page.reload();await page.waitForFunction(()=>window.evirStudio);assert.deepEqual((await snapshot()).nodes,after.nodes);assert.equal(await page.locator('#advanced-sheet').count(),0);
    // Reloaded history is intentionally empty: load the seed for a separate merge edit.
    assert.equal(await page.getByRole('button',{name:'Undo',exact:true}).isDisabled(),true);
