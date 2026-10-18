@@ -1,0 +1,245 @@
+{
+  "recordedAt": "2026-10-18T17:00:52.125498+00:00",
+  "baseCommit": "8efe5d21eaafa771cef170c821069d92ee386dd7",
+  "initialApplicationCommit": "147556d2d2109d80809c657eef3444c2d0f11613",
+  "reviewSnapshotCommit": "423e69bf8833ed75d14cc9e245944b202af9e254",
+  "finalFeedbackCommit": "a7413cb20919610ec3caae360750085affd3d5b4",
+  "commands": [
+    {
+      "name": "runtime",
+      "command": "npm run test:runtime",
+      "startedAt": "2026-10-18T15:57:53.267785+00:00",
+      "elapsedSeconds": 2.45,
+      "exitCode": 0,
+      "commit": "147556d2d2109d80809c657eef3444c2d0f11613",
+      "log": "logs/runtime.log",
+      "logSha256": "ad9271e8a8736577a6972fa0b9868c10da4feaaaa943b8ba7c4a873ee3d4cb31"
+    },
+    {
+      "name": "runtime-build",
+      "command": "npm run runtime:build",
+      "startedAt": "2026-10-18T15:57:55.716784+00:00",
+      "elapsedSeconds": 2.47,
+      "exitCode": 0,
+      "commit": "147556d2d2109d80809c657eef3444c2d0f11613",
+      "log": "logs/runtime-build.log",
+      "logSha256": "ff55dfde3812d6808cc3de4db3e93e64e3456192815974f840719eccba1d619b"
+    },
+    {
+      "name": "frontend",
+      "command": "npm run test:frontend",
+      "startedAt": "2026-10-18T15:57:58.184267+00:00",
+      "elapsedSeconds": 3.97,
+      "exitCode": 0,
+      "commit": "147556d2d2109d80809c657eef3444c2d0f11613",
+      "log": "logs/frontend.log",
+      "logSha256": "411b0fc28de9c4b1b301637c7d626821f005d2bf7a987a2b2c7d1e34c9300522"
+    },
+    {
+      "name": "editor",
+      "command": "npm run test:editor",
+      "startedAt": "2026-10-18T16:00:23.436943+00:00",
+      "elapsedSeconds": 838.57,
+      "exitCode": 0,
+      "commit": "423e69bf8833ed75d14cc9e245944b202af9e254",
+      "log": "logs/editor.log",
+      "logSha256": "950ceb52d4173b44fe5234daaf9e094318da1fcaa30f8f392837ba160e49c4b5"
+    },
+    {
+      "name": "oracles",
+      "command": "npm run validate:editor",
+      "startedAt": "2026-10-18T16:14:22.015254+00:00",
+      "elapsedSeconds": 1554.72,
+      "exitCode": 0,
+      "commit": "423e69bf8833ed75d14cc9e245944b202af9e254",
+      "log": "logs/oracles.log",
+      "logSha256": "aa65deb172c67694e060af85d4fff6bc59dd2b84677ecfdf1ecfa3ccc7bc9086"
+    },
+    {
+      "name": "web",
+      "command": "npm run test:web",
+      "startedAt": "2026-10-18T16:52:34.543776+00:00",
+      "elapsedSeconds": 445.66,
+      "exitCode": 0,
+      "commit": "a7413cb20919610ec3caae360750085affd3d5b4",
+      "log": "logs/web.log",
+      "logSha256": "f2ff796fce24e1cf9a8b7013b22efd2dbc4b88b11d736e4af2b6307877377a28"
+    },
+    {
+      "name": "experience",
+      "command": "npm run test:experience",
+      "startedAt": "2026-10-18T17:00:00.211078+00:00",
+      "elapsedSeconds": 9.0,
+      "exitCode": 0,
+      "commit": "a7413cb20919610ec3caae360750085affd3d5b4",
+      "log": "logs/experience.log",
+      "logSha256": "d00e2e797550cda22653e4fd7e8e92363dc1f0ae553af8160394cba36885eded"
+    }
+  ],
+  "supplementalChecks": [
+    {
+      "name": "feedback-build",
+      "command": "npm run web:build",
+      "startedAt": "2026-10-18T16:48:00.486161+00:00",
+      "elapsedSeconds": 2.6,
+      "exitCode": 0,
+      "log": "logs/evir-join-feedback-build.log",
+      "commit": "68826e5c974981f7e000cae697be0def610d0c29",
+      "logSha256": "47b0b40c4c116e23713c6499b5834204f34961a41e201e2e388920713cf931dc"
+    },
+    {
+      "name": "feedback-browser",
+      "command": "node tests/editor/path-joining-browser.cjs",
+      "startedAt": "2026-10-18T16:51:14.770234+00:00",
+      "elapsedSeconds": 34.97,
+      "exitCode": 0,
+      "log": "logs/evir-join-feedback-browser.log",
+      "commit": "a7413cb20919610ec3caae360750085affd3d5b4",
+      "logSha256": "1591fd4fdcd5f0fdab889b18a0b96178ca040d388632b7fe568d5be2c9bab255"
+    }
+  ],
+  "unitCounts": {
+    "runtime": 30,
+    "frontend": 27,
+    "editor": 101
+  },
+  "studioBrowserSuites": 21,
+  "officialRuntimeVersion": "2.44.0",
+  "browser": "151.0.7922.173",
+  "node": "v24.19.0",
+  "graphics": "Cloud Chromium; ANGLE/SwiftShader software rendering for WebGL2. Not physical-device/GPU performance evidence.",
+  "focusedNative": {
+    "fixtures": 8,
+    "comparisons": 48,
+    "backends": [
+      {
+        "backend": "canvas",
+        "comparisons": 24,
+        "maxMae": 0.02933502197265625,
+        "maxCoverageDifference": 1
+      },
+      {
+        "backend": "webgl2",
+        "comparisons": 24,
+        "maxMae": 0.2738037109375,
+        "maxCoverageDifference": 28
+      }
+    ]
+  },
+  "gallery": {
+    "studies": 26,
+    "comparisons": 480
+  },
+  "regeneration": {
+    "existingExampleFileCount": 52,
+    "existingBytesUnchanged": true,
+    "currentExampleFileCount": 56,
+    "currentSha256": {
+      "arrange.evir-project": "cf281dc49fa2fa0de6bdf3159549af84b29bc3e6b25625de137174a690b8159d",
+      "arrange.riv": "b7000b8f0e52bba8b01756a2267b1a140f75c777e56f388b9e59336814effd89",
+      "blend.evir-project": "58ec678361d9452f0d8832f5c98a64d319343dc5065c411e72673950217e4127",
+      "blend.riv": "632fe930f4050183917d9ff1a749f9cefb9dbf5d5283509e7222def209c15f80",
+      "bloom.evir-project": "76a2e17b76fa58df5f631f81314887dad331f155c4f1e70d3ab234cc6fb5c85f",
+      "bloom.riv": "606c696bc3fa77d70b1c9354f6db2ea2bd4c54ee0604ecee7cc9dd18206f9ca8",
+      "canopy.evir-project": "3de89bbdb5595bc240b6344a7421e9e8891fab43147bd86aca4370500297ffcb",
+      "canopy.riv": "7a611e1b13cc59d495eeb2c2a6f52155c94d828b242ca68a0e98a1b3496b8e65",
+      "caption.evir-project": "2975c7e051c476215028f3dd31baa855b16e615927aa5cc1c4f61a067f3ea877",
+      "caption.riv": "99227ec819f3f24427134c72aa0627caab0ff395298a175300dd6049957487b8",
+      "compass.evir-project": "4b9c4f4b073e23a216dbaf4881298a92b31eb7ab5db90049d3fb501f88e99802",
+      "compass.riv": "c624ebd9ee40e20fb259c1198c9a235b0b375fa19b0f4964a66e6c92d3b37b62",
+      "dawn.evir-project": "b20f6dbf06672b641c869241b4b3e936a2af652e434bb4daa87962430e104c4b",
+      "dawn.riv": "6fe56c01b1f73ea9647e5e53f88cc1d2fbc09bba5e9e7d56b605220be1da9346",
+      "gather.evir-project": "88de6c0075ab2e536e5aae3aed6b224dea5d7361aa35164b840dbd9fed77d3ff",
+      "gather.riv": "cf6fff5dc14297df38d9002c28c7d21614cdd196b8d7fdff1b03f49beb17c51c",
+      "halo.evir-project": "fdc70256f68cadf2b2f83adb6ac7e2958256616a89502a9ded063e99633877ec",
+      "halo.riv": "4198d908aaf8fa497544ef5ef8b9fddd48f8f6d7cc0649ea037b823acd4c7a3f",
+      "kite.evir-project": "4f8396343592805aa267d9f9129bdce5d836a4328d97982175c443745e5e1bc2",
+      "kite.riv": "5f18e1a666aff3a6556d57dc21dad7c6644b1684b926ae0700ff7a13a7fb198b",
+      "loom.evir-project": "1b0ff9abe7a613ea0bb64777dcd2129f7386cf3e405c13a3eaeb51dbed26abcd",
+      "loom.riv": "d7419a1d0cc10ce7a0d519233beca5f55b734b3060a5cdf73548094c8fbabb13",
+      "measure.evir-project": "f2eec027c9c62e64e97dc8375e77213a13bd0ff3fb4ed6d12b6a1a6c0203cda6",
+      "measure.riv": "0e43cd4dbe386ede67b80c11f37a41d6c96ad8cee1aa3595d55fd435ce8269c3",
+      "milo.evir-project": "6e50ffaba2057b9ef8138de6a807cc46eb354ff6fd7e07ba3212837e8ad05c79",
+      "milo.riv": "c1db8a16bc72af40f2ade97f08ddbba8d3e8ba17c13f77736191d94d0c471199",
+      "momo.evir-project": "ff02731a5b75310cd1d4ca310e74f53dceb446e692990420744ecadd05f81dd9",
+      "momo.riv": "6b8d2726a7df4c0972acf26a2f1eb43f89caedf51d3a077a25241797a3f7061a",
+      "motorcycle.evir-project": "bbfe5d7d6fb6b1b1b8dd070a5323d9cbbd577f11b627cc08cfd2fab4d0aed51f",
+      "motorcycle.riv": "5fd6f55203fb1e4b51a41b70af9d542332878950a230999d176d58fec5a90499",
+      "nura.evir-project": "55608107a2f3c117476fcd5bd5b59815ab670559d09e15314f321cd9518d88e0",
+      "nura.riv": "3ae037026ce8649268501bfbb4cabc259a0d4c0a3df4697219149f16cb75c6ee",
+      "orbit.evir-project": "6127f994b8248d46f470dbc56d9199b732737f07d7406ff602f1037c12407832",
+      "orbit.riv": "22c7afa65992ed8652e109051e3280f3f62b6f0e5b9a0c0b486ddd8654d6822c",
+      "otto.evir-project": "572a8035f2eb385b93332c8c7cb9e17307be9ccf6535decf02f6252b880ce2ad",
+      "otto.riv": "fc05f85ea6ee51ed959a9a5b4c8e35fc6b970c46a3b97ed6b2dba9b25a410872",
+      "reach.evir-project": "b16dfdcbe179d25c6a910ea6719fc5b11c77d4396daf2d5cd9a6ecdbe66c7e95",
+      "reach.riv": "18957fa2c6a0184bea966c99fdd073f034ae78388364dd043dbb500775ee6b4f",
+      "ribbon.evir-project": "d4633f28130a7689ae243202dda2d927953b53aaec3e172b916c882bdd064e19",
+      "ribbon.riv": "6791a797e79719fe94678dc07c1d76502b910b04ffbac9a7ec0359f6886a0d4f",
+      "signal.evir-project": "7c8e77f232f33ba1ed15e9ea0546db46f776bb2283cff6ae60877270f1f72dbb",
+      "signal.riv": "8d73bef975e2d346466b54b91893532880e202f9513e9a509133aecdb213f6f1",
+      "sprig-start.evir-project": "dee2fca0b620f9d55bdf3c0ea7092b7701243ce86ff8383febf78eb0f3d75272",
+      "sprig-start.riv": "450c9f7a6a1d4be132fb4da0affab9f182b05ada0ec542d39c6b4b844169f327",
+      "sprig.evir-project": "2ecb423e70ebe0dab04b214214891b044baa042dd37d47e7582cbe31cd9d9fd4",
+      "sprig.riv": "f2a19bfbf1a4b7d3b4521e553dca581465e86b62eefba0c3bd8e87bfb8ba092f",
+      "tempo.evir-project": "bc81399b3b5acf9588693944ca38661829c264fc0e25ca75819d3b9a9d01a7f9",
+      "tempo.riv": "75af08e98c313d30dbeb59fbbb622a613931639602090bcb04d200c016224971",
+      "trace.evir-project": "c85616eb3ba102c5bf165c61dd76c864e6fa2b41fd7c80fc982d551965f69c8d",
+      "trace.riv": "e906bee977c50e0c4e40e37bc21c354c7dfac933e2bfaeac37f598bb3790787a",
+      "wisp.evir-project": "527cca3d336d3ae1a06e15c2e82f75f526c6a8d0a3f2daa98e5b906febf8fac5",
+      "wisp.riv": "0dd3a1f36d2b8f1ef963041048b87cf8ec827983da917f7cfd8016be11fc2f90",
+      "outing-start.riv": "57f1ea2d57fccd24d5888be632b5e2f1c633c21ae213649e02fd2e9187d4d488",
+      "outing.riv": "6e997001987999caae78ac7856eeccf54f4ddfbf3da2e8704cc93b564f895695",
+      "outing.evir-project": "b137c63bdee8b575fefb532c69d635a0ea51e416ebbcd583a2ab6399b729581f",
+      "outing-start.evir-project": "51a50fdb7a072d143160a92fa4a6daecc3329bd2dc029e08f9d5b02b4c92538c"
+    },
+    "allCurrentBytesReproduced": true,
+    "command": "node apps/web/generate-examples.mjs",
+    "log": "logs/regeneration.log",
+    "logSha256": "302affc58ff7639c196522b13d07840d9726654ba20427273f9b28a513ba49d0"
+  },
+  "incompleteAttempts": [
+    {
+      "recordedAt": "2026-10-18T16:00:21.942902+00:00",
+      "reason": "Canceled incomplete Studio gate after code review found three full source snapshots per preview. Restarting affected checks with one preview snapshot and no duplicate pre-Apply plan. Completed runtime/build/frontend gates are unchanged.",
+      "terminatedProcessCount": 13
+    },
+    {
+      "name": "web",
+      "command": "npm run test:web",
+      "startedAt": "2026-10-18T16:40:16.744368+00:00",
+      "elapsedSeconds": 53.44,
+      "exitCode": 1,
+      "diagnosis": "Viewport emulation can expose new innerWidth before responsive CSS finishes applying. Diagnostic at 390 showed desktop92px heading/padding44; settled style60.45px/padding22 fits390. Added bounded readiness for three clean frames, retaining the zero-overflow assertion and failure diagnostics."
+    },
+    {
+      "name": "feedback-browser",
+      "command": "node tests/editor/path-joining-browser.cjs",
+      "startedAt": "2026-10-18T16:48:03.085183+00:00",
+      "elapsedSeconds": 19.25,
+      "exitCode": 1,
+      "log": "/tmp/evir-join-feedback-browser.log",
+      "diagnosis": "Recovery test reloaded before the 250ms debounced IndexedDB write had committed. Existing recovery contract and library tests wait for Saved in this browser; focused test now waits for that same durable-save signal."
+    }
+  ],
+  "responsiveReadiness": {
+    "observedAt": "2026-10-18T16:48:00.173836+00:00",
+    "observed": "Transient desktop media-rule geometry at emulated390px; settled390px geometry fits;320px fits too. Both resize notification and two frames alone were insufficient.",
+    "readiness": "Up to2000ms for three consecutive zero-overflow animation frames; original strict assertion still executes on deadline or readiness.",
+    "productionSiteCssChanged": false
+  },
+  "feedbackFollowup": "Success feedback, shape/text endpoint cues, real UI exports for both methods, and focused browser/build verification. Runtime geometry is unchanged; current UI source/native artifacts match the focused oracle hashes.",
+  "githubActionsAtInitialApplicationCommit": {
+    "jobs": [
+      117720599018,
+      117720599000
+    ],
+    "outcome": "Jobs could not start: account locked due to a billing issue."
+  },
+  "limits": [
+    "Two adjacent open unskinned sibling paths; no automatic smooth joins, gesture concatenation, gradients or arbitrary compound-contour editing.",
+    "No physical GPU/mobile, human or screen-reader certification.",
+    "Hosted backend deferred.",
+    "Product work in open PRs #36 and #37 is not included; only test-pixel transport corrections from #37 are reused."
+  ],
+  "restoredHistoricalGeneratedOutputs": 142
+}

@@ -1,0 +1,44 @@
+
+> evir-workspace@0.1.0 runtime:build
+> npm run build --workspace @evir/project-model --workspace @evir/runtime --workspace @evir/renderer-canvas --workspace @evir/authoring --workspace @evir/format --workspace @evir/commands
+
+
+> @evir/project-model@0.1.0 build
+> node ../../tools/build-package.mjs
+
+Built @evir/project-model@0.1.0 standalone module
+
+> @evir/runtime@0.1.0 build
+> node ../../tools/build-package.mjs
+
+Built @evir/runtime@0.1.0 standalone module
+
+> @evir/renderer-canvas@0.1.0 build
+> node ../../tools/build-package.mjs
+
+Built @evir/renderer-canvas@0.1.0 standalone module
+
+> @evir/authoring@0.1.0 build
+> node ../../tools/build-package.mjs
+
+Built @evir/authoring@0.1.0 standalone module
+
+> @evir/format@0.1.0 build
+> node ../../tools/build-package.mjs
+
+Built @evir/format@0.1.0 standalone module
+
+> @evir/commands@0.1.0 build
+> node ../../tools/build-package.mjs
+
+Built @evir/commands@0.1.0 standalone module
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice

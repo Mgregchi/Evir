@@ -1,0 +1,47 @@
+
+> evir-workspace@0.1.0 test:runtime
+> node --test tests/runtime/*.test.mjs
+
+✔ package imports have an acyclic graph and cannot reach applications, tools or Rive runtime dependencies (26.543798ms)
+✔ bounded shared patches are atomic, scoped and one undo step (80.109862ms)
+✔ requests retry without duplicate edits; changes, stale revisions and provisional edits reject (21.558201ms)
+✔ control manifests check bindings/types/ranges; presentation does not enter source; ready is host-confirmed (41.476962ms)
+✔ machine control triggers retry once; failed cyclic inputs retain last presentation and source (38.765733ms)
+✔ cache/event windows are bounded and stale evicted retries cannot fire again (804.529777ms)
+✔ control events carry audience values and large removals bound result/event IDs (24.252576ms)
+✔ playback, static reparent and a command-created machine retain validated source contracts (24.89511ms)
+✔ stdio MCP initialization, typed tools, patch/retry/conflict, bounded recovery and stop (296.695ms)
+✔ once, continuous and counted cycles stop at defined boundary poses, including large deltas (71.748274ms)
+✔ speed changes and zero speed preserve phase; ping-pong scrubbing can resume backwards (4.592862ms)
+✔ playback policies validate atomically and survive recovery/runtime serialization without legacy redundancy (18.631563ms)
+✔ machines apply counted, ping-pong and authored-speed policy while state timing remains real seconds (2.302804ms)
+✔ independent layers compose keyed axes and rotation, preserve clocks on speed changes and never reset unrelated artwork (5.635341ms)
+✔ native export carries mode/speed, fixed-count policy and keyed scope remain explicit host metadata (29.065109ms)
+✔ runtime snapshots exclude editor state and preserve source, skinning, animation and input contracts (30.606414ms)
+✔ runtime validates input types and preserves transitions, trigger consumption, click and reset (18.415476ms)
+✔ runtime seconds match source keyframe evaluation, loop/clamp and reset (7.200934ms)
+✔ runtime JSON loader validates references, schema and asset hashes without editor metadata (23.407327ms)
+✔ format package embeds the pinned schema and preserves published showcase bytes (26.582123ms)
+✔ speculative runtime forks retain phase and machine state without mutating their parent (16.704121ms)
+✔ runtime forks preserve an in-flight timed transition independently (27.941974ms)
+✔ stroke source and stripped runtime preserve their strict contracts and native records (152.456023ms)
+✔ stroke widths, colors and effect animation follow independent playback and reset (6.065611ms)
+✔ invalid strokes, incompatible version/skin/feather and excessive effect work reject atomically (46.047583ms)
+✔ stroke bounds include transformed width and effects keep a bounded contour output (12.713063ms)
+✔ the Trace study stays source-editable and native export contains stroke effects (18.139365ms)
+✔ semantic import rejects unsupported native stroke semantics and malformed parents without discarding paint (22.351607ms)
+✔ tiny dash construction stays bounded and keyed rectangle sizes cannot bypass the effect budget (47.842779ms)
+✔ thin rotated rectangle stroke bounds include all four painted corners (2.395619ms)
+ℹ tests 30
+ℹ suites 0
+ℹ pass 30
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1436.64337
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
