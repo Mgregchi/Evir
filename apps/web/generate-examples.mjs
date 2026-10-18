@@ -13,6 +13,7 @@ import { setKey, bindPath, setWeight } from '@evir/authoring';
 import { compileProject } from '@evir/format';
 import { mkdir, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
+import {weightStudy} from './weight-scene.mjs';
 const output = fileURLToPath(new URL('./assets/examples/', import.meta.url));
 
 function project(name, label) {
@@ -371,6 +372,7 @@ for(const original of await suite()){
 }
 Object.assign(factories,characterScenes(project));
 await mkdir(output,{recursive:true});
+factories.gust=()=>weightStudy(project);
 for(const name of exampleIds) {
   const p=factories[name]();validateProject(p);
   const compiled=compileProject(p);

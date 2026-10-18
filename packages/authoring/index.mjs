@@ -9,6 +9,8 @@ import {
   upgradeAdvanced,
   strokeValue,
 } from "@evir/project-model";
+import {bindSkin,setSkinWeights} from './skin.mjs';
+export {bindSkin,setSkinWeights} from './skin.mjs';
 import { shareState } from "./shared-state.mjs";
 import { quantize, components } from "@evir/runtime/geometry";
 const copy = (x) => structuredClone(x),
@@ -373,52 +375,11 @@ export function removePoint(p, nodeId, pointId) {
     g.skin.weights = g.skin.weights.filter((w) => w.pointId !== pointId);
 }
 export function bindPath(p, nodeId, boneIds) {
-  const n = p.nodes.find((n) => n.id === nodeId);
-  if (n.kind !== "path" || !boneIds.length || boneIds.length > 4)
-    throw Error("Select a path and one to four bones");
-  if (typeof n.geometry.fill !== "string") upgradeAdvanced(p);
-  const bindWorld = worldTransform(p, nodeId),
-    bones = boneIds.map((boneId) => {
-      const bone = p.nodes.find((v) => v.id === boneId);
-      if (bone?.kind !== "bone" || bone.artboardId !== n.artboardId)
-        throw Error("Choose bones in the same artboard");
-      const bind = worldTransform(p, boneId);
-      inverse(bind);
-      return { boneId, bind };
-    });
-  const weights = quantize(boneIds.map((b) => [b, 1 / boneIds.length]));
-  n.geometry.skin = {
-    bindWorld,
-    bones,
-    weights: n.geometry.points.map((v) => ({
-      pointId: v.id,
-      anchor: clone(weights),
-      in: clone(weights),
-      out: clone(weights),
-    })),
-  };
+  if(p.nodes.find(n=>n.id===nodeId)?.kind!=="path")throw Error("Select a path");
+  return bindSkin(p,nodeId,boneIds);
 }
-export function setWeight(p, nodeId, pointId, control, boneId, value) {
-  if (!Number.isFinite(value) || value < 0 || value > 1)
-    throw Error("Weight must be between 0 and 1");
-  const entry = p.nodes
-      .find((n) => n.id === nodeId)
-      .geometry.skin.weights.find((w) => w.pointId === pointId),
-    weights = entry[control];
-  if (weights.length === 1) {
-    entry[control] = [[boneId, 1]];
-    return;
-  }
-  const rest = weights.filter(([b]) => b !== boneId),
-    sum = rest.reduce((v, [b, w]) => v + w, 0);
-  entry[control] = quantize(
-    weights.map(([b, w]) => [
-      b,
-      b === boneId
-        ? value
-        : (1 - value) * (sum > 0 ? w / sum : 1 / rest.length),
-    ]),
-  );
+export function setWeight(p,nodeId,pointId,control,boneId,value){
+  return setSkinWeights(p,nodeId,[{pointId,control,boneId,value}]);
 }
 export function setValue(n, property, value) {
   if (property.startsWith("stroke.")) return strokeValue(n, property, value);
