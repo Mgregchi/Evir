@@ -73,6 +73,7 @@ test('local command input forks keep direct accumulation while rejected commands
 });
 
 test('malformed direct arrays and null children report project validation errors',()=>{
+ for(const machines of[[null],[{...directFixture().machines[0],states:[null]}]]){const p=directFixture();p.machines=machines;assert.throws(()=>validateProject(p),e=>e.name==='ProjectError'&&Array.isArray(e.issues));}
  for(const children of[null,{},[null,{animationId:'right',weight:100}]]){
   const p=directFixture();p.machines[0].states[0].blend.children=children;
   assert.throws(()=>validateProject(p),e=>e.name==='ProjectError'&&Array.isArray(e.issues));

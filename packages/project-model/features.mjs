@@ -442,7 +442,7 @@ export function validateFeatures(
     }
   }
   const directClips=new Set(p.machines.flatMap(m=>(Array.isArray(m?.states)?m.states:[]).flatMap(s=>s?.blend?.type==='direct'&&Array.isArray(s.blend.children)?s.blend.children.map(c=>c?.animationId):[])));
-  for(const m of p.machines)for(const s of m.states)if(s.blend?.type!=='direct'){
+  for(const m of p.machines)for(const s of(Array.isArray(m?.states)?m.states:[]))if(s&&s.blend?.type!=='direct'){
     const clips=Array.isArray(s.blend?.children)?s.blend.children.map(c=>c?.animationId):[s.animationId];
     if(clips.some(id=>directClips.has(id)))problem('machine '+m.id,'Direct child animations cannot also drive ordinary/1D states; use separate timelines');
   }
