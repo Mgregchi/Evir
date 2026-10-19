@@ -4,7 +4,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
  const root=path.resolve(__dirname,'../..'),output='apps/web/.test-build/learn',base='/learn-preview';
  execFileSync(process.execPath,['apps/web/build.mjs'],{cwd:root,env:{...process.env,SITE_URL:'https://learn.example'+base,EVIR_WEB_OUTPUT:output},stdio:'pipe'});
  const server=createStaticServer(path.join(root,output),base);await new Promise(r=>server.listen(0,'127.0.0.1',r));
- const origin='http://127.0.0.1:'+server.address().port,browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',args:['--no-sandbox']});
+ const origin='http://127.0.0.1:'+server.address().port,browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||(fs.existsSync('/usr/bin/chromium')?'/usr/bin/chromium':chromium.executablePath()),args:['--no-sandbox']});
  const report={checkedAt:new Date().toISOString(),browser:browser.version(),basePath:base,scope:'Cloud browser, keyboard navigation, asset delivery and automated accessibility; not first-time-user research.',viewports:[]};
  try{
   const page=await browser.newPage({reducedMotion:'reduce'}),errors=[];page.on('pageerror',e=>errors.push(e.message));
@@ -17,6 +17,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
    const details=page.locator('#next-skills details').first();await details.locator('summary').focus();await page.keyboard.press('Enter');assert.equal(await details.getAttribute('open'),'');await page.keyboard.press('Space');assert.equal(await details.getAttribute('open'),null);
    const missing=await page.locator('a[href^="#"]').evaluateAll(links=>links.map(a=>a.hash.slice(1)).filter(id=>id&&!document.getElementById(id)));assert.deepEqual(missing,[]);
    assert.equal(new URL(await page.getByRole('link',{name:'Open Studio',exact:false}).first().getAttribute('href'),origin).pathname,base+'/editor/studio/');
+   const opening=page.context().waitForEvent('page');await page.getByRole('link',{name:'Open Studio',exact:false}).first().click();const studio=await opening;await studio.waitForFunction(()=>window.evirStudio);assert.equal(new URL(studio.url()).pathname,base+'/editor/studio/');assert.equal(new URL(page.url()).pathname,base+'/learn/');await studio.close();
    const href=await page.getByRole('link',{name:'Download the finished lesson',exact:false}).getAttribute('href'),response=await fetch(new URL(href,origin));assert(response.ok);const p=await response.json();validateProject(p);assert.equal(p.nodes[0].name,'Sun');assert.equal(p.animations[0].tracks[0].keys.length,3);
    await page.addScriptTag({path:require.resolve('axe-core/axe.min.js')});assert.deepEqual(await page.evaluate(async()=>(await axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa']}})).violations.map(v=>({id:v.id,targets:v.nodes.map(n=>n.target)}))),[]);
    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);

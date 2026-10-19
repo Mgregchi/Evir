@@ -35,11 +35,11 @@ Learn has ten steps with expected results, plain-language definitions, a control
 7. Frame 120 → Properties Y=220.
 8. Playback settings → Loop, Continuous, speed 1 → Apply.
 9. Play/Pause and inspect frames; easing is an optional experiment.
-10. Save editable `.evir-project`; export `.riv` separately.
+10. Save editable source (normally `.evir-project.json`); export `.riv` separately.
 
 The new **Frame** field is preview state and never saved. It accepts whole frames within the animation duration. Enter or leaving an edited field seeks exactly, even if a fractional paused clock rounded to the same displayed number. Playback/scrubbing update the number unless it is being edited. Short-landscape Timeline/Machine buttons retain accessible names when CSS hides text.
 
-The guide explains modes, layers/grouping, position, drawing, point editing, keys/easing, playback and source/export differences. Compact instructions explain closing one drawer before opening the next. Examples are optional later learning material; `learn/#open-example` remains valid. Studio Help links to the lesson without new configuration.
+The guide explains modes, layers/grouping, position, drawing, point editing, keys/easing, playback and source/export differences. Compact instructions explain closing one drawer before opening the next. Examples are optional later learning material; `learn/#open-example` remains valid. Open Studio keeps the guide in its current tab and opens the workspace in a new tab; the browser acceptance checks this handoff. Studio Help links to the lesson without new configuration.
 
 `first-bounce.evir-project` is the exact completed lesson: one editable circle, no assets, three Y keys, a two-second loop and unchanged Design Y=220. Learn images are real Studio screenshots captured by completing the lesson. **Pocket garden**, original MIT artwork made with the same shape factory, contains a smiling sun, clouds, heart, speech bubble and three star-petal flowers with rounded pots: 38 named editable nodes, separate sun/flower motion and no imported image/font/Rive assets. Its poster is an actual renderer capture.
 
@@ -63,3 +63,5 @@ npm run validate:shapes
 ```
 
 The browser workflow captures Learn images and the edited lesson export: run it before the final web build/native oracle. Full required gates remain `test:editor`, `test:web`, `test:experience`, `validate:editor`, `test:runtime` and `runtime:build`. Physical tests stay postponed; backend implementation stays deferred.
+
+The cloud machine’s system Chromium 151 did not match pinned Playwright 1.63’s Chromium 153 (revision 1243). Two older aggregate browser flows timed out, while unchanged diagnostic reruns passed. The [official executablePath guidance](https://playwright.dev/docs/api/class-browsertype#browser-type-launch-option-executable-path) recommends the bundled version. Final checks explicitly select that downloaded build; three older workflows now honor the existing `CHROMIUM_PATH` override. This is an environment correction, not proof of the original timeout’s cause; assertions and pixel thresholds were retained.

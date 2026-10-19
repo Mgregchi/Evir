@@ -88,5 +88,14 @@
     "finalUrl": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details",
     "bytes": 196519,
     "sha256": "f00d08ee84c2662bed16bce4d967c3d3d0f77f6d8c08d1ee11562a6d9f1c84cd"
+  },
+  {
+    "name": "playwright-browser-version",
+    "url": "https://playwright.dev/docs/api/class-browsertype#browser-type-launch-option-executable-path",
+    "retrievedAt": "2026-10-19T18:23:46.626970+00:00",
+    "status": 200,
+    "bytes": 167791,
+    "sha256": "fc6f6fb986305614673cc0c4f2c899e947c8c2b76a05400fb2be673fd5599a61",
+    "observation": "Bundled Chromium recommended; other executable versions carry no compatibility guarantee."
   }
 ]
