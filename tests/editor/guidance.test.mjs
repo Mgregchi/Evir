@@ -5,6 +5,8 @@ test('editable import feedback identifies unsupported behavior without claiming 
  const d=explainImport(Error('DataConverterSystemNormalizer at byte 163: outside editable import subset; original file remains unchanged'));
  assert.equal(d.type,'DataConverterSystemNormalizer');assert.equal(d.offset,163);assert.match(d.message,/data converters/);assert.match(d.message,/Viewing the original/);assert(!/corrupt/.test(d.message));
  assert.match(explainImport(Error('ViewModel at byte 100: unsupported')).message,/data binding/);assert.match(explainImport(Error('Truncated Rive file')).message,/could not convert/);
+ assert.match(explainImport(Error('KeyedProperty at byte 203: animated Ellipse geometry cannot be preserved as editable controls')).message,/animated contour geometry/);
+ assert.match(explainImport(Error('StraightVertex at byte 80: rounded straight vertices are outside the editable contour subset')).message,/contour features/);
 });
 test('MCP setup uses absolute local paths, supports Windows and excludes fixed session IDs',()=>{
  assert.deepEqual(mcpConfiguration('/home/you/Evir/').mcpServers['evir-local'].args,['/home/you/Evir/tools/mcp-local.mjs','--project','/home/you/Evir/apps/web/assets/examples/compass.evir-project']);

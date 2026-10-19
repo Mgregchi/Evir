@@ -1,0 +1,179 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 3,
+  "id": "import-ellipse-animated-shape-project",
+  "name": "import-ellipse-animated-shape",
+  "artboards": [
+    {
+      "id": "import-ellipse-animated-shape-artboard-1",
+      "name": "Board",
+      "width": 256,
+      "height": 256
+    }
+  ],
+  "nodes": [
+    {
+      "id": "import-ellipse-animated-shape-node-1",
+      "name": "Contour",
+      "kind": "path",
+      "artboardId": "import-ellipse-animated-shape-artboard-1",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        100,
+        118
+      ],
+      "geometry": {
+        "fill": {
+          "type": "linear",
+          "start": [
+            45,
+            30
+          ],
+          "end": [
+            200,
+            190
+          ],
+          "stops": [
+            {
+              "position": 0,
+              "color": "#a1dfbdff"
+            },
+            {
+              "position": 1,
+              "color": "#d79771ff"
+            }
+          ]
+        },
+        "closed": true,
+        "skin": null,
+        "points": [
+          {
+            "id": "import-ellipse-animated-shape-point-1",
+            "anchor": [
+              45,
+              -22
+            ],
+            "in": [
+              20.147186257605004,
+              -22
+            ],
+            "out": [
+              69.852813742395,
+              -22
+            ]
+          },
+          {
+            "id": "import-ellipse-animated-shape-point-2",
+            "anchor": [
+              90,
+              8
+            ],
+            "in": [
+              90,
+              -8.56854249493
+            ],
+            "out": [
+              90,
+              24.56854249493
+            ]
+          },
+          {
+            "id": "import-ellipse-animated-shape-point-3",
+            "anchor": [
+              45,
+              38
+            ],
+            "in": [
+              69.852813742395,
+              38
+            ],
+            "out": [
+              20.147186257605004,
+              38
+            ]
+          },
+          {
+            "id": "import-ellipse-animated-shape-point-4",
+            "anchor": [
+              0,
+              8
+            ],
+            "in": [
+              0,
+              24.56854249493
+            ],
+            "out": [
+              0,
+              -8.56854249493
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [
+    {
+      "id": "import-ellipse-animated-shape-animation-1",
+      "name": "Motion",
+      "artboardId": "import-ellipse-animated-shape-artboard-1",
+      "fps": 60,
+      "duration": 120,
+      "loop": true,
+      "tracks": [
+        {
+          "targetId": "import-ellipse-animated-shape-node-1",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 60,
+              "value": 0.3499999940395355,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "import-ellipse-animated-shape-artboard-1": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  },
+  "advanced": {
+    "clips": [],
+    "feathers": [],
+    "ik": []
+  }
+}

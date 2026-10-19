@@ -1,0 +1,72 @@
+{
+  "checkedAt": "2026-10-18T08:36:14.537Z",
+  "scope": "Synthetic cloud Chromium editing; no physical-device/human evidence.",
+  "viewports": [
+    {
+      "width": 320,
+      "height": 844,
+      "checks": [
+        "numeric independent handle weights",
+        "invalid target preserves source",
+        "reachable bottom sheet and zero automated WCAG violations",
+        "whole-stroke undo/redo",
+        "Escape, pointer-cancel and simulated hidden rollback",
+        "path geometry preserved",
+        "normalized mesh slots",
+        "source/native download match",
+        "recovery without brush preferences",
+        "no overflow"
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "checks": [
+        "numeric independent handle weights",
+        "invalid target preserves source",
+        "reachable bottom sheet and zero automated WCAG violations",
+        "whole-stroke undo/redo",
+        "Escape, pointer-cancel and simulated hidden rollback",
+        "path geometry preserved",
+        "normalized mesh slots",
+        "source/native download match",
+        "recovery without brush preferences",
+        "no overflow",
+        "second-finger brush rollback"
+      ]
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "checks": [
+        "numeric independent handle weights",
+        "invalid target preserves source",
+        "reachable bottom sheet and zero automated WCAG violations",
+        "whole-stroke undo/redo",
+        "Escape, pointer-cancel and simulated hidden rollback",
+        "path geometry preserved",
+        "normalized mesh slots",
+        "source/native download match",
+        "recovery without brush preferences",
+        "no overflow"
+      ]
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "checks": [
+        "numeric independent handle weights",
+        "invalid target preserves source",
+        "reachable bottom sheet and zero automated WCAG violations",
+        "whole-stroke undo/redo",
+        "Escape, pointer-cancel and simulated hidden rollback",
+        "path geometry preserved",
+        "normalized mesh slots",
+        "source/native download match",
+        "recovery without brush preferences",
+        "no overflow"
+      ]
+    }
+  ],
+  "browser": "151.0.7922.173"
+}

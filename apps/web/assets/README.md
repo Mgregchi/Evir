@@ -1,16 +1,16 @@
-# Public showcase provenance
+# @evir/format
 
-Momo, Nura and Otto are original contemporary vector-character studies authored in `apps/web/character-scenes.mjs`. Their posters (`momo-poster.png`, `nura-poster.png`, `otto-poster.png`) are actual Canvas renders, not concept images or interface mockups. Their `.evir-project` sources contain only editable filled paths, groups and bones, with no raster/font assets; `.riv` exports carry the compatible artwork, three animation loops and number-driven Expressions machine. Nura's scarf uses the existing weighted path implementation. Supplied reference artwork guided general variety; no reference pixels or stock layers are redistributed. The Evir brand files remain unchanged.
+Explicit compatibility adapter: `compileProject(project, schema = runtimeSchema)` emits the currently tested `.riv` subset and source-ID mapping. The pinned schema is embedded by app/package builds, so editor export requires no research-server request. It is independent of the renderer/editor UI. The upstream schema's license is retained in `schema/LICENSE.rive` and the standalone distribution. The structural Python reader/writer remains a research tool at `tools/riv.py`; `importRiv` reconstructs the declared editable subset; general Editor-file conversion remains open. See [package boundaries and release instructions](https://github.com/Mgregchi/Evir/blob/main/packages/README.md).
 
-`milo-poster.png`, `orbit-poster.png`, `bloom-poster.png`, `tempo-poster.png` `signal-poster.png`, `gather-poster.png` and `wisp-poster.png` are browser captures of independently authored Evir projects in `examples/`. Their editable source uses Studio's project schema; their `.riv` files are built by Evir's existing subset compiler. No artwork from the supplied third-party Rive files is used here.
+Local linear/radial paints emit one gradient mutator per Fill with parent-linked GradientStop records. Supported endpoint/stop animation and skinned path paints follow the [current advanced contract](../../docs/30-advanced-2d-authoring.md).
 
-`studio-overview.png`, `studio-paths.png`, `studio-animation.png` and `studio-interact.png` are real 1440×900 screenshots captured from Evir Studio with the Milo project open. They are not interface mockups. Reproduce with `npm run web:assets` in the repository environment.
+Advanced 2D contracts, source/runtime versions, asset preparation/disposal, authoring controls, import coverage and remaining limits are documented in [the current feature contract](../../docs/30-advanced-2d-authoring.md).
 
-Both builds copy the existing Evir wordmark and favicon unchanged from `assets/brand/`. See [brand provenance](../../../assets/brand/README.md); no logo recoloring, replacement letterforms or remix is added by this site.
+Playback modes/counts/speed, independent timeline layers, the Sunday motorcycle and native export policy are documented in [playback and motorcycle contracts](../../docs/32-animation-playback-and-motorcycle.md).
 
-Example artwork and website source are original project contributions. Existing brand provenance is separate from the code's MIT license. Uploaded research files remain outside the public distribution.
+Native centered solid strokes now retain their centerlines through source/runtime validation, Canvas rendering, supported animation and `.riv` export/import. Studio provides a stroke bottom sheet and constant-width Freehand mode. See [native stroke contracts, workflow and limits](../../docs/41-native-strokes-and-path-effects.md); gradient/skinned strokes and full Editor-file import remain outside this increment.
 
-`evir-showcase.jpg` is an AI-generated story illustration, not an editor screenshot. It references the independently authored Milo poster: Bézier outlines → motion → an interactive hello. The original Evir wordmark/icon were not supplied to generation or altered. The original generated 1730×909 artwork was proportionally resized and center-cropped to 1200×630 JPEG (84,258 bytes); SHA-256 `d0d91f066db9cc869ad7815701245dcfff7dc4ec083709d936f825bff9393cab`. It is the Open Graph/Twitter image on every public page, using the default Evir address or a `SITE_URL` override. Actual Studio screenshots remain separately labeled.
+Static native contour import now converts mixed straight/mirrored/asymmetric/detached vertices, ellipses, rectangle origins and unskinned contour transforms into editable controls. Supported skin bindings and Shape/bone motion retain their existing contracts. Animated contour geometry, rounding, nondefault path flags and compound contours reject explicitly. See [contour import and Tide](../../docs/42-editable-riv-contours.md).
 
 [Gallery research and acceptance](../../../docs/23-growing-showcase-gallery.md) records each study’s supported features. Posters are actual Canvas renders; each study includes editable source and an Evir-compiled `.riv`.
 
@@ -26,3 +26,6 @@ Wisp’s organic outlines are generated sampled loops fitted with Studio’s fre
 
 `trace-poster.png` is an actual Evir Canvas render of the original editable Trace courier/postcard study. Its source and `.riv` live in `examples/trace.*`, generated by `../stroke-scene.mjs`. The original artwork is MIT licensed; no third-party reference illustration is embedded.
 `outing-poster.png`, `examples/outing.*` and `examples/outing-start.*` are original MIT Evir vector artwork from `../join-scene.mjs`: a curved fox holding a kite. The completed source is generated by joining the two starting string paths with shared authoring operations; the poster is an actual Evir Canvas capture. `outing.joining.json` is a readable recipe. No supplied stock imagery or modified brand artwork is used.
+
+
+`gust-poster.png` is an actual Canvas capture of the original Gust bird/scarf study generated by `../weight-scene.mjs`. `examples/gust.evir-project` and `.riv` include three-bone path/control weights and a ten-vertex mesh with a tiny generated original weave PNG. The artwork is original MIT project work; no supplied reference/corpus artwork or modified brand image is included.

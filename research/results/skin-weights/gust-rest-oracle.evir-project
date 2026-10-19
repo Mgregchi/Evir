@@ -1,0 +1,3529 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 3,
+  "id": "gust-project",
+  "name": "Gust — a scarf in the breeze",
+  "artboards": [
+    {
+      "id": "gust-board",
+      "name": "Gust — a scarf in the breeze",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "gust-sky",
+      "name": "sky",
+      "kind": "path",
+      "artboardId": "gust-board",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        256,
+        250
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e1ece1",
+        "skin": null,
+        "points": [
+          {
+            "id": "gust-sky-p0",
+            "anchor": [
+              202,
+              0
+            ],
+            "in": [
+              202,
+              -111.56151945959999
+            ],
+            "out": [
+              202,
+              111.56151945959999
+            ]
+          },
+          {
+            "id": "gust-sky-p1",
+            "anchor": [
+              0,
+              202
+            ],
+            "in": [
+              111.56151945959999,
+              202
+            ],
+            "out": [
+              -111.56151945959999,
+              202
+            ]
+          },
+          {
+            "id": "gust-sky-p2",
+            "anchor": [
+              -202,
+              0
+            ],
+            "in": [
+              -202,
+              111.56151945959999
+            ],
+            "out": [
+              -202,
+              -111.56151945959999
+            ]
+          },
+          {
+            "id": "gust-sky-p3",
+            "anchor": [
+              0,
+              -202
+            ],
+            "in": [
+              -111.56151945959999,
+              -202
+            ],
+            "out": [
+              111.56151945959999,
+              -202
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gust-sun",
+      "name": "sun",
+      "kind": "path",
+      "artboardId": "gust-board",
+      "parentId": null,
+      "order": 1,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        365,
+        127
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#edc19c",
+        "skin": null,
+        "points": [
+          {
+            "id": "gust-sun-p0",
+            "anchor": [
+              45,
+              0
+            ],
+            "in": [
+              45,
+              -24.852813741
+            ],
+            "out": [
+              45,
+              24.852813741
+            ]
+          },
+          {
+            "id": "gust-sun-p1",
+            "anchor": [
+              0,
+              45
+            ],
+            "in": [
+              24.852813741,
+              45
+            ],
+            "out": [
+              -24.852813741,
+              45
+            ]
+          },
+          {
+            "id": "gust-sun-p2",
+            "anchor": [
+              -45,
+              0
+            ],
+            "in": [
+              -45,
+              24.852813741
+            ],
+            "out": [
+              -45,
+              -24.852813741
+            ]
+          },
+          {
+            "id": "gust-sun-p3",
+            "anchor": [
+              0,
+              -45
+            ],
+            "in": [
+              -24.852813741,
+              -45
+            ],
+            "out": [
+              24.852813741,
+              -45
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gust-sun-light",
+      "name": "sun light",
+      "kind": "path",
+      "artboardId": "gust-board",
+      "parentId": null,
+      "order": 2,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        356,
+        118
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f4d4b2",
+        "skin": null,
+        "points": [
+          {
+            "id": "gust-sun-light-p0",
+            "anchor": [
+              30,
+              0
+            ],
+            "in": [
+              30,
+              -16.568542494
+            ],
+            "out": [
+              30,
+              16.568542494
+            ]
+          },
+          {
+            "id": "gust-sun-light-p1",
+            "anchor": [
+              0,
+              30
+            ],
+            "in": [
+              16.568542494,
+              30
+            ],
+            "out": [
+              -16.568542494,
+              30
+            ]
+          },
+          {
+            "id": "gust-sun-light-p2",
+            "anchor": [
+              -30,
+              0
+            ],
+            "in": [
+              -30,
+              16.568542494
+            ],
+            "out": [
+              -30,
+              -16.568542494
+            ]
+          },
+          {
+            "id": "gust-sun-light-p3",
+            "anchor": [
+              0,
+              -30
+            ],
+            "in": [
+              -16.568542494,
+              -30
+            ],
+            "out": [
+              16.568542494,
+              -30
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gust-branch",
+      "name": "branch",
+      "kind": "path",
+      "artboardId": "gust-board",
+      "parentId": null,
+      "order": 3,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#587967",
+        "skin": null,
+        "points": [
+          {
+            "id": "gust-branch-p0",
+            "anchor": [
+              55,
+              400
+            ],
+            "in": [
+              55,
+              400
+            ],
+            "out": [
+              55,
+              400
+            ]
+          },
+          {
+            "id": "gust-branch-p1",
+            "anchor": [
+              330,
+              400
+            ],
+            "in": [
+              330,
+              400
+            ],
+            "out": [
+              330,
+              400
+            ]
+          },
+          {
+            "id": "gust-branch-p2",
+            "anchor": [
+              344,
+              415
+            ],
+            "in": [
+              344,
+              415
+            ],
+            "out": [
+              344,
+              415
+            ]
+          },
+          {
+            "id": "gust-branch-p3",
+            "anchor": [
+              55,
+              415
+            ],
+            "in": [
+              55,
+              415
+            ],
+            "out": [
+              55,
+              415
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gust-little-bird",
+      "name": "little bird",
+      "kind": "group",
+      "artboardId": "gust-board",
+      "parentId": null,
+      "order": 4,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        188,
+        284
+      ],
+      "geometry": null
+    },
+    {
+      "id": "gust-tail",
+      "name": "tail",
+      "kind": "path",
+      "artboardId": "gust-board",
+      "parentId": "gust-little-bird",
+      "order": 5,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#346b58",
+        "skin": null,
+        "points": [
+          {
+            "id": "gust-tail-p0",
+            "anchor": [
+              -44,
+              60
+            ],
+            "in": [
+              -44,
+              60
+            ],
+            "out": [
+              -44,
+              60
+            ]
+          },
+          {
+            "id": "gust-tail-p1",
+            "anchor": [
+              26,
+              51
+            ],
+            "in": [
+              26,
+              51
+            ],
+            "out": [
+              26,
+              51
+            ]
+          },
+          {
+            "id": "gust-tail-p2",
+            "anchor": [
+              5,
+              111
+            ],
+            "in": [
+              5,
+              111
+            ],
+            "out": [
+              5,
+              111
+            ]
+          },
+          {
+            "id": "gust-tail-p3",
+            "anchor": [
+              -58,
+              119
+            ],
+            "in": [
+              -58,
+              119
+            ],
+            "out": [
+              -58,
+              119
+            ]
+          },
+          {
+            "id": "gust-tail-p4",
+            "anchor": [
+              -28,
+              85
+            ],
+            "in": [
+              -28,
+              85
+            ],
+            "out": [
+              -28,
+              85
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gust-body",
+      "name": "body",
+      "kind": "path",
+      "artboardId": "gust-board",
+      "parentId": "gust-little-bird",
+      "order": 6,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#438773",
+        "skin": null,
+        "points": [
+          {
+            "id": "gust-body-p0",
+            "anchor": [
+              -70,
+              40
+            ],
+            "in": [
+              -61,
+              85
+            ],
+            "out": [
+              -91,
+              -12
+            ]
+          },
+          {
+            "id": "gust-body-p1",
+            "anchor": [
+              -37,
+              -73
+            ],
+            "in": [
+              -72,
+              -60
+            ],
+            "out": [
+              -21,
+              -98
+            ]
+          },
+          {
+            "id": "gust-body-p2",
+            "anchor": [
+              34,
+              -77
+            ],
+            "in": [
+              10,
+              -96
+            ],
+            "out": [
+              83,
+              -61
+            ]
+          },
+          {
+            "id": "gust-body-p3",
+            "anchor": [
+              73,
+              -11
+            ],
+            "in": [
+              80,
+              -52
+            ],
+            "out": [
+              87,
+              45
+            ]
+          },
+          {
+            "id": "gust-body-p4",
+            "anchor": [
+              20,
+              91
+            ],
+            "in": [
+              66,
+              85
+            ],
+            "out": [
+              -27,
+              99
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gust-body-light",
+      "name": "body light",
+      "kind": "path",
+      "artboardId": "gust-board",
+      "parentId": "gust-little-bird",
+      "order": 7,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#9ad4b9",
+        "skin": null,
+        "points": [
+          {
+            "id": "gust-body-light-p0",
+            "anchor": [
+              -61,
+              34
+            ],
+            "in": [
+              -49,
+              78
+            ],
+            "out": [
+              -76,
+              -12
+            ]
+          },
+          {
+            "id": "gust-body-light-p1",
+            "anchor": [
+              -28,
+              -68
+            ],
+            "in": [
+              -61,
+              -56
+            ],
+            "out": [
+              -12,
+              -84
+            ]
+          },
+          {
+            "id": "gust-body-light-p2",
+            "anchor": [
+              33,
+              -68
+            ],
+            "in": [
+              13,
+              -85
+            ],
+            "out": [
+              70,
+              -54
+            ]
+          },
+          {
+            "id": "gust-body-light-p3",
+            "anchor": [
+              60,
+              -9
+            ],
+            "in": [
+              69,
+              -44
+            ],
+            "out": [
+              73,
+              40
+            ]
+          },
+          {
+            "id": "gust-body-light-p4",
+            "anchor": [
+              14,
+              79
+            ],
+            "in": [
+              52,
+              76
+            ],
+            "out": [
+              -24,
+              84
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gust-crest",
+      "name": "crest",
+      "kind": "path",
+      "artboardId": "gust-board",
+      "parentId": "gust-little-bird",
+      "order": 8,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#438773",
+        "skin": null,
+        "points": [
+          {
+            "id": "gust-crest-p0",
+            "anchor": [
+              -29,
+              -71
+            ],
+            "in": [
+              -29,
+              -71
+            ],
+            "out": [
+              -29,
+              -71
+            ]
+          },
+          {
+            "id": "gust-crest-p1",
+            "anchor": [
+              -45,
+              -113
+            ],
+            "in": [
+              -71,
+              -96
+            ],
+            "out": [
+              -7,
+              -117
+            ]
+          },
+          {
+            "id": "gust-crest-p2",
+            "anchor": [
+              11,
+              -80
+            ],
+            "in": [
+              28,
+              -104
+            ],
+            "out": [
+              11,
+              -80
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gust-face",
+      "name": "face",
+      "kind": "path",
+      "artboardId": "gust-board",
+      "parentId": "gust-little-bird",
+      "order": 9,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        24,
+        -34
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e8f2d8",
+        "skin": null,
+        "points": [
+          {
+            "id": "gust-face-p0",
+            "anchor": [
+              37,
+              0
+            ],
+            "in": [
+              37,
+              -17.6731119936
+            ],
+            "out": [
+              37,
+              17.6731119936
+            ]
+          },
+          {
+            "id": "gust-face-p1",
+            "anchor": [
+              0,
+              32
+            ],
+            "in": [
+              20.434535742599998,
+              32
+            ],
+            "out": [
+              -20.434535742599998,
+              32
+            ]
+          },
+          {
+            "id": "gust-face-p2",
+            "anchor": [
+              -37,
+              0
+            ],
+            "in": [
+              -37,
+              17.6731119936
+            ],
+            "out": [
+              -37,
+              -17.6731119936
+            ]
+          },
+          {
+            "id": "gust-face-p3",
+            "anchor": [
+              0,
+              -32
+            ],
+            "in": [
+              -20.434535742599998,
+              -32
+            ],
+            "out": [
+              20.434535742599998,
+              -32
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gust-eye",
+      "name": "eye",
+      "kind": "path",
+      "artboardId": "gust-board",
+      "parentId": "gust-little-bird",
+      "order": 10,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        36,
+        -41
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#234d40",
+        "skin": null,
+        "points": [
+          {
+            "id": "gust-eye-p0",
+            "anchor": [
+              7,
+              0
+            ],
+            "in": [
+              7,
+              -5.522847498
+            ],
+            "out": [
+              7,
+              5.522847498
+            ]
+          },
+          {
+            "id": "gust-eye-p1",
+            "anchor": [
+              0,
+              10
+            ],
+            "in": [
+              3.8659932485999997,
+              10
+            ],
+            "out": [
+              -3.8659932485999997,
+              10
+            ]
+          },
+          {
+            "id": "gust-eye-p2",
+            "anchor": [
+              -7,
+              0
+            ],
+            "in": [
+              -7,
+              5.522847498
+            ],
+            "out": [
+              -7,
+              -5.522847498
+            ]
+          },
+          {
+            "id": "gust-eye-p3",
+            "anchor": [
+              0,
+              -10
+            ],
+            "in": [
+              -3.8659932485999997,
+              -10
+            ],
+            "out": [
+              3.8659932485999997,
+              -10
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gust-glint",
+      "name": "glint",
+      "kind": "path",
+      "artboardId": "gust-board",
+      "parentId": "gust-little-bird",
+      "order": 11,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        34,
+        -45
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#fffaf0",
+        "skin": null,
+        "points": [
+          {
+            "id": "gust-glint-p0",
+            "anchor": [
+              2,
+              0
+            ],
+            "in": [
+              2,
+              -1.3807118745
+            ],
+            "out": [
+              2,
+              1.3807118745
+            ]
+          },
+          {
+            "id": "gust-glint-p1",
+            "anchor": [
+              0,
+              2.5
+            ],
+            "in": [
+              1.1045694996,
+              2.5
+            ],
+            "out": [
+              -1.1045694996,
+              2.5
+            ]
+          },
+          {
+            "id": "gust-glint-p2",
+            "anchor": [
+              -2,
+              0
+            ],
+            "in": [
+              -2,
+              1.3807118745
+            ],
+            "out": [
+              -2,
+              -1.3807118745
+            ]
+          },
+          {
+            "id": "gust-glint-p3",
+            "anchor": [
+              0,
+              -2.5
+            ],
+            "in": [
+              -1.1045694996,
+              -2.5
+            ],
+            "out": [
+              1.1045694996,
+              -2.5
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gust-beak",
+      "name": "beak",
+      "kind": "path",
+      "artboardId": "gust-board",
+      "parentId": "gust-little-bird",
+      "order": 12,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#dca36d",
+        "skin": null,
+        "points": [
+          {
+            "id": "gust-beak-p0",
+            "anchor": [
+              60,
+              -26
+            ],
+            "in": [
+              60,
+              -26
+            ],
+            "out": [
+              60,
+              -26
+            ]
+          },
+          {
+            "id": "gust-beak-p1",
+            "anchor": [
+              89,
+              -17
+            ],
+            "in": [
+              89,
+              -17
+            ],
+            "out": [
+              89,
+              -17
+            ]
+          },
+          {
+            "id": "gust-beak-p2",
+            "anchor": [
+              60,
+              -8
+            ],
+            "in": [
+              60,
+              -8
+            ],
+            "out": [
+              60,
+              -8
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gust-cheek",
+      "name": "cheek",
+      "kind": "path",
+      "artboardId": "gust-board",
+      "parentId": "gust-little-bird",
+      "order": 13,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        41,
+        -11
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e3b092",
+        "skin": null,
+        "points": [
+          {
+            "id": "gust-cheek-p0",
+            "anchor": [
+              12,
+              0
+            ],
+            "in": [
+              12,
+              -3.3137084987999996
+            ],
+            "out": [
+              12,
+              3.3137084987999996
+            ]
+          },
+          {
+            "id": "gust-cheek-p1",
+            "anchor": [
+              0,
+              6
+            ],
+            "in": [
+              6.627416997599999,
+              6
+            ],
+            "out": [
+              -6.627416997599999,
+              6
+            ]
+          },
+          {
+            "id": "gust-cheek-p2",
+            "anchor": [
+              -12,
+              0
+            ],
+            "in": [
+              -12,
+              3.3137084987999996
+            ],
+            "out": [
+              -12,
+              -3.3137084987999996
+            ]
+          },
+          {
+            "id": "gust-cheek-p3",
+            "anchor": [
+              0,
+              -6
+            ],
+            "in": [
+              -6.627416997599999,
+              -6
+            ],
+            "out": [
+              6.627416997599999,
+              -6
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gust-wing",
+      "name": "wing",
+      "kind": "path",
+      "artboardId": "gust-board",
+      "parentId": "gust-little-bird",
+      "order": 14,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#5aa889",
+        "skin": null,
+        "points": [
+          {
+            "id": "gust-wing-p0",
+            "anchor": [
+              -48,
+              12
+            ],
+            "in": [
+              -52,
+              50
+            ],
+            "out": [
+              -26,
+              -15
+            ]
+          },
+          {
+            "id": "gust-wing-p1",
+            "anchor": [
+              31,
+              17
+            ],
+            "in": [
+              17,
+              -4
+            ],
+            "out": [
+              8,
+              64
+            ]
+          },
+          {
+            "id": "gust-wing-p2",
+            "anchor": [
+              -37,
+              58
+            ],
+            "in": [
+              -2,
+              64
+            ],
+            "out": [
+              -49,
+              47
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gust-leg--19",
+      "name": "leg  19",
+      "kind": "path",
+      "artboardId": "gust-board",
+      "parentId": "gust-little-bird",
+      "order": 15,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -19,
+        88
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#dca36d",
+        "skin": null,
+        "points": [
+          {
+            "id": "gust-leg--19-p0",
+            "anchor": [
+              3,
+              0
+            ],
+            "in": [
+              1.3431457506000002,
+              0
+            ],
+            "out": [
+              3,
+              0
+            ]
+          },
+          {
+            "id": "gust-leg--19-p1",
+            "anchor": [
+              4,
+              0
+            ],
+            "in": [
+              4,
+              0
+            ],
+            "out": [
+              5.6568542494,
+              0
+            ]
+          },
+          {
+            "id": "gust-leg--19-p2",
+            "anchor": [
+              7,
+              3
+            ],
+            "in": [
+              7,
+              1.3431457506000002
+            ],
+            "out": [
+              7,
+              3
+            ]
+          },
+          {
+            "id": "gust-leg--19-p3",
+            "anchor": [
+              7,
+              22
+            ],
+            "in": [
+              7,
+              22
+            ],
+            "out": [
+              7,
+              23.6568542494
+            ]
+          },
+          {
+            "id": "gust-leg--19-p4",
+            "anchor": [
+              4,
+              25
+            ],
+            "in": [
+              5.6568542494,
+              25
+            ],
+            "out": [
+              4,
+              25
+            ]
+          },
+          {
+            "id": "gust-leg--19-p5",
+            "anchor": [
+              3,
+              25
+            ],
+            "in": [
+              3,
+              25
+            ],
+            "out": [
+              1.3431457506000002,
+              25
+            ]
+          },
+          {
+            "id": "gust-leg--19-p6",
+            "anchor": [
+              0,
+              22
+            ],
+            "in": [
+              0,
+              23.6568542494
+            ],
+            "out": [
+              0,
+              22
+            ]
+          },
+          {
+            "id": "gust-leg--19-p7",
+            "anchor": [
+              0,
+              3
+            ],
+            "in": [
+              0,
+              3
+            ],
+            "out": [
+              0,
+              1.3431457506000002
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gust-foot--19",
+      "name": "foot  19",
+      "kind": "path",
+      "artboardId": "gust-board",
+      "parentId": "gust-little-bird",
+      "order": 16,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -24,
+        108
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#dca36d",
+        "skin": null,
+        "points": [
+          {
+            "id": "gust-foot--19-p0",
+            "anchor": [
+              3,
+              0
+            ],
+            "in": [
+              1.3431457506000002,
+              0
+            ],
+            "out": [
+              3,
+              0
+            ]
+          },
+          {
+            "id": "gust-foot--19-p1",
+            "anchor": [
+              20,
+              0
+            ],
+            "in": [
+              20,
+              0
+            ],
+            "out": [
+              21.6568542494,
+              0
+            ]
+          },
+          {
+            "id": "gust-foot--19-p2",
+            "anchor": [
+              23,
+              3
+            ],
+            "in": [
+              23,
+              1.3431457506000002
+            ],
+            "out": [
+              23,
+              3
+            ]
+          },
+          {
+            "id": "gust-foot--19-p3",
+            "anchor": [
+              23,
+              3
+            ],
+            "in": [
+              23,
+              3
+            ],
+            "out": [
+              23,
+              4.6568542494
+            ]
+          },
+          {
+            "id": "gust-foot--19-p4",
+            "anchor": [
+              20,
+              6
+            ],
+            "in": [
+              21.6568542494,
+              6
+            ],
+            "out": [
+              20,
+              6
+            ]
+          },
+          {
+            "id": "gust-foot--19-p5",
+            "anchor": [
+              3,
+              6
+            ],
+            "in": [
+              3,
+              6
+            ],
+            "out": [
+              1.3431457506000002,
+              6
+            ]
+          },
+          {
+            "id": "gust-foot--19-p6",
+            "anchor": [
+              0,
+              3
+            ],
+            "in": [
+              0,
+              4.6568542494
+            ],
+            "out": [
+              0,
+              3
+            ]
+          },
+          {
+            "id": "gust-foot--19-p7",
+            "anchor": [
+              0,
+              3
+            ],
+            "in": [
+              0,
+              3
+            ],
+            "out": [
+              0,
+              1.3431457506000002
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gust-leg-13",
+      "name": "leg 13",
+      "kind": "path",
+      "artboardId": "gust-board",
+      "parentId": "gust-little-bird",
+      "order": 17,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        13,
+        88
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#dca36d",
+        "skin": null,
+        "points": [
+          {
+            "id": "gust-leg-13-p0",
+            "anchor": [
+              3,
+              0
+            ],
+            "in": [
+              1.3431457506000002,
+              0
+            ],
+            "out": [
+              3,
+              0
+            ]
+          },
+          {
+            "id": "gust-leg-13-p1",
+            "anchor": [
+              4,
+              0
+            ],
+            "in": [
+              4,
+              0
+            ],
+            "out": [
+              5.6568542494,
+              0
+            ]
+          },
+          {
+            "id": "gust-leg-13-p2",
+            "anchor": [
+              7,
+              3
+            ],
+            "in": [
+              7,
+              1.3431457506000002
+            ],
+            "out": [
+              7,
+              3
+            ]
+          },
+          {
+            "id": "gust-leg-13-p3",
+            "anchor": [
+              7,
+              22
+            ],
+            "in": [
+              7,
+              22
+            ],
+            "out": [
+              7,
+              23.6568542494
+            ]
+          },
+          {
+            "id": "gust-leg-13-p4",
+            "anchor": [
+              4,
+              25
+            ],
+            "in": [
+              5.6568542494,
+              25
+            ],
+            "out": [
+              4,
+              25
+            ]
+          },
+          {
+            "id": "gust-leg-13-p5",
+            "anchor": [
+              3,
+              25
+            ],
+            "in": [
+              3,
+              25
+            ],
+            "out": [
+              1.3431457506000002,
+              25
+            ]
+          },
+          {
+            "id": "gust-leg-13-p6",
+            "anchor": [
+              0,
+              22
+            ],
+            "in": [
+              0,
+              23.6568542494
+            ],
+            "out": [
+              0,
+              22
+            ]
+          },
+          {
+            "id": "gust-leg-13-p7",
+            "anchor": [
+              0,
+              3
+            ],
+            "in": [
+              0,
+              3
+            ],
+            "out": [
+              0,
+              1.3431457506000002
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gust-foot-13",
+      "name": "foot 13",
+      "kind": "path",
+      "artboardId": "gust-board",
+      "parentId": "gust-little-bird",
+      "order": 18,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        8,
+        108
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#dca36d",
+        "skin": null,
+        "points": [
+          {
+            "id": "gust-foot-13-p0",
+            "anchor": [
+              3,
+              0
+            ],
+            "in": [
+              1.3431457506000002,
+              0
+            ],
+            "out": [
+              3,
+              0
+            ]
+          },
+          {
+            "id": "gust-foot-13-p1",
+            "anchor": [
+              20,
+              0
+            ],
+            "in": [
+              20,
+              0
+            ],
+            "out": [
+              21.6568542494,
+              0
+            ]
+          },
+          {
+            "id": "gust-foot-13-p2",
+            "anchor": [
+              23,
+              3
+            ],
+            "in": [
+              23,
+              1.3431457506000002
+            ],
+            "out": [
+              23,
+              3
+            ]
+          },
+          {
+            "id": "gust-foot-13-p3",
+            "anchor": [
+              23,
+              3
+            ],
+            "in": [
+              23,
+              3
+            ],
+            "out": [
+              23,
+              4.6568542494
+            ]
+          },
+          {
+            "id": "gust-foot-13-p4",
+            "anchor": [
+              20,
+              6
+            ],
+            "in": [
+              21.6568542494,
+              6
+            ],
+            "out": [
+              20,
+              6
+            ]
+          },
+          {
+            "id": "gust-foot-13-p5",
+            "anchor": [
+              3,
+              6
+            ],
+            "in": [
+              3,
+              6
+            ],
+            "out": [
+              1.3431457506000002,
+              6
+            ]
+          },
+          {
+            "id": "gust-foot-13-p6",
+            "anchor": [
+              0,
+              3
+            ],
+            "in": [
+              0,
+              4.6568542494
+            ],
+            "out": [
+              0,
+              3
+            ]
+          },
+          {
+            "id": "gust-foot-13-p7",
+            "anchor": [
+              0,
+              3
+            ],
+            "in": [
+              0,
+              3
+            ],
+            "out": [
+              0,
+              1.3431457506000002
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gust-scarf-root",
+      "name": "scarf root",
+      "kind": "bone",
+      "artboardId": "gust-board",
+      "parentId": null,
+      "order": 19,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        235,
+        330
+      ],
+      "geometry": {
+        "length": 78
+      }
+    },
+    {
+      "id": "gust-scarf-middle",
+      "name": "scarf middle",
+      "kind": "bone",
+      "artboardId": "gust-board",
+      "parentId": "gust-scarf-root",
+      "order": 20,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "length": 78
+      }
+    },
+    {
+      "id": "gust-scarf-tip",
+      "name": "scarf tip",
+      "kind": "bone",
+      "artboardId": "gust-board",
+      "parentId": "gust-scarf-middle",
+      "order": 21,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "length": 70
+      }
+    },
+    {
+      "id": "gust-scarf-edge",
+      "name": "scarf edge",
+      "kind": "path",
+      "artboardId": "gust-board",
+      "parentId": null,
+      "order": 22,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#805b4c",
+        "skin": {
+          "bindWorld": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "bones": [
+            {
+              "boneId": "gust-scarf-root",
+              "bind": [
+                1,
+                0,
+                0,
+                1,
+                235,
+                330
+              ]
+            },
+            {
+              "boneId": "gust-scarf-middle",
+              "bind": [
+                1,
+                0,
+                0,
+                1,
+                313,
+                330
+              ]
+            },
+            {
+              "boneId": "gust-scarf-tip",
+              "bind": [
+                1,
+                0,
+                0,
+                1,
+                391,
+                330
+              ]
+            }
+          ],
+          "weights": [
+            {
+              "pointId": "gust-scarf-edge-p0",
+              "anchor": [
+                [
+                  "gust-scarf-root",
+                  1
+                ],
+                [
+                  "gust-scarf-middle",
+                  0
+                ],
+                [
+                  "gust-scarf-tip",
+                  0
+                ]
+              ],
+              "in": [
+                [
+                  "gust-scarf-root",
+                  1
+                ],
+                [
+                  "gust-scarf-middle",
+                  0
+                ],
+                [
+                  "gust-scarf-tip",
+                  0
+                ]
+              ],
+              "out": [
+                [
+                  "gust-scarf-root",
+                  1
+                ],
+                [
+                  "gust-scarf-middle",
+                  0
+                ],
+                [
+                  "gust-scarf-tip",
+                  0
+                ]
+              ]
+            },
+            {
+              "pointId": "gust-scarf-edge-p1",
+              "anchor": [
+                [
+                  "gust-scarf-root",
+                  0.10196078431372549
+                ],
+                [
+                  "gust-scarf-middle",
+                  0.8980392156862745
+                ],
+                [
+                  "gust-scarf-tip",
+                  0
+                ]
+              ],
+              "in": [
+                [
+                  "gust-scarf-root",
+                  0.4745098039215686
+                ],
+                [
+                  "gust-scarf-middle",
+                  0.5254901960784314
+                ],
+                [
+                  "gust-scarf-tip",
+                  0
+                ]
+              ],
+              "out": [
+                [
+                  "gust-scarf-root",
+                  0
+                ],
+                [
+                  "gust-scarf-middle",
+                  0.6392156862745098
+                ],
+                [
+                  "gust-scarf-tip",
+                  0.3607843137254902
+                ]
+              ]
+            },
+            {
+              "pointId": "gust-scarf-edge-p2",
+              "anchor": [
+                [
+                  "gust-scarf-root",
+                  0
+                ],
+                [
+                  "gust-scarf-middle",
+                  0
+                ],
+                [
+                  "gust-scarf-tip",
+                  1
+                ]
+              ],
+              "in": [
+                [
+                  "gust-scarf-root",
+                  0
+                ],
+                [
+                  "gust-scarf-middle",
+                  0.10196078431372549
+                ],
+                [
+                  "gust-scarf-tip",
+                  0.8980392156862745
+                ]
+              ],
+              "out": [
+                [
+                  "gust-scarf-root",
+                  0
+                ],
+                [
+                  "gust-scarf-middle",
+                  0
+                ],
+                [
+                  "gust-scarf-tip",
+                  1
+                ]
+              ]
+            },
+            {
+              "pointId": "gust-scarf-edge-p3",
+              "anchor": [
+                [
+                  "gust-scarf-root",
+                  0
+                ],
+                [
+                  "gust-scarf-middle",
+                  0
+                ],
+                [
+                  "gust-scarf-tip",
+                  1
+                ]
+              ],
+              "in": [
+                [
+                  "gust-scarf-root",
+                  0
+                ],
+                [
+                  "gust-scarf-middle",
+                  0
+                ],
+                [
+                  "gust-scarf-tip",
+                  1
+                ]
+              ],
+              "out": [
+                [
+                  "gust-scarf-root",
+                  0
+                ],
+                [
+                  "gust-scarf-middle",
+                  0
+                ],
+                [
+                  "gust-scarf-tip",
+                  1
+                ]
+              ]
+            },
+            {
+              "pointId": "gust-scarf-edge-p4",
+              "anchor": [
+                [
+                  "gust-scarf-root",
+                  0
+                ],
+                [
+                  "gust-scarf-middle",
+                  1
+                ],
+                [
+                  "gust-scarf-tip",
+                  0
+                ]
+              ],
+              "in": [
+                [
+                  "gust-scarf-root",
+                  0
+                ],
+                [
+                  "gust-scarf-middle",
+                  0.3843137254901961
+                ],
+                [
+                  "gust-scarf-tip",
+                  0.615686274509804
+                ]
+              ],
+              "out": [
+                [
+                  "gust-scarf-root",
+                  0.48627450980392156
+                ],
+                [
+                  "gust-scarf-middle",
+                  0.5137254901960784
+                ],
+                [
+                  "gust-scarf-tip",
+                  0
+                ]
+              ]
+            },
+            {
+              "pointId": "gust-scarf-edge-p5",
+              "anchor": [
+                [
+                  "gust-scarf-root",
+                  1
+                ],
+                [
+                  "gust-scarf-middle",
+                  0
+                ],
+                [
+                  "gust-scarf-tip",
+                  0
+                ]
+              ],
+              "in": [
+                [
+                  "gust-scarf-root",
+                  1
+                ],
+                [
+                  "gust-scarf-middle",
+                  0
+                ],
+                [
+                  "gust-scarf-tip",
+                  0
+                ]
+              ],
+              "out": [
+                [
+                  "gust-scarf-root",
+                  1
+                ],
+                [
+                  "gust-scarf-middle",
+                  0
+                ],
+                [
+                  "gust-scarf-tip",
+                  0
+                ]
+              ]
+            }
+          ]
+        },
+        "points": [
+          {
+            "id": "gust-scarf-edge-p0",
+            "anchor": [
+              226,
+              309
+            ],
+            "in": [
+              226,
+              309
+            ],
+            "out": [
+              226,
+              309
+            ]
+          },
+          {
+            "id": "gust-scarf-edge-p1",
+            "anchor": [
+              305,
+              300
+            ],
+            "in": [
+              276,
+              293
+            ],
+            "out": [
+              341,
+              309
+            ]
+          },
+          {
+            "id": "gust-scarf-edge-p2",
+            "anchor": [
+              425,
+              302
+            ],
+            "in": [
+              383,
+              289
+            ],
+            "out": [
+              452,
+              304
+            ]
+          },
+          {
+            "id": "gust-scarf-edge-p3",
+            "anchor": [
+              438,
+              346
+            ],
+            "in": [
+              454,
+              330
+            ],
+            "out": [
+              393,
+              365
+            ]
+          },
+          {
+            "id": "gust-scarf-edge-p4",
+            "anchor": [
+              313,
+              343
+            ],
+            "in": [
+              361,
+              365
+            ],
+            "out": [
+              275,
+              325
+            ]
+          },
+          {
+            "id": "gust-scarf-edge-p5",
+            "anchor": [
+              226,
+              351
+            ],
+            "in": [
+              226,
+              351
+            ],
+            "out": [
+              226,
+              351
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gust-flying-scarf",
+      "name": "flying scarf",
+      "kind": "path",
+      "artboardId": "gust-board",
+      "parentId": null,
+      "order": 23,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e8ad89",
+        "skin": {
+          "bindWorld": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "bones": [
+            {
+              "boneId": "gust-scarf-root",
+              "bind": [
+                1,
+                0,
+                0,
+                1,
+                235,
+                330
+              ]
+            },
+            {
+              "boneId": "gust-scarf-middle",
+              "bind": [
+                1,
+                0,
+                0,
+                1,
+                313,
+                330
+              ]
+            },
+            {
+              "boneId": "gust-scarf-tip",
+              "bind": [
+                1,
+                0,
+                0,
+                1,
+                391,
+                330
+              ]
+            }
+          ],
+          "weights": [
+            {
+              "pointId": "gust-flying-scarf-p0",
+              "anchor": [
+                [
+                  "gust-scarf-root",
+                  1
+                ],
+                [
+                  "gust-scarf-middle",
+                  0
+                ],
+                [
+                  "gust-scarf-tip",
+                  0
+                ]
+              ],
+              "in": [
+                [
+                  "gust-scarf-root",
+                  1
+                ],
+                [
+                  "gust-scarf-middle",
+                  0
+                ],
+                [
+                  "gust-scarf-tip",
+                  0
+                ]
+              ],
+              "out": [
+                [
+                  "gust-scarf-root",
+                  1
+                ],
+                [
+                  "gust-scarf-middle",
+                  0
+                ],
+                [
+                  "gust-scarf-tip",
+                  0
+                ]
+              ]
+            },
+            {
+              "pointId": "gust-flying-scarf-p1",
+              "anchor": [
+                [
+                  "gust-scarf-root",
+                  0.10196078431372549
+                ],
+                [
+                  "gust-scarf-middle",
+                  0.8980392156862745
+                ],
+                [
+                  "gust-scarf-tip",
+                  0
+                ]
+              ],
+              "in": [
+                [
+                  "gust-scarf-root",
+                  0.4627450980392157
+                ],
+                [
+                  "gust-scarf-middle",
+                  0.5372549019607843
+                ],
+                [
+                  "gust-scarf-tip",
+                  0
+                ]
+              ],
+              "out": [
+                [
+                  "gust-scarf-root",
+                  0
+                ],
+                [
+                  "gust-scarf-middle",
+                  0.615686274509804
+                ],
+                [
+                  "gust-scarf-tip",
+                  0.3843137254901961
+                ]
+              ]
+            },
+            {
+              "pointId": "gust-flying-scarf-p2",
+              "anchor": [
+                [
+                  "gust-scarf-root",
+                  0
+                ],
+                [
+                  "gust-scarf-middle",
+                  0
+                ],
+                [
+                  "gust-scarf-tip",
+                  1
+                ]
+              ],
+              "in": [
+                [
+                  "gust-scarf-root",
+                  0
+                ],
+                [
+                  "gust-scarf-middle",
+                  0.1411764705882353
+                ],
+                [
+                  "gust-scarf-tip",
+                  0.8588235294117647
+                ]
+              ],
+              "out": [
+                [
+                  "gust-scarf-root",
+                  0
+                ],
+                [
+                  "gust-scarf-middle",
+                  0
+                ],
+                [
+                  "gust-scarf-tip",
+                  1
+                ]
+              ]
+            },
+            {
+              "pointId": "gust-flying-scarf-p3",
+              "anchor": [
+                [
+                  "gust-scarf-root",
+                  0
+                ],
+                [
+                  "gust-scarf-middle",
+                  0
+                ],
+                [
+                  "gust-scarf-tip",
+                  1
+                ]
+              ],
+              "in": [
+                [
+                  "gust-scarf-root",
+                  0
+                ],
+                [
+                  "gust-scarf-middle",
+                  0
+                ],
+                [
+                  "gust-scarf-tip",
+                  1
+                ]
+              ],
+              "out": [
+                [
+                  "gust-scarf-root",
+                  0
+                ],
+                [
+                  "gust-scarf-middle",
+                  0
+                ],
+                [
+                  "gust-scarf-tip",
+                  1
+                ]
+              ]
+            },
+            {
+              "pointId": "gust-flying-scarf-p4",
+              "anchor": [
+                [
+                  "gust-scarf-root",
+                  0
+                ],
+                [
+                  "gust-scarf-middle",
+                  1
+                ],
+                [
+                  "gust-scarf-tip",
+                  0
+                ]
+              ],
+              "in": [
+                [
+                  "gust-scarf-root",
+                  0
+                ],
+                [
+                  "gust-scarf-middle",
+                  0.396078431372549
+                ],
+                [
+                  "gust-scarf-tip",
+                  0.6039215686274509
+                ]
+              ],
+              "out": [
+                [
+                  "gust-scarf-root",
+                  0.48627450980392156
+                ],
+                [
+                  "gust-scarf-middle",
+                  0.5137254901960784
+                ],
+                [
+                  "gust-scarf-tip",
+                  0
+                ]
+              ]
+            },
+            {
+              "pointId": "gust-flying-scarf-p5",
+              "anchor": [
+                [
+                  "gust-scarf-root",
+                  1
+                ],
+                [
+                  "gust-scarf-middle",
+                  0
+                ],
+                [
+                  "gust-scarf-tip",
+                  0
+                ]
+              ],
+              "in": [
+                [
+                  "gust-scarf-root",
+                  1
+                ],
+                [
+                  "gust-scarf-middle",
+                  0
+                ],
+                [
+                  "gust-scarf-tip",
+                  0
+                ]
+              ],
+              "out": [
+                [
+                  "gust-scarf-root",
+                  1
+                ],
+                [
+                  "gust-scarf-middle",
+                  0
+                ],
+                [
+                  "gust-scarf-tip",
+                  0
+                ]
+              ]
+            }
+          ]
+        },
+        "points": [
+          {
+            "id": "gust-flying-scarf-p0",
+            "anchor": [
+              232,
+              315
+            ],
+            "in": [
+              232,
+              315
+            ],
+            "out": [
+              232,
+              315
+            ]
+          },
+          {
+            "id": "gust-flying-scarf-p1",
+            "anchor": [
+              305,
+              307
+            ],
+            "in": [
+              277,
+              299
+            ],
+            "out": [
+              343,
+              315
+            ]
+          },
+          {
+            "id": "gust-flying-scarf-p2",
+            "anchor": [
+              422,
+              309
+            ],
+            "in": [
+              380,
+              297
+            ],
+            "out": [
+              441,
+              309
+            ]
+          },
+          {
+            "id": "gust-flying-scarf-p3",
+            "anchor": [
+              431,
+              340
+            ],
+            "in": [
+              441,
+              329
+            ],
+            "out": [
+              393,
+              356
+            ]
+          },
+          {
+            "id": "gust-flying-scarf-p4",
+            "anchor": [
+              313,
+              336
+            ],
+            "in": [
+              360,
+              356
+            ],
+            "out": [
+              275,
+              319
+            ]
+          },
+          {
+            "id": "gust-flying-scarf-p5",
+            "anchor": [
+              232,
+              344
+            ],
+            "in": [
+              232,
+              344
+            ],
+            "out": [
+              232,
+              344
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gust-woven-panel",
+      "name": "woven panel",
+      "kind": "mesh",
+      "artboardId": "gust-board",
+      "parentId": null,
+      "order": 24,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "assetId": "gust-weave",
+        "vertices": [
+          {
+            "id": "gust-weave-0-0",
+            "position": [
+              246,
+              323
+            ],
+            "uv": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "gust-weave-1-0",
+            "position": [
+              288,
+              323
+            ],
+            "uv": [
+              0.25,
+              0
+            ]
+          },
+          {
+            "id": "gust-weave-2-0",
+            "position": [
+              330,
+              323
+            ],
+            "uv": [
+              0.5,
+              0
+            ]
+          },
+          {
+            "id": "gust-weave-3-0",
+            "position": [
+              372,
+              323
+            ],
+            "uv": [
+              0.75,
+              0
+            ]
+          },
+          {
+            "id": "gust-weave-4-0",
+            "position": [
+              414,
+              323
+            ],
+            "uv": [
+              1,
+              0
+            ]
+          },
+          {
+            "id": "gust-weave-0-1",
+            "position": [
+              246,
+              332
+            ],
+            "uv": [
+              0,
+              1
+            ]
+          },
+          {
+            "id": "gust-weave-1-1",
+            "position": [
+              288,
+              332
+            ],
+            "uv": [
+              0.25,
+              1
+            ]
+          },
+          {
+            "id": "gust-weave-2-1",
+            "position": [
+              330,
+              332
+            ],
+            "uv": [
+              0.5,
+              1
+            ]
+          },
+          {
+            "id": "gust-weave-3-1",
+            "position": [
+              372,
+              332
+            ],
+            "uv": [
+              0.75,
+              1
+            ]
+          },
+          {
+            "id": "gust-weave-4-1",
+            "position": [
+              414,
+              332
+            ],
+            "uv": [
+              1,
+              1
+            ]
+          }
+        ],
+        "triangles": [
+          0,
+          1,
+          5,
+          1,
+          6,
+          5,
+          1,
+          2,
+          6,
+          2,
+          7,
+          6,
+          2,
+          3,
+          7,
+          3,
+          8,
+          7,
+          3,
+          4,
+          8,
+          4,
+          9,
+          8
+        ],
+        "skin": {
+          "bindWorld": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "bones": [
+            {
+              "boneId": "gust-scarf-root",
+              "bind": [
+                1,
+                0,
+                0,
+                1,
+                235,
+                330
+              ]
+            },
+            {
+              "boneId": "gust-scarf-middle",
+              "bind": [
+                1,
+                0,
+                0,
+                1,
+                313,
+                330
+              ]
+            },
+            {
+              "boneId": "gust-scarf-tip",
+              "bind": [
+                1,
+                0,
+                0,
+                1,
+                391,
+                330
+              ]
+            }
+          ],
+          "weights": [
+            {
+              "pointId": "gust-weave-0-0",
+              "anchor": [
+                [
+                  "gust-scarf-root",
+                  0.8588235294117647
+                ],
+                [
+                  "gust-scarf-middle",
+                  0.1411764705882353
+                ],
+                [
+                  "gust-scarf-tip",
+                  0
+                ]
+              ],
+              "in": [
+                [
+                  "gust-scarf-root",
+                  0.8588235294117647
+                ],
+                [
+                  "gust-scarf-middle",
+                  0.1411764705882353
+                ],
+                [
+                  "gust-scarf-tip",
+                  0
+                ]
+              ],
+              "out": [
+                [
+                  "gust-scarf-root",
+                  0.8588235294117647
+                ],
+                [
+                  "gust-scarf-middle",
+                  0.1411764705882353
+                ],
+                [
+                  "gust-scarf-tip",
+                  0
+                ]
+              ]
+            },
+            {
+              "pointId": "gust-weave-1-0",
+              "anchor": [
+                [
+                  "gust-scarf-root",
+                  0.3215686274509804
+                ],
+                [
+                  "gust-scarf-middle",
+                  0.6784313725490196
+                ],
+                [
+                  "gust-scarf-tip",
+                  0
+                ]
+              ],
+              "in": [
+                [
+                  "gust-scarf-root",
+                  0.3215686274509804
+                ],
+                [
+                  "gust-scarf-middle",
+                  0.6784313725490196
+                ],
+                [
+                  "gust-scarf-tip",
+                  0
+                ]
+              ],
+              "out": [
+                [
+                  "gust-scarf-root",
+                  0.3215686274509804
+                ],
+                [
+                  "gust-scarf-middle",
+                  0.6784313725490196
+                ],
+                [
+                  "gust-scarf-tip",
+                  0
+                ]
+              ]
+            },
+            {
+              "pointId": "gust-weave-2-0",
+              "anchor": [
+                [
+                  "gust-scarf-root",
+                  0
+                ],
+                [
+                  "gust-scarf-middle",
+                  0.7803921568627451
+                ],
+                [
+                  "gust-scarf-tip",
+                  0.2196078431372549
+                ]
+              ],
+              "in": [
+                [
+                  "gust-scarf-root",
+                  0
+                ],
+                [
+                  "gust-scarf-middle",
+                  0.7803921568627451
+                ],
+                [
+                  "gust-scarf-tip",
+                  0.2196078431372549
+                ]
+              ],
+              "out": [
+                [
+                  "gust-scarf-root",
+                  0
+                ],
+                [
+                  "gust-scarf-middle",
+                  0.7803921568627451
+                ],
+                [
+                  "gust-scarf-tip",
+                  0.2196078431372549
+                ]
+              ]
+            },
+            {
+              "pointId": "gust-weave-3-0",
+              "anchor": [
+                [
+                  "gust-scarf-root",
+                  0
+                ],
+                [
+                  "gust-scarf-middle",
+                  0.24313725490196078
+                ],
+                [
+                  "gust-scarf-tip",
+                  0.7568627450980392
+                ]
+              ],
+              "in": [
+                [
+                  "gust-scarf-root",
+                  0
+                ],
+                [
+                  "gust-scarf-middle",
+                  0.24313725490196078
+                ],
+                [
+                  "gust-scarf-tip",
+                  0.7568627450980392
+                ]
+              ],
+              "out": [
+                [
+                  "gust-scarf-root",
+                  0
+                ],
+                [
+                  "gust-scarf-middle",
+                  0.24313725490196078
+                ],
+                [
+                  "gust-scarf-tip",
+                  0.7568627450980392
+                ]
+              ]
+            },
+            {
+              "pointId": "gust-weave-4-0",
+              "anchor": [
+                [
+                  "gust-scarf-root",
+                  0
+                ],
+                [
+                  "gust-scarf-middle",
+                  0
+                ],
+                [
+                  "gust-scarf-tip",
+                  1
+                ]
+              ],
+              "in": [
+                [
+                  "gust-scarf-root",
+                  0
+                ],
+                [
+                  "gust-scarf-middle",
+                  0
+                ],
+                [
+                  "gust-scarf-tip",
+                  1
+                ]
+              ],
+              "out": [
+                [
+                  "gust-scarf-root",
+                  0
+                ],
+                [
+                  "gust-scarf-middle",
+                  0
+                ],
+                [
+                  "gust-scarf-tip",
+                  1
+                ]
+              ]
+            },
+            {
+              "pointId": "gust-weave-0-1",
+              "anchor": [
+                [
+                  "gust-scarf-root",
+                  0.8588235294117647
+                ],
+                [
+                  "gust-scarf-middle",
+                  0.1411764705882353
+                ],
+                [
+                  "gust-scarf-tip",
+                  0
+                ]
+              ],
+              "in": [
+                [
+                  "gust-scarf-root",
+                  0.8588235294117647
+                ],
+                [
+                  "gust-scarf-middle",
+                  0.1411764705882353
+                ],
+                [
+                  "gust-scarf-tip",
+                  0
+                ]
+              ],
+              "out": [
+                [
+                  "gust-scarf-root",
+                  0.8588235294117647
+                ],
+                [
+                  "gust-scarf-middle",
+                  0.1411764705882353
+                ],
+                [
+                  "gust-scarf-tip",
+                  0
+                ]
+              ]
+            },
+            {
+              "pointId": "gust-weave-1-1",
+              "anchor": [
+                [
+                  "gust-scarf-root",
+                  0.3215686274509804
+                ],
+                [
+                  "gust-scarf-middle",
+                  0.6784313725490196
+                ],
+                [
+                  "gust-scarf-tip",
+                  0
+                ]
+              ],
+              "in": [
+                [
+                  "gust-scarf-root",
+                  0.3215686274509804
+                ],
+                [
+                  "gust-scarf-middle",
+                  0.6784313725490196
+                ],
+                [
+                  "gust-scarf-tip",
+                  0
+                ]
+              ],
+              "out": [
+                [
+                  "gust-scarf-root",
+                  0.3215686274509804
+                ],
+                [
+                  "gust-scarf-middle",
+                  0.6784313725490196
+                ],
+                [
+                  "gust-scarf-tip",
+                  0
+                ]
+              ]
+            },
+            {
+              "pointId": "gust-weave-2-1",
+              "anchor": [
+                [
+                  "gust-scarf-root",
+                  0
+                ],
+                [
+                  "gust-scarf-middle",
+                  0.7803921568627451
+                ],
+                [
+                  "gust-scarf-tip",
+                  0.2196078431372549
+                ]
+              ],
+              "in": [
+                [
+                  "gust-scarf-root",
+                  0
+                ],
+                [
+                  "gust-scarf-middle",
+                  0.7803921568627451
+                ],
+                [
+                  "gust-scarf-tip",
+                  0.2196078431372549
+                ]
+              ],
+              "out": [
+                [
+                  "gust-scarf-root",
+                  0
+                ],
+                [
+                  "gust-scarf-middle",
+                  0.7803921568627451
+                ],
+                [
+                  "gust-scarf-tip",
+                  0.2196078431372549
+                ]
+              ]
+            },
+            {
+              "pointId": "gust-weave-3-1",
+              "anchor": [
+                [
+                  "gust-scarf-root",
+                  0
+                ],
+                [
+                  "gust-scarf-middle",
+                  0.24313725490196078
+                ],
+                [
+                  "gust-scarf-tip",
+                  0.7568627450980392
+                ]
+              ],
+              "in": [
+                [
+                  "gust-scarf-root",
+                  0
+                ],
+                [
+                  "gust-scarf-middle",
+                  0.24313725490196078
+                ],
+                [
+                  "gust-scarf-tip",
+                  0.7568627450980392
+                ]
+              ],
+              "out": [
+                [
+                  "gust-scarf-root",
+                  0
+                ],
+                [
+                  "gust-scarf-middle",
+                  0.24313725490196078
+                ],
+                [
+                  "gust-scarf-tip",
+                  0.7568627450980392
+                ]
+              ]
+            },
+            {
+              "pointId": "gust-weave-4-1",
+              "anchor": [
+                [
+                  "gust-scarf-root",
+                  0
+                ],
+                [
+                  "gust-scarf-middle",
+                  0
+                ],
+                [
+                  "gust-scarf-tip",
+                  1
+                ]
+              ],
+              "in": [
+                [
+                  "gust-scarf-root",
+                  0
+                ],
+                [
+                  "gust-scarf-middle",
+                  0
+                ],
+                [
+                  "gust-scarf-tip",
+                  1
+                ]
+              ],
+              "out": [
+                [
+                  "gust-scarf-root",
+                  0
+                ],
+                [
+                  "gust-scarf-middle",
+                  0
+                ],
+                [
+                  "gust-scarf-tip",
+                  1
+                ]
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "gust-scarf-knot",
+      "name": "scarf knot",
+      "kind": "path",
+      "artboardId": "gust-board",
+      "parentId": null,
+      "order": 25,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        229,
+        332
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#bd7f60",
+        "skin": null,
+        "points": [
+          {
+            "id": "gust-scarf-knot-p0",
+            "anchor": [
+              20,
+              0
+            ],
+            "in": [
+              20,
+              -14.911688244599999
+            ],
+            "out": [
+              20,
+              14.911688244599999
+            ]
+          },
+          {
+            "id": "gust-scarf-knot-p1",
+            "anchor": [
+              0,
+              27
+            ],
+            "in": [
+              11.045694996,
+              27
+            ],
+            "out": [
+              -11.045694996,
+              27
+            ]
+          },
+          {
+            "id": "gust-scarf-knot-p2",
+            "anchor": [
+              -20,
+              0
+            ],
+            "in": [
+              -20,
+              14.911688244599999
+            ],
+            "out": [
+              -20,
+              -14.911688244599999
+            ]
+          },
+          {
+            "id": "gust-scarf-knot-p3",
+            "anchor": [
+              0,
+              -27
+            ],
+            "in": [
+              -11.045694996,
+              -27
+            ],
+            "out": [
+              11.045694996,
+              -27
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gust-knot-light",
+      "name": "knot light",
+      "kind": "path",
+      "artboardId": "gust-board",
+      "parentId": null,
+      "order": 26,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        224,
+        327
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#edbb94",
+        "skin": null,
+        "points": [
+          {
+            "id": "gust-knot-light-p0",
+            "anchor": [
+              12,
+              0
+            ],
+            "in": [
+              12,
+              -9.9411254964
+            ],
+            "out": [
+              12,
+              9.9411254964
+            ]
+          },
+          {
+            "id": "gust-knot-light-p1",
+            "anchor": [
+              0,
+              18
+            ],
+            "in": [
+              6.627416997599999,
+              18
+            ],
+            "out": [
+              -6.627416997599999,
+              18
+            ]
+          },
+          {
+            "id": "gust-knot-light-p2",
+            "anchor": [
+              -12,
+              0
+            ],
+            "in": [
+              -12,
+              9.9411254964
+            ],
+            "out": [
+              -12,
+              -9.9411254964
+            ]
+          },
+          {
+            "id": "gust-knot-light-p3",
+            "anchor": [
+              0,
+              -18
+            ],
+            "in": [
+              -6.627416997599999,
+              -18
+            ],
+            "out": [
+              6.627416997599999,
+              -18
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "assets": [
+    {
+      "id": "gust-weave",
+      "name": "Original tiny weave",
+      "mimeType": "image/png",
+      "data": "iVBORw0KGgoAAAANSUhEUgAAACAAAAAICAYAAACYhf2vAAAAXElEQVR4AcXBsQ3AMAgAwbeV2ZiEholomITOy2QNR0gp6blb9z2XQQ+/9KAjppT0oCOmlPSgI6aU9KCzGbYZtu57LoMefulBR0wp6UFHTCnpQUdMKelBZzNsM+wDD8IdN0N+QJoAAAAASUVORK5CYII=",
+      "sha256": "f36c06d2c9b1bf94392b0e433397ade559983433c67bd190337813ad3be71af7"
+    }
+  ],
+  "animations": [],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "gust-board": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  },
+  "advanced": {
+    "clips": [],
+    "feathers": [],
+    "ik": []
+  }
+}

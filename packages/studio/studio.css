@@ -1647,3 +1647,9 @@ body > #notice {
 #advanced-sheet:has(.path-join-sheet) .dialog-actions button:last-child{background:var(--accent);color:#142b23;font-weight:650}
 #mobile-panel:has(~ #advanced-sheet .path-join-sheet)::backdrop{background:transparent}
 @media(max-width:850px){dialog#advanced-sheet:has(.path-join-sheet){--join-edge:24px;width:100%;max-width:none;max-height:85dvh;bottom:0;border-radius:18px 18px 0 0;padding:24px 20px max(24px,env(safe-area-inset-bottom))}}
+
+.skin-weight-legend {display:flex; flex-wrap:wrap; gap:.6rem 1rem; list-style:none; padding:0;}
+.skin-weight-legend li {display:flex; align-items:center; gap:.45rem;}
+.skin-weight-legend li::before {content:""; width:.75rem; height:.75rem; border-radius:50%; background:var(--weight-color); border:1px solid #ffffff60;}
+.skin-weight-fields [role="status"] {font-size:.85rem; line-height:1.6; overflow-wrap:anywhere;}
+#stop-weight-painting {min-height:36px; margin-left:8px; white-space:nowrap; font-size:.75rem;}

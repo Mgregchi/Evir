@@ -32,6 +32,7 @@ import {
 import { strokeControls } from "./stroke.mjs";
 import { strokePathOnContext, strokeStyle } from "@evir/renderer-canvas";
 import { paintControls } from "./paint.mjs";
+import {mountSkinWeights} from './skin-weights.mjs';
 import { mountAuthoring } from "./authoring.mjs";
 import { PenDraft } from "./pen.mjs";
 import { FreehandDraft } from "./freehand.mjs";
@@ -68,7 +69,7 @@ document.querySelector(".brand").href = config.publicSiteUrl;
 document.querySelector("#studio-home").href = config.publicSiteUrl;
 document.querySelector("#startup-step").textContent =
   "Restoring your local project…";
-let authoring;
+let authoring, weightTools;
 const $ = (s) => document.querySelector(s);
 const element = (tag, text, cls) => {
   const e = document.createElement(tag);
@@ -263,9 +264,9 @@ const recoveryQueue = new RecoveryQueue({
   },
 });
 document.addEventListener("visibilitychange", () => {
-  if (document.hidden) recoveryQueue.flush();
+  if(document.hidden){if(drag?.kind==="weights"){cancelDrag();resetTouches();}recoveryQueue.flush();}
 });
-window.addEventListener("pagehide", () => recoveryQueue.flush());
+window.addEventListener("pagehide", () => {if(drag?.kind==="weights"){cancelDrag();resetTouches();}recoveryQueue.flush();});
 function install(p) {
   recoveryQueue.cancel();
   clearLayerDrop();
@@ -278,6 +279,7 @@ function install(p) {
   fittedView = true;
   ++generation;
   authoring?.reset();
+  weightTools?.stop();
   store = new History(p);
   activeArtboard = p.artboards[0].id;
   selected = null;
@@ -335,6 +337,7 @@ function setTool(next, installing = false) {
   }
   cancelDrag();
   tool = next;
+  if(next!=="select")weightTools?.stop();
   $("#select-tool").setAttribute("aria-pressed", String(next === "select"));
   $("#pan-tool").setAttribute("aria-pressed", String(next === "pan"));
   $("#pen-tool").setAttribute("aria-pressed", String(next === "pen"));
@@ -347,7 +350,7 @@ function toolCursor() {
     ? "grab"
     : ["pen", "freehand"].includes(tool)
       ? "crosshair"
-      : "default";
+      : weightTools?.active ? "crosshair" : "default";
 }
 function penReady() {
   if (projectSwitchPending) { notice("Wait for this project to finish opening."); return false; }
@@ -596,6 +599,7 @@ function draw() {
   }
   if (tool !== "pen" && selectedIds.size <= 1)
     authoring?.overlay(ctx, p, n, c.zoom);
+  if(tool==="select" && selectedIds.size<=1)weightTools?.overlay(ctx,p,n,c.zoom);
   const reference = p.nodes.find((n) => n.id === alignmentKey);
   if (reference && authoring?.mode === "Design" && selectedIds.has(reference.id)) {
     const b = bounds(p, reference);
@@ -1028,6 +1032,7 @@ function properties(p) {
       host.append(continuationControls(n, {start:beginContinuation, notice, visible:available(p,n,"hidden")}));
     if (n.kind === 'path' && authoring?.mode === 'Design')host.append(pathJoinControls(p,n,joinApi));
     advanced?.properties(p, n, host);
+    weightTools?.controls(p,n,host);
   }
   const hierarchy = section("Organization"),
     label = element("label", undefined, "field");
@@ -1131,6 +1136,7 @@ function render() {
       p.nodes.some((n) => n.id === id && n.artboardId === activeArtboard),
     ),
   );
+  weightTools?.sync(p,p.nodes.find(n=>n.id===selected));
   const focusedLayer =
     document.activeElement?.closest(".layer-select")?.dataset.nodeId;
   $("#project-name").value = p.name;
@@ -1495,6 +1501,12 @@ stage.addEventListener("pointerdown", (e) => {
   }
   const p = project(),
     world = { x: (start.x - c.x) / c.zoom, y: (start.y - c.y) / c.zoom };
+  if(tool==="select" && selectedIds.size===1 && weightTools?.active){
+    try{
+      const brush=weightTools.begin(p,p.nodes.find(n=>n.id===selected),world,c.zoom);
+      if(brush){store.begin("Paint skin weights");brush.move(world);store.preview(q=>brush.apply(q));drag={kind:"weights",pointerId:e.pointerId,c,brush,start};stage.setPointerCapture(e.pointerId);draw();e.preventDefault();return;}
+    }catch(error){if(store.active)store.cancel();notice(error);e.preventDefault();return;}
+  }
   if (["pen", "freehand"].includes(tool)) {
     if (penDraft?.dragging) return;
     if (tool === "freehand" && penDraft) {
@@ -1684,6 +1696,9 @@ stage.addEventListener("pointermove", (e) => {
     draw();
     return;
   }
+  if(!drag && weightTools?.active && tool==="select"){
+    const pos=coordinates(e),c=camera();weightTools.hover({x:(pos.x-c.x)/c.zoom,y:(pos.y-c.y)/c.zoom});draw();
+  }
   if (!drag || e.pointerId !== drag.pointerId) return;
   const now = coordinates(e),
     dx = (now.x - drag.start.x) / drag.c.zoom,
@@ -1697,6 +1712,10 @@ stage.addEventListener("pointermove", (e) => {
     };
     draw();
     return;
+  }
+  if(drag.kind==="weights"){
+    try{for(const event of [...(e.getCoalescedEvents?.()??[]),e]){const point=coordinates(event);drag.brush.move({x:(point.x-drag.c.x)/drag.c.zoom,y:(point.y-drag.c.y)/drag.c.zoom});}weightTools.hover({x:(now.x-drag.c.x)/drag.c.zoom,y:(now.y-drag.c.y)/drag.c.zoom});store.preview(q=>drag.brush.apply(q));draw();}
+    catch(error){cancelDrag();notice(error);}return;
   }
   if (drag.kind === "guide") { canvasGuides.move(now); draw(); return; }
   if (drag.kind === "marquee") {
@@ -1808,6 +1827,10 @@ function finishDrag(e) {
     return;
   }
   if (!drag || e.pointerId !== drag.pointerId) return;
+  if(drag.kind==="weights"){
+    try{const point=coordinates(e);drag.brush.move({x:(point.x-drag.c.x)/drag.c.zoom,y:(point.y-drag.c.y)/drag.c.zoom});store.preview(q=>drag.brush.apply(q));}
+    catch(error){cancelDrag();notice(error);return;}
+  }
   if (drag.kind === "guide") canvasGuides.finish();
   else if (!["pan", "marquee"].includes(drag.kind)) store.commit();
   drag = null;
@@ -2341,6 +2364,7 @@ window.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     if (penDraft) cancelPen();
     else if (drag) cancelDrag();
+    else if(weightTools?.active){weightTools.stop();render();return;}
     else if (canvasGuides?.escape()) return;
     else if (["pen", "freehand"].includes(tool)) setTool("select");
     else select(node()?.parentId || null);
@@ -2530,6 +2554,7 @@ authoring = mountAuthoring({
   beforeMode: () => {
     if (!penReady()) return false;
     if (selectedIds.size > 1) setSelection(selected ? [selected] : []);
+    weightTools?.stop();
     setTool("select");
     return true;
   },
@@ -2543,6 +2568,10 @@ advanced = mountAdvanced({
   select,
   notice,
 });
+weightTools=mountSkinWeights({authored:()=>store.snapshot(),project,selected:()=>selected,mode:()=>authoring.mode,revision:()=>store.revision,
+  editable:(p,n)=>editable(p,n,"locked")&&editable(p,n,"hidden"),ready:penReady,cancel:cancelDrag,
+  commit:(label,fn)=>edit(label,fn,true),draw,notice,refresh:render,cursor:()=>{stage.style.cursor=toolCursor();},
+  activate:()=>{setTool("select");render();if(matchMedia("(max-width:850px)").matches)document.querySelector("#close-panel")?.click();},focusStage:()=>stage.focus()});
 window.addEventListener("pagehide", (e) => {
   if (!e.persisted) { sceneAssets.dispose(); library?.close(); }
 });
