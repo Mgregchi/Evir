@@ -8,6 +8,7 @@ import {
   defaultStroke, STROKE_CAPS, STROKE_JOINS,
 } from "@evir/project-model";
 import schema from "./schema/runtime.json" with { type: "json" };
+import {contourTypes, vertexTypes, editableContour, isIdentityContour} from './contours.mjs';
 const types = new Map(
   Object.entries(schema.types).map(([id, t]) => [Number(id), t]),
 );
@@ -166,8 +167,12 @@ const editableTypes = new Set([
   "Bone",
   "Shape",
   "Rectangle",
+  "Ellipse",
   "PointsPath",
   "CubicDetachedVertex",
+  "CubicMirroredVertex",
+  "CubicAsymmetricVertex",
+  "StraightVertex",
   "CubicWeight",
   "Weight",
   "Skin",
@@ -245,8 +250,12 @@ async function decodeProject(input) {
     Shape: [...trs, "opacity"],
     RootBone: [...trs, "length"],
     Bone: [...common, "rotation", "scaleX", "scaleY", "length"],
-    Rectangle: [...common, "width", "height", "originX", "originY"],
-    PointsPath: [...common, "isClosed"],
+    Rectangle: [...trs, "pathFlags", "width", "height", "originX", "originY", "linkCornerRadius", "cornerRadiusTL", "cornerRadiusTR", "cornerRadiusBL", "cornerRadiusBR"],
+    Ellipse: [...trs, "pathFlags", "width", "height", "originX", "originY"],
+    PointsPath: [...trs, "pathFlags", "isClosed"],
+    StraightVertex: [...common, "x", "y", "radius"],
+    CubicMirroredVertex: [...common, "x", "y", "rotation", "distance"],
+    CubicAsymmetricVertex: [...common, "x", "y", "rotation", "inDistance", "outDistance"],
     CubicDetachedVertex: [
       ...common,
       "x",
@@ -394,6 +403,16 @@ async function decodeProject(input) {
       const parent=components[r.fields.parentId ?? 0];
       const required={Stroke:"Shape",TrimPath:"Stroke",DashPath:"Stroke",Dash:"DashPath"}[r.type];
       if(required && parent?.type!==required)fail(r,"unsupported stroke-effect parent; import would discard data");
+      if(contourTypes.has(r.type) && parent?.type!=="Shape")fail(r,"editable contours must belong directly to one Shape");
+      if(vertexTypes.has(r.type) && parent?.type!=="PointsPath")fail(r,"editable vertices must belong to a PointsPath");
+      if(r.type==="Skin" && !["PointsPath","Mesh"].includes(parent?.type))fail(r,"skin must belong to editable path or mesh geometry");
+      if(r.type==="Tendon" && parent?.type!=="Skin")fail(r,"tendon must belong to a skin");
+      if(["Weight","CubicWeight"].includes(r.type)) {
+        const cubic=vertexTypes.has(parent?.type)&&parent.type!=="StraightVertex";
+        if(cubic ? r.type!=="CubicWeight" : r.type!=="Weight" || !["StraightVertex","MeshVertex","ContourMeshVertex"].includes(parent?.type))
+          fail(r,"vertex weight type must match its straight/cubic geometry");
+        if(!children(parent.fields.parentId).some(v=>v.r.type==="Skin"))fail(r,"vertex weights require an owning skin");
+      }
     }
     const single = (list, r, label) => {
       if (list.length !== 1) fail(r, "expected exactly one " + label);
@@ -517,7 +536,7 @@ async function decodeProject(input) {
       } else if (r.type === "Shape") {
         const shape = single(
           children(i).filter((v) =>
-            ["Rectangle", "PointsPath"].includes(v.r.type),
+            contourTypes.has(v.r.type),
           ),
           r,
           "shape contour",
@@ -526,47 +545,14 @@ async function decodeProject(input) {
         if(fills.length>1 || (!fills.length && !s))fail(r,"expected one fill and/or one supported stroke");
         if(s && fills.length && children(i).find(v=>v.r.type==="Stroke").i<fills[0].i)fail(r,"only fill-before-stroke paint order is editable");
         n.geometry = {fill: fills.length ? fill(i,id) : null, ...(s ? {stroke:s} : {})};
-        if (shape.r.type === "Rectangle") {
-          n.kind = "rectangle";
-          if (
-            (shape.r.fields.originX ?? 0.5) !== 0 ||
-            (shape.r.fields.originY ?? 0.5) !== 0
-          )
-            fail(shape.r, "rectangle origin must be top left");
-          Object.assign(n.geometry, {
-            width: shape.r.fields.width ?? 0,
-            height: shape.r.fields.height ?? 0,
-          });
+        const vertices=children(shape.i).filter(v=>vertexTypes.has(v.r.type));
+        const skin=children(shape.i).filter(v=>v.r.type==="Skin");
+        if(skin.length && !isIdentityContour(shape.r.fields))fail(shape.r,"transformed skinned contours are outside the editable subset");
+        const decoded=editableContour(shape.r,vertices,{fail,pointId:()=>newId("point")});
+        n.kind=decoded.kind;Object.assign(n.geometry,decoded.geometry);
+        if (n.kind === "rectangle") {
           targets.set(shape.i + "/20", { node: id, property: "width" });
           targets.set(shape.i + "/21", { node: id, property: "height" });
-        } else {
-          n.kind = "path";
-          Object.assign(n.geometry, {
-            closed: shape.r.fields.isClosed ?? false,
-            skin: null,
-            points: children(shape.i)
-              .filter((v) => v.r.type === "CubicDetachedVertex")
-              .map(({ r }) => {
-                const f = r.fields,
-                  anchor = [f.x ?? 0, f.y ?? 0];
-                return {
-                  id: newId("point"),
-                  anchor,
-                  in: [
-                    anchor[0] +
-                      Math.cos(f.inRotation ?? 0) * (f.inDistance ?? 0),
-                    anchor[1] +
-                      Math.sin(f.inRotation ?? 0) * (f.inDistance ?? 0),
-                  ],
-                  out: [
-                    anchor[0] +
-                      Math.cos(f.outRotation ?? 0) * (f.outDistance ?? 0),
-                    anchor[1] +
-                      Math.sin(f.outRotation ?? 0) * (f.outDistance ?? 0),
-                  ],
-                };
-              }),
-          });
         }
       } else if (r.type === "Text") {
         if (f.originValue !== 1) fail(r, "text must use baseline origin");
@@ -642,7 +628,9 @@ async function decodeProject(input) {
         ["PointsPath", "Mesh"].includes(v.r.type),
       );
       if (contour) {
-        const skin = children(contour.i).find((v) => v.r.type === "Skin");
+        const skins=children(contour.i).filter(v=>v.r.type==="Skin");
+        if(skins.length>1)fail(contour.r,"expected at most one skin");
+        const skin=skins[0];
         if (skin) {
           const tendons = children(skin.i).filter((v) => v.r.type === "Tendon"),
             bones = tendons.map((v) => ({
@@ -663,9 +651,7 @@ async function decodeProject(input) {
             return out;
           };
           const vertices = children(contour.i).filter((v) =>
-            ["CubicDetachedVertex", "MeshVertex", "ContourMeshVertex"].includes(
-              v.r.type,
-            ),
+            vertexTypes.has(v.r.type) || ["MeshVertex", "ContourMeshVertex"].includes(v.r.type),
           );
           n.geometry.skin = {
             bindWorld: matrix(skin.r.fields),
@@ -680,17 +666,20 @@ async function decodeProject(input) {
                 ),
                 f = weight.r.fields,
                 anchor = unpack(f.indices ?? 0, f.values ?? 0);
+              const straight=v.r.type==="StraightVertex";
+              if(n.kind==="path" && weight.r.type!==(straight?"Weight":"CubicWeight"))
+                fail(weight.r,"vertex weight type must match its straight/cubic geometry");
               return {
                 pointId: (n.kind === "path"
                   ? n.geometry.points
                   : n.geometry.vertices)[j].id,
                 anchor,
                 in:
-                  n.kind === "path"
+                  n.kind === "path" && !straight
                     ? unpack(f.inIndices ?? 0, f.inValues ?? 0)
                     : anchor,
                 out:
-                  n.kind === "path"
+                  n.kind === "path" && !straight
                     ? unpack(f.outIndices ?? 0, f.outValues ?? 0)
                     : anchor,
               };
@@ -771,7 +760,12 @@ async function decodeProject(input) {
       } else if (r.type === "KeyedObject") object = f.objectId;
       else if (r.type === "KeyedProperty") {
         const target = targets.get(object + "/" + f.propertyKey);
-        if (!target) fail(r, "unsupported editable key target");
+        if (!target) {
+          const owner=components[object];
+          if(owner && (contourTypes.has(owner.type)||vertexTypes.has(owner.type)))
+            fail(r,`animated ${owner.type} geometry cannot be preserved as editable controls`);
+          fail(r, "unsupported editable key target");
+        }
         track = { targetId: target.node, property: target.property, keys: [] };
         animation.tracks.push(track);
       } else if (r.type.startsWith("KeyFrame")) {

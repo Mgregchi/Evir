@@ -1,0 +1,175 @@
+{
+  "retrievedDate": "2026-10-17",
+  "upstreamCommit": "7aa93402a27c800db8a36acc8672612c100ea9b1",
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/shapes/cubic_asymmetric_vertex.cpp",
+      "status": 200,
+      "bytes": 1095,
+      "sha256": "466fdbec312d2075faaa02a00c6c37ad55c77e75a92d702f9dba183600d85b1f",
+      "file": "src__shapes__cubic_asymmetric_vertex.cpp"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/shapes/cubic_mirrored_vertex.cpp",
+      "status": 200,
+      "bytes": 797,
+      "sha256": "301433d2aaf80ab2dcc457663fe50ee40d468bc9a703cac5f740932c54f8b672",
+      "file": "src__shapes__cubic_mirrored_vertex.cpp"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/shapes/cubic_detached_vertex.cpp",
+      "status": 200,
+      "bytes": 1165,
+      "sha256": "43c5f640c82e424030b7d53c2363e1797ec53cb2e2c7ab0d8dbb9a143af394ac",
+      "file": "src__shapes__cubic_detached_vertex.cpp"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/shapes/straight_vertex.cpp",
+      "status": 200,
+      "bytes": 129,
+      "sha256": "73339b6d88354cba97762c65878eae41e1afda1f1087797ff0349448fdbc05de",
+      "file": "src__shapes__straight_vertex.cpp"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/shapes/ellipse.cpp",
+      "status": 200,
+      "bytes": 1458,
+      "sha256": "478c0488b6ddfae7570e5a7964afcb5a3e4ae255419b89a3fbfe55f99bc4e022",
+      "file": "src__shapes__ellipse.cpp"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/shapes/rectangle.cpp",
+      "status": 200,
+      "bytes": 1195,
+      "sha256": "f9a02614990efd7c8aad8c865ee92dab48f9d27734f748d4114cf9fdb386e893",
+      "file": "src__shapes__rectangle.cpp"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/shapes/parametric_path.cpp",
+      "status": 200,
+      "bytes": 2226,
+      "sha256": "1efdfcb375c38966b90a76a085e225fa19b1ec9381f6a1b2566c46db76d8eff3",
+      "file": "src__shapes__parametric_path.cpp"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/shapes/points_path.cpp",
+      "status": 200,
+      "bytes": 4672,
+      "sha256": "f30effe71582374fc1adab1f6554d4f0ede8006fefcbc836893a4040334d0633",
+      "file": "src__shapes__points_path.cpp"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/include/rive/generated/shapes/cubic_asymmetric_vertex_base.hpp",
+      "status": 200,
+      "bytes": 3552,
+      "sha256": "3463d94ec6fd54b5d0a28eb0cbcb82dcba6cd5734202c593f94b096be8ee9a67",
+      "file": "include__rive__generated__shapes__cubic_asymmetric_vertex_base.hpp"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/include/rive/generated/shapes/cubic_mirrored_vertex_base.hpp",
+      "status": 200,
+      "bytes": 2794,
+      "sha256": "20e587c74796f04e8a70e4a9baabb8c47a3f584cb6f18fc1c779cf81c61c3ffd",
+      "file": "include__rive__generated__shapes__cubic_mirrored_vertex_base.hpp"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/include/rive/generated/shapes/straight_vertex_base.hpp",
+      "status": 200,
+      "bytes": 2014,
+      "sha256": "5e9b3e92b0f4d9c1ceb6bd876edeee1bd0a777ccfb07db5ed9710e20a34123a3",
+      "file": "include__rive__generated__shapes__straight_vertex_base.hpp"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/include/rive/generated/shapes/ellipse_base.hpp",
+      "status": 200,
+      "bytes": 1030,
+      "sha256": "b47e179e72f9dcee364dee5b7c92092f06e505afd3fe58f0fc93a245f41c5f72",
+      "file": "include__rive__generated__shapes__ellipse_base.hpp"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/include/rive/generated/shapes/parametric_path_base.hpp",
+      "status": 200,
+      "bytes": 3967,
+      "sha256": "886c37303466c9dead72db7be704cd07600d232f8e651357eb6d4e71956d6153",
+      "file": "include__rive__generated__shapes__parametric_path_base.hpp"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/include/rive/generated/shapes/path_base.hpp",
+      "status": 200,
+      "bytes": 2675,
+      "sha256": "570064752ecd49c7a1b77eb9ca33a9662080bf66d918bd0742f50e3757c3c43d",
+      "file": "include__rive__generated__shapes__path_base.hpp"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/include/rive/math/circle_constant.hpp",
+      "status": 200,
+      "bytes": 255,
+      "sha256": "d9dc757cc49f5593b3109a000de4d957333fc71d2d00290ca9fc86634f5f1520",
+      "file": "include__rive__math__circle_constant.hpp"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/include/rive/generated/shapes/rectangle_base.hpp",
+      "status": 200,
+      "bytes": 9728,
+      "sha256": "50b540535cf0cf8ac8165ac5ae34e3d0bcd713a0150b97d8d3d0170cf016909a",
+      "file": "include__rive__generated__shapes__rectangle_base.hpp"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/shapes/path.cpp",
+      "status": 200,
+      "bytes": 21702,
+      "sha256": "2d7c66a6d968e78fb304aa68422eb595dfd30764eb7dd6a08bead9f7cc1eb5be",
+      "file": "src__shapes__path.cpp"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/bones/skin.cpp",
+      "status": 200,
+      "bytes": 6549,
+      "sha256": "1c008654161cb9dba3a65793f617490a49264528b6e92614e0211b9b5da79732",
+      "file": "src__bones__skin.cpp"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/shapes/cubic_weight.cpp",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/shapes/path_vertex.cpp",
+      "status": 200,
+      "bytes": 1066,
+      "sha256": "bc33ad0ef19e7d469e4ca8ad88d1cc5bb2d008376c8fbc1be8560fb3f186cd4e",
+      "file": "src__shapes__path_vertex.cpp"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/shapes/points_common_path.cpp",
+      "status": 200,
+      "bytes": 425,
+      "sha256": "98861bb4e6e9b57b289047da667317731aab95ebcd1550940018ee88f717de0a",
+      "file": "src__shapes__points_common_path.cpp"
+    },
+    {
+      "url": "https://rive.app/docs/llms.txt",
+      "status": 200,
+      "bytes": 51760,
+      "sha256": "cdbf439d36a8e4f5678f1f2f75607fabd6ef800c70a5f059b47a2bd6dc3aa9cd",
+      "file": "llms.txt"
+    },
+    {
+      "url": "https://rive.app/docs/editor/fundamentals/edit-vertices.md",
+      "status": 200,
+      "bytes": 5893,
+      "sha256": "b75331659dba87c31758ecab8876c48aeef0abb5f658434c668976afbf6d3c69",
+      "file": "edit-vertices.md"
+    }
+  ],
+  "observations": [
+    "Mirrored/asymmetric incoming controls subtract their direction vector; detached incoming controls add their separate direction vector.",
+    "Ellipse defaults origin to (0.5,0.5); its four cubic vertices use circleConstant 0.552284749831.",
+    "PointsPath uses its world transform unless skinned; this increment rejects transformed skinned paths rather than discarding that contract.",
+    "Rive documents procedural-to-detached conversion and animated vertex editing; Evir only converts static contour/vertex geometry and does not claim that animation support."
+  ],
+  "productChoices": [
+    "Materialize supported static contour geometry into editable detached cubic controls.",
+    "Preserve shape transforms, paints and supported skin/bone motion; reject contour/vertex key targets that cannot be represented.",
+    "Keep read-only original viewing for unsupported structures; do not discard data bindings or additional contours."
+  ]
+}

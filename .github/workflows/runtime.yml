@@ -1,10 +1,10 @@
 name: Runtime package validation
 on:
   pull_request:
-    paths: [ 'packages/project-model/**', 'packages/runtime/**', 'packages/renderer-canvas/**', 'packages/authoring/**', 'packages/format/**', 'packages/commands/**', 'tools/mcp-local.mjs', 'tests/runtime/**', 'tools/build-package.mjs', 'tools/build-support.mjs', 'package*.json', '.github/workflows/runtime.yml']
+    paths: [ 'packages/project-model/**', 'packages/runtime/**', 'packages/renderer-canvas/**', 'packages/authoring/**', 'packages/format/**', 'packages/commands/**', 'tools/mcp-local.mjs', 'tests/runtime/**', 'tests/fixtures/**', 'tools/encode-riv-records.mjs', 'tools/stabilize-import.mjs', 'tools/build-package.mjs', 'tools/build-support.mjs', 'package*.json', '.github/workflows/runtime.yml']
   push:
     branches: [main]
-    paths: [ 'packages/project-model/**', 'packages/runtime/**', 'packages/renderer-canvas/**', 'packages/authoring/**', 'packages/format/**', 'packages/commands/**', 'tools/mcp-local.mjs', 'tests/runtime/**', 'tools/build-package.mjs', 'tools/build-support.mjs', 'package*.json', '.github/workflows/runtime.yml']
+    paths: [ 'packages/project-model/**', 'packages/runtime/**', 'packages/renderer-canvas/**', 'packages/authoring/**', 'packages/format/**', 'packages/commands/**', 'tools/mcp-local.mjs', 'tests/runtime/**', 'tests/fixtures/**', 'tools/encode-riv-records.mjs', 'tools/stabilize-import.mjs', 'tools/build-package.mjs', 'tools/build-support.mjs', 'package*.json', '.github/workflows/runtime.yml']
   workflow_dispatch:
 permissions:
   contents: read

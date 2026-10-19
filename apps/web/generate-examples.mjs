@@ -2,6 +2,9 @@ import {CommandSession} from '@evir/commands';
 import {compassLesson} from '@evir/commands/example';
 import {suite} from './advanced-examples.mjs';
 import {strokeStudy} from './stroke-scene.mjs';
+import {tideRecords} from './import-scene.mjs';
+import {encodeRecords} from '../../tools/encode-riv-records.mjs';
+import {stableImport} from '../../tools/stabilize-import.mjs';
 import {characterScenes} from './character-scenes.mjs';
 import {motorcycle} from './motorcycle-scene.mjs';
 import { fitFreehand, fitBrush } from '../../packages/studio/freehand.mjs';
@@ -10,7 +13,7 @@ import { ContinuationDraft } from '../../packages/studio/path-continuation.mjs';
 import { exampleIds } from './examples.mjs';
 import { createProject, validateProject } from '@evir/project-model';
 import { setKey, bindPath, setWeight } from '@evir/authoring';
-import { compileProject } from '@evir/format';
+import { compileProject, importRiv } from '@evir/format';
 import { mkdir, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import {weightStudy} from './weight-scene.mjs';
@@ -356,7 +359,9 @@ function loom() {
   const a=anim('weave','Weave');key(a,spindle,'rotation',[[0,0],[120,Math.PI*2]]);
   return p;
 }
-const factories={trace:()=>strokeStudy(project),ribbon,loom,sprig,measure,compass,milo,orbit,bloom,tempo,signal,gather,wisp,dawn,arrange,motorcycle:()=>motorcycle(project)};
+const tideNative=encodeRecords(tideRecords());
+async function tide(){const p=stableImport(await importRiv(tideNative),'tide');p.name='Tide — a shore-side hello';return p;}
+const factories={tide,trace:()=>strokeStudy(project),ribbon,loom,sprig,measure,compass,milo,orbit,bloom,tempo,signal,gather,wisp,dawn,arrange,motorcycle:()=>motorcycle(project)};
 for(const original of await suite()){
  const p=structuredClone(original);p.artboards[0].width=p.artboards[0].height=512;
  for(const n of p.nodes){n.transform[4]*=2;n.transform[5]*=2;const g=n.geometry;if(!g)continue;
@@ -374,10 +379,11 @@ Object.assign(factories,characterScenes(project));
 await mkdir(output,{recursive:true});
 factories.gust=()=>weightStudy(project);
 for(const name of exampleIds) {
-  const p=factories[name]();validateProject(p);
+  const p=await factories[name]();validateProject(p);
   const compiled=compileProject(p);
   await writeFile(`${output}${name}.evir-project`,JSON.stringify(p,null,2)+'\n');
   await writeFile(`${output}${name}.riv`,compiled.bytes);
+  if(name==='tide')await writeFile(`${output}tide-native.riv`,tideNative);
   if(name==='compass') await writeFile(`${output}${name}.commands.json`,JSON.stringify(compassLesson(p.artboards[0].id),null,2)+'\n');
   if(name==='measure') {
     const guides=defaultGuides();guides.rulers=true;guides.grid={visible:true,snap:true,spacing:32,originX:0,originY:0};
