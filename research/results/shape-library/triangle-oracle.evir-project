@@ -1,0 +1,98 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 2,
+  "id": "shape-triangle",
+  "name": "triangle",
+  "artboards": [
+    {
+      "id": "artboard-e62cb51f-f17d-417e-9477-df74e6ee3e47",
+      "name": "Artboard 1",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "node-f5e0ec7a-6b0b-4f93-aa90-327ba9953179",
+      "name": "Triangle",
+      "kind": "path",
+      "artboardId": "artboard-e62cb51f-f17d-417e-9477-df74e6ee3e47",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        166,
+        181
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#89e4c4",
+        "skin": null,
+        "points": [
+          {
+            "id": "point-44d6943b-6e71-4ca9-9969-792a6710f425",
+            "anchor": [
+              90,
+              0
+            ],
+            "in": [
+              90,
+              0
+            ],
+            "out": [
+              90,
+              0
+            ]
+          },
+          {
+            "id": "point-31e3bce8-a0d9-44f3-b983-3ef95f4550b7",
+            "anchor": [
+              180,
+              150
+            ],
+            "in": [
+              180,
+              150
+            ],
+            "out": [
+              180,
+              150
+            ]
+          },
+          {
+            "id": "point-1d16e2b4-29a4-4684-bc4f-5c5cccf3ac35",
+            "anchor": [
+              0,
+              150
+            ],
+            "in": [
+              0,
+              150
+            ],
+            "out": [
+              0,
+              150
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "artboard-e62cb51f-f17d-417e-9477-df74e6ee3e47": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  }
+}

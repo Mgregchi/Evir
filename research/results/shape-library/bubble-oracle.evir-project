@@ -1,0 +1,218 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 2,
+  "id": "shape-bubble",
+  "name": "bubble",
+  "artboards": [
+    {
+      "id": "artboard-4b6b48ca-cb13-4edb-8749-9de2e0616730",
+      "name": "Artboard 1",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "node-5433d080-6721-4663-b4f8-34799d3d64a5",
+      "name": "Speech bubble",
+      "kind": "path",
+      "artboardId": "artboard-4b6b48ca-cb13-4edb-8749-9de2e0616730",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        166,
+        181
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#89e4c4",
+        "skin": null,
+        "points": [
+          {
+            "id": "point-2c15e41f-2651-404a-b449-4578fcb08ce7",
+            "anchor": [
+              20,
+              0
+            ],
+            "in": [
+              8.954305003384128,
+              0
+            ],
+            "out": [
+              20,
+              0
+            ]
+          },
+          {
+            "id": "point-6c836745-76b2-4531-8151-33e7bf4735b0",
+            "anchor": [
+              160,
+              0
+            ],
+            "in": [
+              160,
+              0
+            ],
+            "out": [
+              171.04569499661588,
+              0
+            ]
+          },
+          {
+            "id": "point-44100b7d-2f8f-4e3a-8b40-b9d404c8cb24",
+            "anchor": [
+              180,
+              20
+            ],
+            "in": [
+              180,
+              8.954305003384128
+            ],
+            "out": [
+              180,
+              20
+            ]
+          },
+          {
+            "id": "point-77fa6ccb-290d-4527-ae38-ffbc2acb181e",
+            "anchor": [
+              180,
+              94
+            ],
+            "in": [
+              180,
+              94
+            ],
+            "out": [
+              180,
+              105.04569499661588
+            ]
+          },
+          {
+            "id": "point-153da6ff-1bc7-4943-9a1e-194c805ce0f8",
+            "anchor": [
+              160,
+              114
+            ],
+            "in": [
+              171.04569499661588,
+              114
+            ],
+            "out": [
+              160,
+              114
+            ]
+          },
+          {
+            "id": "point-a419d204-fcca-4c73-b4ed-479a5f864829",
+            "anchor": [
+              111.6,
+              114
+            ],
+            "in": [
+              111.6,
+              114
+            ],
+            "out": [
+              111.6,
+              114
+            ]
+          },
+          {
+            "id": "point-40637d10-4cb4-41be-b3e4-6300353e057f",
+            "anchor": [
+              66.6,
+              150
+            ],
+            "in": [
+              66.6,
+              150
+            ],
+            "out": [
+              66.6,
+              150
+            ]
+          },
+          {
+            "id": "point-fd50b241-04b0-46b5-8619-90d6216e5439",
+            "anchor": [
+              66.6,
+              114
+            ],
+            "in": [
+              66.6,
+              114
+            ],
+            "out": [
+              66.6,
+              114
+            ]
+          },
+          {
+            "id": "point-e4be49df-33d1-482d-9d26-33a87eb9951e",
+            "anchor": [
+              20,
+              114
+            ],
+            "in": [
+              20,
+              114
+            ],
+            "out": [
+              8.954305003384128,
+              114
+            ]
+          },
+          {
+            "id": "point-6de6972e-1e3f-4ac5-a1b7-cd2a83b67688",
+            "anchor": [
+              0,
+              94
+            ],
+            "in": [
+              0,
+              105.04569499661588
+            ],
+            "out": [
+              0,
+              94
+            ]
+          },
+          {
+            "id": "point-fedcb2c2-4fa5-4c66-8959-6a5aced17c7a",
+            "anchor": [
+              0,
+              20
+            ],
+            "in": [
+              0,
+              20
+            ],
+            "out": [
+              0,
+              8.954305003384128
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "artboard-4b6b48ca-cb13-4edb-8749-9de2e0616730": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  }
+}

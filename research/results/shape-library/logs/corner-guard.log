@@ -1,0 +1,15 @@
+✔ Every preset is editable source, has isolated point IDs and round-trips without preset metadata (106.479237ms)
+✔ Curved presets use actual cubic handles; circle locks aspect and polygon/star counts are bounded (2.30307ms)
+✔ Line retains an open centerline and editable stroke, upgrading only successful documents (3.145481ms)
+✔ Invalid drafts reject atomically, including invalid dimensions, geometry options, paint and scope (4.076942ms)
+✔ Placement respects active artboard, parent coordinates, stacking and locked ancestors (7.842964ms)
+✔ One history operation adds a shape and undo/redo preserves its identity and editable points (5.650491ms)
+✔ Finished beginner lesson matches the three documented keys and preserves its Design pose (13.427772ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 744.870901

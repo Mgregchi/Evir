@@ -1,0 +1,113 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 2,
+  "id": "shape-rounded-zero",
+  "name": "rounded-zero",
+  "artboards": [
+    {
+      "id": "artboard-6806e849-daf7-478f-897f-e0e98d59c855",
+      "name": "Artboard 1",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "node-6f4d9b27-cb2d-41fe-9de7-f7f28279f57c",
+      "name": "Rounded rectangle",
+      "kind": "path",
+      "artboardId": "artboard-6806e849-daf7-478f-897f-e0e98d59c855",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        166,
+        181
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#89e4c4",
+        "skin": null,
+        "points": [
+          {
+            "id": "point-28bb8e9b-6554-4260-bc0d-637ed6e928c5",
+            "anchor": [
+              0,
+              0
+            ],
+            "in": [
+              0,
+              0
+            ],
+            "out": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "point-3239d617-bfc0-44bc-95e3-ebea61425985",
+            "anchor": [
+              180,
+              0
+            ],
+            "in": [
+              180,
+              0
+            ],
+            "out": [
+              180,
+              0
+            ]
+          },
+          {
+            "id": "point-5b0afa9f-ea22-4faa-98a2-506530a45dc5",
+            "anchor": [
+              180,
+              150
+            ],
+            "in": [
+              180,
+              150
+            ],
+            "out": [
+              180,
+              150
+            ]
+          },
+          {
+            "id": "point-179a4fa6-1efa-4320-a1a1-7863f4580bdf",
+            "anchor": [
+              0,
+              150
+            ],
+            "in": [
+              0,
+              150
+            ],
+            "out": [
+              0,
+              150
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "artboard-6806e849-daf7-478f-897f-e0e98d59c855": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  }
+}

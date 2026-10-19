@@ -92,10 +92,11 @@
   {
     "name": "playwright-browser-version",
     "url": "https://playwright.dev/docs/api/class-browsertype#browser-type-launch-option-executable-path",
-    "retrievedAt": "2026-10-19T18:23:46.626970+00:00",
+    "retrievedAt": "2026-10-19T17:55:52.397042+00:00",
     "status": 200,
     "bytes": 167791,
     "sha256": "fc6f6fb986305614673cc0c4f2c899e947c8c2b76a05400fb2be673fd5599a61",
-    "observation": "Bundled Chromium recommended; other executable versions carry no compatibility guarantee."
+    "observation": "Bundled Chromium recommended; other executable versions carry no compatibility guarantee.",
+    "timestampBasis": "Cached response file modification time"
   }
 ]

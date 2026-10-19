@@ -1,0 +1,11 @@
+{
+  "name": "rgba-transport",
+  "command": "npm run validate:playback",
+  "commit": "b79f733b10b8998aa788e49f64aa2b9002047b85",
+  "startedAt": "2026-10-19T19:25:13Z",
+  "exitCode": 0,
+  "seconds": 20.54,
+  "finishedAt": "2026-10-19T19:25:34Z",
+  "identicalCanvasMeasurements": 41,
+  "webgl2Comparisons": 41
+}

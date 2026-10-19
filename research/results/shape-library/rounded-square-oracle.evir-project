@@ -1,0 +1,113 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 2,
+  "id": "shape-rounded-square",
+  "name": "rounded-square",
+  "artboards": [
+    {
+      "id": "artboard-c90335ba-06cb-4b3d-beae-f352d0cade52",
+      "name": "Artboard 1",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "node-914ee5de-9adc-4145-8f86-1b5c81b5bcbe",
+      "name": "Rounded rectangle",
+      "kind": "path",
+      "artboardId": "artboard-c90335ba-06cb-4b3d-beae-f352d0cade52",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        206,
+        206
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#89e4c4",
+        "skin": null,
+        "points": [
+          {
+            "id": "point-47c48716-3768-4040-b5e9-32405b7aaf1b",
+            "anchor": [
+              50,
+              0
+            ],
+            "in": [
+              22.38576250846032,
+              0
+            ],
+            "out": [
+              77.61423749153968,
+              0
+            ]
+          },
+          {
+            "id": "point-994656cb-8acf-4ad0-be52-7a1c2554c1cf",
+            "anchor": [
+              100,
+              50
+            ],
+            "in": [
+              100,
+              22.38576250846032
+            ],
+            "out": [
+              100,
+              77.61423749153968
+            ]
+          },
+          {
+            "id": "point-d0ee9ae9-5f3e-4d14-9ef4-6ccc3514b7eb",
+            "anchor": [
+              50,
+              100
+            ],
+            "in": [
+              77.61423749153968,
+              100
+            ],
+            "out": [
+              22.38576250846032,
+              100
+            ]
+          },
+          {
+            "id": "point-634e3f11-8fbc-4c8e-948c-323f0349d9a9",
+            "anchor": [
+              0,
+              50
+            ],
+            "in": [
+              0,
+              77.61423749153968
+            ],
+            "out": [
+              0,
+              22.38576250846032
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "artboard-c90335ba-06cb-4b3d-beae-f352d0cade52": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  }
+}
