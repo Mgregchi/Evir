@@ -117,6 +117,13 @@ if(!process.env.CHROMIUM_PATH && !fs.existsSync('/usr/bin/chromium'))process.env
           } else if(['momo','nura','otto'].includes(name)) {
             for(const value of [1,2,0,2,1,0]){await input('expression',value);await compare(project.animations[value],0,`expression=${value}`);}
             await load({stateMachines:machine.name});await advance();await compare(project.animations[0],0,'character reset defaults');
+          } else if(name==='lumen') {
+            const {MachinePlayer}=await import('@evir/runtime'),engine=new MachinePlayer(project,machine.id);
+            for(const [joy,courage]of[[100,0],[0,100],[55,80],[100,100],[0,0]]){
+              await input('joy',joy);await input('courage',courage);engine.set(machine.inputs[0].id,joy);engine.set(machine.inputs[1].id,courage);
+              await compare(null,0,`joy=${joy}, courage=${courage}`,engine.advance(0));
+            }
+            await load({stateMachines:machine.name});await advance();await compare(project.animations[0],0,'direct reset baseline');
           } else if(name==='blend') {await input('position',1);await input('active',true);await compare(project.animations[0],0,'exit time still guarded');} else assert.fail(`Add declared machine-input scenarios for ${name}`);
         }
       }

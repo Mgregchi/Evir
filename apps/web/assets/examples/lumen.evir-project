@@ -1,0 +1,3692 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 3,
+  "id": "lumen-project",
+  "name": "Lumen — a little courage",
+  "artboards": [
+    {
+      "id": "lumen-board",
+      "name": "Lumen — a little courage",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "lumen-night-garden",
+      "name": "night garden",
+      "kind": "path",
+      "artboardId": "lumen-board",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        256,
+        254
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#dfe8e3",
+        "skin": null,
+        "points": [
+          {
+            "id": "lumen-night-garden-p0",
+            "anchor": [
+              208,
+              0
+            ],
+            "in": [
+              208,
+              -114.87522795839999
+            ],
+            "out": [
+              208,
+              114.87522795839999
+            ]
+          },
+          {
+            "id": "lumen-night-garden-p1",
+            "anchor": [
+              0,
+              208
+            ],
+            "in": [
+              114.87522795839999,
+              208
+            ],
+            "out": [
+              -114.87522795839999,
+              208
+            ]
+          },
+          {
+            "id": "lumen-night-garden-p2",
+            "anchor": [
+              -208,
+              0
+            ],
+            "in": [
+              -208,
+              114.87522795839999
+            ],
+            "out": [
+              -208,
+              -114.87522795839999
+            ]
+          },
+          {
+            "id": "lumen-night-garden-p3",
+            "anchor": [
+              0,
+              -208
+            ],
+            "in": [
+              -114.87522795839999,
+              -208
+            ],
+            "out": [
+              114.87522795839999,
+              -208
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lumen-moon-halo",
+      "name": "moon halo",
+      "kind": "path",
+      "artboardId": "lumen-board",
+      "parentId": null,
+      "order": 1,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        365,
+        129
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f4ddbf",
+        "skin": null,
+        "points": [
+          {
+            "id": "lumen-moon-halo-p0",
+            "anchor": [
+              53,
+              0
+            ],
+            "in": [
+              53,
+              -29.2710917394
+            ],
+            "out": [
+              53,
+              29.2710917394
+            ]
+          },
+          {
+            "id": "lumen-moon-halo-p1",
+            "anchor": [
+              0,
+              53
+            ],
+            "in": [
+              29.2710917394,
+              53
+            ],
+            "out": [
+              -29.2710917394,
+              53
+            ]
+          },
+          {
+            "id": "lumen-moon-halo-p2",
+            "anchor": [
+              -53,
+              0
+            ],
+            "in": [
+              -53,
+              29.2710917394
+            ],
+            "out": [
+              -53,
+              -29.2710917394
+            ]
+          },
+          {
+            "id": "lumen-moon-halo-p3",
+            "anchor": [
+              0,
+              -53
+            ],
+            "in": [
+              -29.2710917394,
+              -53
+            ],
+            "out": [
+              29.2710917394,
+              -53
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lumen-moon",
+      "name": "moon",
+      "kind": "path",
+      "artboardId": "lumen-board",
+      "parentId": null,
+      "order": 2,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        358,
+        121
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#fbefcf",
+        "skin": null,
+        "points": [
+          {
+            "id": "lumen-moon-p0",
+            "anchor": [
+              36,
+              0
+            ],
+            "in": [
+              36,
+              -19.8822509928
+            ],
+            "out": [
+              36,
+              19.8822509928
+            ]
+          },
+          {
+            "id": "lumen-moon-p1",
+            "anchor": [
+              0,
+              36
+            ],
+            "in": [
+              19.8822509928,
+              36
+            ],
+            "out": [
+              -19.8822509928,
+              36
+            ]
+          },
+          {
+            "id": "lumen-moon-p2",
+            "anchor": [
+              -36,
+              0
+            ],
+            "in": [
+              -36,
+              19.8822509928
+            ],
+            "out": [
+              -36,
+              -19.8822509928
+            ]
+          },
+          {
+            "id": "lumen-moon-p3",
+            "anchor": [
+              0,
+              -36
+            ],
+            "in": [
+              -19.8822509928,
+              -36
+            ],
+            "out": [
+              19.8822509928,
+              -36
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lumen-leaf-left",
+      "name": "leaf left",
+      "kind": "group",
+      "artboardId": "lumen-board",
+      "parentId": null,
+      "order": 3,
+      "transform": [
+        0.8775825618903728,
+        -0.479425538604203,
+        0.479425538604203,
+        0.8775825618903728,
+        100,
+        407
+      ],
+      "geometry": null
+    },
+    {
+      "id": "lumen-leaf-left-leaf",
+      "name": "leaf left leaf",
+      "kind": "path",
+      "artboardId": "lumen-board",
+      "parentId": "lumen-leaf-left",
+      "order": 4,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#8daf9c",
+        "skin": null,
+        "points": [
+          {
+            "id": "lumen-leaf-left-leaf-p0",
+            "anchor": [
+              0,
+              0
+            ],
+            "in": [
+              -17,
+              -10
+            ],
+            "out": [
+              -26,
+              -43
+            ]
+          },
+          {
+            "id": "lumen-leaf-left-leaf-p1",
+            "anchor": [
+              -5,
+              -73
+            ],
+            "in": [
+              -28,
+              -58
+            ],
+            "out": [
+              26,
+              -59
+            ]
+          },
+          {
+            "id": "lumen-leaf-left-leaf-p2",
+            "anchor": [
+              0,
+              0
+            ],
+            "in": [
+              29,
+              -23
+            ],
+            "out": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lumen-leaf-right",
+      "name": "leaf right",
+      "kind": "group",
+      "artboardId": "lumen-board",
+      "parentId": null,
+      "order": 5,
+      "transform": [
+        0.8253356149096783,
+        0.5646424733950354,
+        -0.5646424733950354,
+        0.8253356149096783,
+        407,
+        419
+      ],
+      "geometry": null
+    },
+    {
+      "id": "lumen-leaf-right-leaf",
+      "name": "leaf right leaf",
+      "kind": "path",
+      "artboardId": "lumen-board",
+      "parentId": "lumen-leaf-right",
+      "order": 6,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#a7bda5",
+        "skin": null,
+        "points": [
+          {
+            "id": "lumen-leaf-right-leaf-p0",
+            "anchor": [
+              0,
+              0
+            ],
+            "in": [
+              -17,
+              -10
+            ],
+            "out": [
+              -26,
+              -43
+            ]
+          },
+          {
+            "id": "lumen-leaf-right-leaf-p1",
+            "anchor": [
+              -5,
+              -73
+            ],
+            "in": [
+              -28,
+              -58
+            ],
+            "out": [
+              26,
+              -59
+            ]
+          },
+          {
+            "id": "lumen-leaf-right-leaf-p2",
+            "anchor": [
+              0,
+              0
+            ],
+            "in": [
+              29,
+              -23
+            ],
+            "out": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lumen-leaf-front",
+      "name": "leaf front",
+      "kind": "group",
+      "artboardId": "lumen-board",
+      "parentId": null,
+      "order": 7,
+      "transform": [
+        0.8775825618903728,
+        0.479425538604203,
+        -0.479425538604203,
+        0.8775825618903728,
+        128,
+        431
+      ],
+      "geometry": null
+    },
+    {
+      "id": "lumen-leaf-front-leaf",
+      "name": "leaf front leaf",
+      "kind": "path",
+      "artboardId": "lumen-board",
+      "parentId": "lumen-leaf-front",
+      "order": 8,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#5c8977",
+        "skin": null,
+        "points": [
+          {
+            "id": "lumen-leaf-front-leaf-p0",
+            "anchor": [
+              0,
+              0
+            ],
+            "in": [
+              -17,
+              -10
+            ],
+            "out": [
+              -26,
+              -43
+            ]
+          },
+          {
+            "id": "lumen-leaf-front-leaf-p1",
+            "anchor": [
+              -5,
+              -73
+            ],
+            "in": [
+              -28,
+              -58
+            ],
+            "out": [
+              26,
+              -59
+            ]
+          },
+          {
+            "id": "lumen-leaf-front-leaf-p2",
+            "anchor": [
+              0,
+              0
+            ],
+            "in": [
+              29,
+              -23
+            ],
+            "out": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lumen-ground-shadow",
+      "name": "ground shadow",
+      "kind": "path",
+      "artboardId": "lumen-board",
+      "parentId": null,
+      "order": 9,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        258,
+        430
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#bbcdbc",
+        "skin": null,
+        "points": [
+          {
+            "id": "lumen-ground-shadow-p0",
+            "anchor": [
+              109,
+              0
+            ],
+            "in": [
+              109,
+              -9.3888407466
+            ],
+            "out": [
+              109,
+              9.3888407466
+            ]
+          },
+          {
+            "id": "lumen-ground-shadow-p1",
+            "anchor": [
+              0,
+              17
+            ],
+            "in": [
+              60.1990377282,
+              17
+            ],
+            "out": [
+              -60.1990377282,
+              17
+            ]
+          },
+          {
+            "id": "lumen-ground-shadow-p2",
+            "anchor": [
+              -109,
+              0
+            ],
+            "in": [
+              -109,
+              9.3888407466
+            ],
+            "out": [
+              -109,
+              -9.3888407466
+            ]
+          },
+          {
+            "id": "lumen-ground-shadow-p3",
+            "anchor": [
+              0,
+              -17
+            ],
+            "in": [
+              -60.1990377282,
+              -17
+            ],
+            "out": [
+              60.1990377282,
+              -17
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lumen-firefly",
+      "name": "firefly",
+      "kind": "group",
+      "artboardId": "lumen-board",
+      "parentId": null,
+      "order": 10,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        256,
+        282
+      ],
+      "geometry": null
+    },
+    {
+      "id": "lumen-left-wing",
+      "name": "left wing",
+      "kind": "group",
+      "artboardId": "lumen-board",
+      "parentId": "lumen-firefly",
+      "order": 11,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -43,
+        6
+      ],
+      "geometry": null
+    },
+    {
+      "id": "lumen-right-wing",
+      "name": "right wing",
+      "kind": "group",
+      "artboardId": "lumen-board",
+      "parentId": "lumen-firefly",
+      "order": 12,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        43,
+        6
+      ],
+      "geometry": null
+    },
+    {
+      "id": "lumen-left-wing-outline",
+      "name": "left wing outline",
+      "kind": "path",
+      "artboardId": "lumen-board",
+      "parentId": "lumen-left-wing",
+      "order": 13,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#538c80",
+        "skin": null,
+        "points": [
+          {
+            "id": "lumen-left-wing-outline-p0",
+            "anchor": [
+              4,
+              7
+            ],
+            "in": [
+              12,
+              32
+            ],
+            "out": [
+              -14,
+              -24
+            ]
+          },
+          {
+            "id": "lumen-left-wing-outline-p1",
+            "anchor": [
+              -84,
+              -69
+            ],
+            "in": [
+              -55,
+              -82
+            ],
+            "out": [
+              -115,
+              -30
+            ]
+          },
+          {
+            "id": "lumen-left-wing-outline-p2",
+            "anchor": [
+              -23,
+              60
+            ],
+            "in": [
+              -77,
+              82
+            ],
+            "out": [
+              2,
+              55
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lumen-left-wing-glass",
+      "name": "left wing glass",
+      "kind": "path",
+      "artboardId": "lumen-board",
+      "parentId": "lumen-left-wing",
+      "order": 14,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#a8dbbf",
+        "skin": null,
+        "points": [
+          {
+            "id": "lumen-left-wing-glass-p0",
+            "anchor": [
+              -1,
+              6
+            ],
+            "in": [
+              6,
+              26
+            ],
+            "out": [
+              -23,
+              -24
+            ]
+          },
+          {
+            "id": "lumen-left-wing-glass-p1",
+            "anchor": [
+              -78,
+              -59
+            ],
+            "in": [
+              -48,
+              -73
+            ],
+            "out": [
+              -99,
+              -29
+            ]
+          },
+          {
+            "id": "lumen-left-wing-glass-p2",
+            "anchor": [
+              -24,
+              48
+            ],
+            "in": [
+              -65,
+              67
+            ],
+            "out": [
+              -4,
+              45
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lumen-left-wing-vein",
+      "name": "left wing vein",
+      "kind": "path",
+      "artboardId": "lumen-board",
+      "parentId": "lumen-left-wing",
+      "order": 15,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#78baa0",
+        "skin": null,
+        "points": [
+          {
+            "id": "lumen-left-wing-vein-p0",
+            "anchor": [
+              -8,
+              17
+            ],
+            "in": [
+              -8,
+              17
+            ],
+            "out": [
+              -8,
+              17
+            ]
+          },
+          {
+            "id": "lumen-left-wing-vein-p1",
+            "anchor": [
+              -68,
+              -35
+            ],
+            "in": [
+              -68,
+              -35
+            ],
+            "out": [
+              -68,
+              -35
+            ]
+          },
+          {
+            "id": "lumen-left-wing-vein-p2",
+            "anchor": [
+              -10,
+              23
+            ],
+            "in": [
+              -10,
+              23
+            ],
+            "out": [
+              -10,
+              23
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lumen-right-wing-outline",
+      "name": "right wing outline",
+      "kind": "path",
+      "artboardId": "lumen-board",
+      "parentId": "lumen-right-wing",
+      "order": 16,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#538c80",
+        "skin": null,
+        "points": [
+          {
+            "id": "lumen-right-wing-outline-p0",
+            "anchor": [
+              -4,
+              7
+            ],
+            "in": [
+              -12,
+              32
+            ],
+            "out": [
+              14,
+              -24
+            ]
+          },
+          {
+            "id": "lumen-right-wing-outline-p1",
+            "anchor": [
+              84,
+              -69
+            ],
+            "in": [
+              55,
+              -82
+            ],
+            "out": [
+              115,
+              -30
+            ]
+          },
+          {
+            "id": "lumen-right-wing-outline-p2",
+            "anchor": [
+              23,
+              60
+            ],
+            "in": [
+              77,
+              82
+            ],
+            "out": [
+              -2,
+              55
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lumen-right-wing-glass",
+      "name": "right wing glass",
+      "kind": "path",
+      "artboardId": "lumen-board",
+      "parentId": "lumen-right-wing",
+      "order": 17,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#a8dbbf",
+        "skin": null,
+        "points": [
+          {
+            "id": "lumen-right-wing-glass-p0",
+            "anchor": [
+              1,
+              6
+            ],
+            "in": [
+              -6,
+              26
+            ],
+            "out": [
+              23,
+              -24
+            ]
+          },
+          {
+            "id": "lumen-right-wing-glass-p1",
+            "anchor": [
+              78,
+              -59
+            ],
+            "in": [
+              48,
+              -73
+            ],
+            "out": [
+              99,
+              -29
+            ]
+          },
+          {
+            "id": "lumen-right-wing-glass-p2",
+            "anchor": [
+              24,
+              48
+            ],
+            "in": [
+              65,
+              67
+            ],
+            "out": [
+              4,
+              45
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lumen-right-wing-vein",
+      "name": "right wing vein",
+      "kind": "path",
+      "artboardId": "lumen-board",
+      "parentId": "lumen-right-wing",
+      "order": 18,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#78baa0",
+        "skin": null,
+        "points": [
+          {
+            "id": "lumen-right-wing-vein-p0",
+            "anchor": [
+              8,
+              17
+            ],
+            "in": [
+              8,
+              17
+            ],
+            "out": [
+              8,
+              17
+            ]
+          },
+          {
+            "id": "lumen-right-wing-vein-p1",
+            "anchor": [
+              68,
+              -35
+            ],
+            "in": [
+              68,
+              -35
+            ],
+            "out": [
+              68,
+              -35
+            ]
+          },
+          {
+            "id": "lumen-right-wing-vein-p2",
+            "anchor": [
+              10,
+              23
+            ],
+            "in": [
+              10,
+              23
+            ],
+            "out": [
+              10,
+              23
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lumen-body",
+      "name": "body",
+      "kind": "path",
+      "artboardId": "lumen-board",
+      "parentId": "lumen-firefly",
+      "order": 19,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        37
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#6c6590",
+        "skin": null,
+        "points": [
+          {
+            "id": "lumen-body-p0",
+            "anchor": [
+              62,
+              0
+            ],
+            "in": [
+              62,
+              -50.2579122318
+            ],
+            "out": [
+              62,
+              50.2579122318
+            ]
+          },
+          {
+            "id": "lumen-body-p1",
+            "anchor": [
+              0,
+              91
+            ],
+            "in": [
+              34.2416544876,
+              91
+            ],
+            "out": [
+              -34.2416544876,
+              91
+            ]
+          },
+          {
+            "id": "lumen-body-p2",
+            "anchor": [
+              -62,
+              0
+            ],
+            "in": [
+              -62,
+              50.2579122318
+            ],
+            "out": [
+              -62,
+              -50.2579122318
+            ]
+          },
+          {
+            "id": "lumen-body-p3",
+            "anchor": [
+              0,
+              -91
+            ],
+            "in": [
+              -34.2416544876,
+              -91
+            ],
+            "out": [
+              34.2416544876,
+              -91
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lumen-body-light",
+      "name": "body light",
+      "kind": "path",
+      "artboardId": "lumen-board",
+      "parentId": "lumen-firefly",
+      "order": 20,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -6,
+        40
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#a29bc4",
+        "skin": null,
+        "points": [
+          {
+            "id": "lumen-body-light-p0",
+            "anchor": [
+              49,
+              0
+            ],
+            "in": [
+              49,
+              -43.6304952342
+            ],
+            "out": [
+              49,
+              43.6304952342
+            ]
+          },
+          {
+            "id": "lumen-body-light-p1",
+            "anchor": [
+              0,
+              79
+            ],
+            "in": [
+              27.0619527402,
+              79
+            ],
+            "out": [
+              -27.0619527402,
+              79
+            ]
+          },
+          {
+            "id": "lumen-body-light-p2",
+            "anchor": [
+              -49,
+              0
+            ],
+            "in": [
+              -49,
+              43.6304952342
+            ],
+            "out": [
+              -49,
+              -43.6304952342
+            ]
+          },
+          {
+            "id": "lumen-body-light-p3",
+            "anchor": [
+              0,
+              -79
+            ],
+            "in": [
+              -27.0619527402,
+              -79
+            ],
+            "out": [
+              27.0619527402,
+              -79
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lumen-little-lantern",
+      "name": "little lantern",
+      "kind": "path",
+      "artboardId": "lumen-board",
+      "parentId": "lumen-firefly",
+      "order": 21,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        85
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e6ba84",
+        "skin": null,
+        "points": [
+          {
+            "id": "lumen-little-lantern-p0",
+            "anchor": [
+              37,
+              0
+            ],
+            "in": [
+              37,
+              -20.434535742599998
+            ],
+            "out": [
+              37,
+              20.434535742599998
+            ]
+          },
+          {
+            "id": "lumen-little-lantern-p1",
+            "anchor": [
+              0,
+              37
+            ],
+            "in": [
+              20.434535742599998,
+              37
+            ],
+            "out": [
+              -20.434535742599998,
+              37
+            ]
+          },
+          {
+            "id": "lumen-little-lantern-p2",
+            "anchor": [
+              -37,
+              0
+            ],
+            "in": [
+              -37,
+              20.434535742599998
+            ],
+            "out": [
+              -37,
+              -20.434535742599998
+            ]
+          },
+          {
+            "id": "lumen-little-lantern-p3",
+            "anchor": [
+              0,
+              -37
+            ],
+            "in": [
+              -20.434535742599998,
+              -37
+            ],
+            "out": [
+              20.434535742599998,
+              -37
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lumen-lantern-light",
+      "name": "lantern light",
+      "kind": "path",
+      "artboardId": "lumen-board",
+      "parentId": "lumen-firefly",
+      "order": 22,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -7,
+        78
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f6d6a5",
+        "skin": null,
+        "points": [
+          {
+            "id": "lumen-lantern-light-p0",
+            "anchor": [
+              26,
+              0
+            ],
+            "in": [
+              26,
+              -13.807118744999999
+            ],
+            "out": [
+              26,
+              13.807118744999999
+            ]
+          },
+          {
+            "id": "lumen-lantern-light-p1",
+            "anchor": [
+              0,
+              25
+            ],
+            "in": [
+              14.359403494799999,
+              25
+            ],
+            "out": [
+              -14.359403494799999,
+              25
+            ]
+          },
+          {
+            "id": "lumen-lantern-light-p2",
+            "anchor": [
+              -26,
+              0
+            ],
+            "in": [
+              -26,
+              13.807118744999999
+            ],
+            "out": [
+              -26,
+              -13.807118744999999
+            ]
+          },
+          {
+            "id": "lumen-lantern-light-p3",
+            "anchor": [
+              0,
+              -25
+            ],
+            "in": [
+              -14.359403494799999,
+              -25
+            ],
+            "out": [
+              14.359403494799999,
+              -25
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lumen-foot--25",
+      "name": "foot  25",
+      "kind": "group",
+      "artboardId": "lumen-board",
+      "parentId": "lumen-firefly",
+      "order": 23,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -25,
+        123
+      ],
+      "geometry": null
+    },
+    {
+      "id": "lumen-shoe--25",
+      "name": "shoe  25",
+      "kind": "path",
+      "artboardId": "lumen-board",
+      "parentId": "lumen-foot--25",
+      "order": 24,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#57566d",
+        "skin": null,
+        "points": [
+          {
+            "id": "lumen-shoe--25-p0",
+            "anchor": [
+              21,
+              0
+            ],
+            "in": [
+              21,
+              -4.9705627482
+            ],
+            "out": [
+              21,
+              4.9705627482
+            ]
+          },
+          {
+            "id": "lumen-shoe--25-p1",
+            "anchor": [
+              0,
+              9
+            ],
+            "in": [
+              11.5979797458,
+              9
+            ],
+            "out": [
+              -11.5979797458,
+              9
+            ]
+          },
+          {
+            "id": "lumen-shoe--25-p2",
+            "anchor": [
+              -21,
+              0
+            ],
+            "in": [
+              -21,
+              4.9705627482
+            ],
+            "out": [
+              -21,
+              -4.9705627482
+            ]
+          },
+          {
+            "id": "lumen-shoe--25-p3",
+            "anchor": [
+              0,
+              -9
+            ],
+            "in": [
+              -11.5979797458,
+              -9
+            ],
+            "out": [
+              11.5979797458,
+              -9
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lumen-foot-25",
+      "name": "foot 25",
+      "kind": "group",
+      "artboardId": "lumen-board",
+      "parentId": "lumen-firefly",
+      "order": 25,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        25,
+        123
+      ],
+      "geometry": null
+    },
+    {
+      "id": "lumen-shoe-25",
+      "name": "shoe 25",
+      "kind": "path",
+      "artboardId": "lumen-board",
+      "parentId": "lumen-foot-25",
+      "order": 26,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#57566d",
+        "skin": null,
+        "points": [
+          {
+            "id": "lumen-shoe-25-p0",
+            "anchor": [
+              21,
+              0
+            ],
+            "in": [
+              21,
+              -4.9705627482
+            ],
+            "out": [
+              21,
+              4.9705627482
+            ]
+          },
+          {
+            "id": "lumen-shoe-25-p1",
+            "anchor": [
+              0,
+              9
+            ],
+            "in": [
+              11.5979797458,
+              9
+            ],
+            "out": [
+              -11.5979797458,
+              9
+            ]
+          },
+          {
+            "id": "lumen-shoe-25-p2",
+            "anchor": [
+              -21,
+              0
+            ],
+            "in": [
+              -21,
+              4.9705627482
+            ],
+            "out": [
+              -21,
+              -4.9705627482
+            ]
+          },
+          {
+            "id": "lumen-shoe-25-p3",
+            "anchor": [
+              0,
+              -9
+            ],
+            "in": [
+              -11.5979797458,
+              -9
+            ],
+            "out": [
+              11.5979797458,
+              -9
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lumen-head",
+      "name": "head",
+      "kind": "group",
+      "artboardId": "lumen-board",
+      "parentId": "lumen-firefly",
+      "order": 27,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        -48
+      ],
+      "geometry": null
+    },
+    {
+      "id": "lumen-head-outline",
+      "name": "head outline",
+      "kind": "path",
+      "artboardId": "lumen-board",
+      "parentId": "lumen-head",
+      "order": 28,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#6c6590",
+        "skin": null,
+        "points": [
+          {
+            "id": "lumen-head-outline-p0",
+            "anchor": [
+              -71,
+              -9
+            ],
+            "in": [
+              -73,
+              38
+            ],
+            "out": [
+              -77,
+              -54
+            ]
+          },
+          {
+            "id": "lumen-head-outline-p1",
+            "anchor": [
+              -25,
+              -69
+            ],
+            "in": [
+              -58,
+              -72
+            ],
+            "out": [
+              1,
+              -78
+            ]
+          },
+          {
+            "id": "lumen-head-outline-p2",
+            "anchor": [
+              66,
+              -37
+            ],
+            "in": [
+              47,
+              -69
+            ],
+            "out": [
+              87,
+              -6
+            ]
+          },
+          {
+            "id": "lumen-head-outline-p3",
+            "anchor": [
+              53,
+              42
+            ],
+            "in": [
+              77,
+              29
+            ],
+            "out": [
+              18,
+              66
+            ]
+          },
+          {
+            "id": "lumen-head-outline-p4",
+            "anchor": [
+              -49,
+              42
+            ],
+            "in": [
+              -8,
+              62
+            ],
+            "out": [
+              -74,
+              32
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lumen-face",
+      "name": "face",
+      "kind": "path",
+      "artboardId": "lumen-board",
+      "parentId": "lumen-head",
+      "order": 29,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#c3bada",
+        "skin": null,
+        "points": [
+          {
+            "id": "lumen-face-p0",
+            "anchor": [
+              -60,
+              -5
+            ],
+            "in": [
+              -62,
+              30
+            ],
+            "out": [
+              -67,
+              -40
+            ]
+          },
+          {
+            "id": "lumen-face-p1",
+            "anchor": [
+              -22,
+              -57
+            ],
+            "in": [
+              -51,
+              -60
+            ],
+            "out": [
+              3,
+              -65
+            ]
+          },
+          {
+            "id": "lumen-face-p2",
+            "anchor": [
+              56,
+              -30
+            ],
+            "in": [
+              39,
+              -58
+            ],
+            "out": [
+              71,
+              -5
+            ]
+          },
+          {
+            "id": "lumen-face-p3",
+            "anchor": [
+              44,
+              32
+            ],
+            "in": [
+              65,
+              22
+            ],
+            "out": [
+              16,
+              52
+            ]
+          },
+          {
+            "id": "lumen-face-p4",
+            "anchor": [
+              -41,
+              34
+            ],
+            "in": [
+              -5,
+              50
+            ],
+            "out": [
+              -61,
+              25
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lumen-eye--28",
+      "name": "eye  28",
+      "kind": "path",
+      "artboardId": "lumen-board",
+      "parentId": "lumen-head",
+      "order": 30,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -28,
+        -8
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#303d44",
+        "skin": null,
+        "points": [
+          {
+            "id": "lumen-eye--28-p0",
+            "anchor": [
+              10,
+              0
+            ],
+            "in": [
+              10,
+              -7.731986497199999
+            ],
+            "out": [
+              10,
+              7.731986497199999
+            ]
+          },
+          {
+            "id": "lumen-eye--28-p1",
+            "anchor": [
+              0,
+              14
+            ],
+            "in": [
+              5.522847498,
+              14
+            ],
+            "out": [
+              -5.522847498,
+              14
+            ]
+          },
+          {
+            "id": "lumen-eye--28-p2",
+            "anchor": [
+              -10,
+              0
+            ],
+            "in": [
+              -10,
+              7.731986497199999
+            ],
+            "out": [
+              -10,
+              -7.731986497199999
+            ]
+          },
+          {
+            "id": "lumen-eye--28-p3",
+            "anchor": [
+              0,
+              -14
+            ],
+            "in": [
+              -5.522847498,
+              -14
+            ],
+            "out": [
+              5.522847498,
+              -14
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lumen-eye-shine--28",
+      "name": "eye shine  28",
+      "kind": "path",
+      "artboardId": "lumen-board",
+      "parentId": "lumen-head",
+      "order": 31,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -31,
+        -13
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#fffaf0",
+        "skin": null,
+        "points": [
+          {
+            "id": "lumen-eye-shine--28-p0",
+            "anchor": [
+              3,
+              0
+            ],
+            "in": [
+              3,
+              -2.2091389992
+            ],
+            "out": [
+              3,
+              2.2091389992
+            ]
+          },
+          {
+            "id": "lumen-eye-shine--28-p1",
+            "anchor": [
+              0,
+              4
+            ],
+            "in": [
+              1.6568542493999998,
+              4
+            ],
+            "out": [
+              -1.6568542493999998,
+              4
+            ]
+          },
+          {
+            "id": "lumen-eye-shine--28-p2",
+            "anchor": [
+              -3,
+              0
+            ],
+            "in": [
+              -3,
+              2.2091389992
+            ],
+            "out": [
+              -3,
+              -2.2091389992
+            ]
+          },
+          {
+            "id": "lumen-eye-shine--28-p3",
+            "anchor": [
+              0,
+              -4
+            ],
+            "in": [
+              -1.6568542493999998,
+              -4
+            ],
+            "out": [
+              1.6568542493999998,
+              -4
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lumen-cheek--28",
+      "name": "cheek  28",
+      "kind": "path",
+      "artboardId": "lumen-board",
+      "parentId": "lumen-head",
+      "order": 32,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -40.6,
+        16
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e7baa7",
+        "skin": null,
+        "points": [
+          {
+            "id": "lumen-cheek--28-p0",
+            "anchor": [
+              13,
+              0
+            ],
+            "in": [
+              13,
+              -4.4182779984
+            ],
+            "out": [
+              13,
+              4.4182779984
+            ]
+          },
+          {
+            "id": "lumen-cheek--28-p1",
+            "anchor": [
+              0,
+              8
+            ],
+            "in": [
+              7.179701747399999,
+              8
+            ],
+            "out": [
+              -7.179701747399999,
+              8
+            ]
+          },
+          {
+            "id": "lumen-cheek--28-p2",
+            "anchor": [
+              -13,
+              0
+            ],
+            "in": [
+              -13,
+              4.4182779984
+            ],
+            "out": [
+              -13,
+              -4.4182779984
+            ]
+          },
+          {
+            "id": "lumen-cheek--28-p3",
+            "anchor": [
+              0,
+              -8
+            ],
+            "in": [
+              -7.179701747399999,
+              -8
+            ],
+            "out": [
+              7.179701747399999,
+              -8
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lumen-eye-28",
+      "name": "eye 28",
+      "kind": "path",
+      "artboardId": "lumen-board",
+      "parentId": "lumen-head",
+      "order": 33,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        28,
+        -8
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#303d44",
+        "skin": null,
+        "points": [
+          {
+            "id": "lumen-eye-28-p0",
+            "anchor": [
+              10,
+              0
+            ],
+            "in": [
+              10,
+              -7.731986497199999
+            ],
+            "out": [
+              10,
+              7.731986497199999
+            ]
+          },
+          {
+            "id": "lumen-eye-28-p1",
+            "anchor": [
+              0,
+              14
+            ],
+            "in": [
+              5.522847498,
+              14
+            ],
+            "out": [
+              -5.522847498,
+              14
+            ]
+          },
+          {
+            "id": "lumen-eye-28-p2",
+            "anchor": [
+              -10,
+              0
+            ],
+            "in": [
+              -10,
+              7.731986497199999
+            ],
+            "out": [
+              -10,
+              -7.731986497199999
+            ]
+          },
+          {
+            "id": "lumen-eye-28-p3",
+            "anchor": [
+              0,
+              -14
+            ],
+            "in": [
+              -5.522847498,
+              -14
+            ],
+            "out": [
+              5.522847498,
+              -14
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lumen-eye-shine-28",
+      "name": "eye shine 28",
+      "kind": "path",
+      "artboardId": "lumen-board",
+      "parentId": "lumen-head",
+      "order": 34,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        25,
+        -13
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#fffaf0",
+        "skin": null,
+        "points": [
+          {
+            "id": "lumen-eye-shine-28-p0",
+            "anchor": [
+              3,
+              0
+            ],
+            "in": [
+              3,
+              -2.2091389992
+            ],
+            "out": [
+              3,
+              2.2091389992
+            ]
+          },
+          {
+            "id": "lumen-eye-shine-28-p1",
+            "anchor": [
+              0,
+              4
+            ],
+            "in": [
+              1.6568542493999998,
+              4
+            ],
+            "out": [
+              -1.6568542493999998,
+              4
+            ]
+          },
+          {
+            "id": "lumen-eye-shine-28-p2",
+            "anchor": [
+              -3,
+              0
+            ],
+            "in": [
+              -3,
+              2.2091389992
+            ],
+            "out": [
+              -3,
+              -2.2091389992
+            ]
+          },
+          {
+            "id": "lumen-eye-shine-28-p3",
+            "anchor": [
+              0,
+              -4
+            ],
+            "in": [
+              -1.6568542493999998,
+              -4
+            ],
+            "out": [
+              1.6568542493999998,
+              -4
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lumen-cheek-28",
+      "name": "cheek 28",
+      "kind": "path",
+      "artboardId": "lumen-board",
+      "parentId": "lumen-head",
+      "order": 35,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        40.6,
+        16
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e7baa7",
+        "skin": null,
+        "points": [
+          {
+            "id": "lumen-cheek-28-p0",
+            "anchor": [
+              13,
+              0
+            ],
+            "in": [
+              13,
+              -4.4182779984
+            ],
+            "out": [
+              13,
+              4.4182779984
+            ]
+          },
+          {
+            "id": "lumen-cheek-28-p1",
+            "anchor": [
+              0,
+              8
+            ],
+            "in": [
+              7.179701747399999,
+              8
+            ],
+            "out": [
+              -7.179701747399999,
+              8
+            ]
+          },
+          {
+            "id": "lumen-cheek-28-p2",
+            "anchor": [
+              -13,
+              0
+            ],
+            "in": [
+              -13,
+              4.4182779984
+            ],
+            "out": [
+              -13,
+              -4.4182779984
+            ]
+          },
+          {
+            "id": "lumen-cheek-28-p3",
+            "anchor": [
+              0,
+              -8
+            ],
+            "in": [
+              -7.179701747399999,
+              -8
+            ],
+            "out": [
+              7.179701747399999,
+              -8
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lumen-smile",
+      "name": "smile",
+      "kind": "group",
+      "artboardId": "lumen-board",
+      "parentId": "lumen-head",
+      "order": 36,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        19
+      ],
+      "geometry": null
+    },
+    {
+      "id": "lumen-smile-shape",
+      "name": "smile shape",
+      "kind": "path",
+      "artboardId": "lumen-board",
+      "parentId": "lumen-smile",
+      "order": 37,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#614659",
+        "skin": null,
+        "points": [
+          {
+            "id": "lumen-smile-shape-p0",
+            "anchor": [
+              -18,
+              0
+            ],
+            "in": [
+              -18,
+              5
+            ],
+            "out": [
+              -4,
+              7
+            ]
+          },
+          {
+            "id": "lumen-smile-shape-p1",
+            "anchor": [
+              18,
+              0
+            ],
+            "in": [
+              4,
+              7
+            ],
+            "out": [
+              18,
+              9
+            ]
+          },
+          {
+            "id": "lumen-smile-shape-p2",
+            "anchor": [
+              0,
+              22
+            ],
+            "in": [
+              12,
+              22
+            ],
+            "out": [
+              -12,
+              22
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lumen-smile-light",
+      "name": "smile light",
+      "kind": "path",
+      "artboardId": "lumen-board",
+      "parentId": "lumen-smile",
+      "order": 38,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        10
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e5a2a6",
+        "skin": null,
+        "points": [
+          {
+            "id": "lumen-smile-light-p0",
+            "anchor": [
+              8,
+              0
+            ],
+            "in": [
+              8,
+              -2.2091389992
+            ],
+            "out": [
+              8,
+              2.2091389992
+            ]
+          },
+          {
+            "id": "lumen-smile-light-p1",
+            "anchor": [
+              0,
+              4
+            ],
+            "in": [
+              4.4182779984,
+              4
+            ],
+            "out": [
+              -4.4182779984,
+              4
+            ]
+          },
+          {
+            "id": "lumen-smile-light-p2",
+            "anchor": [
+              -8,
+              0
+            ],
+            "in": [
+              -8,
+              2.2091389992
+            ],
+            "out": [
+              -8,
+              -2.2091389992
+            ]
+          },
+          {
+            "id": "lumen-smile-light-p3",
+            "anchor": [
+              0,
+              -4
+            ],
+            "in": [
+              -4.4182779984,
+              -4
+            ],
+            "out": [
+              4.4182779984,
+              -4
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lumen-antenna--1",
+      "name": "antenna  1",
+      "kind": "path",
+      "artboardId": "lumen-board",
+      "parentId": "lumen-head",
+      "order": 39,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": false,
+        "fill": null,
+        "skin": null,
+        "points": [
+          {
+            "id": "lumen-antenna--1-p0",
+            "anchor": [
+              -33,
+              -55
+            ],
+            "in": [
+              -33,
+              -55
+            ],
+            "out": [
+              -33,
+              -55
+            ]
+          },
+          {
+            "id": "lumen-antenna--1-p1",
+            "anchor": [
+              -48,
+              -91
+            ],
+            "in": [
+              -40,
+              -88
+            ],
+            "out": [
+              -48,
+              -91
+            ]
+          }
+        ],
+        "stroke": {
+          "color": "#6c6590",
+          "width": 5,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "lumen-antenna-tip--1",
+      "name": "antenna tip  1",
+      "kind": "path",
+      "artboardId": "lumen-board",
+      "parentId": "lumen-head",
+      "order": 40,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -48,
+        -93
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#edc591",
+        "skin": null,
+        "points": [
+          {
+            "id": "lumen-antenna-tip--1-p0",
+            "anchor": [
+              10,
+              0
+            ],
+            "in": [
+              10,
+              -5.522847498
+            ],
+            "out": [
+              10,
+              5.522847498
+            ]
+          },
+          {
+            "id": "lumen-antenna-tip--1-p1",
+            "anchor": [
+              0,
+              10
+            ],
+            "in": [
+              5.522847498,
+              10
+            ],
+            "out": [
+              -5.522847498,
+              10
+            ]
+          },
+          {
+            "id": "lumen-antenna-tip--1-p2",
+            "anchor": [
+              -10,
+              0
+            ],
+            "in": [
+              -10,
+              5.522847498
+            ],
+            "out": [
+              -10,
+              -5.522847498
+            ]
+          },
+          {
+            "id": "lumen-antenna-tip--1-p3",
+            "anchor": [
+              0,
+              -10
+            ],
+            "in": [
+              -5.522847498,
+              -10
+            ],
+            "out": [
+              5.522847498,
+              -10
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lumen-antenna-1",
+      "name": "antenna 1",
+      "kind": "path",
+      "artboardId": "lumen-board",
+      "parentId": "lumen-head",
+      "order": 41,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": false,
+        "fill": null,
+        "skin": null,
+        "points": [
+          {
+            "id": "lumen-antenna-1-p0",
+            "anchor": [
+              33,
+              -55
+            ],
+            "in": [
+              33,
+              -55
+            ],
+            "out": [
+              33,
+              -55
+            ]
+          },
+          {
+            "id": "lumen-antenna-1-p1",
+            "anchor": [
+              48,
+              -91
+            ],
+            "in": [
+              40,
+              -88
+            ],
+            "out": [
+              48,
+              -91
+            ]
+          }
+        ],
+        "stroke": {
+          "color": "#6c6590",
+          "width": 5,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "lumen-antenna-tip-1",
+      "name": "antenna tip 1",
+      "kind": "path",
+      "artboardId": "lumen-board",
+      "parentId": "lumen-head",
+      "order": 42,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        48,
+        -93
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#edc591",
+        "skin": null,
+        "points": [
+          {
+            "id": "lumen-antenna-tip-1-p0",
+            "anchor": [
+              10,
+              0
+            ],
+            "in": [
+              10,
+              -5.522847498
+            ],
+            "out": [
+              10,
+              5.522847498
+            ]
+          },
+          {
+            "id": "lumen-antenna-tip-1-p1",
+            "anchor": [
+              0,
+              10
+            ],
+            "in": [
+              5.522847498,
+              10
+            ],
+            "out": [
+              -5.522847498,
+              10
+            ]
+          },
+          {
+            "id": "lumen-antenna-tip-1-p2",
+            "anchor": [
+              -10,
+              0
+            ],
+            "in": [
+              -10,
+              5.522847498
+            ],
+            "out": [
+              -10,
+              -5.522847498
+            ]
+          },
+          {
+            "id": "lumen-antenna-tip-1-p3",
+            "anchor": [
+              0,
+              -10
+            ],
+            "in": [
+              -5.522847498,
+              -10
+            ],
+            "out": [
+              5.522847498,
+              -10
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lumen-garden-light-143",
+      "name": "garden light 143",
+      "kind": "path",
+      "artboardId": "lumen-board",
+      "parentId": null,
+      "order": 43,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        143,
+        150
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f6d7a0",
+        "skin": null,
+        "points": [
+          {
+            "id": "lumen-garden-light-143-p0",
+            "anchor": [
+              5,
+              0
+            ],
+            "in": [
+              5,
+              -2.761423749
+            ],
+            "out": [
+              5,
+              2.761423749
+            ]
+          },
+          {
+            "id": "lumen-garden-light-143-p1",
+            "anchor": [
+              0,
+              5
+            ],
+            "in": [
+              2.761423749,
+              5
+            ],
+            "out": [
+              -2.761423749,
+              5
+            ]
+          },
+          {
+            "id": "lumen-garden-light-143-p2",
+            "anchor": [
+              -5,
+              0
+            ],
+            "in": [
+              -5,
+              2.761423749
+            ],
+            "out": [
+              -5,
+              -2.761423749
+            ]
+          },
+          {
+            "id": "lumen-garden-light-143-p3",
+            "anchor": [
+              0,
+              -5
+            ],
+            "in": [
+              -2.761423749,
+              -5
+            ],
+            "out": [
+              2.761423749,
+              -5
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lumen-garden-light-393",
+      "name": "garden light 393",
+      "kind": "path",
+      "artboardId": "lumen-board",
+      "parentId": null,
+      "order": 44,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        393,
+        269
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f6d7a0",
+        "skin": null,
+        "points": [
+          {
+            "id": "lumen-garden-light-393-p0",
+            "anchor": [
+              5,
+              0
+            ],
+            "in": [
+              5,
+              -2.761423749
+            ],
+            "out": [
+              5,
+              2.761423749
+            ]
+          },
+          {
+            "id": "lumen-garden-light-393-p1",
+            "anchor": [
+              0,
+              5
+            ],
+            "in": [
+              2.761423749,
+              5
+            ],
+            "out": [
+              -2.761423749,
+              5
+            ]
+          },
+          {
+            "id": "lumen-garden-light-393-p2",
+            "anchor": [
+              -5,
+              0
+            ],
+            "in": [
+              -5,
+              2.761423749
+            ],
+            "out": [
+              -5,
+              -2.761423749
+            ]
+          },
+          {
+            "id": "lumen-garden-light-393-p3",
+            "anchor": [
+              0,
+              -5
+            ],
+            "in": [
+              -2.761423749,
+              -5
+            ],
+            "out": [
+              2.761423749,
+              -5
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lumen-garden-light-136",
+      "name": "garden light 136",
+      "kind": "path",
+      "artboardId": "lumen-board",
+      "parentId": null,
+      "order": 45,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        136,
+        317
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f6d7a0",
+        "skin": null,
+        "points": [
+          {
+            "id": "lumen-garden-light-136-p0",
+            "anchor": [
+              4,
+              0
+            ],
+            "in": [
+              4,
+              -2.2091389992
+            ],
+            "out": [
+              4,
+              2.2091389992
+            ]
+          },
+          {
+            "id": "lumen-garden-light-136-p1",
+            "anchor": [
+              0,
+              4
+            ],
+            "in": [
+              2.2091389992,
+              4
+            ],
+            "out": [
+              -2.2091389992,
+              4
+            ]
+          },
+          {
+            "id": "lumen-garden-light-136-p2",
+            "anchor": [
+              -4,
+              0
+            ],
+            "in": [
+              -4,
+              2.2091389992
+            ],
+            "out": [
+              -4,
+              -2.2091389992
+            ]
+          },
+          {
+            "id": "lumen-garden-light-136-p3",
+            "anchor": [
+              0,
+              -4
+            ],
+            "in": [
+              -2.2091389992,
+              -4
+            ],
+            "out": [
+              2.2091389992,
+              -4
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lumen-garden-light-331",
+      "name": "garden light 331",
+      "kind": "path",
+      "artboardId": "lumen-board",
+      "parentId": null,
+      "order": 46,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        331,
+        62
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f6d7a0",
+        "skin": null,
+        "points": [
+          {
+            "id": "lumen-garden-light-331-p0",
+            "anchor": [
+              3,
+              0
+            ],
+            "in": [
+              3,
+              -1.6568542493999998
+            ],
+            "out": [
+              3,
+              1.6568542493999998
+            ]
+          },
+          {
+            "id": "lumen-garden-light-331-p1",
+            "anchor": [
+              0,
+              3
+            ],
+            "in": [
+              1.6568542493999998,
+              3
+            ],
+            "out": [
+              -1.6568542493999998,
+              3
+            ]
+          },
+          {
+            "id": "lumen-garden-light-331-p2",
+            "anchor": [
+              -3,
+              0
+            ],
+            "in": [
+              -3,
+              1.6568542493999998
+            ],
+            "out": [
+              -3,
+              -1.6568542493999998
+            ]
+          },
+          {
+            "id": "lumen-garden-light-331-p3",
+            "anchor": [
+              0,
+              -3
+            ],
+            "in": [
+              -1.6568542493999998,
+              -3
+            ],
+            "out": [
+              1.6568542493999998,
+              -3
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lumen-garden-light-366",
+      "name": "garden light 366",
+      "kind": "path",
+      "artboardId": "lumen-board",
+      "parentId": null,
+      "order": 47,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        366,
+        379
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f6d7a0",
+        "skin": null,
+        "points": [
+          {
+            "id": "lumen-garden-light-366-p0",
+            "anchor": [
+              4,
+              0
+            ],
+            "in": [
+              4,
+              -2.2091389992
+            ],
+            "out": [
+              4,
+              2.2091389992
+            ]
+          },
+          {
+            "id": "lumen-garden-light-366-p1",
+            "anchor": [
+              0,
+              4
+            ],
+            "in": [
+              2.2091389992,
+              4
+            ],
+            "out": [
+              -2.2091389992,
+              4
+            ]
+          },
+          {
+            "id": "lumen-garden-light-366-p2",
+            "anchor": [
+              -4,
+              0
+            ],
+            "in": [
+              -4,
+              2.2091389992
+            ],
+            "out": [
+              -4,
+              -2.2091389992
+            ]
+          },
+          {
+            "id": "lumen-garden-light-366-p3",
+            "anchor": [
+              0,
+              -4
+            ],
+            "in": [
+              -2.2091389992,
+              -4
+            ],
+            "out": [
+              2.2091389992,
+              -4
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [
+    {
+      "id": "lumen-rest",
+      "name": "Rest",
+      "artboardId": "lumen-board",
+      "fps": 60,
+      "duration": 120,
+      "loop": true,
+      "tracks": [
+        {
+          "targetId": "lumen-firefly",
+          "property": "y",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 282,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 274,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 282,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "lumen-head",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "lumen-smile",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "lumen-left-wing",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "lumen-right-wing",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lumen-joy",
+      "name": "Joy",
+      "artboardId": "lumen-board",
+      "fps": 60,
+      "duration": 120,
+      "loop": true,
+      "tracks": [
+        {
+          "targetId": "lumen-head",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0.12,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": -0.08,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0.12,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "lumen-smile",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1.5,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 1.9,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1.5,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lumen-brave",
+      "name": "Courage",
+      "artboardId": "lumen-board",
+      "fps": 60,
+      "duration": 120,
+      "loop": true,
+      "tracks": [
+        {
+          "targetId": "lumen-left-wing",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0.35,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 30,
+              "value": 0.65,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 0.3,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 90,
+              "value": 0.6,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0.35,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "lumen-right-wing",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": -0.35,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 30,
+              "value": -0.65,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": -0.3,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 90,
+              "value": -0.6,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": -0.35,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "machines": [
+    {
+      "id": "lumen-feelings",
+      "name": "Feelings",
+      "artboardId": "lumen-board",
+      "inputs": [
+        {
+          "id": "lumen-joy-input",
+          "name": "joy",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "id": "lumen-courage-input",
+          "name": "courage",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "states": [
+        {
+          "id": "lumen-mix",
+          "name": "Make a feeling",
+          "animationId": "lumen-rest",
+          "position": [
+            60,
+            60
+          ],
+          "blend": {
+            "type": "direct",
+            "children": [
+              {
+                "animationId": "lumen-rest",
+                "weight": 100
+              },
+              {
+                "animationId": "lumen-joy",
+                "inputId": "lumen-joy-input"
+              },
+              {
+                "animationId": "lumen-brave",
+                "inputId": "lumen-courage-input"
+              }
+            ]
+          }
+        }
+      ],
+      "entryStateId": "lumen-mix",
+      "transitions": [],
+      "listeners": []
+    }
+  ],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "lumen-board": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  },
+  "advanced": {
+    "clips": [],
+    "feathers": [],
+    "ik": []
+  }
+}

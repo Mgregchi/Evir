@@ -325,27 +325,31 @@ export function validateFeatures(
       if (state.blend) {
         const b = state.blend;
         if (!p.advanced) problem(path, "blend states require advanced source");
-        if (rec(b, path + ".blend", ["type", "inputId", "children"])) {
-          if (b.type !== "1d" || inputs.get(b.inputId)?.type !== "number")
+        const direct=b.type==='direct';
+        if (rec(b, path + ".blend", direct ? ["type","children"] : ["type", "inputId", "children"])) {
+          if (!direct && (b.type !== "1d" || inputs.get(b.inputId)?.type !== "number"))
             problem(path, "1D blend needs a number input");
+          if(direct && (m.states.length!==1 || m.transitions.length))
+            problem(path,"Direct blending currently needs one state and no transitions");
           if (arr(b.children, path + ".children")) {
-            if (b.children.length < 2)
-              problem(path, "two blend children required");
+            if (b.children.length < 2 || (direct && b.children.length>8))
+              problem(path, direct ? "Direct blending needs 2–8 ordered children" : "two blend children required");
             let previous = -Infinity;
             for (const child of b.children) {
-              if (!rec(child, path + ".child", ["animationId", "position"]))
-                continue;
-              if (
-                anims.get(child.animationId)?.artboardId !== m.artboardId ||
-                !Number.isFinite(child.position) ||
-                child.position <= previous
-              )
-                problem(
-                  path,
-                  "blend children need animations and increasing positions",
-                );
-              previous = child.position;
+              if (!rec(child, path + ".child", direct ? ["animationId",...(Object.hasOwn(child??{},'weight') ? ['weight'] : ['inputId'])] : ["animationId", "position"])) continue;
+              if (anims.get(child.animationId)?.artboardId !== m.artboardId)
+                problem(path,"Blend child needs an animation in this artboard");
+              if(direct){
+                if('weight' in child){if(!Number.isFinite(child.weight)||child.weight<0||child.weight>100)problem(path,'Direct weight must be in [0,100]');}
+                else if(inputs.get(child.inputId)?.type!=="number")problem(path,"Direct weight needs a number input");
+              }else{
+                if(!Number.isFinite(child.position)||child.position<=previous)
+                  problem(path,"blend children need animations and increasing positions");
+                previous=child.position;
+              }
             }
+            if(direct && state.animationId!==b.children[0]?.animationId)
+              problem(path,"Direct state animation must match its first child");
           }
         }
       }
@@ -437,4 +441,10 @@ export function validateFeatures(
       names.add(key);
     }
   }
+  const directClips=new Set(p.machines.flatMap(m=>(Array.isArray(m?.states)?m.states:[]).flatMap(s=>s?.blend?.type==='direct'&&Array.isArray(s.blend.children)?s.blend.children.map(c=>c?.animationId):[])));
+  for(const m of p.machines)for(const s of m.states)if(s.blend?.type!=='direct'){
+    const clips=Array.isArray(s.blend?.children)?s.blend.children.map(c=>c?.animationId):[s.animationId];
+    if(clips.some(id=>directClips.has(id)))problem('machine '+m.id,'Direct child animations cannot also drive ordinary/1D states; use separate timelines');
+  }
+
 }

@@ -18,6 +18,7 @@ import { setKey, bindPath, setWeight } from '@evir/authoring';
 import { compileProject, importRiv } from '@evir/format';
 import { mkdir, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
+import {directStudy} from './direct-scene.mjs';
 import {weightStudy} from './weight-scene.mjs';
 const output = fileURLToPath(new URL('./assets/examples/', import.meta.url));
 
@@ -381,6 +382,7 @@ Object.assign(factories,characterScenes(project));
 const outingStudy=joiningStudy(project);factories.outing=()=>outingStudy.project;
 await mkdir(output,{recursive:true});
 factories.gust=()=>weightStudy(project);
+factories.lumen=()=>directStudy(project);
 for(const name of exampleIds) {
   const p=await factories[name]();validateProject(p);
   const compiled=compileProject(p);

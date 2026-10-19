@@ -41,8 +41,10 @@ export function mountPanels() {
         const mode = document.querySelector(
           ".mode-buttons [aria-pressed=true]",
         )?.textContent;
-        button.querySelector("span:last-child").textContent =
-          mode === "Interact" ? "Machine" : "Timeline";
+        const label=mode === "Interact" ? "Machine" : "Timeline";
+        button.querySelector("span:last-child").textContent=label;
+        button.setAttribute("aria-label",label);
+        button.title="Open "+label;
       }
       button.setAttribute(
         "aria-expanded",
