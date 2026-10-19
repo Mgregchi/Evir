@@ -119,6 +119,24 @@
       "bytes": 9461,
       "sha256": "72a01e2feb2fe135eb14be77e74a8dff79e9e00f70b7ada5aa04fc3e1b9f02c9",
       "file": "states.mdx"
+    },
+    {
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/",
+      "retrievedAt": "2026-10-19T09:05:39.384735+00:00",
+      "status": 200,
+      "finalUrl": "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/",
+      "bytes": 35553,
+      "sha256": "6976107e1d50815d7ea1434169500cff516b661dcadb61dd9cd9586676866380",
+      "file": "disclosure.html"
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details",
+      "retrievedAt": "2026-10-19T09:05:39.713476+00:00",
+      "status": 200,
+      "finalUrl": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details",
+      "bytes": 196519,
+      "sha256": "f00d08ee84c2662bed16bce4d967c3d3d0f77f6d8c08d1ee11562a6d9f1c84cd",
+      "file": "details.html"
     }
   ]
 }

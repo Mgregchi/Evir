@@ -41,6 +41,8 @@ The first timed Lumen oracle exposed an exporter interaction: Evir ordinarily pa
 
 Rest restores the shared keys and gently bobs the body. Joy tilts the head and broadens the smile. Courage flutters both wing groups. The website exposes independent keyboard-accessible percentage sliders and **Reset feelings**. A reduced-motion preference keeps motion paused; offscreen/hidden previews use the existing scheduling cleanup. Preview repaint uses `pose()` instead of an extra `advance(0)`, so drawing itself is not a hidden blend tick. Existing public examples use the same read-only repaint path.
 
+The 29-study index was pushing the first previews below the initial desktop viewport. The site now puts that index behind a native **Browse studies** disclosure; all studies and deep links remain available. [WAI disclosure guidance](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/) and [MDN details semantics](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details) were read before this change, with retrieval hashes in the source manifest. Enter/Space expand or collapse it, and the opening fade respects reduced motion. Feeling sliders use full-width 44-pixel targets. The gallery test derives actual visible previews instead of assuming a fixed collection size/layout; it continues to verify deferred loading and one fetch per study.
+
 ## Validation and reproduction
 
 ```sh
