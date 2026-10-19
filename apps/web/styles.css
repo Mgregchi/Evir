@@ -57,3 +57,4 @@
 .example-browser .example-index{margin:16px 0 0}
 @media(prefers-reduced-motion:no-preference){.example-browser[open] .example-index{animation:evir-browse-in 160ms ease-out}}
 @keyframes evir-browse-in{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+.lesson-steps article,.learn-intro,#controls,#next-skills,#troubleshooting,#open-example{scroll-margin-top:110px}

@@ -11,6 +11,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
   for(const width of[320,390,844,1440]){
    await page.setViewportSize({width,height:900});await page.goto(origin+base+'/learn/');
    await page.getByRole('link',{name:'Make your first animation',exact:true}).click();assert.equal(new URL(page.url()).hash,'#first-animation');
+   await page.waitForFunction(()=>document.querySelector('#first-animation h2').getBoundingClientRect().top>=document.querySelector('.site-header').getBoundingClientRect().bottom);
    assert.equal(await page.locator('.lesson-steps article').count(),10);
    for(const img of await page.locator('.lesson-figure img').all()){await img.scrollIntoViewIfNeeded();await img.evaluate(e=>e.decode());assert(await img.evaluate(e=>e.naturalWidth>0));}
    const details=page.locator('#next-skills details').first();await details.locator('summary').focus();await page.keyboard.press('Enter');assert.equal(await details.getAttribute('open'),'');await page.keyboard.press('Space');assert.equal(await details.getAttribute('open'),null);
