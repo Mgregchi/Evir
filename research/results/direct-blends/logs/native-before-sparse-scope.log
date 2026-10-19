@@ -1,0 +1,15 @@
+canvas: independent-input ordered blend, clock and pixel checks passed.
+canvas: independent-fixed ordered blend, clock and pixel checks passed.
+canvas: evir-export ordered blend, clock and pixel checks passed.
+canvas: color-export ordered blend, clock and pixel checks passed.
+AssertionError [ERR_ASSERTION]: {"backend":"canvas","scene":"lumen","inputs":[100,0],"tick":4,"dt":0.5,"mae":3.699962615966797,"covered":35246,"expectedCovered":35253}
+    at /workspace/Evir/tools/validate-direct-blends.cjs:26:185
+    at async exports.run (/workspace/Evir/tools/browser.cjs:51:5)
+    at async /workspace/Evir/tools/validate-direct-blends.cjs:13:77 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}

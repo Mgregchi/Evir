@@ -1,0 +1,44 @@
+
+> evir-workspace@0.1.0 web:build
+> npm run build --workspace @evir/web
+
+
+> @evir/web@0.1.0 build
+> node build.mjs
+
+Built 11 Evir public pages into apps/web/dist; editor destination /editor/studio/
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+Direct blends: four responsive workflows, ordered rows, numeric weights, history, inputs, native export, recovery and accessibility passed.
+
+> evir-workspace@0.1.0 validate:direct
+> node tools/validate-direct-blends.cjs
+
+canvas: independent-input ordered blend, clock and pixel checks passed.
+canvas: independent-fixed ordered blend, clock and pixel checks passed.
+canvas: evir-export ordered blend, clock and pixel checks passed.
+canvas: color-export ordered blend, clock and pixel checks passed.
+canvas: rotation-export ordered blend, clock and pixel checks passed.
+canvas: lumen ordered blend, clock and pixel checks passed.
+canvas: studio-direct ordered blend, clock and pixel checks passed.
+webgl2: independent-input ordered blend, clock and pixel checks passed.
+webgl2: independent-fixed ordered blend, clock and pixel checks passed.
+webgl2: evir-export ordered blend, clock and pixel checks passed.
+webgl2: color-export ordered blend, clock and pixel checks passed.
+webgl2: rotation-export ordered blend, clock and pixel checks passed.
+webgl2: lumen ordered blend, clock and pixel checks passed.
+webgl2: studio-direct ordered blend, clock and pixel checks passed.
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+Captured compact index and actual Lumen controls with 44-pixel touch targets.
