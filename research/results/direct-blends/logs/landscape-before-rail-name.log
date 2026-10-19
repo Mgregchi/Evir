@@ -1,0 +1,24 @@
+{
+  mode: 'Interact',
+  w: 844,
+  match: true,
+  button: '<button id="show-workflow" aria-haspopup="dialog" aria-expanded="false" aria-controls="mobile-panel">\n' +
+    '        <span data-icon="play" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M7 4l14 8-14 8V4z"></path></svg></span><span>Machine</span>\n' +
+    '      </button>',
+  pressed: 'Interact',
+  notice: '\n      ×\n    '
+}
+locator.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('button', { name: 'Machine', exact: true })[22m
+
+    at exports.press (/workspace/Evir/tests/editor/actions.cjs:5:52)
+    at press (/workspace/Evir/tests/editor/direct-blends-browser.cjs:6:79)
+    at /workspace/Evir/tests/editor/direct-blends-browser.cjs:10:474
+    at async exports.run (/workspace/Evir/tools/browser.cjs:51:5)
+    at async /workspace/Evir/tests/editor/direct-blends-browser.cjs:4:2 {
+  log: [
+    "  - waiting for getByRole('button', { name: 'Machine', exact: true })"
+  ],
+  name: 'TimeoutError'
+}

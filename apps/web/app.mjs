@@ -40,6 +40,7 @@ if(form)form.addEventListener('submit',e=>{
 function mountPreview(element) {
   const name=element.dataset.preview,canvas=element.querySelector('canvas'),poster=element.querySelector('.demo-poster');
   const toggle=element.querySelector('.motion-control'),wave=element.querySelector('.wave-control'),state=element.querySelector('.demo-state'),message=element.querySelector('.demo-message');
+  const directInputs=[...element.querySelectorAll('[data-direct-input]')],directReset=element.querySelector('.direct-reset');
   const expression=element.querySelector('.character-expression'),characterReset=element.querySelector('.character-reset');
   const blendInput=element.querySelector('.blend-input'),blendOn=element.querySelector('.blend-active');
   const loader=element.querySelector('.living-loader'),retry=element.querySelector('.retry-preview'),motion=matchMedia('(prefers-reduced-motion: reduce)');
@@ -56,7 +57,7 @@ function mountPreview(element) {
     if(current){if(state.textContent!==current)state.textContent=current;if(celebrate)celebrate.disabled=current!=='Ready';}
     if(telemetry){element.querySelector('.ride-speed').textContent=telemetry.speedKmh.toFixed(0);element.querySelector('.ride-distance').textContent=telemetry.distance.toFixed(0);}
   }
-  function draw() {renderer.draw(player.advance(0),player.artboard.id);syncState();}
+  function draw() {renderer.draw(player.pose(),player.artboard.id);syncState();}
   function sync() {toggle.textContent=animated?(motorcycle?(playing?'Pause ride':'Start ride'):(playing?'Pause motion':'Play motion')):'Static study';toggle.setAttribute('aria-pressed',String(playing));element.dataset.playing=String(playing);loop.setActive(Boolean(animated&&player&&playing&&visible&&!document.hidden&&!suspended));}
   function fail() {
     loop.stop();player=null;renderer?.dispose();renderer=null;canvas.hidden=true;poster.hidden=false;
@@ -64,6 +65,7 @@ function mountPreview(element) {
     message.textContent='The live preview couldn’t wake up. Try again, or use the image and downloadable source.';
     toggle.disabled=true;if(wave)wave.disabled=true;for(const control of [enabled,level,celebrate,reset,blendInput,blendOn])if(control)control.disabled=true;
     for(const control of [expression,characterReset])if(control)control.disabled=true;
+    for(const control of [...directInputs,directReset])if(control)control.disabled=true;
     for(const control of element.querySelectorAll('[data-motor-control]'))control.disabled=true;
   }
   async function load() {
@@ -81,6 +83,7 @@ function mountPreview(element) {
       animated=Boolean(project.animations.length||project.machines.length);if(!animated)playing=false;
       draw();waving=false;if(blendInput){blendInput.disabled=false;blendOn.disabled=false;}
       if(enabled){enabled.checked=false;enabled.disabled=false;level.value='0';level.disabled=false;reset.disabled=false;element.querySelector('.level-value').textContent='0';}
+      for(const control of directInputs){control.disabled=false;control.value='0';element.querySelector('[data-output="'+control.dataset.directInput+'"]').textContent='0%';}if(directReset)directReset.disabled=false;
       if(expression){expression.value='0';expression.disabled=false;characterReset.disabled=false;}
       if(wave){wave.setAttribute('aria-pressed','false');wave.firstChild.textContent='Say hello ';state.textContent='Idle';wave.disabled=false;}
       if(motorcycle){for(const control of element.querySelectorAll('[data-motor-control]'))control.disabled=false;resetRideControls();}
@@ -93,6 +96,8 @@ function mountPreview(element) {
   motion.addEventListener('change',e=>{if(e.matches){playing=false;sync();}},options);
   wave?.addEventListener('click',()=>{try {waving=!waving;player.setInput('isWaving',waving);renderer.draw(player.advance(0),player.artboard.id);wave.setAttribute('aria-pressed',String(waving));wave.firstChild.textContent=waving?'Back to idle ':'Say hello ';state.textContent=waving?'Hello':'Idle';}catch{fail();}},options);
   function interact(operation) {try{operation();draw();}catch{fail();}}
+  for(const input of directInputs)input.addEventListener('input',()=>interact(()=>{player.setInput(input.dataset.directInput,Number(input.value));element.querySelector('[data-output="'+input.dataset.directInput+'"]').textContent=input.value+'%';}),options);
+  directReset?.addEventListener('click',()=>interact(()=>{player.reset();for(const input of directInputs){input.value='0';element.querySelector('[data-output="'+input.dataset.directInput+'"]').textContent='0%';}playing=false;sync();}),options);
   expression?.addEventListener('change',()=>interact(()=>player.setInput('expression',Number(expression.value))),options);
   characterReset?.addEventListener('click',()=>interact(()=>{player.reset();expression.value='0';playing=false;sync();}),options);
   blendInput?.addEventListener('input',()=>interact(()=>player.setInput('position',Number(blendInput.value))),options);

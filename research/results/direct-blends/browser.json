@@ -1,0 +1,75 @@
+{
+  "checkedAt": "2026-10-19T09:58:44.652Z",
+  "scope": "Cloud browser editing and automated accessibility; no physical-device or human evidence.",
+  "viewports": [
+    {
+      "width": 320,
+      "height": 844,
+      "checks": [
+        "invalid weight rejects atomically",
+        "ordered rows add/move/remove",
+        "draft cancel and focus return",
+        "source-binding focus survives rerender",
+        "reachable full-width compact sheet",
+        "zero automated WCAG violations",
+        "single-step undo/redo",
+        "inputs affect presentation only",
+        "actual export equals compiler",
+        "durable recovery excludes sheet/test values",
+        "no overflow"
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "checks": [
+        "invalid weight rejects atomically",
+        "ordered rows add/move/remove",
+        "draft cancel and focus return",
+        "source-binding focus survives rerender",
+        "reachable full-width compact sheet",
+        "zero automated WCAG violations",
+        "single-step undo/redo",
+        "inputs affect presentation only",
+        "actual export equals compiler",
+        "durable recovery excludes sheet/test values",
+        "no overflow"
+      ]
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "checks": [
+        "invalid weight rejects atomically",
+        "ordered rows add/move/remove",
+        "draft cancel and focus return",
+        "source-binding focus survives rerender",
+        "reachable full-width compact sheet",
+        "zero automated WCAG violations",
+        "single-step undo/redo",
+        "inputs affect presentation only",
+        "actual export equals compiler",
+        "durable recovery excludes sheet/test values",
+        "no overflow"
+      ]
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "checks": [
+        "invalid weight rejects atomically",
+        "ordered rows add/move/remove",
+        "draft cancel and focus return",
+        "source-binding focus survives rerender",
+        "reachable full-width compact sheet",
+        "zero automated WCAG violations",
+        "single-step undo/redo",
+        "inputs affect presentation only",
+        "actual export equals compiler",
+        "durable recovery excludes sheet/test values",
+        "no overflow"
+      ]
+    }
+  ],
+  "browser": "151.0.7922.173"
+}

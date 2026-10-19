@@ -1,0 +1,142 @@
+{
+  "upstreamCommit": "7aa93402a27c800db8a36acc8672612c100ea9b1",
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/animation/blend_state_direct_instance.cpp",
+      "retrievedAt": "2026-10-19T07:45:33.201784+00:00",
+      "status": 200,
+      "finalUrl": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/animation/blend_state_direct_instance.cpp",
+      "bytes": 2329,
+      "sha256": "6286a853c2a4b12e834fcf0920f0282b6ce0ba13efbd21e245bcf7b611e963c4",
+      "file": "blend_state_direct_instance.cpp"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/animation/blend_state_1d_instance.cpp",
+      "retrievedAt": "2026-10-19T07:45:33.202945+00:00",
+      "status": 200,
+      "finalUrl": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/animation/blend_state_1d_instance.cpp",
+      "bytes": 4562,
+      "sha256": "956a78df0ab42af422f98ccf5b0ce6ec47307c418b942104fbc2609f7c59d9d6",
+      "file": "blend_state_1d_instance.cpp"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/animation/blend_animation_direct.cpp",
+      "retrievedAt": "2026-10-19T07:45:33.203932+00:00",
+      "status": 200,
+      "finalUrl": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/animation/blend_animation_direct.cpp",
+      "bytes": 1981,
+      "sha256": "9b7ae3fd9362ee930e484dcf2eea40692a23542d6a295502179c80fcad04760c",
+      "file": "blend_animation_direct.cpp"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/animation/blend_state_instance.cpp",
+      "retrievedAt": "2026-10-19T07:45:33.205281+00:00",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/animation/blend_accumulator.cpp",
+      "retrievedAt": "2026-10-19T07:45:33.206694+00:00",
+      "status": 200,
+      "finalUrl": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/animation/blend_accumulator.cpp",
+      "bytes": 4588,
+      "sha256": "ce15b3bc20d0c491753a9e245696e3fec6b82ef28f224dbd15a02f15635c8ff4",
+      "file": "blend_accumulator.cpp"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/include/rive/animation/blend_state_direct_instance.hpp",
+      "retrievedAt": "2026-10-19T07:45:33.208095+00:00",
+      "status": 200,
+      "finalUrl": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/include/rive/animation/blend_state_direct_instance.hpp",
+      "bytes": 634,
+      "sha256": "932f88f67d192ebf89420ae8d8cbba03e6790d33fa7bf7f330e8974a040e4e90",
+      "file": "blend_state_direct_instance.hpp"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/dev/defs/animation/blend_state_direct.json",
+      "retrievedAt": "2026-10-19T07:45:33.849650+00:00",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/dev/defs/animation/blend_animation_direct.json",
+      "retrievedAt": "2026-10-19T07:45:33.923985+00:00",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/dev/defs/animation/blend_animation_direct_input.json",
+      "retrievedAt": "2026-10-19T07:45:33.964788+00:00",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/animation/state_machine_layer_instance.cpp",
+      "retrievedAt": "2026-10-19T07:45:34.054873+00:00",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-docs/18744eb41501f7014b2fb7c1c4a7b6719120e507/editor/state-machine/blend-states.mdx",
+      "retrievedAt": "2026-10-19T07:45:34.082644+00:00",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html",
+      "retrievedAt": "2026-10-19T07:45:34.085282+00:00",
+      "status": 200,
+      "finalUrl": "https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html",
+      "bytes": 48929,
+      "sha256": "c3905630a35b6e8246aba32c1769f3ff82b217d464d41e4b1b2a34b9df5771c6",
+      "file": "dragging-movements.html"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/include/rive/animation/blend_state_instance.hpp",
+      "status": 200,
+      "bytes": 3886,
+      "sha256": "7e49b12c3cc35265a8e7d274c267aff6507e5e208d8b0531552abc35a14d3265",
+      "file": "blend_state_instance.hpp"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/include/rive/generated/animation/blend_animation_direct_base.hpp",
+      "status": 200,
+      "bytes": 3665,
+      "sha256": "7f905638b8dbbb7e654dd1c279500c215f8ee56ef5f7cfafe91bdfb57005bf3b",
+      "file": "blend_animation_direct_base.hpp"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/animation/blend_state_direct.cpp",
+      "status": 200,
+      "bytes": 401,
+      "sha256": "b339cc2d19a5f4ce8153cc88bb5acceccbaf5b53166e0718bf55e43707211e56",
+      "file": "blend_state_direct.cpp"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/include/rive/animation/blend_animation_direct.hpp",
+      "status": 200,
+      "bytes": 857,
+      "sha256": "bfafafa629ece2235bd0e1c335b34f2229445a6045d3d380a5ccf8b2dfffb39b",
+      "file": "blend_animation_direct.hpp"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rive-app/rive-docs/18744eb41501f7014b2fb7c1c4a7b6719120e507/editor/state-machine/states.mdx",
+      "status": 200,
+      "bytes": 9461,
+      "sha256": "72a01e2feb2fe135eb14be77e74a8dff79e9e00f70b7ada5aa04fc3e1b9f02c9",
+      "file": "states.mdx"
+    },
+    {
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/",
+      "retrievedAt": "2026-10-19T09:05:39.384735+00:00",
+      "status": 200,
+      "finalUrl": "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/",
+      "bytes": 35553,
+      "sha256": "6976107e1d50815d7ea1434169500cff516b661dcadb61dd9cd9586676866380",
+      "file": "disclosure.html"
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details",
+      "retrievedAt": "2026-10-19T09:05:39.713476+00:00",
+      "status": 200,
+      "finalUrl": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details",
+      "bytes": 196519,
+      "sha256": "f00d08ee84c2662bed16bce4d967c3d3d0f77f6d8c08d1ee11562a6d9f1c84cd",
+      "file": "details.html"
+    }
+  ]
+}

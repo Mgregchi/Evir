@@ -1,0 +1,4500 @@
+{
+  "checkedAt": "2026-10-19T09:59:14.325Z",
+  "runtimeVersion": "2.44.0",
+  "method": "Paused official state-machine instances advanced exactly once per explicit tick through the pinned research wrapper. Independent native inputs/default fixed-weight records, Evir re-export, color, Lumen and actual Studio edits. Raw RGBA comparison at preset MAE <2.5 and coverage difference <350; nonempty coverage required.",
+  "scope": "Cloud software rendering; no physical-device or human evidence. Private pinned-runtime calls are research harness access.",
+  "fixtures": [
+    {
+      "name": "independent-input",
+      "sourceSha256": "b2c91cc95e05f320772e096025bb6e6deb5b4a2da296da98a077a6ec11ca111b",
+      "rivSha256": "c80bb6760338228f2703739991c7cf936d2fc57b75f2f0d4f017f99a40ccc16f"
+    },
+    {
+      "name": "independent-fixed",
+      "sourceSha256": "21ae3da0f51c16f137aec9e2c7f4aa25de9e1954dbae257b8dd2f91840a6d200",
+      "rivSha256": "71c29ac67a7247be7db762e50e4db3f31d68897942a2edea6b61b07dc104f1d9"
+    },
+    {
+      "name": "evir-export",
+      "sourceSha256": "b2c91cc95e05f320772e096025bb6e6deb5b4a2da296da98a077a6ec11ca111b",
+      "rivSha256": "a70806c2e4fc17378ac6f064b585294dd9ceed0b2cd07aa495f843e56201743b"
+    },
+    {
+      "name": "color-export",
+      "sourceSha256": "10cfa49fccc407c4bf20a3db7cfabe0ba655c2060b0e08c8cc5a08f090e8e7e6",
+      "rivSha256": "e1ea611b43ea4596526f6fb2f5cd8315c1ab3cec6a2cbb114e92fb97d8c2f453"
+    },
+    {
+      "name": "rotation-export",
+      "sourceSha256": "153666ffbcf3b32b1c574e97e5a74171b3e0f5ef8bb6a3f4e384bc1ab811c7ad",
+      "rivSha256": "bee6923735f4442a1f59d5d43acf19da14e534d0bc6acfc98bd4d732b5200fda"
+    },
+    {
+      "name": "lumen",
+      "sourceSha256": "51f3e10299fe91ee76a4e5ab2510fc1fba3e832f898b364983caf3ba60eba5ca",
+      "rivSha256": "26acd997e54f922d17e853d2b4633c8ba09c3b3175bf6f1af5585012a2949788"
+    },
+    {
+      "name": "studio-direct",
+      "sourceSha256": "585b7daf687287e0c92bbd5c887f76d301fd498638b89fcee8a96517592d4a8c",
+      "rivSha256": "c7596a6e7550e6966d8916ac94d27aea1a8926f3c52e8ce188cd1bba26d87b70"
+    }
+  ],
+  "backends": [
+    {
+      "backend": "canvas",
+      "checks": [
+        {
+          "scene": "independent-input",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            75,
+            25
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            75,
+            25
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            75,
+            25
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0.00018310546875,
+          "covered": 2352,
+          "expectedCovered": 2352
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            75,
+            25
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0.00054931640625,
+          "covered": 2352,
+          "expectedCovered": 2352
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            50,
+            50
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            50,
+            50
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            50,
+            50
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            50,
+            50
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            100,
+            100
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            100,
+            100
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            -20,
+            150
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            -20,
+            150
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            -20,
+            150
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            -20,
+            150
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            75,
+            25
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            75,
+            25
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            75,
+            25
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            75,
+            25
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            50,
+            50
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            50,
+            50
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            50,
+            50
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            50,
+            50
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            100,
+            100
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            100,
+            100
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            -20,
+            150
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            -20,
+            150
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            -20,
+            150
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            -20,
+            150
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            75,
+            25
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            75,
+            25
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            75,
+            25
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0.00018310546875,
+          "covered": 2352,
+          "expectedCovered": 2352
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            75,
+            25
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0.00054931640625,
+          "covered": 2352,
+          "expectedCovered": 2352
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            50,
+            50
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            50,
+            50
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            50,
+            50
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            50,
+            50
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            100,
+            100
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            100,
+            100
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            -20,
+            150
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            -20,
+            150
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            -20,
+            150
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            -20,
+            150
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            75,
+            25
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            75,
+            25
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            75,
+            25
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            75,
+            25
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            50,
+            50
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            50,
+            50
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            50,
+            50
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            50,
+            50
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            100,
+            100
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            100,
+            100
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            -20,
+            150
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            -20,
+            150
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            -20,
+            150
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            -20,
+            150
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            75,
+            25
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            75,
+            25
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2409,
+          "expectedCovered": 2409
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            75,
+            25
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2411,
+          "expectedCovered": 2411
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            75,
+            25
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2406,
+          "expectedCovered": 2406
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            50,
+            50
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            50,
+            50
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            50,
+            50
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2419,
+          "expectedCovered": 2419
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            50,
+            50
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2420,
+          "expectedCovered": 2420
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            100,
+            100
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            100,
+            100
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            -20,
+            150
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            -20,
+            150
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            -20,
+            150
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            -20,
+            150
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "lumen",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0.20088577270507812,
+          "covered": 35246,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "lumen",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 2,
+          "dt": 0.25,
+          "mae": 0.20090103149414062,
+          "covered": 35246,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "lumen",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 3,
+          "dt": 0.25,
+          "mae": 0.20090103149414062,
+          "covered": 35246,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "lumen",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 4,
+          "dt": 0.5,
+          "mae": 0.20090866088867188,
+          "covered": 35246,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "lumen",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0.2034759521484375,
+          "covered": 35246,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "lumen",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 2,
+          "dt": 0.25,
+          "mae": 0.2017364501953125,
+          "covered": 35246,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "lumen",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 3,
+          "dt": 0.25,
+          "mae": 0.20309829711914062,
+          "covered": 35246,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "lumen",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 4,
+          "dt": 0.5,
+          "mae": 0.20414352416992188,
+          "covered": 35246,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "lumen",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0.20088577270507812,
+          "covered": 35246,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "lumen",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 2,
+          "dt": 0.25,
+          "mae": 0.20090103149414062,
+          "covered": 35246,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "lumen",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 3,
+          "dt": 0.25,
+          "mae": 0.20090103149414062,
+          "covered": 35246,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "lumen",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 4,
+          "dt": 0.5,
+          "mae": 0.20090866088867188,
+          "covered": 35246,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "lumen",
+          "inputs": [
+            50,
+            80
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0.20109176635742188,
+          "covered": 35246,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "lumen",
+          "inputs": [
+            50,
+            80
+          ],
+          "tick": 2,
+          "dt": 0.25,
+          "mae": 0.20318222045898438,
+          "covered": 35246,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "lumen",
+          "inputs": [
+            50,
+            80
+          ],
+          "tick": 3,
+          "dt": 0.25,
+          "mae": 0.20279693603515625,
+          "covered": 35246,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "lumen",
+          "inputs": [
+            50,
+            80
+          ],
+          "tick": 4,
+          "dt": 0.5,
+          "mae": 0.20162200927734375,
+          "covered": 35246,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "lumen",
+          "inputs": [
+            100,
+            100
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0.2034759521484375,
+          "covered": 35246,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "lumen",
+          "inputs": [
+            100,
+            100
+          ],
+          "tick": 2,
+          "dt": 0.25,
+          "mae": 0.2017364501953125,
+          "covered": 35246,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "lumen",
+          "inputs": [
+            100,
+            100
+          ],
+          "tick": 3,
+          "dt": 0.25,
+          "mae": 0.20309829711914062,
+          "covered": 35246,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "lumen",
+          "inputs": [
+            100,
+            100
+          ],
+          "tick": 4,
+          "dt": 0.5,
+          "mae": 0.20414352416992188,
+          "covered": 35246,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "studio-direct",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0.20298385620117188,
+          "covered": 35246,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "studio-direct",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 2,
+          "dt": 0.25,
+          "mae": 0.20087814331054688,
+          "covered": 35246,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "studio-direct",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 3,
+          "dt": 0.25,
+          "mae": 0.2013397216796875,
+          "covered": 35246,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "studio-direct",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 4,
+          "dt": 0.5,
+          "mae": 0.20322799682617188,
+          "covered": 35246,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "studio-direct",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0.20298385620117188,
+          "covered": 35246,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "studio-direct",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 2,
+          "dt": 0.25,
+          "mae": 0.20087814331054688,
+          "covered": 35246,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "studio-direct",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 3,
+          "dt": 0.25,
+          "mae": 0.2013397216796875,
+          "covered": 35246,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "studio-direct",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 4,
+          "dt": 0.5,
+          "mae": 0.20322799682617188,
+          "covered": 35246,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "studio-direct",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0.20298385620117188,
+          "covered": 35246,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "studio-direct",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 2,
+          "dt": 0.25,
+          "mae": 0.20087814331054688,
+          "covered": 35246,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "studio-direct",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 3,
+          "dt": 0.25,
+          "mae": 0.2013397216796875,
+          "covered": 35246,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "studio-direct",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 4,
+          "dt": 0.5,
+          "mae": 0.20322799682617188,
+          "covered": 35246,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "studio-direct",
+          "inputs": [
+            50,
+            80
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0.20298385620117188,
+          "covered": 35246,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "studio-direct",
+          "inputs": [
+            50,
+            80
+          ],
+          "tick": 2,
+          "dt": 0.25,
+          "mae": 0.20087814331054688,
+          "covered": 35246,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "studio-direct",
+          "inputs": [
+            50,
+            80
+          ],
+          "tick": 3,
+          "dt": 0.25,
+          "mae": 0.2013397216796875,
+          "covered": 35246,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "studio-direct",
+          "inputs": [
+            50,
+            80
+          ],
+          "tick": 4,
+          "dt": 0.5,
+          "mae": 0.20322799682617188,
+          "covered": 35246,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "studio-direct",
+          "inputs": [
+            100,
+            100
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0.20298385620117188,
+          "covered": 35246,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "studio-direct",
+          "inputs": [
+            100,
+            100
+          ],
+          "tick": 2,
+          "dt": 0.25,
+          "mae": 0.20087814331054688,
+          "covered": 35246,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "studio-direct",
+          "inputs": [
+            100,
+            100
+          ],
+          "tick": 3,
+          "dt": 0.25,
+          "mae": 0.2013397216796875,
+          "covered": 35246,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "studio-direct",
+          "inputs": [
+            100,
+            100
+          ],
+          "tick": 4,
+          "dt": 0.5,
+          "mae": 0.20322799682617188,
+          "covered": 35246,
+          "expectedCovered": 35253
+        }
+      ],
+      "graphics": {
+        "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "contexts": [
+          {
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "unmaskedRendererAvailable": true,
+            "contextLost": false,
+            "errors": [],
+            "extensions": [
+              "EXT_clip_control",
+              "EXT_color_buffer_float",
+              "EXT_color_buffer_half_float",
+              "EXT_conservative_depth",
+              "EXT_depth_clamp",
+              "EXT_float_blend",
+              "EXT_polygon_offset_clamp",
+              "EXT_texture_compression_bptc",
+              "EXT_texture_compression_rgtc",
+              "EXT_texture_filter_anisotropic",
+              "EXT_texture_mirror_clamp_to_edge",
+              "NV_shader_noperspective_interpolation",
+              "OES_draw_buffers_indexed",
+              "OES_sample_variables",
+              "OES_shader_multisample_interpolation",
+              "OES_texture_float_linear",
+              "OVR_multiview2",
+              "WEBGL_clip_cull_distance",
+              "WEBGL_compressed_texture_astc",
+              "WEBGL_compressed_texture_etc",
+              "WEBGL_compressed_texture_etc1",
+              "WEBGL_compressed_texture_s3tc",
+              "WEBGL_compressed_texture_s3tc_srgb",
+              "WEBGL_debug_renderer_info",
+              "WEBGL_debug_shaders",
+              "WEBGL_lose_context",
+              "WEBGL_multi_draw",
+              "WEBGL_polygon_mode",
+              "WEBGL_stencil_texturing"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "backend": "webgl2",
+      "checks": [
+        {
+          "scene": "independent-input",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            75,
+            25
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            75,
+            25
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            75,
+            25
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0.07745361328125,
+          "covered": 2304,
+          "expectedCovered": 2352
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            75,
+            25
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0.00897216796875,
+          "covered": 2352,
+          "expectedCovered": 2352
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            50,
+            50
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            50,
+            50
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            50,
+            50
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            50,
+            50
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            100,
+            100
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            100,
+            100
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            -20,
+            150
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            -20,
+            150
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            -20,
+            150
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-input",
+          "inputs": [
+            -20,
+            150
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            75,
+            25
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            75,
+            25
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            75,
+            25
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            75,
+            25
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            50,
+            50
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            50,
+            50
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            50,
+            50
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            50,
+            50
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            100,
+            100
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            100,
+            100
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            -20,
+            150
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            -20,
+            150
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            -20,
+            150
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "independent-fixed",
+          "inputs": [
+            -20,
+            150
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            75,
+            25
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            75,
+            25
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            75,
+            25
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0.07745361328125,
+          "covered": 2304,
+          "expectedCovered": 2352
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            75,
+            25
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0.00897216796875,
+          "covered": 2352,
+          "expectedCovered": 2352
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            50,
+            50
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            50,
+            50
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            50,
+            50
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            50,
+            50
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            100,
+            100
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            100,
+            100
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            -20,
+            150
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            -20,
+            150
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            -20,
+            150
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "evir-export",
+          "inputs": [
+            -20,
+            150
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            75,
+            25
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            75,
+            25
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            75,
+            25
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            75,
+            25
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            50,
+            50
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            50,
+            50
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            50,
+            50
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            50,
+            50
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            100,
+            100
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            100,
+            100
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            -20,
+            150
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            -20,
+            150
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            -20,
+            150
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "color-export",
+          "inputs": [
+            -20,
+            150
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            75,
+            25
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            75,
+            25
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0.10708236694335938,
+          "covered": 2347,
+          "expectedCovered": 2409
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            75,
+            25
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0.09922027587890625,
+          "covered": 2352,
+          "expectedCovered": 2411
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            75,
+            25
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0.092926025390625,
+          "covered": 2351,
+          "expectedCovered": 2406
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            50,
+            50
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            50,
+            50
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            50,
+            50
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0.09910202026367188,
+          "covered": 2362,
+          "expectedCovered": 2419
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            50,
+            50
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0.11374282836914062,
+          "covered": 2357,
+          "expectedCovered": 2420
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            100,
+            100
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            100,
+            100
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            -20,
+            150
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            -20,
+            150
+          ],
+          "tick": 2,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            -20,
+            150
+          ],
+          "tick": 3,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "rotation-export",
+          "inputs": [
+            -20,
+            150
+          ],
+          "tick": 4,
+          "dt": 0,
+          "mae": 0,
+          "covered": 2304,
+          "expectedCovered": 2304
+        },
+        {
+          "scene": "lumen",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0.8436698913574219,
+          "covered": 35056,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "lumen",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 2,
+          "dt": 0.25,
+          "mae": 0.8304214477539062,
+          "covered": 35056,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "lumen",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 3,
+          "dt": 0.25,
+          "mae": 0.8477897644042969,
+          "covered": 35056,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "lumen",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 4,
+          "dt": 0.5,
+          "mae": 0.8477439880371094,
+          "covered": 35056,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "lumen",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0.8326644897460938,
+          "covered": 35056,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "lumen",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 2,
+          "dt": 0.25,
+          "mae": 0.8320350646972656,
+          "covered": 35056,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "lumen",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 3,
+          "dt": 0.25,
+          "mae": 0.8405532836914062,
+          "covered": 35056,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "lumen",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 4,
+          "dt": 0.5,
+          "mae": 0.8350830078125,
+          "covered": 35056,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "lumen",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0.8478927612304688,
+          "covered": 35056,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "lumen",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 2,
+          "dt": 0.25,
+          "mae": 0.8329353332519531,
+          "covered": 35056,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "lumen",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 3,
+          "dt": 0.25,
+          "mae": 0.8477897644042969,
+          "covered": 35056,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "lumen",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 4,
+          "dt": 0.5,
+          "mae": 0.8477439880371094,
+          "covered": 35056,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "lumen",
+          "inputs": [
+            50,
+            80
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0.8356361389160156,
+          "covered": 35056,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "lumen",
+          "inputs": [
+            50,
+            80
+          ],
+          "tick": 2,
+          "dt": 0.25,
+          "mae": 0.8396682739257812,
+          "covered": 35056,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "lumen",
+          "inputs": [
+            50,
+            80
+          ],
+          "tick": 3,
+          "dt": 0.25,
+          "mae": 0.8351478576660156,
+          "covered": 35056,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "lumen",
+          "inputs": [
+            50,
+            80
+          ],
+          "tick": 4,
+          "dt": 0.5,
+          "mae": 0.841705322265625,
+          "covered": 35056,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "lumen",
+          "inputs": [
+            100,
+            100
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0.8367652893066406,
+          "covered": 35056,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "lumen",
+          "inputs": [
+            100,
+            100
+          ],
+          "tick": 2,
+          "dt": 0.25,
+          "mae": 0.8358306884765625,
+          "covered": 35056,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "lumen",
+          "inputs": [
+            100,
+            100
+          ],
+          "tick": 3,
+          "dt": 0.25,
+          "mae": 0.8452262878417969,
+          "covered": 35056,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "lumen",
+          "inputs": [
+            100,
+            100
+          ],
+          "tick": 4,
+          "dt": 0.5,
+          "mae": 0.8374748229980469,
+          "covered": 35056,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "studio-direct",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0.8354072570800781,
+          "covered": 35056,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "studio-direct",
+          "inputs": [
+            0,
+            0
+          ],
+          "tick": 2,
+          "dt": 0.25,
+          "mae": 0.8382987976074219,
+          "covered": 35056,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "studio-direct",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 3,
+          "dt": 0.25,
+          "mae": 0.8463706970214844,
+          "covered": 35056,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "studio-direct",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 4,
+          "dt": 0.5,
+          "mae": 0.8385696411132812,
+          "covered": 35056,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "studio-direct",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0.8354072570800781,
+          "covered": 35056,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "studio-direct",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 2,
+          "dt": 0.25,
+          "mae": 0.8382987976074219,
+          "covered": 35056,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "studio-direct",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 3,
+          "dt": 0.25,
+          "mae": 0.8423805236816406,
+          "covered": 35056,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "studio-direct",
+          "inputs": [
+            100,
+            0
+          ],
+          "tick": 4,
+          "dt": 0.5,
+          "mae": 0.8359756469726562,
+          "covered": 35056,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "studio-direct",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0.8394050598144531,
+          "covered": 35056,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "studio-direct",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 2,
+          "dt": 0.25,
+          "mae": 0.8412628173828125,
+          "covered": 35056,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "studio-direct",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 3,
+          "dt": 0.25,
+          "mae": 0.8463706970214844,
+          "covered": 35056,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "studio-direct",
+          "inputs": [
+            0,
+            100
+          ],
+          "tick": 4,
+          "dt": 0.5,
+          "mae": 0.8385696411132812,
+          "covered": 35056,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "studio-direct",
+          "inputs": [
+            50,
+            80
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0.8384437561035156,
+          "covered": 35056,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "studio-direct",
+          "inputs": [
+            50,
+            80
+          ],
+          "tick": 2,
+          "dt": 0.25,
+          "mae": 0.8406219482421875,
+          "covered": 35056,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "studio-direct",
+          "inputs": [
+            50,
+            80
+          ],
+          "tick": 3,
+          "dt": 0.25,
+          "mae": 0.8398399353027344,
+          "covered": 35056,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "studio-direct",
+          "inputs": [
+            50,
+            80
+          ],
+          "tick": 4,
+          "dt": 0.5,
+          "mae": 0.8431739807128906,
+          "covered": 35056,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "studio-direct",
+          "inputs": [
+            100,
+            100
+          ],
+          "tick": 1,
+          "dt": 0,
+          "mae": 0.8394050598144531,
+          "covered": 35056,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "studio-direct",
+          "inputs": [
+            100,
+            100
+          ],
+          "tick": 2,
+          "dt": 0.25,
+          "mae": 0.8412628173828125,
+          "covered": 35056,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "studio-direct",
+          "inputs": [
+            100,
+            100
+          ],
+          "tick": 3,
+          "dt": 0.25,
+          "mae": 0.8463706970214844,
+          "covered": 35056,
+          "expectedCovered": 35253
+        },
+        {
+          "scene": "studio-direct",
+          "inputs": [
+            100,
+            100
+          ],
+          "tick": 4,
+          "dt": 0.5,
+          "mae": 0.8385696411132812,
+          "covered": 35056,
+          "expectedCovered": 35253
+        }
+      ],
+      "graphics": {
+        "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "contexts": [
+          {
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "unmaskedRendererAvailable": true,
+            "contextLost": false,
+            "errors": [],
+            "extensions": [
+              "EXT_clip_control",
+              "EXT_color_buffer_float",
+              "EXT_color_buffer_half_float",
+              "EXT_conservative_depth",
+              "EXT_depth_clamp",
+              "EXT_float_blend",
+              "EXT_polygon_offset_clamp",
+              "EXT_texture_compression_bptc",
+              "EXT_texture_compression_rgtc",
+              "EXT_texture_filter_anisotropic",
+              "EXT_texture_mirror_clamp_to_edge",
+              "NV_shader_noperspective_interpolation",
+              "OES_draw_buffers_indexed",
+              "OES_sample_variables",
+              "OES_shader_multisample_interpolation",
+              "OES_texture_float_linear",
+              "OVR_multiview2",
+              "WEBGL_clip_cull_distance",
+              "WEBGL_compressed_texture_astc",
+              "WEBGL_compressed_texture_etc",
+              "WEBGL_compressed_texture_etc1",
+              "WEBGL_compressed_texture_s3tc",
+              "WEBGL_compressed_texture_s3tc_srgb",
+              "WEBGL_debug_renderer_info",
+              "WEBGL_debug_shaders",
+              "WEBGL_lose_context",
+              "WEBGL_multi_draw",
+              "WEBGL_polygon_mode",
+              "WEBGL_stencil_texturing"
+            ]
+          },
+          {
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "unmaskedRendererAvailable": true,
+            "contextLost": false,
+            "errors": [],
+            "extensions": [
+              "EXT_clip_control",
+              "EXT_color_buffer_float",
+              "EXT_color_buffer_half_float",
+              "EXT_conservative_depth",
+              "EXT_depth_clamp",
+              "EXT_float_blend",
+              "EXT_polygon_offset_clamp",
+              "EXT_texture_compression_bptc",
+              "EXT_texture_compression_rgtc",
+              "EXT_texture_filter_anisotropic",
+              "EXT_texture_mirror_clamp_to_edge",
+              "NV_shader_noperspective_interpolation",
+              "OES_draw_buffers_indexed",
+              "OES_sample_variables",
+              "OES_shader_multisample_interpolation",
+              "OES_texture_float_linear",
+              "OVR_multiview2",
+              "WEBGL_clip_cull_distance",
+              "WEBGL_compressed_texture_astc",
+              "WEBGL_compressed_texture_etc",
+              "WEBGL_compressed_texture_etc1",
+              "WEBGL_compressed_texture_s3tc",
+              "WEBGL_compressed_texture_s3tc_srgb",
+              "WEBGL_debug_renderer_info",
+              "WEBGL_debug_shaders",
+              "WEBGL_lose_context",
+              "WEBGL_multi_draw",
+              "WEBGL_polygon_mode",
+              "WEBGL_stencil_texturing"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "browser": "151.0.7922.173"
+}

@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-19T10:02:23.468Z",
+  "commit": "c0127fc335739aa3e5a19e88a9de66d7e5876149",
+  "browser": "151.0.7922.173",
+  "scope": "Actual local web UI, cloud Chromium and reduced motion; not physical-device/human evidence.",
+  "index": "collapsed by default",
+  "lumen": {
+    "viewport": {
+      "width": 390,
+      "height": 1000
+    },
+    "playing": false,
+    "controls": [
+      {
+        "input": "joy",
+        "value": "65",
+        "width": 304,
+        "height": 44
+      },
+      {
+        "input": "courage",
+        "value": "85",
+        "width": 304,
+        "height": 44
+      }
+    ]
+  }
+}

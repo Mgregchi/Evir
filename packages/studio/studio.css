@@ -1653,3 +1653,13 @@ body > #notice {
 .skin-weight-legend li::before {content:""; width:.75rem; height:.75rem; border-radius:50%; background:var(--weight-color); border:1px solid #ffffff60;}
 .skin-weight-fields [role="status"] {font-size:.85rem; line-height:1.6; overflow-wrap:anywhere;}
 #stop-weight-painting {min-height:36px; margin-left:8px; white-space:nowrap; font-size:.75rem;}
+
+.blend-children fieldset{min-width:0;border:1px solid var(--line);border-radius:12px;padding:12px;margin-block:12px}
+.blend-children .dialog-actions{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-start}
+.blend-children .dialog-actions button{min-height:44px;white-space:normal;flex:1 1 100px}
+#advanced-sheet:has(.blend-children){--blend-edge:28px;scroll-padding-block:60px 80px}
+#advanced-sheet:has(.blend-children)>h2{position:sticky;top:calc(-1 * var(--blend-edge));z-index:2;background:var(--panel);padding-block:8px;border-bottom:1px solid var(--line)}
+#advanced-sheet:has(.blend-children)>.dialog-actions{position:sticky;bottom:calc(-1 * var(--blend-edge));z-index:2;background:var(--panel);padding-block:12px var(--blend-edge);margin-bottom:calc(-1 * var(--blend-edge))}
+#advanced-sheet:has(.blend-children)>.dialog-actions button:last-child{background:var(--accent);color:#142b23;font-weight:650}
+#mobile-panel:has(~ #advanced-sheet .blend-children)::backdrop{background:transparent}
+@media(max-width:850px){dialog#advanced-sheet:has(.blend-children){--blend-edge:24px;width:100%;max-width:none;max-height:85dvh;bottom:0;border-radius:18px 18px 0 0;padding:24px 20px max(24px,env(safe-area-inset-bottom))}}

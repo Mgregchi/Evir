@@ -523,7 +523,10 @@ export function compileProject(project, schema = runtimeSchema) {
       // Runtime animation application only writes keyed properties. Explicit
       // default keys prevent stale values when switching between Studio poses.
       const tracks = [...animation.tracks];
-      for (const other of animations)
+      // Direct children intentionally key only their own contribution. Padding
+      // those clips would let later rows overwrite earlier, unrelated motion.
+      const scopedDirect=machines.some(m=>m.states.some(s=>s.blend?.type==='direct'&&s.blend.children.some(c=>c.animationId===animation.id)));
+      for (const other of scopedDirect?[]:animations)
         for (const track of other.tracks) {
           if (
             !tracks.some(
@@ -613,6 +616,13 @@ export function compileProject(project, schema = runtimeSchema) {
       emit("ExitState");
       for (const state of m.states) {
         if (state.blend) {
+          if(state.blend.type==='direct'){
+            emit('BlendStateDirect',{flags:2});
+            for(const child of state.blend.children)emit('BlendAnimationDirect',{
+              animationId:animations.findIndex(a=>a.id===child.animationId),
+              ...('weight' in child?{blendSource:1,mixValue:child.weight}:{inputId:inputIds.get(child.inputId)})
+            });
+          }else{
           emit("BlendState1DInput", {
             inputId: inputIds.get(state.blend.inputId),
             flags: 2,
@@ -624,6 +634,7 @@ export function compileProject(project, schema = runtimeSchema) {
               ),
               value: child.position,
             });
+          }
         } else
           emit("AnimationState", {
             animationId: animations.findIndex(
@@ -718,7 +729,7 @@ export function compileProject(project, schema = runtimeSchema) {
     bytes: Uint8Array.from(out),
     mapping,
     scope:
-      "2D fills, animated gradients, clipping, outer feather, embedded PNG/TTF assets, single-line text, textured meshes, one/two-bone unit-scale IK, four-influence skinning, typed keys, one-layer timed transitions, 1D blends and click listeners. No universal Rive compatibility.",
+      "2D fills, animated gradients, clipping, outer feather, embedded PNG/TTF assets, single-line text, textured meshes, one/two-bone unit-scale IK, four-influence skinning, typed keys, one-layer timed transitions, 1D blends, ordered direct blends and click listeners. No universal Rive compatibility.",
   };
 }
 

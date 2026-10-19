@@ -1,0 +1,168 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 3,
+  "id": "direct-fixture",
+  "name": "Direct probe",
+  "artboards": [
+    {
+      "id": "board",
+      "name": "Direct probe",
+      "width": 256,
+      "height": 256
+    }
+  ],
+  "nodes": [
+    {
+      "id": "box",
+      "name": "box",
+      "kind": "rectangle",
+      "artboardId": "board",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        64,
+        128
+      ],
+      "geometry": {
+        "width": 48,
+        "height": 48,
+        "fill": "#2864dc"
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [
+    {
+      "id": "left",
+      "name": "Left",
+      "artboardId": "board",
+      "fps": 60,
+      "duration": 60,
+      "loop": true,
+      "tracks": [
+        {
+          "targetId": "box",
+          "property": "x",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 64,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 60,
+              "value": 64,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "right",
+      "name": "Right",
+      "artboardId": "board",
+      "fps": 60,
+      "duration": 60,
+      "loop": true,
+      "tracks": [
+        {
+          "targetId": "box",
+          "property": "x",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 192,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 60,
+              "value": 192,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "machines": [
+    {
+      "id": "direct-machine",
+      "name": "Direct",
+      "artboardId": "board",
+      "inputs": [
+        {
+          "id": "left-weight",
+          "name": "left",
+          "type": "number",
+          "value": 100
+        },
+        {
+          "id": "right-weight",
+          "name": "right",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "states": [
+        {
+          "id": "direct-state",
+          "name": "Direct",
+          "animationId": "left",
+          "position": [
+            0,
+            0
+          ],
+          "blend": {
+            "type": "direct",
+            "children": [
+              {
+                "animationId": "left",
+                "inputId": "left-weight"
+              },
+              {
+                "animationId": "right",
+                "inputId": "right-weight"
+              }
+            ]
+          }
+        }
+      ],
+      "entryStateId": "direct-state",
+      "transitions": [],
+      "listeners": []
+    }
+  ],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "board": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  },
+  "advanced": {
+    "clips": [],
+    "feathers": [],
+    "ik": []
+  }
+}

@@ -81,3 +81,5 @@ Native centered solid strokes now retain their centerlines through source/runtim
 Path joining: select an open path and choose Properties → Join paths…, or select two paths with Multiple/Shift. Review explicit endpoints and Connect/Merge in a bottom sheet, then Apply. One Undo restores both paths. Preview state is not saved. See [Outing and joining limits](../../docs/44-path-joining-and-outing.md).
 
 **Properties → Skin weights…** adds colored weight charts, a bounded target-weight brush and numbered numeric vertex edits for bound paths and meshes. **Bind skin bones…** / **Rebind skin bones…** supports one to four bones and resets bindings to equal shares. Brush settings stay outside saved/runtime scenes; the footer Done weights action exits the tool. See [the workflow, limits and Gust](../../docs/43-graphical-skin-weights.md).
+
+**Interact → Blending & timing…** now supports ordered direct rows with animation, fixed percentage/input binding, Add/Remove and Move up/down controls. Apply is one history edit; the sheet reports invalid weights and restores focus. See [Lumen and the complete direct workflow](../../docs/45-direct-blends-and-lumen.md).

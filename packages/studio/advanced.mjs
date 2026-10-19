@@ -6,6 +6,7 @@ import {
   encodeBase64,
   pngSize,
 } from "@evir/project-model";
+import {blendControls} from "./blend-controls.mjs";
 import { paintControls } from "./paint.mjs";
 const el = (tag, text) => {
   const n = document.createElement(tag);
@@ -594,65 +595,18 @@ export function mountAdvanced(api) {
 export function machineControls(host, p, m, commit, notice) {
   const open = button("Blending & timing…", () => {
     const draft = structuredClone(m);
-    sheet(
+    const dialog=sheet(
       "Blending & timing",
       (h) => {
         h.append(
           el(
             "p",
-            "Timed transitions use milliseconds. A 1D blend interpolates two animations using a number input; additional children remain editable in source.",
+            "Timed transitions use milliseconds. A 1D blend uses one number input. Direct mode mixes ordered timelines with fixed percentages or separate number inputs.",
           ),
         );
         for (const state of draft.states) {
           h.append(el("h3", state.name));
-          let input = state.blend?.inputId ?? "",
-            first = state.blend?.children[0]?.animationId ?? state.animationId,
-            second =
-              state.blend?.children.at(-1)?.animationId ?? state.animationId;
-          const update = () => {
-            if (input)
-              state.blend = {
-                type: "1d",
-                inputId: input,
-                children: [
-                  { animationId: first, position: 0 },
-                  { animationId: second, position: 1 },
-                ],
-              };
-            else delete state.blend;
-          };
-          select(
-            h,
-            state.name + " blend input",
-            [
-              ["", "Single animation"],
-              ...draft.inputs
-                .filter((i) => i.type === "number")
-                .map((i) => [i.id, i.name]),
-            ],
-            input,
-            (v) => {
-              input = v;
-              update();
-            },
-          );
-          for (const [which, label] of [
-            [0, "at 0"],
-            [1, "at 1"],
-          ])
-            select(
-              h,
-              state.name + " animation " + label,
-              p.animations
-                .filter((a) => a.artboardId === m.artboardId)
-                .map((a) => [a.id, a.name]),
-              which ? second : first,
-              (v) => {
-                if (which) second = v;
-                else first = v;
-                update();
-              },
-            );
+          blendControls(h,p,draft,state);
         }
         for (const t of draft.transitions) {
           h.append(
@@ -683,14 +637,25 @@ export function machineControls(host, p, m, commit, notice) {
           ),
         );
       },
-      () =>
-        commit("Edit blending & timing", (p) => {
+      (signal) => {
+        if(signal.aborted)throw Error("This blending sheet has closed");
+        // Report draft errors inside this sheet before a transaction can emit
+        // a persistent workspace toast or rebuild its opener.
+        const candidate={...p,machines:p.machines.map(v=>v.id===m.id?draft:v)};
+        upgradeAdvanced(candidate);validateProject(candidate);
+        return commit("Edit blending & timing", (p) => {
+          const index=p.machines.findIndex(v=>v.id===m.id);
+          if(index<0||JSON.stringify(p.machines[index])!==JSON.stringify(m))throw Error("This machine changed. Reopen Blending & timing.");
           upgradeAdvanced(p);
-          p.machines[p.machines.findIndex((v) => v.id === m.id)] = draft;
-        }),
+          p.machines[index] = structuredClone(draft);
+        });
+      },
       notice,
       open,
     );
+    const heading=dialog.querySelector('h2');heading.tabIndex=-1;heading.focus();
+    dialog.addEventListener('close',()=>{if(!open.isConnected)([...document.querySelectorAll('[data-blend-machine]')].find(b=>b.dataset.blendMachine===m.id)??document.querySelector('#stage'))?.focus();},{once:true});
   });
+  open.dataset.blendMachine=m.id;
   host.append(open);
 }
