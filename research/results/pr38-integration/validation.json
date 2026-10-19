@@ -1,0 +1,238 @@
+{
+  "checkedAt": "2026-10-19T01:27:37Z",
+  "pr": 38,
+  "testedMerge": "4c78469481456dd9aca7db69c11e5b88836b66ed",
+  "parents": {
+    "previousPr38": "bc86991478b4c38e0c300bf8a48f4028318e3329",
+    "mainWithPr36And37": "7275e71fe9b44dc1f01fe428cf0858936a36dde9"
+  },
+  "scope": "Conflict integration only. Cloud Chromium/software rendering and automated accessibility; physical testing postponed, backend deferred.",
+  "node": "v24.19.0",
+  "chromium": "Chromium 151.0.7922.173 built on Debian GNU/Linux 13 (trixie)",
+  "checks": [
+    {
+      "name": "runtime",
+      "command": "npm run test:runtime",
+      "startedAt": "2026-10-19T00:52:59Z",
+      "exitCode": 0,
+      "seconds": 2.3,
+      "finishedAt": "2026-10-19T00:53:01Z"
+    },
+    {
+      "name": "runtime-build",
+      "command": "npm run runtime:build",
+      "startedAt": "2026-10-19T00:53:01Z",
+      "exitCode": 0,
+      "seconds": 2.74,
+      "finishedAt": "2026-10-19T00:53:04Z"
+    },
+    {
+      "name": "frontend",
+      "command": "npm run test:frontend",
+      "startedAt": "2026-10-19T00:53:04Z",
+      "exitCode": 0,
+      "seconds": 4.28,
+      "finishedAt": "2026-10-19T00:53:08Z"
+    },
+    {
+      "name": "editor",
+      "command": "npm run test:editor",
+      "startedAt": "2026-10-19T00:53:08Z",
+      "exitCode": 0,
+      "seconds": 569.91,
+      "finishedAt": "2026-10-19T01:02:38Z"
+    },
+    {
+      "name": "import-browser",
+      "command": "node tests/editor/import-geometry-browser.cjs",
+      "startedAt": "2026-10-19T01:02:38Z",
+      "exitCode": 0,
+      "seconds": 9.62,
+      "finishedAt": "2026-10-19T01:02:47Z"
+    },
+    {
+      "name": "web",
+      "command": "npm run test:web",
+      "startedAt": "2026-10-19T01:02:47Z",
+      "exitCode": 0,
+      "seconds": 404.1,
+      "finishedAt": "2026-10-19T01:09:32Z"
+    },
+    {
+      "name": "experience",
+      "command": "npm run test:experience",
+      "startedAt": "2026-10-19T01:09:32Z",
+      "exitCode": 0,
+      "seconds": 12.39,
+      "finishedAt": "2026-10-19T01:09:44Z"
+    },
+    {
+      "name": "native",
+      "command": "npm run validate:editor",
+      "startedAt": "2026-10-19T01:09:44Z",
+      "exitCode": 0,
+      "seconds": 1045.94,
+      "finishedAt": "2026-10-19T01:27:10Z"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "joining-browser.json",
+      "source": "research/results/path-joining/browser.json",
+      "sha256": "b4918a2a3ec88471e7b3afd2adc4987ec02bf0e1f639f61051bea68cdbab0ff9"
+    },
+    {
+      "path": "joining-native.json",
+      "source": "research/results/path-joining/native.json",
+      "sha256": "04f35d410d1a1bf4ec898a964cfa5174f6ad46c6412fbb855613b013bcf6e137"
+    },
+    {
+      "path": "joining-sheet-390.png",
+      "source": "research/results/path-joining/join-sheet-390.png",
+      "sha256": "7ccbc8e0446dae579e278bdb4eee0c7b6f49f724f979a67f8d123671be0ebc89"
+    },
+    {
+      "path": "joined-1440.png",
+      "source": "research/results/path-joining/joined-1440.png",
+      "sha256": "5ce0ad4238de99aab591fa1b008d142aac8231a449d39cc28975b748925de60d"
+    },
+    {
+      "path": "weights-browser.json",
+      "source": "research/results/skin-weights/browser.json",
+      "sha256": "1eb43d60d4c475bacf530fbbf8700bac936eb1bdb419056f888bfdfa61ea4bcb"
+    },
+    {
+      "path": "weights-native.json",
+      "source": "research/results/skin-weights/native.json",
+      "sha256": "254bc1627cf66a800797e6fe4871fd9707d7a0d7563368ceb4744df12d5b4f1e"
+    },
+    {
+      "path": "weights-sheet-390.png",
+      "source": "research/results/skin-weights/weight-sheet-390.png",
+      "sha256": "c659b3abcbded09279232a02d35258e5cdee09c0d3c2034f99e3695285f7f3d1"
+    },
+    {
+      "path": "import-browser.json",
+      "source": "research/results/import-geometry/browser.json",
+      "sha256": "e8ff41d97a3d211e4ead3957557becd728ddcb025528f837ba785e0c0dfe2d72"
+    },
+    {
+      "path": "public-site-browser.json",
+      "source": "research/results/public-site/browser.json",
+      "sha256": "62188ce042490372dcb426e0ee7e3e0200e39d7637b92f36768b775ce507fa13"
+    },
+    {
+      "path": "gallery-native.json",
+      "source": "research/results/public-site/examples.json",
+      "sha256": "8a94e73dde83e33f1c211613a23e1ab8b5f2cba3f6b64df8d3420cae47bf61de"
+    },
+    {
+      "path": "gallery-browser.json",
+      "source": "research/results/showcase-gallery/browser.json",
+      "sha256": "7b23d82522432bf3b6f96c25b5908bc8778b197c06b4219b582a05e1f159736d"
+    },
+    {
+      "path": "experience.json",
+      "source": "research/results/experience-quality/web.json",
+      "sha256": "744295c4b3da925b87692a40b2c14a5070ade69d79690ae3b48b2ea48eabd5eb"
+    }
+  ],
+  "nativeFixtureReferences": [
+    {
+      "path": "research/results/path-joining/outing-oracle.evir-project",
+      "sha256": "b137c63bdee8b575fefb532c69d635a0ea51e416ebbcd583a2ab6399b729581f"
+    },
+    {
+      "path": "research/results/path-joining/outing-oracle.riv",
+      "sha256": "6e997001987999caae78ac7856eeccf54f4ddfbf3da2e8704cc93b564f895695"
+    },
+    {
+      "path": "research/results/path-joining/outing-rest-oracle.evir-project",
+      "sha256": "d839fbc17c14e8b3f5bc5b31a8bbdebb6a989c5d5a499d1b314e3170c09fa6eb"
+    },
+    {
+      "path": "research/results/path-joining/outing-rest-oracle.riv",
+      "sha256": "7ec299beec058413755ba67c4f712685c0a23a01b55ac615d77f5219855edfb8"
+    },
+    {
+      "path": "research/results/path-joining/outing-start-oracle.evir-project",
+      "sha256": "51a50fdb7a072d143160a92fa4a6daecc3329bd2dc029e08f9d5b02b4c92538c"
+    },
+    {
+      "path": "research/results/path-joining/outing-start-oracle.riv",
+      "sha256": "57f1ea2d57fccd24d5888be632b5e2f1c633c21ae213649e02fd2e9187d4d488"
+    },
+    {
+      "path": "research/results/path-joining/outing-start-rest-oracle.evir-project",
+      "sha256": "c74241005e1061d7ef722e8f425e22808aa24f01f15a059b85f9ebcbb1c6b3bc"
+    },
+    {
+      "path": "research/results/path-joining/outing-start-rest-oracle.riv",
+      "sha256": "5c4dcf607894a963924afa17d576d54173acd97faf6e3acb66e2d8cf825a5bd8"
+    },
+    {
+      "path": "research/results/path-joining/studio-joined-oracle.evir-project",
+      "sha256": "19b4b20df64010f6099fed49c4a722902513a555c0506854b6361a4cdd4429f1"
+    },
+    {
+      "path": "research/results/path-joining/studio-joined-oracle.riv",
+      "sha256": "6e997001987999caae78ac7856eeccf54f4ddfbf3da2e8704cc93b564f895695"
+    },
+    {
+      "path": "research/results/path-joining/studio-joined-rest-oracle.evir-project",
+      "sha256": "7c94580fc700abc8258d3305912b694ede3a11d434684487c0875b9370e2bf55"
+    },
+    {
+      "path": "research/results/path-joining/studio-joined-rest-oracle.riv",
+      "sha256": "7ec299beec058413755ba67c4f712685c0a23a01b55ac615d77f5219855edfb8"
+    },
+    {
+      "path": "research/results/path-joining/studio-merged-oracle.evir-project",
+      "sha256": "d21230dbbdb7f30e3a5258ad262c02445faaa469e4105458f0ec5565325fe8db"
+    },
+    {
+      "path": "research/results/path-joining/studio-merged-oracle.riv",
+      "sha256": "2547a371b56cc619ed6cf50eaec4db37df4267c97aaaa2ba6bfdc38e3ea14e63"
+    },
+    {
+      "path": "research/results/path-joining/studio-merged-rest-oracle.evir-project",
+      "sha256": "2457202eebcfdf504c170be44989c7e9472a96b374e3e6f1364b69bb152c332f"
+    },
+    {
+      "path": "research/results/path-joining/studio-merged-rest-oracle.riv",
+      "sha256": "bf958f5dcfc365f8fe7e42ea0e12eadc68695518f4a78828d1c8c530c0bd04b4"
+    },
+    {
+      "path": "research/results/skin-weights/gust-oracle.evir-project",
+      "sha256": "72c4644772f2f1d09d61f5c4642575a32fdc864f97b9b7f5e4598c277f94c286"
+    },
+    {
+      "path": "research/results/skin-weights/gust-oracle.riv",
+      "sha256": "a2f410d5a2ef109453986c36b683a3b8a743879c76d4dde34511d8a63cb2e910"
+    },
+    {
+      "path": "research/results/skin-weights/gust-rest-oracle.evir-project",
+      "sha256": "cc3f2a31fb03a79c2c888b322328d5787025866e993075ed290845f024f06e69"
+    },
+    {
+      "path": "research/results/skin-weights/gust-rest-oracle.riv",
+      "sha256": "e8c835e86438c12ec1aba2a7451d6d72d736f6b741438b12c0b75448b17733b4"
+    },
+    {
+      "path": "research/results/skin-weights/studio-weighted-oracle.evir-project",
+      "sha256": "d7b86f43d82ef3c39ebcd2526f666da69dea57acb6581ed4f675fbe26304ac59"
+    },
+    {
+      "path": "research/results/skin-weights/studio-weighted-oracle.riv",
+      "sha256": "b5189b0fd2fa3b20cc70a9d2d6857ebefccc747b1aff2a9f49321a0603427510"
+    },
+    {
+      "path": "research/results/skin-weights/studio-weighted-rest-oracle.evir-project",
+      "sha256": "6ee5b0ceac0acbfaeac87596747cecb757e72159fdc6a33ffe1d72036218266f"
+    },
+    {
+      "path": "research/results/skin-weights/studio-weighted-rest-oracle.riv",
+      "sha256": "ffe1deb711f1b56af7a190796622a95dcffb3a80d79bf9b0a21a50a3a0166b31"
+    }
+  ]
+}

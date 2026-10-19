@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-10-19T01:02:39.090Z",
+  "scope": "Cloud Chromium automation; no physical or moderated-user evidence.",
+  "viewports": [
+    {
+      "width": 390,
+      "checks": [
+        "native sample imports into 34 editable layers",
+        "ellipse and mixed vertex controls",
+        "numeric point edit and undo/redo",
+        "native export equals compiler bytes",
+        "named animation scrub",
+        "unsupported geometry retains source and offers original viewing",
+        "browser recovery",
+        "no overflow",
+        "zero automated WCAG violations"
+      ]
+    },
+    {
+      "width": 1440,
+      "checks": [
+        "native sample imports into 34 editable layers",
+        "ellipse and mixed vertex controls",
+        "numeric point edit and undo/redo",
+        "native export equals compiler bytes",
+        "named animation scrub",
+        "unsupported geometry retains source and offers original viewing",
+        "browser recovery",
+        "no overflow",
+        "zero automated WCAG violations"
+      ]
+    }
+  ],
+  "browser": "151.0.7922.173"
+}

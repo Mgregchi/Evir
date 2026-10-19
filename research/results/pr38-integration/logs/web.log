@@ -1,0 +1,15 @@
+
+> evir-workspace@0.1.0 test:web
+> node tests/site/browser.cjs && node tests/site/examples.cjs && node tests/site/gallery.cjs && node tests/site/motorcycle.cjs && node tests/site/characters.cjs
+
+Public site: 22 page/configuration checks; 3 viewport widths; no WCAG A/AA violations.
+canvas: 248 showcase keyframe/transition comparisons passed.
+webgl2: 248 showcase keyframe/transition comparisons passed.
+Gallery: 28 editable studies, lazy loading, Signal interaction/reset and responsive accessibility passed.
+Motorcycle: responsive controls, keyboard, lifecycle and accessibility checks passed.
+Character collection: three styles, three expressions, keyboard/motion/reset/retry and three responsive widths passed.
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
