@@ -325,6 +325,8 @@ export function mountAuthoring(api) {
     if (range) range.value = frame;
     const label = panel.querySelector("#frame-label");
     if (label) label.textContent = `${Math.round(frame)}f`;
+    const numeric=panel.querySelector('#frame-value');
+    if(numeric&&document.activeElement!==numeric)numeric.value=Math.round(frame);
     for (const rect of panel.querySelectorAll("[data-state]"))
       rect.setAttribute(
         "class",
@@ -675,12 +677,26 @@ export function mountAuthoring(api) {
       stop();
       seekPreview(Number(scrub.value));
       api.draw();
+      api.refreshProperties?.();
       updatePlayhead();
     };
     const label = el("output", `${Math.round(frame)}f`);
     label.id = "frame-label";
     label.setAttribute('aria-live','off');
-    panel.append(scrub, label);
+    const seekFrame=value=>{
+      if(!Number.isInteger(value)||value<0||value>a.duration)throw Error(`Frame must be a whole number from 0 to ${a.duration}`);
+      stop();seekPreview(value);api.refresh();
+    };
+    const frameField=field('Frame',Math.round(frame),seekFrame,'number');
+    const frameInput=frameField.querySelector('input');frameInput.id='frame-value';frameInput.min=0;frameInput.max=a.duration;frameInput.step=1;
+    // A paused clock can be fractional although its display rounds to a frame.
+    // Explicitly typing that same displayed number must still seek exactly.
+    let frameEdited=false;frameInput.onchange=null;
+    frameInput.oninput=()=>{frameEdited=true;};
+    frameInput.onblur=()=>{if(frameEdited){frameEdited=false;try{seekFrame(frameInput.valueAsNumber);}catch(e){api.notice(e);}}};
+    frameInput.onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();frameEdited=true;frameInput.blur();}};
+    const scrubControls=el('div');scrubControls.className='playhead-controls';
+    scrubControls.append(scrub,label,frameField);panel.append(scrubControls);
     const n = p.nodes.find((v) => v.id === api.selected());
     if (n) {
       const controls = el("div");
@@ -1430,8 +1446,8 @@ export function mountAuthoring(api) {
     panel.hidden = mode === "Design";
     panel.dataset.mode = mode;
     pathButton.disabled = boneButton.disabled = mode !== "Design";
-    for (const id of ["add-rectangle", "add-group", "empty-add"])
-      document.getElementById(id).disabled = mode !== "Design";
+    for (const id of ["add-rectangle", "add-group", "empty-add", "add-shapes", "empty-shapes"])
+      if(document.getElementById(id))document.getElementById(id).disabled = mode !== "Design";
     panel.replaceChildren();
     if (mode === "Animate") animationPanel(p);
     if (mode === "Interact") machinePanel(p);

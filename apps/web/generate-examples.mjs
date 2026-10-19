@@ -19,6 +19,7 @@ import { compileProject, importRiv } from '@evir/format';
 import { mkdir, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import {weightStudy} from './weight-scene.mjs';
+import {shapeGarden,firstBounce} from './shape-scene.mjs';
 const output = fileURLToPath(new URL('./assets/examples/', import.meta.url));
 
 function project(name, label) {
@@ -381,6 +382,7 @@ Object.assign(factories,characterScenes(project));
 const outingStudy=joiningStudy(project);factories.outing=()=>outingStudy.project;
 await mkdir(output,{recursive:true});
 factories.gust=()=>weightStudy(project);
+factories.garden=()=>shapeGarden(project);
 for(const name of exampleIds) {
   const p=await factories[name]();validateProject(p);
   const compiled=compileProject(p);
@@ -413,3 +415,6 @@ for(const name of exampleIds) {
   }
   console.log(`${name}: ${p.nodes.length} editable nodes, ${p.animations.length} animations, validated source and compiled export`);
 }
+const lesson=firstBounce();validateProject(lesson);
+await writeFile(`${output}first-bounce.evir-project`,JSON.stringify(lesson,null,2)+'\n');
+await writeFile(`${output}first-bounce.riv`,compileProject(lesson).bytes);

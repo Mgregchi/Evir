@@ -1,0 +1,92 @@
+[
+  {
+    "name": "rive-shapes",
+    "url": "https://rive.app/docs/editor/fundamentals/shapes-and-paths",
+    "retrievedAt": "2026-10-19T13:14:34.437947+00:00",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "name": "rive-animation",
+    "url": "https://rive.app/docs/editor/animate-mode/keys",
+    "retrievedAt": "2026-10-19T13:14:34.448444+00:00",
+    "status": 200,
+    "finalUrl": "https://rive.app/docs/editor/animate-mode/keys",
+    "bytes": 307903,
+    "sha256": "fa207590091179e5962ee60cf2ece84f257141d32a0a0325bf65164c168259ab"
+  },
+  {
+    "name": "penpot-shapes",
+    "url": "https://help.penpot.app/user-guide/shapes/basic-shapes/",
+    "retrievedAt": "2026-10-19T13:14:34.454120+00:00",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "name": "inkscape-shapes",
+    "url": "https://inkscape.org/doc/tutorials/shapes/tutorial-shapes.html",
+    "retrievedAt": "2026-10-19T13:14:34.459262+00:00",
+    "status": 200,
+    "finalUrl": "https://inkscape.org/doc/tutorials/shapes/tutorial-shapes.html",
+    "bytes": 61196,
+    "sha256": "1e24a619139d609d7284e67764c83b7a067a5f53eb3659fa8405b536171cfef3"
+  },
+  {
+    "name": "mdn-bezier",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes",
+    "retrievedAt": "2026-10-19T13:14:34.468956+00:00",
+    "status": 200,
+    "finalUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes",
+    "bytes": 200814,
+    "sha256": "f6e9ee6680a3ab53120678b1ae8ad3d722dc52bae805f54017551a39dc308511"
+  },
+  {
+    "name": "wai-dialog",
+    "url": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/",
+    "retrievedAt": "2026-10-19T13:14:34.470712+00:00",
+    "status": 200,
+    "finalUrl": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/",
+    "bytes": 43147,
+    "sha256": "9a5c9f28af1fc51649f55d72f1d46daf0d115bdad5ea363742d5c92120c662a4"
+  },
+  {
+    "name": "wcag-drag",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html",
+    "retrievedAt": "2026-10-19T13:14:34.472453+00:00",
+    "status": 200,
+    "finalUrl": "https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html",
+    "bytes": 48929,
+    "sha256": "c3905630a35b6e8246aba32c1769f3ff82b217d464d41e4b1b2a34b9df5771c6"
+  },
+  {
+    "name": "rive-shape-tools",
+    "url": "https://rive.app/docs/editor/manipulating-shapes/manipulating-shapes",
+    "retrievedAt": "2026-10-19T16:56:40.353893+00:00",
+    "status": 200,
+    "finalUrl": "https://rive.app/docs/editor/manipulating-shapes/manipulating-shapes",
+    "bytes": 288366,
+    "sha256": "95286c0490081c9c454a929de07db48ab220c64f5538835be26de8e1be418879"
+  },
+  {
+    "name": "penpot-drawing",
+    "url": "https://help.penpot.app/user-guide/shapes/",
+    "retrievedAt": "2026-10-19T16:56:41.630052+00:00",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "name": "wai-disclosure",
+    "url": "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/",
+    "retrievedAt": "2026-10-19T17:21:16.588513+00:00",
+    "status": 200,
+    "finalUrl": "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/",
+    "bytes": 35553,
+    "sha256": "6976107e1d50815d7ea1434169500cff516b661dcadb61dd9cd9586676866380"
+  },
+  {
+    "name": "mdn-details",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details",
+    "retrievedAt": "2026-10-19T17:21:17.744385+00:00",
+    "status": 200,
+    "finalUrl": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details",
+    "bytes": 196519,
+    "sha256": "f00d08ee84c2662bed16bce4d967c3d3d0f77f6d8c08d1ee11562a6d9f1c84cd"
+  }
+]
