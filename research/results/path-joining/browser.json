@@ -1,0 +1,77 @@
+{
+  "checkedAt": "2026-10-18T16:51:16.032Z",
+  "scope": "Cloud Chromium editing, geometry preview, source recovery, downloads and automated accessibility; not physical-device or human evidence.",
+  "viewports": [
+    {
+      "width": 320,
+      "height": 844,
+      "checks": [
+        "all endpoint pairings preview without mutation",
+        "cancel and focus return",
+        "reachable bottom sheet",
+        "zero automated WCAG violations",
+        "bridge geometry and one-step history",
+        "merge geometry and one-step history",
+        "source animation retained",
+        "actual native download",
+        "durable recovery excludes sheet",
+        "no page overflow"
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "checks": [
+        "all endpoint pairings preview without mutation",
+        "cancel and focus return",
+        "reachable bottom sheet",
+        "zero automated WCAG violations",
+        "bridge geometry and one-step history",
+        "merge geometry and one-step history",
+        "source animation retained",
+        "actual native download",
+        "durable recovery excludes sheet",
+        "no page overflow"
+      ]
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "checks": [
+        "all endpoint pairings preview without mutation",
+        "cancel and focus return",
+        "reachable bottom sheet",
+        "zero automated WCAG violations",
+        "bridge geometry and one-step history",
+        "merge geometry and one-step history",
+        "source animation retained",
+        "actual native download",
+        "durable recovery excludes sheet",
+        "no page overflow"
+      ]
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "checks": [
+        "all endpoint pairings preview without mutation",
+        "cancel and focus return",
+        "reachable bottom sheet",
+        "zero automated WCAG violations",
+        "bridge geometry and one-step history",
+        "merge geometry and one-step history",
+        "source animation retained",
+        "actual native download",
+        "durable recovery excludes sheet",
+        "no page overflow"
+      ]
+    }
+  ],
+  "browser": "151.0.7922.173",
+  "guards": [
+    "incompatible paint rejected without mutation",
+    "two selected paths use explicit kept/other identities",
+    "programmatically changed background selection rejects stale Apply",
+    "detached Apply callback after Cancel cannot edit"
+  ]
+}

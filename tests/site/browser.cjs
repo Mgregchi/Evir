@@ -10,6 +10,18 @@ const names = ['', 'product/', 'editor/', 'examples/', 'learn/', 'community/', '
 const publicKeys = ['REPOSITORY_URL','DOCS_URL','COMMUNITY_URL','FEEDBACK_URL','NEWSLETTER_URL','SOCIAL_X_URL','SOCIAL_LINKEDIN_URL','SOCIAL_MASTODON_URL','CONTACT_URL'];
 const mime = {'.html':'text/html','.mjs':'text/javascript','.js':'text/javascript','.css':'text/css','.json':'application/json','.png':'image/png','.xml':'application/xml'};
 async function readyPreviews(page) {for(const preview of await page.locator('[data-preview]').all()){await preview.scrollIntoViewIfNeeded();await page.waitForFunction(id=>[...document.querySelectorAll('[data-preview]')].find(el=>el.dataset.preview===id)?.dataset.ready==='true',await preview.getAttribute('data-preview'));}}
+async function readyViewport(page) {
+  // Emulation can publish innerWidth before CSS media rules have settled.
+  // Allow bounded render readiness; the strict overflow assertion stays below.
+  await page.evaluate(()=>new Promise(resolve=>{
+    const deadline=performance.now()+2000;let cleanFrames=0;
+    const frame=()=>{
+      cleanFrames=document.documentElement.scrollWidth<=innerWidth?cleanFrames+1:0;
+      if(cleanFrames>=3||performance.now()>=deadline)resolve();else requestAnimationFrame(frame);
+    };
+    requestAnimationFrame(frame);
+  }));
+}
 function build(name, values={}) {
   const env = {...process.env, ...Object.fromEntries(publicKeys.flatMap(key=>[[key,''],['PUBLIC_'+key,'']])),
     SITE_URL:'', STUDIO_URL:'', PUBLIC_SITE_URL:'', PUBLIC_BASE_PATH:'', PUBLIC_EDITOR_URL:'',
@@ -82,7 +94,7 @@ async function serve(dir, base='') {
           assert.deepEqual(accessibility.violations,[],`${name}/${route}: ${JSON.stringify(accessibility.violations)}`);
           for(const width of [1440,390,320]) {
             await page.setViewportSize({width,height:1000});
-            await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+            await readyViewport(page);
             const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth);
             const overflowing=overflow?await page.evaluate(()=>[...document.querySelectorAll('body *')].filter(el=>el.getBoundingClientRect().right>innerWidth+1).slice(0,12).map(el=>({tag:el.tagName,cls:el.className?.baseVal??el.className,width:el.getBoundingClientRect().width,text:el.textContent.slice(0,60)}))):[];
             assert.equal(overflow,false,`Overflow ${name}/${route} at ${width}: ${JSON.stringify(overflowing)}`);

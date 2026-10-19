@@ -78,4 +78,6 @@ Playback modes/counts/speed, independent timeline layers, the Sunday motorcycle 
 
 Native centered solid strokes now retain their centerlines through source/runtime validation, Canvas rendering, supported animation and `.riv` export/import. Studio provides a stroke bottom sheet and constant-width Freehand mode. See [native stroke contracts, workflow and limits](../../docs/41-native-strokes-and-path-effects.md); gradient/skinned strokes and full Editor-file import remain outside this increment.
 
+Path joining: select an open path and choose Properties → Join paths…, or select two paths with Multiple/Shift. Review explicit endpoints and Connect/Merge in a bottom sheet, then Apply. One Undo restores both paths. Preview state is not saved. See [Outing and joining limits](../../docs/44-path-joining-and-outing.md).
+
 **Properties → Skin weights…** adds colored weight charts, a bounded target-weight brush and numbered numeric vertex edits for bound paths and meshes. **Bind skin bones…** / **Rebind skin bones…** supports one to four bones and resets bindings to equal shares. Brush settings stay outside saved/runtime scenes; the footer Done weights action exits the tool. See [the workflow, limits and Gust](../../docs/43-graphical-skin-weights.md).

@@ -1,0 +1,1299 @@
+
+> evir-workspace@0.1.0 validate:editor
+> node tools/validate_editor_authoring.cjs && RIVE_RENDERER=webgl2 node tools/validate_editor_authoring.cjs && node tools/validate-authoring-suite.cjs && RIVE_RENDERER=webgl2 node tools/validate-authoring-suite.cjs && npm run validate:playback && npm run validate:strokes && npm run validate:weights && npm run validate:joining
+
+{
+  label: 'rest',
+  mae: 0.0009307861328125,
+  expectedCovered: 11488,
+  runtimeCovered: 11488
+}
+{
+  label: 'Bend 0',
+  mae: 0.0009307861328125,
+  expectedCovered: 11488,
+  runtimeCovered: 11488
+}
+{
+  label: 'Bend 15',
+  mae: 0,
+  expectedCovered: 11398,
+  runtimeCovered: 11398
+}
+{
+  label: 'Bend 30',
+  mae: 0,
+  expectedCovered: 9784,
+  runtimeCovered: 9784
+}
+{
+  label: 'Bend 60',
+  mae: 0,
+  expectedCovered: 5996,
+  runtimeCovered: 5996
+}
+{
+  label: 'Active 30',
+  mae: 0,
+  expectedCovered: 9500,
+  runtimeCovered: 9500
+}
+{
+  label: 'Active 60',
+  mae: 0,
+  expectedCovered: 10353,
+  runtimeCovered: 10353
+}
+{
+  label: 'entry',
+  mae: 0.0009307861328125,
+  expectedCovered: 11488,
+  runtimeCovered: 11488
+}
+{
+  label: 'AND guard',
+  mae: 0.0009307861328125,
+  expectedCovered: 11488,
+  runtimeCovered: 11488
+}
+{
+  label: 'numeric transition',
+  mae: 0,
+  expectedCovered: 9500,
+  runtimeCovered: 9500
+}
+{
+  label: 'bool false + numeric return',
+  mae: 0.0009307861328125,
+  expectedCovered: 11488,
+  runtimeCovered: 11488
+}
+{
+  label: 'trigger',
+  mae: 0,
+  expectedCovered: 9500,
+  runtimeCovered: 9500
+}
+{
+  label: 'reset',
+  mae: 0.0009307861328125,
+  expectedCovered: 11488,
+  runtimeCovered: 11488
+}
+{
+  label: 'click listener',
+  mae: 0,
+  expectedCovered: 9500,
+  runtimeCovered: 9500
+}
+{
+  label: 'browser authored Animation 1 0',
+  mae: 0.007640838623046875,
+  expectedCovered: 7062,
+  runtimeCovered: 7062
+}
+{
+  label: 'browser authored Animation 1 30',
+  mae: 0.008106231689453125,
+  expectedCovered: 7043,
+  runtimeCovered: 7043
+}
+{
+  label: 'browser authored Animation 1 60',
+  mae: 0.00846099853515625,
+  expectedCovered: 7035,
+  runtimeCovered: 7035
+}
+{
+  label: 'browser authored Active 0',
+  mae: 0.013851165771484375,
+  expectedCovered: 7133,
+  runtimeCovered: 7131
+}
+{
+  label: 'browser authored Active 30',
+  mae: 0.013851165771484375,
+  expectedCovered: 7133,
+  runtimeCovered: 7131
+}
+{
+  label: 'browser authored Active 60',
+  mae: 0.013851165771484375,
+  expectedCovered: 7133,
+  runtimeCovered: 7131
+}
+{
+  label: 'rest',
+  mae: 0.16790008544921875,
+  expectedCovered: 11488,
+  runtimeCovered: 11400
+}
+{
+  label: 'Bend 0',
+  mae: 0.16790008544921875,
+  expectedCovered: 11488,
+  runtimeCovered: 11400
+}
+{
+  label: 'Bend 15',
+  mae: 0.22022247314453125,
+  expectedCovered: 11398,
+  runtimeCovered: 11286
+}
+{
+  label: 'Bend 30',
+  mae: 0.13883590698242188,
+  expectedCovered: 9784,
+  runtimeCovered: 9716
+}
+{
+  label: 'Bend 60',
+  mae: 0.119232177734375,
+  expectedCovered: 5996,
+  runtimeCovered: 5940
+}
+{
+  label: 'Active 30',
+  mae: 0.13967514038085938,
+  expectedCovered: 9500,
+  runtimeCovered: 9434
+}
+{
+  label: 'Active 60',
+  mae: 0.14490127563476562,
+  expectedCovered: 10353,
+  runtimeCovered: 10281
+}
+{
+  label: 'entry',
+  mae: 0.16790008544921875,
+  expectedCovered: 11488,
+  runtimeCovered: 11400
+}
+{
+  label: 'AND guard',
+  mae: 0.16790008544921875,
+  expectedCovered: 11488,
+  runtimeCovered: 11400
+}
+{
+  label: 'numeric transition',
+  mae: 0.13967514038085938,
+  expectedCovered: 9500,
+  runtimeCovered: 9434
+}
+{
+  label: 'bool false + numeric return',
+  mae: 0.16790008544921875,
+  expectedCovered: 11488,
+  runtimeCovered: 11400
+}
+{
+  label: 'trigger',
+  mae: 0.13967514038085938,
+  expectedCovered: 9500,
+  runtimeCovered: 9434
+}
+{
+  label: 'reset',
+  mae: 0.16790008544921875,
+  expectedCovered: 11488,
+  runtimeCovered: 11400
+}
+{
+  label: 'click listener',
+  mae: 0.13967514038085938,
+  expectedCovered: 9500,
+  runtimeCovered: 9434
+}
+{
+  label: 'browser authored Animation 1 0',
+  mae: 0.049419403076171875,
+  expectedCovered: 7062,
+  runtimeCovered: 7059
+}
+{
+  label: 'browser authored Animation 1 30',
+  mae: 0.045627593994140625,
+  expectedCovered: 7043,
+  runtimeCovered: 7041
+}
+{
+  label: 'browser authored Animation 1 60',
+  mae: 0.04761505126953125,
+  expectedCovered: 7035,
+  runtimeCovered: 7034
+}
+{
+  label: 'browser authored Active 0',
+  mae: 0.050273895263671875,
+  expectedCovered: 7133,
+  runtimeCovered: 7129
+}
+{
+  label: 'browser authored Active 30',
+  mae: 0.050273895263671875,
+  expectedCovered: 7133,
+  runtimeCovered: 7129
+}
+{
+  label: 'browser authored Active 60',
+  mae: 0.050273895263671875,
+  expectedCovered: 7133,
+  runtimeCovered: 7129
+}
+{
+  scene: 'canopy',
+  frame: 0,
+  mae: 0,
+  covered: 28224,
+  backend: 'canvas'
+}
+{
+  scene: 'canopy',
+  frame: 30,
+  mae: 0,
+  covered: 28224,
+  backend: 'canvas'
+}
+{
+  scene: 'canopy',
+  frame: 60,
+  mae: 0,
+  covered: 28224,
+  backend: 'canvas'
+}
+{
+  scene: 'halo',
+  frame: 0,
+  mae: 15.879058837890625,
+  covered: 12544,
+  backend: 'canvas'
+}
+{
+  scene: 'halo',
+  frame: 30,
+  mae: 15.879058837890625,
+  covered: 12544,
+  backend: 'canvas'
+}
+{
+  scene: 'halo',
+  frame: 60,
+  mae: 15.879058837890625,
+  covered: 12544,
+  backend: 'canvas'
+}
+{ scene: 'reach', frame: 0, mae: 0, covered: 2086, backend: 'canvas' }
+{ scene: 'reach', frame: 30, mae: 0, covered: 1990, backend: 'canvas' }
+{ scene: 'reach', frame: 60, mae: 0, covered: 1961, backend: 'canvas' }
+{
+  scene: 'kite',
+  frame: 0,
+  mae: 0.05600738525390625,
+  covered: 25600,
+  backend: 'canvas'
+}
+{
+  scene: 'kite',
+  frame: 30,
+  mae: 0.8679885864257812,
+  covered: 25597,
+  backend: 'canvas'
+}
+{
+  scene: 'kite',
+  frame: 60,
+  mae: 0.9041061401367188,
+  covered: 25598,
+  backend: 'canvas'
+}
+{
+  scene: 'caption',
+  frame: 0,
+  mae: 0.09711456298828125,
+  covered: 787,
+  backend: 'canvas'
+}
+{
+  scene: 'caption',
+  frame: 30,
+  mae: 0.1117095947265625,
+  covered: 1059,
+  backend: 'canvas'
+}
+{
+  scene: 'caption',
+  frame: 60,
+  mae: 0.2801666259765625,
+  covered: 1360,
+  backend: 'canvas'
+}
+{ scene: 'blend', frame: 0, mae: 0, covered: 1400, backend: 'canvas' }
+{ scene: 'blend', frame: 30, mae: 0, covered: 1400, backend: 'canvas' }
+{ scene: 'blend', frame: 60, mae: 0, covered: 1400, backend: 'canvas' }
+{
+  scene: 'reach-one-bone',
+  frame: 0,
+  mae: 0,
+  covered: 1949,
+  backend: 'canvas'
+}
+{
+  scene: 'reach-one-bone',
+  frame: 30,
+  mae: 0,
+  covered: 1928,
+  backend: 'canvas'
+}
+{
+  scene: 'reach-one-bone',
+  frame: 60,
+  mae: 0,
+  covered: 1907,
+  backend: 'canvas'
+}
+{
+  scene: 'reach-inverted',
+  frame: 0,
+  mae: 0,
+  covered: 2086,
+  backend: 'canvas'
+}
+{
+  scene: 'reach-inverted',
+  frame: 30,
+  mae: 0,
+  covered: 1988,
+  backend: 'canvas'
+}
+{
+  scene: 'reach-inverted',
+  frame: 60,
+  mae: 0,
+  covered: 1961,
+  backend: 'canvas'
+}
+{
+  scene: 'reach-half-strength',
+  frame: 0,
+  mae: 0,
+  covered: 2056,
+  backend: 'canvas'
+}
+{
+  scene: 'reach-half-strength',
+  frame: 30,
+  mae: 0,
+  covered: 2059,
+  backend: 'canvas'
+}
+{
+  scene: 'reach-half-strength',
+  frame: 60,
+  mae: 0,
+  covered: 2035,
+  backend: 'canvas'
+}
+{
+  scene: 'canopy',
+  frame: 0,
+  mae: 0.08093643188476562,
+  covered: 28224,
+  backend: 'webgl2'
+}
+{
+  scene: 'canopy',
+  frame: 30,
+  mae: 0.06731033325195312,
+  covered: 28224,
+  backend: 'webgl2'
+}
+{
+  scene: 'canopy',
+  frame: 60,
+  mae: 0.030792236328125,
+  covered: 28224,
+  backend: 'webgl2'
+}
+{
+  scene: 'halo',
+  frame: 0,
+  mae: 5.075374603271484,
+  covered: 21247,
+  backend: 'webgl2'
+}
+{
+  scene: 'halo',
+  frame: 30,
+  mae: 5.075374603271484,
+  covered: 21247,
+  backend: 'webgl2'
+}
+{
+  scene: 'halo',
+  frame: 60,
+  mae: 5.075374603271484,
+  covered: 21247,
+  backend: 'webgl2'
+}
+{
+  scene: 'reach',
+  frame: 0,
+  mae: 0.15870285034179688,
+  covered: 1999,
+  backend: 'webgl2'
+}
+{
+  scene: 'reach',
+  frame: 30,
+  mae: 0.11363983154296875,
+  covered: 1922,
+  backend: 'webgl2'
+}
+{
+  scene: 'reach',
+  frame: 60,
+  mae: 0.12505340576171875,
+  covered: 1891,
+  backend: 'webgl2'
+}
+{
+  scene: 'kite',
+  frame: 0,
+  mae: 0.054790496826171875,
+  covered: 25600,
+  backend: 'webgl2'
+}
+{
+  scene: 'kite',
+  frame: 30,
+  mae: 0.294158935546875,
+  covered: 25847,
+  backend: 'webgl2'
+}
+{
+  scene: 'kite',
+  frame: 60,
+  mae: 0.3230743408203125,
+  covered: 25850,
+  backend: 'webgl2'
+}
+{
+  scene: 'caption',
+  frame: 0,
+  mae: 0.11307525634765625,
+  covered: 731,
+  backend: 'webgl2'
+}
+{
+  scene: 'caption',
+  frame: 30,
+  mae: 0.16352462768554688,
+  covered: 991,
+  backend: 'webgl2'
+}
+{
+  scene: 'caption',
+  frame: 60,
+  mae: 0.3363761901855469,
+  covered: 1274,
+  backend: 'webgl2'
+}
+{ scene: 'blend', frame: 0, mae: 0, covered: 1400, backend: 'webgl2' }
+{ scene: 'blend', frame: 30, mae: 0, covered: 1400, backend: 'webgl2' }
+{ scene: 'blend', frame: 60, mae: 0, covered: 1400, backend: 'webgl2' }
+{
+  scene: 'reach-one-bone',
+  frame: 0,
+  mae: 0.06675338745117188,
+  covered: 1924,
+  backend: 'webgl2'
+}
+{
+  scene: 'reach-one-bone',
+  frame: 30,
+  mae: 0.0484466552734375,
+  covered: 1911,
+  backend: 'webgl2'
+}
+{
+  scene: 'reach-one-bone',
+  frame: 60,
+  mae: 0.0670013427734375,
+  covered: 1882,
+  backend: 'webgl2'
+}
+{
+  scene: 'reach-inverted',
+  frame: 0,
+  mae: 0.15870285034179688,
+  covered: 1999,
+  backend: 'webgl2'
+}
+{
+  scene: 'reach-inverted',
+  frame: 30,
+  mae: 0.13115692138671875,
+  covered: 1930,
+  backend: 'webgl2'
+}
+{
+  scene: 'reach-inverted',
+  frame: 60,
+  mae: 0.12163543701171875,
+  covered: 1903,
+  backend: 'webgl2'
+}
+{
+  scene: 'reach-half-strength',
+  frame: 0,
+  mae: 0.13363265991210938,
+  covered: 1998,
+  backend: 'webgl2'
+}
+{
+  scene: 'reach-half-strength',
+  frame: 30,
+  mae: 0.14795303344726562,
+  covered: 1990,
+  backend: 'webgl2'
+}
+{
+  scene: 'reach-half-strength',
+  frame: 60,
+  mae: 0.11024093627929688,
+  covered: 1983,
+  backend: 'webgl2'
+}
+
+> evir-workspace@0.1.0 validate:playback
+> node tools/validate-playback.cjs && RIVE_RENDERER=webgl2 node tools/validate-playback.cjs
+
+canvas: 41 native clock/pixel and explicit fixed-count adapter comparisons passed.
+webgl2: 41 native clock/pixel and explicit fixed-count adapter comparisons passed.
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+
+> evir-workspace@0.1.0 validate:strokes
+> node tools/validate-strokes.cjs
+
+canvas {
+  scene: 'stroke-cap-butt',
+  frame: null,
+  mae: 0,
+  covered: 5373,
+  expectedCovered: 5373
+}
+canvas {
+  scene: 'stroke-cap-round',
+  frame: null,
+  mae: 0,
+  covered: 5533,
+  expectedCovered: 5533
+}
+canvas {
+  scene: 'stroke-cap-square',
+  frame: null,
+  mae: 0,
+  covered: 5583,
+  expectedCovered: 5583
+}
+canvas {
+  scene: 'stroke-join-miter',
+  frame: null,
+  mae: 0,
+  covered: 5106,
+  expectedCovered: 5106
+}
+canvas {
+  scene: 'stroke-join-round',
+  frame: null,
+  mae: 0,
+  covered: 5091,
+  expectedCovered: 5091
+}
+canvas {
+  scene: 'stroke-join-bevel',
+  frame: null,
+  mae: 0,
+  covered: 5073,
+  expectedCovered: 5073
+}
+canvas {
+  scene: 'stroke-rectangle',
+  frame: null,
+  mae: 0.041881561279296875,
+  covered: 15893,
+  expectedCovered: 15880
+}
+canvas {
+  scene: 'stroke-reflected',
+  frame: null,
+  mae: 0,
+  covered: 3338,
+  expectedCovered: 3338
+}
+canvas {
+  scene: 'stroke-dash',
+  frame: null,
+  mae: 0.11132049560546875,
+  covered: 5128,
+  expectedCovered: 5128
+}
+canvas {
+  scene: 'stroke-dash-negative',
+  frame: null,
+  mae: 0.13370132446289062,
+  covered: 5110,
+  expectedCovered: 5111
+}
+canvas {
+  scene: 'stroke-dash-closed',
+  frame: null,
+  mae: 0.056568145751953125,
+  covered: 8148,
+  expectedCovered: 8138
+}
+canvas {
+  scene: 'stroke-trim',
+  frame: null,
+  mae: 0.08403396606445312,
+  covered: 3401,
+  expectedCovered: 3401
+}
+canvas {
+  scene: 'stroke-trim-wrap',
+  frame: null,
+  mae: 0.060394287109375,
+  covered: 3302,
+  expectedCovered: 3289
+}
+canvas {
+  scene: 'stroke-trim-reversed',
+  frame: null,
+  mae: 0.06220245361328125,
+  covered: 3399,
+  expectedCovered: 3391
+}
+canvas {
+  scene: 'stroke-trim-closed',
+  frame: null,
+  mae: 0,
+  covered: 5536,
+  expectedCovered: 5536
+}
+canvas {
+  scene: 'stroke-dash-trim',
+  frame: null,
+  mae: 0.14146804809570312,
+  covered: 3077,
+  expectedCovered: 3066
+}
+canvas {
+  scene: 'stroke-dash-trim-wrap',
+  frame: null,
+  mae: 0.0939483642578125,
+  covered: 3240,
+  expectedCovered: 3257
+}
+canvas {
+  scene: 'stroke-alpha',
+  frame: null,
+  mae: 0,
+  covered: 5542,
+  expectedCovered: 5542
+}
+canvas {
+  scene: 'stroke-hidden',
+  frame: null,
+  mae: 0,
+  covered: 0,
+  expectedCovered: 0
+}
+canvas {
+  scene: 'stroke-animated',
+  frame: 0,
+  mae: 0.014720916748046875,
+  covered: 485,
+  expectedCovered: 484
+}
+canvas {
+  scene: 'stroke-animated',
+  frame: 30,
+  mae: 0.12965774536132812,
+  covered: 2574,
+  expectedCovered: 2578
+}
+canvas {
+  scene: 'stroke-animated',
+  frame: 60,
+  mae: 0.23975372314453125,
+  covered: 6449,
+  expectedCovered: 6458
+}
+canvas {
+  scene: 'stroke-animated',
+  frame: 90,
+  mae: 0.21579360961914062,
+  covered: 4617,
+  expectedCovered: 4632
+}
+canvas {
+  scene: 'stroke-animated',
+  frame: 120,
+  mae: 0.08928298950195312,
+  covered: 1973,
+  expectedCovered: 1982
+}
+canvas {
+  scene: 'trace-study',
+  frame: 0,
+  mae: 0.07177352905273438,
+  covered: 53539,
+  expectedCovered: 53544
+}
+canvas {
+  scene: 'trace-study',
+  frame: 30,
+  mae: 0.090850830078125,
+  covered: 53539,
+  expectedCovered: 53544
+}
+canvas {
+  scene: 'trace-study',
+  frame: 60,
+  mae: 0.054500579833984375,
+  covered: 53539,
+  expectedCovered: 53544
+}
+canvas {
+  scene: 'trace-study',
+  frame: 90,
+  mae: 0.08962249755859375,
+  covered: 53539,
+  expectedCovered: 53544
+}
+canvas {
+  scene: 'trace-study',
+  frame: 120,
+  mae: 0.07177352905273438,
+  covered: 53539,
+  expectedCovered: 53544
+}
+canvas {
+  scene: 'studio-stroke-oracle',
+  frame: 0,
+  mae: 0.060764312744140625,
+  covered: 53539,
+  expectedCovered: 53544
+}
+canvas {
+  scene: 'studio-stroke-oracle',
+  frame: 30,
+  mae: 0.073089599609375,
+  covered: 53539,
+  expectedCovered: 53544
+}
+canvas {
+  scene: 'studio-stroke-oracle',
+  frame: 60,
+  mae: 0.08340835571289062,
+  covered: 53539,
+  expectedCovered: 53544
+}
+canvas {
+  scene: 'studio-stroke-oracle',
+  frame: 90,
+  mae: 0.0724334716796875,
+  covered: 53539,
+  expectedCovered: 53544
+}
+canvas {
+  scene: 'studio-stroke-oracle',
+  frame: 120,
+  mae: 0.060764312744140625,
+  covered: 53539,
+  expectedCovered: 53544
+}
+canvas {
+  scene: 'stroke-animated-rest',
+  frame: null,
+  mae: 0.11132049560546875,
+  covered: 5128,
+  expectedCovered: 5128
+}
+canvas {
+  scene: 'trace-study-rest',
+  frame: null,
+  mae: 0.073455810546875,
+  covered: 53539,
+  expectedCovered: 53544
+}
+canvas {
+  scene: 'studio-stroke-oracle-rest',
+  frame: null,
+  mae: 0.08562088012695312,
+  covered: 53539,
+  expectedCovered: 53544
+}
+webgl2 {
+  scene: 'stroke-cap-butt',
+  frame: null,
+  mae: 0.1827850341796875,
+  covered: 5305,
+  expectedCovered: 5373
+}
+webgl2 {
+  scene: 'stroke-cap-round',
+  frame: null,
+  mae: 0.1660919189453125,
+  covered: 5441,
+  expectedCovered: 5533
+}
+webgl2 {
+  scene: 'stroke-cap-square',
+  frame: null,
+  mae: 0.16556549072265625,
+  covered: 5491,
+  expectedCovered: 5583
+}
+webgl2 {
+  scene: 'stroke-join-miter',
+  frame: null,
+  mae: 0.19298934936523438,
+  covered: 4923,
+  expectedCovered: 5106
+}
+webgl2 {
+  scene: 'stroke-join-round',
+  frame: null,
+  mae: 0.197174072265625,
+  covered: 4899,
+  expectedCovered: 5091
+}
+webgl2 {
+  scene: 'stroke-join-bevel',
+  frame: null,
+  mae: 0.19964599609375,
+  covered: 4883,
+  expectedCovered: 5073
+}
+webgl2 {
+  scene: 'stroke-rectangle',
+  frame: null,
+  mae: 0.132843017578125,
+  covered: 15827,
+  expectedCovered: 15880
+}
+webgl2 {
+  scene: 'stroke-reflected',
+  frame: null,
+  mae: 0.148651123046875,
+  covered: 3229,
+  expectedCovered: 3338
+}
+webgl2 {
+  scene: 'stroke-dash',
+  frame: null,
+  mae: 0.19268798828125,
+  covered: 5007,
+  expectedCovered: 5128
+}
+webgl2 {
+  scene: 'stroke-dash-negative',
+  frame: null,
+  mae: 0.19552230834960938,
+  covered: 4999,
+  expectedCovered: 5111
+}
+webgl2 {
+  scene: 'stroke-dash-closed',
+  frame: null,
+  mae: 0.12108230590820312,
+  covered: 8075,
+  expectedCovered: 8138
+}
+webgl2 {
+  scene: 'stroke-trim',
+  frame: null,
+  mae: 0.10187149047851562,
+  covered: 3330,
+  expectedCovered: 3401
+}
+webgl2 {
+  scene: 'stroke-trim-wrap',
+  frame: null,
+  mae: 0.08658218383789062,
+  covered: 3237,
+  expectedCovered: 3289
+}
+webgl2 {
+  scene: 'stroke-trim-reversed',
+  frame: null,
+  mae: 0.10055160522460938,
+  covered: 3326,
+  expectedCovered: 3391
+}
+webgl2 {
+  scene: 'stroke-trim-closed',
+  frame: null,
+  mae: 0.01514434814453125,
+  covered: 5524,
+  expectedCovered: 5536
+}
+webgl2 {
+  scene: 'stroke-dash-trim',
+  frame: null,
+  mae: 0.16542434692382812,
+  covered: 3011,
+  expectedCovered: 3066
+}
+webgl2 {
+  scene: 'stroke-dash-trim-wrap',
+  frame: null,
+  mae: 0.13959503173828125,
+  covered: 3165,
+  expectedCovered: 3257
+}
+webgl2 {
+  scene: 'stroke-alpha',
+  frame: null,
+  mae: 0.13349151611328125,
+  covered: 5441,
+  expectedCovered: 5542
+}
+webgl2 {
+  scene: 'stroke-hidden',
+  frame: null,
+  mae: 0,
+  covered: 0,
+  expectedCovered: 0
+}
+webgl2 {
+  scene: 'stroke-animated',
+  frame: 0,
+  mae: 0.03606414794921875,
+  covered: 463,
+  expectedCovered: 484
+}
+webgl2 {
+  scene: 'stroke-animated',
+  frame: 30,
+  mae: 0.16770553588867188,
+  covered: 2513,
+  expectedCovered: 2578
+}
+webgl2 {
+  scene: 'stroke-animated',
+  frame: 60,
+  mae: 0.328521728515625,
+  covered: 6346,
+  expectedCovered: 6458
+}
+webgl2 {
+  scene: 'stroke-animated',
+  frame: 90,
+  mae: 0.2909660339355469,
+  covered: 4523,
+  expectedCovered: 4632
+}
+webgl2 {
+  scene: 'stroke-animated',
+  frame: 120,
+  mae: 0.181060791015625,
+  covered: 1863,
+  expectedCovered: 1982
+}
+webgl2 {
+  scene: 'trace-study',
+  frame: 0,
+  mae: 0.4790382385253906,
+  covered: 53512,
+  expectedCovered: 53544
+}
+webgl2 {
+  scene: 'trace-study',
+  frame: 30,
+  mae: 0.5062828063964844,
+  covered: 53512,
+  expectedCovered: 53544
+}
+webgl2 {
+  scene: 'trace-study',
+  frame: 60,
+  mae: 0.5135688781738281,
+  covered: 53512,
+  expectedCovered: 53544
+}
+webgl2 {
+  scene: 'trace-study',
+  frame: 90,
+  mae: 0.5051918029785156,
+  covered: 53512,
+  expectedCovered: 53544
+}
+webgl2 {
+  scene: 'trace-study',
+  frame: 120,
+  mae: 0.4790382385253906,
+  covered: 53512,
+  expectedCovered: 53544
+}
+webgl2 {
+  scene: 'studio-stroke-oracle',
+  frame: 0,
+  mae: 0.4675140380859375,
+  covered: 53512,
+  expectedCovered: 53544
+}
+webgl2 {
+  scene: 'studio-stroke-oracle',
+  frame: 30,
+  mae: 0.4943962097167969,
+  covered: 53512,
+  expectedCovered: 53544
+}
+webgl2 {
+  scene: 'studio-stroke-oracle',
+  frame: 60,
+  mae: 0.5071487426757812,
+  covered: 53512,
+  expectedCovered: 53544
+}
+webgl2 {
+  scene: 'studio-stroke-oracle',
+  frame: 90,
+  mae: 0.4937095642089844,
+  covered: 53512,
+  expectedCovered: 53544
+}
+webgl2 {
+  scene: 'studio-stroke-oracle',
+  frame: 120,
+  mae: 0.4675140380859375,
+  covered: 53512,
+  expectedCovered: 53544
+}
+webgl2 {
+  scene: 'stroke-animated-rest',
+  frame: null,
+  mae: 0.19268798828125,
+  covered: 5007,
+  expectedCovered: 5128
+}
+webgl2 {
+  scene: 'trace-study-rest',
+  frame: null,
+  mae: 0.47284698486328125,
+  covered: 53512,
+  expectedCovered: 53544
+}
+webgl2 {
+  scene: 'studio-stroke-oracle-rest',
+  frame: null,
+  mae: 0.5039710998535156,
+  covered: 53512,
+  expectedCovered: 53544
+}
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+
+> evir-workspace@0.1.0 validate:weights
+> node tools/validate-weights.cjs
+
+canvas {
+  scene: 'gust',
+  frame: 0,
+  mae: 0.24678802490234375,
+  covered: 32737,
+  expectedCovered: 32743
+}
+canvas {
+  scene: 'gust',
+  frame: 30,
+  mae: 0.24324798583984375,
+  covered: 32776,
+  expectedCovered: 32781
+}
+canvas {
+  scene: 'gust',
+  frame: 60,
+  mae: 0.24538040161132812,
+  covered: 32877,
+  expectedCovered: 32881
+}
+canvas {
+  scene: 'gust',
+  frame: 90,
+  mae: 0.24324798583984375,
+  covered: 32776,
+  expectedCovered: 32781
+}
+canvas {
+  scene: 'gust',
+  frame: 120,
+  mae: 0.24678802490234375,
+  covered: 32737,
+  expectedCovered: 32743
+}
+canvas {
+  scene: 'gust-rest',
+  frame: null,
+  mae: 0.23093795776367188,
+  covered: 32772,
+  expectedCovered: 32777
+}
+canvas {
+  scene: 'studio-weighted',
+  frame: 0,
+  mae: 0.24553298950195312,
+  covered: 32737,
+  expectedCovered: 32743
+}
+canvas {
+  scene: 'studio-weighted',
+  frame: 30,
+  mae: 0.24199676513671875,
+  covered: 32776,
+  expectedCovered: 32781
+}
+canvas {
+  scene: 'studio-weighted',
+  frame: 60,
+  mae: 0.24057769775390625,
+  covered: 32877,
+  expectedCovered: 32881
+}
+canvas {
+  scene: 'studio-weighted',
+  frame: 90,
+  mae: 0.24199676513671875,
+  covered: 32776,
+  expectedCovered: 32781
+}
+canvas {
+  scene: 'studio-weighted',
+  frame: 120,
+  mae: 0.24553298950195312,
+  covered: 32737,
+  expectedCovered: 32743
+}
+canvas {
+  scene: 'studio-weighted-rest',
+  frame: null,
+  mae: 0.23093795776367188,
+  covered: 32772,
+  expectedCovered: 32777
+}
+webgl2 {
+  scene: 'gust',
+  frame: 0,
+  mae: 0.9359054565429688,
+  covered: 32549,
+  expectedCovered: 32743
+}
+webgl2 {
+  scene: 'gust',
+  frame: 30,
+  mae: 0.917938232421875,
+  covered: 32591,
+  expectedCovered: 32781
+}
+webgl2 {
+  scene: 'gust',
+  frame: 60,
+  mae: 0.92218017578125,
+  covered: 32689,
+  expectedCovered: 32881
+}
+webgl2 {
+  scene: 'gust',
+  frame: 90,
+  mae: 0.917938232421875,
+  covered: 32591,
+  expectedCovered: 32781
+}
+webgl2 {
+  scene: 'gust',
+  frame: 120,
+  mae: 0.9359054565429688,
+  covered: 32549,
+  expectedCovered: 32743
+}
+webgl2 {
+  scene: 'gust-rest',
+  frame: null,
+  mae: 0.9176521301269531,
+  covered: 32589,
+  expectedCovered: 32777
+}
+webgl2 {
+  scene: 'studio-weighted',
+  frame: 0,
+  mae: 0.9449806213378906,
+  covered: 32549,
+  expectedCovered: 32743
+}
+webgl2 {
+  scene: 'studio-weighted',
+  frame: 30,
+  mae: 0.9104080200195312,
+  covered: 32591,
+  expectedCovered: 32781
+}
+webgl2 {
+  scene: 'studio-weighted',
+  frame: 60,
+  mae: 0.9108924865722656,
+  covered: 32689,
+  expectedCovered: 32881
+}
+webgl2 {
+  scene: 'studio-weighted',
+  frame: 90,
+  mae: 0.9104080200195312,
+  covered: 32591,
+  expectedCovered: 32781
+}
+webgl2 {
+  scene: 'studio-weighted',
+  frame: 120,
+  mae: 0.9449806213378906,
+  covered: 32549,
+  expectedCovered: 32743
+}
+webgl2 {
+  scene: 'studio-weighted-rest',
+  frame: null,
+  mae: 0.9176521301269531,
+  covered: 32589,
+  expectedCovered: 32777
+}
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+
+> evir-workspace@0.1.0 validate:joining
+> node tools/validate-joining.cjs
+
+canvas: 24 path-joining native comparisons passed.
+webgl2: 24 path-joining native comparisons passed.
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice

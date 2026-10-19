@@ -6,6 +6,7 @@ import { showMcpGuide } from "./guidance.mjs";
 import { mountGuides } from "./guide-controls.mjs";
 import { ContinuationDraft } from "./path-continuation.mjs";
 import { continuationControls, numericContinuation } from "./continuation-controls.mjs";
+import { pathJoinControls } from './path-join-controls.mjs';
 import { canSnapGuides, snapWithGuides } from "./guides.mjs";
 let liveTools, riveViewer, canvasGuides, alignmentKey = null;
 import { ProjectRecovery, RecoveryQueue, RecoveryConflict } from "./recovery.mjs";
@@ -826,6 +827,8 @@ function alignmentPanel(p) {
 function properties(p) {
   const host = $("#properties");
   host.replaceChildren();
+  const joinApi={project:()=>store.snapshot(),revision:()=>store.revision,selectionKey:()=>[...selectedIds].join('|'),
+    mode:()=>authoring.mode,ready:penReady,commit:(label,fn)=>edit(label,fn,true),select,notice};
   if (selectedIds.size > 1) {
     $("#kind-label").textContent = "SELECTION";
     const info = section(`${selectedIds.size} layers selected`);
@@ -840,6 +843,9 @@ function properties(p) {
       info.append(action(n.name, () => select(id)));
     }
     host.append(info, alignmentPanel(p));
+    const joining=[...selectedIds].map(id=>p.nodes.find(n=>n.id===id));
+    if(joining.length===2&&joining.every(n=>n?.kind==='path'))
+      host.append(pathJoinControls(p,joining[0],joinApi,joining[1].id));
     const pair = element("div", undefined, "field-pair");
     for (const [label, axis] of [
       ["Move X", 0],
@@ -1024,6 +1030,7 @@ function properties(p) {
     authoring?.editGeometry(p, n, host);
     if (n.kind === "path" && authoring?.mode === "Design")
       host.append(continuationControls(n, {start:beginContinuation, notice, visible:available(p,n,"hidden")}));
+    if (n.kind === 'path' && authoring?.mode === 'Design')host.append(pathJoinControls(p,n,joinApi));
     advanced?.properties(p, n, host);
     weightTools?.controls(p,n,host);
   }

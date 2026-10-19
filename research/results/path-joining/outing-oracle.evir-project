@@ -1,0 +1,3035 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 3,
+  "id": "outing-project",
+  "name": "Outing — a little connection",
+  "artboards": [
+    {
+      "id": "outing-board",
+      "name": "Outing — a little connection",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "outing-paper",
+      "name": "paper",
+      "kind": "path",
+      "artboardId": "outing-board",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        24,
+        24
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#fbf7eb",
+        "skin": null,
+        "points": [
+          {
+            "id": "outing-paper-p0",
+            "anchor": [
+              42,
+              0
+            ],
+            "in": [
+              18.8040405084,
+              0
+            ],
+            "out": [
+              42,
+              0
+            ]
+          },
+          {
+            "id": "outing-paper-p1",
+            "anchor": [
+              422,
+              0
+            ],
+            "in": [
+              422,
+              0
+            ],
+            "out": [
+              445.1959594916,
+              0
+            ]
+          },
+          {
+            "id": "outing-paper-p2",
+            "anchor": [
+              464,
+              42
+            ],
+            "in": [
+              464,
+              18.8040405084
+            ],
+            "out": [
+              464,
+              42
+            ]
+          },
+          {
+            "id": "outing-paper-p3",
+            "anchor": [
+              464,
+              422
+            ],
+            "in": [
+              464,
+              422
+            ],
+            "out": [
+              464,
+              445.1959594916
+            ]
+          },
+          {
+            "id": "outing-paper-p4",
+            "anchor": [
+              422,
+              464
+            ],
+            "in": [
+              445.1959594916,
+              464
+            ],
+            "out": [
+              422,
+              464
+            ]
+          },
+          {
+            "id": "outing-paper-p5",
+            "anchor": [
+              42,
+              464
+            ],
+            "in": [
+              42,
+              464
+            ],
+            "out": [
+              18.8040405084,
+              464
+            ]
+          },
+          {
+            "id": "outing-paper-p6",
+            "anchor": [
+              0,
+              422
+            ],
+            "in": [
+              0,
+              445.1959594916
+            ],
+            "out": [
+              0,
+              422
+            ]
+          },
+          {
+            "id": "outing-paper-p7",
+            "anchor": [
+              0,
+              42
+            ],
+            "in": [
+              0,
+              42
+            ],
+            "out": [
+              0,
+              18.8040405084
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "outing-soft-sky",
+      "name": "soft sky",
+      "kind": "path",
+      "artboardId": "outing-board",
+      "parentId": null,
+      "order": 1,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        276,
+        213
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e4eee1",
+        "skin": null,
+        "points": [
+          {
+            "id": "outing-soft-sky-p0",
+            "anchor": [
+              167,
+              0
+            ],
+            "in": [
+              167,
+              -83.39499721979999
+            ],
+            "out": [
+              167,
+              83.39499721979999
+            ]
+          },
+          {
+            "id": "outing-soft-sky-p1",
+            "anchor": [
+              0,
+              151
+            ],
+            "in": [
+              92.23155321659999,
+              151
+            ],
+            "out": [
+              -92.23155321659999,
+              151
+            ]
+          },
+          {
+            "id": "outing-soft-sky-p2",
+            "anchor": [
+              -167,
+              0
+            ],
+            "in": [
+              -167,
+              83.39499721979999
+            ],
+            "out": [
+              -167,
+              -83.39499721979999
+            ]
+          },
+          {
+            "id": "outing-soft-sky-p3",
+            "anchor": [
+              0,
+              -151
+            ],
+            "in": [
+              -92.23155321659999,
+              -151
+            ],
+            "out": [
+              92.23155321659999,
+              -151
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "outing-peach-sun",
+      "name": "peach sun",
+      "kind": "path",
+      "artboardId": "outing-board",
+      "parentId": null,
+      "order": 2,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        109,
+        125
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#edc4a0",
+        "skin": null,
+        "points": [
+          {
+            "id": "outing-peach-sun-p0",
+            "anchor": [
+              36,
+              0
+            ],
+            "in": [
+              36,
+              -19.8822509928
+            ],
+            "out": [
+              36,
+              19.8822509928
+            ]
+          },
+          {
+            "id": "outing-peach-sun-p1",
+            "anchor": [
+              0,
+              36
+            ],
+            "in": [
+              19.8822509928,
+              36
+            ],
+            "out": [
+              -19.8822509928,
+              36
+            ]
+          },
+          {
+            "id": "outing-peach-sun-p2",
+            "anchor": [
+              -36,
+              0
+            ],
+            "in": [
+              -36,
+              19.8822509928
+            ],
+            "out": [
+              -36,
+              -19.8822509928
+            ]
+          },
+          {
+            "id": "outing-peach-sun-p3",
+            "anchor": [
+              0,
+              -36
+            ],
+            "in": [
+              -19.8822509928,
+              -36
+            ],
+            "out": [
+              19.8822509928,
+              -36
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "outing-wind-one",
+      "name": "wind one",
+      "kind": "path",
+      "artboardId": "outing-board",
+      "parentId": null,
+      "order": 3,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": false,
+        "fill": null,
+        "skin": null,
+        "points": [
+          {
+            "id": "outing-wind-one-p0",
+            "anchor": [
+              272,
+              98
+            ],
+            "in": [
+              272,
+              98
+            ],
+            "out": [
+              272,
+              98
+            ]
+          },
+          {
+            "id": "outing-wind-one-p1",
+            "anchor": [
+              302,
+              98
+            ],
+            "in": [
+              302,
+              98
+            ],
+            "out": [
+              302,
+              98
+            ]
+          }
+        ],
+        "stroke": {
+          "color": "#b3cbb9",
+          "width": 2.5,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "outing-wind-two",
+      "name": "wind two",
+      "kind": "path",
+      "artboardId": "outing-board",
+      "parentId": null,
+      "order": 4,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": false,
+        "fill": null,
+        "skin": null,
+        "points": [
+          {
+            "id": "outing-wind-two-p0",
+            "anchor": [
+              286,
+              109
+            ],
+            "in": [
+              286,
+              109
+            ],
+            "out": [
+              286,
+              109
+            ]
+          },
+          {
+            "id": "outing-wind-two-p1",
+            "anchor": [
+              329,
+              109
+            ],
+            "in": [
+              329,
+              109
+            ],
+            "out": [
+              329,
+              109
+            ]
+          }
+        ],
+        "stroke": {
+          "color": "#b3cbb9",
+          "width": 2.5,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "outing-ground",
+      "name": "ground",
+      "kind": "path",
+      "artboardId": "outing-board",
+      "parentId": null,
+      "order": 5,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        193,
+        432
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#d4e1cf",
+        "skin": null,
+        "points": [
+          {
+            "id": "outing-ground-p0",
+            "anchor": [
+              111,
+              0
+            ],
+            "in": [
+              111,
+              -7.179701747399999
+            ],
+            "out": [
+              111,
+              7.179701747399999
+            ]
+          },
+          {
+            "id": "outing-ground-p1",
+            "anchor": [
+              0,
+              13
+            ],
+            "in": [
+              61.3036072278,
+              13
+            ],
+            "out": [
+              -61.3036072278,
+              13
+            ]
+          },
+          {
+            "id": "outing-ground-p2",
+            "anchor": [
+              -111,
+              0
+            ],
+            "in": [
+              -111,
+              7.179701747399999
+            ],
+            "out": [
+              -111,
+              -7.179701747399999
+            ]
+          },
+          {
+            "id": "outing-ground-p3",
+            "anchor": [
+              0,
+              -13
+            ],
+            "in": [
+              -61.3036072278,
+              -13
+            ],
+            "out": [
+              61.3036072278,
+              -13
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "outing-afternoon",
+      "name": "afternoon",
+      "kind": "group",
+      "artboardId": "outing-board",
+      "parentId": null,
+      "order": 6,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": null
+    },
+    {
+      "id": "outing-fox",
+      "name": "fox",
+      "kind": "group",
+      "artboardId": "outing-board",
+      "parentId": "outing-afternoon",
+      "order": 7,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        156,
+        333
+      ],
+      "geometry": null
+    },
+    {
+      "id": "outing-curled-tail",
+      "name": "curled tail",
+      "kind": "path",
+      "artboardId": "outing-board",
+      "parentId": "outing-fox",
+      "order": 8,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#c87f59",
+        "skin": null,
+        "points": [
+          {
+            "id": "outing-curled-tail-p0",
+            "anchor": [
+              -24,
+              30
+            ],
+            "in": [
+              -23,
+              53
+            ],
+            "out": [
+              -59,
+              5
+            ]
+          },
+          {
+            "id": "outing-curled-tail-p1",
+            "anchor": [
+              -74,
+              34
+            ],
+            "in": [
+              -94,
+              5
+            ],
+            "out": [
+              -72,
+              72
+            ]
+          },
+          {
+            "id": "outing-curled-tail-p2",
+            "anchor": [
+              -47,
+              87
+            ],
+            "in": [
+              -86,
+              80
+            ],
+            "out": [
+              -13,
+              90
+            ]
+          },
+          {
+            "id": "outing-curled-tail-p3",
+            "anchor": [
+              1,
+              65
+            ],
+            "in": [
+              -6,
+              90
+            ],
+            "out": [
+              3,
+              44
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "outing-tail-tip",
+      "name": "tail tip",
+      "kind": "path",
+      "artboardId": "outing-board",
+      "parentId": "outing-fox",
+      "order": 9,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#fff7e8",
+        "skin": null,
+        "points": [
+          {
+            "id": "outing-tail-tip-p0",
+            "anchor": [
+              -74,
+              34
+            ],
+            "in": [
+              -94,
+              5
+            ],
+            "out": [
+              -72,
+              59
+            ]
+          },
+          {
+            "id": "outing-tail-tip-p1",
+            "anchor": [
+              -48,
+              63
+            ],
+            "in": [
+              -65,
+              73
+            ],
+            "out": [
+              -39,
+              58
+            ]
+          },
+          {
+            "id": "outing-tail-tip-p2",
+            "anchor": [
+              -52,
+              34
+            ],
+            "in": [
+              -46,
+              47
+            ],
+            "out": [
+              -67,
+              24
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "outing-left-boot",
+      "name": "left boot",
+      "kind": "path",
+      "artboardId": "outing-board",
+      "parentId": "outing-fox",
+      "order": 10,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -21,
+        87
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#39574b",
+        "skin": null,
+        "points": [
+          {
+            "id": "outing-left-boot-p0",
+            "anchor": [
+              19,
+              0
+            ],
+            "in": [
+              19,
+              -6.0751322478
+            ],
+            "out": [
+              19,
+              6.0751322478
+            ]
+          },
+          {
+            "id": "outing-left-boot-p1",
+            "anchor": [
+              0,
+              11
+            ],
+            "in": [
+              10.4934102462,
+              11
+            ],
+            "out": [
+              -10.4934102462,
+              11
+            ]
+          },
+          {
+            "id": "outing-left-boot-p2",
+            "anchor": [
+              -19,
+              0
+            ],
+            "in": [
+              -19,
+              6.0751322478
+            ],
+            "out": [
+              -19,
+              -6.0751322478
+            ]
+          },
+          {
+            "id": "outing-left-boot-p3",
+            "anchor": [
+              0,
+              -11
+            ],
+            "in": [
+              -10.4934102462,
+              -11
+            ],
+            "out": [
+              10.4934102462,
+              -11
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "outing-right-boot",
+      "name": "right boot",
+      "kind": "path",
+      "artboardId": "outing-board",
+      "parentId": "outing-fox",
+      "order": 11,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        22,
+        87
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#39574b",
+        "skin": null,
+        "points": [
+          {
+            "id": "outing-right-boot-p0",
+            "anchor": [
+              19,
+              0
+            ],
+            "in": [
+              19,
+              -6.0751322478
+            ],
+            "out": [
+              19,
+              6.0751322478
+            ]
+          },
+          {
+            "id": "outing-right-boot-p1",
+            "anchor": [
+              0,
+              11
+            ],
+            "in": [
+              10.4934102462,
+              11
+            ],
+            "out": [
+              -10.4934102462,
+              11
+            ]
+          },
+          {
+            "id": "outing-right-boot-p2",
+            "anchor": [
+              -19,
+              0
+            ],
+            "in": [
+              -19,
+              6.0751322478
+            ],
+            "out": [
+              -19,
+              -6.0751322478
+            ]
+          },
+          {
+            "id": "outing-right-boot-p3",
+            "anchor": [
+              0,
+              -11
+            ],
+            "in": [
+              -10.4934102462,
+              -11
+            ],
+            "out": [
+              10.4934102462,
+              -11
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "outing-body",
+      "name": "body",
+      "kind": "path",
+      "artboardId": "outing-board",
+      "parentId": "outing-fox",
+      "order": 12,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        39
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#d79468",
+        "skin": null,
+        "points": [
+          {
+            "id": "outing-body-p0",
+            "anchor": [
+              41,
+              0
+            ],
+            "in": [
+              41,
+              -26.509667990399997
+            ],
+            "out": [
+              41,
+              26.509667990399997
+            ]
+          },
+          {
+            "id": "outing-body-p1",
+            "anchor": [
+              0,
+              48
+            ],
+            "in": [
+              22.643674741799998,
+              48
+            ],
+            "out": [
+              -22.643674741799998,
+              48
+            ]
+          },
+          {
+            "id": "outing-body-p2",
+            "anchor": [
+              -41,
+              0
+            ],
+            "in": [
+              -41,
+              26.509667990399997
+            ],
+            "out": [
+              -41,
+              -26.509667990399997
+            ]
+          },
+          {
+            "id": "outing-body-p3",
+            "anchor": [
+              0,
+              -48
+            ],
+            "in": [
+              -22.643674741799998,
+              -48
+            ],
+            "out": [
+              22.643674741799998,
+              -48
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "outing-belly",
+      "name": "belly",
+      "kind": "path",
+      "artboardId": "outing-board",
+      "parentId": "outing-fox",
+      "order": 13,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        3,
+        45
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f6dcb7",
+        "skin": null,
+        "points": [
+          {
+            "id": "outing-belly-p0",
+            "anchor": [
+              26,
+              0
+            ],
+            "in": [
+              26,
+              -17.1208272438
+            ],
+            "out": [
+              26,
+              17.1208272438
+            ]
+          },
+          {
+            "id": "outing-belly-p1",
+            "anchor": [
+              0,
+              31
+            ],
+            "in": [
+              14.359403494799999,
+              31
+            ],
+            "out": [
+              -14.359403494799999,
+              31
+            ]
+          },
+          {
+            "id": "outing-belly-p2",
+            "anchor": [
+              -26,
+              0
+            ],
+            "in": [
+              -26,
+              17.1208272438
+            ],
+            "out": [
+              -26,
+              -17.1208272438
+            ]
+          },
+          {
+            "id": "outing-belly-p3",
+            "anchor": [
+              0,
+              -31
+            ],
+            "in": [
+              -14.359403494799999,
+              -31
+            ],
+            "out": [
+              14.359403494799999,
+              -31
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "outing-raised-arm",
+      "name": "raised arm",
+      "kind": "path",
+      "artboardId": "outing-board",
+      "parentId": "outing-fox",
+      "order": 14,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#d79468",
+        "skin": null,
+        "points": [
+          {
+            "id": "outing-raised-arm-p0",
+            "anchor": [
+              29,
+              29
+            ],
+            "in": [
+              15,
+              36
+            ],
+            "out": [
+              52,
+              28
+            ]
+          },
+          {
+            "id": "outing-raised-arm-p1",
+            "anchor": [
+              59,
+              -18
+            ],
+            "in": [
+              48,
+              -1
+            ],
+            "out": [
+              69,
+              -27
+            ]
+          },
+          {
+            "id": "outing-raised-arm-p2",
+            "anchor": [
+              74,
+              -14
+            ],
+            "in": [
+              73,
+              -25
+            ],
+            "out": [
+              70,
+              10
+            ]
+          },
+          {
+            "id": "outing-raised-arm-p3",
+            "anchor": [
+              43,
+              52
+            ],
+            "in": [
+              60,
+              40
+            ],
+            "out": [
+              25,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "outing-paw",
+      "name": "paw",
+      "kind": "path",
+      "artboardId": "outing-board",
+      "parentId": "outing-fox",
+      "order": 15,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        68,
+        -18
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f6dcb7",
+        "skin": null,
+        "points": [
+          {
+            "id": "outing-paw-p0",
+            "anchor": [
+              11,
+              0
+            ],
+            "in": [
+              11,
+              -6.627416997599999
+            ],
+            "out": [
+              11,
+              6.627416997599999
+            ]
+          },
+          {
+            "id": "outing-paw-p1",
+            "anchor": [
+              0,
+              12
+            ],
+            "in": [
+              6.0751322478,
+              12
+            ],
+            "out": [
+              -6.0751322478,
+              12
+            ]
+          },
+          {
+            "id": "outing-paw-p2",
+            "anchor": [
+              -11,
+              0
+            ],
+            "in": [
+              -11,
+              6.627416997599999
+            ],
+            "out": [
+              -11,
+              -6.627416997599999
+            ]
+          },
+          {
+            "id": "outing-paw-p3",
+            "anchor": [
+              0,
+              -12
+            ],
+            "in": [
+              -6.0751322478,
+              -12
+            ],
+            "out": [
+              6.0751322478,
+              -12
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "outing-head",
+      "name": "head",
+      "kind": "path",
+      "artboardId": "outing-board",
+      "parentId": "outing-fox",
+      "order": 16,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#d79468",
+        "skin": null,
+        "points": [
+          {
+            "id": "outing-head-p0",
+            "anchor": [
+              -57,
+              -37
+            ],
+            "in": [
+              -59,
+              -11
+            ],
+            "out": [
+              -59,
+              -63
+            ]
+          },
+          {
+            "id": "outing-head-p1",
+            "anchor": [
+              -49,
+              -92
+            ],
+            "in": [
+              -54,
+              -94
+            ],
+            "out": [
+              -43,
+              -87
+            ]
+          },
+          {
+            "id": "outing-head-p2",
+            "anchor": [
+              -20,
+              -64
+            ],
+            "in": [
+              -36,
+              -73
+            ],
+            "out": [
+              -8,
+              -70
+            ]
+          },
+          {
+            "id": "outing-head-p3",
+            "anchor": [
+              20,
+              -64
+            ],
+            "in": [
+              9,
+              -70
+            ],
+            "out": [
+              35,
+              -74
+            ]
+          },
+          {
+            "id": "outing-head-p4",
+            "anchor": [
+              49,
+              -92
+            ],
+            "in": [
+              43,
+              -87
+            ],
+            "out": [
+              55,
+              -97
+            ]
+          },
+          {
+            "id": "outing-head-p5",
+            "anchor": [
+              57,
+              -37
+            ],
+            "in": [
+              60,
+              -65
+            ],
+            "out": [
+              63,
+              -8
+            ]
+          },
+          {
+            "id": "outing-head-p6",
+            "anchor": [
+              35,
+              15
+            ],
+            "in": [
+              56,
+              8
+            ],
+            "out": [
+              19,
+              32
+            ]
+          },
+          {
+            "id": "outing-head-p7",
+            "anchor": [
+              -35,
+              15
+            ],
+            "in": [
+              -15,
+              31
+            ],
+            "out": [
+              -58,
+              7
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "outing-left-ear",
+      "name": "left ear",
+      "kind": "path",
+      "artboardId": "outing-board",
+      "parentId": "outing-fox",
+      "order": 17,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#ae6950",
+        "skin": null,
+        "points": [
+          {
+            "id": "outing-left-ear-p0",
+            "anchor": [
+              -49,
+              -78
+            ],
+            "in": [
+              -49,
+              -78
+            ],
+            "out": [
+              -49,
+              -78
+            ]
+          },
+          {
+            "id": "outing-left-ear-p1",
+            "anchor": [
+              -46,
+              -47
+            ],
+            "in": [
+              -46,
+              -47
+            ],
+            "out": [
+              -46,
+              -47
+            ]
+          },
+          {
+            "id": "outing-left-ear-p2",
+            "anchor": [
+              -27,
+              -62
+            ],
+            "in": [
+              -27,
+              -62
+            ],
+            "out": [
+              -27,
+              -62
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "outing-right-ear",
+      "name": "right ear",
+      "kind": "path",
+      "artboardId": "outing-board",
+      "parentId": "outing-fox",
+      "order": 18,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#ae6950",
+        "skin": null,
+        "points": [
+          {
+            "id": "outing-right-ear-p0",
+            "anchor": [
+              49,
+              -78
+            ],
+            "in": [
+              49,
+              -78
+            ],
+            "out": [
+              49,
+              -78
+            ]
+          },
+          {
+            "id": "outing-right-ear-p1",
+            "anchor": [
+              27,
+              -62
+            ],
+            "in": [
+              27,
+              -62
+            ],
+            "out": [
+              27,
+              -62
+            ]
+          },
+          {
+            "id": "outing-right-ear-p2",
+            "anchor": [
+              46,
+              -47
+            ],
+            "in": [
+              46,
+              -47
+            ],
+            "out": [
+              46,
+              -47
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "outing-cream-cheeks",
+      "name": "cream cheeks",
+      "kind": "path",
+      "artboardId": "outing-board",
+      "parentId": "outing-fox",
+      "order": 19,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#fff4dc",
+        "skin": null,
+        "points": [
+          {
+            "id": "outing-cream-cheeks-p0",
+            "anchor": [
+              -48,
+              -29
+            ],
+            "in": [
+              -49,
+              -10
+            ],
+            "out": [
+              -32,
+              -30
+            ]
+          },
+          {
+            "id": "outing-cream-cheeks-p1",
+            "anchor": [
+              0,
+              -6
+            ],
+            "in": [
+              -10,
+              -4
+            ],
+            "out": [
+              13,
+              -9
+            ]
+          },
+          {
+            "id": "outing-cream-cheeks-p2",
+            "anchor": [
+              48,
+              -29
+            ],
+            "in": [
+              32,
+              -32
+            ],
+            "out": [
+              49,
+              -9
+            ]
+          },
+          {
+            "id": "outing-cream-cheeks-p3",
+            "anchor": [
+              29,
+              16
+            ],
+            "in": [
+              43,
+              11
+            ],
+            "out": [
+              14,
+              28
+            ]
+          },
+          {
+            "id": "outing-cream-cheeks-p4",
+            "anchor": [
+              -29,
+              16
+            ],
+            "in": [
+              -12,
+              28
+            ],
+            "out": [
+              -44,
+              10
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "outing-left-eye",
+      "name": "left eye",
+      "kind": "path",
+      "artboardId": "outing-board",
+      "parentId": "outing-fox",
+      "order": 20,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -25,
+        -28
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#2c4c3e",
+        "skin": null,
+        "points": [
+          {
+            "id": "outing-left-eye-p0",
+            "anchor": [
+              4.7,
+              0
+            ],
+            "in": [
+              4.7,
+              -3.5898508736999997
+            ],
+            "out": [
+              4.7,
+              3.5898508736999997
+            ]
+          },
+          {
+            "id": "outing-left-eye-p1",
+            "anchor": [
+              0,
+              6.5
+            ],
+            "in": [
+              2.59573832406,
+              6.5
+            ],
+            "out": [
+              -2.59573832406,
+              6.5
+            ]
+          },
+          {
+            "id": "outing-left-eye-p2",
+            "anchor": [
+              -4.7,
+              0
+            ],
+            "in": [
+              -4.7,
+              3.5898508736999997
+            ],
+            "out": [
+              -4.7,
+              -3.5898508736999997
+            ]
+          },
+          {
+            "id": "outing-left-eye-p3",
+            "anchor": [
+              0,
+              -6.5
+            ],
+            "in": [
+              -2.59573832406,
+              -6.5
+            ],
+            "out": [
+              2.59573832406,
+              -6.5
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "outing-right-eye",
+      "name": "right eye",
+      "kind": "path",
+      "artboardId": "outing-board",
+      "parentId": "outing-fox",
+      "order": 21,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        25,
+        -28
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#2c4c3e",
+        "skin": null,
+        "points": [
+          {
+            "id": "outing-right-eye-p0",
+            "anchor": [
+              4.7,
+              0
+            ],
+            "in": [
+              4.7,
+              -3.5898508736999997
+            ],
+            "out": [
+              4.7,
+              3.5898508736999997
+            ]
+          },
+          {
+            "id": "outing-right-eye-p1",
+            "anchor": [
+              0,
+              6.5
+            ],
+            "in": [
+              2.59573832406,
+              6.5
+            ],
+            "out": [
+              -2.59573832406,
+              6.5
+            ]
+          },
+          {
+            "id": "outing-right-eye-p2",
+            "anchor": [
+              -4.7,
+              0
+            ],
+            "in": [
+              -4.7,
+              3.5898508736999997
+            ],
+            "out": [
+              -4.7,
+              -3.5898508736999997
+            ]
+          },
+          {
+            "id": "outing-right-eye-p3",
+            "anchor": [
+              0,
+              -6.5
+            ],
+            "in": [
+              -2.59573832406,
+              -6.5
+            ],
+            "out": [
+              2.59573832406,
+              -6.5
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "outing-left-glint",
+      "name": "left glint",
+      "kind": "path",
+      "artboardId": "outing-board",
+      "parentId": "outing-fox",
+      "order": 22,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -23.7,
+        -30
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#fffaf0",
+        "skin": null,
+        "points": [
+          {
+            "id": "outing-left-glint-p0",
+            "anchor": [
+              1.5,
+              0
+            ],
+            "in": [
+              1.5,
+              -0.9388840746599999
+            ],
+            "out": [
+              1.5,
+              0.9388840746599999
+            ]
+          },
+          {
+            "id": "outing-left-glint-p1",
+            "anchor": [
+              0,
+              1.7
+            ],
+            "in": [
+              0.8284271246999999,
+              1.7
+            ],
+            "out": [
+              -0.8284271246999999,
+              1.7
+            ]
+          },
+          {
+            "id": "outing-left-glint-p2",
+            "anchor": [
+              -1.5,
+              0
+            ],
+            "in": [
+              -1.5,
+              0.9388840746599999
+            ],
+            "out": [
+              -1.5,
+              -0.9388840746599999
+            ]
+          },
+          {
+            "id": "outing-left-glint-p3",
+            "anchor": [
+              0,
+              -1.7
+            ],
+            "in": [
+              -0.8284271246999999,
+              -1.7
+            ],
+            "out": [
+              0.8284271246999999,
+              -1.7
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "outing-right-glint",
+      "name": "right glint",
+      "kind": "path",
+      "artboardId": "outing-board",
+      "parentId": "outing-fox",
+      "order": 23,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        26.3,
+        -30
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#fffaf0",
+        "skin": null,
+        "points": [
+          {
+            "id": "outing-right-glint-p0",
+            "anchor": [
+              1.5,
+              0
+            ],
+            "in": [
+              1.5,
+              -0.9388840746599999
+            ],
+            "out": [
+              1.5,
+              0.9388840746599999
+            ]
+          },
+          {
+            "id": "outing-right-glint-p1",
+            "anchor": [
+              0,
+              1.7
+            ],
+            "in": [
+              0.8284271246999999,
+              1.7
+            ],
+            "out": [
+              -0.8284271246999999,
+              1.7
+            ]
+          },
+          {
+            "id": "outing-right-glint-p2",
+            "anchor": [
+              -1.5,
+              0
+            ],
+            "in": [
+              -1.5,
+              0.9388840746599999
+            ],
+            "out": [
+              -1.5,
+              -0.9388840746599999
+            ]
+          },
+          {
+            "id": "outing-right-glint-p3",
+            "anchor": [
+              0,
+              -1.7
+            ],
+            "in": [
+              -0.8284271246999999,
+              -1.7
+            ],
+            "out": [
+              0.8284271246999999,
+              -1.7
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "outing-nose",
+      "name": "nose",
+      "kind": "path",
+      "artboardId": "outing-board",
+      "parentId": "outing-fox",
+      "order": 24,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#2c4c3e",
+        "skin": null,
+        "points": [
+          {
+            "id": "outing-nose-p0",
+            "anchor": [
+              -7,
+              -5
+            ],
+            "in": [
+              -9,
+              -9
+            ],
+            "out": [
+              -5,
+              1
+            ]
+          },
+          {
+            "id": "outing-nose-p1",
+            "anchor": [
+              0,
+              2
+            ],
+            "in": [
+              -2,
+              3
+            ],
+            "out": [
+              4,
+              2
+            ]
+          },
+          {
+            "id": "outing-nose-p2",
+            "anchor": [
+              7,
+              -5
+            ],
+            "in": [
+              7,
+              1
+            ],
+            "out": [
+              9,
+              -9
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "outing-smile",
+      "name": "smile",
+      "kind": "path",
+      "artboardId": "outing-board",
+      "parentId": "outing-fox",
+      "order": 25,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": false,
+        "fill": null,
+        "skin": null,
+        "points": [
+          {
+            "id": "outing-smile-p0",
+            "anchor": [
+              -13,
+              4
+            ],
+            "in": [
+              -13,
+              4
+            ],
+            "out": [
+              -8,
+              14
+            ]
+          },
+          {
+            "id": "outing-smile-p1",
+            "anchor": [
+              13,
+              4
+            ],
+            "in": [
+              7,
+              14
+            ],
+            "out": [
+              13,
+              4
+            ]
+          }
+        ],
+        "stroke": {
+          "color": "#7e5846",
+          "width": 2,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "outing-scarf-end",
+      "name": "scarf end",
+      "kind": "path",
+      "artboardId": "outing-board",
+      "parentId": "outing-fox",
+      "order": 26,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#6caf91",
+        "skin": null,
+        "points": [
+          {
+            "id": "outing-scarf-end-p0",
+            "anchor": [
+              -23,
+              22
+            ],
+            "in": [
+              -23,
+              22
+            ],
+            "out": [
+              -23,
+              22
+            ]
+          },
+          {
+            "id": "outing-scarf-end-p1",
+            "anchor": [
+              -51,
+              44
+            ],
+            "in": [
+              -51,
+              44
+            ],
+            "out": [
+              -51,
+              44
+            ]
+          },
+          {
+            "id": "outing-scarf-end-p2",
+            "anchor": [
+              -32,
+              48
+            ],
+            "in": [
+              -32,
+              48
+            ],
+            "out": [
+              -32,
+              48
+            ]
+          },
+          {
+            "id": "outing-scarf-end-p3",
+            "anchor": [
+              -8,
+              27
+            ],
+            "in": [
+              -8,
+              27
+            ],
+            "out": [
+              -8,
+              27
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "outing-scarf",
+      "name": "scarf",
+      "kind": "path",
+      "artboardId": "outing-board",
+      "parentId": "outing-fox",
+      "order": 27,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#8bc9aa",
+        "skin": null,
+        "points": [
+          {
+            "id": "outing-scarf-p0",
+            "anchor": [
+              -36,
+              17
+            ],
+            "in": [
+              -35,
+              13
+            ],
+            "out": [
+              -11,
+              26
+            ]
+          },
+          {
+            "id": "outing-scarf-p1",
+            "anchor": [
+              36,
+              17
+            ],
+            "in": [
+              13,
+              26
+            ],
+            "out": [
+              36,
+              26
+            ]
+          },
+          {
+            "id": "outing-scarf-p2",
+            "anchor": [
+              27,
+              32
+            ],
+            "in": [
+              38,
+              31
+            ],
+            "out": [
+              5,
+              38
+            ]
+          },
+          {
+            "id": "outing-scarf-p3",
+            "anchor": [
+              -29,
+              32
+            ],
+            "in": [
+              -9,
+              37
+            ],
+            "out": [
+              -39,
+              26
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "outing-tether",
+      "name": "tether",
+      "kind": "group",
+      "artboardId": "outing-board",
+      "parentId": "outing-afternoon",
+      "order": 28,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": null
+    },
+    {
+      "id": "outing-kite-string",
+      "name": "kite string",
+      "kind": "path",
+      "artboardId": "outing-board",
+      "parentId": "outing-tether",
+      "order": 29,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": false,
+        "fill": null,
+        "skin": null,
+        "points": [
+          {
+            "id": "outing-kite-string-p0",
+            "anchor": [
+              224,
+              315
+            ],
+            "in": [
+              224,
+              315
+            ],
+            "out": [
+              254,
+              326
+            ]
+          },
+          {
+            "id": "outing-kite-string-p1",
+            "anchor": [
+              286,
+              270
+            ],
+            "in": [
+              254,
+              292
+            ],
+            "out": [
+              286,
+              270
+            ]
+          },
+          {
+            "id": "outing-upper-string-p0",
+            "anchor": [
+              304,
+              254
+            ],
+            "in": [
+              304,
+              254
+            ],
+            "out": [
+              322,
+              215
+            ]
+          },
+          {
+            "id": "outing-upper-string-p1",
+            "anchor": [
+              360,
+              219
+            ],
+            "in": [
+              344,
+              226
+            ],
+            "out": [
+              360,
+              219
+            ]
+          }
+        ],
+        "stroke": {
+          "color": "#527f6b",
+          "width": 2.8,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "outing-kite",
+      "name": "kite",
+      "kind": "group",
+      "artboardId": "outing-board",
+      "parentId": "outing-afternoon",
+      "order": 31,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        360,
+        154
+      ],
+      "geometry": null
+    },
+    {
+      "id": "outing-left-sail",
+      "name": "left sail",
+      "kind": "path",
+      "artboardId": "outing-board",
+      "parentId": "outing-kite",
+      "order": 32,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#8fc6a6",
+        "skin": null,
+        "points": [
+          {
+            "id": "outing-left-sail-p0",
+            "anchor": [
+              0,
+              -56
+            ],
+            "in": [
+              0,
+              -56
+            ],
+            "out": [
+              0,
+              -56
+            ]
+          },
+          {
+            "id": "outing-left-sail-p1",
+            "anchor": [
+              -40,
+              0
+            ],
+            "in": [
+              -40,
+              0
+            ],
+            "out": [
+              -40,
+              0
+            ]
+          },
+          {
+            "id": "outing-left-sail-p2",
+            "anchor": [
+              0,
+              65
+            ],
+            "in": [
+              0,
+              65
+            ],
+            "out": [
+              0,
+              65
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "outing-right-sail",
+      "name": "right sail",
+      "kind": "path",
+      "artboardId": "outing-board",
+      "parentId": "outing-kite",
+      "order": 33,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e4b58d",
+        "skin": null,
+        "points": [
+          {
+            "id": "outing-right-sail-p0",
+            "anchor": [
+              0,
+              -56
+            ],
+            "in": [
+              0,
+              -56
+            ],
+            "out": [
+              0,
+              -56
+            ]
+          },
+          {
+            "id": "outing-right-sail-p1",
+            "anchor": [
+              0,
+              65
+            ],
+            "in": [
+              0,
+              65
+            ],
+            "out": [
+              0,
+              65
+            ]
+          },
+          {
+            "id": "outing-right-sail-p2",
+            "anchor": [
+              40,
+              0
+            ],
+            "in": [
+              40,
+              0
+            ],
+            "out": [
+              40,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "outing-kite-ribs",
+      "name": "kite ribs",
+      "kind": "path",
+      "artboardId": "outing-board",
+      "parentId": "outing-kite",
+      "order": 34,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": false,
+        "fill": null,
+        "skin": null,
+        "points": [
+          {
+            "id": "outing-kite-ribs-p0",
+            "anchor": [
+              0,
+              -56
+            ],
+            "in": [
+              0,
+              -56
+            ],
+            "out": [
+              0,
+              -56
+            ]
+          },
+          {
+            "id": "outing-kite-ribs-p1",
+            "anchor": [
+              0,
+              65
+            ],
+            "in": [
+              0,
+              65
+            ],
+            "out": [
+              0,
+              65
+            ]
+          }
+        ],
+        "stroke": {
+          "color": "#527f6b",
+          "width": 2,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "outing-cross-spar",
+      "name": "cross spar",
+      "kind": "path",
+      "artboardId": "outing-board",
+      "parentId": "outing-kite",
+      "order": 35,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": false,
+        "fill": null,
+        "skin": null,
+        "points": [
+          {
+            "id": "outing-cross-spar-p0",
+            "anchor": [
+              -40,
+              0
+            ],
+            "in": [
+              -40,
+              0
+            ],
+            "out": [
+              -40,
+              0
+            ]
+          },
+          {
+            "id": "outing-cross-spar-p1",
+            "anchor": [
+              40,
+              0
+            ],
+            "in": [
+              40,
+              0
+            ],
+            "out": [
+              40,
+              0
+            ]
+          }
+        ],
+        "stroke": {
+          "color": "#527f6b",
+          "width": 2,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "outing-kite-bow",
+      "name": "kite bow",
+      "kind": "path",
+      "artboardId": "outing-board",
+      "parentId": "outing-kite",
+      "order": 36,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#d79371",
+        "skin": null,
+        "points": [
+          {
+            "id": "outing-kite-bow-p0",
+            "anchor": [
+              -7,
+              65
+            ],
+            "in": [
+              -7,
+              65
+            ],
+            "out": [
+              -7,
+              65
+            ]
+          },
+          {
+            "id": "outing-kite-bow-p1",
+            "anchor": [
+              -22,
+              74
+            ],
+            "in": [
+              -22,
+              74
+            ],
+            "out": [
+              -22,
+              74
+            ]
+          },
+          {
+            "id": "outing-kite-bow-p2",
+            "anchor": [
+              -22,
+              58
+            ],
+            "in": [
+              -22,
+              58
+            ],
+            "out": [
+              -22,
+              58
+            ]
+          },
+          {
+            "id": "outing-kite-bow-p3",
+            "anchor": [
+              -7,
+              65
+            ],
+            "in": [
+              -7,
+              65
+            ],
+            "out": [
+              -7,
+              65
+            ]
+          },
+          {
+            "id": "outing-kite-bow-p4",
+            "anchor": [
+              9,
+              65
+            ],
+            "in": [
+              9,
+              65
+            ],
+            "out": [
+              9,
+              65
+            ]
+          },
+          {
+            "id": "outing-kite-bow-p5",
+            "anchor": [
+              24,
+              74
+            ],
+            "in": [
+              24,
+              74
+            ],
+            "out": [
+              24,
+              74
+            ]
+          },
+          {
+            "id": "outing-kite-bow-p6",
+            "anchor": [
+              24,
+              58
+            ],
+            "in": [
+              24,
+              58
+            ],
+            "out": [
+              24,
+              58
+            ]
+          },
+          {
+            "id": "outing-kite-bow-p7",
+            "anchor": [
+              9,
+              65
+            ],
+            "in": [
+              9,
+              65
+            ],
+            "out": [
+              9,
+              65
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [
+    {
+      "id": "outing-drift",
+      "name": "Drift",
+      "artboardId": "outing-board",
+      "fps": 60,
+      "duration": 120,
+      "loop": true,
+      "tracks": [
+        {
+          "targetId": "outing-afternoon",
+          "property": "x",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 3,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "outing-afternoon",
+          "property": "y",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": -2,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "outing-left-eye",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 52,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 58,
+              "value": 0.12,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 64,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "outing-right-eye",
+          "property": "scaleY",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 52,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 58,
+              "value": 0.12,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 64,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 1,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "outing-board": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  },
+  "advanced": {
+    "clips": [],
+    "feathers": [],
+    "ik": []
+  }
+}

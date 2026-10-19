@@ -1,0 +1,76 @@
+{
+  "retrievedAt": "2026-10-18T15:30:48.568045+00:00",
+  "sources": [
+    {
+      "id": "rive-vertices",
+      "url": "https://rive.app/docs/editor/fundamentals/edit-vertices.md",
+      "finalUrl": "https://rive.app/docs/editor/fundamentals/edit-vertices.md",
+      "status": 200,
+      "bytes": 5893,
+      "sha256": "b75331659dba87c31758ecab8876c48aeef0abb5f658434c668976afbf6d3c69"
+    },
+    {
+      "id": "rive-pen",
+      "url": "https://rive.app/docs/editor/fundamentals/pen-tool-overview.md",
+      "finalUrl": "https://rive.app/docs/editor/fundamentals/pen-tool-overview.md",
+      "status": 200,
+      "bytes": 2183,
+      "sha256": "734e5dcea2af7c464b34717cdbb04183ca2b1aa7291db379f57e36521de54170"
+    },
+    {
+      "id": "inkscape-join",
+      "url": "https://inkscape-manuals.readthedocs.io/en/latest/node-operations.html",
+      "finalUrl": "https://inkscape-manuals.readthedocs.io/en/latest/node-operations.html",
+      "status": 200,
+      "bytes": 20674,
+      "sha256": "12f63605318090311af182ce2e67642978ff78596ceb439496610754a44366ce"
+    },
+    {
+      "id": "wcag-drag",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html",
+      "finalUrl": "https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html",
+      "status": 200,
+      "bytes": 48929,
+      "sha256": "c3905630a35b6e8246aba32c1769f3ff82b217d464d41e4b1b2a34b9df5771c6"
+    },
+    {
+      "id": "wcag-color",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html",
+      "finalUrl": "https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html",
+      "status": 200,
+      "bytes": 43779,
+      "sha256": "a9bab2b8f419ee379b1ab37985d70b03bd6568952251d2f8a55036198990c9e8",
+      "retrievedAt": "2026-10-18T16:16:19.955333+00:00"
+    }
+  ],
+  "observations": [
+    {
+      "source": "rive-vertices",
+      "observed": "Open Path disconnects last from first; reverse changes path direction; detached handles retain independent direction/length."
+    },
+    {
+      "source": "rive-pen",
+      "observed": "Dragging creates B\u00e9zier handles; this does not establish cross-path joining behavior."
+    },
+    {
+      "source": "inkscape-join",
+      "observed": "The manual distinguishes merging nodes from joining end nodes with a new segment."
+    },
+    {
+      "source": "wcag-drag",
+      "observed": "A single-pointer alternative is required for non-essential dragging."
+    },
+    {
+      "source": "wcag-color",
+      "observed": "Use shape or text in addition to color to convey meaning."
+    }
+  ],
+  "productChoices": [
+    "Explicit kept/other endpoint selectors; no proximity guessing.",
+    "Bridge keeps both endpoints and straightens only unused connector handles.",
+    "Merge retains the kept endpoint and translates the donor endpoint outgoing handle before removing its point ID.",
+    "Compatible adjacent open paths under the same parent; unsafe references and paints reject without mutation.",
+    "Bottom-sheet outline review with ordinary selects/buttons, one transaction, source-independent previews.",
+    "Kept endpoint circle / other endpoint square plus visible text and SVG accessible name."
+  ]
+}
