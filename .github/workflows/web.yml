@@ -46,7 +46,6 @@ jobs:
             research/results/path-joining/
             research/results/skin-weights/
             research/results/shape-library/
-
             research/results/import-geometry/
             research/results/direct-blends/
       - uses: actions/upload-artifact@v4

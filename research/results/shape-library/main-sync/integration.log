@@ -1,0 +1,15 @@
+Direct blends: four responsive workflows, ordered rows, numeric weights, history, inputs, native export, recovery and accessibility passed.
+Shapes and first animation: four complete responsive creation/animation/export workflows passed.
+Editable contour import: native scene, point editing, motion, export, recovery and unsupported-geometry feedback passed at two widths.
+Learn: four widths, keyboard, actual teaching assets, source download, subpath routing and accessibility passed.
+Gallery: 30 editable studies, lazy loading, Signal interaction/reset and responsive accessibility passed.
+
+> evir-workspace@0.1.0 test:experience
+> node tests/site/quality.cjs
+
+Experience quality checks passed: retries, idle callbacks, feedback, SEO and recovery
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
