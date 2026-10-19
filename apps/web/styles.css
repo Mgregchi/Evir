@@ -40,3 +40,7 @@
 .character-controls button{align-self:flex-end}
 @media(max-width:600px){.character-cards{grid-template-columns:1fr;gap:24px}.character-cards img{max-height:390px;object-fit:contain;background:#f6f4ed}}
 @media(prefers-reduced-motion:reduce){.character-cards a{transition:none}.character-cards a:hover{translate:none}}
+/* Independent feeling controls keep full-width touch targets on small cards. */
+.direct-controls>label{display:block;width:100%}
+.direct-controls input[type=range]{display:block;width:100%;min-height:44px;accent-color:#315e45}
+.direct-controls output{float:right;font-variant-numeric:tabular-nums}
