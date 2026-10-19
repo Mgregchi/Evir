@@ -2,6 +2,8 @@
 
 Research and implementation: 11 October 2026. This is the current feature contract, alongside the consolidated [remaining-work table](25-studio-navigation-and-remaining-work.md). Backend services and AI/MCP integration are excluded from this increment. The single hosted `apps/web` still imports Studio at `/editor/studio/`; engine packages remain independent.
 
+The [17 October contour expansion](42-editable-riv-contours.md) adds mixed straight/mirrored/asymmetric/detached vertices, static ellipses, rectangle origins and unskinned contour transforms. Geometric constraints become editable detached controls; animated contour geometry and general Editor-file conversion remain open.
+
 ## Research and shipped Rive game features
 
 [Retrieval provenance](../research/advanced-authoring/sources.json) records public URLs, HTTP outcomes, byte counts and SHA-256 hashes. The wrong `/use-cases/games` URL returned 404 and supplied no evidence. The correct [game UI page](https://rive.app/game-ui), [Unity integration](https://rive.app/docs/game-runtimes/unity/unity), [Unreal integration](https://rive.app/docs/game-runtimes/unreal/unreal), [scripting announcement](https://rive.app/blog/scripting-is-live-in-rive) and [Luau rationale](https://rive.app/blog/why-scripting-runs-on-luau) were read before implementation.
