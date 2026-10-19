@@ -51,6 +51,10 @@
 .learn-topics details{padding:15px 0;border-bottom:1px solid var(--line)}.learn-topics summary{cursor:pointer;min-height:44px;padding-block:10px;font-size:18px;font-weight:600}.learn-topics p{max-width:78ch;margin:12px 0 15px}.learn-help{padding-left:22px;max-width:850px}.learn-help li{margin-top:16px;color:var(--muted);line-height:1.85}.learn-help strong{color:var(--text)}
 @media(max-width:600px){.lesson-steps h3{font-size:23px}.learn-table th,.learn-table td{padding:14px 8px;font-size:12px}.learn-table th:first-child{width:30%}.learn-index{gap:7px}.learn-index a{font-size:12px}.lesson-check{padding:12px}.learn-topics summary{font-size:16px}}
 
+/* Independent feeling controls keep full-width touch targets on small cards. */
+.direct-controls>label{display:block;width:100%}
+.direct-controls input[type=range]{display:block;width:100%;min-height:44px;accent-color:#315e45}
+.direct-controls output{float:right;font-variant-numeric:tabular-nums}
 .example-browser{margin-bottom:35px}
 .example-browser>summary{min-height:48px;padding:13px 16px;border:1px solid var(--line);border-radius:10px;cursor:pointer;font-size:14px;font-weight:600;list-style-position:inside}
 .example-browser>summary::marker{color:var(--accent)}

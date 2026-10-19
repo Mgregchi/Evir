@@ -1,0 +1,128 @@
+{
+  "checkedAt": "2026-10-19T10:01:17.179179+00:00",
+  "base": "4e28586a0eb8d8c50563d9833f464cca5eca0413",
+  "sourceCommits": {
+    "application": "6b3792859130065069b659d273d4eac29ea80098",
+    "galleryReadiness": "2b9380e7448b65daa164d7795098dd8b1d9897d1",
+    "compactGallery": "c0127fc335739aa3e5a19e88a9de66d7e5876149",
+    "validationGuard": "39a773469f16ccb129fee09d88671cb2e1db2dcb"
+  },
+  "scope": "Cloud Chromium/software rendering and automated accessibility; no physical-device, human or hosted-backend evidence.",
+  "node": "v24.19.0",
+  "checks": [
+    {
+      "name": "runtime",
+      "command": "npm run test:runtime",
+      "startedAt": "2026-10-19T08:20:12Z",
+      "exitCode": 0,
+      "seconds": 3.82,
+      "finishedAt": "2026-10-19T08:20:15Z"
+    },
+    {
+      "name": "runtime-build",
+      "command": "npm run runtime:build",
+      "startedAt": "2026-10-19T08:20:15Z",
+      "exitCode": 0,
+      "seconds": 3.48,
+      "finishedAt": "2026-10-19T08:20:19Z"
+    },
+    {
+      "name": "frontend",
+      "command": "npm run test:frontend",
+      "startedAt": "2026-10-19T08:20:19Z",
+      "exitCode": 0,
+      "seconds": 5.3,
+      "finishedAt": "2026-10-19T08:20:24Z"
+    },
+    {
+      "name": "editor",
+      "command": "npm run test:editor",
+      "startedAt": "2026-10-19T08:28:38Z",
+      "exitCode": 0,
+      "seconds": 1124.38,
+      "finishedAt": "2026-10-19T08:47:22Z"
+    },
+    {
+      "name": "web",
+      "command": "npm run test:web",
+      "startedAt": "2026-10-19T09:09:07Z",
+      "exitCode": 0,
+      "seconds": 701.91,
+      "finishedAt": "2026-10-19T09:20:49Z"
+    },
+    {
+      "name": "experience",
+      "command": "npm run test:experience",
+      "startedAt": "2026-10-19T09:20:49Z",
+      "exitCode": 0,
+      "seconds": 12.39,
+      "finishedAt": "2026-10-19T09:21:01Z"
+    },
+    {
+      "name": "native",
+      "command": "npm run validate:editor",
+      "startedAt": "2026-10-19T09:21:01Z",
+      "exitCode": 0,
+      "seconds": 2241.28,
+      "finishedAt": "2026-10-19T09:58:23Z"
+    }
+  ],
+  "guardFollowup": [
+    {
+      "name": "runtime-guard",
+      "command": "npm run test:runtime",
+      "commit": "39a773469f16ccb129fee09d88671cb2e1db2dcb",
+      "startedAt": "2026-10-19T08:33:26Z",
+      "exitCode": 0,
+      "seconds": 3.9,
+      "finishedAt": "2026-10-19T08:33:30Z"
+    },
+    {
+      "name": "runtime-build-guard",
+      "command": "npm run runtime:build",
+      "commit": "39a773469f16ccb129fee09d88671cb2e1db2dcb",
+      "startedAt": "2026-10-19T08:33:30Z",
+      "exitCode": 0,
+      "seconds": 3.84,
+      "finishedAt": "2026-10-19T08:33:33Z"
+    }
+  ],
+  "postGuardStudio": [
+    {
+      "name": "post-guard-studio",
+      "command": "npm run web:build && node tests/editor/advanced-browser.cjs && node tests/editor/direct-blends-browser.cjs && npm run validate:direct && node /tmp/evir-direct-gallery-capture.mjs",
+      "commit": "c0127fc335739aa3e5a19e88a9de66d7e5876149",
+      "startedAt": "2026-10-19T09:58:23Z",
+      "exitCode": 0,
+      "seconds": 164.2,
+      "finishedAt": "2026-10-19T10:01:08Z"
+    }
+  ],
+  "earlierAttempts": [
+    {
+      "command": "npm run test:web",
+      "exitCode": 1,
+      "reason": "The first two preview cards began at y=849.125 below an 844-pixel viewport as the 29-study index grew. Correct deferred loading made a fixed two-visible-cards assertion time out. The check now derives actual visibility and scrolls explicitly; a researched native keyboard disclosure also keeps the index compact.",
+      "log": "logs/web-attempt-1.log"
+    },
+    {
+      "command": "npm run test:editor",
+      "exitCode": 1,
+      "reason": "Existing path-continuation sheet Apply timed out waiting for stable button; a negative-timeout warning preceded it. No product change was made for this failure. The unchanged editor rerun passed; cause not established.",
+      "log": "logs/editor-attempt-1.log"
+    },
+    {
+      "command": "Focused native smoke before sparse export fix",
+      "exitCode": 1,
+      "reason": "Lumen body motion overwritten by default keys padded into later direct rows. Sparse direct key scopes fixed and regression tested.",
+      "log": "logs/native-before-sparse-scope.log"
+    },
+    {
+      "command": "Short-landscape browser check before accessible rail name",
+      "exitCode": 1,
+      "reason": "Machine text was CSS-hidden and the workflow rail button had no accessible name. Dynamic aria-label/title fixed and four viewport workflows passed.",
+      "log": "logs/landscape-before-rail-name.log"
+    }
+  ],
+  "nativeComparisons": 360
+}

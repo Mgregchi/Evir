@@ -40,7 +40,7 @@ export class RuntimePlayer {
       ...(this.#animation ? {animationId:this.#animation.id} : {}),
       ...(this.#machine ? {machineId:this.#machine.machine.id} : {})});
     if (this.#clock) next.#clock = this.#clock.fork();
-    if (this.#machine) for (const key of ['stateId','time','mixing','inputs'])
+    if (this.#machine) for (const key of ['stateId','time','mixing','inputs','directValues'])
       next.#machine[key] = structuredClone(this.#machine[key]);
     return next;
   }

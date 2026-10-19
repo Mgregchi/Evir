@@ -1,6 +1,6 @@
 import { strokeValue, paintValue, isColorProperty } from "@evir/project-model";
 import { solveIK, mixPoses } from "./advanced.mjs";
-import { components } from "./geometry.mjs";
+import { components, getValue } from "./geometry.mjs";
 import { playbackSample } from './playback.mjs';
 const clone = (x) => structuredClone(x);
 export function easingValue(e, t) {
@@ -59,8 +59,7 @@ export function evaluate(
 // Collect property changes before applying transforms; later layers win only
 // for properties they key, leaving other components and transforms untouched.
 export function evaluateLayers(p, layers, {applyConstraints = true} = {}) {
-  const pose = clone(p),
-    animations = new Map(p.animations.map(a => [a.id, a]));
+  const animations = new Map(p.animations.map(a => [a.id, a]));
   const changes = new Map();
   for (const layer of layers) {
     const a = animations.get(layer.animationId);
@@ -75,6 +74,10 @@ export function evaluateLayers(p, layers, {applyConstraints = true} = {}) {
       );
     }
   }
+  return applyChanges(p,changes,applyConstraints);
+}
+function applyChanges(p,changes,applyConstraints=false){
+  const pose=clone(p);
   for (const [id, values] of changes) {
     const n = pose.nodes.find((n) => n.id === id),
       base = components(n.transform),
@@ -115,6 +118,7 @@ export class MachinePlayer {
     this.stateId = this.machine.entryStateId;
     this.time = 0;
     this.mixing = null;
+    this.directValues = new Map();
     this.inputs = Object.fromEntries(
       this.machine.inputs.map((i) => [i.id, i.value]),
     );
@@ -133,6 +137,23 @@ export class MachinePlayer {
   }
   advance(dt) {
     if (!Number.isFinite(dt) || dt < 0) throw Error("Invalid delta time");
+    const direct=this.machine.states.find(s=>s.id===this.stateId);
+    if(direct?.blend?.type==='direct'){
+      this.time+=dt;
+      for(const child of direct.blend.children){
+        const weight=Math.max(0,Math.min(100,child.weight??this.inputs[child.inputId]))/100;
+        if(!weight)continue;
+        const animation=this.project.animations.find(a=>a.id===child.animationId),frame=playbackSample(animation,this.time).frame;
+        for(const track of animation.tracks){
+          if(!this.directValues.has(track.targetId))this.directValues.set(track.targetId,{});
+          const values=this.directValues.get(track.targetId),property=track.property;
+          const from=values[property]??getValue(this.project.nodes.find(n=>n.id===track.targetId),property),to=keyValue(track,frame);
+          values[property]=weight===1?to:isColorProperty(property)?mixDirectColor(from,to,weight):from+(to-from)*weight;
+        }
+      }
+      for(const i of this.machine.inputs)if(i.type==='trigger')this.inputs[i.id]=false;
+      return this.pose();
+    }
     let remaining = dt,
       transitions = 0;
     const enabled = (t) =>
@@ -227,6 +248,7 @@ export class MachinePlayer {
       );
     };
     if (!state.blend) return animationPose(state.animationId);
+    if(state.blend.type==='direct')return applyChanges(this.project,this.directValues);
     const children = state.blend.children,
       value = this.inputs[state.blend.inputId];
     if (value <= children[0].position)
@@ -254,4 +276,9 @@ export class MachinePlayer {
         : current,
     );
   }
+}
+
+function mixDirectColor(from,to,weight){
+  const a=rgba(from),b=rgba(to);
+  return '#'+a.map((v,i)=>Math.max(0,Math.min(255,Math.round(v+(b[i]-v)*weight))).toString(16).padStart(2,'0')).join('');
 }

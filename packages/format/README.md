@@ -11,3 +11,5 @@ Playback modes/counts/speed, independent timeline layers, the Sunday motorcycle 
 Native centered solid strokes now retain their centerlines through source/runtime validation, Canvas rendering, supported animation and `.riv` export/import. Studio provides a stroke bottom sheet and constant-width Freehand mode. See [native stroke contracts, workflow and limits](../../docs/41-native-strokes-and-path-effects.md); gradient/skinned strokes and full Editor-file import remain outside this increment.
 
 Static native contour import now converts mixed straight/mirrored/asymmetric/detached vertices, ellipses, rectangle origins and unskinned contour transforms into editable controls. Supported skin bindings and Shape/bone motion retain their existing contracts. Animated contour geometry, rounding, nondefault path flags and compound contours reject explicitly. See [contour import and Tide](../../docs/42-editable-riv-contours.md).
+
+Ordered direct states now export/import the bounded fixed/input-weight contract. Direct children retain sparse authored keys; they cannot also drive ordinary/1D states. See [mapping, defaults and limits](../../docs/45-direct-blends-and-lumen.md).

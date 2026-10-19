@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-10-19T08:27:21.456Z",
+  "method": "Actual Lumen and Studio native files → editable import → explicit mixed clocks/inputs compared by named local transforms → native re-export → import again. Numeric tolerance 1e-4; no general Editor-file compatibility claim.",
+  "checks": [
+    {
+      "name": "lumen",
+      "nativeSha256": "26acd997e54f922d17e853d2b4633c8ba09c3b3175bf6f1af5585012a2949788",
+      "nodeCount": 48,
+      "animationCount": 3,
+      "directChildren": 3,
+      "maximumLocalTransformError": 0.0000015258789076710855,
+      "reexportBytes": 8351
+    },
+    {
+      "name": "studio-direct",
+      "nativeSha256": "c7596a6e7550e6966d8916ac94d27aea1a8926f3c52e8ce188cd1bba26d87b70",
+      "nodeCount": 48,
+      "animationCount": 3,
+      "directChildren": 3,
+      "maximumLocalTransformError": 0.0000015258789076710855,
+      "reexportBytes": 8357
+    }
+  ]
+}

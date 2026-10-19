@@ -211,6 +211,7 @@ const editableTypes = new Set([
   "AnimationState",
   "BlendState1DInput",
   "BlendAnimation1D",
+  "BlendStateDirect", "BlendAnimationDirect",
   "StateTransition",
   "TransitionBoolCondition",
   "TransitionNumberCondition",
@@ -315,6 +316,8 @@ async function decodeProject(input) {
     AnyState: [],
     ExitState: [],
     AnimationState: ["animationId"],
+    BlendStateDirect: ["flags"],
+    BlendAnimationDirect: ["animationId","inputId","mixValue","blendSource"],
     BlendState1DInput: ["inputId", "flags"],
     BlendAnimation1D: ["animationId", "value"],
     StateTransition: ["stateToId", "duration", "flags", "exitTime"],
@@ -830,6 +833,7 @@ async function decodeProject(input) {
           "ExitState",
           "AnimationState",
           "BlendState1DInput",
+          "BlendStateDirect",
         ].includes(r.type)
       ) {
         state = {
@@ -840,8 +844,12 @@ async function decodeProject(input) {
         };
         states.push(state);
         blend = null;
-        if (r.type === "AnimationState" || r.type === "BlendState1DInput") {
+        if (["AnimationState","BlendState1DInput","BlendStateDirect"].includes(r.type)) {
           machine.states.push(state);
+          if(r.type==='BlendStateDirect'){
+            if(![0,2].includes(f.flags??0))fail(r,'unsupported direct blend flags');
+            state.blend={type:'direct',children:[]};blend=state.blend;
+          }
           if (r.type === "BlendState1DInput") {
             if ((f.flags ?? 0) !== 2) fail(r, "unsupported blend flags");
             state.blend = {
@@ -852,8 +860,14 @@ async function decodeProject(input) {
             blend = state.blend;
           }
         }
+      } else if(r.type==='BlendAnimationDirect'){
+        if(blend?.type!=='direct')fail(r,'missing direct blend owner');
+        if(![0,1].includes(f.blendSource??0))fail(r,'direct data bindings are outside editable import');
+        const animationId=animIds[f.animationId??0];
+        blend.children.push({animationId,...(f.blendSource===1?{weight:f.mixValue??100}:{inputId:machine.inputs[f.inputId]?.id})});
+        if(blend.children.length===1)state.animationId=animationId;
       } else if (r.type === "BlendAnimation1D") {
-        if (!blend) fail(r, "missing blend owner");
+        if (blend?.type!=="1d") fail(r, "missing blend owner");
         blend.children.push({
           animationId: animIds[f.animationId ?? 0],
           position: f.value ?? 0,
