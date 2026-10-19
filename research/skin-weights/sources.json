@@ -1,0 +1,33 @@
+{
+  "retrievedDate": "2026-10-18",
+  "sources": [
+    {
+      "url": "https://rive.app/docs/editor/manipulating-shapes/bones.md",
+      "status": 200,
+      "sha256": "7497d6cd4e69c8a7df6567896f21a65d1febf792cc7fa1d1e40c072e871c2aa3",
+      "bytes": 11372
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html",
+      "status": 200,
+      "sha256": "c3905630a35b6e8246aba32c1769f3ff82b217d464d41e4b1b2a34b9df5771c6",
+      "bytes": 48929
+    },
+    {
+      "url": "https://docs.blender.org/manual/en/latest/sculpt_paint/weight_paint/tool_settings/brush_settings.html",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ],
+  "observed": [
+    "Rive documents per-vertex color charts, independent vector handle weights and stage drag adjustment. Its weights total 100% and its broader tooling includes smoothing, auto weights and locks.",
+    "WCAG dragging guidance calls for a single-pointer alternative; keyboard-only dragging support does not meet that requirement.",
+    "Blender brush documentation request was rejected with HTTP 403; it supplies no implementation evidence."
+  ],
+  "productChoices": [
+    "Expose a bounded target-weight brush plus explicit numeric per-vertex application in a bottom sheet. This is an Evir interaction choice; the cited Rive page documents its own stage-drag tool.",
+    "Use a swept maximum footprint with a fixed screen radius; each stroke applies from a frozen baseline so event count and stationary dwell do not build up influence.",
+    "Support existing path/control and textured-mesh skin contracts, one to four bound bones and largest-remainder 255-byte normalization.",
+    "Keep brush settings/overlay session-only; retain source geometry and asset bytes.",
+    "Auto weights, smoothing, per-bone influence locks and generalized IK remain open."
+  ]
+}
