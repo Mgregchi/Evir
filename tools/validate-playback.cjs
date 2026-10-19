@@ -30,10 +30,12 @@ const {run}=require('./browser.cjs'),gpu=require('./gpu_diagnostics.cjs');
           if(adapter){native.time=policyClock.advance(dt).frame/60;}else native.advance(dt);
           native.apply(1);player.artboard.advance(0);player.lastRenderTime=document.timeline.currentTime;player.drawFrame();player.stopRendering();
           const {CanvasRenderer}=await import('/tools/.test-build/oracle.mjs'),c=document.createElement('canvas');c.width=c.height=256;
-          const renderer=new CanvasRenderer(c.getContext('2d'));renderer.draw(expectedPlayer.advance(dt),expectedPlayer.artboard.id);const pixels=Array.from(c.getContext('2d').getImageData(0,0,256,256).data);renderer.dispose();
+          const renderer=new CanvasRenderer(c.getContext('2d'));renderer.draw(expectedPlayer.advance(dt),expectedPlayer.artboard.id);const bytes=c.getContext('2d').getImageData(0,0,256,256).data;let binary='';for(let i=0;i<bytes.length;i+=8192)binary+=String.fromCharCode(...bytes.subarray(i,i+8192));const pixels=btoa(binary);renderer.dispose();
           return {pixels,frame:expectedPlayer.playback.frame,nativeFrame:native.time*60,completed:expectedPlayer.playback.completed};
         },{dt,adapter});
-        const actual=backend==='canvas'?await page.evaluate(()=>Array.from(document.getElementById('canvas').getContext('2d').getImageData(0,0,256,256).data)):PNG.sync.read(await page.locator('#canvas').screenshot({omitBackground:true})).data;
+        expected.pixels=Buffer.from(expected.pixels,'base64');
+        const actual=backend==='canvas'?Buffer.from(await page.evaluate(()=>{const bytes=document.getElementById('canvas').getContext('2d').getImageData(0,0,256,256).data;let binary='';for(let i=0;i<bytes.length;i+=8192)binary+=String.fromCharCode(...bytes.subarray(i,i+8192));return btoa(binary);}),'base64'):PNG.sync.read(await page.locator('#canvas').screenshot({omitBackground:true})).data;
+        assert.equal(expected.pixels.length,256*256*4);assert.equal(actual.length,expected.pixels.length);
         const mae=actual.reduce((sum,v,i)=>sum+Math.abs(v-expected.pixels[i]),0)/actual.length;
         let expectedCovered=0,actualCovered=0;
         for(let i=3;i<actual.length;i+=4){if(expected.pixels[i])expectedCovered++;if(actual[i])actualCovered++;}
