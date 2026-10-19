@@ -29,6 +29,10 @@ export function shapeGeometry(preset,options={}){
   const curve=(a,b,c,d,x,y)=>{points.at(-1).out=[a,b];const p=point(x,y);p.in=[c,d];points.push(p);};
   const polygon=vertices=>{for(const[x,y]of vertices)line(x*w,y*h);};
   const round=(r,bubble=false)=>{
+    if(r===0){
+      polygon(bubble?[[0,0],[1,0],[1,.76],[.62,.76],[.37,1],[.37,.76],[0,.76]]:[[0,0],[1,0],[1,1],[0,1]]);
+      return;
+    }
     const k=.5522847498307936*r,bottom=bubble?h*.76:h;
     move(r,0);line(w-r,0);curve(w-r+k,0,w,r-k,w,r);line(w,bottom-r);
     curve(w,bottom-r+k,w-r+k,bottom,w-r,bottom);

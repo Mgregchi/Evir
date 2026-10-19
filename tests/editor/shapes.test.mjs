@@ -29,6 +29,9 @@ test('Curved presets use actual cubic handles; circle locks aspect and polygon/s
   const star=shapeGeometry('star',{width:100,height:100,sides:5,inner:25});
   assert(Math.abs(Math.hypot(...star.geometry.points[1].anchor.map(v=>v-50))-12.5)<1e-9);
   for(const id of['rounded','capsule','heart','cloud','bubble'])assert(shapeGeometry(id).geometry.points.some(p=>JSON.stringify(p.anchor)!==JSON.stringify(p.out)));
+  const square=shapeGeometry('rounded',{radius:0}).geometry;
+  assert.equal(square.points.length,4);assert(square.points.every(p=>JSON.stringify(p.anchor)===JSON.stringify(p.in)&&JSON.stringify(p.anchor)===JSON.stringify(p.out)));
+  assert.equal(shapeGeometry('bubble',{radius:0}).geometry.points.length,7);
 });
 test('Line retains an open centerline and editable stroke, upgrading only successful documents',()=>{
   const p=createProject();addShape(p,'line',{width:200,strokeWidth:7,fill:'#d59880'});
