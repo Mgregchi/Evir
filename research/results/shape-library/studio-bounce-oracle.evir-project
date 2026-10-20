@@ -1,0 +1,158 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 2,
+  "id": "project-e31500a6-72a4-4ae4-b7ee-fd46188c7b95",
+  "name": "First bounce",
+  "artboards": [
+    {
+      "id": "artboard-4f2e8222-1294-4869-a57a-a87fa68e66d1",
+      "name": "Artboard 1",
+      "width": 640,
+      "height": 480
+    }
+  ],
+  "nodes": [
+    {
+      "id": "node-40a7dac8-41a1-437a-ba52-aadf924da9bd",
+      "name": "Sun",
+      "kind": "path",
+      "artboardId": "artboard-4f2e8222-1294-4869-a57a-a87fa68e66d1",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        120,
+        220
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#edb75f",
+        "skin": null,
+        "points": [
+          {
+            "id": "point-7dea77e7-fc15-4de1-a909-3cb3ec1ace38",
+            "anchor": [
+              96,
+              48
+            ],
+            "in": [
+              96,
+              21.49033200812191
+            ],
+            "out": [
+              96,
+              74.50966799187809
+            ]
+          },
+          {
+            "id": "point-93372791-85ab-477f-86bf-b029a21515d2",
+            "anchor": [
+              48,
+              96
+            ],
+            "in": [
+              74.50966799187809,
+              96
+            ],
+            "out": [
+              21.49033200812191,
+              96
+            ]
+          },
+          {
+            "id": "point-6126aee4-8c7b-43e0-b972-c339d65fb090",
+            "anchor": [
+              0,
+              48
+            ],
+            "in": [
+              0,
+              74.50966799187809
+            ],
+            "out": [
+              0,
+              21.49033200812191
+            ]
+          },
+          {
+            "id": "point-9344fb52-c71b-417c-9ca6-691b3cd60211",
+            "anchor": [
+              48,
+              0
+            ],
+            "in": [
+              21.49033200812191,
+              0
+            ],
+            "out": [
+              74.50966799187809,
+              0
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [
+    {
+      "id": "animation-62581aca-c5f7-4242-8fd1-06589e15a2c4",
+      "name": "Bounce",
+      "artboardId": "artboard-4f2e8222-1294-4869-a57a-a87fa68e66d1",
+      "fps": 60,
+      "duration": 120,
+      "tracks": [
+        {
+          "targetId": "node-40a7dac8-41a1-437a-ba52-aadf924da9bd",
+          "property": "y",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 220,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 60,
+              "value": 100,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 120,
+              "value": 220,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            }
+          ]
+        }
+      ],
+      "playback": {
+        "mode": "loop",
+        "iterations": 0,
+        "speed": 1
+      }
+    }
+  ],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "artboard-4f2e8222-1294-4869-a57a-a87fa68e66d1": {
+        "zoom": 0.709375,
+        "x": 215,
+        "y": 20
+      }
+    }
+  }
+}

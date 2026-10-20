@@ -1,0 +1,113 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 2,
+  "id": "shape-heart",
+  "name": "heart",
+  "artboards": [
+    {
+      "id": "artboard-0a9d2e8d-276f-45c0-8552-272ff6041a36",
+      "name": "Artboard 1",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "node-5157dfa3-13dd-480d-9a15-287a855154f4",
+      "name": "Heart",
+      "kind": "path",
+      "artboardId": "artboard-0a9d2e8d-276f-45c0-8552-272ff6041a36",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        166,
+        181
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#89e4c4",
+        "skin": null,
+        "points": [
+          {
+            "id": "point-ae1c84fd-2f76-4aee-972f-588bfd0150a1",
+            "anchor": [
+              90,
+              37.5
+            ],
+            "in": [
+              140.4,
+              -15
+            ],
+            "out": [
+              39.6,
+              -15
+            ]
+          },
+          {
+            "id": "point-60af831c-11d2-48a8-aac3-91846d36ad23",
+            "anchor": [
+              14.4,
+              72
+            ],
+            "in": [
+              -21.599999999999998,
+              27
+            ],
+            "out": [
+              32.4,
+              99
+            ]
+          },
+          {
+            "id": "point-64211c88-c977-43b0-823f-cc701856cd19",
+            "anchor": [
+              90,
+              150
+            ],
+            "in": [
+              64.8,
+              126
+            ],
+            "out": [
+              115.2,
+              126
+            ]
+          },
+          {
+            "id": "point-ebb1416c-f4be-4a9e-a87c-44138f6184fe",
+            "anchor": [
+              165.6,
+              72
+            ],
+            "in": [
+              147.6,
+              99
+            ],
+            "out": [
+              201.60000000000002,
+              27
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "artboard-0a9d2e8d-276f-45c0-8552-272ff6041a36": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  }
+}

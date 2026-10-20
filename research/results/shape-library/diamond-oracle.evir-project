@@ -1,0 +1,113 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 2,
+  "id": "shape-diamond",
+  "name": "diamond",
+  "artboards": [
+    {
+      "id": "artboard-7144913c-c934-45ee-be71-b8b012e04e94",
+      "name": "Artboard 1",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "node-7de0c8e9-3d10-4981-9dca-bc1cbc231621",
+      "name": "Diamond",
+      "kind": "path",
+      "artboardId": "artboard-7144913c-c934-45ee-be71-b8b012e04e94",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        166,
+        181
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#89e4c4",
+        "skin": null,
+        "points": [
+          {
+            "id": "point-7e8d344b-1cd2-417d-b3ca-48f21ff249db",
+            "anchor": [
+              90,
+              0
+            ],
+            "in": [
+              90,
+              0
+            ],
+            "out": [
+              90,
+              0
+            ]
+          },
+          {
+            "id": "point-d5162516-180d-490b-a85b-08cded4646cf",
+            "anchor": [
+              180,
+              75
+            ],
+            "in": [
+              180,
+              75
+            ],
+            "out": [
+              180,
+              75
+            ]
+          },
+          {
+            "id": "point-892cf2c0-618b-4d82-8b74-f00745869367",
+            "anchor": [
+              90,
+              150
+            ],
+            "in": [
+              90,
+              150
+            ],
+            "out": [
+              90,
+              150
+            ]
+          },
+          {
+            "id": "point-f8476c8e-9be6-4699-8a6b-772b8a998837",
+            "anchor": [
+              0,
+              75
+            ],
+            "in": [
+              0,
+              75
+            ],
+            "out": [
+              0,
+              75
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "artboard-7144913c-c934-45ee-be71-b8b012e04e94": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  }
+}

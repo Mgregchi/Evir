@@ -1,0 +1,173 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 2,
+  "id": "shape-rounded",
+  "name": "rounded",
+  "artboards": [
+    {
+      "id": "artboard-62c6d3bd-25dc-4d3d-a1bb-c5a05fdfbb35",
+      "name": "Artboard 1",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "node-51115010-d614-4fbc-86d8-3f666d824919",
+      "name": "Rounded rectangle",
+      "kind": "path",
+      "artboardId": "artboard-62c6d3bd-25dc-4d3d-a1bb-c5a05fdfbb35",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        166,
+        181
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#89e4c4",
+        "skin": null,
+        "points": [
+          {
+            "id": "point-d783ff0f-7180-459e-9fd2-40c09520d8a8",
+            "anchor": [
+              20,
+              0
+            ],
+            "in": [
+              8.954305003384128,
+              0
+            ],
+            "out": [
+              20,
+              0
+            ]
+          },
+          {
+            "id": "point-3e5151b7-18c0-40aa-8a9e-2499d572e526",
+            "anchor": [
+              160,
+              0
+            ],
+            "in": [
+              160,
+              0
+            ],
+            "out": [
+              171.04569499661588,
+              0
+            ]
+          },
+          {
+            "id": "point-41f49890-84e8-4a89-9a30-97b540d572f9",
+            "anchor": [
+              180,
+              20
+            ],
+            "in": [
+              180,
+              8.954305003384128
+            ],
+            "out": [
+              180,
+              20
+            ]
+          },
+          {
+            "id": "point-2a70ddc4-bf2b-4b83-8db0-7aed0be18355",
+            "anchor": [
+              180,
+              130
+            ],
+            "in": [
+              180,
+              130
+            ],
+            "out": [
+              180,
+              141.04569499661588
+            ]
+          },
+          {
+            "id": "point-8a710cbc-2cda-431d-8239-ab26aea9a651",
+            "anchor": [
+              160,
+              150
+            ],
+            "in": [
+              171.04569499661588,
+              150
+            ],
+            "out": [
+              160,
+              150
+            ]
+          },
+          {
+            "id": "point-28dcf0cc-7887-48be-aecf-442dc4bb8491",
+            "anchor": [
+              20,
+              150
+            ],
+            "in": [
+              20,
+              150
+            ],
+            "out": [
+              8.954305003384128,
+              150
+            ]
+          },
+          {
+            "id": "point-8f28ac4b-ca3f-4c00-ab0b-50ee7892f009",
+            "anchor": [
+              0,
+              130
+            ],
+            "in": [
+              0,
+              141.04569499661588
+            ],
+            "out": [
+              0,
+              130
+            ]
+          },
+          {
+            "id": "point-339150f9-9bba-4c03-bc64-88862daf8328",
+            "anchor": [
+              0,
+              20
+            ],
+            "in": [
+              0,
+              20
+            ],
+            "out": [
+              0,
+              8.954305003384128
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "artboard-62c6d3bd-25dc-4d3d-a1bb-c5a05fdfbb35": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  }
+}

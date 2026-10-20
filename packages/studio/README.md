@@ -82,4 +82,6 @@ Path joining: select an open path and choose Properties → Join paths…, or se
 
 **Properties → Skin weights…** adds colored weight charts, a bounded target-weight brush and numbered numeric vertex edits for bound paths and meshes. **Bind skin bones…** / **Rebind skin bones…** supports one to four bones and resets bindings to equal shares. Brush settings stay outside saved/runtime scenes; the footer Done weights action exits the tool. See [the workflow, limits and Gust](../../docs/43-graphical-skin-weights.md).
 
+[Shape creation and first animation](../../docs/46-shapes-and-first-animation.md) adds 14 visual presets, numeric size/point/frame controls, one-step creation and a public beginner guide linked from Help.
+
 **Interact → Blending & timing…** now supports ordered direct rows with animation, fixed percentage/input binding, Add/Remove and Move up/down controls. Apply is one history edit; the sheet reports invalid weights and restores focus. See [Lumen and the complete direct workflow](../../docs/45-direct-blends-and-lumen.md).

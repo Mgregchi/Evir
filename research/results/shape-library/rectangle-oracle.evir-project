@@ -1,0 +1,51 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 2,
+  "id": "shape-rectangle",
+  "name": "rectangle",
+  "artboards": [
+    {
+      "id": "artboard-6abb3f1c-2ba3-4bbc-acbd-649dc6dd49d0",
+      "name": "Artboard 1",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "node-c20c4f38-62b7-48d6-96ec-741eb2c407bf",
+      "name": "Rectangle",
+      "kind": "rectangle",
+      "artboardId": "artboard-6abb3f1c-2ba3-4bbc-acbd-649dc6dd49d0",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        166,
+        181
+      ],
+      "geometry": {
+        "width": 180,
+        "height": 150,
+        "fill": "#89e4c4"
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "artboard-6abb3f1c-2ba3-4bbc-acbd-649dc6dd49d0": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  }
+}

@@ -1,0 +1,435 @@
+{
+  "checkedAt": "2026-10-19T17:26:15.127Z",
+  "base": "4e28586a0eb8d8c50563d9833f464cca5eca0413",
+  "commit": "ce48d54a9daccde2bdc7482cd76757e0bacab4a6",
+  "method": "Recreate both new scenes with the exact generator helper and shared shape factory in memory; compare source/native bytes. Compare every pre-existing published asset with base main, without modifying assets used by concurrent browser validation.",
+  "generatorSha256": "50f5ce2733daa1902a934d3dee3a2e2539c10fd9c155ed5d6a0cfc0a1f4e4aa7",
+  "generated": [
+    {
+      "path": "apps/web/assets/examples/garden.evir-project",
+      "sha256": "845ddee3503414a09e2f48edbfd4783feea6614b34ad35055ad778a6a99b13b2",
+      "bytes": 88458
+    },
+    {
+      "path": "apps/web/assets/examples/garden.riv",
+      "sha256": "a39701312e057993a799200bb57603cdda66721dde1b86fc77372e127e26a666",
+      "bytes": 9972
+    },
+    {
+      "path": "apps/web/assets/examples/first-bounce.evir-project",
+      "sha256": "1c73e3cd24f1af259478c2f175cccc25a9aa168a7d5e4433bc67aa6509d7b10f",
+      "bytes": 3095
+    },
+    {
+      "path": "apps/web/assets/examples/first-bounce.riv",
+      "sha256": "deb889c9aab1a6fbb3d50b3e6aa14097480df0266a06514c8ba3ba70d0684d10",
+      "bytes": 280
+    }
+  ],
+  "preserved": [
+    {
+      "path": "apps/web/assets/arrange-poster.png",
+      "sha256": "5c279f9e5347d495cbfe6cd75513f0b1973c427f63a2cb708bc379d029603b07"
+    },
+    {
+      "path": "apps/web/assets/blend-poster.png",
+      "sha256": "729357a456b72eb4fae7b86f45ecafab75d2499b24a3ac127039d6de6f4f7dbe"
+    },
+    {
+      "path": "apps/web/assets/bloom-poster.png",
+      "sha256": "23df01cb8c2cc4a22b5b552cd0d861fdb177e3976e82a4324808ab451c19e321"
+    },
+    {
+      "path": "apps/web/assets/canopy-poster.png",
+      "sha256": "dd2377cefc47249f2e5c698bd324dc39930418c67f65e965cb7f9ff7e3aea2d0"
+    },
+    {
+      "path": "apps/web/assets/caption-poster.png",
+      "sha256": "7b3f68d1e75b38a55c40bcf1f0ef57bfdad612abd58b984bbd73c3f0dcdfcad1"
+    },
+    {
+      "path": "apps/web/assets/compass-poster.png",
+      "sha256": "b906d390b88927382c9a580b64d787ffda3b67dbde87a9beb3142263cecf4a55"
+    },
+    {
+      "path": "apps/web/assets/dawn-poster.png",
+      "sha256": "c6d0dd77e6290bca36bb9042b1af4af5243de102dfaa80da9524a9d7eed70a66"
+    },
+    {
+      "path": "apps/web/assets/evir-showcase.jpg",
+      "sha256": "d0d91f066db9cc869ad7815701245dcfff7dc4ec083709d936f825bff9393cab"
+    },
+    {
+      "path": "apps/web/assets/examples/arrange.evir-project",
+      "sha256": "cf281dc49fa2fa0de6bdf3159549af84b29bc3e6b25625de137174a690b8159d"
+    },
+    {
+      "path": "apps/web/assets/examples/arrange.riv",
+      "sha256": "b7000b8f0e52bba8b01756a2267b1a140f75c777e56f388b9e59336814effd89"
+    },
+    {
+      "path": "apps/web/assets/examples/blend.evir-project",
+      "sha256": "58ec678361d9452f0d8832f5c98a64d319343dc5065c411e72673950217e4127"
+    },
+    {
+      "path": "apps/web/assets/examples/blend.riv",
+      "sha256": "632fe930f4050183917d9ff1a749f9cefb9dbf5d5283509e7222def209c15f80"
+    },
+    {
+      "path": "apps/web/assets/examples/bloom.evir-project",
+      "sha256": "76a2e17b76fa58df5f631f81314887dad331f155c4f1e70d3ab234cc6fb5c85f"
+    },
+    {
+      "path": "apps/web/assets/examples/bloom.riv",
+      "sha256": "606c696bc3fa77d70b1c9354f6db2ea2bd4c54ee0604ecee7cc9dd18206f9ca8"
+    },
+    {
+      "path": "apps/web/assets/examples/canopy.evir-project",
+      "sha256": "3de89bbdb5595bc240b6344a7421e9e8891fab43147bd86aca4370500297ffcb"
+    },
+    {
+      "path": "apps/web/assets/examples/canopy.riv",
+      "sha256": "7a611e1b13cc59d495eeb2c2a6f52155c94d828b242ca68a0e98a1b3496b8e65"
+    },
+    {
+      "path": "apps/web/assets/examples/caption.evir-project",
+      "sha256": "2975c7e051c476215028f3dd31baa855b16e615927aa5cc1c4f61a067f3ea877"
+    },
+    {
+      "path": "apps/web/assets/examples/caption.riv",
+      "sha256": "99227ec819f3f24427134c72aa0627caab0ff395298a175300dd6049957487b8"
+    },
+    {
+      "path": "apps/web/assets/examples/compass.commands.json",
+      "sha256": "52527b4b4fc227181379417c923a8248f05584830eafb3f4d4109e8a9240591c"
+    },
+    {
+      "path": "apps/web/assets/examples/compass.evir-project",
+      "sha256": "4b9c4f4b073e23a216dbaf4881298a92b31eb7ab5db90049d3fb501f88e99802"
+    },
+    {
+      "path": "apps/web/assets/examples/compass.riv",
+      "sha256": "c624ebd9ee40e20fb259c1198c9a235b0b375fa19b0f4964a66e6c92d3b37b62"
+    },
+    {
+      "path": "apps/web/assets/examples/dawn.evir-project",
+      "sha256": "b20f6dbf06672b641c869241b4b3e936a2af652e434bb4daa87962430e104c4b"
+    },
+    {
+      "path": "apps/web/assets/examples/dawn.riv",
+      "sha256": "6fe56c01b1f73ea9647e5e53f88cc1d2fbc09bba5e9e7d56b605220be1da9346"
+    },
+    {
+      "path": "apps/web/assets/examples/gather.evir-project",
+      "sha256": "88de6c0075ab2e536e5aae3aed6b224dea5d7361aa35164b840dbd9fed77d3ff"
+    },
+    {
+      "path": "apps/web/assets/examples/gather.riv",
+      "sha256": "cf6fff5dc14297df38d9002c28c7d21614cdd196b8d7fdff1b03f49beb17c51c"
+    },
+    {
+      "path": "apps/web/assets/examples/gust.evir-project",
+      "sha256": "72c4644772f2f1d09d61f5c4642575a32fdc864f97b9b7f5e4598c277f94c286"
+    },
+    {
+      "path": "apps/web/assets/examples/gust.riv",
+      "sha256": "a2f410d5a2ef109453986c36b683a3b8a743879c76d4dde34511d8a63cb2e910"
+    },
+    {
+      "path": "apps/web/assets/examples/halo.evir-project",
+      "sha256": "fdc70256f68cadf2b2f83adb6ac7e2958256616a89502a9ded063e99633877ec"
+    },
+    {
+      "path": "apps/web/assets/examples/halo.riv",
+      "sha256": "4198d908aaf8fa497544ef5ef8b9fddd48f8f6d7cc0649ea037b823acd4c7a3f"
+    },
+    {
+      "path": "apps/web/assets/examples/kite.evir-project",
+      "sha256": "4f8396343592805aa267d9f9129bdce5d836a4328d97982175c443745e5e1bc2"
+    },
+    {
+      "path": "apps/web/assets/examples/kite.riv",
+      "sha256": "5f18e1a666aff3a6556d57dc21dad7c6644b1684b926ae0700ff7a13a7fb198b"
+    },
+    {
+      "path": "apps/web/assets/examples/loom.evir-project",
+      "sha256": "1b0ff9abe7a613ea0bb64777dcd2129f7386cf3e405c13a3eaeb51dbed26abcd"
+    },
+    {
+      "path": "apps/web/assets/examples/loom.guides.json",
+      "sha256": "0f4ac66a4c2f72ad70134c1df6649b958d861cb2ae09f63b82bb2f0725c3d075"
+    },
+    {
+      "path": "apps/web/assets/examples/loom.riv",
+      "sha256": "d7419a1d0cc10ce7a0d519233beca5f55b734b3060a5cdf73548094c8fbabb13"
+    },
+    {
+      "path": "apps/web/assets/examples/measure.evir-project",
+      "sha256": "f2eec027c9c62e64e97dc8375e77213a13bd0ff3fb4ed6d12b6a1a6c0203cda6"
+    },
+    {
+      "path": "apps/web/assets/examples/measure.guides.json",
+      "sha256": "0cb7690bf4d6222b094c115571ef950338a55aa609d4f003ab5f0e8c7d0c41fe"
+    },
+    {
+      "path": "apps/web/assets/examples/measure.riv",
+      "sha256": "0e43cd4dbe386ede67b80c11f37a41d6c96ad8cee1aa3595d55fd435ce8269c3"
+    },
+    {
+      "path": "apps/web/assets/examples/milo.evir-project",
+      "sha256": "6e50ffaba2057b9ef8138de6a807cc46eb354ff6fd7e07ba3212837e8ad05c79"
+    },
+    {
+      "path": "apps/web/assets/examples/milo.riv",
+      "sha256": "c1db8a16bc72af40f2ade97f08ddbba8d3e8ba17c13f77736191d94d0c471199"
+    },
+    {
+      "path": "apps/web/assets/examples/momo.evir-project",
+      "sha256": "ff02731a5b75310cd1d4ca310e74f53dceb446e692990420744ecadd05f81dd9"
+    },
+    {
+      "path": "apps/web/assets/examples/momo.riv",
+      "sha256": "6b8d2726a7df4c0972acf26a2f1eb43f89caedf51d3a077a25241797a3f7061a"
+    },
+    {
+      "path": "apps/web/assets/examples/motorcycle-controller.mjs",
+      "sha256": "bfbd1412662a727a74fcb64cea5cf291c52dcbd524794890e5f5fd0626567fec"
+    },
+    {
+      "path": "apps/web/assets/examples/motorcycle.evir-project",
+      "sha256": "bbfe5d7d6fb6b1b1b8dd070a5323d9cbbd577f11b627cc08cfd2fab4d0aed51f"
+    },
+    {
+      "path": "apps/web/assets/examples/motorcycle.riv",
+      "sha256": "5fd6f55203fb1e4b51a41b70af9d542332878950a230999d176d58fec5a90499"
+    },
+    {
+      "path": "apps/web/assets/examples/motorcycle.riv-map.json",
+      "sha256": "c99a48416fd1bccc6e10352ddd1c3aa5302b6dc5d261711153bdd2a7c36da7b0"
+    },
+    {
+      "path": "apps/web/assets/examples/nura.evir-project",
+      "sha256": "55608107a2f3c117476fcd5bd5b59815ab670559d09e15314f321cd9518d88e0"
+    },
+    {
+      "path": "apps/web/assets/examples/nura.riv",
+      "sha256": "3ae037026ce8649268501bfbb4cabc259a0d4c0a3df4697219149f16cb75c6ee"
+    },
+    {
+      "path": "apps/web/assets/examples/orbit.evir-project",
+      "sha256": "6127f994b8248d46f470dbc56d9199b732737f07d7406ff602f1037c12407832"
+    },
+    {
+      "path": "apps/web/assets/examples/orbit.riv",
+      "sha256": "22c7afa65992ed8652e109051e3280f3f62b6f0e5b9a0c0b486ddd8654d6822c"
+    },
+    {
+      "path": "apps/web/assets/examples/otto.evir-project",
+      "sha256": "572a8035f2eb385b93332c8c7cb9e17307be9ccf6535decf02f6252b880ce2ad"
+    },
+    {
+      "path": "apps/web/assets/examples/otto.riv",
+      "sha256": "fc05f85ea6ee51ed959a9a5b4c8e35fc6b970c46a3b97ed6b2dba9b25a410872"
+    },
+    {
+      "path": "apps/web/assets/examples/outing-start.evir-project",
+      "sha256": "51a50fdb7a072d143160a92fa4a6daecc3329bd2dc029e08f9d5b02b4c92538c"
+    },
+    {
+      "path": "apps/web/assets/examples/outing-start.riv",
+      "sha256": "57f1ea2d57fccd24d5888be632b5e2f1c633c21ae213649e02fd2e9187d4d488"
+    },
+    {
+      "path": "apps/web/assets/examples/outing.evir-project",
+      "sha256": "b137c63bdee8b575fefb532c69d635a0ea51e416ebbcd583a2ab6399b729581f"
+    },
+    {
+      "path": "apps/web/assets/examples/outing.joining.json",
+      "sha256": "67dcc77245b11fbd4d50e372c99c5b3256029a4826eac872227b07ea07fba2cb"
+    },
+    {
+      "path": "apps/web/assets/examples/outing.riv",
+      "sha256": "6e997001987999caae78ac7856eeccf54f4ddfbf3da2e8704cc93b564f895695"
+    },
+    {
+      "path": "apps/web/assets/examples/reach.evir-project",
+      "sha256": "b16dfdcbe179d25c6a910ea6719fc5b11c77d4396daf2d5cd9a6ecdbe66c7e95"
+    },
+    {
+      "path": "apps/web/assets/examples/reach.riv",
+      "sha256": "18957fa2c6a0184bea966c99fdd073f034ae78388364dd043dbb500775ee6b4f"
+    },
+    {
+      "path": "apps/web/assets/examples/ribbon.evir-project",
+      "sha256": "d4633f28130a7689ae243202dda2d927953b53aaec3e172b916c882bdd064e19"
+    },
+    {
+      "path": "apps/web/assets/examples/ribbon.riv",
+      "sha256": "6791a797e79719fe94678dc07c1d76502b910b04ffbac9a7ec0359f6886a0d4f"
+    },
+    {
+      "path": "apps/web/assets/examples/signal.evir-project",
+      "sha256": "7c8e77f232f33ba1ed15e9ea0546db46f776bb2283cff6ae60877270f1f72dbb"
+    },
+    {
+      "path": "apps/web/assets/examples/signal.riv",
+      "sha256": "8d73bef975e2d346466b54b91893532880e202f9513e9a509133aecdb213f6f1"
+    },
+    {
+      "path": "apps/web/assets/examples/sprig-start.evir-project",
+      "sha256": "dee2fca0b620f9d55bdf3c0ea7092b7701243ce86ff8383febf78eb0f3d75272"
+    },
+    {
+      "path": "apps/web/assets/examples/sprig-start.riv",
+      "sha256": "450c9f7a6a1d4be132fb4da0affab9f182b05ada0ec542d39c6b4b844169f327"
+    },
+    {
+      "path": "apps/web/assets/examples/sprig.continuation.json",
+      "sha256": "cec6e7392b01876e8a195b07b5185ed1b57666e1d1a4f676582d3165aa99eb3e"
+    },
+    {
+      "path": "apps/web/assets/examples/sprig.evir-project",
+      "sha256": "2ecb423e70ebe0dab04b214214891b044baa042dd37d47e7582cbe31cd9d9fd4"
+    },
+    {
+      "path": "apps/web/assets/examples/sprig.riv",
+      "sha256": "f2a19bfbf1a4b7d3b4521e553dca581465e86b62eefba0c3bd8e87bfb8ba092f"
+    },
+    {
+      "path": "apps/web/assets/examples/tempo.evir-project",
+      "sha256": "bc81399b3b5acf9588693944ca38661829c264fc0e25ca75819d3b9a9d01a7f9"
+    },
+    {
+      "path": "apps/web/assets/examples/tempo.riv",
+      "sha256": "75af08e98c313d30dbeb59fbbb622a613931639602090bcb04d200c016224971"
+    },
+    {
+      "path": "apps/web/assets/examples/tide-native.riv",
+      "sha256": "db243b44bf2295cef128840811d09dbcea6e1daa1b9183cfcb87786267c84f80"
+    },
+    {
+      "path": "apps/web/assets/examples/tide.evir-project",
+      "sha256": "d185dcdad0e8d8bf5201f96730ee61a2147692c1fcec8e9ccdac8ad6ce9ee23c"
+    },
+    {
+      "path": "apps/web/assets/examples/tide.riv",
+      "sha256": "6f5d17e745477d5af04746c33169cc6009e5cf147350b742e40fcb3a793ce197"
+    },
+    {
+      "path": "apps/web/assets/examples/trace.evir-project",
+      "sha256": "c85616eb3ba102c5bf165c61dd76c864e6fa2b41fd7c80fc982d551965f69c8d"
+    },
+    {
+      "path": "apps/web/assets/examples/trace.riv",
+      "sha256": "e906bee977c50e0c4e40e37bc21c354c7dfac933e2bfaeac37f598bb3790787a"
+    },
+    {
+      "path": "apps/web/assets/examples/wisp.evir-project",
+      "sha256": "527cca3d336d3ae1a06e15c2e82f75f526c6a8d0a3f2daa98e5b906febf8fac5"
+    },
+    {
+      "path": "apps/web/assets/examples/wisp.riv",
+      "sha256": "0dd3a1f36d2b8f1ef963041048b87cf8ec827983da917f7cfd8016be11fc2f90"
+    },
+    {
+      "path": "apps/web/assets/gather-poster.png",
+      "sha256": "fe25217c22ffb9359eb3383e864a59f30ba62c5fdfebb6c337e78a3cf3d0c168"
+    },
+    {
+      "path": "apps/web/assets/gust-poster.png",
+      "sha256": "2d87f95f81e0ccb955858fa06cb11ff6a9bd12552d2e438907e01fcf39c40165"
+    },
+    {
+      "path": "apps/web/assets/halo-poster.png",
+      "sha256": "be6effd1e61fa2977c9e23aa717626114f7d77562d888719e4c80b3e94930394"
+    },
+    {
+      "path": "apps/web/assets/kite-poster.png",
+      "sha256": "060a54b493150cffdb38e8fd26829bd320b9e40ba8e5259cbbbecd4ca4b7b7c4"
+    },
+    {
+      "path": "apps/web/assets/loom-poster.png",
+      "sha256": "bbf7200a9e40995a07534c518817321e8c0887436a2aad3325e1251b379e4d3f"
+    },
+    {
+      "path": "apps/web/assets/measure-poster.png",
+      "sha256": "2add561a8079fc79d9f6827acc3ef61132999c0bfb2ec86270a061e83bc53297"
+    },
+    {
+      "path": "apps/web/assets/milo-poster.png",
+      "sha256": "f17337a27a1552667a0332df9deba4c050edbf6bd4816a4ad822bb0bd99df8a9"
+    },
+    {
+      "path": "apps/web/assets/momo-poster.png",
+      "sha256": "2842f3f0b7bd5721b8cdb6af0e00eda0a75d0453f75f3928ad927648cc94ae08"
+    },
+    {
+      "path": "apps/web/assets/motorcycle-poster.png",
+      "sha256": "d16bd23fa24815be5a8c67f3c7e344b01fee3482eee31671a5c844ed473de5dd"
+    },
+    {
+      "path": "apps/web/assets/nura-poster.png",
+      "sha256": "676db437f792220eda81b5f093132a3961b12940c5efbf3458d396ac38dfba59"
+    },
+    {
+      "path": "apps/web/assets/orbit-poster.png",
+      "sha256": "dc3238649c05515908a45dab0a94689adf8290c7eecd4c52f61eb68f48a991c1"
+    },
+    {
+      "path": "apps/web/assets/otto-poster.png",
+      "sha256": "be30d1acd4d73c172605f132c88fc149598fe496380b2f5745cb24251077b636"
+    },
+    {
+      "path": "apps/web/assets/outing-poster.png",
+      "sha256": "fd095f2399f57ae52a6e0722d38e1861193b235bbac3dd85c3124353557520fd"
+    },
+    {
+      "path": "apps/web/assets/reach-poster.png",
+      "sha256": "c399eb99db6da47ca9aa84a762cbd0d3decaea9a12dd15139ed148715e4c3248"
+    },
+    {
+      "path": "apps/web/assets/ribbon-poster.png",
+      "sha256": "9138f372b6fca420b20ab709019bd85cb27e187dbfde72950184e6a345ec6d26"
+    },
+    {
+      "path": "apps/web/assets/signal-poster.png",
+      "sha256": "6f2d1f83b848ca7e21f3f501ea09a30c9c15dffa880a0c34c69322e6c51e36b0"
+    },
+    {
+      "path": "apps/web/assets/sprig-poster.png",
+      "sha256": "c2c7db91068c2b879e83630b066fb1c2f56d7df36dd5e7542add6d88df2c4e21"
+    },
+    {
+      "path": "apps/web/assets/studio-animation.png",
+      "sha256": "15d687b4b3d6749a9cc3c493973cb588c8e976a4457d27a9f7a034aadf0b8042"
+    },
+    {
+      "path": "apps/web/assets/studio-interact.png",
+      "sha256": "6f3130aa2949f57da9c0781c61e1579520edc3be4f4dff044fa5bd17a9db29c7"
+    },
+    {
+      "path": "apps/web/assets/studio-overview.png",
+      "sha256": "927ad72f2f25203f1b3fcc29a84d2f3603a2a1090cf98ca5aad3d90e479f12d4"
+    },
+    {
+      "path": "apps/web/assets/studio-paths.png",
+      "sha256": "f05dcefd0e1a8491dca1bd20dcba2359616977f38781f628725e681647e292ae"
+    },
+    {
+      "path": "apps/web/assets/tempo-poster.png",
+      "sha256": "83b40eeaa38680cd3af9e0819be4468b3b66526a2b418c990eaef6742ed9fd1f"
+    },
+    {
+      "path": "apps/web/assets/tide-poster.png",
+      "sha256": "86ef5537d1166d7f071d9e65c95aa7e8f8c3f1b392d8b2ca4ce121f9fbf409d7"
+    },
+    {
+      "path": "apps/web/assets/trace-poster.png",
+      "sha256": "e8ed8f73b3c5dee1f91a591a21b1fa8a18b26ed38e213f25d4c6f74fa55ef29d"
+    },
+    {
+      "path": "apps/web/assets/wisp-poster.png",
+      "sha256": "cc394f32e287f1ece6126d49240d4d357bfaa310152d058685bd0a7c7c0af81a"
+    }
+  ]
+}

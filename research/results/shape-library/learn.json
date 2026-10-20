@@ -1,0 +1,60 @@
+{
+  "checkedAt": "2026-10-19T18:58:47.284Z",
+  "browser": "153.0.8010.12",
+  "basePath": "/learn-preview",
+  "scope": "Cloud browser, keyboard navigation, asset delivery and automated accessibility; not first-time-user research.",
+  "viewports": [
+    {
+      "width": 320,
+      "checks": [
+        "ten actual steps",
+        "real screenshot delivery",
+        "keyboard topic disclosures",
+        "valid step anchors",
+        "subpath Studio and lesson links",
+        "finished source delivered and validated",
+        "no horizontal overflow",
+        "zero automated WCAG violations"
+      ]
+    },
+    {
+      "width": 390,
+      "checks": [
+        "ten actual steps",
+        "real screenshot delivery",
+        "keyboard topic disclosures",
+        "valid step anchors",
+        "subpath Studio and lesson links",
+        "finished source delivered and validated",
+        "no horizontal overflow",
+        "zero automated WCAG violations"
+      ]
+    },
+    {
+      "width": 844,
+      "checks": [
+        "ten actual steps",
+        "real screenshot delivery",
+        "keyboard topic disclosures",
+        "valid step anchors",
+        "subpath Studio and lesson links",
+        "finished source delivered and validated",
+        "no horizontal overflow",
+        "zero automated WCAG violations"
+      ]
+    },
+    {
+      "width": 1440,
+      "checks": [
+        "ten actual steps",
+        "real screenshot delivery",
+        "keyboard topic disclosures",
+        "valid step anchors",
+        "subpath Studio and lesson links",
+        "finished source delivered and validated",
+        "no horizontal overflow",
+        "zero automated WCAG violations"
+      ]
+    }
+  ]
+}

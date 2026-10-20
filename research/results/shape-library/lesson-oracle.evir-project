@@ -1,0 +1,158 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 2,
+  "id": "first-bounce-project",
+  "name": "First bounce",
+  "artboards": [
+    {
+      "id": "first-bounce-board",
+      "name": "Artboard 1",
+      "width": 640,
+      "height": 480
+    }
+  ],
+  "nodes": [
+    {
+      "id": "first-bounce-sun",
+      "name": "Sun",
+      "kind": "path",
+      "artboardId": "first-bounce-board",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        120,
+        220
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#edb75f",
+        "skin": null,
+        "points": [
+          {
+            "id": "first-bounce-point-0",
+            "anchor": [
+              96,
+              48
+            ],
+            "in": [
+              96,
+              21.49033200812191
+            ],
+            "out": [
+              96,
+              74.50966799187809
+            ]
+          },
+          {
+            "id": "first-bounce-point-1",
+            "anchor": [
+              48,
+              96
+            ],
+            "in": [
+              74.50966799187809,
+              96
+            ],
+            "out": [
+              21.49033200812191,
+              96
+            ]
+          },
+          {
+            "id": "first-bounce-point-2",
+            "anchor": [
+              0,
+              48
+            ],
+            "in": [
+              0,
+              74.50966799187809
+            ],
+            "out": [
+              0,
+              21.49033200812191
+            ]
+          },
+          {
+            "id": "first-bounce-point-3",
+            "anchor": [
+              48,
+              0
+            ],
+            "in": [
+              21.49033200812191,
+              0
+            ],
+            "out": [
+              74.50966799187809,
+              0
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [
+    {
+      "id": "first-bounce-animation",
+      "name": "Bounce",
+      "artboardId": "first-bounce-board",
+      "fps": 60,
+      "duration": 120,
+      "tracks": [
+        {
+          "targetId": "first-bounce-sun",
+          "property": "y",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 220,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 60,
+              "value": 100,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 120,
+              "value": 220,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            }
+          ]
+        }
+      ],
+      "playback": {
+        "mode": "loop",
+        "iterations": 0,
+        "speed": 1
+      }
+    }
+  ],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "first-bounce-board": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 2,
+  "id": "shape-capsule",
+  "name": "capsule",
+  "artboards": [
+    {
+      "id": "artboard-f63cf672-1f47-4270-858a-069dff19c61b",
+      "name": "Artboard 1",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "node-f35832c9-d6a8-4647-a4be-9afa3a567601",
+      "name": "Capsule",
+      "kind": "path",
+      "artboardId": "artboard-f63cf672-1f47-4270-858a-069dff19c61b",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        166,
+        181
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#89e4c4",
+        "skin": null,
+        "points": [
+          {
+            "id": "point-0fda707c-b0a0-42aa-87e4-e2c8ceceedaa",
+            "anchor": [
+              75,
+              0
+            ],
+            "in": [
+              33.57864376269048,
+              0
+            ],
+            "out": [
+              75,
+              0
+            ]
+          },
+          {
+            "id": "point-99eac712-2104-4255-ab84-3750df226c7f",
+            "anchor": [
+              105,
+              0
+            ],
+            "in": [
+              105,
+              0
+            ],
+            "out": [
+              146.4213562373095,
+              0
+            ]
+          },
+          {
+            "id": "point-d3b864d1-a99f-4d55-b8ba-926d33833b50",
+            "anchor": [
+              180,
+              75
+            ],
+            "in": [
+              180,
+              33.57864376269048
+            ],
+            "out": [
+              180,
+              116.42135623730951
+            ]
+          },
+          {
+            "id": "point-2a2f1df0-dbd4-49b1-8213-d0ce98582187",
+            "anchor": [
+              105,
+              150
+            ],
+            "in": [
+              146.4213562373095,
+              150
+            ],
+            "out": [
+              105,
+              150
+            ]
+          },
+          {
+            "id": "point-a340d24f-21ef-45e5-b93e-2b9e21810aab",
+            "anchor": [
+              75,
+              150
+            ],
+            "in": [
+              75,
+              150
+            ],
+            "out": [
+              33.57864376269048,
+              150
+            ]
+          },
+          {
+            "id": "point-1eb3c488-7379-4d18-805e-291ccd789fea",
+            "anchor": [
+              0,
+              75
+            ],
+            "in": [
+              0,
+              116.42135623730951
+            ],
+            "out": [
+              0,
+              33.57864376269048
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "artboard-f63cf672-1f47-4270-858a-069dff19c61b": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  }
+}

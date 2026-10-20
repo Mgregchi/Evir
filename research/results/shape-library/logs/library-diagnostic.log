@@ -1,0 +1,2096 @@
+2026-10-19T18:45:08.907Z pw:api => browserType.launch started
+2026-10-19T18:45:10.344Z pw:api <= browserType.launch succeeded
+2026-10-19T18:45:10.350Z pw:api => browser.newContext started
+2026-10-19T18:45:10.466Z pw:api <= browser.newContext succeeded
+2026-10-19T18:45:10.469Z pw:api => tracing.start started
+2026-10-19T18:45:10.482Z pw:api <= tracing.start succeeded
+2026-10-19T18:45:10.482Z pw:api => browserContext.newPage started
+2026-10-19T18:45:10.958Z pw:api <= browserContext.newPage succeeded
+2026-10-19T18:45:10.960Z pw:api => page.goto started
+2026-10-19T18:45:10.984Z pw:api navigating to "http://127.0.0.1:8776/tools/runtime.html?renderer=canvas", waiting until "load"
+DIAGNOSTIC navigation request 1 GET http://127.0.0.1:8776/tools/runtime.html?renderer=canvas
+2026-10-19T18:45:11.071Z pw:api   "commit" event fired
+2026-10-19T18:45:11.072Z pw:api   navigated to "http://127.0.0.1:8776/tools/runtime.html?renderer=canvas"
+DIAGNOSTIC main navigation 1 http://127.0.0.1:8776/tools/runtime.html?renderer=canvas
+2026-10-19T18:45:11.268Z pw:api   "domcontentloaded" event fired
+2026-10-19T18:45:11.273Z pw:api   "load" event fired
+2026-10-19T18:45:11.282Z pw:api <= page.goto succeeded
+2026-10-19T18:45:11.284Z pw:api => browser.newContext started
+2026-10-19T18:45:11.309Z pw:api <= browser.newContext succeeded
+2026-10-19T18:45:11.310Z pw:api => tracing.start started
+2026-10-19T18:45:11.322Z pw:api <= tracing.start succeeded
+2026-10-19T18:45:11.323Z pw:api => browserContext.newPage started
+2026-10-19T18:45:11.635Z pw:api   "networkidle" event fired
+2026-10-19T18:45:11.708Z pw:api <= browserContext.newPage succeeded
+2026-10-19T18:45:11.735Z pw:api => page.goto started
+2026-10-19T18:45:11.764Z pw:api navigating to "http://127.0.0.1:8776/apps/web/dist/editor/studio/", waiting until "load"
+DIAGNOSTIC navigation request 2 GET http://127.0.0.1:8776/apps/web/dist/editor/studio/
+2026-10-19T18:45:11.851Z pw:api   "commit" event fired
+2026-10-19T18:45:11.852Z pw:api   navigated to "http://127.0.0.1:8776/apps/web/dist/editor/studio/"
+DIAGNOSTIC main navigation 2 http://127.0.0.1:8776/apps/web/dist/editor/studio/
+2026-10-19T18:45:12.341Z pw:api   "domcontentloaded" event fired
+2026-10-19T18:45:12.358Z pw:api   "load" event fired
+2026-10-19T18:45:12.470Z pw:api <= page.goto succeeded
+2026-10-19T18:45:12.473Z pw:api => page.waitForFunction started
+2026-10-19T18:45:12.741Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:12.744Z pw:api => page.waitForFunction started
+2026-10-19T18:45:12.789Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:12.792Z pw:api => locator.setInputFiles started
+2026-10-19T18:45:12.809Z pw:api waiting for locator('#file')
+2026-10-19T18:45:12.884Z pw:api   locator resolved to <input id="file" hidden="" type="file" accept=".json,.evir-project,.riv,application/json"/>
+2026-10-19T18:45:12.948Z pw:api <= locator.setInputFiles succeeded
+2026-10-19T18:45:12.949Z pw:api => locator.click started
+2026-10-19T18:45:12.966Z pw:api waiting for locator('#replace-confirm')
+2026-10-19T18:45:12.974Z pw:api   locator resolved to <button value="replace" class="primary" id="replace-confirm">Open project</button>
+2026-10-19T18:45:12.976Z pw:api attempting click action
+2026-10-19T18:45:12.977Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:12.988Z pw:api   "networkidle" event fired
+2026-10-19T18:45:13.015Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:13.015Z pw:api   scrolling into view if needed
+2026-10-19T18:45:13.017Z pw:api   done scrolling
+2026-10-19T18:45:13.043Z pw:api   performing click action
+2026-10-19T18:45:13.102Z pw:api   click action done
+2026-10-19T18:45:13.102Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:13.111Z pw:api   navigations have finished
+2026-10-19T18:45:13.126Z pw:api <= locator.click succeeded
+2026-10-19T18:45:13.127Z pw:api => page.waitForFunction started
+2026-10-19T18:45:13.149Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:13.151Z pw:api => page.waitForFunction started
+2026-10-19T18:45:13.366Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:13.368Z pw:api => locator.setInputFiles started
+2026-10-19T18:45:13.377Z pw:api waiting for locator('#file')
+2026-10-19T18:45:13.382Z pw:api   locator resolved to <input id="file" hidden="" type="file" accept=".json,.evir-project,.riv,application/json"/>
+2026-10-19T18:45:13.429Z pw:api <= locator.setInputFiles succeeded
+2026-10-19T18:45:13.429Z pw:api => locator.click started
+2026-10-19T18:45:13.443Z pw:api waiting for locator('#replace-confirm')
+2026-10-19T18:45:13.455Z pw:api   locator resolved to <button value="replace" class="primary" id="replace-confirm">Open project</button>
+2026-10-19T18:45:13.458Z pw:api attempting click action
+2026-10-19T18:45:13.458Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:13.472Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:13.472Z pw:api   scrolling into view if needed
+2026-10-19T18:45:13.475Z pw:api   done scrolling
+2026-10-19T18:45:13.498Z pw:api   performing click action
+2026-10-19T18:45:13.561Z pw:api   click action done
+2026-10-19T18:45:13.561Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:13.570Z pw:api   navigations have finished
+2026-10-19T18:45:13.582Z pw:api <= locator.click succeeded
+2026-10-19T18:45:13.583Z pw:api => page.waitForFunction started
+2026-10-19T18:45:13.608Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:13.608Z pw:api => page.waitForFunction started
+2026-10-19T18:45:13.823Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:13.824Z pw:api => locator.click started
+2026-10-19T18:45:13.835Z pw:api waiting for getByRole('button', { name: 'Project menu', exact: true })
+2026-10-19T18:45:13.864Z pw:api   locator resolved to <button title="Project menu" aria-expanded="false" id="project-menu-toggle" aria-label="Project menu" popovertarget="project-menu" aria-controls="project-menu">…</button>
+2026-10-19T18:45:13.866Z pw:api attempting click action
+2026-10-19T18:45:13.866Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:13.879Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:13.879Z pw:api   scrolling into view if needed
+2026-10-19T18:45:13.880Z pw:api   done scrolling
+2026-10-19T18:45:13.889Z pw:api   performing click action
+2026-10-19T18:45:13.911Z pw:api   click action done
+2026-10-19T18:45:13.911Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:13.914Z pw:api   navigations have finished
+2026-10-19T18:45:13.924Z pw:api <= locator.click succeeded
+2026-10-19T18:45:13.927Z pw:api => locator.click started
+2026-10-19T18:45:13.942Z pw:api waiting for locator('#project-library')
+2026-10-19T18:45:13.948Z pw:api   locator resolved to <button type="button" id="project-library" aria-haspopup="dialog">Projects in this browser…</button>
+2026-10-19T18:45:13.951Z pw:api attempting click action
+2026-10-19T18:45:13.952Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:13.963Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:13.963Z pw:api   scrolling into view if needed
+2026-10-19T18:45:13.967Z pw:api   done scrolling
+2026-10-19T18:45:13.981Z pw:api   performing click action
+2026-10-19T18:45:14.002Z pw:api   click action done
+2026-10-19T18:45:14.002Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:14.005Z pw:api   navigations have finished
+2026-10-19T18:45:14.145Z pw:api <= locator.click succeeded
+2026-10-19T18:45:14.146Z pw:api => locator.waitFor started
+2026-10-19T18:45:14.168Z pw:api waiting for getByLabel('Search projects', { exact: true }) to be visible
+2026-10-19T18:45:14.196Z pw:api   locator resolved to visible <input type="search" aria-label="Search projects"/>
+2026-10-19T18:45:14.203Z pw:api <= locator.waitFor succeeded
+2026-10-19T18:45:14.204Z pw:api => locator.fill started
+2026-10-19T18:45:14.211Z pw:api waiting for getByLabel('Search projects', { exact: true })
+2026-10-19T18:45:14.225Z pw:api   locator resolved to <input type="search" aria-label="Search projects"/>
+2026-10-19T18:45:14.231Z pw:api   fill("sprig")
+2026-10-19T18:45:14.231Z pw:api attempting fill action
+2026-10-19T18:45:14.244Z pw:api   waiting for element to be visible, enabled and editable
+2026-10-19T18:45:14.275Z pw:api <= locator.fill succeeded
+2026-10-19T18:45:14.276Z pw:api => locator.waitFor started
+2026-10-19T18:45:14.287Z pw:api waiting for getByRole('button', { name: 'Open Library sprig', exact: true }) to be visible
+2026-10-19T18:45:14.309Z pw:api   locator resolved to visible <button type="button">Open Library sprig</button>
+2026-10-19T18:45:14.318Z pw:api <= locator.waitFor succeeded
+2026-10-19T18:45:14.333Z pw:api => page.addScriptTag started
+2026-10-19T18:45:14.960Z pw:api <= page.addScriptTag succeeded
+2026-10-19T18:45:14.965Z pw:api => page.evaluate started
+2026-10-19T18:45:15.563Z pw:api <= page.evaluate succeeded
+2026-10-19T18:45:15.571Z pw:api => page.evaluate started
+2026-10-19T18:45:15.596Z pw:api <= page.evaluate succeeded
+2026-10-19T18:45:15.603Z pw:api => page.screenshot started
+2026-10-19T18:45:15.621Z pw:api taking page screenshot
+2026-10-19T18:45:15.635Z pw:api waiting for fonts to load...
+2026-10-19T18:45:15.649Z pw:api fonts loaded
+2026-10-19T18:45:15.739Z pw:api <= page.screenshot succeeded
+2026-10-19T18:45:15.743Z pw:api => locator.focus started
+2026-10-19T18:45:15.767Z pw:api waiting for getByRole('button', { name: 'Open Library sprig', exact: true })
+2026-10-19T18:45:15.792Z pw:api   locator resolved to <button type="button">Open Library sprig</button>
+2026-10-19T18:45:15.814Z pw:api <= locator.focus succeeded
+2026-10-19T18:45:15.815Z pw:api => keyboard.press started
+2026-10-19T18:45:15.854Z pw:api <= keyboard.press succeeded
+2026-10-19T18:45:15.854Z pw:api => locator.click started
+2026-10-19T18:45:15.861Z pw:api waiting for locator('#replace-confirm')
+2026-10-19T18:45:15.870Z pw:api   locator resolved to <button value="replace" class="primary" id="replace-confirm">Open project</button>
+2026-10-19T18:45:15.877Z pw:api attempting click action
+2026-10-19T18:45:15.877Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:15.912Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:15.912Z pw:api   scrolling into view if needed
+2026-10-19T18:45:15.914Z pw:api   done scrolling
+2026-10-19T18:45:15.925Z pw:api   performing click action
+2026-10-19T18:45:15.951Z pw:api   click action done
+2026-10-19T18:45:15.951Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:15.980Z pw:api   navigations have finished
+2026-10-19T18:45:16.001Z pw:api <= locator.click succeeded
+2026-10-19T18:45:16.003Z pw:api => page.waitForFunction started
+2026-10-19T18:45:16.024Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:16.024Z pw:api => page.evaluate started
+2026-10-19T18:45:16.057Z pw:api <= page.evaluate succeeded
+2026-10-19T18:45:16.062Z pw:api => page.evaluate started
+2026-10-19T18:45:16.087Z pw:api <= page.evaluate succeeded
+2026-10-19T18:45:16.087Z pw:api => page.waitForFunction started
+2026-10-19T18:45:16.106Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:16.106Z pw:api => page.evaluate started
+2026-10-19T18:45:16.146Z pw:api <= page.evaluate succeeded
+2026-10-19T18:45:16.148Z pw:api => browserContext.newPage started
+2026-10-19T18:45:16.242Z pw:api <= browserContext.newPage succeeded
+2026-10-19T18:45:16.244Z pw:api => page.goto started
+2026-10-19T18:45:16.311Z pw:api navigating to "http://127.0.0.1:8776/apps/web/dist/editor/studio/", waiting until "load"
+DIAGNOSTIC navigation request 2 GET http://127.0.0.1:8776/apps/web/dist/editor/studio/
+2026-10-19T18:45:16.362Z pw:api   "commit" event fired
+2026-10-19T18:45:16.363Z pw:api   navigated to "http://127.0.0.1:8776/apps/web/dist/editor/studio/"
+DIAGNOSTIC main navigation 2 http://127.0.0.1:8776/apps/web/dist/editor/studio/
+2026-10-19T18:45:16.752Z pw:api   "domcontentloaded" event fired
+2026-10-19T18:45:16.753Z pw:api   "load" event fired
+2026-10-19T18:45:16.887Z pw:api <= page.goto succeeded
+2026-10-19T18:45:16.888Z pw:api => page.waitForFunction started
+2026-10-19T18:45:16.990Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:16.990Z pw:api => page.waitForFunction started
+2026-10-19T18:45:17.016Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:17.016Z pw:api => page.evaluate started
+2026-10-19T18:45:17.039Z pw:api <= page.evaluate succeeded
+2026-10-19T18:45:17.040Z pw:api => locator.fill started
+2026-10-19T18:45:17.048Z pw:api waiting for locator('#project-name')
+2026-10-19T18:45:17.057Z pw:api   locator resolved to <input id="project-name" aria-label="Project name"/>
+2026-10-19T18:45:17.060Z pw:api   fill("Sprig from first tab")
+2026-10-19T18:45:17.060Z pw:api attempting fill action
+2026-10-19T18:45:17.067Z pw:api   waiting for element to be visible, enabled and editable
+2026-10-19T18:45:17.099Z pw:api <= locator.fill succeeded
+2026-10-19T18:45:17.100Z pw:api => locator.dispatchEvent started
+2026-10-19T18:45:17.106Z pw:api waiting for locator('#project-name')
+2026-10-19T18:45:17.124Z pw:api   locator resolved to <input id="project-name" aria-label="Project name"/>
+2026-10-19T18:45:17.132Z pw:api <= locator.dispatchEvent succeeded
+2026-10-19T18:45:17.133Z pw:api => page.waitForFunction started
+2026-10-19T18:45:17.260Z pw:api   "networkidle" event fired
+2026-10-19T18:45:17.389Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:17.390Z pw:api => locator.waitFor started
+2026-10-19T18:45:17.410Z pw:api waiting for locator('#recovery-conflict') to be visible
+2026-10-19T18:45:17.490Z pw:api   locator resolved to visible <section id="recovery-conflict" aria-label="Project save conflict">…</section>
+2026-10-19T18:45:17.496Z pw:api <= locator.waitFor succeeded
+2026-10-19T18:45:17.496Z pw:api => locator.fill started
+2026-10-19T18:45:17.503Z pw:api waiting for locator('#project-name')
+2026-10-19T18:45:17.513Z pw:api   locator resolved to <input id="project-name" aria-label="Project name"/>
+2026-10-19T18:45:17.518Z pw:api   fill("Sprig from second tab")
+2026-10-19T18:45:17.518Z pw:api attempting fill action
+2026-10-19T18:45:17.525Z pw:api   waiting for element to be visible, enabled and editable
+2026-10-19T18:45:17.551Z pw:api <= locator.fill succeeded
+2026-10-19T18:45:17.552Z pw:api => locator.dispatchEvent started
+2026-10-19T18:45:17.559Z pw:api waiting for locator('#project-name')
+2026-10-19T18:45:17.581Z pw:api   locator resolved to <input id="project-name" aria-label="Project name"/>
+2026-10-19T18:45:17.602Z pw:api <= locator.dispatchEvent succeeded
+2026-10-19T18:45:17.602Z pw:api => page.waitForFunction started
+2026-10-19T18:45:17.869Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:17.871Z pw:api => locator.click started
+2026-10-19T18:45:17.884Z pw:api waiting for getByRole('button', { name: 'Save a separate copy', exact: true })
+2026-10-19T18:45:17.920Z pw:api   locator resolved to <button type="button">Save a separate copy</button>
+2026-10-19T18:45:17.924Z pw:api attempting click action
+2026-10-19T18:45:17.925Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:17.947Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:17.947Z pw:api   scrolling into view if needed
+2026-10-19T18:45:17.949Z pw:api   done scrolling
+2026-10-19T18:45:17.970Z pw:api   performing click action
+2026-10-19T18:45:18.018Z pw:api   click action done
+2026-10-19T18:45:18.018Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:18.058Z pw:api   navigations have finished
+2026-10-19T18:45:18.076Z pw:api <= locator.click succeeded
+2026-10-19T18:45:18.077Z pw:api => page.waitForFunction started
+2026-10-19T18:45:18.099Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:18.100Z pw:api => page.reload started
+2026-10-19T18:45:18.126Z pw:api waiting for navigation until "load"
+DIAGNOSTIC navigation request 2 GET http://127.0.0.1:8776/apps/web/dist/editor/studio/
+2026-10-19T18:45:18.182Z pw:api   "commit" event fired
+2026-10-19T18:45:18.182Z pw:api   navigated to "http://127.0.0.1:8776/apps/web/dist/editor/studio/"
+2026-10-19T18:45:18.182Z pw:api   navigated to "http://127.0.0.1:8776/apps/web/dist/editor/studio/"
+DIAGNOSTIC main navigation 2 http://127.0.0.1:8776/apps/web/dist/editor/studio/
+2026-10-19T18:45:18.226Z pw:api   "domcontentloaded" event fired
+2026-10-19T18:45:18.255Z pw:api   "load" event fired
+2026-10-19T18:45:18.313Z pw:api <= page.reload succeeded
+2026-10-19T18:45:18.313Z pw:api => page.waitForFunction started
+2026-10-19T18:45:18.438Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:18.439Z pw:api => page.waitForFunction started
+2026-10-19T18:45:18.465Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:18.465Z pw:api => locator.click started
+2026-10-19T18:45:18.474Z pw:api waiting for getByRole('button', { name: 'Project menu', exact: true })
+2026-10-19T18:45:18.559Z pw:api   locator resolved to <button title="Project menu" aria-expanded="false" id="project-menu-toggle" aria-label="Project menu" popovertarget="project-menu" aria-controls="project-menu">…</button>
+2026-10-19T18:45:18.562Z pw:api attempting click action
+2026-10-19T18:45:18.563Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:18.580Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:18.580Z pw:api   scrolling into view if needed
+2026-10-19T18:45:18.581Z pw:api   done scrolling
+2026-10-19T18:45:18.606Z pw:api   performing click action
+2026-10-19T18:45:18.636Z pw:api   click action done
+2026-10-19T18:45:18.636Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:18.638Z pw:api   navigations have finished
+2026-10-19T18:45:18.650Z pw:api <= locator.click succeeded
+2026-10-19T18:45:18.651Z pw:api => locator.click started
+2026-10-19T18:45:18.660Z pw:api waiting for locator('#project-library')
+2026-10-19T18:45:18.677Z pw:api   locator resolved to <button type="button" id="project-library" aria-haspopup="dialog">Projects in this browser…</button>
+2026-10-19T18:45:18.681Z pw:api attempting click action
+2026-10-19T18:45:18.682Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:18.702Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:18.702Z pw:api   scrolling into view if needed
+2026-10-19T18:45:18.707Z pw:api   done scrolling
+2026-10-19T18:45:18.726Z pw:api   performing click action
+2026-10-19T18:45:18.771Z pw:api   click action done
+2026-10-19T18:45:18.771Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:18.779Z pw:api   navigations have finished
+2026-10-19T18:45:18.832Z pw:api   "networkidle" event fired
+2026-10-19T18:45:18.838Z pw:api <= locator.click succeeded
+2026-10-19T18:45:18.839Z pw:api => locator.waitFor started
+2026-10-19T18:45:18.850Z pw:api waiting for getByLabel('Search projects', { exact: true }) to be visible
+2026-10-19T18:45:18.864Z pw:api   locator resolved to visible <input type="search" aria-label="Search projects"/>
+2026-10-19T18:45:18.874Z pw:api <= locator.waitFor succeeded
+2026-10-19T18:45:18.874Z pw:api => locator.fill started
+2026-10-19T18:45:18.882Z pw:api waiting for getByLabel('Search projects', { exact: true })
+2026-10-19T18:45:18.894Z pw:api   locator resolved to <input type="search" aria-label="Search projects"/>
+2026-10-19T18:45:18.897Z pw:api   fill("Sprig")
+2026-10-19T18:45:18.897Z pw:api attempting fill action
+2026-10-19T18:45:18.903Z pw:api   waiting for element to be visible, enabled and editable
+2026-10-19T18:45:18.930Z pw:api <= locator.fill succeeded
+2026-10-19T18:45:18.930Z pw:api => locator.waitFor started
+2026-10-19T18:45:18.939Z pw:api waiting for getByRole('button', { name: 'Open Sprig from first tab', exact: true }) to be visible
+2026-10-19T18:45:18.957Z pw:api   locator resolved to visible <button type="button">Open Sprig from first tab</button>
+2026-10-19T18:45:18.967Z pw:api <= locator.waitFor succeeded
+2026-10-19T18:45:18.967Z pw:api => locator.click started
+2026-10-19T18:45:18.986Z pw:api waiting for getByRole('button', { name: 'Done', exact: true })
+2026-10-19T18:45:18.999Z pw:api   locator resolved to <button type="button">Done</button>
+2026-10-19T18:45:19.001Z pw:api attempting click action
+2026-10-19T18:45:19.002Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:19.030Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:19.031Z pw:api   scrolling into view if needed
+2026-10-19T18:45:19.032Z pw:api   done scrolling
+2026-10-19T18:45:19.047Z pw:api   performing click action
+2026-10-19T18:45:19.067Z pw:api   click action done
+2026-10-19T18:45:19.067Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:19.070Z pw:api   navigations have finished
+2026-10-19T18:45:19.076Z pw:api <= locator.click succeeded
+2026-10-19T18:45:19.077Z pw:api => page.reload started
+2026-10-19T18:45:19.088Z pw:api waiting for navigation until "load"
+DIAGNOSTIC navigation request 2 GET http://127.0.0.1:8776/apps/web/dist/editor/studio/
+2026-10-19T18:45:19.132Z pw:api   "commit" event fired
+2026-10-19T18:45:19.132Z pw:api   navigated to "http://127.0.0.1:8776/apps/web/dist/editor/studio/"
+2026-10-19T18:45:19.132Z pw:api   navigated to "http://127.0.0.1:8776/apps/web/dist/editor/studio/"
+DIAGNOSTIC main navigation 2 http://127.0.0.1:8776/apps/web/dist/editor/studio/
+2026-10-19T18:45:19.164Z pw:api   "domcontentloaded" event fired
+2026-10-19T18:45:19.182Z pw:api   "load" event fired
+2026-10-19T18:45:19.254Z pw:api <= page.reload succeeded
+2026-10-19T18:45:19.255Z pw:api => page.waitForFunction started
+2026-10-19T18:45:19.388Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:19.388Z pw:api => page.waitForFunction started
+2026-10-19T18:45:19.409Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:19.410Z pw:api => locator.fill started
+2026-10-19T18:45:19.429Z pw:api waiting for locator('#project-name')
+2026-10-19T18:45:19.437Z pw:api   locator resolved to <input id="project-name" aria-label="Project name"/>
+2026-10-19T18:45:19.441Z pw:api   fill("Latest shared sprig")
+2026-10-19T18:45:19.441Z pw:api attempting fill action
+2026-10-19T18:45:19.448Z pw:api   waiting for element to be visible, enabled and editable
+2026-10-19T18:45:19.479Z pw:api <= locator.fill succeeded
+2026-10-19T18:45:19.480Z pw:api => locator.dispatchEvent started
+2026-10-19T18:45:19.490Z pw:api waiting for locator('#project-name')
+2026-10-19T18:45:19.514Z pw:api   locator resolved to <input id="project-name" aria-label="Project name"/>
+2026-10-19T18:45:19.534Z pw:api <= locator.dispatchEvent succeeded
+2026-10-19T18:45:19.535Z pw:api => page.waitForFunction started
+2026-10-19T18:45:19.761Z pw:api   "networkidle" event fired
+2026-10-19T18:45:19.797Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:19.798Z pw:api => locator.waitFor started
+2026-10-19T18:45:19.818Z pw:api waiting for locator('#recovery-conflict') to be visible
+2026-10-19T18:45:19.899Z pw:api   locator resolved to visible <section id="recovery-conflict" aria-label="Project save conflict">…</section>
+2026-10-19T18:45:19.906Z pw:api <= locator.waitFor succeeded
+2026-10-19T18:45:19.907Z pw:api => locator.click started
+2026-10-19T18:45:19.914Z pw:api waiting for getByRole('button', { name: 'Open latest', exact: true })
+2026-10-19T18:45:19.945Z pw:api   locator resolved to <button type="button">Open latest</button>
+2026-10-19T18:45:19.947Z pw:api attempting click action
+2026-10-19T18:45:19.951Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:19.966Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:19.966Z pw:api   scrolling into view if needed
+2026-10-19T18:45:19.967Z pw:api   done scrolling
+2026-10-19T18:45:20.005Z pw:api   performing click action
+2026-10-19T18:45:20.056Z pw:api   click action done
+2026-10-19T18:45:20.062Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:20.065Z pw:api   navigations have finished
+2026-10-19T18:45:20.090Z pw:api <= locator.click succeeded
+2026-10-19T18:45:20.091Z pw:api => locator.click started
+2026-10-19T18:45:20.130Z pw:api waiting for locator('#replace-confirm')
+2026-10-19T18:45:20.147Z pw:api   locator resolved to <button value="replace" class="primary" id="replace-confirm">Open project</button>
+2026-10-19T18:45:20.156Z pw:api attempting click action
+2026-10-19T18:45:20.157Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:20.179Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:20.179Z pw:api   scrolling into view if needed
+2026-10-19T18:45:20.181Z pw:api   done scrolling
+2026-10-19T18:45:20.215Z pw:api   performing click action
+2026-10-19T18:45:20.304Z pw:api   click action done
+2026-10-19T18:45:20.304Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:20.317Z pw:api   navigations have finished
+2026-10-19T18:45:20.380Z pw:api <= locator.click succeeded
+2026-10-19T18:45:20.388Z pw:api => page.waitForFunction started
+2026-10-19T18:45:20.425Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:20.426Z pw:api => locator.isVisible started
+2026-10-19T18:45:20.438Z pw:api   checking visibility of locator('#recovery-conflict')
+2026-10-19T18:45:20.459Z pw:api <= locator.isVisible succeeded
+2026-10-19T18:45:20.464Z pw:api => locator.click started
+2026-10-19T18:45:20.475Z pw:api waiting for getByRole('button', { name: 'Project menu', exact: true })
+2026-10-19T18:45:20.486Z pw:api   locator resolved to <button title="Project menu" aria-expanded="false" id="project-menu-toggle" aria-label="Project menu" popovertarget="project-menu" aria-controls="project-menu">…</button>
+2026-10-19T18:45:20.489Z pw:api attempting click action
+2026-10-19T18:45:20.490Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:20.551Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:20.551Z pw:api   scrolling into view if needed
+2026-10-19T18:45:20.553Z pw:api   done scrolling
+2026-10-19T18:45:20.565Z pw:api   performing click action
+2026-10-19T18:45:20.581Z pw:api   click action done
+2026-10-19T18:45:20.581Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:20.583Z pw:api   navigations have finished
+2026-10-19T18:45:20.592Z pw:api <= locator.click succeeded
+2026-10-19T18:45:20.592Z pw:api => locator.click started
+2026-10-19T18:45:20.603Z pw:api waiting for getByRole('button', { name: 'New', exact: true })
+2026-10-19T18:45:20.624Z pw:api   locator resolved to <button id="new">New</button>
+2026-10-19T18:45:20.630Z pw:api attempting click action
+2026-10-19T18:45:20.630Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:20.649Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:20.649Z pw:api   scrolling into view if needed
+2026-10-19T18:45:20.659Z pw:api   done scrolling
+2026-10-19T18:45:20.677Z pw:api   performing click action
+2026-10-19T18:45:20.701Z pw:api   click action done
+2026-10-19T18:45:20.701Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:20.709Z pw:api   navigations have finished
+2026-10-19T18:45:20.753Z pw:api <= locator.click succeeded
+2026-10-19T18:45:20.763Z pw:api => locator.click started
+2026-10-19T18:45:20.783Z pw:api waiting for locator('#replace-confirm')
+2026-10-19T18:45:20.808Z pw:api   locator resolved to <button value="replace" class="primary" id="replace-confirm">Create project</button>
+2026-10-19T18:45:20.813Z pw:api attempting click action
+2026-10-19T18:45:20.814Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:20.830Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:20.830Z pw:api   scrolling into view if needed
+2026-10-19T18:45:20.835Z pw:api   done scrolling
+2026-10-19T18:45:20.858Z pw:api   performing click action
+2026-10-19T18:45:20.899Z pw:api   click action done
+2026-10-19T18:45:20.899Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:20.903Z pw:api   navigations have finished
+2026-10-19T18:45:20.922Z pw:api <= locator.click succeeded
+2026-10-19T18:45:20.922Z pw:api => page.waitForFunction started
+2026-10-19T18:45:20.944Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:20.944Z pw:api => page.waitForFunction started
+2026-10-19T18:45:21.175Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:21.175Z pw:api => locator.click started
+2026-10-19T18:45:21.185Z pw:api waiting for getByRole('button', { name: 'Project menu', exact: true })
+2026-10-19T18:45:21.194Z pw:api   locator resolved to <button title="Project menu" aria-expanded="false" id="project-menu-toggle" aria-label="Project menu" popovertarget="project-menu" aria-controls="project-menu">…</button>
+2026-10-19T18:45:21.197Z pw:api attempting click action
+2026-10-19T18:45:21.197Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:21.235Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:21.235Z pw:api   scrolling into view if needed
+2026-10-19T18:45:21.239Z pw:api   done scrolling
+2026-10-19T18:45:21.254Z pw:api   performing click action
+2026-10-19T18:45:21.289Z pw:api   click action done
+2026-10-19T18:45:21.289Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:21.304Z pw:api   navigations have finished
+2026-10-19T18:45:21.316Z pw:api <= locator.click succeeded
+2026-10-19T18:45:21.317Z pw:api => locator.click started
+2026-10-19T18:45:21.339Z pw:api waiting for locator('#project-library')
+2026-10-19T18:45:21.345Z pw:api   locator resolved to <button type="button" id="project-library" aria-haspopup="dialog">Projects in this browser…</button>
+2026-10-19T18:45:21.349Z pw:api attempting click action
+2026-10-19T18:45:21.349Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:21.364Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:21.364Z pw:api   scrolling into view if needed
+2026-10-19T18:45:21.369Z pw:api   done scrolling
+2026-10-19T18:45:21.402Z pw:api   performing click action
+2026-10-19T18:45:21.440Z pw:api   click action done
+2026-10-19T18:45:21.440Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:21.444Z pw:api   navigations have finished
+2026-10-19T18:45:21.485Z pw:api <= locator.click succeeded
+2026-10-19T18:45:21.486Z pw:api => locator.waitFor started
+2026-10-19T18:45:21.513Z pw:api waiting for getByLabel('Search projects', { exact: true }) to be visible
+2026-10-19T18:45:21.540Z pw:api   locator resolved to visible <input type="search" aria-label="Search projects"/>
+2026-10-19T18:45:21.547Z pw:api <= locator.waitFor succeeded
+2026-10-19T18:45:21.547Z pw:api => locator.fill started
+2026-10-19T18:45:21.555Z pw:api waiting for getByLabel('Search projects', { exact: true })
+2026-10-19T18:45:21.565Z pw:api   locator resolved to <input type="search" aria-label="Search projects"/>
+2026-10-19T18:45:21.568Z pw:api   fill("Latest shared")
+2026-10-19T18:45:21.568Z pw:api attempting fill action
+2026-10-19T18:45:21.574Z pw:api   waiting for element to be visible, enabled and editable
+2026-10-19T18:45:21.597Z pw:api <= locator.fill succeeded
+2026-10-19T18:45:21.600Z pw:api => locator.waitFor started
+2026-10-19T18:45:21.613Z pw:api waiting for getByRole('button', { name: 'Open Latest shared sprig', exact: true }) to be visible
+2026-10-19T18:45:21.635Z pw:api   locator resolved to visible <button type="button">Open Latest shared sprig</button>
+2026-10-19T18:45:21.646Z pw:api <= locator.waitFor succeeded
+2026-10-19T18:45:21.646Z pw:api => page.screenshot started
+2026-10-19T18:45:21.655Z pw:api taking page screenshot
+2026-10-19T18:45:21.660Z pw:api waiting for fonts to load...
+2026-10-19T18:45:21.669Z pw:api fonts loaded
+2026-10-19T18:45:21.762Z pw:api <= page.screenshot succeeded
+2026-10-19T18:45:21.767Z pw:api => tracing.stop started
+2026-10-19T18:45:22.232Z pw:api <= tracing.stop succeeded
+2026-10-19T18:45:22.236Z pw:api => browserContext.close started
+2026-10-19T18:45:22.280Z pw:api <= browserContext.close succeeded
+2026-10-19T18:45:22.280Z pw:api => browser.newContext started
+2026-10-19T18:45:22.416Z pw:api <= browser.newContext succeeded
+2026-10-19T18:45:22.418Z pw:api => tracing.start started
+2026-10-19T18:45:22.429Z pw:api <= tracing.start succeeded
+2026-10-19T18:45:22.429Z pw:api => browserContext.newPage started
+2026-10-19T18:45:22.726Z pw:api <= browserContext.newPage succeeded
+2026-10-19T18:45:22.728Z pw:api => page.goto started
+2026-10-19T18:45:22.762Z pw:api navigating to "http://127.0.0.1:8776/apps/web/dist/editor/studio/", waiting until "load"
+DIAGNOSTIC navigation request 3 GET http://127.0.0.1:8776/apps/web/dist/editor/studio/
+2026-10-19T18:45:22.806Z pw:api   "commit" event fired
+2026-10-19T18:45:22.806Z pw:api   navigated to "http://127.0.0.1:8776/apps/web/dist/editor/studio/"
+DIAGNOSTIC main navigation 3 http://127.0.0.1:8776/apps/web/dist/editor/studio/
+2026-10-19T18:45:23.070Z pw:api   "domcontentloaded" event fired
+2026-10-19T18:45:23.098Z pw:api   "load" event fired
+2026-10-19T18:45:23.172Z pw:api <= page.goto succeeded
+2026-10-19T18:45:23.174Z pw:api => page.waitForFunction started
+2026-10-19T18:45:23.433Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:23.434Z pw:api => page.waitForFunction started
+2026-10-19T18:45:23.582Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:23.589Z pw:api => locator.setInputFiles started
+2026-10-19T18:45:23.614Z pw:api waiting for locator('#file')
+2026-10-19T18:45:23.693Z pw:api   locator resolved to <input id="file" hidden="" type="file" accept=".json,.evir-project,.riv,application/json"/>
+2026-10-19T18:45:23.709Z pw:api   "networkidle" event fired
+2026-10-19T18:45:23.810Z pw:api <= locator.setInputFiles succeeded
+2026-10-19T18:45:23.811Z pw:api => locator.click started
+2026-10-19T18:45:23.832Z pw:api waiting for locator('#replace-confirm')
+2026-10-19T18:45:23.840Z pw:api   locator resolved to <button value="replace" class="primary" id="replace-confirm">Open project</button>
+2026-10-19T18:45:23.842Z pw:api attempting click action
+2026-10-19T18:45:23.842Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:23.879Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:23.879Z pw:api   scrolling into view if needed
+2026-10-19T18:45:23.881Z pw:api   done scrolling
+2026-10-19T18:45:23.899Z pw:api   performing click action
+2026-10-19T18:45:23.917Z pw:api   click action done
+2026-10-19T18:45:23.917Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:23.962Z pw:api   navigations have finished
+2026-10-19T18:45:23.975Z pw:api <= locator.click succeeded
+2026-10-19T18:45:23.976Z pw:api => page.waitForFunction started
+2026-10-19T18:45:23.992Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:23.992Z pw:api => page.waitForFunction started
+2026-10-19T18:45:24.229Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:24.234Z pw:api => locator.setInputFiles started
+2026-10-19T18:45:24.248Z pw:api waiting for locator('#file')
+2026-10-19T18:45:24.256Z pw:api   locator resolved to <input id="file" hidden="" type="file" accept=".json,.evir-project,.riv,application/json"/>
+2026-10-19T18:45:24.506Z pw:api <= locator.setInputFiles succeeded
+2026-10-19T18:45:24.508Z pw:api => locator.click started
+2026-10-19T18:45:24.525Z pw:api waiting for locator('#replace-confirm')
+2026-10-19T18:45:24.540Z pw:api   locator resolved to <button value="replace" class="primary" id="replace-confirm">Open project</button>
+2026-10-19T18:45:24.543Z pw:api attempting click action
+2026-10-19T18:45:24.544Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:24.583Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:24.583Z pw:api   scrolling into view if needed
+2026-10-19T18:45:24.584Z pw:api   done scrolling
+2026-10-19T18:45:24.593Z pw:api   performing click action
+2026-10-19T18:45:24.648Z pw:api   click action done
+2026-10-19T18:45:24.648Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:24.655Z pw:api   navigations have finished
+2026-10-19T18:45:24.669Z pw:api <= locator.click succeeded
+2026-10-19T18:45:24.671Z pw:api => page.waitForFunction started
+2026-10-19T18:45:24.702Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:24.703Z pw:api => page.waitForFunction started
+2026-10-19T18:45:24.958Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:24.959Z pw:api => locator.click started
+2026-10-19T18:45:24.966Z pw:api waiting for getByRole('button', { name: 'Project menu', exact: true })
+2026-10-19T18:45:24.993Z pw:api   locator resolved to <button title="Project menu" aria-expanded="false" id="project-menu-toggle" aria-label="Project menu" popovertarget="project-menu" aria-controls="project-menu">…</button>
+2026-10-19T18:45:24.996Z pw:api attempting click action
+2026-10-19T18:45:24.996Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:25.012Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:25.012Z pw:api   scrolling into view if needed
+2026-10-19T18:45:25.014Z pw:api   done scrolling
+2026-10-19T18:45:25.026Z pw:api   performing click action
+2026-10-19T18:45:25.054Z pw:api   click action done
+2026-10-19T18:45:25.054Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:25.058Z pw:api   navigations have finished
+2026-10-19T18:45:25.089Z pw:api <= locator.click succeeded
+2026-10-19T18:45:25.091Z pw:api => locator.click started
+2026-10-19T18:45:25.110Z pw:api waiting for locator('#project-library')
+2026-10-19T18:45:25.142Z pw:api   locator resolved to <button type="button" id="project-library" aria-haspopup="dialog">Projects in this browser…</button>
+2026-10-19T18:45:25.148Z pw:api attempting click action
+2026-10-19T18:45:25.148Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:25.163Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:25.163Z pw:api   scrolling into view if needed
+2026-10-19T18:45:25.166Z pw:api   done scrolling
+2026-10-19T18:45:25.187Z pw:api   performing click action
+2026-10-19T18:45:25.224Z pw:api   click action done
+2026-10-19T18:45:25.224Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:25.238Z pw:api   navigations have finished
+2026-10-19T18:45:25.310Z pw:api <= locator.click succeeded
+2026-10-19T18:45:25.310Z pw:api => locator.waitFor started
+2026-10-19T18:45:25.333Z pw:api waiting for getByLabel('Search projects', { exact: true }) to be visible
+2026-10-19T18:45:25.354Z pw:api   locator resolved to visible <input type="search" aria-label="Search projects"/>
+2026-10-19T18:45:25.367Z pw:api <= locator.waitFor succeeded
+2026-10-19T18:45:25.367Z pw:api => locator.fill started
+2026-10-19T18:45:25.376Z pw:api waiting for getByLabel('Search projects', { exact: true })
+2026-10-19T18:45:25.385Z pw:api   locator resolved to <input type="search" aria-label="Search projects"/>
+2026-10-19T18:45:25.387Z pw:api   fill("sprig")
+2026-10-19T18:45:25.387Z pw:api attempting fill action
+2026-10-19T18:45:25.393Z pw:api   waiting for element to be visible, enabled and editable
+2026-10-19T18:45:25.410Z pw:api <= locator.fill succeeded
+2026-10-19T18:45:25.410Z pw:api => locator.waitFor started
+2026-10-19T18:45:25.421Z pw:api waiting for getByRole('button', { name: 'Open Library sprig', exact: true }) to be visible
+2026-10-19T18:45:25.438Z pw:api   locator resolved to visible <button type="button">Open Library sprig</button>
+2026-10-19T18:45:25.446Z pw:api <= locator.waitFor succeeded
+2026-10-19T18:45:25.452Z pw:api => page.addScriptTag started
+2026-10-19T18:45:25.778Z pw:api <= page.addScriptTag succeeded
+2026-10-19T18:45:25.778Z pw:api => page.evaluate started
+2026-10-19T18:45:26.222Z pw:api <= page.evaluate succeeded
+2026-10-19T18:45:26.225Z pw:api => page.evaluate started
+2026-10-19T18:45:26.246Z pw:api <= page.evaluate succeeded
+2026-10-19T18:45:26.246Z pw:api => page.screenshot started
+2026-10-19T18:45:26.252Z pw:api taking page screenshot
+2026-10-19T18:45:26.257Z pw:api waiting for fonts to load...
+2026-10-19T18:45:26.266Z pw:api fonts loaded
+2026-10-19T18:45:26.342Z pw:api <= page.screenshot succeeded
+2026-10-19T18:45:26.344Z pw:api => locator.focus started
+2026-10-19T18:45:26.362Z pw:api waiting for getByRole('button', { name: 'Open Library sprig', exact: true })
+2026-10-19T18:45:26.380Z pw:api   locator resolved to <button type="button">Open Library sprig</button>
+2026-10-19T18:45:26.393Z pw:api <= locator.focus succeeded
+2026-10-19T18:45:26.395Z pw:api => keyboard.press started
+2026-10-19T18:45:26.492Z pw:api <= keyboard.press succeeded
+2026-10-19T18:45:26.493Z pw:api => locator.click started
+2026-10-19T18:45:26.502Z pw:api waiting for locator('#replace-confirm')
+2026-10-19T18:45:26.510Z pw:api   locator resolved to <button value="replace" class="primary" id="replace-confirm">Open project</button>
+2026-10-19T18:45:26.513Z pw:api attempting click action
+2026-10-19T18:45:26.513Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:26.532Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:26.532Z pw:api   scrolling into view if needed
+2026-10-19T18:45:26.535Z pw:api   done scrolling
+2026-10-19T18:45:26.556Z pw:api   performing click action
+2026-10-19T18:45:26.586Z pw:api   click action done
+2026-10-19T18:45:26.588Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:26.640Z pw:api   navigations have finished
+2026-10-19T18:45:26.662Z pw:api <= locator.click succeeded
+2026-10-19T18:45:26.663Z pw:api => page.waitForFunction started
+2026-10-19T18:45:26.723Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:26.724Z pw:api => page.evaluate started
+2026-10-19T18:45:26.756Z pw:api <= page.evaluate succeeded
+2026-10-19T18:45:26.758Z pw:api => page.evaluate started
+2026-10-19T18:45:26.786Z pw:api <= page.evaluate succeeded
+2026-10-19T18:45:26.786Z pw:api => page.waitForFunction started
+2026-10-19T18:45:26.806Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:26.806Z pw:api => page.evaluate started
+2026-10-19T18:45:26.849Z pw:api <= page.evaluate succeeded
+2026-10-19T18:45:26.850Z pw:api => browserContext.newPage started
+2026-10-19T18:45:26.965Z pw:api <= browserContext.newPage succeeded
+2026-10-19T18:45:26.967Z pw:api => page.goto started
+2026-10-19T18:45:26.977Z pw:api navigating to "http://127.0.0.1:8776/apps/web/dist/editor/studio/", waiting until "load"
+DIAGNOSTIC navigation request 3 GET http://127.0.0.1:8776/apps/web/dist/editor/studio/
+2026-10-19T18:45:27.029Z pw:api   "commit" event fired
+2026-10-19T18:45:27.029Z pw:api   navigated to "http://127.0.0.1:8776/apps/web/dist/editor/studio/"
+DIAGNOSTIC main navigation 3 http://127.0.0.1:8776/apps/web/dist/editor/studio/
+2026-10-19T18:45:27.226Z pw:api   "domcontentloaded" event fired
+2026-10-19T18:45:27.228Z pw:api   "load" event fired
+2026-10-19T18:45:27.265Z pw:api <= page.goto succeeded
+2026-10-19T18:45:27.268Z pw:api => page.waitForFunction started
+2026-10-19T18:45:27.395Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:27.396Z pw:api => page.waitForFunction started
+2026-10-19T18:45:27.413Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:27.414Z pw:api => page.evaluate started
+2026-10-19T18:45:27.437Z pw:api <= page.evaluate succeeded
+2026-10-19T18:45:27.438Z pw:api => locator.fill started
+2026-10-19T18:45:27.443Z pw:api waiting for locator('#project-name')
+2026-10-19T18:45:27.453Z pw:api   locator resolved to <input id="project-name" aria-label="Project name"/>
+2026-10-19T18:45:27.455Z pw:api   fill("Sprig from first tab")
+2026-10-19T18:45:27.455Z pw:api attempting fill action
+2026-10-19T18:45:27.460Z pw:api   waiting for element to be visible, enabled and editable
+2026-10-19T18:45:27.475Z pw:api <= locator.fill succeeded
+2026-10-19T18:45:27.475Z pw:api => locator.dispatchEvent started
+2026-10-19T18:45:27.485Z pw:api waiting for locator('#project-name')
+2026-10-19T18:45:27.499Z pw:api   locator resolved to <input id="project-name" aria-label="Project name"/>
+2026-10-19T18:45:27.511Z pw:api <= locator.dispatchEvent succeeded
+2026-10-19T18:45:27.511Z pw:api => page.waitForFunction started
+2026-10-19T18:45:27.777Z pw:api   "networkidle" event fired
+2026-10-19T18:45:27.792Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:27.793Z pw:api => locator.waitFor started
+2026-10-19T18:45:27.807Z pw:api waiting for locator('#recovery-conflict') to be visible
+2026-10-19T18:45:27.876Z pw:api   locator resolved to visible <section id="recovery-conflict" aria-label="Project save conflict">…</section>
+2026-10-19T18:45:27.880Z pw:api <= locator.waitFor succeeded
+2026-10-19T18:45:27.881Z pw:api => locator.fill started
+2026-10-19T18:45:27.886Z pw:api waiting for locator('#project-name')
+2026-10-19T18:45:27.894Z pw:api   locator resolved to <input id="project-name" aria-label="Project name"/>
+2026-10-19T18:45:27.898Z pw:api   fill("Sprig from second tab")
+2026-10-19T18:45:27.898Z pw:api attempting fill action
+2026-10-19T18:45:27.924Z pw:api   waiting for element to be visible, enabled and editable
+2026-10-19T18:45:27.997Z pw:api <= locator.fill succeeded
+2026-10-19T18:45:27.998Z pw:api => locator.dispatchEvent started
+2026-10-19T18:45:28.026Z pw:api waiting for locator('#project-name')
+2026-10-19T18:45:28.073Z pw:api   locator resolved to <input id="project-name" aria-label="Project name"/>
+2026-10-19T18:45:28.084Z pw:api <= locator.dispatchEvent succeeded
+2026-10-19T18:45:28.084Z pw:api => page.waitForFunction started
+2026-10-19T18:45:28.344Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:28.345Z pw:api => locator.click started
+2026-10-19T18:45:28.361Z pw:api waiting for getByRole('button', { name: 'Save a separate copy', exact: true })
+2026-10-19T18:45:28.389Z pw:api   locator resolved to <button type="button">Save a separate copy</button>
+2026-10-19T18:45:28.391Z pw:api attempting click action
+2026-10-19T18:45:28.391Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:28.414Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:28.414Z pw:api   scrolling into view if needed
+2026-10-19T18:45:28.415Z pw:api   done scrolling
+2026-10-19T18:45:28.457Z pw:api   performing click action
+2026-10-19T18:45:28.535Z pw:api   click action done
+2026-10-19T18:45:28.537Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:28.546Z pw:api   navigations have finished
+2026-10-19T18:45:28.615Z pw:api <= locator.click succeeded
+2026-10-19T18:45:28.615Z pw:api => page.waitForFunction started
+2026-10-19T18:45:28.667Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:28.667Z pw:api => page.reload started
+2026-10-19T18:45:28.676Z pw:api waiting for navigation until "load"
+DIAGNOSTIC navigation request 3 GET http://127.0.0.1:8776/apps/web/dist/editor/studio/
+2026-10-19T18:45:28.729Z pw:api   "commit" event fired
+2026-10-19T18:45:28.729Z pw:api   navigated to "http://127.0.0.1:8776/apps/web/dist/editor/studio/"
+2026-10-19T18:45:28.729Z pw:api   navigated to "http://127.0.0.1:8776/apps/web/dist/editor/studio/"
+DIAGNOSTIC main navigation 3 http://127.0.0.1:8776/apps/web/dist/editor/studio/
+2026-10-19T18:45:28.770Z pw:api   "domcontentloaded" event fired
+2026-10-19T18:45:28.781Z pw:api   "load" event fired
+2026-10-19T18:45:28.864Z pw:api <= page.reload succeeded
+2026-10-19T18:45:28.864Z pw:api => page.waitForFunction started
+2026-10-19T18:45:28.995Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:28.997Z pw:api => page.waitForFunction started
+2026-10-19T18:45:29.040Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:29.040Z pw:api => locator.click started
+2026-10-19T18:45:29.048Z pw:api waiting for getByRole('button', { name: 'Project menu', exact: true })
+2026-10-19T18:45:29.159Z pw:api   locator resolved to <button title="Project menu" aria-expanded="false" id="project-menu-toggle" aria-label="Project menu" popovertarget="project-menu" aria-controls="project-menu">…</button>
+2026-10-19T18:45:29.169Z pw:api attempting click action
+2026-10-19T18:45:29.169Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:29.179Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:29.179Z pw:api   scrolling into view if needed
+2026-10-19T18:45:29.182Z pw:api   done scrolling
+2026-10-19T18:45:29.203Z pw:api   performing click action
+2026-10-19T18:45:29.253Z pw:api   click action done
+2026-10-19T18:45:29.253Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:29.255Z pw:api   navigations have finished
+2026-10-19T18:45:29.271Z pw:api <= locator.click succeeded
+2026-10-19T18:45:29.272Z pw:api => locator.click started
+2026-10-19T18:45:29.288Z pw:api waiting for locator('#project-library')
+2026-10-19T18:45:29.302Z pw:api   locator resolved to <button type="button" id="project-library" aria-haspopup="dialog">Projects in this browser…</button>
+2026-10-19T18:45:29.307Z pw:api attempting click action
+2026-10-19T18:45:29.307Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:29.328Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:29.328Z pw:api   scrolling into view if needed
+2026-10-19T18:45:29.331Z pw:api   done scrolling
+2026-10-19T18:45:29.353Z pw:api   performing click action
+2026-10-19T18:45:29.370Z pw:api   "networkidle" event fired
+2026-10-19T18:45:29.407Z pw:api   click action done
+2026-10-19T18:45:29.407Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:29.414Z pw:api   navigations have finished
+2026-10-19T18:45:29.522Z pw:api <= locator.click succeeded
+2026-10-19T18:45:29.522Z pw:api => locator.waitFor started
+2026-10-19T18:45:29.598Z pw:api waiting for getByLabel('Search projects', { exact: true }) to be visible
+2026-10-19T18:45:29.664Z pw:api   locator resolved to visible <input type="search" aria-label="Search projects"/>
+2026-10-19T18:45:29.692Z pw:api <= locator.waitFor succeeded
+2026-10-19T18:45:29.693Z pw:api => locator.fill started
+2026-10-19T18:45:29.717Z pw:api waiting for getByLabel('Search projects', { exact: true })
+2026-10-19T18:45:29.730Z pw:api   locator resolved to <input type="search" aria-label="Search projects"/>
+2026-10-19T18:45:29.733Z pw:api   fill("Sprig")
+2026-10-19T18:45:29.733Z pw:api attempting fill action
+2026-10-19T18:45:29.740Z pw:api   waiting for element to be visible, enabled and editable
+2026-10-19T18:45:29.774Z pw:api <= locator.fill succeeded
+2026-10-19T18:45:29.775Z pw:api => locator.waitFor started
+2026-10-19T18:45:29.784Z pw:api waiting for getByRole('button', { name: 'Open Sprig from first tab', exact: true }) to be visible
+2026-10-19T18:45:29.810Z pw:api   locator resolved to visible <button type="button">Open Sprig from first tab</button>
+2026-10-19T18:45:29.818Z pw:api <= locator.waitFor succeeded
+2026-10-19T18:45:29.819Z pw:api => locator.click started
+2026-10-19T18:45:29.832Z pw:api waiting for getByRole('button', { name: 'Done', exact: true })
+2026-10-19T18:45:29.854Z pw:api   locator resolved to <button type="button">Done</button>
+2026-10-19T18:45:29.858Z pw:api attempting click action
+2026-10-19T18:45:29.859Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:29.880Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:29.880Z pw:api   scrolling into view if needed
+2026-10-19T18:45:29.882Z pw:api   done scrolling
+2026-10-19T18:45:29.892Z pw:api   performing click action
+2026-10-19T18:45:29.905Z pw:api   click action done
+2026-10-19T18:45:29.905Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:29.907Z pw:api   navigations have finished
+2026-10-19T18:45:29.913Z pw:api <= locator.click succeeded
+2026-10-19T18:45:29.914Z pw:api => page.reload started
+2026-10-19T18:45:29.921Z pw:api waiting for navigation until "load"
+DIAGNOSTIC navigation request 3 GET http://127.0.0.1:8776/apps/web/dist/editor/studio/
+2026-10-19T18:45:29.977Z pw:api   "commit" event fired
+2026-10-19T18:45:29.977Z pw:api   navigated to "http://127.0.0.1:8776/apps/web/dist/editor/studio/"
+2026-10-19T18:45:29.977Z pw:api   navigated to "http://127.0.0.1:8776/apps/web/dist/editor/studio/"
+DIAGNOSTIC main navigation 3 http://127.0.0.1:8776/apps/web/dist/editor/studio/
+2026-10-19T18:45:30.123Z pw:api   "domcontentloaded" event fired
+2026-10-19T18:45:30.124Z pw:api   "load" event fired
+2026-10-19T18:45:30.185Z pw:api <= page.reload succeeded
+2026-10-19T18:45:30.185Z pw:api => page.waitForFunction started
+2026-10-19T18:45:30.265Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:30.265Z pw:api => page.waitForFunction started
+2026-10-19T18:45:30.304Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:30.306Z pw:api => locator.fill started
+2026-10-19T18:45:30.316Z pw:api waiting for locator('#project-name')
+2026-10-19T18:45:30.323Z pw:api   locator resolved to <input id="project-name" aria-label="Project name"/>
+2026-10-19T18:45:30.325Z pw:api   fill("Latest shared sprig")
+2026-10-19T18:45:30.326Z pw:api attempting fill action
+2026-10-19T18:45:30.334Z pw:api   waiting for element to be visible, enabled and editable
+2026-10-19T18:45:30.372Z pw:api <= locator.fill succeeded
+2026-10-19T18:45:30.372Z pw:api => locator.dispatchEvent started
+2026-10-19T18:45:30.383Z pw:api waiting for locator('#project-name')
+2026-10-19T18:45:30.404Z pw:api   locator resolved to <input id="project-name" aria-label="Project name"/>
+2026-10-19T18:45:30.424Z pw:api <= locator.dispatchEvent succeeded
+2026-10-19T18:45:30.425Z pw:api => page.waitForFunction started
+2026-10-19T18:45:30.629Z pw:api   "networkidle" event fired
+2026-10-19T18:45:30.679Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:30.681Z pw:api => locator.waitFor started
+2026-10-19T18:45:30.688Z pw:api waiting for locator('#recovery-conflict') to be visible
+2026-10-19T18:45:30.813Z pw:api   locator resolved to visible <section id="recovery-conflict" aria-label="Project save conflict">…</section>
+2026-10-19T18:45:30.822Z pw:api <= locator.waitFor succeeded
+2026-10-19T18:45:30.822Z pw:api => locator.click started
+2026-10-19T18:45:30.829Z pw:api waiting for getByRole('button', { name: 'Open latest', exact: true })
+2026-10-19T18:45:30.853Z pw:api   locator resolved to <button type="button">Open latest</button>
+2026-10-19T18:45:30.863Z pw:api attempting click action
+2026-10-19T18:45:30.863Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:30.896Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:30.896Z pw:api   scrolling into view if needed
+2026-10-19T18:45:30.899Z pw:api   done scrolling
+2026-10-19T18:45:30.919Z pw:api   performing click action
+2026-10-19T18:45:30.936Z pw:api   click action done
+2026-10-19T18:45:30.936Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:30.937Z pw:api   navigations have finished
+2026-10-19T18:45:30.942Z pw:api <= locator.click succeeded
+2026-10-19T18:45:30.943Z pw:api => locator.click started
+2026-10-19T18:45:30.966Z pw:api waiting for locator('#replace-confirm')
+2026-10-19T18:45:30.979Z pw:api   locator resolved to <button value="replace" class="primary" id="replace-confirm">Open project</button>
+2026-10-19T18:45:30.983Z pw:api attempting click action
+2026-10-19T18:45:30.984Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:31.015Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:31.015Z pw:api   scrolling into view if needed
+2026-10-19T18:45:31.017Z pw:api   done scrolling
+2026-10-19T18:45:31.030Z pw:api   performing click action
+2026-10-19T18:45:31.079Z pw:api   click action done
+2026-10-19T18:45:31.080Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:31.124Z pw:api   navigations have finished
+2026-10-19T18:45:31.147Z pw:api <= locator.click succeeded
+2026-10-19T18:45:31.147Z pw:api => page.waitForFunction started
+2026-10-19T18:45:31.167Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:31.167Z pw:api => locator.isVisible started
+2026-10-19T18:45:31.172Z pw:api   checking visibility of locator('#recovery-conflict')
+2026-10-19T18:45:31.182Z pw:api <= locator.isVisible succeeded
+2026-10-19T18:45:31.182Z pw:api => locator.click started
+2026-10-19T18:45:31.188Z pw:api waiting for getByRole('button', { name: 'Project menu', exact: true })
+2026-10-19T18:45:31.208Z pw:api   locator resolved to <button title="Project menu" aria-expanded="false" id="project-menu-toggle" aria-label="Project menu" popovertarget="project-menu" aria-controls="project-menu">…</button>
+2026-10-19T18:45:31.210Z pw:api attempting click action
+2026-10-19T18:45:31.210Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:31.228Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:31.228Z pw:api   scrolling into view if needed
+2026-10-19T18:45:31.230Z pw:api   done scrolling
+2026-10-19T18:45:31.248Z pw:api   performing click action
+2026-10-19T18:45:31.271Z pw:api   click action done
+2026-10-19T18:45:31.271Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:31.273Z pw:api   navigations have finished
+2026-10-19T18:45:31.280Z pw:api <= locator.click succeeded
+2026-10-19T18:45:31.280Z pw:api => locator.click started
+2026-10-19T18:45:31.290Z pw:api waiting for getByRole('button', { name: 'New', exact: true })
+2026-10-19T18:45:31.299Z pw:api   locator resolved to <button id="new">New</button>
+2026-10-19T18:45:31.304Z pw:api attempting click action
+2026-10-19T18:45:31.304Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:31.312Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:31.312Z pw:api   scrolling into view if needed
+2026-10-19T18:45:31.316Z pw:api   done scrolling
+2026-10-19T18:45:31.339Z pw:api   performing click action
+2026-10-19T18:45:31.362Z pw:api   click action done
+2026-10-19T18:45:31.362Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:31.363Z pw:api   navigations have finished
+2026-10-19T18:45:31.382Z pw:api <= locator.click succeeded
+2026-10-19T18:45:31.382Z pw:api => locator.click started
+2026-10-19T18:45:31.389Z pw:api waiting for locator('#replace-confirm')
+2026-10-19T18:45:31.394Z pw:api   locator resolved to <button value="replace" class="primary" id="replace-confirm">Create project</button>
+2026-10-19T18:45:31.399Z pw:api attempting click action
+2026-10-19T18:45:31.399Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:31.415Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:31.415Z pw:api   scrolling into view if needed
+2026-10-19T18:45:31.415Z pw:api   done scrolling
+2026-10-19T18:45:31.436Z pw:api   performing click action
+2026-10-19T18:45:31.487Z pw:api   click action done
+2026-10-19T18:45:31.487Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:31.498Z pw:api   navigations have finished
+2026-10-19T18:45:31.518Z pw:api <= locator.click succeeded
+2026-10-19T18:45:31.518Z pw:api => page.waitForFunction started
+2026-10-19T18:45:31.551Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:31.552Z pw:api => page.waitForFunction started
+2026-10-19T18:45:31.745Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:31.746Z pw:api => locator.click started
+2026-10-19T18:45:31.762Z pw:api waiting for getByRole('button', { name: 'Project menu', exact: true })
+2026-10-19T18:45:31.779Z pw:api   locator resolved to <button title="Project menu" aria-expanded="false" id="project-menu-toggle" aria-label="Project menu" popovertarget="project-menu" aria-controls="project-menu">…</button>
+2026-10-19T18:45:31.781Z pw:api attempting click action
+2026-10-19T18:45:31.781Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:31.795Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:31.795Z pw:api   scrolling into view if needed
+2026-10-19T18:45:31.796Z pw:api   done scrolling
+2026-10-19T18:45:31.808Z pw:api   performing click action
+2026-10-19T18:45:31.820Z pw:api   click action done
+2026-10-19T18:45:31.820Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:31.822Z pw:api   navigations have finished
+2026-10-19T18:45:31.831Z pw:api <= locator.click succeeded
+2026-10-19T18:45:31.831Z pw:api => locator.click started
+2026-10-19T18:45:31.846Z pw:api waiting for locator('#project-library')
+2026-10-19T18:45:31.860Z pw:api   locator resolved to <button type="button" id="project-library" aria-haspopup="dialog">Projects in this browser…</button>
+2026-10-19T18:45:31.879Z pw:api attempting click action
+2026-10-19T18:45:31.879Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:31.894Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:31.894Z pw:api   scrolling into view if needed
+2026-10-19T18:45:31.895Z pw:api   done scrolling
+2026-10-19T18:45:31.905Z pw:api   performing click action
+2026-10-19T18:45:31.934Z pw:api   click action done
+2026-10-19T18:45:31.934Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:31.944Z pw:api   navigations have finished
+2026-10-19T18:45:31.962Z pw:api <= locator.click succeeded
+2026-10-19T18:45:31.962Z pw:api => locator.waitFor started
+2026-10-19T18:45:31.973Z pw:api waiting for getByLabel('Search projects', { exact: true }) to be visible
+2026-10-19T18:45:32.002Z pw:api   locator resolved to visible <input type="search" aria-label="Search projects"/>
+2026-10-19T18:45:32.032Z pw:api <= locator.waitFor succeeded
+2026-10-19T18:45:32.036Z pw:api => locator.fill started
+2026-10-19T18:45:32.055Z pw:api waiting for getByLabel('Search projects', { exact: true })
+2026-10-19T18:45:32.075Z pw:api   locator resolved to <input type="search" aria-label="Search projects"/>
+2026-10-19T18:45:32.079Z pw:api   fill("Latest shared")
+2026-10-19T18:45:32.079Z pw:api attempting fill action
+2026-10-19T18:45:32.100Z pw:api   waiting for element to be visible, enabled and editable
+2026-10-19T18:45:32.122Z pw:api <= locator.fill succeeded
+2026-10-19T18:45:32.123Z pw:api => locator.waitFor started
+2026-10-19T18:45:32.135Z pw:api waiting for getByRole('button', { name: 'Open Latest shared sprig', exact: true }) to be visible
+2026-10-19T18:45:32.199Z pw:api   locator resolved to visible <button type="button">Open Latest shared sprig</button>
+2026-10-19T18:45:32.228Z pw:api <= locator.waitFor succeeded
+2026-10-19T18:45:32.230Z pw:api => page.screenshot started
+2026-10-19T18:45:32.246Z pw:api taking page screenshot
+2026-10-19T18:45:32.253Z pw:api waiting for fonts to load...
+2026-10-19T18:45:32.272Z pw:api fonts loaded
+2026-10-19T18:45:32.355Z pw:api <= page.screenshot succeeded
+2026-10-19T18:45:32.357Z pw:api => tracing.stop started
+2026-10-19T18:45:33.028Z pw:api <= tracing.stop succeeded
+2026-10-19T18:45:33.030Z pw:api => browserContext.close started
+2026-10-19T18:45:33.060Z pw:api <= browserContext.close succeeded
+2026-10-19T18:45:33.061Z pw:api => browser.newContext started
+2026-10-19T18:45:33.228Z pw:api <= browser.newContext succeeded
+2026-10-19T18:45:33.229Z pw:api => tracing.start started
+2026-10-19T18:45:33.235Z pw:api <= tracing.start succeeded
+2026-10-19T18:45:33.235Z pw:api => browserContext.newPage started
+2026-10-19T18:45:33.501Z pw:api <= browserContext.newPage succeeded
+2026-10-19T18:45:33.503Z pw:api => browserContext.addInitScript started
+2026-10-19T18:45:33.546Z pw:api <= browserContext.addInitScript succeeded
+2026-10-19T18:45:33.547Z pw:api => page.goto started
+2026-10-19T18:45:33.579Z pw:api navigating to "http://127.0.0.1:8776/apps/web/dist/editor/studio/", waiting until "load"
+DIAGNOSTIC navigation request 4 GET http://127.0.0.1:8776/apps/web/dist/editor/studio/
+2026-10-19T18:45:33.644Z pw:api   "commit" event fired
+2026-10-19T18:45:33.644Z pw:api   navigated to "http://127.0.0.1:8776/apps/web/dist/editor/studio/"
+DIAGNOSTIC main navigation 4 http://127.0.0.1:8776/apps/web/dist/editor/studio/
+2026-10-19T18:45:34.059Z pw:api   "domcontentloaded" event fired
+2026-10-19T18:45:34.080Z pw:api   "load" event fired
+2026-10-19T18:45:34.143Z pw:api <= page.goto succeeded
+2026-10-19T18:45:34.143Z pw:api => page.waitForFunction started
+2026-10-19T18:45:34.302Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:34.303Z pw:api => page.waitForFunction started
+2026-10-19T18:45:34.438Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:34.439Z pw:api => locator.setInputFiles started
+2026-10-19T18:45:34.446Z pw:api waiting for locator('#file')
+2026-10-19T18:45:34.509Z pw:api   locator resolved to <input id="file" hidden="" type="file" accept=".json,.evir-project,.riv,application/json"/>
+2026-10-19T18:45:34.575Z pw:api <= locator.setInputFiles succeeded
+2026-10-19T18:45:34.576Z pw:api => locator.click started
+2026-10-19T18:45:34.587Z pw:api waiting for locator('#replace-confirm')
+2026-10-19T18:45:34.599Z pw:api   locator resolved to <button value="replace" class="primary" id="replace-confirm">Open project</button>
+2026-10-19T18:45:34.605Z pw:api attempting click action
+2026-10-19T18:45:34.605Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:34.631Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:34.631Z pw:api   scrolling into view if needed
+2026-10-19T18:45:34.634Z pw:api   done scrolling
+2026-10-19T18:45:34.646Z pw:api   performing click action
+2026-10-19T18:45:34.684Z pw:api   "networkidle" event fired
+2026-10-19T18:45:34.689Z pw:api   click action done
+2026-10-19T18:45:34.692Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:34.698Z pw:api   navigations have finished
+2026-10-19T18:45:34.712Z pw:api <= locator.click succeeded
+2026-10-19T18:45:34.715Z pw:api => page.waitForFunction started
+2026-10-19T18:45:34.735Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:34.735Z pw:api => page.waitForFunction started
+2026-10-19T18:45:34.950Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:34.951Z pw:api => locator.setInputFiles started
+2026-10-19T18:45:34.969Z pw:api waiting for locator('#file')
+2026-10-19T18:45:34.986Z pw:api   locator resolved to <input id="file" hidden="" type="file" accept=".json,.evir-project,.riv,application/json"/>
+2026-10-19T18:45:35.025Z pw:api <= locator.setInputFiles succeeded
+2026-10-19T18:45:35.025Z pw:api => locator.click started
+2026-10-19T18:45:35.044Z pw:api waiting for locator('#replace-confirm')
+2026-10-19T18:45:35.070Z pw:api   locator resolved to <button value="replace" class="primary" id="replace-confirm">Open project</button>
+2026-10-19T18:45:35.078Z pw:api attempting click action
+2026-10-19T18:45:35.078Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:35.308Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:35.308Z pw:api   scrolling into view if needed
+2026-10-19T18:45:35.310Z pw:api   done scrolling
+2026-10-19T18:45:35.335Z pw:api   performing click action
+2026-10-19T18:45:35.344Z pw:api   click action done
+2026-10-19T18:45:35.344Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:35.393Z pw:api   navigations have finished
+2026-10-19T18:45:35.402Z pw:api <= locator.click succeeded
+2026-10-19T18:45:35.403Z pw:api => page.waitForFunction started
+2026-10-19T18:45:35.424Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:35.424Z pw:api => page.waitForFunction started
+2026-10-19T18:45:35.666Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:35.669Z pw:api => locator.click started
+2026-10-19T18:45:35.686Z pw:api waiting for getByRole('button', { name: 'Project menu', exact: true })
+2026-10-19T18:45:35.717Z pw:api   locator resolved to <button title="Project menu" aria-expanded="false" id="project-menu-toggle" aria-label="Project menu" popovertarget="project-menu" aria-controls="project-menu">…</button>
+2026-10-19T18:45:35.720Z pw:api attempting click action
+2026-10-19T18:45:35.721Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:35.731Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:35.731Z pw:api   scrolling into view if needed
+2026-10-19T18:45:35.732Z pw:api   done scrolling
+2026-10-19T18:45:35.755Z pw:api   performing click action
+2026-10-19T18:45:35.793Z pw:api   click action done
+2026-10-19T18:45:35.793Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:35.795Z pw:api   navigations have finished
+2026-10-19T18:45:35.803Z pw:api <= locator.click succeeded
+2026-10-19T18:45:35.803Z pw:api => locator.click started
+2026-10-19T18:45:35.814Z pw:api waiting for locator('#project-library')
+2026-10-19T18:45:35.819Z pw:api   locator resolved to <button type="button" id="project-library" aria-haspopup="dialog">Projects in this browser…</button>
+2026-10-19T18:45:35.821Z pw:api attempting click action
+2026-10-19T18:45:35.821Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:35.846Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:35.846Z pw:api   scrolling into view if needed
+2026-10-19T18:45:35.847Z pw:api   done scrolling
+2026-10-19T18:45:35.859Z pw:api   performing click action
+2026-10-19T18:45:35.891Z pw:api   click action done
+2026-10-19T18:45:35.891Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:35.899Z pw:api   navigations have finished
+2026-10-19T18:45:35.933Z pw:api <= locator.click succeeded
+2026-10-19T18:45:35.934Z pw:api => locator.waitFor started
+2026-10-19T18:45:35.949Z pw:api waiting for getByLabel('Search projects', { exact: true }) to be visible
+2026-10-19T18:45:35.968Z pw:api   locator resolved to visible <input type="search" aria-label="Search projects"/>
+2026-10-19T18:45:35.976Z pw:api <= locator.waitFor succeeded
+2026-10-19T18:45:35.981Z pw:api => locator.fill started
+2026-10-19T18:45:35.990Z pw:api waiting for getByLabel('Search projects', { exact: true })
+2026-10-19T18:45:35.998Z pw:api   locator resolved to <input type="search" aria-label="Search projects"/>
+2026-10-19T18:45:36.001Z pw:api   fill("sprig")
+2026-10-19T18:45:36.001Z pw:api attempting fill action
+2026-10-19T18:45:36.006Z pw:api   waiting for element to be visible, enabled and editable
+2026-10-19T18:45:36.030Z pw:api <= locator.fill succeeded
+2026-10-19T18:45:36.030Z pw:api => locator.waitFor started
+2026-10-19T18:45:36.042Z pw:api waiting for getByRole('button', { name: 'Open Library sprig', exact: true }) to be visible
+2026-10-19T18:45:36.054Z pw:api   locator resolved to visible <button type="button">Open Library sprig</button>
+2026-10-19T18:45:36.059Z pw:api <= locator.waitFor succeeded
+2026-10-19T18:45:36.065Z pw:api => page.addScriptTag started
+2026-10-19T18:45:36.408Z pw:api <= page.addScriptTag succeeded
+2026-10-19T18:45:36.408Z pw:api => page.evaluate started
+2026-10-19T18:45:36.761Z pw:api <= page.evaluate succeeded
+2026-10-19T18:45:36.765Z pw:api => page.evaluate started
+2026-10-19T18:45:36.794Z pw:api <= page.evaluate succeeded
+2026-10-19T18:45:36.795Z pw:api => page.screenshot started
+2026-10-19T18:45:36.801Z pw:api taking page screenshot
+2026-10-19T18:45:36.808Z pw:api waiting for fonts to load...
+2026-10-19T18:45:36.812Z pw:api fonts loaded
+2026-10-19T18:45:36.893Z pw:api <= page.screenshot succeeded
+2026-10-19T18:45:36.896Z pw:api => locator.focus started
+2026-10-19T18:45:36.903Z pw:api waiting for getByRole('button', { name: 'Open Library sprig', exact: true })
+2026-10-19T18:45:36.928Z pw:api   locator resolved to <button type="button">Open Library sprig</button>
+2026-10-19T18:45:36.948Z pw:api <= locator.focus succeeded
+2026-10-19T18:45:36.949Z pw:api => keyboard.press started
+2026-10-19T18:45:37.001Z pw:api <= keyboard.press succeeded
+2026-10-19T18:45:37.003Z pw:api => locator.click started
+2026-10-19T18:45:37.012Z pw:api waiting for locator('#replace-confirm')
+2026-10-19T18:45:37.030Z pw:api   locator resolved to <button value="replace" class="primary" id="replace-confirm">Open project</button>
+2026-10-19T18:45:37.031Z pw:api attempting click action
+2026-10-19T18:45:37.032Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:37.062Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:37.062Z pw:api   scrolling into view if needed
+2026-10-19T18:45:37.063Z pw:api   done scrolling
+2026-10-19T18:45:37.072Z pw:api   performing click action
+2026-10-19T18:45:37.099Z pw:api   click action done
+2026-10-19T18:45:37.099Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:37.118Z pw:api   navigations have finished
+2026-10-19T18:45:37.129Z pw:api <= locator.click succeeded
+2026-10-19T18:45:37.130Z pw:api => page.waitForFunction started
+2026-10-19T18:45:37.156Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:37.158Z pw:api => page.evaluate started
+2026-10-19T18:45:37.188Z pw:api <= page.evaluate succeeded
+2026-10-19T18:45:37.190Z pw:api => page.evaluate started
+2026-10-19T18:45:37.223Z pw:api <= page.evaluate succeeded
+2026-10-19T18:45:37.224Z pw:api => page.waitForFunction started
+2026-10-19T18:45:37.239Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:37.239Z pw:api => page.evaluate started
+2026-10-19T18:45:37.276Z pw:api <= page.evaluate succeeded
+2026-10-19T18:45:37.277Z pw:api => browserContext.newPage started
+2026-10-19T18:45:37.443Z pw:api <= browserContext.newPage succeeded
+2026-10-19T18:45:37.444Z pw:api => page.goto started
+2026-10-19T18:45:37.455Z pw:api navigating to "http://127.0.0.1:8776/apps/web/dist/editor/studio/", waiting until "load"
+DIAGNOSTIC navigation request 4 GET http://127.0.0.1:8776/apps/web/dist/editor/studio/
+2026-10-19T18:45:37.487Z pw:api   "commit" event fired
+2026-10-19T18:45:37.487Z pw:api   navigated to "http://127.0.0.1:8776/apps/web/dist/editor/studio/"
+DIAGNOSTIC main navigation 4 http://127.0.0.1:8776/apps/web/dist/editor/studio/
+2026-10-19T18:45:37.716Z pw:api   "domcontentloaded" event fired
+2026-10-19T18:45:37.727Z pw:api   "load" event fired
+2026-10-19T18:45:37.756Z pw:api <= page.goto succeeded
+2026-10-19T18:45:37.757Z pw:api => page.waitForFunction started
+2026-10-19T18:45:37.876Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:37.878Z pw:api => page.waitForFunction started
+2026-10-19T18:45:37.899Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:37.899Z pw:api => page.evaluate started
+2026-10-19T18:45:37.926Z pw:api <= page.evaluate succeeded
+2026-10-19T18:45:37.926Z pw:api => locator.fill started
+2026-10-19T18:45:37.934Z pw:api waiting for locator('#project-name')
+2026-10-19T18:45:37.946Z pw:api   locator resolved to <input id="project-name" aria-label="Project name"/>
+2026-10-19T18:45:37.950Z pw:api   fill("Sprig from first tab")
+2026-10-19T18:45:37.950Z pw:api attempting fill action
+2026-10-19T18:45:37.954Z pw:api   waiting for element to be visible, enabled and editable
+2026-10-19T18:45:37.993Z pw:api <= locator.fill succeeded
+2026-10-19T18:45:37.994Z pw:api => locator.dispatchEvent started
+2026-10-19T18:45:38.008Z pw:api waiting for locator('#project-name')
+2026-10-19T18:45:38.043Z pw:api   locator resolved to <input id="project-name" aria-label="Project name"/>
+2026-10-19T18:45:38.068Z pw:api <= locator.dispatchEvent succeeded
+2026-10-19T18:45:38.069Z pw:api => page.waitForFunction started
+2026-10-19T18:45:38.276Z pw:api   "networkidle" event fired
+2026-10-19T18:45:38.306Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:38.306Z pw:api => locator.fill started
+2026-10-19T18:45:38.324Z pw:api waiting for locator('#project-name')
+2026-10-19T18:45:38.370Z pw:api   locator resolved to <input id="project-name" aria-label="Project name"/>
+2026-10-19T18:45:38.375Z pw:api   fill("Sprig from second tab")
+2026-10-19T18:45:38.375Z pw:api attempting fill action
+2026-10-19T18:45:38.387Z pw:api   waiting for element to be visible, enabled and editable
+2026-10-19T18:45:38.424Z pw:api <= locator.fill succeeded
+2026-10-19T18:45:38.426Z pw:api => locator.dispatchEvent started
+2026-10-19T18:45:38.438Z pw:api waiting for locator('#project-name')
+2026-10-19T18:45:38.468Z pw:api   locator resolved to <input id="project-name" aria-label="Project name"/>
+2026-10-19T18:45:38.488Z pw:api <= locator.dispatchEvent succeeded
+2026-10-19T18:45:38.488Z pw:api => page.waitForFunction started
+2026-10-19T18:45:38.742Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:38.742Z pw:api => locator.click started
+2026-10-19T18:45:38.752Z pw:api waiting for getByRole('button', { name: 'Save a separate copy', exact: true })
+2026-10-19T18:45:38.786Z pw:api   locator resolved to <button type="button">Save a separate copy</button>
+2026-10-19T18:45:38.788Z pw:api attempting click action
+2026-10-19T18:45:38.788Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:38.811Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:38.812Z pw:api   scrolling into view if needed
+2026-10-19T18:45:38.813Z pw:api   done scrolling
+2026-10-19T18:45:38.825Z pw:api   performing click action
+2026-10-19T18:45:38.857Z pw:api   click action done
+2026-10-19T18:45:38.857Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:38.861Z pw:api   navigations have finished
+2026-10-19T18:45:38.890Z pw:api <= locator.click succeeded
+2026-10-19T18:45:38.891Z pw:api => page.waitForFunction started
+2026-10-19T18:45:38.914Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:38.915Z pw:api => page.reload started
+2026-10-19T18:45:38.921Z pw:api waiting for navigation until "load"
+DIAGNOSTIC navigation request 4 GET http://127.0.0.1:8776/apps/web/dist/editor/studio/
+2026-10-19T18:45:38.982Z pw:api   "commit" event fired
+2026-10-19T18:45:38.982Z pw:api   navigated to "http://127.0.0.1:8776/apps/web/dist/editor/studio/"
+2026-10-19T18:45:38.982Z pw:api   navigated to "http://127.0.0.1:8776/apps/web/dist/editor/studio/"
+DIAGNOSTIC main navigation 4 http://127.0.0.1:8776/apps/web/dist/editor/studio/
+2026-10-19T18:45:39.043Z pw:api   "domcontentloaded" event fired
+2026-10-19T18:45:39.058Z pw:api   "load" event fired
+2026-10-19T18:45:39.127Z pw:api <= page.reload succeeded
+2026-10-19T18:45:39.127Z pw:api => page.waitForFunction started
+2026-10-19T18:45:39.273Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:39.273Z pw:api => page.waitForFunction started
+2026-10-19T18:45:39.300Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:39.301Z pw:api => locator.click started
+2026-10-19T18:45:39.309Z pw:api waiting for getByRole('button', { name: 'Project menu', exact: true })
+2026-10-19T18:45:39.392Z pw:api   locator resolved to <button title="Project menu" aria-expanded="false" id="project-menu-toggle" aria-label="Project menu" popovertarget="project-menu" aria-controls="project-menu">…</button>
+2026-10-19T18:45:39.394Z pw:api attempting click action
+2026-10-19T18:45:39.394Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:39.459Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:39.460Z pw:api   scrolling into view if needed
+2026-10-19T18:45:39.463Z pw:api   done scrolling
+2026-10-19T18:45:39.490Z pw:api   performing click action
+2026-10-19T18:45:39.506Z pw:api   click action done
+2026-10-19T18:45:39.506Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:39.509Z pw:api   navigations have finished
+2026-10-19T18:45:39.519Z pw:api <= locator.click succeeded
+2026-10-19T18:45:39.519Z pw:api => locator.click started
+2026-10-19T18:45:39.536Z pw:api waiting for locator('#project-library')
+2026-10-19T18:45:39.549Z pw:api   locator resolved to <button type="button" id="project-library" aria-haspopup="dialog">Projects in this browser…</button>
+2026-10-19T18:45:39.552Z pw:api attempting click action
+2026-10-19T18:45:39.552Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:39.562Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:39.562Z pw:api   scrolling into view if needed
+2026-10-19T18:45:39.566Z pw:api   done scrolling
+2026-10-19T18:45:39.582Z pw:api   performing click action
+2026-10-19T18:45:39.609Z pw:api   click action done
+2026-10-19T18:45:39.610Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:39.650Z pw:api   navigations have finished
+2026-10-19T18:45:39.655Z pw:api   "networkidle" event fired
+2026-10-19T18:45:39.662Z pw:api <= locator.click succeeded
+2026-10-19T18:45:39.662Z pw:api => locator.waitFor started
+2026-10-19T18:45:39.682Z pw:api waiting for getByLabel('Search projects', { exact: true }) to be visible
+2026-10-19T18:45:39.705Z pw:api   locator resolved to visible <input type="search" aria-label="Search projects"/>
+2026-10-19T18:45:39.731Z pw:api <= locator.waitFor succeeded
+2026-10-19T18:45:39.731Z pw:api => locator.fill started
+2026-10-19T18:45:39.746Z pw:api waiting for getByLabel('Search projects', { exact: true })
+2026-10-19T18:45:39.772Z pw:api   locator resolved to <input type="search" aria-label="Search projects"/>
+2026-10-19T18:45:39.778Z pw:api   fill("Sprig")
+2026-10-19T18:45:39.779Z pw:api attempting fill action
+2026-10-19T18:45:39.794Z pw:api   waiting for element to be visible, enabled and editable
+2026-10-19T18:45:39.826Z pw:api <= locator.fill succeeded
+2026-10-19T18:45:39.826Z pw:api => locator.waitFor started
+2026-10-19T18:45:39.851Z pw:api waiting for getByRole('button', { name: 'Open Sprig from first tab', exact: true }) to be visible
+2026-10-19T18:45:39.864Z pw:api   locator resolved to visible <button type="button">Open Sprig from first tab</button>
+2026-10-19T18:45:39.884Z pw:api <= locator.waitFor succeeded
+2026-10-19T18:45:39.884Z pw:api => locator.click started
+2026-10-19T18:45:39.898Z pw:api waiting for getByRole('button', { name: 'Done', exact: true })
+2026-10-19T18:45:39.910Z pw:api   locator resolved to <button type="button">Done</button>
+2026-10-19T18:45:39.912Z pw:api attempting click action
+2026-10-19T18:45:39.912Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:39.929Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:39.929Z pw:api   scrolling into view if needed
+2026-10-19T18:45:39.930Z pw:api   done scrolling
+2026-10-19T18:45:39.940Z pw:api   performing click action
+2026-10-19T18:45:39.957Z pw:api   click action done
+2026-10-19T18:45:39.957Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:39.959Z pw:api   navigations have finished
+2026-10-19T18:45:39.965Z pw:api <= locator.click succeeded
+2026-10-19T18:45:39.966Z pw:api => page.reload started
+2026-10-19T18:45:39.975Z pw:api waiting for navigation until "load"
+DIAGNOSTIC navigation request 4 GET http://127.0.0.1:8776/apps/web/dist/editor/studio/
+2026-10-19T18:45:40.041Z pw:api   "commit" event fired
+2026-10-19T18:45:40.041Z pw:api   navigated to "http://127.0.0.1:8776/apps/web/dist/editor/studio/"
+2026-10-19T18:45:40.041Z pw:api   navigated to "http://127.0.0.1:8776/apps/web/dist/editor/studio/"
+DIAGNOSTIC main navigation 4 http://127.0.0.1:8776/apps/web/dist/editor/studio/
+2026-10-19T18:45:40.093Z pw:api   "domcontentloaded" event fired
+2026-10-19T18:45:40.096Z pw:api   "load" event fired
+2026-10-19T18:45:40.239Z pw:api <= page.reload succeeded
+2026-10-19T18:45:40.240Z pw:api => page.waitForFunction started
+2026-10-19T18:45:40.363Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:40.364Z pw:api => page.waitForFunction started
+2026-10-19T18:45:40.390Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:40.391Z pw:api => locator.fill started
+2026-10-19T18:45:40.400Z pw:api waiting for locator('#project-name')
+2026-10-19T18:45:40.408Z pw:api   locator resolved to <input id="project-name" aria-label="Project name"/>
+2026-10-19T18:45:40.411Z pw:api   fill("Latest shared sprig")
+2026-10-19T18:45:40.411Z pw:api attempting fill action
+2026-10-19T18:45:40.417Z pw:api   waiting for element to be visible, enabled and editable
+2026-10-19T18:45:40.435Z pw:api <= locator.fill succeeded
+2026-10-19T18:45:40.436Z pw:api => locator.dispatchEvent started
+2026-10-19T18:45:40.455Z pw:api waiting for locator('#project-name')
+2026-10-19T18:45:40.469Z pw:api   locator resolved to <input id="project-name" aria-label="Project name"/>
+2026-10-19T18:45:40.479Z pw:api <= locator.dispatchEvent succeeded
+2026-10-19T18:45:40.480Z pw:api => page.waitForFunction started
+2026-10-19T18:45:40.743Z pw:api   "networkidle" event fired
+2026-10-19T18:45:40.745Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:40.746Z pw:api => locator.fill started
+2026-10-19T18:45:40.769Z pw:api waiting for locator('#project-name')
+2026-10-19T18:45:40.872Z pw:api   locator resolved to <input id="project-name" aria-label="Project name"/>
+2026-10-19T18:45:40.876Z pw:api   fill("Stale local edits")
+2026-10-19T18:45:40.876Z pw:api attempting fill action
+2026-10-19T18:45:40.896Z pw:api   waiting for element to be visible, enabled and editable
+2026-10-19T18:45:40.948Z pw:api <= locator.fill succeeded
+2026-10-19T18:45:40.948Z pw:api => locator.dispatchEvent started
+2026-10-19T18:45:40.962Z pw:api waiting for locator('#project-name')
+2026-10-19T18:45:40.989Z pw:api   locator resolved to <input id="project-name" aria-label="Project name"/>
+2026-10-19T18:45:41.006Z pw:api <= locator.dispatchEvent succeeded
+2026-10-19T18:45:41.006Z pw:api => locator.waitFor started
+2026-10-19T18:45:41.017Z pw:api waiting for locator('#recovery-conflict') to be visible
+2026-10-19T18:45:41.027Z pw:api   locator resolved to hidden <section hidden="" id="recovery-conflict" aria-label="Project save conflict">…</section>
+2026-10-19T18:45:41.065Z pw:api   locator resolved to hidden <section hidden="" id="recovery-conflict" aria-label="Project save conflict">…</section>
+2026-10-19T18:45:41.127Z pw:api   locator resolved to hidden <section hidden="" id="recovery-conflict" aria-label="Project save conflict">…</section>
+2026-10-19T18:45:41.243Z pw:api   locator resolved to hidden <section hidden="" id="recovery-conflict" aria-label="Project save conflict">…</section>
+2026-10-19T18:45:41.357Z pw:api   locator resolved to visible <section id="recovery-conflict" aria-label="Project save conflict">…</section>
+2026-10-19T18:45:41.367Z pw:api <= locator.waitFor succeeded
+2026-10-19T18:45:41.368Z pw:api => locator.click started
+2026-10-19T18:45:41.376Z pw:api waiting for getByRole('button', { name: 'Open latest', exact: true })
+2026-10-19T18:45:41.401Z pw:api   locator resolved to <button type="button">Open latest</button>
+2026-10-19T18:45:41.403Z pw:api attempting click action
+2026-10-19T18:45:41.403Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:41.412Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:41.413Z pw:api   scrolling into view if needed
+2026-10-19T18:45:41.414Z pw:api   done scrolling
+2026-10-19T18:45:41.432Z pw:api   performing click action
+2026-10-19T18:45:41.531Z pw:api   click action done
+2026-10-19T18:45:41.531Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:41.538Z pw:api   navigations have finished
+2026-10-19T18:45:41.551Z pw:api <= locator.click succeeded
+2026-10-19T18:45:41.552Z pw:api => locator.click started
+2026-10-19T18:45:41.565Z pw:api waiting for locator('#replace-confirm')
+2026-10-19T18:45:41.575Z pw:api   locator resolved to <button value="replace" class="primary" id="replace-confirm">Open project</button>
+2026-10-19T18:45:41.578Z pw:api attempting click action
+2026-10-19T18:45:41.579Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:41.626Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:41.626Z pw:api   scrolling into view if needed
+2026-10-19T18:45:41.630Z pw:api   done scrolling
+2026-10-19T18:45:41.650Z pw:api   performing click action
+2026-10-19T18:45:41.675Z pw:api   click action done
+2026-10-19T18:45:41.675Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:41.709Z pw:api   navigations have finished
+2026-10-19T18:45:41.736Z pw:api <= locator.click succeeded
+2026-10-19T18:45:41.737Z pw:api => page.waitForFunction started
+2026-10-19T18:45:41.762Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:41.762Z pw:api => locator.isVisible started
+2026-10-19T18:45:41.778Z pw:api   checking visibility of locator('#recovery-conflict')
+2026-10-19T18:45:41.787Z pw:api <= locator.isVisible succeeded
+2026-10-19T18:45:41.787Z pw:api => locator.click started
+2026-10-19T18:45:41.803Z pw:api waiting for getByRole('button', { name: 'Project menu', exact: true })
+2026-10-19T18:45:41.815Z pw:api   locator resolved to <button title="Project menu" aria-expanded="false" id="project-menu-toggle" aria-label="Project menu" popovertarget="project-menu" aria-controls="project-menu">…</button>
+2026-10-19T18:45:41.820Z pw:api attempting click action
+2026-10-19T18:45:41.820Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:41.830Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:41.830Z pw:api   scrolling into view if needed
+2026-10-19T18:45:41.832Z pw:api   done scrolling
+2026-10-19T18:45:41.858Z pw:api   performing click action
+2026-10-19T18:45:41.886Z pw:api   click action done
+2026-10-19T18:45:41.886Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:41.888Z pw:api   navigations have finished
+2026-10-19T18:45:41.898Z pw:api <= locator.click succeeded
+2026-10-19T18:45:41.899Z pw:api => locator.click started
+2026-10-19T18:45:41.906Z pw:api waiting for getByRole('button', { name: 'New', exact: true })
+2026-10-19T18:45:41.917Z pw:api   locator resolved to <button id="new">New</button>
+2026-10-19T18:45:41.919Z pw:api attempting click action
+2026-10-19T18:45:41.919Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:41.948Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:41.948Z pw:api   scrolling into view if needed
+2026-10-19T18:45:41.952Z pw:api   done scrolling
+2026-10-19T18:45:41.964Z pw:api   performing click action
+2026-10-19T18:45:41.978Z pw:api   click action done
+2026-10-19T18:45:41.978Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:41.987Z pw:api   navigations have finished
+2026-10-19T18:45:41.995Z pw:api <= locator.click succeeded
+2026-10-19T18:45:41.995Z pw:api => locator.click started
+2026-10-19T18:45:42.005Z pw:api waiting for locator('#replace-confirm')
+2026-10-19T18:45:42.013Z pw:api   locator resolved to <button value="replace" class="primary" id="replace-confirm">Create project</button>
+2026-10-19T18:45:42.015Z pw:api attempting click action
+2026-10-19T18:45:42.015Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:42.028Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:42.028Z pw:api   scrolling into view if needed
+2026-10-19T18:45:42.031Z pw:api   done scrolling
+2026-10-19T18:45:42.043Z pw:api   performing click action
+2026-10-19T18:45:42.067Z pw:api   click action done
+2026-10-19T18:45:42.067Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:42.070Z pw:api   navigations have finished
+2026-10-19T18:45:42.082Z pw:api <= locator.click succeeded
+2026-10-19T18:45:42.083Z pw:api => page.waitForFunction started
+2026-10-19T18:45:42.112Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:42.113Z pw:api => page.waitForFunction started
+2026-10-19T18:45:42.342Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:42.343Z pw:api => locator.click started
+2026-10-19T18:45:42.378Z pw:api waiting for getByRole('button', { name: 'Project menu', exact: true })
+2026-10-19T18:45:42.417Z pw:api   locator resolved to <button title="Project menu" aria-expanded="false" id="project-menu-toggle" aria-label="Project menu" popovertarget="project-menu" aria-controls="project-menu">…</button>
+2026-10-19T18:45:42.422Z pw:api attempting click action
+2026-10-19T18:45:42.422Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:42.461Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:42.461Z pw:api   scrolling into view if needed
+2026-10-19T18:45:42.472Z pw:api   done scrolling
+2026-10-19T18:45:42.489Z pw:api   performing click action
+2026-10-19T18:45:42.518Z pw:api   click action done
+2026-10-19T18:45:42.519Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:42.528Z pw:api   navigations have finished
+2026-10-19T18:45:42.545Z pw:api <= locator.click succeeded
+2026-10-19T18:45:42.545Z pw:api => locator.click started
+2026-10-19T18:45:42.555Z pw:api waiting for locator('#project-library')
+2026-10-19T18:45:42.570Z pw:api   locator resolved to <button type="button" id="project-library" aria-haspopup="dialog">Projects in this browser…</button>
+2026-10-19T18:45:42.572Z pw:api attempting click action
+2026-10-19T18:45:42.573Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:42.595Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:42.595Z pw:api   scrolling into view if needed
+2026-10-19T18:45:42.596Z pw:api   done scrolling
+2026-10-19T18:45:42.611Z pw:api   performing click action
+2026-10-19T18:45:42.642Z pw:api   click action done
+2026-10-19T18:45:42.642Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:42.646Z pw:api   navigations have finished
+2026-10-19T18:45:42.659Z pw:api <= locator.click succeeded
+2026-10-19T18:45:42.659Z pw:api => locator.waitFor started
+2026-10-19T18:45:42.671Z pw:api waiting for getByLabel('Search projects', { exact: true }) to be visible
+2026-10-19T18:45:42.717Z pw:api   locator resolved to visible <input type="search" aria-label="Search projects"/>
+2026-10-19T18:45:42.753Z pw:api <= locator.waitFor succeeded
+2026-10-19T18:45:42.753Z pw:api => locator.fill started
+2026-10-19T18:45:42.793Z pw:api waiting for getByLabel('Search projects', { exact: true })
+2026-10-19T18:45:42.819Z pw:api   locator resolved to <input type="search" aria-label="Search projects"/>
+2026-10-19T18:45:42.825Z pw:api   fill("Latest shared")
+2026-10-19T18:45:42.825Z pw:api attempting fill action
+2026-10-19T18:45:42.846Z pw:api   waiting for element to be visible, enabled and editable
+2026-10-19T18:45:42.870Z pw:api <= locator.fill succeeded
+2026-10-19T18:45:42.871Z pw:api => locator.waitFor started
+2026-10-19T18:45:42.883Z pw:api waiting for getByRole('button', { name: 'Open Latest shared sprig', exact: true }) to be visible
+2026-10-19T18:45:42.914Z pw:api   locator resolved to visible <button type="button">Open Latest shared sprig</button>
+2026-10-19T18:45:42.923Z pw:api <= locator.waitFor succeeded
+2026-10-19T18:45:42.924Z pw:api => page.screenshot started
+2026-10-19T18:45:42.932Z pw:api taking page screenshot
+2026-10-19T18:45:42.935Z pw:api waiting for fonts to load...
+2026-10-19T18:45:42.945Z pw:api fonts loaded
+2026-10-19T18:45:43.030Z pw:api <= page.screenshot succeeded
+2026-10-19T18:45:43.034Z pw:api => tracing.stop started
+2026-10-19T18:45:43.733Z pw:api <= tracing.stop succeeded
+2026-10-19T18:45:43.737Z pw:api => browserContext.close started
+2026-10-19T18:45:43.798Z pw:api <= browserContext.close succeeded
+2026-10-19T18:45:43.800Z pw:api => browser.newContext started
+2026-10-19T18:45:43.892Z pw:api <= browser.newContext succeeded
+2026-10-19T18:45:43.893Z pw:api => tracing.start started
+2026-10-19T18:45:43.898Z pw:api <= tracing.start succeeded
+2026-10-19T18:45:43.899Z pw:api => browserContext.newPage started
+2026-10-19T18:45:44.650Z pw:api <= browserContext.newPage succeeded
+2026-10-19T18:45:44.651Z pw:api => page.goto started
+2026-10-19T18:45:44.675Z pw:api navigating to "http://127.0.0.1:8776/apps/web/dist/editor/studio/", waiting until "load"
+DIAGNOSTIC navigation request 5 GET http://127.0.0.1:8776/apps/web/dist/editor/studio/
+2026-10-19T18:45:44.714Z pw:api   "commit" event fired
+2026-10-19T18:45:44.714Z pw:api   navigated to "http://127.0.0.1:8776/apps/web/dist/editor/studio/"
+DIAGNOSTIC main navigation 5 http://127.0.0.1:8776/apps/web/dist/editor/studio/
+2026-10-19T18:45:45.010Z pw:api   "domcontentloaded" event fired
+2026-10-19T18:45:45.022Z pw:api   "load" event fired
+2026-10-19T18:45:45.117Z pw:api <= page.goto succeeded
+2026-10-19T18:45:45.119Z pw:api => page.waitForFunction started
+2026-10-19T18:45:45.613Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:45.614Z pw:api => page.waitForFunction started
+2026-10-19T18:45:45.696Z pw:api   "networkidle" event fired
+2026-10-19T18:45:45.840Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:45.841Z pw:api => locator.setInputFiles started
+2026-10-19T18:45:45.852Z pw:api waiting for locator('#file')
+2026-10-19T18:45:45.893Z pw:api   locator resolved to <input id="file" hidden="" type="file" accept=".json,.evir-project,.riv,application/json"/>
+2026-10-19T18:45:45.989Z pw:api <= locator.setInputFiles succeeded
+2026-10-19T18:45:45.990Z pw:api => locator.click started
+2026-10-19T18:45:45.996Z pw:api waiting for locator('#replace-confirm')
+2026-10-19T18:45:46.002Z pw:api   locator resolved to <button value="replace" class="primary" id="replace-confirm">Open project</button>
+2026-10-19T18:45:46.005Z pw:api attempting click action
+2026-10-19T18:45:46.005Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:46.032Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:46.032Z pw:api   scrolling into view if needed
+2026-10-19T18:45:46.033Z pw:api   done scrolling
+2026-10-19T18:45:46.050Z pw:api   performing click action
+2026-10-19T18:45:46.130Z pw:api   click action done
+2026-10-19T18:45:46.130Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:46.133Z pw:api   navigations have finished
+2026-10-19T18:45:46.149Z pw:api <= locator.click succeeded
+2026-10-19T18:45:46.150Z pw:api => page.waitForFunction started
+2026-10-19T18:45:46.178Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:46.178Z pw:api => page.waitForFunction started
+2026-10-19T18:45:46.379Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:46.381Z pw:api => locator.setInputFiles started
+2026-10-19T18:45:46.390Z pw:api waiting for locator('#file')
+2026-10-19T18:45:46.396Z pw:api   locator resolved to <input id="file" hidden="" type="file" accept=".json,.evir-project,.riv,application/json"/>
+2026-10-19T18:45:46.458Z pw:api <= locator.setInputFiles succeeded
+2026-10-19T18:45:46.459Z pw:api => locator.click started
+2026-10-19T18:45:46.469Z pw:api waiting for locator('#replace-confirm')
+2026-10-19T18:45:46.479Z pw:api   locator resolved to <button value="replace" class="primary" id="replace-confirm">Open project</button>
+2026-10-19T18:45:46.481Z pw:api attempting click action
+2026-10-19T18:45:46.481Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:46.513Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:46.514Z pw:api   scrolling into view if needed
+2026-10-19T18:45:46.514Z pw:api   done scrolling
+2026-10-19T18:45:46.536Z pw:api   performing click action
+2026-10-19T18:45:46.609Z pw:api   click action done
+2026-10-19T18:45:46.609Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:46.612Z pw:api   navigations have finished
+2026-10-19T18:45:46.628Z pw:api <= locator.click succeeded
+2026-10-19T18:45:46.629Z pw:api => page.waitForFunction started
+2026-10-19T18:45:46.660Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:46.660Z pw:api => page.waitForFunction started
+2026-10-19T18:45:46.858Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:46.858Z pw:api => locator.click started
+2026-10-19T18:45:46.864Z pw:api waiting for getByRole('button', { name: 'Project menu', exact: true })
+2026-10-19T18:45:46.892Z pw:api   locator resolved to <button title="Project menu" aria-expanded="false" id="project-menu-toggle" aria-label="Project menu" popovertarget="project-menu" aria-controls="project-menu">…</button>
+2026-10-19T18:45:46.895Z pw:api attempting click action
+2026-10-19T18:45:46.895Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:46.912Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:46.912Z pw:api   scrolling into view if needed
+2026-10-19T18:45:46.914Z pw:api   done scrolling
+2026-10-19T18:45:46.929Z pw:api   performing click action
+2026-10-19T18:45:46.961Z pw:api   click action done
+2026-10-19T18:45:46.961Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:46.966Z pw:api   navigations have finished
+2026-10-19T18:45:46.978Z pw:api <= locator.click succeeded
+2026-10-19T18:45:46.979Z pw:api => locator.click started
+2026-10-19T18:45:46.987Z pw:api waiting for locator('#project-library')
+2026-10-19T18:45:46.998Z pw:api   locator resolved to <button type="button" id="project-library" aria-haspopup="dialog">Projects in this browser…</button>
+2026-10-19T18:45:46.999Z pw:api attempting click action
+2026-10-19T18:45:47.000Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:47.028Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:47.028Z pw:api   scrolling into view if needed
+2026-10-19T18:45:47.030Z pw:api   done scrolling
+2026-10-19T18:45:47.046Z pw:api   performing click action
+2026-10-19T18:45:47.075Z pw:api   click action done
+2026-10-19T18:45:47.076Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:47.085Z pw:api   navigations have finished
+2026-10-19T18:45:47.137Z pw:api <= locator.click succeeded
+2026-10-19T18:45:47.138Z pw:api => locator.waitFor started
+2026-10-19T18:45:47.144Z pw:api waiting for getByLabel('Search projects', { exact: true }) to be visible
+2026-10-19T18:45:47.180Z pw:api   locator resolved to visible <input type="search" aria-label="Search projects"/>
+2026-10-19T18:45:47.189Z pw:api <= locator.waitFor succeeded
+2026-10-19T18:45:47.190Z pw:api => locator.fill started
+2026-10-19T18:45:47.196Z pw:api waiting for getByLabel('Search projects', { exact: true })
+2026-10-19T18:45:47.203Z pw:api   locator resolved to <input type="search" aria-label="Search projects"/>
+2026-10-19T18:45:47.206Z pw:api   fill("sprig")
+2026-10-19T18:45:47.206Z pw:api attempting fill action
+2026-10-19T18:45:47.209Z pw:api   waiting for element to be visible, enabled and editable
+2026-10-19T18:45:47.229Z pw:api <= locator.fill succeeded
+2026-10-19T18:45:47.232Z pw:api => locator.waitFor started
+2026-10-19T18:45:47.249Z pw:api waiting for getByRole('button', { name: 'Open Library sprig', exact: true }) to be visible
+2026-10-19T18:45:47.260Z pw:api   locator resolved to visible <button type="button">Open Library sprig</button>
+2026-10-19T18:45:47.265Z pw:api <= locator.waitFor succeeded
+2026-10-19T18:45:47.269Z pw:api => page.addScriptTag started
+2026-10-19T18:45:47.595Z pw:api <= page.addScriptTag succeeded
+2026-10-19T18:45:47.595Z pw:api => page.evaluate started
+2026-10-19T18:45:48.141Z pw:api <= page.evaluate succeeded
+2026-10-19T18:45:48.144Z pw:api => page.evaluate started
+2026-10-19T18:45:48.161Z pw:api <= page.evaluate succeeded
+2026-10-19T18:45:48.161Z pw:api => page.screenshot started
+2026-10-19T18:45:48.167Z pw:api taking page screenshot
+2026-10-19T18:45:48.171Z pw:api waiting for fonts to load...
+2026-10-19T18:45:48.177Z pw:api fonts loaded
+2026-10-19T18:45:48.311Z pw:api <= page.screenshot succeeded
+2026-10-19T18:45:48.315Z pw:api => locator.focus started
+2026-10-19T18:45:48.322Z pw:api waiting for getByRole('button', { name: 'Open Library sprig', exact: true })
+2026-10-19T18:45:48.336Z pw:api   locator resolved to <button type="button">Open Library sprig</button>
+2026-10-19T18:45:48.352Z pw:api <= locator.focus succeeded
+2026-10-19T18:45:48.353Z pw:api => keyboard.press started
+2026-10-19T18:45:48.392Z pw:api <= keyboard.press succeeded
+2026-10-19T18:45:48.392Z pw:api => locator.click started
+2026-10-19T18:45:48.402Z pw:api waiting for locator('#replace-confirm')
+2026-10-19T18:45:48.417Z pw:api   locator resolved to <button value="replace" class="primary" id="replace-confirm">Open project</button>
+2026-10-19T18:45:48.424Z pw:api attempting click action
+2026-10-19T18:45:48.424Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:48.449Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:48.449Z pw:api   scrolling into view if needed
+2026-10-19T18:45:48.452Z pw:api   done scrolling
+2026-10-19T18:45:48.476Z pw:api   performing click action
+2026-10-19T18:45:48.486Z pw:api   click action done
+2026-10-19T18:45:48.486Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:48.487Z pw:api   navigations have finished
+2026-10-19T18:45:48.493Z pw:api <= locator.click succeeded
+2026-10-19T18:45:48.493Z pw:api => page.waitForFunction started
+2026-10-19T18:45:48.552Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:48.554Z pw:api => page.evaluate started
+2026-10-19T18:45:48.582Z pw:api <= page.evaluate succeeded
+2026-10-19T18:45:48.583Z pw:api => page.evaluate started
+2026-10-19T18:45:48.637Z pw:api <= page.evaluate succeeded
+2026-10-19T18:45:48.638Z pw:api => page.waitForFunction started
+2026-10-19T18:45:48.652Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:48.653Z pw:api => page.evaluate started
+2026-10-19T18:45:48.700Z pw:api <= page.evaluate succeeded
+2026-10-19T18:45:48.701Z pw:api => browserContext.newPage started
+2026-10-19T18:45:48.790Z pw:api <= browserContext.newPage succeeded
+2026-10-19T18:45:48.791Z pw:api => page.goto started
+2026-10-19T18:45:48.803Z pw:api navigating to "http://127.0.0.1:8776/apps/web/dist/editor/studio/", waiting until "load"
+DIAGNOSTIC navigation request 5 GET http://127.0.0.1:8776/apps/web/dist/editor/studio/
+2026-10-19T18:45:48.827Z pw:api   "commit" event fired
+2026-10-19T18:45:48.827Z pw:api   navigated to "http://127.0.0.1:8776/apps/web/dist/editor/studio/"
+DIAGNOSTIC main navigation 5 http://127.0.0.1:8776/apps/web/dist/editor/studio/
+2026-10-19T18:45:49.084Z pw:api   "domcontentloaded" event fired
+2026-10-19T18:45:49.090Z pw:api   "load" event fired
+2026-10-19T18:45:49.119Z pw:api <= page.goto succeeded
+2026-10-19T18:45:49.120Z pw:api => page.waitForFunction started
+2026-10-19T18:45:49.370Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:49.370Z pw:api => page.waitForFunction started
+2026-10-19T18:45:49.394Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:49.394Z pw:api => page.evaluate started
+2026-10-19T18:45:49.415Z pw:api <= page.evaluate succeeded
+2026-10-19T18:45:49.415Z pw:api => locator.fill started
+2026-10-19T18:45:49.420Z pw:api waiting for locator('#project-name')
+2026-10-19T18:45:49.428Z pw:api   locator resolved to <input id="project-name" aria-label="Project name"/>
+2026-10-19T18:45:49.431Z pw:api   fill("Sprig from first tab")
+2026-10-19T18:45:49.431Z pw:api attempting fill action
+2026-10-19T18:45:49.436Z pw:api   waiting for element to be visible, enabled and editable
+2026-10-19T18:45:49.452Z pw:api <= locator.fill succeeded
+2026-10-19T18:45:49.452Z pw:api => locator.dispatchEvent started
+2026-10-19T18:45:49.459Z pw:api waiting for locator('#project-name')
+2026-10-19T18:45:49.484Z pw:api   locator resolved to <input id="project-name" aria-label="Project name"/>
+2026-10-19T18:45:49.507Z pw:api <= locator.dispatchEvent succeeded
+2026-10-19T18:45:49.507Z pw:api => page.waitForFunction started
+2026-10-19T18:45:49.644Z pw:api   "networkidle" event fired
+2026-10-19T18:45:49.755Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:49.755Z pw:api => locator.waitFor started
+2026-10-19T18:45:49.770Z pw:api waiting for locator('#recovery-conflict') to be visible
+2026-10-19T18:45:49.847Z pw:api   locator resolved to visible <section id="recovery-conflict" aria-label="Project save conflict">…</section>
+2026-10-19T18:45:49.854Z pw:api <= locator.waitFor succeeded
+2026-10-19T18:45:49.854Z pw:api => locator.fill started
+2026-10-19T18:45:49.865Z pw:api waiting for locator('#project-name')
+2026-10-19T18:45:49.879Z pw:api   locator resolved to <input id="project-name" aria-label="Project name"/>
+2026-10-19T18:45:49.882Z pw:api   fill("Sprig from second tab")
+2026-10-19T18:45:49.882Z pw:api attempting fill action
+2026-10-19T18:45:49.890Z pw:api   waiting for element to be visible, enabled and editable
+2026-10-19T18:45:49.918Z pw:api <= locator.fill succeeded
+2026-10-19T18:45:49.918Z pw:api => locator.dispatchEvent started
+2026-10-19T18:45:49.938Z pw:api waiting for locator('#project-name')
+2026-10-19T18:45:49.966Z pw:api   locator resolved to <input id="project-name" aria-label="Project name"/>
+2026-10-19T18:45:49.985Z pw:api <= locator.dispatchEvent succeeded
+2026-10-19T18:45:49.989Z pw:api => page.waitForFunction started
+2026-10-19T18:45:50.244Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:50.247Z pw:api => locator.click started
+2026-10-19T18:45:50.252Z pw:api waiting for getByRole('button', { name: 'Save a separate copy', exact: true })
+2026-10-19T18:45:50.307Z pw:api   locator resolved to <button type="button">Save a separate copy</button>
+2026-10-19T18:45:50.310Z pw:api attempting click action
+2026-10-19T18:45:50.310Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:50.328Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:50.328Z pw:api   scrolling into view if needed
+2026-10-19T18:45:50.332Z pw:api   done scrolling
+2026-10-19T18:45:50.343Z pw:api   performing click action
+2026-10-19T18:45:50.419Z pw:api   click action done
+2026-10-19T18:45:50.420Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:50.421Z pw:api   navigations have finished
+2026-10-19T18:45:50.445Z pw:api <= locator.click succeeded
+2026-10-19T18:45:50.447Z pw:api => page.waitForFunction started
+2026-10-19T18:45:50.530Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:50.531Z pw:api => page.reload started
+2026-10-19T18:45:50.540Z pw:api waiting for navigation until "load"
+DIAGNOSTIC navigation request 5 GET http://127.0.0.1:8776/apps/web/dist/editor/studio/
+2026-10-19T18:45:50.619Z pw:api   "commit" event fired
+2026-10-19T18:45:50.619Z pw:api   navigated to "http://127.0.0.1:8776/apps/web/dist/editor/studio/"
+2026-10-19T18:45:50.620Z pw:api   navigated to "http://127.0.0.1:8776/apps/web/dist/editor/studio/"
+DIAGNOSTIC main navigation 5 http://127.0.0.1:8776/apps/web/dist/editor/studio/
+2026-10-19T18:45:50.651Z pw:api   "domcontentloaded" event fired
+2026-10-19T18:45:50.657Z pw:api   "load" event fired
+2026-10-19T18:45:50.728Z pw:api <= page.reload succeeded
+2026-10-19T18:45:50.729Z pw:api => page.waitForFunction started
+2026-10-19T18:45:50.940Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:50.940Z pw:api => page.waitForFunction started
+2026-10-19T18:45:50.983Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:50.983Z pw:api => locator.click started
+2026-10-19T18:45:50.994Z pw:api waiting for getByRole('button', { name: 'Project menu', exact: true })
+2026-10-19T18:45:51.054Z pw:api   locator resolved to <button title="Project menu" aria-expanded="false" id="project-menu-toggle" aria-label="Project menu" popovertarget="project-menu" aria-controls="project-menu">…</button>
+2026-10-19T18:45:51.056Z pw:api attempting click action
+2026-10-19T18:45:51.057Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:51.079Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:51.079Z pw:api   scrolling into view if needed
+2026-10-19T18:45:51.081Z pw:api   done scrolling
+2026-10-19T18:45:51.097Z pw:api   performing click action
+2026-10-19T18:45:51.122Z pw:api   click action done
+2026-10-19T18:45:51.122Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:51.123Z pw:api   navigations have finished
+2026-10-19T18:45:51.137Z pw:api <= locator.click succeeded
+2026-10-19T18:45:51.137Z pw:api => locator.click started
+2026-10-19T18:45:51.155Z pw:api waiting for locator('#project-library')
+2026-10-19T18:45:51.175Z pw:api   locator resolved to <button type="button" id="project-library" aria-haspopup="dialog">Projects in this browser…</button>
+2026-10-19T18:45:51.177Z pw:api attempting click action
+2026-10-19T18:45:51.177Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:51.195Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:51.195Z pw:api   scrolling into view if needed
+2026-10-19T18:45:51.197Z pw:api   done scrolling
+2026-10-19T18:45:51.208Z pw:api   performing click action
+2026-10-19T18:45:51.246Z pw:api   click action done
+2026-10-19T18:45:51.246Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:51.275Z pw:api   navigations have finished
+2026-10-19T18:45:51.298Z pw:api <= locator.click succeeded
+2026-10-19T18:45:51.298Z pw:api => locator.waitFor started
+2026-10-19T18:45:51.307Z pw:api waiting for getByLabel('Search projects', { exact: true }) to be visible
+2026-10-19T18:45:51.325Z pw:api   locator resolved to visible <input type="search" aria-label="Search projects"/>
+2026-10-19T18:45:51.331Z pw:api <= locator.waitFor succeeded
+2026-10-19T18:45:51.332Z pw:api => locator.fill started
+2026-10-19T18:45:51.339Z pw:api waiting for getByLabel('Search projects', { exact: true })
+2026-10-19T18:45:51.358Z pw:api   locator resolved to <input type="search" aria-label="Search projects"/>
+2026-10-19T18:45:51.362Z pw:api   fill("Sprig")
+2026-10-19T18:45:51.362Z pw:api attempting fill action
+2026-10-19T18:45:51.374Z pw:api   waiting for element to be visible, enabled and editable
+2026-10-19T18:45:51.379Z pw:api   "networkidle" event fired
+2026-10-19T18:45:51.394Z pw:api <= locator.fill succeeded
+2026-10-19T18:45:51.394Z pw:api => locator.waitFor started
+2026-10-19T18:45:51.404Z pw:api waiting for getByRole('button', { name: 'Open Sprig from first tab', exact: true }) to be visible
+2026-10-19T18:45:51.428Z pw:api   locator resolved to visible <button type="button">Open Sprig from first tab</button>
+2026-10-19T18:45:51.440Z pw:api <= locator.waitFor succeeded
+2026-10-19T18:45:51.441Z pw:api => locator.click started
+2026-10-19T18:45:51.447Z pw:api waiting for getByRole('button', { name: 'Done', exact: true })
+2026-10-19T18:45:51.465Z pw:api   locator resolved to <button type="button">Done</button>
+2026-10-19T18:45:51.467Z pw:api attempting click action
+2026-10-19T18:45:51.468Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:51.514Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:51.514Z pw:api   scrolling into view if needed
+2026-10-19T18:45:51.518Z pw:api   done scrolling
+2026-10-19T18:45:51.530Z pw:api   performing click action
+2026-10-19T18:45:51.568Z pw:api   click action done
+2026-10-19T18:45:51.568Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:51.570Z pw:api   navigations have finished
+2026-10-19T18:45:51.583Z pw:api <= locator.click succeeded
+2026-10-19T18:45:51.583Z pw:api => page.reload started
+2026-10-19T18:45:51.591Z pw:api waiting for navigation until "load"
+DIAGNOSTIC navigation request 5 GET http://127.0.0.1:8776/apps/web/dist/editor/studio/
+2026-10-19T18:45:51.661Z pw:api   "commit" event fired
+2026-10-19T18:45:51.661Z pw:api   navigated to "http://127.0.0.1:8776/apps/web/dist/editor/studio/"
+2026-10-19T18:45:51.661Z pw:api   navigated to "http://127.0.0.1:8776/apps/web/dist/editor/studio/"
+DIAGNOSTIC main navigation 5 http://127.0.0.1:8776/apps/web/dist/editor/studio/
+2026-10-19T18:45:51.699Z pw:api   "domcontentloaded" event fired
+2026-10-19T18:45:51.714Z pw:api   "load" event fired
+2026-10-19T18:45:51.779Z pw:api <= page.reload succeeded
+2026-10-19T18:45:51.780Z pw:api => page.waitForFunction started
+2026-10-19T18:45:51.962Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:51.962Z pw:api => page.waitForFunction started
+2026-10-19T18:45:51.988Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:51.988Z pw:api => locator.fill started
+2026-10-19T18:45:51.997Z pw:api waiting for locator('#project-name')
+2026-10-19T18:45:52.001Z pw:api   locator resolved to <input id="project-name" aria-label="Project name"/>
+2026-10-19T18:45:52.003Z pw:api   fill("Latest shared sprig")
+2026-10-19T18:45:52.004Z pw:api attempting fill action
+2026-10-19T18:45:52.009Z pw:api   waiting for element to be visible, enabled and editable
+2026-10-19T18:45:52.032Z pw:api <= locator.fill succeeded
+2026-10-19T18:45:52.033Z pw:api => locator.dispatchEvent started
+2026-10-19T18:45:52.041Z pw:api waiting for locator('#project-name')
+2026-10-19T18:45:52.061Z pw:api   locator resolved to <input id="project-name" aria-label="Project name"/>
+2026-10-19T18:45:52.077Z pw:api <= locator.dispatchEvent succeeded
+2026-10-19T18:45:52.078Z pw:api => page.waitForFunction started
+2026-10-19T18:45:52.364Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:52.366Z pw:api => locator.waitFor started
+2026-10-19T18:45:52.381Z pw:api waiting for locator('#recovery-conflict') to be visible
+2026-10-19T18:45:52.386Z pw:api   "networkidle" event fired
+2026-10-19T18:45:52.427Z pw:api   locator resolved to visible <section id="recovery-conflict" aria-label="Project save conflict">…</section>
+2026-10-19T18:45:52.433Z pw:api <= locator.waitFor succeeded
+2026-10-19T18:45:52.434Z pw:api => locator.click started
+2026-10-19T18:45:52.443Z pw:api waiting for getByRole('button', { name: 'Open latest', exact: true })
+2026-10-19T18:45:52.469Z pw:api   locator resolved to <button type="button">Open latest</button>
+2026-10-19T18:45:52.472Z pw:api attempting click action
+2026-10-19T18:45:52.472Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:52.481Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:52.481Z pw:api   scrolling into view if needed
+2026-10-19T18:45:52.481Z pw:api   done scrolling
+2026-10-19T18:45:52.504Z pw:api   performing click action
+2026-10-19T18:45:52.528Z pw:api   click action done
+2026-10-19T18:45:52.528Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:52.530Z pw:api   navigations have finished
+2026-10-19T18:45:52.537Z pw:api <= locator.click succeeded
+2026-10-19T18:45:52.538Z pw:api => locator.click started
+2026-10-19T18:45:52.547Z pw:api waiting for locator('#replace-confirm')
+2026-10-19T18:45:52.553Z pw:api   locator resolved to <button value="replace" class="primary" id="replace-confirm">Open project</button>
+2026-10-19T18:45:52.555Z pw:api attempting click action
+2026-10-19T18:45:52.555Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:52.598Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:52.598Z pw:api   scrolling into view if needed
+2026-10-19T18:45:52.599Z pw:api   done scrolling
+2026-10-19T18:45:52.614Z pw:api   performing click action
+2026-10-19T18:45:52.651Z pw:api   click action done
+2026-10-19T18:45:52.651Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:52.703Z pw:api   navigations have finished
+2026-10-19T18:45:52.722Z pw:api <= locator.click succeeded
+2026-10-19T18:45:52.725Z pw:api => page.waitForFunction started
+2026-10-19T18:45:52.751Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:52.753Z pw:api => locator.isVisible started
+2026-10-19T18:45:52.761Z pw:api   checking visibility of locator('#recovery-conflict')
+2026-10-19T18:45:52.785Z pw:api <= locator.isVisible succeeded
+2026-10-19T18:45:52.785Z pw:api => locator.click started
+2026-10-19T18:45:52.797Z pw:api waiting for getByRole('button', { name: 'Project menu', exact: true })
+2026-10-19T18:45:52.836Z pw:api   locator resolved to <button title="Project menu" aria-expanded="false" id="project-menu-toggle" aria-label="Project menu" popovertarget="project-menu" aria-controls="project-menu">…</button>
+2026-10-19T18:45:52.841Z pw:api attempting click action
+2026-10-19T18:45:52.841Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:52.863Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:52.863Z pw:api   scrolling into view if needed
+2026-10-19T18:45:52.867Z pw:api   done scrolling
+2026-10-19T18:45:52.911Z pw:api   performing click action
+2026-10-19T18:45:52.938Z pw:api   click action done
+2026-10-19T18:45:52.939Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:52.944Z pw:api   navigations have finished
+2026-10-19T18:45:52.955Z pw:api <= locator.click succeeded
+2026-10-19T18:45:52.955Z pw:api => locator.click started
+2026-10-19T18:45:52.970Z pw:api waiting for getByRole('button', { name: 'New', exact: true })
+2026-10-19T18:45:52.991Z pw:api   locator resolved to <button id="new">New</button>
+2026-10-19T18:45:52.994Z pw:api attempting click action
+2026-10-19T18:45:52.995Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:53.011Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:53.011Z pw:api   scrolling into view if needed
+2026-10-19T18:45:53.013Z pw:api   done scrolling
+2026-10-19T18:45:53.031Z pw:api   performing click action
+2026-10-19T18:45:53.053Z pw:api   click action done
+2026-10-19T18:45:53.053Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:53.063Z pw:api   navigations have finished
+2026-10-19T18:45:53.071Z pw:api <= locator.click succeeded
+2026-10-19T18:45:53.072Z pw:api => locator.click started
+2026-10-19T18:45:53.082Z pw:api waiting for locator('#replace-confirm')
+2026-10-19T18:45:53.099Z pw:api   locator resolved to <button value="replace" class="primary" id="replace-confirm">Create project</button>
+2026-10-19T18:45:53.104Z pw:api attempting click action
+2026-10-19T18:45:53.104Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:53.364Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:53.364Z pw:api   scrolling into view if needed
+2026-10-19T18:45:53.368Z pw:api   done scrolling
+2026-10-19T18:45:53.382Z pw:api   performing click action
+2026-10-19T18:45:53.500Z pw:api   click action done
+2026-10-19T18:45:53.500Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:53.509Z pw:api   navigations have finished
+2026-10-19T18:45:53.530Z pw:api <= locator.click succeeded
+2026-10-19T18:45:53.530Z pw:api => page.waitForFunction started
+2026-10-19T18:45:53.584Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:53.585Z pw:api => page.waitForFunction started
+2026-10-19T18:45:53.746Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:53.746Z pw:api => locator.click started
+2026-10-19T18:45:53.758Z pw:api waiting for getByRole('button', { name: 'Project menu', exact: true })
+2026-10-19T18:45:53.772Z pw:api   locator resolved to <button title="Project menu" aria-expanded="false" id="project-menu-toggle" aria-label="Project menu" popovertarget="project-menu" aria-controls="project-menu">…</button>
+2026-10-19T18:45:53.775Z pw:api attempting click action
+2026-10-19T18:45:53.776Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:53.797Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:53.797Z pw:api   scrolling into view if needed
+2026-10-19T18:45:53.798Z pw:api   done scrolling
+2026-10-19T18:45:53.808Z pw:api   performing click action
+2026-10-19T18:45:53.822Z pw:api   click action done
+2026-10-19T18:45:53.822Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:53.826Z pw:api   navigations have finished
+2026-10-19T18:45:53.830Z pw:api <= locator.click succeeded
+2026-10-19T18:45:53.831Z pw:api => locator.click started
+2026-10-19T18:45:53.846Z pw:api waiting for locator('#project-library')
+2026-10-19T18:45:53.866Z pw:api   locator resolved to <button type="button" id="project-library" aria-haspopup="dialog">Projects in this browser…</button>
+2026-10-19T18:45:53.869Z pw:api attempting click action
+2026-10-19T18:45:53.869Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:53.879Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:53.879Z pw:api   scrolling into view if needed
+2026-10-19T18:45:53.882Z pw:api   done scrolling
+2026-10-19T18:45:53.902Z pw:api   performing click action
+2026-10-19T18:45:53.938Z pw:api   click action done
+2026-10-19T18:45:53.938Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:53.942Z pw:api   navigations have finished
+2026-10-19T18:45:53.959Z pw:api <= locator.click succeeded
+2026-10-19T18:45:53.960Z pw:api => locator.waitFor started
+2026-10-19T18:45:53.970Z pw:api waiting for getByLabel('Search projects', { exact: true }) to be visible
+2026-10-19T18:45:54.012Z pw:api   locator resolved to visible <input type="search" aria-label="Search projects"/>
+2026-10-19T18:45:54.028Z pw:api <= locator.waitFor succeeded
+2026-10-19T18:45:54.029Z pw:api => locator.fill started
+2026-10-19T18:45:54.040Z pw:api waiting for getByLabel('Search projects', { exact: true })
+2026-10-19T18:45:54.059Z pw:api   locator resolved to <input type="search" aria-label="Search projects"/>
+2026-10-19T18:45:54.062Z pw:api   fill("Latest shared")
+2026-10-19T18:45:54.062Z pw:api attempting fill action
+2026-10-19T18:45:54.086Z pw:api   waiting for element to be visible, enabled and editable
+2026-10-19T18:45:54.124Z pw:api <= locator.fill succeeded
+2026-10-19T18:45:54.125Z pw:api => locator.waitFor started
+2026-10-19T18:45:54.138Z pw:api waiting for getByRole('button', { name: 'Open Latest shared sprig', exact: true }) to be visible
+2026-10-19T18:45:54.162Z pw:api   locator resolved to visible <button type="button">Open Latest shared sprig</button>
+2026-10-19T18:45:54.175Z pw:api <= locator.waitFor succeeded
+2026-10-19T18:45:54.175Z pw:api => page.screenshot started
+2026-10-19T18:45:54.194Z pw:api taking page screenshot
+2026-10-19T18:45:54.200Z pw:api waiting for fonts to load...
+2026-10-19T18:45:54.205Z pw:api fonts loaded
+2026-10-19T18:45:54.353Z pw:api <= page.screenshot succeeded
+2026-10-19T18:45:54.355Z pw:api => locator.click started
+2026-10-19T18:45:54.362Z pw:api waiting for getByRole('button', { name: 'Done', exact: true })
+2026-10-19T18:45:54.371Z pw:api   locator resolved to <button type="button">Done</button>
+2026-10-19T18:45:54.375Z pw:api attempting click action
+2026-10-19T18:45:54.375Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:54.395Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:54.395Z pw:api   scrolling into view if needed
+2026-10-19T18:45:54.398Z pw:api   done scrolling
+2026-10-19T18:45:54.413Z pw:api   performing click action
+2026-10-19T18:45:54.434Z pw:api   click action done
+2026-10-19T18:45:54.434Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:54.436Z pw:api   navigations have finished
+2026-10-19T18:45:54.443Z pw:api <= locator.click succeeded
+2026-10-19T18:45:54.445Z pw:api => locator.setInputFiles started
+2026-10-19T18:45:54.456Z pw:api waiting for locator('#file')
+2026-10-19T18:45:54.464Z pw:api   locator resolved to <input id="file" hidden="" type="file" accept=".json,.evir-project,.riv,application/json"/>
+2026-10-19T18:45:54.529Z pw:api <= locator.setInputFiles succeeded
+2026-10-19T18:45:54.529Z pw:api => locator.click started
+2026-10-19T18:45:54.544Z pw:api waiting for locator('#replace-confirm')
+2026-10-19T18:45:54.561Z pw:api   locator resolved to <button value="replace" class="primary" id="replace-confirm">Open project</button>
+2026-10-19T18:45:54.563Z pw:api attempting click action
+2026-10-19T18:45:54.563Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:54.596Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:54.596Z pw:api   scrolling into view if needed
+2026-10-19T18:45:54.600Z pw:api   done scrolling
+2026-10-19T18:45:54.610Z pw:api   performing click action
+2026-10-19T18:45:54.701Z pw:api   click action done
+2026-10-19T18:45:54.701Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:54.712Z pw:api   navigations have finished
+2026-10-19T18:45:54.727Z pw:api <= locator.click succeeded
+2026-10-19T18:45:54.727Z pw:api => page.waitForFunction started
+2026-10-19T18:45:54.770Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:54.770Z pw:api => page.waitForFunction started
+2026-10-19T18:45:54.947Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:54.948Z pw:api => locator.setInputFiles started
+2026-10-19T18:45:54.954Z pw:api waiting for locator('#file')
+2026-10-19T18:45:54.963Z pw:api   locator resolved to <input id="file" hidden="" type="file" accept=".json,.evir-project,.riv,application/json"/>
+2026-10-19T18:45:54.990Z pw:api <= locator.setInputFiles succeeded
+2026-10-19T18:45:54.990Z pw:api => locator.click started
+2026-10-19T18:45:54.997Z pw:api waiting for locator('#replace-confirm')
+2026-10-19T18:45:55.003Z pw:api   locator resolved to <button value="replace" class="primary" id="replace-confirm">Open project</button>
+2026-10-19T18:45:55.005Z pw:api attempting click action
+2026-10-19T18:45:55.005Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:55.027Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:55.027Z pw:api   scrolling into view if needed
+2026-10-19T18:45:55.030Z pw:api   done scrolling
+2026-10-19T18:45:55.039Z pw:api   performing click action
+2026-10-19T18:45:55.079Z pw:api   click action done
+2026-10-19T18:45:55.079Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:55.086Z pw:api   navigations have finished
+2026-10-19T18:45:55.094Z pw:api <= locator.click succeeded
+2026-10-19T18:45:55.095Z pw:api => page.waitForFunction started
+2026-10-19T18:45:55.123Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:55.124Z pw:api => page.waitForFunction started
+2026-10-19T18:45:55.338Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:55.339Z pw:api => page.evaluate started
+2026-10-19T18:45:55.379Z pw:api <= page.evaluate succeeded
+2026-10-19T18:45:55.380Z pw:api => page.evaluate started
+2026-10-19T18:45:55.398Z pw:api <= page.evaluate succeeded
+2026-10-19T18:45:55.399Z pw:api => locator.click started
+2026-10-19T18:45:55.405Z pw:api waiting for getByRole('button', { name: 'Project menu', exact: true })
+2026-10-19T18:45:55.419Z pw:api   locator resolved to <button title="Project menu" aria-expanded="false" id="project-menu-toggle" aria-label="Project menu" popovertarget="project-menu" aria-controls="project-menu">…</button>
+2026-10-19T18:45:55.420Z pw:api attempting click action
+2026-10-19T18:45:55.420Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:55.427Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:55.427Z pw:api   scrolling into view if needed
+2026-10-19T18:45:55.428Z pw:api   done scrolling
+2026-10-19T18:45:55.447Z pw:api   performing click action
+2026-10-19T18:45:55.474Z pw:api   click action done
+2026-10-19T18:45:55.475Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:55.482Z pw:api   navigations have finished
+2026-10-19T18:45:55.490Z pw:api <= locator.click succeeded
+2026-10-19T18:45:55.490Z pw:api => locator.click started
+2026-10-19T18:45:55.505Z pw:api waiting for locator('#project-library')
+2026-10-19T18:45:55.510Z pw:api   locator resolved to <button type="button" id="project-library" aria-haspopup="dialog">Projects in this browser…</button>
+2026-10-19T18:45:55.513Z pw:api attempting click action
+2026-10-19T18:45:55.513Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:55.546Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:55.546Z pw:api   scrolling into view if needed
+2026-10-19T18:45:55.549Z pw:api   done scrolling
+2026-10-19T18:45:55.559Z pw:api   performing click action
+2026-10-19T18:45:55.595Z pw:api   click action done
+2026-10-19T18:45:55.595Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:55.599Z pw:api   navigations have finished
+2026-10-19T18:45:55.616Z pw:api <= locator.click succeeded
+2026-10-19T18:45:55.616Z pw:api => locator.waitFor started
+2026-10-19T18:45:55.631Z pw:api waiting for getByLabel('Search projects', { exact: true }) to be visible
+2026-10-19T18:45:55.642Z pw:api   locator resolved to visible <input type="search" aria-label="Search projects"/>
+2026-10-19T18:45:55.655Z pw:api <= locator.waitFor succeeded
+2026-10-19T18:45:55.655Z pw:api => locator.fill started
+2026-10-19T18:45:55.673Z pw:api waiting for getByLabel('Search projects', { exact: true })
+2026-10-19T18:45:55.691Z pw:api   locator resolved to <input type="search" aria-label="Search projects"/>
+2026-10-19T18:45:55.695Z pw:api   fill("Prepared caption")
+2026-10-19T18:45:55.695Z pw:api attempting fill action
+2026-10-19T18:45:55.706Z pw:api   waiting for element to be visible, enabled and editable
+2026-10-19T18:45:55.738Z pw:api <= locator.fill succeeded
+2026-10-19T18:45:55.739Z pw:api => locator.click started
+2026-10-19T18:45:55.755Z pw:api waiting for getByRole('button', { name: 'Open Prepared caption', exact: true })
+2026-10-19T18:45:55.795Z pw:api   locator resolved to <button type="button">Open Prepared caption</button>
+2026-10-19T18:45:55.799Z pw:api attempting click action
+2026-10-19T18:45:55.803Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:55.846Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:55.846Z pw:api   scrolling into view if needed
+2026-10-19T18:45:55.849Z pw:api   done scrolling
+2026-10-19T18:45:55.872Z pw:api   performing click action
+2026-10-19T18:45:55.902Z pw:api   click action done
+2026-10-19T18:45:55.902Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:55.904Z pw:api   navigations have finished
+2026-10-19T18:45:55.916Z pw:api <= locator.click succeeded
+2026-10-19T18:45:55.917Z pw:api => locator.click started
+2026-10-19T18:45:55.932Z pw:api waiting for locator('#replace-confirm')
+2026-10-19T18:45:55.942Z pw:api   locator resolved to <button value="replace" class="primary" id="replace-confirm">Open project</button>
+2026-10-19T18:45:55.948Z pw:api attempting click action
+2026-10-19T18:45:55.949Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:55.979Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:55.979Z pw:api   scrolling into view if needed
+2026-10-19T18:45:55.980Z pw:api   done scrolling
+2026-10-19T18:45:55.992Z pw:api   performing click action
+2026-10-19T18:45:56.013Z pw:api   click action done
+2026-10-19T18:45:56.013Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:56.014Z pw:api   navigations have finished
+2026-10-19T18:45:56.048Z pw:api <= locator.click succeeded
+2026-10-19T18:45:56.049Z pw:api => page.waitForFunction started
+2026-10-19T18:45:56.081Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:56.082Z pw:api => locator.isVisible started
+2026-10-19T18:45:56.099Z pw:api   checking visibility of locator('#project-switch-status')
+2026-10-19T18:45:56.112Z pw:api <= locator.isVisible succeeded
+2026-10-19T18:45:56.113Z pw:api => locator.getAttribute started
+2026-10-19T18:45:56.119Z pw:api waiting for locator('#workspace')
+2026-10-19T18:45:56.124Z pw:api   locator resolved to <main inert="" id="workspace" aria-busy="true" class="workspace">…</main>
+2026-10-19T18:45:56.131Z pw:api <= locator.getAttribute succeeded
+2026-10-19T18:45:56.132Z pw:api => locator.evaluate started
+2026-10-19T18:45:56.150Z pw:api waiting for locator('.topbar')
+2026-10-19T18:45:56.157Z pw:api   locator resolved to visible <header inert="" class="topbar">…</header>
+2026-10-19T18:45:56.191Z pw:api <= locator.evaluate succeeded
+2026-10-19T18:45:56.193Z pw:api => page.setViewportSize started
+2026-10-19T18:45:56.245Z pw:api <= page.setViewportSize succeeded
+2026-10-19T18:45:56.247Z pw:api => page.setViewportSize started
+2026-10-19T18:45:56.279Z pw:api <= page.setViewportSize succeeded
+2026-10-19T18:45:56.280Z pw:api => keyboard.press started
+2026-10-19T18:45:56.307Z pw:api <= keyboard.press succeeded
+2026-10-19T18:45:56.307Z pw:api => page.evaluate started
+2026-10-19T18:45:56.375Z pw:api <= page.evaluate succeeded
+2026-10-19T18:45:56.390Z pw:api => page.screenshot started
+2026-10-19T18:45:56.403Z pw:api taking page screenshot
+2026-10-19T18:45:56.409Z pw:api waiting for fonts to load...
+2026-10-19T18:45:56.413Z pw:api fonts loaded
+2026-10-19T18:45:56.562Z pw:api <= page.screenshot succeeded
+2026-10-19T18:45:56.566Z pw:api => page.evaluate started
+2026-10-19T18:45:56.614Z pw:api <= page.evaluate succeeded
+2026-10-19T18:45:56.614Z pw:api => page.waitForFunction started
+2026-10-19T18:45:56.657Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:45:56.658Z pw:api => page.evaluate started
+2026-10-19T18:45:56.680Z pw:api <= page.evaluate succeeded
+2026-10-19T18:45:56.681Z pw:api => locator.isVisible started
+2026-10-19T18:45:56.686Z pw:api   checking visibility of locator('#project-switch-status')
+2026-10-19T18:45:56.703Z pw:api <= locator.isVisible succeeded
+2026-10-19T18:45:56.704Z pw:api => locator.evaluate started
+2026-10-19T18:45:56.714Z pw:api waiting for locator('.topbar')
+2026-10-19T18:45:56.720Z pw:api   locator resolved to visible <header class="topbar">…</header>
+2026-10-19T18:45:56.744Z pw:api <= locator.evaluate succeeded
+2026-10-19T18:45:56.744Z pw:api => locator.click started
+2026-10-19T18:45:56.751Z pw:api waiting for getByRole('button', { name: 'Project menu', exact: true })
+2026-10-19T18:45:56.769Z pw:api   locator resolved to <button title="Project menu" aria-expanded="false" id="project-menu-toggle" aria-label="Project menu" popovertarget="project-menu" aria-controls="project-menu">…</button>
+2026-10-19T18:45:56.771Z pw:api attempting click action
+2026-10-19T18:45:56.771Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:56.777Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:56.777Z pw:api   scrolling into view if needed
+2026-10-19T18:45:56.779Z pw:api   done scrolling
+2026-10-19T18:45:56.792Z pw:api   performing click action
+2026-10-19T18:45:56.817Z pw:api   click action done
+2026-10-19T18:45:56.817Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:56.827Z pw:api   navigations have finished
+2026-10-19T18:45:56.837Z pw:api <= locator.click succeeded
+2026-10-19T18:45:56.838Z pw:api => locator.click started
+2026-10-19T18:45:56.861Z pw:api waiting for locator('#project-library')
+2026-10-19T18:45:56.878Z pw:api   locator resolved to <button type="button" id="project-library" aria-haspopup="dialog">Projects in this browser…</button>
+2026-10-19T18:45:56.881Z pw:api attempting click action
+2026-10-19T18:45:56.881Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:45:56.895Z pw:api   element is visible, enabled and stable
+2026-10-19T18:45:56.895Z pw:api   scrolling into view if needed
+2026-10-19T18:45:56.896Z pw:api   done scrolling
+2026-10-19T18:45:56.909Z pw:api   performing click action
+2026-10-19T18:45:56.962Z pw:api   click action done
+2026-10-19T18:45:56.962Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:45:56.967Z pw:api   navigations have finished
+2026-10-19T18:45:56.984Z pw:api <= locator.click succeeded
+2026-10-19T18:45:56.985Z pw:api => locator.waitFor started
+2026-10-19T18:45:57.002Z pw:api waiting for getByLabel('Search projects', { exact: true }) to be visible
+2026-10-19T18:45:57.016Z pw:api   locator resolved to visible <input type="search" aria-label="Search projects"/>
+2026-10-19T18:45:57.035Z pw:api <= locator.waitFor succeeded
+2026-10-19T18:45:57.035Z pw:api => locator.fill started
+2026-10-19T18:45:57.050Z pw:api waiting for getByLabel('Search projects', { exact: true })
+2026-10-19T18:45:57.057Z pw:api   locator resolved to <input type="search" aria-label="Search projects"/>
+2026-10-19T18:45:57.070Z pw:api   fill("Before asset preparation")
+2026-10-19T18:45:57.070Z pw:api attempting fill action
+2026-10-19T18:45:57.077Z pw:api   waiting for element to be visible, enabled and editable
+2026-10-19T18:45:57.108Z pw:api <= locator.fill succeeded
+2026-10-19T18:45:57.113Z pw:api => locator.waitFor started
+2026-10-19T18:45:57.123Z pw:api waiting for getByRole('button', { name: 'Open Before asset preparation', exact: true }) to be visible
+2026-10-19T18:45:57.139Z pw:api   locator resolved to visible <button type="button">Open Before asset preparation</button>
+2026-10-19T18:45:57.146Z pw:api <= locator.waitFor succeeded
+2026-10-19T18:45:57.146Z pw:api => tracing.stop started
+2026-10-19T18:45:58.025Z pw:api <= tracing.stop succeeded
+2026-10-19T18:45:58.026Z pw:api => browserContext.close started
+2026-10-19T18:45:58.109Z pw:api <= browserContext.close succeeded
+2026-10-19T18:45:58.110Z pw:api => browser.newContext started
+2026-10-19T18:45:58.250Z pw:api <= browser.newContext succeeded
+2026-10-19T18:45:58.258Z pw:api => tracing.start started
+2026-10-19T18:45:58.280Z pw:api <= tracing.start succeeded
+2026-10-19T18:45:58.282Z pw:api => browserContext.newPage started
+2026-10-19T18:45:59.432Z pw:api <= browserContext.newPage succeeded
+2026-10-19T18:45:59.440Z pw:api => page.goto started
+2026-10-19T18:45:59.462Z pw:api navigating to "http://127.0.0.1:8776/tools/runtime.html", waiting until "load"
+DIAGNOSTIC navigation request 6 GET http://127.0.0.1:8776/tools/runtime.html
+2026-10-19T18:45:59.586Z pw:api   "commit" event fired
+2026-10-19T18:45:59.595Z pw:api   navigated to "http://127.0.0.1:8776/tools/runtime.html"
+DIAGNOSTIC main navigation 6 http://127.0.0.1:8776/tools/runtime.html
+2026-10-19T18:45:59.838Z pw:api   "domcontentloaded" event fired
+2026-10-19T18:45:59.840Z pw:api   "load" event fired
+2026-10-19T18:45:59.853Z pw:api <= page.goto succeeded
+2026-10-19T18:45:59.863Z pw:api => page.evaluate started
+2026-10-19T18:46:00.666Z pw:api   "networkidle" event fired
+2026-10-19T18:46:00.827Z pw:api <= page.evaluate succeeded
+2026-10-19T18:46:00.829Z pw:api => page.goto started
+2026-10-19T18:46:00.838Z pw:api navigating to "http://127.0.0.1:8776/apps/web/dist/editor/studio/", waiting until "load"
+DIAGNOSTIC navigation request 6 GET http://127.0.0.1:8776/apps/web/dist/editor/studio/
+2026-10-19T18:46:00.916Z pw:api   "commit" event fired
+2026-10-19T18:46:00.917Z pw:api   navigated to "http://127.0.0.1:8776/apps/web/dist/editor/studio/"
+DIAGNOSTIC main navigation 6 http://127.0.0.1:8776/apps/web/dist/editor/studio/
+2026-10-19T18:46:01.202Z pw:api   "domcontentloaded" event fired
+2026-10-19T18:46:01.210Z pw:api   "load" event fired
+2026-10-19T18:46:01.269Z pw:api <= page.goto succeeded
+2026-10-19T18:46:01.270Z pw:api => page.waitForFunction started
+2026-10-19T18:46:01.578Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:46:01.578Z pw:api => locator.click started
+2026-10-19T18:46:01.590Z pw:api waiting for getByRole('button', { name: 'Project menu', exact: true })
+2026-10-19T18:46:01.655Z pw:api   locator resolved to <button title="Project menu" aria-expanded="false" id="project-menu-toggle" aria-label="Project menu" popovertarget="project-menu" aria-controls="project-menu">…</button>
+2026-10-19T18:46:01.659Z pw:api attempting click action
+2026-10-19T18:46:01.659Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:46:01.679Z pw:api   element is visible, enabled and stable
+2026-10-19T18:46:01.679Z pw:api   scrolling into view if needed
+2026-10-19T18:46:01.681Z pw:api   done scrolling
+2026-10-19T18:46:01.709Z pw:api   performing click action
+2026-10-19T18:46:01.738Z pw:api   click action done
+2026-10-19T18:46:01.738Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:46:01.748Z pw:api   navigations have finished
+2026-10-19T18:46:01.766Z pw:api <= locator.click succeeded
+2026-10-19T18:46:01.767Z pw:api => locator.click started
+2026-10-19T18:46:01.776Z pw:api waiting for locator('#project-library')
+2026-10-19T18:46:01.789Z pw:api   locator resolved to <button type="button" id="project-library" aria-haspopup="dialog">Projects in this browser…</button>
+2026-10-19T18:46:01.794Z pw:api attempting click action
+2026-10-19T18:46:01.794Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:46:01.829Z pw:api   element is visible, enabled and stable
+2026-10-19T18:46:01.829Z pw:api   scrolling into view if needed
+2026-10-19T18:46:01.832Z pw:api   done scrolling
+2026-10-19T18:46:01.848Z pw:api   performing click action
+2026-10-19T18:46:01.883Z pw:api   click action done
+2026-10-19T18:46:01.883Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:46:01.884Z pw:api   navigations have finished
+2026-10-19T18:46:01.939Z pw:api <= locator.click succeeded
+2026-10-19T18:46:01.943Z pw:api => locator.waitFor started
+2026-10-19T18:46:01.949Z pw:api   "networkidle" event fired
+2026-10-19T18:46:01.967Z pw:api waiting for getByLabel('Search projects', { exact: true }) to be visible
+2026-10-19T18:46:01.991Z pw:api   locator resolved to visible <input type="search" aria-label="Search projects"/>
+2026-10-19T18:46:02.001Z pw:api <= locator.waitFor succeeded
+2026-10-19T18:46:02.002Z pw:api => locator.fill started
+2026-10-19T18:46:02.010Z pw:api waiting for getByLabel('Search projects', { exact: true })
+2026-10-19T18:46:02.027Z pw:api   locator resolved to <input type="search" aria-label="Search projects"/>
+2026-10-19T18:46:02.030Z pw:api   fill("Paging")
+2026-10-19T18:46:02.030Z pw:api attempting fill action
+2026-10-19T18:46:02.048Z pw:api   waiting for element to be visible, enabled and editable
+2026-10-19T18:46:02.083Z pw:api <= locator.fill succeeded
+2026-10-19T18:46:02.083Z pw:api => page.waitForFunction started
+2026-10-19T18:46:02.173Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:46:02.174Z pw:api => locator.click started
+2026-10-19T18:46:02.215Z pw:api waiting for getByRole('button', { name: 'Next projects', exact: true })
+2026-10-19T18:46:02.246Z pw:api   locator resolved to <button type="button">Next projects</button>
+2026-10-19T18:46:02.250Z pw:api attempting click action
+2026-10-19T18:46:02.250Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:46:02.278Z pw:api   element is visible, enabled and stable
+2026-10-19T18:46:02.278Z pw:api   scrolling into view if needed
+2026-10-19T18:46:02.279Z pw:api   done scrolling
+2026-10-19T18:46:02.291Z pw:api   performing click action
+2026-10-19T18:46:02.308Z pw:api   click action done
+2026-10-19T18:46:02.308Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:46:02.310Z pw:api   navigations have finished
+2026-10-19T18:46:02.321Z pw:api <= locator.click succeeded
+2026-10-19T18:46:02.322Z pw:api => page.waitForFunction started
+2026-10-19T18:46:02.365Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:46:02.366Z pw:api => locator.count started
+2026-10-19T18:46:02.397Z pw:api <= locator.count succeeded
+2026-10-19T18:46:02.397Z pw:api => locator.click started
+2026-10-19T18:46:02.448Z pw:api waiting for getByRole('button', { name: 'Next projects', exact: true })
+2026-10-19T18:46:02.469Z pw:api   locator resolved to <button type="button">Next projects</button>
+2026-10-19T18:46:02.472Z pw:api attempting click action
+2026-10-19T18:46:02.472Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:46:02.498Z pw:api   element is visible, enabled and stable
+2026-10-19T18:46:02.498Z pw:api   scrolling into view if needed
+2026-10-19T18:46:02.502Z pw:api   done scrolling
+2026-10-19T18:46:02.653Z pw:api   performing click action
+2026-10-19T18:46:02.670Z pw:api   click action done
+2026-10-19T18:46:02.670Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:46:02.671Z pw:api   navigations have finished
+2026-10-19T18:46:02.686Z pw:api <= locator.click succeeded
+2026-10-19T18:46:02.686Z pw:api => page.waitForFunction started
+2026-10-19T18:46:02.724Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:46:02.726Z pw:api => locator.count started
+2026-10-19T18:46:02.796Z pw:api <= locator.count succeeded
+2026-10-19T18:46:02.796Z pw:api => locator.isDisabled started
+2026-10-19T18:46:02.841Z pw:api waiting for getByRole('button', { name: 'Next projects', exact: true })
+2026-10-19T18:46:02.860Z pw:api   locator resolved to <button disabled type="button">Next projects</button>
+2026-10-19T18:46:02.869Z pw:api <= locator.isDisabled succeeded
+2026-10-19T18:46:02.871Z pw:api => locator.focus started
+2026-10-19T18:46:02.887Z pw:api waiting for getByRole('button', { name: 'Previous projects', exact: true })
+2026-10-19T18:46:02.929Z pw:api   locator resolved to <button type="button">Previous projects</button>
+2026-10-19T18:46:03.005Z pw:api <= locator.focus succeeded
+2026-10-19T18:46:03.007Z pw:api => keyboard.press started
+2026-10-19T18:46:03.082Z pw:api <= keyboard.press succeeded
+2026-10-19T18:46:03.083Z pw:api => page.waitForFunction started
+2026-10-19T18:46:03.286Z pw:api <= page.waitForFunction succeeded
+2026-10-19T18:46:03.287Z pw:api => locator.click started
+2026-10-19T18:46:03.300Z pw:api waiting for getByRole('button', { name: 'Done', exact: true })
+2026-10-19T18:46:03.346Z pw:api   locator resolved to <button type="button">Done</button>
+2026-10-19T18:46:03.349Z pw:api attempting click action
+2026-10-19T18:46:03.349Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-19T18:46:03.364Z pw:api   element is visible, enabled and stable
+2026-10-19T18:46:03.364Z pw:api   scrolling into view if needed
+2026-10-19T18:46:03.368Z pw:api   done scrolling
+2026-10-19T18:46:03.425Z pw:api   performing click action
+2026-10-19T18:46:03.514Z pw:api   click action done
+2026-10-19T18:46:03.514Z pw:api   waiting for scheduled navigations to finish
+2026-10-19T18:46:03.523Z pw:api   navigations have finished
+2026-10-19T18:46:03.540Z pw:api <= locator.click succeeded
+2026-10-19T18:46:03.540Z pw:api => page.evaluate started
+2026-10-19T18:46:03.590Z pw:api <= page.evaluate succeeded
+2026-10-19T18:46:03.590Z pw:api => tracing.stop started
+2026-10-19T18:46:03.868Z pw:api <= tracing.stop succeeded
+2026-10-19T18:46:03.872Z pw:api => browserContext.close started
+2026-10-19T18:46:03.911Z pw:api <= browserContext.close succeeded
+2026-10-19T18:46:03.913Z pw:api => tracing.stop started
+2026-10-19T18:46:04.020Z pw:api <= tracing.stop succeeded
+2026-10-19T18:46:04.025Z pw:api => browser.close started
+2026-10-19T18:46:04.316Z pw:api <= browser.close succeeded
+Project library browser checks passed

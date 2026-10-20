@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-10-19T23:28:53.072955+00:00",
+  "main": "a020c10313dad3c2acaf5bb5cbfcb7ec2a315354",
+  "testedMergeCommit": "0e73a385f68da2837a86bbbe42419a5ea95dfb4a",
+  "commands": [
+    {
+      "name": "units-build",
+      "command": "npm run test:runtime && npm run test:frontend && node --test tests/editor/*.test.mjs && npm run runtime:build && npm run web:build",
+      "commit": "0e73a385f68da2837a86bbbe42419a5ea95dfb4a",
+      "startedAt": "2026-10-19T19:34:38Z",
+      "exitCode": 0,
+      "seconds": 49.51,
+      "finishedAt": "2026-10-19T19:35:28Z",
+      "logSha256": "a895101d793d31765837495861f4a8c70cd16864aa9d3c30de9fd4b8a74e9036"
+    },
+    {
+      "name": "integration",
+      "command": "node tests/editor/direct-blends-browser.cjs && node tests/editor/shapes-browser.cjs && node tests/editor/import-geometry-browser.cjs && node tests/site/learn.cjs && node tests/site/gallery.cjs && npm run test:experience",
+      "commit": "0e73a385f68da2837a86bbbe42419a5ea95dfb4a",
+      "startedAt": "2026-10-19T19:35:28Z",
+      "exitCode": 0,
+      "seconds": 232.92,
+      "finishedAt": "2026-10-19T19:39:21Z",
+      "logSha256": "322c07b1ca12fb61e413d8d36a8f6505d10b74e554aebb9b42fe8bf2159157c2"
+    },
+    {
+      "name": "native",
+      "command": "npm run validate:direct && npm run validate:shapes && npm run validate:imports && node tests/site/examples.cjs",
+      "commit": "0e73a385f68da2837a86bbbe42419a5ea95dfb4a",
+      "startedAt": "2026-10-19T19:39:21Z",
+      "exitCode": 0,
+      "seconds": 1413.55,
+      "finishedAt": "2026-10-19T20:02:54Z",
+      "logSha256": "edfd31d0a80d6f6a7f4e2fa9cb2cd27e74a7c579ed1d1198fa95f5c4c702d9ce"
+    }
+  ],
+  "unitTests": {
+    "runtime": 48,
+    "frontend": 27,
+    "editor": 114
+  },
+  "galleryStudies": 30,
+  "scope": "Integration checks for the PR 39/40 conflict resolution. Cloud Chromium 153; no physical-device or human evidence. Original feature acceptance and its aggregate timeout remain recorded in the parent directory."
+}

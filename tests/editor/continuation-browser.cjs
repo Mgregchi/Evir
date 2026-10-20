@@ -13,9 +13,9 @@ const { chromium } = require("playwright");
   await new Promise((r) => server.listen(0, "127.0.0.1", r));
   const origin = `http://127.0.0.1:${server.address().port}`;
   const browser = await chromium.launch({
-    executablePath: fs.existsSync("/usr/bin/chromium")
+    executablePath: process.env.CHROMIUM_PATH || (fs.existsSync("/usr/bin/chromium")
       ? "/usr/bin/chromium"
-      : chromium.executablePath(),
+      : chromium.executablePath()),
     args: ["--no-sandbox"],
   });
   const out = "research/results/path-continuation";

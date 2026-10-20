@@ -1,0 +1,83 @@
+{
+  "checkedAt": "2026-10-19T19:36:12.620Z",
+  "scope": "Cloud Chromium, simulated viewports and automated accessibility; no physical-device or human usability evidence.",
+  "viewports": [
+    {
+      "width": 320,
+      "height": 844,
+      "checks": [
+        "14 visual presets",
+        "invalid draft rejects atomically",
+        "cancelled detached handler is inert",
+        "focus return",
+        "reachable compact sheet actions",
+        "zero automated WCAG violations",
+        "shape add undo/redo",
+        "blank-project lesson end-to-end",
+        "three exact keys and unchanged Design pose",
+        "numeric frame and scrub synchronization",
+        "loop playback",
+        "actual native export",
+        "local recovery and no overflow"
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "checks": [
+        "14 visual presets",
+        "invalid draft rejects atomically",
+        "cancelled detached handler is inert",
+        "focus return",
+        "reachable compact sheet actions",
+        "zero automated WCAG violations",
+        "shape add undo/redo",
+        "blank-project lesson end-to-end",
+        "three exact keys and unchanged Design pose",
+        "numeric frame and scrub synchronization",
+        "loop playback",
+        "actual native export",
+        "local recovery and no overflow"
+      ]
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "checks": [
+        "14 visual presets",
+        "invalid draft rejects atomically",
+        "cancelled detached handler is inert",
+        "focus return",
+        "reachable compact sheet actions",
+        "zero automated WCAG violations",
+        "shape add undo/redo",
+        "blank-project lesson end-to-end",
+        "three exact keys and unchanged Design pose",
+        "numeric frame and scrub synchronization",
+        "loop playback",
+        "actual native export",
+        "local recovery and no overflow"
+      ]
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "checks": [
+        "14 visual presets",
+        "invalid draft rejects atomically",
+        "cancelled detached handler is inert",
+        "focus return",
+        "reachable compact sheet actions",
+        "zero automated WCAG violations",
+        "shape add undo/redo",
+        "blank-project lesson end-to-end",
+        "three exact keys and unchanged Design pose",
+        "numeric frame and scrub synchronization",
+        "loop playback",
+        "actual native export",
+        "local recovery and no overflow"
+      ]
+    }
+  ],
+  "browser": "153.0.8010.12"
+}

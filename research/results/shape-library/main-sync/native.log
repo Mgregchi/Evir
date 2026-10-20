@@ -1,0 +1,845 @@
+
+> evir-workspace@0.1.0 validate:direct
+> node tools/validate-direct-blends.cjs
+
+canvas: independent-input ordered blend, clock and pixel checks passed.
+canvas: independent-fixed ordered blend, clock and pixel checks passed.
+canvas: evir-export ordered blend, clock and pixel checks passed.
+canvas: color-export ordered blend, clock and pixel checks passed.
+canvas: rotation-export ordered blend, clock and pixel checks passed.
+canvas: lumen ordered blend, clock and pixel checks passed.
+canvas: studio-direct ordered blend, clock and pixel checks passed.
+webgl2: independent-input ordered blend, clock and pixel checks passed.
+webgl2: independent-fixed ordered blend, clock and pixel checks passed.
+webgl2: evir-export ordered blend, clock and pixel checks passed.
+webgl2: color-export ordered blend, clock and pixel checks passed.
+webgl2: rotation-export ordered blend, clock and pixel checks passed.
+webgl2: lumen ordered blend, clock and pixel checks passed.
+webgl2: studio-direct ordered blend, clock and pixel checks passed.
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+
+> evir-workspace@0.1.0 validate:shapes
+> node tools/validate-shapes.cjs
+
+canvas: 37 shape/lesson native comparisons passed.
+webgl2: 37 shape/lesson native comparisons passed.
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+
+> evir-workspace@0.1.0 validate:imports
+> node tools/validate-import-geometry.cjs
+
+canvas {
+  scene: 'import-mixed-closed',
+  frame: null,
+  target: 'editable',
+  mae: 0,
+  covered: 19036,
+  expectedCovered: 19036
+}
+canvas {
+  scene: 'import-mixed-closed',
+  frame: null,
+  target: 'native-reexport',
+  mae: 0,
+  covered: 19036,
+  expectedCovered: 19036
+}
+canvas {
+  scene: 'import-mixed-open-stroke',
+  frame: null,
+  target: 'editable',
+  mae: 0,
+  covered: 3889,
+  expectedCovered: 3889
+}
+canvas {
+  scene: 'import-mixed-open-stroke',
+  frame: null,
+  target: 'native-reexport',
+  mae: 0,
+  covered: 3889,
+  expectedCovered: 3889
+}
+canvas {
+  scene: 'import-mixed-transformed',
+  frame: null,
+  target: 'editable',
+  mae: 0.11864471435546875,
+  covered: 12886,
+  expectedCovered: 12909
+}
+canvas {
+  scene: 'import-mixed-transformed',
+  frame: null,
+  target: 'native-reexport',
+  mae: 0.11864471435546875,
+  covered: 12886,
+  expectedCovered: 12909
+}
+canvas {
+  scene: 'import-default-controls',
+  frame: null,
+  target: 'editable',
+  mae: 0,
+  covered: 23999,
+  expectedCovered: 23999
+}
+canvas {
+  scene: 'import-default-controls',
+  frame: null,
+  target: 'native-reexport',
+  mae: 0,
+  covered: 23999,
+  expectedCovered: 23999
+}
+canvas {
+  scene: 'import-ellipse-centered',
+  frame: null,
+  target: 'editable',
+  mae: 0,
+  covered: 8857,
+  expectedCovered: 8857
+}
+canvas {
+  scene: 'import-ellipse-centered',
+  frame: null,
+  target: 'native-reexport',
+  mae: 0.035747528076171875,
+  covered: 8851,
+  expectedCovered: 8857
+}
+canvas {
+  scene: 'import-ellipse-origin',
+  frame: null,
+  target: 'editable',
+  mae: 0,
+  covered: 10204,
+  expectedCovered: 10204
+}
+canvas {
+  scene: 'import-ellipse-origin',
+  frame: null,
+  target: 'native-reexport',
+  mae: 0.09173965454101562,
+  covered: 10189,
+  expectedCovered: 10204
+}
+canvas {
+  scene: 'import-ellipse-transformed',
+  frame: null,
+  target: 'editable',
+  mae: 0,
+  covered: 3814,
+  expectedCovered: 3814
+}
+canvas {
+  scene: 'import-ellipse-transformed',
+  frame: null,
+  target: 'native-reexport',
+  mae: 0,
+  covered: 3814,
+  expectedCovered: 3814
+}
+canvas {
+  scene: 'import-ellipse-animated-shape',
+  frame: 0,
+  target: 'editable',
+  mae: 0,
+  covered: 4367,
+  expectedCovered: 4367
+}
+canvas {
+  scene: 'import-ellipse-animated-shape',
+  frame: 0,
+  target: 'native-reexport',
+  mae: 0.0463409423828125,
+  covered: 4356,
+  expectedCovered: 4367
+}
+canvas {
+  scene: 'import-ellipse-animated-shape',
+  frame: 30,
+  target: 'editable',
+  mae: 0,
+  covered: 4358,
+  expectedCovered: 4358
+}
+canvas {
+  scene: 'import-ellipse-animated-shape',
+  frame: 30,
+  target: 'native-reexport',
+  mae: 0,
+  covered: 4358,
+  expectedCovered: 4358
+}
+canvas {
+  scene: 'import-ellipse-animated-shape',
+  frame: 60,
+  target: 'editable',
+  mae: 0,
+  covered: 4361,
+  expectedCovered: 4361
+}
+canvas {
+  scene: 'import-ellipse-animated-shape',
+  frame: 60,
+  target: 'native-reexport',
+  mae: 0,
+  covered: 4361,
+  expectedCovered: 4361
+}
+canvas {
+  scene: 'import-ellipse-animated-shape',
+  frame: 90,
+  target: 'editable',
+  mae: 0,
+  covered: 4358,
+  expectedCovered: 4358
+}
+canvas {
+  scene: 'import-ellipse-animated-shape',
+  frame: 90,
+  target: 'native-reexport',
+  mae: 0,
+  covered: 4358,
+  expectedCovered: 4358
+}
+canvas {
+  scene: 'import-ellipse-animated-shape',
+  frame: 120,
+  target: 'editable',
+  mae: 0,
+  covered: 4367,
+  expectedCovered: 4367
+}
+canvas {
+  scene: 'import-ellipse-animated-shape',
+  frame: 120,
+  target: 'native-reexport',
+  mae: 0.0463409423828125,
+  covered: 4356,
+  expectedCovered: 4367
+}
+canvas {
+  scene: 'import-rectangle-centered',
+  frame: null,
+  target: 'editable',
+  mae: 0,
+  covered: 13800,
+  expectedCovered: 13800
+}
+canvas {
+  scene: 'import-rectangle-centered',
+  frame: null,
+  target: 'native-reexport',
+  mae: 0,
+  covered: 13800,
+  expectedCovered: 13800
+}
+canvas {
+  scene: 'import-rectangle-origin',
+  frame: null,
+  target: 'editable',
+  mae: 0,
+  covered: 3480,
+  expectedCovered: 3480
+}
+canvas {
+  scene: 'import-rectangle-origin',
+  frame: null,
+  target: 'native-reexport',
+  mae: 0,
+  covered: 3480,
+  expectedCovered: 3480
+}
+canvas {
+  scene: 'import-rectangle-transformed',
+  frame: null,
+  target: 'editable',
+  mae: 0.07877349853515625,
+  covered: 8126,
+  expectedCovered: 8140
+}
+canvas {
+  scene: 'import-rectangle-transformed',
+  frame: null,
+  target: 'native-reexport',
+  mae: 0.07877349853515625,
+  covered: 8126,
+  expectedCovered: 8140
+}
+canvas {
+  scene: 'import-mixed-skinned',
+  frame: 0,
+  target: 'editable',
+  mae: 0,
+  covered: 19036,
+  expectedCovered: 19036
+}
+canvas {
+  scene: 'import-mixed-skinned',
+  frame: 0,
+  target: 'native-reexport',
+  mae: 0,
+  covered: 19036,
+  expectedCovered: 19036
+}
+canvas {
+  scene: 'import-mixed-skinned',
+  frame: 30,
+  target: 'editable',
+  mae: 0.000011444091796875,
+  covered: 19333,
+  expectedCovered: 19333
+}
+canvas {
+  scene: 'import-mixed-skinned',
+  frame: 30,
+  target: 'native-reexport',
+  mae: 0,
+  covered: 19333,
+  expectedCovered: 19333
+}
+canvas {
+  scene: 'import-mixed-skinned',
+  frame: 60,
+  target: 'editable',
+  mae: 0,
+  covered: 19380,
+  expectedCovered: 19380
+}
+canvas {
+  scene: 'import-mixed-skinned',
+  frame: 60,
+  target: 'native-reexport',
+  mae: 0,
+  covered: 19380,
+  expectedCovered: 19380
+}
+canvas {
+  scene: 'import-mixed-skinned',
+  frame: 90,
+  target: 'editable',
+  mae: 0.000011444091796875,
+  covered: 19333,
+  expectedCovered: 19333
+}
+canvas {
+  scene: 'import-mixed-skinned',
+  frame: 90,
+  target: 'native-reexport',
+  mae: 0,
+  covered: 19333,
+  expectedCovered: 19333
+}
+canvas {
+  scene: 'import-mixed-skinned',
+  frame: 120,
+  target: 'editable',
+  mae: 0,
+  covered: 19036,
+  expectedCovered: 19036
+}
+canvas {
+  scene: 'import-mixed-skinned',
+  frame: 120,
+  target: 'native-reexport',
+  mae: 0,
+  covered: 19036,
+  expectedCovered: 19036
+}
+canvas {
+  scene: 'tide-native',
+  frame: 0,
+  target: 'editable',
+  mae: 0.00090789794921875,
+  covered: 65536,
+  expectedCovered: 65536
+}
+canvas {
+  scene: 'tide-native',
+  frame: 0,
+  target: 'native-reexport',
+  mae: 0.0081787109375,
+  covered: 65536,
+  expectedCovered: 65536
+}
+canvas {
+  scene: 'tide-native',
+  frame: 30,
+  target: 'editable',
+  mae: 0.00048065185546875,
+  covered: 65536,
+  expectedCovered: 65536
+}
+canvas {
+  scene: 'tide-native',
+  frame: 30,
+  target: 'native-reexport',
+  mae: 0.0081787109375,
+  covered: 65536,
+  expectedCovered: 65536
+}
+canvas {
+  scene: 'tide-native',
+  frame: 60,
+  target: 'editable',
+  mae: 0.00048065185546875,
+  covered: 65536,
+  expectedCovered: 65536
+}
+canvas {
+  scene: 'tide-native',
+  frame: 60,
+  target: 'native-reexport',
+  mae: 0.0081787109375,
+  covered: 65536,
+  expectedCovered: 65536
+}
+canvas {
+  scene: 'tide-native',
+  frame: 90,
+  target: 'editable',
+  mae: 0.00048065185546875,
+  covered: 65536,
+  expectedCovered: 65536
+}
+canvas {
+  scene: 'tide-native',
+  frame: 90,
+  target: 'native-reexport',
+  mae: 0.0081787109375,
+  covered: 65536,
+  expectedCovered: 65536
+}
+canvas {
+  scene: 'tide-native',
+  frame: 120,
+  target: 'editable',
+  mae: 0.00090789794921875,
+  covered: 65536,
+  expectedCovered: 65536
+}
+canvas {
+  scene: 'tide-native',
+  frame: 120,
+  target: 'native-reexport',
+  mae: 0.0081787109375,
+  covered: 65536,
+  expectedCovered: 65536
+}
+webgl2 {
+  scene: 'import-mixed-closed',
+  frame: null,
+  target: 'editable',
+  mae: 0.23672103881835938,
+  covered: 19036,
+  expectedCovered: 18948
+}
+webgl2 {
+  scene: 'import-mixed-closed',
+  frame: null,
+  target: 'native-reexport',
+  mae: 0,
+  covered: 18948,
+  expectedCovered: 18948
+}
+webgl2 {
+  scene: 'import-mixed-open-stroke',
+  frame: null,
+  target: 'editable',
+  mae: 0.20711898803710938,
+  covered: 3889,
+  expectedCovered: 3752
+}
+webgl2 {
+  scene: 'import-mixed-open-stroke',
+  frame: null,
+  target: 'native-reexport',
+  mae: 0,
+  covered: 3752,
+  expectedCovered: 3752
+}
+webgl2 {
+  scene: 'import-mixed-transformed',
+  frame: null,
+  target: 'editable',
+  mae: 0.23906326293945312,
+  covered: 12886,
+  expectedCovered: 12817
+}
+webgl2 {
+  scene: 'import-mixed-transformed',
+  frame: null,
+  target: 'native-reexport',
+  mae: 0,
+  covered: 12817,
+  expectedCovered: 12817
+}
+webgl2 {
+  scene: 'import-default-controls',
+  frame: null,
+  target: 'editable',
+  mae: 0.1806182861328125,
+  covered: 23999,
+  expectedCovered: 23936
+}
+webgl2 {
+  scene: 'import-default-controls',
+  frame: null,
+  target: 'native-reexport',
+  mae: 0,
+  covered: 23936,
+  expectedCovered: 23936
+}
+webgl2 {
+  scene: 'import-ellipse-centered',
+  frame: null,
+  target: 'editable',
+  mae: 0.23183059692382812,
+  covered: 8857,
+  expectedCovered: 8762
+}
+webgl2 {
+  scene: 'import-ellipse-centered',
+  frame: null,
+  target: 'native-reexport',
+  mae: 0,
+  covered: 8762,
+  expectedCovered: 8762
+}
+webgl2 {
+  scene: 'import-ellipse-origin',
+  frame: null,
+  target: 'editable',
+  mae: 0.24648666381835938,
+  covered: 10204,
+  expectedCovered: 10112
+}
+webgl2 {
+  scene: 'import-ellipse-origin',
+  frame: null,
+  target: 'native-reexport',
+  mae: 0,
+  covered: 10112,
+  expectedCovered: 10112
+}
+webgl2 {
+  scene: 'import-ellipse-transformed',
+  frame: null,
+  target: 'editable',
+  mae: 0.20342254638671875,
+  covered: 3814,
+  expectedCovered: 3705
+}
+webgl2 {
+  scene: 'import-ellipse-transformed',
+  frame: null,
+  target: 'native-reexport',
+  mae: 0,
+  covered: 3705,
+  expectedCovered: 3705
+}
+webgl2 {
+  scene: 'import-ellipse-animated-shape',
+  frame: 0,
+  target: 'editable',
+  mae: 0.2124786376953125,
+  covered: 4367,
+  expectedCovered: 4292
+}
+webgl2 {
+  scene: 'import-ellipse-animated-shape',
+  frame: 0,
+  target: 'native-reexport',
+  mae: 0,
+  covered: 4292,
+  expectedCovered: 4292
+}
+webgl2 {
+  scene: 'import-ellipse-animated-shape',
+  frame: 30,
+  target: 'editable',
+  mae: 0.16902923583984375,
+  covered: 4358,
+  expectedCovered: 4299
+}
+webgl2 {
+  scene: 'import-ellipse-animated-shape',
+  frame: 30,
+  target: 'native-reexport',
+  mae: 0,
+  covered: 4299,
+  expectedCovered: 4299
+}
+webgl2 {
+  scene: 'import-ellipse-animated-shape',
+  frame: 60,
+  target: 'editable',
+  mae: 0.1864776611328125,
+  covered: 4361,
+  expectedCovered: 4293
+}
+webgl2 {
+  scene: 'import-ellipse-animated-shape',
+  frame: 60,
+  target: 'native-reexport',
+  mae: 0,
+  covered: 4293,
+  expectedCovered: 4293
+}
+webgl2 {
+  scene: 'import-ellipse-animated-shape',
+  frame: 90,
+  target: 'editable',
+  mae: 0.16902923583984375,
+  covered: 4358,
+  expectedCovered: 4299
+}
+webgl2 {
+  scene: 'import-ellipse-animated-shape',
+  frame: 90,
+  target: 'native-reexport',
+  mae: 0,
+  covered: 4299,
+  expectedCovered: 4299
+}
+webgl2 {
+  scene: 'import-ellipse-animated-shape',
+  frame: 120,
+  target: 'editable',
+  mae: 0.2124786376953125,
+  covered: 4367,
+  expectedCovered: 4292
+}
+webgl2 {
+  scene: 'import-ellipse-animated-shape',
+  frame: 120,
+  target: 'native-reexport',
+  mae: 0,
+  covered: 4292,
+  expectedCovered: 4292
+}
+webgl2 {
+  scene: 'import-rectangle-centered',
+  frame: null,
+  target: 'editable',
+  mae: 0,
+  covered: 13800,
+  expectedCovered: 13800
+}
+webgl2 {
+  scene: 'import-rectangle-centered',
+  frame: null,
+  target: 'native-reexport',
+  mae: 0,
+  covered: 13800,
+  expectedCovered: 13800
+}
+webgl2 {
+  scene: 'import-rectangle-origin',
+  frame: null,
+  target: 'editable',
+  mae: 0.0211029052734375,
+  covered: 3480,
+  expectedCovered: 3476
+}
+webgl2 {
+  scene: 'import-rectangle-origin',
+  frame: null,
+  target: 'native-reexport',
+  mae: 0,
+  covered: 3476,
+  expectedCovered: 3476
+}
+webgl2 {
+  scene: 'import-rectangle-transformed',
+  frame: null,
+  target: 'editable',
+  mae: 0.2068328857421875,
+  covered: 8126,
+  expectedCovered: 8063
+}
+webgl2 {
+  scene: 'import-rectangle-transformed',
+  frame: null,
+  target: 'native-reexport',
+  mae: 0.011104583740234375,
+  covered: 8062,
+  expectedCovered: 8063
+}
+webgl2 {
+  scene: 'import-mixed-skinned',
+  frame: 0,
+  target: 'editable',
+  mae: 0.23672103881835938,
+  covered: 19036,
+  expectedCovered: 18948
+}
+webgl2 {
+  scene: 'import-mixed-skinned',
+  frame: 0,
+  target: 'native-reexport',
+  mae: 0,
+  covered: 18948,
+  expectedCovered: 18948
+}
+webgl2 {
+  scene: 'import-mixed-skinned',
+  frame: 30,
+  target: 'editable',
+  mae: 0.26509857177734375,
+  covered: 19333,
+  expectedCovered: 19226
+}
+webgl2 {
+  scene: 'import-mixed-skinned',
+  frame: 30,
+  target: 'native-reexport',
+  mae: 0,
+  covered: 19226,
+  expectedCovered: 19226
+}
+webgl2 {
+  scene: 'import-mixed-skinned',
+  frame: 60,
+  target: 'editable',
+  mae: 0.2945556640625,
+  covered: 19380,
+  expectedCovered: 19264
+}
+webgl2 {
+  scene: 'import-mixed-skinned',
+  frame: 60,
+  target: 'native-reexport',
+  mae: 0,
+  covered: 19264,
+  expectedCovered: 19264
+}
+webgl2 {
+  scene: 'import-mixed-skinned',
+  frame: 90,
+  target: 'editable',
+  mae: 0.26509857177734375,
+  covered: 19333,
+  expectedCovered: 19226
+}
+webgl2 {
+  scene: 'import-mixed-skinned',
+  frame: 90,
+  target: 'native-reexport',
+  mae: 0,
+  covered: 19226,
+  expectedCovered: 19226
+}
+webgl2 {
+  scene: 'import-mixed-skinned',
+  frame: 120,
+  target: 'editable',
+  mae: 0.23672103881835938,
+  covered: 19036,
+  expectedCovered: 18948
+}
+webgl2 {
+  scene: 'import-mixed-skinned',
+  frame: 120,
+  target: 'native-reexport',
+  mae: 0,
+  covered: 18948,
+  expectedCovered: 18948
+}
+webgl2 {
+  scene: 'tide-native',
+  frame: 0,
+  target: 'editable',
+  mae: 0.33130645751953125,
+  covered: 65536,
+  expectedCovered: 65536
+}
+webgl2 {
+  scene: 'tide-native',
+  frame: 0,
+  target: 'native-reexport',
+  mae: 0.004192352294921875,
+  covered: 65536,
+  expectedCovered: 65536
+}
+webgl2 {
+  scene: 'tide-native',
+  frame: 30,
+  target: 'editable',
+  mae: 0.3286628723144531,
+  covered: 65536,
+  expectedCovered: 65536
+}
+webgl2 {
+  scene: 'tide-native',
+  frame: 30,
+  target: 'native-reexport',
+  mae: 0.00537872314453125,
+  covered: 65536,
+  expectedCovered: 65536
+}
+webgl2 {
+  scene: 'tide-native',
+  frame: 60,
+  target: 'editable',
+  mae: 0.3281517028808594,
+  covered: 65536,
+  expectedCovered: 65536
+}
+webgl2 {
+  scene: 'tide-native',
+  frame: 60,
+  target: 'native-reexport',
+  mae: 0.00308990478515625,
+  covered: 65536,
+  expectedCovered: 65536
+}
+webgl2 {
+  scene: 'tide-native',
+  frame: 90,
+  target: 'editable',
+  mae: 0.3286628723144531,
+  covered: 65536,
+  expectedCovered: 65536
+}
+webgl2 {
+  scene: 'tide-native',
+  frame: 90,
+  target: 'native-reexport',
+  mae: 0.00537872314453125,
+  covered: 65536,
+  expectedCovered: 65536
+}
+webgl2 {
+  scene: 'tide-native',
+  frame: 120,
+  target: 'editable',
+  mae: 0.33130645751953125,
+  covered: 65536,
+  expectedCovered: 65536
+}
+webgl2 {
+  scene: 'tide-native',
+  frame: 120,
+  target: 'native-reexport',
+  mae: 0.004192352294921875,
+  covered: 65536,
+  expectedCovered: 65536
+}
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+canvas: 271 showcase keyframe/transition comparisons passed.
+webgl2: 271 showcase keyframe/transition comparisons passed.

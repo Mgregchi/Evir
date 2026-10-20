@@ -1,0 +1,185 @@
+
+> evir-workspace@0.1.0 test:editor
+> npm run web:build && node --test tests/editor/*.test.mjs && node tests/editor/browser.cjs && node tests/editor/authoring-browser.cjs && node tests/editor/pen-browser.cjs && node tests/editor/continuation-browser.cjs && node tests/editor/selection-browser.cjs && node tests/editor/workspace-browser.cjs && node tests/editor/navigation-browser.cjs && node tests/editor/alignment-browser.cjs && node tests/editor/guides-browser.cjs && node tests/editor/structured-guides-browser.cjs && node tests/editor/freehand-browser.cjs && node tests/editor/brush-browser.cjs && node tests/editor/stroke-browser.cjs && node tests/editor/paint-browser.cjs && node tests/editor/advanced-browser.cjs && node tests/editor/workflow-browser.cjs && node tests/editor/library-browser.cjs && node tests/editor/playback-browser.cjs && node tests/editor/live-browser.cjs && node tests/editor/import-guidance-browser.cjs && node tests/editor/skin-weights-browser.cjs && node tests/editor/path-joining-browser.cjs && node tests/editor/shapes-browser.cjs
+
+
+> evir-workspace@0.1.0 web:build
+> npm run build --workspace @evir/web
+
+
+> @evir/web@0.1.0 build
+> node build.mjs
+
+Built 11 Evir public pages into apps/web/dist; editor destination /editor/studio/
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+✔ advanced source and runtime preserve contracts; .riv import recovers semantics and motion (419.436054ms)
+✔ IK reaches an independent moving target and clamps unreachable distances without mutating rest (9.577269ms)
+✔ timed transitions mix and 1D blends interpolate inputs; reset restores defaults (36.014631ms)
+✔ invalid clips, mesh UV/topology, IK overlap and transition fields reject atomically (54.047471ms)
+✔ binary reader reports malformed and unsupported streams before exposing a partial scene (10.218563ms)
+✔ deleting masks and targets cleans effects; influencing mesh bones cannot be discarded (5.046661ms)
+✔ Editor-style property tables use four entries per word and reject duplicate keys (7.466604ms)
+✔ Snapping uses six screen pixels at different zooms, separate axes and Alt bypass (46.163782ms)
+✔ Targets exclude moving ancestors and descendants, hidden ancestry and other artboards (3.182111ms)
+✔ One root aligns to artboard; several align bounding edges and centers under affine parents with one undo (88.785049ms)
+✔ Invalid selected members reject alignment without partial changes (5.954859ms)
+✔ Snap targets are immutable drag snapshots and artboard centers are valid references (3.734276ms)
+✔ Coincident targets retain the same stable reference when approached from either side (0.328029ms)
+✔ pressure obeys pen ownership, active range and release; mouse/touch always use midpoint (7.360935ms)
+✔ real pressure changes outline width; disabled pressure has identical constant-width shape and round ends (106.742192ms)
+✔ sharp turns, repeated coordinates and pressure extremes stay finite; resources and options reject atomically (74.610759ms)
+✔ brush width is in artboard space, affine parenting preserves the outline, one history step exports ordinary filled geometry (212.553405ms)
+✔ pressure changes survive subpixel capture without duplicating stationary coordinates (1.895315ms)
+✔ compiler preserves source, produces stable bytes and explicit component/source namespaces (161.890065ms)
+✔ unsupported assets, shear, singular transforms and float32 overflow fail before download (8.526361ms)
+✔ source IDs remain opaque even when they match JavaScript prototype names (3.327923ms)
+✔ wave: cubic fitting retains sampled shape with fewer editable anchors (168.044441ms)
+✔ ring: cubic fitting retains sampled shape with fewer editable anchors (336.577541ms)
+✔ corner: cubic fitting retains sampled shape with fewer editable anchors (9.849405ms)
+✔ noisy: cubic fitting retains sampled shape with fewer editable anchors (179.452741ms)
+✔ freehand budgets reject complexity without silently weakening requested fidelity (17.111474ms)
+✔ coalesced-sized draft sampling, interruption and zoom use bounded world-space coordinates (12.315227ms)
+✔ affine parent, one-step history and editable source/export keep freehand controls (38.212017ms)
+✔ editable import feedback identifies unsupported behavior without claiming corruption (15.098288ms)
+✔ MCP setup uses absolute local paths, supports Windows and excludes fixed session IDs (8.36345ms)
+✔ Guide presets strictly validate bounded positions, counts, flags and IDs (21.204577ms)
+✔ Browser guide preferences recover, isolate artboards/projects and evict older scopes (25.973427ms)
+✔ Manual guide and arithmetic grid snaps retain screen tolerance, hidden/Alt bypass and immutable settings (30.345932ms)
+✔ Zoomed-out dense grids draw bounded visible lines without changing configured snap spacing (3.063619ms)
+✔ Guide snapping preserves binary search over large captured object targets (87.285418ms)
+✔ Key-object alignment keeps a locked reference fixed, moves affine members once and undoes atomically (60.581626ms)
+✔ save/open retains IDs, affine transforms, authoring controls and verified asset bytes (93.202255ms)
+✔ opening rejects unknown versions, future fields, broken ownership, cycles and nonfinite transforms (22.471331ms)
+✔ reparent preserves world matrix under rotated, scaled and sheared parents and across undo/redo (18.947681ms)
+✔ singular, cross-artboard and cyclic reparent failures leave committed state and history unchanged (4.105363ms)
+✔ preview is isolated, cancellation restores exact state, many drag updates create one undo entry (24.922411ms)
+✔ rejected and throwing edits are atomic; caller references cannot mutate stored data (4.13961ms)
+✔ subtree deletion removes descendant settings and undo restores every record (3.310061ms)
+✔ draw order is explicit; branching discards redo and no-op edits preserve it (4.367684ms)
+✔ v1 migration validates and retains all old content (43.305385ms)
+✔ curve insertion is De Casteljau subdivision and carries stable point IDs (13.556786ms)
+✔ quantized one-through-four influences always sum to 255 bytes (9.080796ms)
+✔ nonidentity binding leaves the rest pose unchanged; child tips and independently weighted handles deform correctly (19.586889ms)
+✔ deleting a referenced bone fails atomically; deleting paths cleans tracks and listeners (14.834133ms)
+✔ linear, hold, cubic and color keys evaluate deterministically without writing defaults (4.657989ms)
+✔ typed machine conditions, transient triggers, listeners and reset preserve the source project (6.541326ms)
+✔ scale tracks remain independent through reflection and zero; track order does not change a pose (2.186229ms)
+✔ immediate machines settle guarded transition chains and consume triggers only once (6.130923ms)
+✔ Two-finger camera preserves the midpoint world position with translation and clamped zoom (6.781023ms)
+✔ Desktop panels reserve a usable stage under either resizing direction (1.534116ms)
+✔ Collapsed hierarchy and search retain matching ancestors without changing source (27.923409ms)
+✔ Bulk organization preserves affine world positions and descendant IDs in one Undo step (61.228738ms)
+✔ Invalid destinations, locked selections, singular transforms and rig constraints leave History unchanged (10.31816ms)
+✔ Organization does not silently break animation keys by changing parent spaces (7.945033ms)
+✔ local gradient colors, alpha, endpoints and source IDs survive history, path conversion and both document loaders (34.463267ms)
+✔ invalid paint cannot enter a transaction; positions, alpha, budgets and unsupported contracts have diagnostics (13.685609ms)
+✔ gradient compiler is deterministic, immutable and rejects float32 overflow before download (17.453607ms)
+✔ Either endpoint preserves the source's existing point IDs, anchors, handles, paint and direction (77.800253ms)
+✔ Pen continuation retains world coordinates under a transformed node and affine parent (4.376242ms)
+✔ Backspace and pointer cancellation never remove original points; drafts require a completed new point (2.261561ms)
+✔ Closed, skinned, hidden, locked and singular paths reject before a source edit (5.745167ms)
+✔ A concurrently changed path or ancestor rejects atomically without destroying the draft (3.762434ms)
+✔ Numeric coordinates and drawing budgets are bounded; closing remains possible at the budget (14.501635ms)
+✔ All four endpoint pairings retain existing world-space cubic segments under affine parents (172.555359ms)
+✔ Merge retains the chosen endpoint ID and only changes the attached donor segment (5.325693ms)
+✔ Merging from either end retains the kept curves and every unattached donor segment (28.828825ms)
+✔ Filled donor curves can bake a relative shear without moving their world-space segments (4.61198ms)
+✔ Both methods produce one reversible history edit, source recovery and supported native exports (40.120076ms)
+✔ Unsafe topology, paint, ownership and references reject without any partial source mutation (22.15067ms)
+✔ Solid stroke width can be rebased across proportional scale; relative shear, dashes and trims reject (27.541359ms)
+✔ Valid skin, listener, feather and IK contracts are preserved by rejecting an unsafe join (15.265ms)
+✔ Shared parent animation stays intact; control-coordinate and topology budgets reject atomically (143.279774ms)
+✔ Pen drawing preserves world anchors and mirrored handles under an affine parent (124.332783ms)
+✔ Pen drafts enforce valid topology, close in screen space and cancel interrupted gestures (5.135078ms)
+✔ Multiple selection uses world deltas under distinct affine parents and one history step (32.406664ms)
+✔ Selected ancestors move descendants once and invalid members reject preparation before mutation (4.389224ms)
+✔ Marquee respects enclosure, ancestry, hidden and locked layers (5.211275ms)
+✔ Every preset is editable source, has isolated point IDs and round-trips without preset metadata (146.869755ms)
+✔ Curved presets use actual cubic handles; circle locks aspect and polygon/star counts are bounded (5.536744ms)
+✔ Line retains an open centerline and editable stroke, upgrading only successful documents (2.440224ms)
+✔ Invalid drafts reject atomically, including invalid dimensions, geometry options, paint and scope (10.973225ms)
+✔ Placement respects active artboard, parent coordinates, stacking and locked ancestors (6.592625ms)
+✔ One history operation adds a shape and undo/redo preserves its identity and editable points (19.343739ms)
+✔ Finished beginner lesson matches the three documented keys and preserves its Design pose (8.19016ms)
+✔ binding and normalized edits support paths and preserve deformed bind coordinates (32.037711ms)
+✔ invalid batches, binding choices and hidden/locked ancestry reject without partial mutation (21.450315ms)
+✔ swept weight gestures are event-rate independent, immutable at construction and one-step undoable (25.327338ms)
+✔ brush is screen sized, capped and does not accumulate repeated stationary samples (6.215901ms)
+✔ multi-bone mesh weights stay synchronized across anchor/control slots and survive native export/import (111.686624ms)
+✔ four-bone edits preserve exact packed totals, missing influences and atomic invalid binding (3.906918ms)
+✔ freehand centerlines keep constant editable width and support two-point open strokes (54.92263ms)
+✔ endpoint continuation preserves native paint and point identity in one undo step (52.663258ms)
+✔ local command patches can add native stroke geometry and key width atomically (22.24408ms)
+✔ v1 guide presets and cached preferences upgrade without changing manual guides or grid (19.985706ms)
+✔ fixed and stretch bands retain margins/gutters, anchor modes and bounded track geometry (11.768908ms)
+✔ component schema rejects unbounded, duplicate or malformed presets atomically (15.97295ms)
+✔ component boundaries/centers snap in screen units, with visibility, per-component snap and Alt bypass (14.899289ms)
+✔ non-fitting resized components stay inactive without suppressing valid guides; bands cap at 256 (5.746393ms)
+✔ fixed-gap distribution keeps locked key fixed and uses affine world bounds with one undo/redo (54.060181ms)
+✔ fixed-gap spacing supports two roots and reference at either end without reordering (3.489257ms)
+✔ invalid fixed-gap selection, visibility, locks and gaps reject before any mutation (0.672931ms)
+✔ matching static parent bases rebase animated coordinates and preserve every sampled world pose and easing (34.108959ms)
+✔ relative placement and drops retain selected root ordering; invalid nesting and references reject atomically (13.714508ms)
+✔ distribution equalizes bounding-box gaps under affine parents and keeps the outside edges fixed (2.544696ms)
+✔ history return-to-start gestures preserve redo, revisions reflect committed changes, and reserved IDs retain cameras (1.030226ms)
+✔ pose-scoped transform resolver matches affine/bone transforms and traversal follows nested draw order (0.933073ms)
+✔ key navigation respects selection and graph fit includes negative and distant positions (0.449307ms)
+✔ recovery coalesces pending edits, serializes in-flight writes and reports only the newest completion (1.292116ms)
+✔ large valid base64 assets validate without recursive-regexp overflow; malformed padding rejects (31.819992ms)
+ℹ tests 114
+ℹ suites 0
+ℹ pass 114
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5851.621415
+Editor browser workflows passed
+Authoring browser flow passed: editable paths, pointer controls, bone chain/weights, timeline, trigger/listener/reset, save/open, binary export.
+Pen browser workflow and official Canvas2D/WebGL2 export comparisons passed. [
+  {
+    backend: 'canvas',
+    mae: 0.002704620361328125,
+    expectedCovered: 2355,
+    actualCovered: 2356
+  },
+  {
+    backend: 'webgl2',
+    mae: 0.09023284912109375,
+    expectedCovered: 2355,
+    actualCovered: 2320
+  }
+]
+Path continuation: four responsive workflows, both endpoints, numeric curves, cancellation, source identity, history and accessibility passed.
+Selection, responsive panels and keyboard browser checks passed
+Workspace UX acceptance passed across six portrait/landscape/tablet/desktop sizes
+locator.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('#organize-apply')[22m
+[2m    - locator resolved to <button class="primary" id="organize-apply">Apply organization</button>[22m
+[2m  - attempting click action[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+
+    at /workspace/Evir/tests/editor/navigation-browser.cjs:246:45 {
+  log: [
+    "  - waiting for locator('#organize-apply')",
+    '    - locator resolved to <button class="primary" id="organize-apply">Apply organization</button>',
+    '  - attempting click action',
+    '    - waiting for element to be visible, enabled and stable'
+  ],
+  name: 'TimeoutError'
+}
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice

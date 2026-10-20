@@ -34,6 +34,7 @@ import { strokePathOnContext, strokeStyle } from "@evir/renderer-canvas";
 import { paintControls } from "./paint.mjs";
 import {mountSkinWeights} from './skin-weights.mjs';
 import { mountAuthoring } from "./authoring.mjs";
+import { mountShapes } from './shapes.mjs';
 import { PenDraft } from "./pen.mjs";
 import { FreehandDraft } from "./freehand.mjs";
 import { brushOutline, pointerPressure } from "./brush.mjs";
@@ -67,6 +68,7 @@ import { worldPoints, mapPoint } from "@evir/runtime/geometry";
 const config = JSON.parse(document.getElementById("editor-config").textContent);
 document.querySelector(".brand").href = config.publicSiteUrl;
 document.querySelector("#studio-home").href = config.publicSiteUrl;
+document.querySelector('#help-learn').href = new URL('learn/#first-animation',new URL(config.publicSiteUrl,location.href)).href;
 document.querySelector("#startup-step").textContent =
   "Restoring your local project…";
 let authoring, weightTools;
@@ -1128,6 +1130,27 @@ function clearLayerDrop() {
   for (const row of $("#layers").querySelectorAll("[data-drop]"))
     delete row.dataset.drop;
 }
+function refreshProperties(p=project()) {
+  const n=p.nodes.find(n=>n.id===selected);
+  properties(p);
+  if (authoring?.mode === "Interact" || (authoring?.mode === "Animate" && !n))
+    for (const control of document.querySelectorAll(
+      "#properties input,#properties select,#properties button",
+    ))
+      control.disabled = true;
+  else if (authoring?.mode === "Animate") {
+    const nameField = document.querySelector('[aria-label="Layer name"]');
+    if (nameField) nameField.disabled = true;
+    for (const section of document.querySelectorAll("#properties section"))
+      if (
+        ["Organization", "Layer controls"].includes(
+          section.querySelector("h3")?.textContent,
+        )
+      )
+        for (const control of section.querySelectorAll("input,select,button"))
+          control.disabled = true;
+  }
+}
 function render() {
   liveTools?.refresh();
   const p = project();
@@ -1350,24 +1373,7 @@ function render() {
     String(multipleLayers && authoring?.mode === "Design"),
   );
   $("#snap-alignment").disabled = authoring?.mode !== "Design";
-  properties(p);
-  if (authoring?.mode === "Interact" || (authoring?.mode === "Animate" && !n))
-    for (const control of document.querySelectorAll(
-      "#properties input,#properties select,#properties button",
-    ))
-      control.disabled = true;
-  else if (authoring?.mode === "Animate") {
-    const nameField = document.querySelector('[aria-label="Layer name"]');
-    if (nameField) nameField.disabled = true;
-    for (const section of document.querySelectorAll("#properties section"))
-      if (
-        ["Organization", "Layer controls"].includes(
-          section.querySelector("h3")?.textContent,
-        )
-      )
-        for (const control of section.querySelectorAll("input,select,button"))
-          control.disabled = true;
-  }
+  refreshProperties(p);
   $("#project-name").disabled = authoring && authoring.mode !== "Design";
   authoring?.refresh();
   advanced?.refresh();
@@ -2546,6 +2552,7 @@ authoring = mountAuthoring({
   revision: () => store.revision,
   transact: (label, fn) => edit(label, fn, true),
   refresh: render,
+  refreshProperties,
   draw,
   fit,
   notice,
@@ -2576,6 +2583,8 @@ window.addEventListener("pagehide", (e) => {
   if (!e.persisted) { sceneAssets.dispose(); library?.close(); }
 });
 mountPanels();
+mountShapes({project:bundle,mode:()=>authoring.mode,ready:penReady,revision:()=>generation,
+  selected:()=>selected,artboardId:()=>activeArtboard,commit:(label,fn)=>edit(label,fn,true),select,notice});
 mountDisclosures();
 mountLayout({ notice });
 canvasGuides = mountGuides({project, artboard, ready:penReady, cancel:cancelDrag, draw, notice, editable:()=>authoring.mode === "Design" && tool === "select"});

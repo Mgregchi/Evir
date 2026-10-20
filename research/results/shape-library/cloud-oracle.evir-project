@@ -1,0 +1,128 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 2,
+  "id": "shape-cloud",
+  "name": "cloud",
+  "artboards": [
+    {
+      "id": "artboard-b99cf4d2-35c9-4edc-9c69-3cc9bf59e94b",
+      "name": "Artboard 1",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "node-090a02d4-4396-4995-8b9c-d77480f6b294",
+      "name": "Cloud",
+      "kind": "path",
+      "artboardId": "artboard-b99cf4d2-35c9-4edc-9c69-3cc9bf59e94b",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        166,
+        181
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#89e4c4",
+        "skin": null,
+        "points": [
+          {
+            "id": "point-5a0c311f-c6de-44c0-8b6a-850d6fa03102",
+            "anchor": [
+              39.6,
+              132
+            ],
+            "in": [
+              39.6,
+              132
+            ],
+            "out": [
+              -12.600000000000001,
+              132
+            ]
+          },
+          {
+            "id": "point-d128c4b1-cbfc-4ca8-9f48-4544ba4e8beb",
+            "anchor": [
+              36,
+              54
+            ],
+            "in": [
+              -9,
+              57
+            ],
+            "out": [
+              25.200000000000003,
+              -3
+            ]
+          },
+          {
+            "id": "point-1af3cf15-d978-4d80-b5b7-3aad8ca6fd87",
+            "anchor": [
+              118.80000000000001,
+              42.00000000000001
+            ],
+            "in": [
+              108,
+              -18
+            ],
+            "out": [
+              153,
+              13.5
+            ]
+          },
+          {
+            "id": "point-8cad1e94-0076-4abd-b7e2-731fad2fb524",
+            "anchor": [
+              158.4,
+              81
+            ],
+            "in": [
+              190.8,
+              60
+            ],
+            "out": [
+              196.20000000000002,
+              126
+            ]
+          },
+          {
+            "id": "point-26063f5b-3a33-4b33-af8f-d19927a38d64",
+            "anchor": [
+              122.4,
+              132
+            ],
+            "in": [
+              149.4,
+              147
+            ],
+            "out": [
+              122.4,
+              132
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "artboard-b99cf4d2-35c9-4edc-9c69-3cc9bf59e94b": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  }
+}

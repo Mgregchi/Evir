@@ -15,7 +15,13 @@ npm run web:build
 npm run web:serve
 ```
 
-The web app defaults to port 8787: `/editor/` is the landing and `/editor/studio/` is the workspace. Only this app is hosted. Studio UI lives in `packages/studio`; engine implementations retain their package boundaries. Browser tools accept `CHROMIUM_PATH`. See [web configuration/hosting](apps/web/README.md), [Studio](packages/studio/README.md), [engine contracts](packages/README.md) and [research reproduction](research/README.md).
+The web app defaults to port 8787: `/editor/` is the landing and `/editor/studio/` is the workspace. Only this app is hosted. Studio UI lives in `packages/studio`; engine implementations retain their package boundaries. Browser tools accept `CHROMIUM_PATH`. If the machine also has a system Chromium, explicitly select Playwright’s matching downloaded build before running browser checks:
+
+```sh
+export CHROMIUM_PATH="$(node -p 'require("playwright").chromium.executablePath()')"
+```
+
+Use the same `PLAYWRIGHT_BROWSERS_PATH` for installation and execution if you choose a custom browser cache. See [web configuration/hosting](apps/web/README.md), [Studio](packages/studio/README.md), [engine contracts](packages/README.md) and [research reproduction](research/README.md).
 
 ## Changes and checks
 

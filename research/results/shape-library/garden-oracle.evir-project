@@ -1,0 +1,4236 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 2,
+  "id": "garden-project",
+  "name": "Pocket garden — made from shapes",
+  "artboards": [
+    {
+      "id": "garden-board",
+      "name": "Pocket garden — made from shapes",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "garden-garden-card",
+      "name": "garden card",
+      "kind": "path",
+      "artboardId": "garden-board",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        32,
+        48
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#dfe9df",
+        "skin": null,
+        "points": [
+          {
+            "id": "garden-garden-card-point-0",
+            "anchor": [
+              36,
+              0
+            ],
+            "in": [
+              16.117749006091433,
+              0
+            ],
+            "out": [
+              36,
+              0
+            ]
+          },
+          {
+            "id": "garden-garden-card-point-1",
+            "anchor": [
+              412,
+              0
+            ],
+            "in": [
+              412,
+              0
+            ],
+            "out": [
+              431.88225099390854,
+              0
+            ]
+          },
+          {
+            "id": "garden-garden-card-point-2",
+            "anchor": [
+              448,
+              36
+            ],
+            "in": [
+              448,
+              16.117749006091433
+            ],
+            "out": [
+              448,
+              36
+            ]
+          },
+          {
+            "id": "garden-garden-card-point-3",
+            "anchor": [
+              448,
+              372
+            ],
+            "in": [
+              448,
+              372
+            ],
+            "out": [
+              448,
+              391.88225099390854
+            ]
+          },
+          {
+            "id": "garden-garden-card-point-4",
+            "anchor": [
+              412,
+              408
+            ],
+            "in": [
+              431.88225099390854,
+              408
+            ],
+            "out": [
+              412,
+              408
+            ]
+          },
+          {
+            "id": "garden-garden-card-point-5",
+            "anchor": [
+              36,
+              408
+            ],
+            "in": [
+              36,
+              408
+            ],
+            "out": [
+              16.117749006091433,
+              408
+            ]
+          },
+          {
+            "id": "garden-garden-card-point-6",
+            "anchor": [
+              0,
+              372
+            ],
+            "in": [
+              0,
+              391.88225099390854
+            ],
+            "out": [
+              0,
+              372
+            ]
+          },
+          {
+            "id": "garden-garden-card-point-7",
+            "anchor": [
+              0,
+              36
+            ],
+            "in": [
+              0,
+              36
+            ],
+            "out": [
+              0,
+              16.117749006091433
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "garden-sky-cloud-left",
+      "name": "sky cloud left",
+      "kind": "path",
+      "artboardId": "garden-board",
+      "parentId": null,
+      "order": 1,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        75,
+        112
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f8f7ec",
+        "skin": null,
+        "points": [
+          {
+            "id": "garden-sky-cloud-left-point-0",
+            "anchor": [
+              24.2,
+              57.2
+            ],
+            "in": [
+              24.2,
+              57.2
+            ],
+            "out": [
+              -7.700000000000001,
+              57.2
+            ]
+          },
+          {
+            "id": "garden-sky-cloud-left-point-1",
+            "anchor": [
+              22,
+              23.4
+            ],
+            "in": [
+              -5.5,
+              24.7
+            ],
+            "out": [
+              15.400000000000002,
+              -1.3
+            ]
+          },
+          {
+            "id": "garden-sky-cloud-left-point-2",
+            "anchor": [
+              72.60000000000001,
+              18.200000000000003
+            ],
+            "in": [
+              66,
+              -7.8
+            ],
+            "out": [
+              93.5,
+              5.85
+            ]
+          },
+          {
+            "id": "garden-sky-cloud-left-point-3",
+            "anchor": [
+              96.8,
+              35.1
+            ],
+            "in": [
+              116.60000000000001,
+              26
+            ],
+            "out": [
+              119.9,
+              54.6
+            ]
+          },
+          {
+            "id": "garden-sky-cloud-left-point-4",
+            "anchor": [
+              74.80000000000001,
+              57.2
+            ],
+            "in": [
+              91.3,
+              63.699999999999996
+            ],
+            "out": [
+              74.80000000000001,
+              57.2
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "garden-sky-cloud-right",
+      "name": "sky cloud right",
+      "kind": "path",
+      "artboardId": "garden-board",
+      "parentId": null,
+      "order": 2,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        377,
+        245
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f8f7ec",
+        "skin": null,
+        "points": [
+          {
+            "id": "garden-sky-cloud-right-point-0",
+            "anchor": [
+              14.96,
+              37.84
+            ],
+            "in": [
+              14.96,
+              37.84
+            ],
+            "out": [
+              -4.760000000000001,
+              37.84
+            ]
+          },
+          {
+            "id": "garden-sky-cloud-right-point-1",
+            "anchor": [
+              13.600000000000001,
+              15.479999999999999
+            ],
+            "in": [
+              -3.4000000000000004,
+              16.34
+            ],
+            "out": [
+              9.520000000000001,
+              -0.86
+            ]
+          },
+          {
+            "id": "garden-sky-cloud-right-point-2",
+            "anchor": [
+              44.88,
+              12.040000000000001
+            ],
+            "in": [
+              40.8,
+              -5.16
+            ],
+            "out": [
+              57.8,
+              3.8699999999999997
+            ]
+          },
+          {
+            "id": "garden-sky-cloud-right-point-3",
+            "anchor": [
+              59.84,
+              23.220000000000002
+            ],
+            "in": [
+              72.08,
+              17.2
+            ],
+            "out": [
+              74.12,
+              36.12
+            ]
+          },
+          {
+            "id": "garden-sky-cloud-right-point-4",
+            "anchor": [
+              46.24,
+              37.84
+            ],
+            "in": [
+              56.44,
+              42.14
+            ],
+            "out": [
+              46.24,
+              37.84
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "garden-sun",
+      "name": "sun",
+      "kind": "group",
+      "artboardId": "garden-board",
+      "parentId": null,
+      "order": 3,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        350,
+        157
+      ],
+      "geometry": null
+    },
+    {
+      "id": "garden-sun-rays",
+      "name": "sun rays",
+      "kind": "path",
+      "artboardId": "garden-board",
+      "parentId": "garden-sun",
+      "order": 4,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -76,
+        -76
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#edc576",
+        "skin": null,
+        "points": [
+          {
+            "id": "garden-sun-rays-point-0",
+            "anchor": [
+              76,
+              0
+            ],
+            "in": [
+              76,
+              0
+            ],
+            "out": [
+              76,
+              0
+            ]
+          },
+          {
+            "id": "garden-sun-rays-point-1",
+            "anchor": [
+              96.27495409634565,
+              20.29502143981135
+            ],
+            "in": [
+              96.27495409634565,
+              20.29502143981135
+            ],
+            "out": [
+              96.27495409634565,
+              20.29502143981135
+            ]
+          },
+          {
+            "id": "garden-sun-rays-point-2",
+            "anchor": [
+              124.85185833617699,
+              17.780622322957672
+            ],
+            "in": [
+              124.85185833617699,
+              17.780622322957672
+            ],
+            "out": [
+              124.85185833617699,
+              17.780622322957672
+            ]
+          },
+          {
+            "id": "garden-sun-rays-point-3",
+            "anchor": [
+              127.33798593634154,
+              46.36
+            ],
+            "in": [
+              127.33798593634154,
+              46.36
+            ],
+            "out": [
+              127.33798593634154,
+              46.36
+            ]
+          },
+          {
+            "id": "garden-sun-rays-point-4",
+            "anchor": [
+              150.84538922892781,
+              62.8027384973133
+            ],
+            "in": [
+              150.84538922892781,
+              62.8027384973133
+            ],
+            "out": [
+              150.84538922892781,
+              62.8027384973133
+            ]
+          },
+          {
+            "id": "garden-sun-rays-point-5",
+            "anchor": [
+              134.3794035985637,
+              86.29386397209564
+            ],
+            "in": [
+              134.3794035985637,
+              86.29386397209564
+            ],
+            "out": [
+              134.3794035985637,
+              86.29386397209564
+            ]
+          },
+          {
+            "id": "garden-sun-rays-point-6",
+            "anchor": [
+              141.81793068761735,
+              113.99999999999999
+            ],
+            "in": [
+              141.81793068761735,
+              113.99999999999999
+            ],
+            "out": [
+              141.81793068761735,
+              113.99999999999999
+            ]
+          },
+          {
+            "id": "garden-sun-rays-point-7",
+            "anchor": [
+              114.10444950221807,
+              121.41111458809301
+            ],
+            "in": [
+              114.10444950221807,
+              121.41111458809301
+            ],
+            "out": [
+              114.10444950221807,
+              121.41111458809301
+            ]
+          },
+          {
+            "id": "garden-sun-rays-point-8",
+            "anchor": [
+              101.99353089275084,
+              147.41663917972903
+            ],
+            "in": [
+              101.99353089275084,
+              147.41663917972903
+            ],
+            "out": [
+              101.99353089275084,
+              147.41663917972903
+            ]
+          },
+          {
+            "id": "garden-sun-rays-point-9",
+            "anchor": [
+              76,
+              135.28
+            ],
+            "in": [
+              76,
+              135.28
+            ],
+            "out": [
+              76,
+              135.28
+            ]
+          },
+          {
+            "id": "garden-sun-rays-point-10",
+            "anchor": [
+              50.00646910724918,
+              147.41663917972903
+            ],
+            "in": [
+              50.00646910724918,
+              147.41663917972903
+            ],
+            "out": [
+              50.00646910724918,
+              147.41663917972903
+            ]
+          },
+          {
+            "id": "garden-sun-rays-point-11",
+            "anchor": [
+              37.89555049778196,
+              121.41111458809303
+            ],
+            "in": [
+              37.89555049778196,
+              121.41111458809303
+            ],
+            "out": [
+              37.89555049778196,
+              121.41111458809303
+            ]
+          },
+          {
+            "id": "garden-sun-rays-point-12",
+            "anchor": [
+              10.182069312382675,
+              114.00000000000003
+            ],
+            "in": [
+              10.182069312382675,
+              114.00000000000003
+            ],
+            "out": [
+              10.182069312382675,
+              114.00000000000003
+            ]
+          },
+          {
+            "id": "garden-sun-rays-point-13",
+            "anchor": [
+              17.620596401436305,
+              86.29386397209562
+            ],
+            "in": [
+              17.620596401436305,
+              86.29386397209562
+            ],
+            "out": [
+              17.620596401436305,
+              86.29386397209562
+            ]
+          },
+          {
+            "id": "garden-sun-rays-point-14",
+            "anchor": [
+              1.154610771072182,
+              62.802738497313314
+            ],
+            "in": [
+              1.154610771072182,
+              62.802738497313314
+            ],
+            "out": [
+              1.154610771072182,
+              62.802738497313314
+            ]
+          },
+          {
+            "id": "garden-sun-rays-point-15",
+            "anchor": [
+              24.66201406365845,
+              46.36000000000004
+            ],
+            "in": [
+              24.66201406365845,
+              46.36000000000004
+            ],
+            "out": [
+              24.66201406365845,
+              46.36000000000004
+            ]
+          },
+          {
+            "id": "garden-sun-rays-point-16",
+            "anchor": [
+              27.148141663823,
+              17.78062232295768
+            ],
+            "in": [
+              27.148141663823,
+              17.78062232295768
+            ],
+            "out": [
+              27.148141663823,
+              17.78062232295768
+            ]
+          },
+          {
+            "id": "garden-sun-rays-point-17",
+            "anchor": [
+              55.72504590365437,
+              20.295021439811343
+            ],
+            "in": [
+              55.72504590365437,
+              20.295021439811343
+            ],
+            "out": [
+              55.72504590365437,
+              20.295021439811343
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "garden-sun-face",
+      "name": "sun face",
+      "kind": "path",
+      "artboardId": "garden-board",
+      "parentId": "garden-sun",
+      "order": 5,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -53,
+        -53
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f4dca1",
+        "skin": null,
+        "points": [
+          {
+            "id": "garden-sun-face-point-0",
+            "anchor": [
+              106,
+              53
+            ],
+            "in": [
+              106,
+              23.72890825896794
+            ],
+            "out": [
+              106,
+              82.27109174103205
+            ]
+          },
+          {
+            "id": "garden-sun-face-point-1",
+            "anchor": [
+              53,
+              106
+            ],
+            "in": [
+              82.27109174103205,
+              106
+            ],
+            "out": [
+              23.72890825896794,
+              106
+            ]
+          },
+          {
+            "id": "garden-sun-face-point-2",
+            "anchor": [
+              0,
+              53
+            ],
+            "in": [
+              0,
+              82.27109174103205
+            ],
+            "out": [
+              0,
+              23.72890825896794
+            ]
+          },
+          {
+            "id": "garden-sun-face-point-3",
+            "anchor": [
+              53,
+              0
+            ],
+            "in": [
+              23.72890825896794,
+              0
+            ],
+            "out": [
+              82.27109174103205,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "garden-sun-eye--20",
+      "name": "sun eye  20",
+      "kind": "path",
+      "artboardId": "garden-board",
+      "parentId": "garden-sun",
+      "order": 6,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -24,
+        -12
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#304b43",
+        "skin": null,
+        "points": [
+          {
+            "id": "garden-sun-eye--20-point-0",
+            "anchor": [
+              8,
+              4
+            ],
+            "in": [
+              8,
+              1.7908610006768257
+            ],
+            "out": [
+              8,
+              6.209138999323175
+            ]
+          },
+          {
+            "id": "garden-sun-eye--20-point-1",
+            "anchor": [
+              4,
+              8
+            ],
+            "in": [
+              6.209138999323175,
+              8
+            ],
+            "out": [
+              1.7908610006768257,
+              8
+            ]
+          },
+          {
+            "id": "garden-sun-eye--20-point-2",
+            "anchor": [
+              0,
+              4
+            ],
+            "in": [
+              0,
+              6.209138999323175
+            ],
+            "out": [
+              0,
+              1.7908610006768257
+            ]
+          },
+          {
+            "id": "garden-sun-eye--20-point-3",
+            "anchor": [
+              4,
+              0
+            ],
+            "in": [
+              1.7908610006768257,
+              0
+            ],
+            "out": [
+              6.209138999323175,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "garden-sun-cheek--20",
+      "name": "sun cheek  20",
+      "kind": "path",
+      "artboardId": "garden-board",
+      "parentId": "garden-sun",
+      "order": 7,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -28,
+        3
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e7ae90",
+        "skin": null,
+        "points": [
+          {
+            "id": "garden-sun-cheek--20-point-0",
+            "anchor": [
+              16,
+              4
+            ],
+            "in": [
+              16,
+              1.7908610006768257
+            ],
+            "out": [
+              16,
+              6.209138999323175
+            ]
+          },
+          {
+            "id": "garden-sun-cheek--20-point-1",
+            "anchor": [
+              8,
+              8
+            ],
+            "in": [
+              12.41827799864635,
+              8
+            ],
+            "out": [
+              3.5817220013536515,
+              8
+            ]
+          },
+          {
+            "id": "garden-sun-cheek--20-point-2",
+            "anchor": [
+              0,
+              4
+            ],
+            "in": [
+              0,
+              6.209138999323175
+            ],
+            "out": [
+              0,
+              1.7908610006768257
+            ]
+          },
+          {
+            "id": "garden-sun-cheek--20-point-3",
+            "anchor": [
+              8,
+              0
+            ],
+            "in": [
+              3.5817220013536515,
+              0
+            ],
+            "out": [
+              12.41827799864635,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "garden-sun-eye-20",
+      "name": "sun eye 20",
+      "kind": "path",
+      "artboardId": "garden-board",
+      "parentId": "garden-sun",
+      "order": 8,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        16,
+        -12
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#304b43",
+        "skin": null,
+        "points": [
+          {
+            "id": "garden-sun-eye-20-point-0",
+            "anchor": [
+              8,
+              4
+            ],
+            "in": [
+              8,
+              1.7908610006768257
+            ],
+            "out": [
+              8,
+              6.209138999323175
+            ]
+          },
+          {
+            "id": "garden-sun-eye-20-point-1",
+            "anchor": [
+              4,
+              8
+            ],
+            "in": [
+              6.209138999323175,
+              8
+            ],
+            "out": [
+              1.7908610006768257,
+              8
+            ]
+          },
+          {
+            "id": "garden-sun-eye-20-point-2",
+            "anchor": [
+              0,
+              4
+            ],
+            "in": [
+              0,
+              6.209138999323175
+            ],
+            "out": [
+              0,
+              1.7908610006768257
+            ]
+          },
+          {
+            "id": "garden-sun-eye-20-point-3",
+            "anchor": [
+              4,
+              0
+            ],
+            "in": [
+              1.7908610006768257,
+              0
+            ],
+            "out": [
+              6.209138999323175,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "garden-sun-cheek-20",
+      "name": "sun cheek 20",
+      "kind": "path",
+      "artboardId": "garden-board",
+      "parentId": "garden-sun",
+      "order": 9,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        12,
+        3
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e7ae90",
+        "skin": null,
+        "points": [
+          {
+            "id": "garden-sun-cheek-20-point-0",
+            "anchor": [
+              16,
+              4
+            ],
+            "in": [
+              16,
+              1.7908610006768257
+            ],
+            "out": [
+              16,
+              6.209138999323175
+            ]
+          },
+          {
+            "id": "garden-sun-cheek-20-point-1",
+            "anchor": [
+              8,
+              8
+            ],
+            "in": [
+              12.41827799864635,
+              8
+            ],
+            "out": [
+              3.5817220013536515,
+              8
+            ]
+          },
+          {
+            "id": "garden-sun-cheek-20-point-2",
+            "anchor": [
+              0,
+              4
+            ],
+            "in": [
+              0,
+              6.209138999323175
+            ],
+            "out": [
+              0,
+              1.7908610006768257
+            ]
+          },
+          {
+            "id": "garden-sun-cheek-20-point-3",
+            "anchor": [
+              8,
+              0
+            ],
+            "in": [
+              3.5817220013536515,
+              0
+            ],
+            "out": [
+              12.41827799864635,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "garden-sun-smile",
+      "name": "sun smile",
+      "kind": "path",
+      "artboardId": "garden-board",
+      "parentId": "garden-sun",
+      "order": 10,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -12,
+        14
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#304b43",
+        "skin": null,
+        "points": [
+          {
+            "id": "garden-sun-smile-point-0",
+            "anchor": [
+              3.5,
+              0
+            ],
+            "in": [
+              1.5670033755922226,
+              0
+            ],
+            "out": [
+              3.5,
+              0
+            ]
+          },
+          {
+            "id": "garden-sun-smile-point-1",
+            "anchor": [
+              20.5,
+              0
+            ],
+            "in": [
+              20.5,
+              0
+            ],
+            "out": [
+              22.432996624407778,
+              0
+            ]
+          },
+          {
+            "id": "garden-sun-smile-point-2",
+            "anchor": [
+              24,
+              3.5
+            ],
+            "in": [
+              24,
+              1.5670033755922226
+            ],
+            "out": [
+              24,
+              5.432996624407777
+            ]
+          },
+          {
+            "id": "garden-sun-smile-point-3",
+            "anchor": [
+              20.5,
+              7
+            ],
+            "in": [
+              22.432996624407778,
+              7
+            ],
+            "out": [
+              20.5,
+              7
+            ]
+          },
+          {
+            "id": "garden-sun-smile-point-4",
+            "anchor": [
+              3.5,
+              7
+            ],
+            "in": [
+              3.5,
+              7
+            ],
+            "out": [
+              1.5670033755922226,
+              7
+            ]
+          },
+          {
+            "id": "garden-sun-smile-point-5",
+            "anchor": [
+              0,
+              3.5
+            ],
+            "in": [
+              0,
+              5.432996624407777
+            ],
+            "out": [
+              0,
+              1.5670033755922226
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "garden-garden-bed",
+      "name": "garden bed",
+      "kind": "path",
+      "artboardId": "garden-board",
+      "parentId": null,
+      "order": 11,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        49,
+        352
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#b7ccb7",
+        "skin": null,
+        "points": [
+          {
+            "id": "garden-garden-bed-point-0",
+            "anchor": [
+              36,
+              0
+            ],
+            "in": [
+              16.117749006091433,
+              0
+            ],
+            "out": [
+              36,
+              0
+            ]
+          },
+          {
+            "id": "garden-garden-bed-point-1",
+            "anchor": [
+              378,
+              0
+            ],
+            "in": [
+              378,
+              0
+            ],
+            "out": [
+              397.88225099390854,
+              0
+            ]
+          },
+          {
+            "id": "garden-garden-bed-point-2",
+            "anchor": [
+              414,
+              36
+            ],
+            "in": [
+              414,
+              16.117749006091433
+            ],
+            "out": [
+              414,
+              36
+            ]
+          },
+          {
+            "id": "garden-garden-bed-point-3",
+            "anchor": [
+              414,
+              42
+            ],
+            "in": [
+              414,
+              42
+            ],
+            "out": [
+              414,
+              61.88225099390857
+            ]
+          },
+          {
+            "id": "garden-garden-bed-point-4",
+            "anchor": [
+              378,
+              78
+            ],
+            "in": [
+              397.88225099390854,
+              78
+            ],
+            "out": [
+              378,
+              78
+            ]
+          },
+          {
+            "id": "garden-garden-bed-point-5",
+            "anchor": [
+              36,
+              78
+            ],
+            "in": [
+              36,
+              78
+            ],
+            "out": [
+              16.117749006091433,
+              78
+            ]
+          },
+          {
+            "id": "garden-garden-bed-point-6",
+            "anchor": [
+              0,
+              42
+            ],
+            "in": [
+              0,
+              61.88225099390857
+            ],
+            "out": [
+              0,
+              42
+            ]
+          },
+          {
+            "id": "garden-garden-bed-point-7",
+            "anchor": [
+              0,
+              36
+            ],
+            "in": [
+              0,
+              36
+            ],
+            "out": [
+              0,
+              16.117749006091433
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "garden-lavender-flower",
+      "name": "lavender flower",
+      "kind": "group",
+      "artboardId": "garden-board",
+      "parentId": null,
+      "order": 12,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        151,
+        292
+      ],
+      "geometry": null
+    },
+    {
+      "id": "garden-lavender-stem",
+      "name": "lavender stem",
+      "kind": "path",
+      "artboardId": "garden-board",
+      "parentId": "garden-lavender-flower",
+      "order": 13,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -4,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#5c8977",
+        "skin": null,
+        "points": [
+          {
+            "id": "garden-lavender-stem-point-0",
+            "anchor": [
+              4,
+              0
+            ],
+            "in": [
+              1.7908610006768257,
+              0
+            ],
+            "out": [
+              6.209138999323175,
+              0
+            ]
+          },
+          {
+            "id": "garden-lavender-stem-point-1",
+            "anchor": [
+              8,
+              4
+            ],
+            "in": [
+              8,
+              1.7908610006768257
+            ],
+            "out": [
+              8,
+              4
+            ]
+          },
+          {
+            "id": "garden-lavender-stem-point-2",
+            "anchor": [
+              8,
+              106
+            ],
+            "in": [
+              8,
+              106
+            ],
+            "out": [
+              8,
+              108.20913899932317
+            ]
+          },
+          {
+            "id": "garden-lavender-stem-point-3",
+            "anchor": [
+              4,
+              110
+            ],
+            "in": [
+              6.209138999323175,
+              110
+            ],
+            "out": [
+              1.7908610006768257,
+              110
+            ]
+          },
+          {
+            "id": "garden-lavender-stem-point-4",
+            "anchor": [
+              0,
+              106
+            ],
+            "in": [
+              0,
+              108.20913899932317
+            ],
+            "out": [
+              0,
+              106
+            ]
+          },
+          {
+            "id": "garden-lavender-stem-point-5",
+            "anchor": [
+              0,
+              4
+            ],
+            "in": [
+              0,
+              4
+            ],
+            "out": [
+              0,
+              1.7908610006768257
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "garden-lavender-left-leaf",
+      "name": "lavender left leaf",
+      "kind": "path",
+      "artboardId": "garden-board",
+      "parentId": "garden-lavender-flower",
+      "order": 14,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -44,
+        42
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#7aa58c",
+        "skin": null,
+        "points": [
+          {
+            "id": "garden-lavender-left-leaf-point-0",
+            "anchor": [
+              44,
+              10
+            ],
+            "in": [
+              44,
+              4.477152501692064
+            ],
+            "out": [
+              44,
+              15.522847498307936
+            ]
+          },
+          {
+            "id": "garden-lavender-left-leaf-point-1",
+            "anchor": [
+              22,
+              20
+            ],
+            "in": [
+              34.15026449627746,
+              20
+            ],
+            "out": [
+              9.849735503722542,
+              20
+            ]
+          },
+          {
+            "id": "garden-lavender-left-leaf-point-2",
+            "anchor": [
+              0,
+              10
+            ],
+            "in": [
+              0,
+              15.522847498307936
+            ],
+            "out": [
+              0,
+              4.477152501692064
+            ]
+          },
+          {
+            "id": "garden-lavender-left-leaf-point-3",
+            "anchor": [
+              22,
+              0
+            ],
+            "in": [
+              9.849735503722542,
+              0
+            ],
+            "out": [
+              34.15026449627746,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "garden-lavender-right-leaf",
+      "name": "lavender right leaf",
+      "kind": "path",
+      "artboardId": "garden-board",
+      "parentId": "garden-lavender-flower",
+      "order": 15,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        61
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#7aa58c",
+        "skin": null,
+        "points": [
+          {
+            "id": "garden-lavender-right-leaf-point-0",
+            "anchor": [
+              44,
+              10
+            ],
+            "in": [
+              44,
+              4.477152501692064
+            ],
+            "out": [
+              44,
+              15.522847498307936
+            ]
+          },
+          {
+            "id": "garden-lavender-right-leaf-point-1",
+            "anchor": [
+              22,
+              20
+            ],
+            "in": [
+              34.15026449627746,
+              20
+            ],
+            "out": [
+              9.849735503722542,
+              20
+            ]
+          },
+          {
+            "id": "garden-lavender-right-leaf-point-2",
+            "anchor": [
+              0,
+              10
+            ],
+            "in": [
+              0,
+              15.522847498307936
+            ],
+            "out": [
+              0,
+              4.477152501692064
+            ]
+          },
+          {
+            "id": "garden-lavender-right-leaf-point-3",
+            "anchor": [
+              22,
+              0
+            ],
+            "in": [
+              9.849735503722542,
+              0
+            ],
+            "out": [
+              34.15026449627746,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "garden-lavender-petals",
+      "name": "lavender petals",
+      "kind": "path",
+      "artboardId": "garden-board",
+      "parentId": "garden-lavender-flower",
+      "order": 16,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -42,
+        -42
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#b9a5ca",
+        "skin": null,
+        "points": [
+          {
+            "id": "garden-lavender-petals-point-0",
+            "anchor": [
+              42,
+              0
+            ],
+            "in": [
+              42,
+              0
+            ],
+            "out": [
+              42,
+              0
+            ]
+          },
+          {
+            "id": "garden-lavender-petals-point-1",
+            "anchor": [
+              57.53999999999999,
+              15.083930450379643
+            ],
+            "in": [
+              57.53999999999999,
+              15.083930450379643
+            ],
+            "out": [
+              57.53999999999999,
+              15.083930450379643
+            ]
+          },
+          {
+            "id": "garden-lavender-petals-point-2",
+            "anchor": [
+              78.37306695894642,
+              21
+            ],
+            "in": [
+              78.37306695894642,
+              21
+            ],
+            "out": [
+              78.37306695894642,
+              21
+            ]
+          },
+          {
+            "id": "garden-lavender-petals-point-3",
+            "anchor": [
+              73.08,
+              42
+            ],
+            "in": [
+              73.08,
+              42
+            ],
+            "out": [
+              73.08,
+              42
+            ]
+          },
+          {
+            "id": "garden-lavender-petals-point-4",
+            "anchor": [
+              78.37306695894642,
+              62.99999999999999
+            ],
+            "in": [
+              78.37306695894642,
+              62.99999999999999
+            ],
+            "out": [
+              78.37306695894642,
+              62.99999999999999
+            ]
+          },
+          {
+            "id": "garden-lavender-petals-point-5",
+            "anchor": [
+              57.53999999999999,
+              68.91606954962035
+            ],
+            "in": [
+              57.53999999999999,
+              68.91606954962035
+            ],
+            "out": [
+              57.53999999999999,
+              68.91606954962035
+            ]
+          },
+          {
+            "id": "garden-lavender-petals-point-6",
+            "anchor": [
+              42,
+              84
+            ],
+            "in": [
+              42,
+              84
+            ],
+            "out": [
+              42,
+              84
+            ]
+          },
+          {
+            "id": "garden-lavender-petals-point-7",
+            "anchor": [
+              26.460000000000004,
+              68.91606954962035
+            ],
+            "in": [
+              26.460000000000004,
+              68.91606954962035
+            ],
+            "out": [
+              26.460000000000004,
+              68.91606954962035
+            ]
+          },
+          {
+            "id": "garden-lavender-petals-point-8",
+            "anchor": [
+              5.626933041053584,
+              63.00000000000002
+            ],
+            "in": [
+              5.626933041053584,
+              63.00000000000002
+            ],
+            "out": [
+              5.626933041053584,
+              63.00000000000002
+            ]
+          },
+          {
+            "id": "garden-lavender-petals-point-9",
+            "anchor": [
+              10.92,
+              42
+            ],
+            "in": [
+              10.92,
+              42
+            ],
+            "out": [
+              10.92,
+              42
+            ]
+          },
+          {
+            "id": "garden-lavender-petals-point-10",
+            "anchor": [
+              5.626933041053579,
+              20.999999999999996
+            ],
+            "in": [
+              5.626933041053579,
+              20.999999999999996
+            ],
+            "out": [
+              5.626933041053579,
+              20.999999999999996
+            ]
+          },
+          {
+            "id": "garden-lavender-petals-point-11",
+            "anchor": [
+              26.459999999999987,
+              15.083930450379652
+            ],
+            "in": [
+              26.459999999999987,
+              15.083930450379652
+            ],
+            "out": [
+              26.459999999999987,
+              15.083930450379652
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "garden-lavender-center",
+      "name": "lavender center",
+      "kind": "path",
+      "artboardId": "garden-board",
+      "parentId": "garden-lavender-flower",
+      "order": 17,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -16,
+        -16
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f5e6bd",
+        "skin": null,
+        "points": [
+          {
+            "id": "garden-lavender-center-point-0",
+            "anchor": [
+              32,
+              16
+            ],
+            "in": [
+              32,
+              7.163444002707303
+            ],
+            "out": [
+              32,
+              24.8365559972927
+            ]
+          },
+          {
+            "id": "garden-lavender-center-point-1",
+            "anchor": [
+              16,
+              32
+            ],
+            "in": [
+              24.8365559972927,
+              32
+            ],
+            "out": [
+              7.163444002707303,
+              32
+            ]
+          },
+          {
+            "id": "garden-lavender-center-point-2",
+            "anchor": [
+              0,
+              16
+            ],
+            "in": [
+              0,
+              24.8365559972927
+            ],
+            "out": [
+              0,
+              7.163444002707303
+            ]
+          },
+          {
+            "id": "garden-lavender-center-point-3",
+            "anchor": [
+              16,
+              0
+            ],
+            "in": [
+              7.163444002707303,
+              0
+            ],
+            "out": [
+              24.8365559972927,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "garden-lavender-pot",
+      "name": "lavender pot",
+      "kind": "path",
+      "artboardId": "garden-board",
+      "parentId": null,
+      "order": 18,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        120,
+        383
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#b68063",
+        "skin": null,
+        "points": [
+          {
+            "id": "garden-lavender-pot-point-0",
+            "anchor": [
+              12,
+              0
+            ],
+            "in": [
+              5.372583002030478,
+              0
+            ],
+            "out": [
+              12,
+              0
+            ]
+          },
+          {
+            "id": "garden-lavender-pot-point-1",
+            "anchor": [
+              50,
+              0
+            ],
+            "in": [
+              50,
+              0
+            ],
+            "out": [
+              56.62741699796952,
+              0
+            ]
+          },
+          {
+            "id": "garden-lavender-pot-point-2",
+            "anchor": [
+              62,
+              12
+            ],
+            "in": [
+              62,
+              5.372583002030478
+            ],
+            "out": [
+              62,
+              12
+            ]
+          },
+          {
+            "id": "garden-lavender-pot-point-3",
+            "anchor": [
+              62,
+              32
+            ],
+            "in": [
+              62,
+              32
+            ],
+            "out": [
+              62,
+              38.62741699796952
+            ]
+          },
+          {
+            "id": "garden-lavender-pot-point-4",
+            "anchor": [
+              50,
+              44
+            ],
+            "in": [
+              56.62741699796952,
+              44
+            ],
+            "out": [
+              50,
+              44
+            ]
+          },
+          {
+            "id": "garden-lavender-pot-point-5",
+            "anchor": [
+              12,
+              44
+            ],
+            "in": [
+              12,
+              44
+            ],
+            "out": [
+              5.372583002030478,
+              44
+            ]
+          },
+          {
+            "id": "garden-lavender-pot-point-6",
+            "anchor": [
+              0,
+              32
+            ],
+            "in": [
+              0,
+              38.62741699796952
+            ],
+            "out": [
+              0,
+              32
+            ]
+          },
+          {
+            "id": "garden-lavender-pot-point-7",
+            "anchor": [
+              0,
+              12
+            ],
+            "in": [
+              0,
+              12
+            ],
+            "out": [
+              0,
+              5.372583002030478
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "garden-peach-flower",
+      "name": "peach flower",
+      "kind": "group",
+      "artboardId": "garden-board",
+      "parentId": null,
+      "order": 19,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        258,
+        255
+      ],
+      "geometry": null
+    },
+    {
+      "id": "garden-peach-stem",
+      "name": "peach stem",
+      "kind": "path",
+      "artboardId": "garden-board",
+      "parentId": "garden-peach-flower",
+      "order": 20,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -4,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#5c8977",
+        "skin": null,
+        "points": [
+          {
+            "id": "garden-peach-stem-point-0",
+            "anchor": [
+              4,
+              0
+            ],
+            "in": [
+              1.7908610006768257,
+              0
+            ],
+            "out": [
+              6.209138999323175,
+              0
+            ]
+          },
+          {
+            "id": "garden-peach-stem-point-1",
+            "anchor": [
+              8,
+              4
+            ],
+            "in": [
+              8,
+              1.7908610006768257
+            ],
+            "out": [
+              8,
+              4
+            ]
+          },
+          {
+            "id": "garden-peach-stem-point-2",
+            "anchor": [
+              8,
+              106
+            ],
+            "in": [
+              8,
+              106
+            ],
+            "out": [
+              8,
+              108.20913899932317
+            ]
+          },
+          {
+            "id": "garden-peach-stem-point-3",
+            "anchor": [
+              4,
+              110
+            ],
+            "in": [
+              6.209138999323175,
+              110
+            ],
+            "out": [
+              1.7908610006768257,
+              110
+            ]
+          },
+          {
+            "id": "garden-peach-stem-point-4",
+            "anchor": [
+              0,
+              106
+            ],
+            "in": [
+              0,
+              108.20913899932317
+            ],
+            "out": [
+              0,
+              106
+            ]
+          },
+          {
+            "id": "garden-peach-stem-point-5",
+            "anchor": [
+              0,
+              4
+            ],
+            "in": [
+              0,
+              4
+            ],
+            "out": [
+              0,
+              1.7908610006768257
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "garden-peach-left-leaf",
+      "name": "peach left leaf",
+      "kind": "path",
+      "artboardId": "garden-board",
+      "parentId": "garden-peach-flower",
+      "order": 21,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -44,
+        42
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#7aa58c",
+        "skin": null,
+        "points": [
+          {
+            "id": "garden-peach-left-leaf-point-0",
+            "anchor": [
+              44,
+              10
+            ],
+            "in": [
+              44,
+              4.477152501692064
+            ],
+            "out": [
+              44,
+              15.522847498307936
+            ]
+          },
+          {
+            "id": "garden-peach-left-leaf-point-1",
+            "anchor": [
+              22,
+              20
+            ],
+            "in": [
+              34.15026449627746,
+              20
+            ],
+            "out": [
+              9.849735503722542,
+              20
+            ]
+          },
+          {
+            "id": "garden-peach-left-leaf-point-2",
+            "anchor": [
+              0,
+              10
+            ],
+            "in": [
+              0,
+              15.522847498307936
+            ],
+            "out": [
+              0,
+              4.477152501692064
+            ]
+          },
+          {
+            "id": "garden-peach-left-leaf-point-3",
+            "anchor": [
+              22,
+              0
+            ],
+            "in": [
+              9.849735503722542,
+              0
+            ],
+            "out": [
+              34.15026449627746,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "garden-peach-right-leaf",
+      "name": "peach right leaf",
+      "kind": "path",
+      "artboardId": "garden-board",
+      "parentId": "garden-peach-flower",
+      "order": 22,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        61
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#7aa58c",
+        "skin": null,
+        "points": [
+          {
+            "id": "garden-peach-right-leaf-point-0",
+            "anchor": [
+              44,
+              10
+            ],
+            "in": [
+              44,
+              4.477152501692064
+            ],
+            "out": [
+              44,
+              15.522847498307936
+            ]
+          },
+          {
+            "id": "garden-peach-right-leaf-point-1",
+            "anchor": [
+              22,
+              20
+            ],
+            "in": [
+              34.15026449627746,
+              20
+            ],
+            "out": [
+              9.849735503722542,
+              20
+            ]
+          },
+          {
+            "id": "garden-peach-right-leaf-point-2",
+            "anchor": [
+              0,
+              10
+            ],
+            "in": [
+              0,
+              15.522847498307936
+            ],
+            "out": [
+              0,
+              4.477152501692064
+            ]
+          },
+          {
+            "id": "garden-peach-right-leaf-point-3",
+            "anchor": [
+              22,
+              0
+            ],
+            "in": [
+              9.849735503722542,
+              0
+            ],
+            "out": [
+              34.15026449627746,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "garden-peach-petals",
+      "name": "peach petals",
+      "kind": "path",
+      "artboardId": "garden-board",
+      "parentId": "garden-peach-flower",
+      "order": 23,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -42,
+        -42
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e6aa89",
+        "skin": null,
+        "points": [
+          {
+            "id": "garden-peach-petals-point-0",
+            "anchor": [
+              42,
+              0
+            ],
+            "in": [
+              42,
+              0
+            ],
+            "out": [
+              42,
+              0
+            ]
+          },
+          {
+            "id": "garden-peach-petals-point-1",
+            "anchor": [
+              55.48510661177371,
+              13.997887585592812
+            ],
+            "in": [
+              55.48510661177371,
+              13.997887585592812
+            ],
+            "out": [
+              55.48510661177371,
+              13.997887585592812
+            ]
+          },
+          {
+            "id": "garden-peach-petals-point-2",
+            "anchor": [
+              74.83692226365726,
+              15.813428321933193
+            ],
+            "in": [
+              74.83692226365726,
+              15.813428321933193
+            ],
+            "out": [
+              74.83692226365726,
+              15.813428321933193
+            ]
+          },
+          {
+            "id": "garden-peach-petals-point-3",
+            "anchor": [
+              72.30075951061107,
+              35.08404937263775
+            ],
+            "in": [
+              72.30075951061107,
+              35.08404937263775
+            ],
+            "out": [
+              72.30075951061107,
+              35.08404937263775
+            ]
+          },
+          {
+            "id": "garden-peach-petals-point-4",
+            "anchor": [
+              82.94697231163659,
+              51.3458792261652
+            ],
+            "in": [
+              82.94697231163659,
+              51.3458792261652
+            ],
+            "out": [
+              82.94697231163659,
+              51.3458792261652
+            ]
+          },
+          {
+            "id": "garden-peach-petals-point-5",
+            "anchor": [
+              66.29932247510637,
+              61.378063041769444
+            ],
+            "in": [
+              66.29932247510637,
+              61.378063041769444
+            ],
+            "out": [
+              66.29932247510637,
+              61.378063041769444
+            ]
+          },
+          {
+            "id": "garden-peach-petals-point-6",
+            "anchor": [
+              60.22311704293744,
+              79.8406924519016
+            ],
+            "in": [
+              60.22311704293744,
+              79.8406924519016
+            ],
+            "out": [
+              60.22311704293744,
+              79.8406924519016
+            ]
+          },
+          {
+            "id": "garden-peach-petals-point-7",
+            "anchor": [
+              42,
+              73.08
+            ],
+            "in": [
+              42,
+              73.08
+            ],
+            "out": [
+              42,
+              73.08
+            ]
+          },
+          {
+            "id": "garden-peach-petals-point-8",
+            "anchor": [
+              23.77688295706256,
+              79.8406924519016
+            ],
+            "in": [
+              23.77688295706256,
+              79.8406924519016
+            ],
+            "out": [
+              23.77688295706256,
+              79.8406924519016
+            ]
+          },
+          {
+            "id": "garden-peach-petals-point-9",
+            "anchor": [
+              17.700677524893635,
+              61.378063041769444
+            ],
+            "in": [
+              17.700677524893635,
+              61.378063041769444
+            ],
+            "out": [
+              17.700677524893635,
+              61.378063041769444
+            ]
+          },
+          {
+            "id": "garden-peach-petals-point-10",
+            "anchor": [
+              1.053027688363408,
+              51.34587922616521
+            ],
+            "in": [
+              1.053027688363408,
+              51.34587922616521
+            ],
+            "out": [
+              1.053027688363408,
+              51.34587922616521
+            ]
+          },
+          {
+            "id": "garden-peach-petals-point-11",
+            "anchor": [
+              11.699240489388915,
+              35.08404937263778
+            ],
+            "in": [
+              11.699240489388915,
+              35.08404937263778
+            ],
+            "out": [
+              11.699240489388915,
+              35.08404937263778
+            ]
+          },
+          {
+            "id": "garden-peach-petals-point-12",
+            "anchor": [
+              9.163077736342743,
+              15.813428321933198
+            ],
+            "in": [
+              9.163077736342743,
+              15.813428321933198
+            ],
+            "out": [
+              9.163077736342743,
+              15.813428321933198
+            ]
+          },
+          {
+            "id": "garden-peach-petals-point-13",
+            "anchor": [
+              28.514893388226312,
+              13.997887585592803
+            ],
+            "in": [
+              28.514893388226312,
+              13.997887585592803
+            ],
+            "out": [
+              28.514893388226312,
+              13.997887585592803
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "garden-peach-center",
+      "name": "peach center",
+      "kind": "path",
+      "artboardId": "garden-board",
+      "parentId": "garden-peach-flower",
+      "order": 24,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -16,
+        -16
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f5e6bd",
+        "skin": null,
+        "points": [
+          {
+            "id": "garden-peach-center-point-0",
+            "anchor": [
+              32,
+              16
+            ],
+            "in": [
+              32,
+              7.163444002707303
+            ],
+            "out": [
+              32,
+              24.8365559972927
+            ]
+          },
+          {
+            "id": "garden-peach-center-point-1",
+            "anchor": [
+              16,
+              32
+            ],
+            "in": [
+              24.8365559972927,
+              32
+            ],
+            "out": [
+              7.163444002707303,
+              32
+            ]
+          },
+          {
+            "id": "garden-peach-center-point-2",
+            "anchor": [
+              0,
+              16
+            ],
+            "in": [
+              0,
+              24.8365559972927
+            ],
+            "out": [
+              0,
+              7.163444002707303
+            ]
+          },
+          {
+            "id": "garden-peach-center-point-3",
+            "anchor": [
+              16,
+              0
+            ],
+            "in": [
+              7.163444002707303,
+              0
+            ],
+            "out": [
+              24.8365559972927,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "garden-peach-pot",
+      "name": "peach pot",
+      "kind": "path",
+      "artboardId": "garden-board",
+      "parentId": null,
+      "order": 25,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        227,
+        383
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#b68063",
+        "skin": null,
+        "points": [
+          {
+            "id": "garden-peach-pot-point-0",
+            "anchor": [
+              12,
+              0
+            ],
+            "in": [
+              5.372583002030478,
+              0
+            ],
+            "out": [
+              12,
+              0
+            ]
+          },
+          {
+            "id": "garden-peach-pot-point-1",
+            "anchor": [
+              50,
+              0
+            ],
+            "in": [
+              50,
+              0
+            ],
+            "out": [
+              56.62741699796952,
+              0
+            ]
+          },
+          {
+            "id": "garden-peach-pot-point-2",
+            "anchor": [
+              62,
+              12
+            ],
+            "in": [
+              62,
+              5.372583002030478
+            ],
+            "out": [
+              62,
+              12
+            ]
+          },
+          {
+            "id": "garden-peach-pot-point-3",
+            "anchor": [
+              62,
+              32
+            ],
+            "in": [
+              62,
+              32
+            ],
+            "out": [
+              62,
+              38.62741699796952
+            ]
+          },
+          {
+            "id": "garden-peach-pot-point-4",
+            "anchor": [
+              50,
+              44
+            ],
+            "in": [
+              56.62741699796952,
+              44
+            ],
+            "out": [
+              50,
+              44
+            ]
+          },
+          {
+            "id": "garden-peach-pot-point-5",
+            "anchor": [
+              12,
+              44
+            ],
+            "in": [
+              12,
+              44
+            ],
+            "out": [
+              5.372583002030478,
+              44
+            ]
+          },
+          {
+            "id": "garden-peach-pot-point-6",
+            "anchor": [
+              0,
+              32
+            ],
+            "in": [
+              0,
+              38.62741699796952
+            ],
+            "out": [
+              0,
+              32
+            ]
+          },
+          {
+            "id": "garden-peach-pot-point-7",
+            "anchor": [
+              0,
+              12
+            ],
+            "in": [
+              0,
+              12
+            ],
+            "out": [
+              0,
+              5.372583002030478
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "garden-mint-flower",
+      "name": "mint flower",
+      "kind": "group",
+      "artboardId": "garden-board",
+      "parentId": null,
+      "order": 26,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        361,
+        310
+      ],
+      "geometry": null
+    },
+    {
+      "id": "garden-mint-stem",
+      "name": "mint stem",
+      "kind": "path",
+      "artboardId": "garden-board",
+      "parentId": "garden-mint-flower",
+      "order": 27,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -4,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#5c8977",
+        "skin": null,
+        "points": [
+          {
+            "id": "garden-mint-stem-point-0",
+            "anchor": [
+              4,
+              0
+            ],
+            "in": [
+              1.7908610006768257,
+              0
+            ],
+            "out": [
+              6.209138999323175,
+              0
+            ]
+          },
+          {
+            "id": "garden-mint-stem-point-1",
+            "anchor": [
+              8,
+              4
+            ],
+            "in": [
+              8,
+              1.7908610006768257
+            ],
+            "out": [
+              8,
+              4
+            ]
+          },
+          {
+            "id": "garden-mint-stem-point-2",
+            "anchor": [
+              8,
+              106
+            ],
+            "in": [
+              8,
+              106
+            ],
+            "out": [
+              8,
+              108.20913899932317
+            ]
+          },
+          {
+            "id": "garden-mint-stem-point-3",
+            "anchor": [
+              4,
+              110
+            ],
+            "in": [
+              6.209138999323175,
+              110
+            ],
+            "out": [
+              1.7908610006768257,
+              110
+            ]
+          },
+          {
+            "id": "garden-mint-stem-point-4",
+            "anchor": [
+              0,
+              106
+            ],
+            "in": [
+              0,
+              108.20913899932317
+            ],
+            "out": [
+              0,
+              106
+            ]
+          },
+          {
+            "id": "garden-mint-stem-point-5",
+            "anchor": [
+              0,
+              4
+            ],
+            "in": [
+              0,
+              4
+            ],
+            "out": [
+              0,
+              1.7908610006768257
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "garden-mint-left-leaf",
+      "name": "mint left leaf",
+      "kind": "path",
+      "artboardId": "garden-board",
+      "parentId": "garden-mint-flower",
+      "order": 28,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -44,
+        42
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#7aa58c",
+        "skin": null,
+        "points": [
+          {
+            "id": "garden-mint-left-leaf-point-0",
+            "anchor": [
+              44,
+              10
+            ],
+            "in": [
+              44,
+              4.477152501692064
+            ],
+            "out": [
+              44,
+              15.522847498307936
+            ]
+          },
+          {
+            "id": "garden-mint-left-leaf-point-1",
+            "anchor": [
+              22,
+              20
+            ],
+            "in": [
+              34.15026449627746,
+              20
+            ],
+            "out": [
+              9.849735503722542,
+              20
+            ]
+          },
+          {
+            "id": "garden-mint-left-leaf-point-2",
+            "anchor": [
+              0,
+              10
+            ],
+            "in": [
+              0,
+              15.522847498307936
+            ],
+            "out": [
+              0,
+              4.477152501692064
+            ]
+          },
+          {
+            "id": "garden-mint-left-leaf-point-3",
+            "anchor": [
+              22,
+              0
+            ],
+            "in": [
+              9.849735503722542,
+              0
+            ],
+            "out": [
+              34.15026449627746,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "garden-mint-right-leaf",
+      "name": "mint right leaf",
+      "kind": "path",
+      "artboardId": "garden-board",
+      "parentId": "garden-mint-flower",
+      "order": 29,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        61
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#7aa58c",
+        "skin": null,
+        "points": [
+          {
+            "id": "garden-mint-right-leaf-point-0",
+            "anchor": [
+              44,
+              10
+            ],
+            "in": [
+              44,
+              4.477152501692064
+            ],
+            "out": [
+              44,
+              15.522847498307936
+            ]
+          },
+          {
+            "id": "garden-mint-right-leaf-point-1",
+            "anchor": [
+              22,
+              20
+            ],
+            "in": [
+              34.15026449627746,
+              20
+            ],
+            "out": [
+              9.849735503722542,
+              20
+            ]
+          },
+          {
+            "id": "garden-mint-right-leaf-point-2",
+            "anchor": [
+              0,
+              10
+            ],
+            "in": [
+              0,
+              15.522847498307936
+            ],
+            "out": [
+              0,
+              4.477152501692064
+            ]
+          },
+          {
+            "id": "garden-mint-right-leaf-point-3",
+            "anchor": [
+              22,
+              0
+            ],
+            "in": [
+              9.849735503722542,
+              0
+            ],
+            "out": [
+              34.15026449627746,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "garden-mint-petals",
+      "name": "mint petals",
+      "kind": "path",
+      "artboardId": "garden-board",
+      "parentId": "garden-mint-flower",
+      "order": 30,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -42,
+        -42
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#80b9a4",
+        "skin": null,
+        "points": [
+          {
+            "id": "garden-mint-petals-point-0",
+            "anchor": [
+              42,
+              0
+            ],
+            "in": [
+              42,
+              0
+            ],
+            "out": [
+              42,
+              0
+            ]
+          },
+          {
+            "id": "garden-mint-petals-point-1",
+            "anchor": [
+              60.26836564125007,
+              16.855751814826633
+            ],
+            "in": [
+              60.26836564125007,
+              16.855751814826633
+            ],
+            "out": [
+              60.26836564125007,
+              16.855751814826633
+            ]
+          },
+          {
+            "id": "garden-mint-petals-point-2",
+            "anchor": [
+              81.94437368439645,
+              29.02128623625221
+            ],
+            "in": [
+              81.94437368439645,
+              29.02128623625221
+            ],
+            "out": [
+              81.94437368439645,
+              29.02128623625221
+            ]
+          },
+          {
+            "id": "garden-mint-petals-point-3",
+            "anchor": [
+              71.55883652645338,
+              51.60424818517336
+            ],
+            "in": [
+              71.55883652645338,
+              51.60424818517336
+            ],
+            "out": [
+              71.55883652645338,
+              51.60424818517336
+            ]
+          },
+          {
+            "id": "garden-mint-petals-point-4",
+            "anchor": [
+              66.68698059628387,
+              75.97871376374779
+            ],
+            "in": [
+              66.68698059628387,
+              75.97871376374779
+            ],
+            "out": [
+              66.68698059628387,
+              75.97871376374779
+            ]
+          },
+          {
+            "id": "garden-mint-petals-point-5",
+            "anchor": [
+              42,
+              73.08
+            ],
+            "in": [
+              42,
+              73.08
+            ],
+            "out": [
+              42,
+              73.08
+            ]
+          },
+          {
+            "id": "garden-mint-petals-point-6",
+            "anchor": [
+              17.313019403716133,
+              75.97871376374779
+            ],
+            "in": [
+              17.313019403716133,
+              75.97871376374779
+            ],
+            "out": [
+              17.313019403716133,
+              75.97871376374779
+            ]
+          },
+          {
+            "id": "garden-mint-petals-point-7",
+            "anchor": [
+              12.44116347354663,
+              51.604248185173375
+            ],
+            "in": [
+              12.44116347354663,
+              51.604248185173375
+            ],
+            "out": [
+              12.44116347354663,
+              51.604248185173375
+            ]
+          },
+          {
+            "id": "garden-mint-petals-point-8",
+            "anchor": [
+              2.055626315603547,
+              29.021286236252216
+            ],
+            "in": [
+              2.055626315603547,
+              29.021286236252216
+            ],
+            "out": [
+              2.055626315603547,
+              29.021286236252216
+            ]
+          },
+          {
+            "id": "garden-mint-petals-point-9",
+            "anchor": [
+              23.731634358749933,
+              16.855751814826636
+            ],
+            "in": [
+              23.731634358749933,
+              16.855751814826636
+            ],
+            "out": [
+              23.731634358749933,
+              16.855751814826636
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "garden-mint-center",
+      "name": "mint center",
+      "kind": "path",
+      "artboardId": "garden-board",
+      "parentId": "garden-mint-flower",
+      "order": 31,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -16,
+        -16
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f5e6bd",
+        "skin": null,
+        "points": [
+          {
+            "id": "garden-mint-center-point-0",
+            "anchor": [
+              32,
+              16
+            ],
+            "in": [
+              32,
+              7.163444002707303
+            ],
+            "out": [
+              32,
+              24.8365559972927
+            ]
+          },
+          {
+            "id": "garden-mint-center-point-1",
+            "anchor": [
+              16,
+              32
+            ],
+            "in": [
+              24.8365559972927,
+              32
+            ],
+            "out": [
+              7.163444002707303,
+              32
+            ]
+          },
+          {
+            "id": "garden-mint-center-point-2",
+            "anchor": [
+              0,
+              16
+            ],
+            "in": [
+              0,
+              24.8365559972927
+            ],
+            "out": [
+              0,
+              7.163444002707303
+            ]
+          },
+          {
+            "id": "garden-mint-center-point-3",
+            "anchor": [
+              16,
+              0
+            ],
+            "in": [
+              7.163444002707303,
+              0
+            ],
+            "out": [
+              24.8365559972927,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "garden-mint-pot",
+      "name": "mint pot",
+      "kind": "path",
+      "artboardId": "garden-board",
+      "parentId": null,
+      "order": 32,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        330,
+        383
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#b68063",
+        "skin": null,
+        "points": [
+          {
+            "id": "garden-mint-pot-point-0",
+            "anchor": [
+              12,
+              0
+            ],
+            "in": [
+              5.372583002030478,
+              0
+            ],
+            "out": [
+              12,
+              0
+            ]
+          },
+          {
+            "id": "garden-mint-pot-point-1",
+            "anchor": [
+              50,
+              0
+            ],
+            "in": [
+              50,
+              0
+            ],
+            "out": [
+              56.62741699796952,
+              0
+            ]
+          },
+          {
+            "id": "garden-mint-pot-point-2",
+            "anchor": [
+              62,
+              12
+            ],
+            "in": [
+              62,
+              5.372583002030478
+            ],
+            "out": [
+              62,
+              12
+            ]
+          },
+          {
+            "id": "garden-mint-pot-point-3",
+            "anchor": [
+              62,
+              32
+            ],
+            "in": [
+              62,
+              32
+            ],
+            "out": [
+              62,
+              38.62741699796952
+            ]
+          },
+          {
+            "id": "garden-mint-pot-point-4",
+            "anchor": [
+              50,
+              44
+            ],
+            "in": [
+              56.62741699796952,
+              44
+            ],
+            "out": [
+              50,
+              44
+            ]
+          },
+          {
+            "id": "garden-mint-pot-point-5",
+            "anchor": [
+              12,
+              44
+            ],
+            "in": [
+              12,
+              44
+            ],
+            "out": [
+              5.372583002030478,
+              44
+            ]
+          },
+          {
+            "id": "garden-mint-pot-point-6",
+            "anchor": [
+              0,
+              32
+            ],
+            "in": [
+              0,
+              38.62741699796952
+            ],
+            "out": [
+              0,
+              32
+            ]
+          },
+          {
+            "id": "garden-mint-pot-point-7",
+            "anchor": [
+              0,
+              12
+            ],
+            "in": [
+              0,
+              12
+            ],
+            "out": [
+              0,
+              5.372583002030478
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "garden-little-heart",
+      "name": "little heart",
+      "kind": "path",
+      "artboardId": "garden-board",
+      "parentId": null,
+      "order": 33,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        74,
+        220
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#d9a3a0",
+        "skin": null,
+        "points": [
+          {
+            "id": "garden-little-heart-point-0",
+            "anchor": [
+              18,
+              9
+            ],
+            "in": [
+              28.080000000000002,
+              -3.6
+            ],
+            "out": [
+              7.92,
+              -3.6
+            ]
+          },
+          {
+            "id": "garden-little-heart-point-1",
+            "anchor": [
+              2.88,
+              17.28
+            ],
+            "in": [
+              -4.32,
+              6.4799999999999995
+            ],
+            "out": [
+              6.4799999999999995,
+              23.76
+            ]
+          },
+          {
+            "id": "garden-little-heart-point-2",
+            "anchor": [
+              18,
+              36
+            ],
+            "in": [
+              12.959999999999999,
+              30.24
+            ],
+            "out": [
+              23.04,
+              30.24
+            ]
+          },
+          {
+            "id": "garden-little-heart-point-3",
+            "anchor": [
+              33.120000000000005,
+              17.28
+            ],
+            "in": [
+              29.52,
+              23.76
+            ],
+            "out": [
+              40.32000000000001,
+              6.4799999999999995
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "garden-hello-bubble",
+      "name": "hello bubble",
+      "kind": "path",
+      "artboardId": "garden-board",
+      "parentId": null,
+      "order": 34,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        177,
+        157
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#fbf8ec",
+        "skin": null,
+        "points": [
+          {
+            "id": "garden-hello-bubble-point-0",
+            "anchor": [
+              16,
+              0
+            ],
+            "in": [
+              7.163444002707303,
+              0
+            ],
+            "out": [
+              16,
+              0
+            ]
+          },
+          {
+            "id": "garden-hello-bubble-point-1",
+            "anchor": [
+              78,
+              0
+            ],
+            "in": [
+              78,
+              0
+            ],
+            "out": [
+              86.83655599729269,
+              0
+            ]
+          },
+          {
+            "id": "garden-hello-bubble-point-2",
+            "anchor": [
+              94,
+              16
+            ],
+            "in": [
+              94,
+              7.163444002707303
+            ],
+            "out": [
+              94,
+              16
+            ]
+          },
+          {
+            "id": "garden-hello-bubble-point-3",
+            "anchor": [
+              94,
+              28.08
+            ],
+            "in": [
+              94,
+              28.08
+            ],
+            "out": [
+              94,
+              36.9165559972927
+            ]
+          },
+          {
+            "id": "garden-hello-bubble-point-4",
+            "anchor": [
+              78,
+              44.08
+            ],
+            "in": [
+              86.83655599729269,
+              44.08
+            ],
+            "out": [
+              78,
+              44.08
+            ]
+          },
+          {
+            "id": "garden-hello-bubble-point-5",
+            "anchor": [
+              58.28,
+              44.08
+            ],
+            "in": [
+              58.28,
+              44.08
+            ],
+            "out": [
+              58.28,
+              44.08
+            ]
+          },
+          {
+            "id": "garden-hello-bubble-point-6",
+            "anchor": [
+              34.78,
+              58
+            ],
+            "in": [
+              34.78,
+              58
+            ],
+            "out": [
+              34.78,
+              58
+            ]
+          },
+          {
+            "id": "garden-hello-bubble-point-7",
+            "anchor": [
+              34.78,
+              44.08
+            ],
+            "in": [
+              34.78,
+              44.08
+            ],
+            "out": [
+              34.78,
+              44.08
+            ]
+          },
+          {
+            "id": "garden-hello-bubble-point-8",
+            "anchor": [
+              16,
+              44.08
+            ],
+            "in": [
+              16,
+              44.08
+            ],
+            "out": [
+              7.163444002707303,
+              44.08
+            ]
+          },
+          {
+            "id": "garden-hello-bubble-point-9",
+            "anchor": [
+              0,
+              28.08
+            ],
+            "in": [
+              0,
+              36.9165559972927
+            ],
+            "out": [
+              0,
+              28.08
+            ]
+          },
+          {
+            "id": "garden-hello-bubble-point-10",
+            "anchor": [
+              0,
+              16
+            ],
+            "in": [
+              0,
+              16
+            ],
+            "out": [
+              0,
+              7.163444002707303
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "garden-hello-dot-0",
+      "name": "hello dot 0",
+      "kind": "path",
+      "artboardId": "garden-board",
+      "parentId": null,
+      "order": 35,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        196,
+        177
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#638d7b",
+        "skin": null,
+        "points": [
+          {
+            "id": "garden-hello-dot-0-point-0",
+            "anchor": [
+              7,
+              3.5
+            ],
+            "in": [
+              7,
+              1.5670033755922226
+            ],
+            "out": [
+              7,
+              5.432996624407777
+            ]
+          },
+          {
+            "id": "garden-hello-dot-0-point-1",
+            "anchor": [
+              3.5,
+              7
+            ],
+            "in": [
+              5.432996624407777,
+              7
+            ],
+            "out": [
+              1.5670033755922226,
+              7
+            ]
+          },
+          {
+            "id": "garden-hello-dot-0-point-2",
+            "anchor": [
+              0,
+              3.5
+            ],
+            "in": [
+              0,
+              5.432996624407777
+            ],
+            "out": [
+              0,
+              1.5670033755922226
+            ]
+          },
+          {
+            "id": "garden-hello-dot-0-point-3",
+            "anchor": [
+              3.5,
+              0
+            ],
+            "in": [
+              1.5670033755922226,
+              0
+            ],
+            "out": [
+              5.432996624407777,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "garden-hello-dot-1",
+      "name": "hello dot 1",
+      "kind": "path",
+      "artboardId": "garden-board",
+      "parentId": null,
+      "order": 36,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        214,
+        177
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#638d7b",
+        "skin": null,
+        "points": [
+          {
+            "id": "garden-hello-dot-1-point-0",
+            "anchor": [
+              7,
+              3.5
+            ],
+            "in": [
+              7,
+              1.5670033755922226
+            ],
+            "out": [
+              7,
+              5.432996624407777
+            ]
+          },
+          {
+            "id": "garden-hello-dot-1-point-1",
+            "anchor": [
+              3.5,
+              7
+            ],
+            "in": [
+              5.432996624407777,
+              7
+            ],
+            "out": [
+              1.5670033755922226,
+              7
+            ]
+          },
+          {
+            "id": "garden-hello-dot-1-point-2",
+            "anchor": [
+              0,
+              3.5
+            ],
+            "in": [
+              0,
+              5.432996624407777
+            ],
+            "out": [
+              0,
+              1.5670033755922226
+            ]
+          },
+          {
+            "id": "garden-hello-dot-1-point-3",
+            "anchor": [
+              3.5,
+              0
+            ],
+            "in": [
+              1.5670033755922226,
+              0
+            ],
+            "out": [
+              5.432996624407777,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "garden-hello-dot-2",
+      "name": "hello dot 2",
+      "kind": "path",
+      "artboardId": "garden-board",
+      "parentId": null,
+      "order": 37,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        232,
+        177
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#638d7b",
+        "skin": null,
+        "points": [
+          {
+            "id": "garden-hello-dot-2-point-0",
+            "anchor": [
+              7,
+              3.5
+            ],
+            "in": [
+              7,
+              1.5670033755922226
+            ],
+            "out": [
+              7,
+              5.432996624407777
+            ]
+          },
+          {
+            "id": "garden-hello-dot-2-point-1",
+            "anchor": [
+              3.5,
+              7
+            ],
+            "in": [
+              5.432996624407777,
+              7
+            ],
+            "out": [
+              1.5670033755922226,
+              7
+            ]
+          },
+          {
+            "id": "garden-hello-dot-2-point-2",
+            "anchor": [
+              0,
+              3.5
+            ],
+            "in": [
+              0,
+              5.432996624407777
+            ],
+            "out": [
+              0,
+              1.5670033755922226
+            ]
+          },
+          {
+            "id": "garden-hello-dot-2-point-3",
+            "anchor": [
+              3.5,
+              0
+            ],
+            "in": [
+              1.5670033755922226,
+              0
+            ],
+            "out": [
+              5.432996624407777,
+              0
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [
+    {
+      "id": "garden-grow",
+      "name": "A little sunshine",
+      "artboardId": "garden-board",
+      "fps": 60,
+      "duration": 120,
+      "loop": true,
+      "tracks": [
+        {
+          "targetId": "garden-sun",
+          "property": "y",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 157,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 148,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 157,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "garden-lavender-flower",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 0.05,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "garden-peach-flower",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": -0.04,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "garden-mint-flower",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 0.06,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "garden-board": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  }
+}
