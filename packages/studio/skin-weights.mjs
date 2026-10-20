@@ -1,10 +1,11 @@
+import {pathPoints} from '@evir/project-model';
 import {bindSkin,setSkinWeights} from '@evir/authoring';
 import {sheet} from './advanced.mjs';
 import {WeightBrush,weightControls,WEIGHT_BRUSH_LIMIT} from './weight-brush.mjs';
 const colors=['#6dcfae','#e5a77d','#9ea7e8','#e4cf72'];
 const el=(tag,text)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;return n;};
 const button=(name,fn)=>{const b=el('button',name);b.type='button';b.onclick=fn;return b;};
-const pointList=n=>n.kind==='mesh'?n.geometry.vertices:n.geometry.points;
+const pointList=n=>n.kind==='mesh'?n.geometry.vertices:pathPoints(n.geometry);
 export function mountSkinWeights(api){
  let active=null,settings={boneId:null,control:'all',target:1,strength:1,radius:36},hover=null;
  const stage=document.querySelector('#stage'),stageLabel=stage.getAttribute('aria-label');
@@ -72,7 +73,7 @@ export function mountSkinWeights(api){
   overlay(ctx,p,n,zoom){
    if(active!==n?.id||!valid(p,n))return;
    ctx.save();
-   const count=n.kind==='mesh'?n.geometry.vertices.length:n.geometry.points.length*(settings.control==='all'?3:1);if(count>WEIGHT_BRUSH_LIMIT){ctx.restore();return;}
+   const count=n.kind==='mesh'?n.geometry.vertices.length:pathPoints(n.geometry).length*(settings.control==='all'?3:1);if(count>WEIGHT_BRUSH_LIMIT){ctx.restore();return;}
    const entries=new Map(n.geometry.skin.weights.map(w=>[w.pointId,w])),bones=n.geometry.skin.bones;
    for(const v of weightControls(p,n,n.kind==='mesh'?'anchor':settings.control)){
     const weights=new Map(entries.get(v.pointId)[v.control]),r=(v.control==='anchor'?6:4)/zoom;let angle=-Math.PI/2;

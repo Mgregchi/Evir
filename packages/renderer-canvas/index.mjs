@@ -22,20 +22,12 @@ export function paintOnContext(ctx, fill) {
 }
 export function pathOnContext(ctx, points, closed) {
   ctx.beginPath();
-  ctx.moveTo(...points[0].anchor);
-  for (let i = 1; i < points.length; i++)
-    ctx.bezierCurveTo(
-      ...points[i - 1].out,
-      ...points[i].in,
-      ...points[i].anchor,
-    );
-  if (closed) {
-    ctx.bezierCurveTo(
-      ...points.at(-1).out,
-      ...points[0].in,
-      ...points[0].anchor,
-    );
-    ctx.closePath();
+  for(let start=0;start<points.length;){
+    let end=start+1;while(end<points.length&&points[end].contour===points[start].contour)end++;
+    ctx.moveTo(...points[start].anchor);
+    for(let i=start+1;i<end;i++)ctx.bezierCurveTo(...points[i-1].out,...points[i].in,...points[i].anchor);
+    if(points[start].closed??closed){ctx.bezierCurveTo(...points[end-1].out,...points[start].in,...points[start].anchor);ctx.closePath();}
+    start=end;
   }
 }
 
@@ -97,7 +89,7 @@ export function drawScene(
         if (clip) {
           const mask = nodes.get(clip.maskId);
           shapePath(ctx, p, mask, resolve);
-          ctx.clip("nonzero");
+          ctx.clip(clip.fillRule ?? mask.geometry.fillRule ?? "nonzero");
         }
         ancestor = nodes.get(ancestor.parentId);
       }
@@ -135,7 +127,7 @@ export function drawScene(
             }))
           : points;
         pathOnContext(ctx, local, n.geometry.closed);
-        if (n.geometry.fill !== null) {ctx.fillStyle = paintOnContext(ctx, n.geometry.fill);ctx.fill("nonzero");}
+        if (n.geometry.fill !== null) {ctx.fillStyle = paintOnContext(ctx, n.geometry.fill);ctx.fill(n.geometry.fillRule ?? "nonzero");}
         ctx.restore();
         if (n.geometry.stroke?.width) {
           ctx.save();ctx.transform(...resolve(n.id));

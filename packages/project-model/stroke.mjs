@@ -1,4 +1,5 @@
 // Retained centerline paint. Source v3 / runtime v2; earlier readers reject it.
+import {pathContours,pathPoints} from './contours.mjs';
 export const STROKE_CAPS = ["butt", "round", "square"];
 export const STROKE_JOINS = ["miter", "round", "bevel"];
 export function defaultStroke(color = "#243f33") {
@@ -55,6 +56,8 @@ export function validateStroke(n, p, problem) {
     length=2*(maximum("width")+maximum("height"));
   }
   else if (Array.isArray(g.points)) {
+    for(const g of pathContours(n.geometry)){
+    if(!Array.isArray(g?.points))continue;
     const count = g.points.length - (g.closed ? 0 : 1);
     for (let i=0;i<count;i++) {
       const a=g.points[i],b=g.points[(i+1)%g.points.length];
@@ -62,7 +65,8 @@ export function validateStroke(n, p, problem) {
       const controls=[a.anchor,a.out,b.in,b.anchor];
       for(let j=1;j<4;j++) length+=Math.hypot(controls[j][0]-controls[j-1][0],controls[j][1]-controls[j-1][1]);
     }
-    if (g.points.length > 256) problem(path,"at most 256 centerline points per stroked path");
+    }
+    if (pathPoints(g).length > 256) problem(path,"at most 256 centerline points per stroked path");
   }
   if (!Number.isFinite(length) || length > 16384) problem(path,"centerline control polygon exceeds the 16,384-unit effect budget");
 }

@@ -1,10 +1,10 @@
 name: Web and Studio validation
 on:
   pull_request:
-    paths: ['apps/web/**', 'assets/brand/**', 'assets/fonts/**', 'packages/**', 'tests/site/**', 'tests/editor/**', 'tests/frontend/**', 'tools/build-support.mjs', 'tools/static-server.mjs', 'tools/profile-workflow.mjs', 'tools/validate-playback.cjs', 'tools/validate_editor_authoring.cjs', 'tools/validate-authoring-suite.cjs', 'tools/generate-authoring-suite.mjs', 'tools/validate-strokes.cjs', 'tools/validate-joining.cjs', 'tools/validate-weights.cjs', 'tools/validate-import-geometry.cjs', 'tools/validate-direct-blends.cjs', 'tools/validate-shapes.cjs', 'tests/fixtures/**', 'tools/runtime-oracle.mjs', 'tools/prepare-oracle.cjs', 'tools/browser.cjs', 'tools/gpu_diagnostics.cjs', 'package*.json', '.github/workflows/web.yml']
+    paths: ['apps/web/**', 'assets/brand/**', 'assets/fonts/**', 'packages/**', 'tests/site/**', 'tests/editor/**', 'tests/frontend/**', 'tools/build-support.mjs', 'tools/static-server.mjs', 'tools/profile-workflow.mjs', 'tools/validate-playback.cjs', 'tools/validate_editor_authoring.cjs', 'tools/validate-authoring-suite.cjs', 'tools/generate-authoring-suite.mjs', 'tools/validate-strokes.cjs', 'tools/validate-joining.cjs', 'tools/validate-weights.cjs', 'tools/validate-import-geometry.cjs', 'tools/validate-direct-blends.cjs', 'tools/validate-shapes.cjs', 'tools/validate-compounds.cjs', 'tests/fixtures/**', 'tools/runtime-oracle.mjs', 'tools/prepare-oracle.cjs', 'tools/browser.cjs', 'tools/gpu_diagnostics.cjs', 'package*.json', '.github/workflows/web.yml']
   push:
     branches: [main]
-    paths: ['apps/web/**', 'assets/brand/**', 'assets/fonts/**', 'packages/**', 'tests/site/**', 'tests/editor/**', 'tests/frontend/**', 'tools/build-support.mjs', 'tools/static-server.mjs', 'tools/profile-workflow.mjs', 'tools/validate-playback.cjs', 'tools/validate_editor_authoring.cjs', 'tools/validate-authoring-suite.cjs', 'tools/generate-authoring-suite.mjs', 'tools/validate-strokes.cjs', 'tools/validate-joining.cjs', 'tools/validate-weights.cjs', 'tools/validate-import-geometry.cjs', 'tools/validate-direct-blends.cjs', 'tools/validate-shapes.cjs', 'tests/fixtures/**', 'tools/runtime-oracle.mjs', 'tools/prepare-oracle.cjs', 'tools/browser.cjs', 'tools/gpu_diagnostics.cjs', 'package*.json', '.github/workflows/web.yml']
+    paths: ['apps/web/**', 'assets/brand/**', 'assets/fonts/**', 'packages/**', 'tests/site/**', 'tests/editor/**', 'tests/frontend/**', 'tools/build-support.mjs', 'tools/static-server.mjs', 'tools/profile-workflow.mjs', 'tools/validate-playback.cjs', 'tools/validate_editor_authoring.cjs', 'tools/validate-authoring-suite.cjs', 'tools/generate-authoring-suite.mjs', 'tools/validate-strokes.cjs', 'tools/validate-joining.cjs', 'tools/validate-weights.cjs', 'tools/validate-import-geometry.cjs', 'tools/validate-direct-blends.cjs', 'tools/validate-shapes.cjs', 'tools/validate-compounds.cjs', 'tests/fixtures/**', 'tools/runtime-oracle.mjs', 'tools/prepare-oracle.cjs', 'tools/browser.cjs', 'tools/gpu_diagnostics.cjs', 'package*.json', '.github/workflows/web.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -46,6 +46,7 @@ jobs:
             research/results/path-joining/
             research/results/skin-weights/
             research/results/shape-library/
+            research/results/software-closure/
             research/results/import-geometry/
             research/results/direct-blends/
       - uses: actions/upload-artifact@v4

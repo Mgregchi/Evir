@@ -37,6 +37,8 @@ Browser touch dispatch is not a physical-device measurement. Automated accessibi
 
 ## Remaining work — current plan
 
+[The active software closure pass](47-software-closure.md) tracks the current implementation and acceptance work.
+
 This is the consolidated list requested by the user. Historical research documents describe their earlier snapshots; use this list for subsequent work.
 
 The [expressive vector-character collection](40-expressive-vector-characters.md) adds original Momo/Nura/Otto art, named editable layers, three expression loops, discrete interaction controls and a weighted scarf. PRs #33 and #34 are merged. [Native strokes and path effects](41-native-strokes-and-path-effects.md) now add retained solid centerlines, caps/joins, dashes, animated trim/width/color and matching bounded semantic import. [Editable native contours and Tide](42-editable-riv-contours.md) now add mixed vertex representations, static ellipses, rectangle origins and static contour transforms. General Editor-file conversion, richer rigging/blending, gradient/skinned strokes and text/layout remain open. Physical testing remains postponed and hosted backend remains deferred.

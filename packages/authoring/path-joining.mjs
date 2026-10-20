@@ -12,6 +12,7 @@ function editable(p,n) {
     if(p.editor.hidden.includes(v.id)) throw Error('Show both paths and their parents before joining.');
   }
   if(n.geometry.closed) throw Error('Open both paths before joining their endpoints.');
+  if(n.geometry.contours?.length)throw Error('Release compound contours before joining separate paths.');
   if(n.geometry.skin) throw Error('Unbind both paths before joining. New topology needs new skin weights.');
 }
 function paints(a,b,m) {

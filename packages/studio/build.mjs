@@ -9,7 +9,8 @@ export async function buildStudio({outDir,basePath,homeUrl}) {
   const sourceRoot=fileURLToPath(new URL('./',import.meta.url));
   const config={basePath,publicSiteUrl:homeUrl};
   await mkdir(outDir,{recursive:true});
-  await build({entryPoints:[path.join(sourceRoot,'studio.mjs')],bundle:true,splitting:true,format:'esm',platform:'browser',target:'es2022',outdir:outDir,chunkNames:'chunks/[name]-[hash]',outExtension:{'.js':'.mjs'}});
+  await build({entryPoints:[path.join(sourceRoot,'studio.mjs'),path.join(sourceRoot,'compound-worker.mjs')],bundle:true,splitting:true,format:'esm',platform:'browser',target:'es2022',outdir:outDir,chunkNames:'chunks/[name]-[hash]',outExtension:{'.js':'.mjs'}});
+  await cp(new URL('../authoring/LICENSE.paper',import.meta.url),path.join(outDir,'LICENSE.paper'));
   const runtimeDir=path.dirname(fileURLToPath(import.meta.resolve('@rive-app/canvas')));
   await mkdir(path.join(outDir,'assets'),{recursive:true});
   await cp(path.join(runtimeDir,'rive.wasm'),path.join(outDir,'assets/rive-view.wasm'));

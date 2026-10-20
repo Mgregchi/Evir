@@ -9,6 +9,7 @@ import {
   validateProject,
   newId,
   propertiesFor,
+  pathContours,pathPoints,
 } from "@evir/project-model";
 import {
   convertRectangle,
@@ -365,6 +366,8 @@ export function mountAuthoring(api) {
     const section = el("section");
     section.className = "property-section";
     section.append(el("h3", "Path controls"));
+    const contours=pathContours(n.geometry),contourIndex=Math.max(0,contours.findIndex(c=>c.points.some(v=>v.id===pointId))),contour=contours[contourIndex];
+    if(contours.length>1)section.append(select('Contour',contours.map((c,i)=>[String(i),`Contour ${i+1}`]),String(contourIndex),i=>{pointId=contours[Number(i)].points[0].id;api.refresh();}));
     section.append(
       button(vertices ? "Done editing points" : "Edit points", () => {
         vertices = !vertices;
@@ -372,21 +375,21 @@ export function mountAuthoring(api) {
       }),
     );
     section.append(
-      button(n.geometry.closed ? "Open path" : "Close path", () =>
+      button(contour.closed ? "Open path" : "Close path", () =>
         transaction(
           "Change path closure",
           (p) =>
-            (p.nodes.find((v) => v.id === n.id).geometry.closed =
-              !n.geometry.closed),
+            (pathContours(p.nodes.find((v) => v.id === n.id).geometry)[contourIndex].closed =
+              !contour.closed),
         ),
       ),
     );
-    if (!n.geometry.points.some((v) => v.id === pointId))
-      pointId = n.geometry.points[0].id;
+    if (!contour.points.some((v) => v.id === pointId))
+      pointId = contour.points[0].id;
     section.append(
       select(
         "Control point",
-        n.geometry.points.map((v, i) => [v.id, `Point ${i + 1}`]),
+        contour.points.map((v, i) => [v.id, `Point ${i + 1}`]),
         pointId,
         (id) => {
           pointId = id;
@@ -409,7 +412,7 @@ export function mountAuthoring(api) {
         },
       ),
     );
-    const point = n.geometry.points.find((v) => v.id === pointId);
+    const point = contour.points.find((v) => v.id === pointId);
     for (const [label, index] of [
       ["Point X", 0],
       ["Point Y", 1],
@@ -420,9 +423,7 @@ export function mountAuthoring(api) {
           point[control][index],
           (value) =>
             transaction("Edit control point", (p) => {
-              const v = p.nodes
-                .find((v) => v.id === n.id)
-                .geometry.points.find((v) => v.id === pointId);
+              const v = pathPoints(p.nodes.find(v=>v.id===n.id).geometry).find(v=>v.id===pointId);
               if (control === "anchor") {
                 const delta = value - v.anchor[index];
                 for (const key of ["anchor", "in", "out"])
@@ -438,7 +439,7 @@ export function mountAuthoring(api) {
           pointId = insertPoint(
             p,
             n.id,
-            n.geometry.points.findIndex((v) => v.id === pointId),
+            contour.points.findIndex((v) => v.id === pointId),contourIndex,
           );
         }),
       ),

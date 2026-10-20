@@ -1,0 +1,93 @@
+[
+  {
+    "name": "paper-boolean",
+    "url": "https://paperjs.org/reference/pathitem/",
+    "retrievedAt": "2026-10-20T09:59:06.110298+00:00",
+    "status": 200,
+    "finalUrl": "https://paperjs.org/reference/pathitem/",
+    "bytes": 213952,
+    "sha256": "ac05f606a8eb6ef5b5070f60cd688e3430b1a07bc5528281620b00715dc9589c"
+  },
+  {
+    "name": "polygon-clipping",
+    "url": "https://raw.githubusercontent.com/mfogel/polygon-clipping/master/README.md",
+    "retrievedAt": "2026-10-20T09:59:06.114415+00:00",
+    "status": 200,
+    "finalUrl": "https://raw.githubusercontent.com/mfogel/polygon-clipping/master/README.md",
+    "bytes": 4764,
+    "sha256": "b7733affb4bd6879587aeaa4fe0a557eb0b50f2b1d29193da814e5d64464328c"
+  },
+  {
+    "name": "rive-path",
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/master/src/shapes/path.cpp",
+    "retrievedAt": "2026-10-20T09:59:06.117072+00:00",
+    "status": 200,
+    "finalUrl": "https://raw.githubusercontent.com/rive-app/rive-runtime/master/src/shapes/path.cpp",
+    "bytes": 18331,
+    "sha256": "1cf916412ec00c2a80b0f8453a8782646819ad016ba60d9ee6e59247e950d694"
+  },
+  {
+    "name": "rive-rectangle",
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/master/src/shapes/rectangle.cpp",
+    "retrievedAt": "2026-10-20T09:59:06.119155+00:00",
+    "status": 200,
+    "finalUrl": "https://raw.githubusercontent.com/rive-app/rive-runtime/master/src/shapes/rectangle.cpp",
+    "bytes": 1115,
+    "sha256": "0293b5b2db107aae187c8e78253b51146c0a4dfe3d76f6bccd326b2c2057256c"
+  },
+  {
+    "name": "rive-feather",
+    "url": "https://rive.app/docs/editor/manipulating-shapes/feathering",
+    "retrievedAt": "2026-10-20T09:59:06.120240+00:00",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "name": "mcp-tools",
+    "url": "https://modelcontextprotocol.io/specification/2025-11-25/server/tools",
+    "retrievedAt": "2026-10-20T09:59:06.123404+00:00",
+    "status": 200,
+    "finalUrl": "https://modelcontextprotocol.io/specification/2025-11-25/server/tools",
+    "bytes": 691778,
+    "sha256": "6e925a9285458b5a2327df324956c0bacd8030607facfe2d3db0b5560eaeaf73"
+  },
+  {
+    "name": "svg-fill",
+    "url": "https://www.w3.org/TR/SVG2/painting.html#WindingRule",
+    "retrievedAt": "2026-10-20T09:59:06.125824+00:00",
+    "status": 200,
+    "finalUrl": "https://www.w3.org/TR/SVG2/painting.html#WindingRule",
+    "bytes": 164046,
+    "sha256": "49f3f71568cec71d40d04dd5695abf4055698c0522ee269b5ad1210c0b774876"
+  },
+  {
+    "name": "rive-layout",
+    "url": "https://rive.app/docs/editor/layouts/layouts-overview",
+    "retrievedAt": "2026-10-20T09:59:06.127853+00:00",
+    "status": 200,
+    "finalUrl": "https://rive.app/docs/editor/layouts/layouts-overview",
+    "bytes": 357971,
+    "sha256": "22b32b5e01d79a763594992914e6898a0e717b387e76a13213331d1523b450aa"
+  },
+  {
+    "name": "rive-blends",
+    "url": "https://rive.app/docs/editor/state-machine/blend-states",
+    "retrievedAt": "2026-10-20T09:59:06.133275+00:00",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "name": "pinned-trim",
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/shapes/paint/trim_path.cpp",
+    "retrievedAt": "2026-10-20T10:24:20.903672+00:00",
+    "status": 200,
+    "bytes": 8120,
+    "sha256": "8a4e0bf5219afab39ab585207be8051a2ab9d10c0901139737792284c4906e43"
+  },
+  {
+    "name": "pinned-rounding",
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/shapes/path.cpp",
+    "retrievedAt": "2026-10-20T10:24:22.085570+00:00",
+    "status": 200,
+    "bytes": 21702,
+    "sha256": "2d7c66a6d968e78fb304aa68422eb595dfd30764eb7dd6a08bead9f7cc1eb5be"
+  }
+]

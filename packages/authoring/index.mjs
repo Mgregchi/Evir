@@ -8,6 +8,7 @@ import {
   validateProject,
   upgradeAdvanced,
   strokeValue,
+  pathPoints,pointContour,pathContours,
 } from "@evir/project-model";
 import {bindSkin,setSkinWeights} from './skin.mjs';
 export {bindSkin,setSkinWeights} from './skin.mjs';
@@ -348,10 +349,11 @@ export function convertRectangle(p, id) {
     })),
   };
 }
-export function insertPoint(p, nodeId, index) {
+export function insertPoint(p, nodeId, index,contourIndex=0) {
   const n = p.nodes.find((n) => n.id === nodeId),
-    g = n.geometry;
-  if (g.skin) throw Error("Unbind the path before changing its topology");
+    g = pathContours(n.geometry)[contourIndex];
+  if (!g)throw Error('Choose an existing contour');
+  if (n.geometry.skin) throw Error("Unbind the path before changing its topology");
   if (!g.closed && index === g.points.length - 1)
     throw Error("Select a segment before the final point");
   const a = g.points[index],
@@ -369,12 +371,13 @@ export function insertPoint(p, nodeId, index) {
   return v.id;
 }
 export function removePoint(p, nodeId, pointId) {
-  const g = p.nodes.find((n) => n.id === nodeId).geometry;
+  const geometry=p.nodes.find((n)=>n.id===nodeId).geometry,g=pointContour(geometry,pointId);
+  if(!g)throw Error('Choose an existing point');
   if (g.points.length <= (g.closed ? 3 : 2))
     throw Error("A closed path needs three points; an open path needs two");
-  g.points = g.points.filter((v) => v.id !== pointId);
-  if (g.skin)
-    g.skin.weights = g.skin.weights.filter((w) => w.pointId !== pointId);
+  const points=g.points.filter(v=>v.id!==pointId);g.points.splice(0,g.points.length,...points);
+  if (geometry.skin)
+    geometry.skin.weights = geometry.skin.weights.filter((w) => w.pointId !== pointId);
 }
 export function bindPath(p, nodeId, boneIds) {
   if(p.nodes.find(n=>n.id===nodeId)?.kind!=="path")throw Error("Select a path");
@@ -469,3 +472,5 @@ export function createMachine(p, artboardId) {
   p.machines.push(m);
   return m.id;
 }
+
+export {prepareCompound,commitCompound,combinePaths,releaseCompound,COMPOUND_OPERATIONS} from './compound.mjs';

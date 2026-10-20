@@ -22,6 +22,7 @@ function target(project, id) {
     throw Error("Show the path and its parents before continuing.");
   if (node.geometry.closed)
     throw Error("Open the path in Path controls before continuing.");
+  if(node.geometry.contours?.length)throw Error('Release compound contours before continuing this path.');
   if (node.geometry.skin)
     throw Error(
       "Unbind the path before adding points. Existing weights cannot describe new vertices.",

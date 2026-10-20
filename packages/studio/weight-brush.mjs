@@ -1,3 +1,4 @@
+import {pathPoints} from '@evir/project-model';
 import {worldPoints,controlMatrix,mapPoint} from '@evir/runtime/geometry';
 import {transformResolver} from '@evir/project-model';
 import {setSkinWeights} from '@evir/authoring';
@@ -16,7 +17,7 @@ export class WeightBrush {
   const n=source.nodes.find(n=>n.id===nodeId),visible=pose.nodes.find(n=>n.id===nodeId);
   if(!n?.geometry?.skin||!visible)throw Error('Choose a bound path or mesh');
   if(!['all','anchor','in','out'].includes(control)||![target,strength].every(v=>Number.isFinite(v)&&v>=0&&v<=1)||!Number.isFinite(radius)||radius<8||radius>160||!Number.isFinite(zoom)||zoom<.1||zoom>4)throw Error('Review the weight brush settings');
-  const count=n.kind==='mesh'?n.geometry.vertices.length:n.geometry.points.length*(control==='all'?3:1);
+  const count=n.kind==='mesh'?n.geometry.vertices.length:pathPoints(n.geometry).length*(control==='all'?3:1);
   if(count>WEIGHT_BRUSH_LIMIT)throw Error('Brush painting supports at most 4,096 displayed controls; use the numeric vertex editor for this layer');
   this.controls=weightControls(pose,visible,n.kind==='mesh'?'anchor':control);
   if(this.controls.length>WEIGHT_BRUSH_LIMIT)throw Error('Brush painting supports at most 4,096 displayed controls; use the numeric vertex editor for this layer');

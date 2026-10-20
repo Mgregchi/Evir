@@ -1,4 +1,4 @@
-import {worldTransform,inverse,upgradeAdvanced} from '@evir/project-model';
+import {worldTransform,inverse,upgradeAdvanced,pathPoints} from '@evir/project-model';
 import {quantize} from '@evir/runtime/geometry';
 const controls=['anchor','in','out'];
 function skinNode(p,id){
@@ -15,7 +15,7 @@ export function bindSkin(p,nodeId,boneIds){
  const bindWorld=worldTransform(p,nodeId);inverse(bindWorld);
  const bones=boneIds.map(boneId=>{const bone=p.nodes.find(v=>v.id===boneId);if(bone?.kind!=='bone'||bone.artboardId!==n.artboardId)throw Error('Choose bones in the same artboard');const bind=worldTransform(p,boneId);inverse(bind);return{boneId,bind};});
  const weights=quantize(boneIds.map(b=>[b,1/boneIds.length]));
- const skin={bindWorld,bones,weights:(n.kind==='path'?n.geometry.points:n.geometry.vertices).map(v=>({pointId:v.id,...Object.fromEntries(controls.map(c=>[c,structuredClone(weights)]))}))};
+ const skin={bindWorld,bones,weights:(n.kind==='path'?pathPoints(n.geometry):n.geometry.vertices).map(v=>({pointId:v.id,...Object.fromEntries(controls.map(c=>[c,structuredClone(weights)]))}))};
  if(n.kind==='mesh'||typeof n.geometry.fill!=='string')upgradeAdvanced(p);
  n.geometry.skin=skin;
 }

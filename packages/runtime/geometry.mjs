@@ -1,4 +1,5 @@
 import { strokeValue, paintValue } from "@evir/project-model";
+import {pathContours} from '@evir/project-model';
 import {
   worldTransform,
   multiply,
@@ -63,15 +64,16 @@ export function controlMatrix(p, n, pointId, control, resolve) {
   return multiply(matrix, skin.bindWorld);
 }
 export function worldPoints(p, n, resolve) {
-  return n.geometry.points.map((v) => ({
+  return pathContours(n.geometry).flatMap((c,contour)=>c.points.map((v) => ({
     id: v.id,
+    ...(n.geometry.contours ? {contour,closed:c.closed} : {}),
     ...Object.fromEntries(
       ["anchor", "in", "out"].map((k) => [
         k,
         mapPoint(controlMatrix(p, n, v.id, k, resolve), v[k]),
       ]),
     ),
-  }));
+  })));
 }
 export function components(m) {
   const sx = Math.hypot(m[0], m[1]);

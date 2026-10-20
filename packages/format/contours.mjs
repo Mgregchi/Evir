@@ -13,7 +13,7 @@ export const contourTransform = (f) => {
 export const isIdentityContour = f => (f.x ?? 0)===0 && (f.y ?? 0)===0 &&
   (f.rotation ?? 0)===0 && (f.scaleX ?? 1)===1 && (f.scaleY ?? 1)===1;
 
-export function editableContour(record, vertices, {fail, pointId}) {
+export function editableContour(record, vertices, {fail, pointId,forcePath=false}) {
   const f=record.fields;
   if((f.pathFlags ?? 0)!==0)fail(record,'nondefault path flags are outside the editable contour subset');
   const point=(anchor,incoming=anchor,outgoing=anchor)=>({id:pointId(),anchor:[...anchor],in:[...incoming],out:[...outgoing]});
@@ -43,7 +43,7 @@ export function editableContour(record, vertices, {fail, pointId}) {
     if(record.type==='Rectangle') {
       for(const k of ['cornerRadiusTL','cornerRadiusTR','cornerRadiusBL','cornerRadiusBR'])
         if((f[k] ?? 0)!==0)fail(record,'rounded rectangles are outside the editable contour subset');
-      if(x===0 && y===0 && isIdentityContour(f))return {kind:'rectangle',geometry:{width:w,height:h}};
+      if(!forcePath&&x===0 && y===0 && isIdentityContour(f))return {kind:'rectangle',geometry:{width:w,height:h}};
       points=[[x,y],[x+w,y],[x+w,y+h],[x,y+h]].map(v=>point(v));
     } else {
       // Ellipse::update uses four clockwise cubic vertices and this constant.

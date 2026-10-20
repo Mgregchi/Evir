@@ -5,6 +5,7 @@ import {
   pngSize,
   playbackSettings,
   STROKE_CAPS, STROKE_JOINS,
+  pathContours,
 } from "@evir/project-model";
 import { components, quantize, getValue } from "@evir/runtime/geometry";
 const OP = { eq: 0, ne: 1, le: 2, ge: 3, lt: 4, gt: 5 }; // pinned TransitionConditionOp
@@ -307,9 +308,10 @@ export function compileProject(project, schema = runtimeSchema) {
             });
         }
         if (n.kind === "path") {
+          for(const contour of pathContours(n.geometry)){
           const path = componentRecord("PointsPath", {
               parentId: index,
-              isClosed: n.geometry.closed,
+              isClosed: contour.closed,
             }).index,
             skin = n.geometry.skin;
           const packed = (influences) => {
@@ -330,7 +332,7 @@ export function compileProject(project, schema = runtimeSchema) {
                 ) >>> 0,
             };
           };
-          for (const v of n.geometry.points) {
+          for (const v of contour.points) {
             const delta = (handle) => {
                 const x = v[handle][0] - v.anchor[0],
                   y = v[handle][1] - v.anchor[1];
@@ -380,6 +382,7 @@ export function compileProject(project, schema = runtimeSchema) {
               pending.push({ record: tendon.record, boneId: b.boneId });
             }
           }
+          }
         }
         if (["rectangle", "path"].includes(n.kind)) {
           const feather = project.advanced?.feathers.find(
@@ -388,7 +391,7 @@ export function compileProject(project, schema = runtimeSchema) {
           if (n.geometry.fill !== null) {
           const fill = componentRecord("Fill", {
             parentId: index,
-            ...(feather ? { fillRule: 2 } : {}),
+            ...(n.geometry.fillRule==='evenodd' ? {fillRule:1} : feather ? {fillRule:2} : {}),
           }).index;
           fills.set(n.id, fill);
           const paint = n.geometry.fill;
@@ -471,7 +474,7 @@ export function compileProject(project, schema = runtimeSchema) {
         componentRecord("ClippingShape", {
           parentId: ids.get(c.targetId),
           sourceId: ids.get(c.maskId),
-          fillRule: 0,
+          fillRule: (c.fillRule??project.nodes.find(n=>n.id===c.maskId).geometry.fillRule)==='evenodd'?1:0,
           isVisible: true,
         });
     for (const f of project.advanced?.feathers ?? [])

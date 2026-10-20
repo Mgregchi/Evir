@@ -54,7 +54,7 @@ test('unsupported rounding, flags, malformed hierarchy, weights and animated con
  ['import-rectangle-centered','Rectangle','cornerRadiusTL',5,/rounded rectangles/],
  ['import-mixed-skinned','PointsPath','x',2,/transformed skinned/],
  ]){const records=structuredClone(geometryCases().find(c=>c.name===name).records);records.find(r=>r.type===type).fields[field]=value;await assert.rejects(()=>importRiv(encodeRecords(records)),reason);}
- const duplicate=geometryCases()[0].records;duplicate.push({type:'Ellipse',fields:{parentId:1,width:30,height:20}});await assert.rejects(()=>importRiv(encodeRecords(duplicate)),/exactly one shape contour/);
+ const duplicate=geometryCases()[0].records;duplicate.push({type:'Ellipse',fields:{parentId:1,width:30,height:20}});const compound=await importRiv(encodeRecords(duplicate));assert.equal(compound.nodes[0].geometry.contours.length,1);assert.equal(compound.nodes[0].geometry.contours[0].points.length,4);
  const weight=geometryCases().find(c=>c.name==='import-mixed-skinned').records;const r=weight.find(r=>r.type==='Weight');r.type='CubicWeight';await assert.rejects(()=>importRiv(encodeRecords(weight)),/weight type/);
  for(const [name,type,propertyKey]of [['import-mixed-closed','CubicMirroredVertex',82],['import-ellipse-centered','Ellipse',20],['import-rectangle-centered','Rectangle',21],['import-mixed-transformed','PointsPath',13]]){
   const records=structuredClone(geometryCases().find(c=>c.name===name).records),objectId=records.findIndex(r=>r.type===type)-1;

@@ -244,7 +244,8 @@ export function validateAdvanced(p, problem, identifier) {
   };
   const clips = new Set();
   for (const c of p.advanced.clips) {
-    if (!rec(c, "clip", ["targetId", "maskId", "visible"])) continue;
+    if (!rec(c, "clip", ["targetId", "maskId", "visible",...(Object.hasOwn(c??{},"fillRule")?["fillRule"]:[])])) continue;
+    if(c.fillRule!==undefined&&!['nonzero','evenodd'].includes(c.fillRule))problem("clip","invalid fill rule");
     const n = nodes.get(c.targetId),
       mask = refs(n, c.maskId, "clip");
     if (clips.has(c.targetId)) problem("clip", "one mask per target");

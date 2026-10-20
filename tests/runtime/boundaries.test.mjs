@@ -14,13 +14,14 @@ test('package imports have an acyclic graph and cannot reach applications, tools
       for(const spec of imports) {
         assert(!/apps|tools|research|rive-app/.test(spec),`${name}/${file}: ${spec}`);
         if(spec.startsWith('@evir/'))assert(Object.hasOwn(manifest.dependencies||{},spec.split('/').slice(0,2).join('/')),`${name}/${file}: undeclared dependency ${spec}`);
+        else if(spec==='paper/dist/paper-core.js'){assert.equal(name,'authoring');assert.equal(file,'boolean.mjs');assert.equal(manifest.dependencies.paper,'0.14.0');}
         else assert(spec.startsWith('./'),'Package imports must stay within explicit package dependencies');
       }
     }
   }
   const visit=(name,ancestors=new Set())=>{
     assert(!ancestors.has(name),'Dependency cycle at '+name);
-    for(const dep of graph.get(name)){assert(graph.has(dep));visit(dep,new Set([...ancestors,name]));}
+    for(const dep of graph.get(name)){if(dep==='paper'){assert.equal(name,'@evir/authoring');continue;}assert(graph.has(dep));visit(dep,new Set([...ancestors,name]));}
   };
   for(const name of graph.keys())visit(name);
 });

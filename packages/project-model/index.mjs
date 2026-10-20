@@ -28,6 +28,7 @@ export {
   transformResolver,
 } from "./primitives.mjs";
 export { ANIMATABLE, propertiesFor } from "./features.mjs";
+export {pathContours,pathPoints,pointContour,reverseContour} from './contours.mjs';
 const copy = (value) => structuredClone(value);
 export function createProject() {
   const artboardId = id("artboard");

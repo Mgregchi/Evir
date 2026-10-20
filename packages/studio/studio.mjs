@@ -1,4 +1,4 @@
-import { upgradeAdvanced } from "@evir/project-model";
+import { upgradeAdvanced,pathPoints } from "@evir/project-model";
 import { mountAdvanced, sheet } from "./advanced.mjs";
 import { mountLiveCommands } from "./live-commands.mjs";
 import { mountRiveViewer } from "./rive-viewer.mjs";
@@ -7,6 +7,7 @@ import { mountGuides } from "./guide-controls.mjs";
 import { ContinuationDraft } from "./path-continuation.mjs";
 import { continuationControls, numericContinuation } from "./continuation-controls.mjs";
 import { pathJoinControls } from './path-join-controls.mjs';
+import {compoundControls} from './compound-controls.mjs';
 import { canSnapGuides, snapWithGuides } from "./guides.mjs";
 let liveTools, riveViewer, canvasGuides, alignmentKey = null;
 import { ProjectRecovery, RecoveryQueue, RecoveryConflict } from "./recovery.mjs";
@@ -845,6 +846,7 @@ function properties(p) {
       info.append(action(n.name, () => select(id)));
     }
     host.append(info, alignmentPanel(p));
+    if(authoring?.mode==='Design'){const controls=compoundControls(p,[...selectedIds],joinApi);if(controls)host.append(controls);}
     const joining=[...selectedIds].map(id=>p.nodes.find(n=>n.id===id));
     if(joining.length===2&&joining.every(n=>n?.kind==='path'))
       host.append(pathJoinControls(p,joining[0],joinApi,joining[1].id));
@@ -916,6 +918,7 @@ function properties(p) {
     ),
   );
   host.append(info, alignmentPanel(p));
+    if(authoring?.mode==='Design'){const controls=compoundControls(p,[...selectedIds],joinApi);if(controls)host.append(controls);}
   const transform = section("Position");
   const pair = element("div", undefined, "field-pair");
   for (const [label, index] of [
@@ -1032,7 +1035,7 @@ function properties(p) {
     authoring?.editGeometry(p, n, host);
     if (n.kind === "path" && authoring?.mode === "Design")
       host.append(continuationControls(n, {start:beginContinuation, notice, visible:available(p,n,"hidden")}));
-    if (n.kind === 'path' && authoring?.mode === 'Design')host.append(pathJoinControls(p,n,joinApi));
+    if (n.kind === 'path' && authoring?.mode === 'Design'){host.append(pathJoinControls(p,n,joinApi));const controls=compoundControls(p,[n.id],joinApi);if(controls)host.append(controls);}
     advanced?.properties(p, n, host);
     weightTools?.controls(p,n,host);
   }
@@ -1425,7 +1428,7 @@ function hit(p, world) {
     }
     if (n.kind === "path" && n.geometry.fill !== null) {
       pathOnContext(hitContext, worldPoints(p, n), n.geometry.closed);
-      if (hitContext.isPointInPath(world.x, world.y)) return n;
+      if (hitContext.isPointInPath(world.x, world.y,n.geometry.fillRule??'nonzero')) return n;
     }
     if (n.kind === "bone" && authoring?.mode !== "Interact") {
       const m = worldTransform(p, n.id),
@@ -1754,7 +1757,7 @@ stage.addEventListener("pointermove", (e) => {
     store.preview((p) => {
       const n = p.nodes.find((n) => n.id === drag.id);
       if (drag.kind === "control") {
-        const raw = n.geometry.points.find((v) => v.id === drag.pointId),
+        const raw = pathPoints(n.geometry).find((v) => v.id === drag.pointId),
           local = mapPoint(drag.matrix, [
             (now.x - drag.c.x) / drag.c.zoom,
             (now.y - drag.c.y) / drag.c.zoom,
