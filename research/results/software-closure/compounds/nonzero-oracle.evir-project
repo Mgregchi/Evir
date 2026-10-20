@@ -1,0 +1,186 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 3,
+  "id": "compound-nonzero",
+  "name": "nonzero",
+  "artboards": [
+    {
+      "id": "artboard-f7f0b4d2-59ea-4066-afc5-99808e82a46b",
+      "name": "Artboard 1",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "node-366c3e9b-31f5-4566-8080-d8ba926f079e",
+      "name": "Circle",
+      "kind": "path",
+      "artboardId": "artboard-f7f0b4d2-59ea-4066-afc5-99808e82a46b",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        70,
+        70
+      ],
+      "geometry": {
+        "closed": true,
+        "points": [
+          {
+            "id": "point-578a17d3-6bb8-49dc-b7a8-b353cd519686",
+            "anchor": [
+              300,
+              150
+            ],
+            "in": [
+              300,
+              67.15728752538097
+            ],
+            "out": [
+              300,
+              232.84271247461902
+            ]
+          },
+          {
+            "id": "point-b33b93de-36ed-4b60-a203-ba08f4fa77c4",
+            "anchor": [
+              150,
+              300
+            ],
+            "in": [
+              232.84271247461902,
+              300
+            ],
+            "out": [
+              67.15728752538097,
+              300
+            ]
+          },
+          {
+            "id": "point-8a722071-5792-4754-92a7-26788a3c2eda",
+            "anchor": [
+              0,
+              150
+            ],
+            "in": [
+              0,
+              232.84271247461902
+            ],
+            "out": [
+              0,
+              67.15728752538097
+            ]
+          },
+          {
+            "id": "point-8bcf9acf-89f8-4029-a914-8ce39ee97098",
+            "anchor": [
+              150,
+              0
+            ],
+            "in": [
+              67.15728752538097,
+              0
+            ],
+            "out": [
+              232.84271247461902,
+              0
+            ]
+          }
+        ],
+        "contours": [
+          {
+            "closed": true,
+            "points": [
+              {
+                "id": "point-c36194d6-42f4-4928-ad74-09554fde1fb5",
+                "anchor": [
+                  220,
+                  150
+                ],
+                "in": [
+                  220,
+                  111.34006751184445
+                ],
+                "out": [
+                  220,
+                  188.65993248815556
+                ]
+              },
+              {
+                "id": "point-0bd39a44-00de-4110-9968-c53281ea1db1",
+                "anchor": [
+                  150,
+                  220
+                ],
+                "in": [
+                  188.65993248815556,
+                  220
+                ],
+                "out": [
+                  111.34006751184445,
+                  220
+                ]
+              },
+              {
+                "id": "point-ac3c67ac-2fd7-4a09-bcf6-473c72443248",
+                "anchor": [
+                  80,
+                  150
+                ],
+                "in": [
+                  80,
+                  188.65993248815556
+                ],
+                "out": [
+                  80,
+                  111.34006751184445
+                ]
+              },
+              {
+                "id": "point-06d538af-a236-4c06-a321-c19417c6a253",
+                "anchor": [
+                  150,
+                  80
+                ],
+                "in": [
+                  111.34006751184445,
+                  80
+                ],
+                "out": [
+                  188.65993248815556,
+                  80
+                ]
+              }
+            ]
+          }
+        ],
+        "fillRule": "nonzero",
+        "fill": "#89cdb7",
+        "skin": null
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "artboard-f7f0b4d2-59ea-4066-afc5-99808e82a46b": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  },
+  "advanced": {
+    "clips": [],
+    "feathers": [],
+    "ik": []
+  }
+}

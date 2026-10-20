@@ -52,6 +52,7 @@ export function continuationControls(node, api) {
   start.onclick = () => {
     let endpoint = "last",
       closed = false,
+      smooth = false,
       started = false;
     const dialog = sheet(
       "Continue this path",
@@ -60,7 +61,7 @@ export function continuationControls(node, api) {
         host.append(
           el(
             "p",
-            "Choose the end to extend. The draft stays outside your saved project until Finish; Cancel keeps the original. Existing curves and paint are retained. Open filled paths still fill across their endpoints; this adds no brush stroke.",
+            "Choose the end to extend. The draft stays outside your saved project until Finish; Cancel keeps the original. Existing curves and paint are retained. Smooth connection mirrors endpoint tangents into the new connector; collapsed handles use one third of its chord. Open filled paths still fill across their endpoints; this adds no brush stroke.",
           ),
         );
         const l = el("label"),
@@ -90,6 +91,7 @@ export function continuationControls(node, api) {
           },
           "checkbox",
         );
+        field(host,"Smooth connection",smooth,v=>{smooth=v;},"checkbox");
         host.append(
           el(
             "p",
@@ -98,7 +100,7 @@ export function continuationControls(node, api) {
         );
       },
       () => {
-        started = api.start(node.id, { endpoint, closed });
+        started = api.start(node.id, { endpoint, closed, smooth });
         return started;
       },
       api.notice,

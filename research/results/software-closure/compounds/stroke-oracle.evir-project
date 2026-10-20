@@ -1,0 +1,199 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 3,
+  "id": "compound-stroke",
+  "name": "stroke",
+  "artboards": [
+    {
+      "id": "artboard-dd788f39-470a-4370-8095-a9f2fd346d5f",
+      "name": "Artboard 1",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "node-ac08c1c6-e926-49cb-88f5-c86c07b6e20e",
+      "name": "Circle",
+      "kind": "path",
+      "artboardId": "artboard-dd788f39-470a-4370-8095-a9f2fd346d5f",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        70,
+        70
+      ],
+      "geometry": {
+        "closed": true,
+        "points": [
+          {
+            "id": "point-ae7a8f55-cac1-4848-a74b-325ad31bc229",
+            "anchor": [
+              300,
+              150
+            ],
+            "in": [
+              300,
+              67.15728752538097
+            ],
+            "out": [
+              300,
+              232.84271247461902
+            ]
+          },
+          {
+            "id": "point-57e230cd-b6a6-4d86-88f0-1cae4168d69f",
+            "anchor": [
+              150,
+              300
+            ],
+            "in": [
+              232.84271247461902,
+              300
+            ],
+            "out": [
+              67.15728752538097,
+              300
+            ]
+          },
+          {
+            "id": "point-40fdcd45-a6eb-4dca-9667-2935c8e3c993",
+            "anchor": [
+              0,
+              150
+            ],
+            "in": [
+              0,
+              232.84271247461902
+            ],
+            "out": [
+              0,
+              67.15728752538097
+            ]
+          },
+          {
+            "id": "point-1632656e-d8ab-42f8-bafe-2ea16197090d",
+            "anchor": [
+              150,
+              0
+            ],
+            "in": [
+              67.15728752538097,
+              0
+            ],
+            "out": [
+              232.84271247461902,
+              0
+            ]
+          }
+        ],
+        "contours": [
+          {
+            "closed": true,
+            "points": [
+              {
+                "id": "point-7ad05ec9-ed22-430e-8fb4-cff287ded5f6",
+                "anchor": [
+                  150,
+                  80
+                ],
+                "in": [
+                  188.65993248815556,
+                  80
+                ],
+                "out": [
+                  111.34006751184445,
+                  80
+                ]
+              },
+              {
+                "id": "point-9f05d1ed-f312-4dfe-86a2-5db820df3b6f",
+                "anchor": [
+                  80,
+                  150
+                ],
+                "in": [
+                  80,
+                  111.34006751184445
+                ],
+                "out": [
+                  80,
+                  188.65993248815556
+                ]
+              },
+              {
+                "id": "point-bdc4b289-bc19-4a68-a13c-12e23ab6dd6b",
+                "anchor": [
+                  150,
+                  220
+                ],
+                "in": [
+                  111.34006751184445,
+                  220
+                ],
+                "out": [
+                  188.65993248815556,
+                  220
+                ]
+              },
+              {
+                "id": "point-ed47d320-160e-43be-867e-21466bf11a18",
+                "anchor": [
+                  220,
+                  150
+                ],
+                "in": [
+                  220,
+                  188.65993248815556
+                ],
+                "out": [
+                  220,
+                  111.34006751184445
+                ]
+              }
+            ]
+          }
+        ],
+        "fillRule": "nonzero",
+        "fill": "#89cdb7",
+        "skin": null,
+        "stroke": {
+          "color": "#244a3e",
+          "width": 7,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        }
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "artboard-dd788f39-470a-4370-8095-a9f2fd346d5f": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  },
+  "advanced": {
+    "clips": [],
+    "feathers": [],
+    "ik": []
+  }
+}

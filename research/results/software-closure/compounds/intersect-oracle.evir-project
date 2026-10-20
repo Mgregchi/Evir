@@ -1,0 +1,149 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 3,
+  "id": "compound-intersect",
+  "name": "intersect",
+  "artboards": [
+    {
+      "id": "artboard-b7661445-4837-4c5e-b66b-ed2a9d37620e",
+      "name": "Artboard 1",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "node-e28aa70d-3338-475c-adb5-a38b82b7bbd2",
+      "name": "Circle",
+      "kind": "path",
+      "artboardId": "artboard-b7661445-4837-4c5e-b66b-ed2a9d37620e",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        70,
+        70
+      ],
+      "geometry": {
+        "closed": true,
+        "points": [
+          {
+            "id": "point-0282eddf-a4ab-4a56-baac-4f36ef177e8f",
+            "anchor": [
+              300,
+              150
+            ],
+            "in": [
+              300,
+              121.61914002351385
+            ],
+            "out": [
+              300,
+              168.6987708344528
+            ]
+          },
+          {
+            "id": "point-e4dd9275-72d0-4f03-adc4-9d936daeb4a1",
+            "anchor": [
+              290.3275364356589,
+              203.10704565318133
+            ],
+            "in": [
+              296.5785464824118,
+              186.5984183816309
+            ],
+            "out": [
+              281.1519821099539,
+              207.52461489307802
+            ]
+          },
+          {
+            "id": "point-1ef4c6e4-2c97-4456-ac37-7e47005f7d31",
+            "anchor": [
+              260,
+              210
+            ],
+            "in": [
+              270.8650696400852,
+              210
+            ],
+            "out": [
+              221.34006751184444,
+              210
+            ]
+          },
+          {
+            "id": "point-b79b44a0-2027-4200-ae5c-c56cda09598a",
+            "anchor": [
+              190,
+              140
+            ],
+            "in": [
+              190,
+              178.65993248815556
+            ],
+            "out": [
+              190,
+              101.34006751184445
+            ]
+          },
+          {
+            "id": "point-adf36abd-a5a5-44f3-8903-4d1455a8e6cb",
+            "anchor": [
+              260,
+              70
+            ],
+            "in": [
+              221.34006751184444,
+              70
+            ],
+            "out": [
+              266.37625131833477,
+              70
+            ]
+          },
+          {
+            "id": "point-7709dbe8-3944-4907-a0ef-0441b8f488b7",
+            "anchor": [
+              278.4236303023615,
+              72.44981569737345
+            ],
+            "in": [
+              272.5533840635857,
+              70.85252787092321
+            ],
+            "out": [
+              292.1180145638199,
+              95.07921638567102
+            ]
+          }
+        ],
+        "fillRule": "nonzero",
+        "fill": "#89cdb7",
+        "skin": null
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "artboard-b7661445-4837-4c5e-b66b-ed2a9d37620e": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  },
+  "advanced": {
+    "clips": [],
+    "feathers": [],
+    "ik": []
+  }
+}

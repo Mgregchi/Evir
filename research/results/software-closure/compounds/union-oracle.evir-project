@@ -1,0 +1,149 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 3,
+  "id": "compound-union",
+  "name": "union",
+  "artboards": [
+    {
+      "id": "artboard-85b8faa5-82cf-4000-afd8-4289dbf66cbe",
+      "name": "Artboard 1",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "node-2398607d-73bc-4209-807b-4a94731e12c4",
+      "name": "Circle",
+      "kind": "path",
+      "artboardId": "artboard-85b8faa5-82cf-4000-afd8-4289dbf66cbe",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        70,
+        70
+      ],
+      "geometry": {
+        "closed": true,
+        "points": [
+          {
+            "id": "point-ee252a05-ef55-435b-aac4-4940c37e30ec",
+            "anchor": [
+              150,
+              300
+            ],
+            "in": [
+              214.14394164016622,
+              300
+            ],
+            "out": [
+              67.15728752538097,
+              300
+            ]
+          },
+          {
+            "id": "point-d2acc791-1ff7-4251-a771-47ff5af97bf4",
+            "anchor": [
+              0,
+              150
+            ],
+            "in": [
+              0,
+              232.84271247461902
+            ],
+            "out": [
+              0,
+              67.15728752538097
+            ]
+          },
+          {
+            "id": "point-6b8ae8e2-fc40-4770-ae20-21be1def8f4b",
+            "anchor": [
+              150,
+              0
+            ],
+            "in": [
+              67.15728752538097,
+              0
+            ],
+            "out": [
+              204.46185249813288,
+              0
+            ]
+          },
+          {
+            "id": "point-a3359886-77e4-471b-98fb-8bd923a27dd1",
+            "anchor": [
+              278.4236303166851,
+              72.44981572069457
+            ],
+            "in": [
+              252.14459802808568,
+              29.02480733728764
+            ],
+            "out": [
+              308.14535057197634,
+              80.53706453682538
+            ]
+          },
+          {
+            "id": "point-7baaeb81-a0ee-4adf-8037-c430a27da0d2",
+            "anchor": [
+              330,
+              140
+            ],
+            "in": [
+              330,
+              107.71631883017922
+            ],
+            "out": [
+              330,
+              167.79486284807038
+            ]
+          },
+          {
+            "id": "point-378412ba-9614-4056-8a83-6039e16461af",
+            "anchor": [
+              290.3275364356355,
+              203.1070456532399
+            ],
+            "in": [
+              313.80030582287253,
+              191.8060843881798
+            ],
+            "out": [
+              268.8841791593258,
+              259.73795651046555
+            ]
+          }
+        ],
+        "fillRule": "nonzero",
+        "fill": "#89cdb7",
+        "skin": null
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "artboard-85b8faa5-82cf-4000-afd8-4289dbf66cbe": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  },
+  "advanced": {
+    "clips": [],
+    "feathers": [],
+    "ik": []
+  }
+}

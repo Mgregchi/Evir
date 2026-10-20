@@ -14,7 +14,7 @@ import {bindSkin,setSkinWeights} from './skin.mjs';
 export {bindSkin,setSkinWeights} from './skin.mjs';
 import { shareState } from "./shared-state.mjs";
 export { joinPaths, planPathJoin, PATH_JOIN_LIMIT } from './path-joining.mjs';
-export { SHAPES, shapeGeometry, addShape } from './shapes.mjs';
+export { SHAPES, shapeGeometry, addShape,setShapeParameters,detachShape } from './shapes.mjs';
 import { quantize, components } from "@evir/runtime/geometry";
 const copy = (x) => structuredClone(x),
   clone = copy,
@@ -352,6 +352,7 @@ export function convertRectangle(p, id) {
 export function insertPoint(p, nodeId, index,contourIndex=0) {
   const n = p.nodes.find((n) => n.id === nodeId),
     g = pathContours(n.geometry)[contourIndex];
+  if(n.geometry.shape)throw Error('Convert the live shape to a free path before editing points');
   if (!g)throw Error('Choose an existing contour');
   if (n.geometry.skin) throw Error("Unbind the path before changing its topology");
   if (!g.closed && index === g.points.length - 1)
@@ -372,6 +373,7 @@ export function insertPoint(p, nodeId, index,contourIndex=0) {
 }
 export function removePoint(p, nodeId, pointId) {
   const geometry=p.nodes.find((n)=>n.id===nodeId).geometry,g=pointContour(geometry,pointId);
+  if(geometry.shape)throw Error('Convert the live shape to a free path before editing points');
   if(!g)throw Error('Choose an existing point');
   if (g.points.length <= (g.closed ? 3 : 2))
     throw Error("A closed path needs three points; an open path needs two");
@@ -474,3 +476,5 @@ export function createMachine(p, artboardId) {
 }
 
 export {prepareCompound,commitCompound,combinePaths,releaseCompound,COMPOUND_OPERATIONS} from './compound.mjs';
+
+export {smoothConnection} from './smooth-connection.mjs';

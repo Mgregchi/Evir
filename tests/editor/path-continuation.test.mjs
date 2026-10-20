@@ -178,3 +178,7 @@ test("Numeric coordinates and drawing budgets are bounded; closing remains possi
   }));
   assert.throws(() => new ContinuationDraft(many.p, many.id), /4,096/);
 });
+
+test('Smooth continuation previews the committed tangent for either endpoint and preserves previous curve segments',()=>{
+ for(const endpoint of ['first','last']){const{p,id,node}=fixture();for(const point of node.geometry.points){point.in=point.anchor.map((v,i)=>v-(i?8:16));point.out=point.anchor.map((v,i)=>v+(i?12:20));}const original=structuredClone(p),d=new ContinuationDraft(p,id,{endpoint,smooth:true});const anchor=d.points.at(-1).anchor;d.appendLocal([anchor[0]+60,anchor[1]+40],[anchor[0]+80,anchor[1]+50]);const g=d.geometry(),preview=d.worldPoints(),matrix=worldTransform(p,id);for(const point of g.points){const actual=preview.find(v=>v.id===point.id);for(const key of ['anchor','in','out'])assert.deepEqual(actual[endpoint==='first'&&key!=='anchor'?(key==='in'?'out':'in'):key],mapPoint(matrix,point[key]));}const end=node.geometry.points[endpoint==='first'?0:2],kept=g.points.find(v=>v.id===end.id);assert.deepEqual(kept.anchor,end.anchor);assert.deepEqual(kept[endpoint==='first'?'out':'in'],end[endpoint==='first'?'out':'in']);assert.deepEqual(kept.in.map((v,i)=>v+kept.out[i]),kept.anchor.map(v=>v*2));assert.deepEqual(p,original);d.apply(p,g);validateProject(p);compileProject(p);}
+});

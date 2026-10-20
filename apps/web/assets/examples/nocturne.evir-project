@@ -1,0 +1,3262 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 3,
+  "id": "nocturne-project",
+  "name": "Nocturne — a window into the night",
+  "artboards": [
+    {
+      "id": "nocturne-board",
+      "name": "Nocturne — a window into the night",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "nocturne-night-card",
+      "name": "night card",
+      "kind": "path",
+      "artboardId": "nocturne-board",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        30,
+        35
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e5e6de",
+        "skin": null,
+        "points": [
+          {
+            "id": "nocturne-night-card-contour-0-point-0",
+            "anchor": [
+              42,
+              0
+            ],
+            "in": [
+              18.80404050710667,
+              0
+            ],
+            "out": [
+              42,
+              0
+            ]
+          },
+          {
+            "id": "nocturne-night-card-contour-0-point-1",
+            "anchor": [
+              410,
+              0
+            ],
+            "in": [
+              410,
+              0
+            ],
+            "out": [
+              433.19595949289334,
+              0
+            ]
+          },
+          {
+            "id": "nocturne-night-card-contour-0-point-2",
+            "anchor": [
+              452,
+              42
+            ],
+            "in": [
+              452,
+              18.80404050710667
+            ],
+            "out": [
+              452,
+              42
+            ]
+          },
+          {
+            "id": "nocturne-night-card-contour-0-point-3",
+            "anchor": [
+              452,
+              400
+            ],
+            "in": [
+              452,
+              400
+            ],
+            "out": [
+              452,
+              423.19595949289334
+            ]
+          },
+          {
+            "id": "nocturne-night-card-contour-0-point-4",
+            "anchor": [
+              410,
+              442
+            ],
+            "in": [
+              433.19595949289334,
+              442
+            ],
+            "out": [
+              410,
+              442
+            ]
+          },
+          {
+            "id": "nocturne-night-card-contour-0-point-5",
+            "anchor": [
+              42,
+              442
+            ],
+            "in": [
+              42,
+              442
+            ],
+            "out": [
+              18.80404050710667,
+              442
+            ]
+          },
+          {
+            "id": "nocturne-night-card-contour-0-point-6",
+            "anchor": [
+              0,
+              400
+            ],
+            "in": [
+              0,
+              423.19595949289334
+            ],
+            "out": [
+              0,
+              400
+            ]
+          },
+          {
+            "id": "nocturne-night-card-contour-0-point-7",
+            "anchor": [
+              0,
+              42
+            ],
+            "in": [
+              0,
+              42
+            ],
+            "out": [
+              0,
+              18.80404050710667
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nocturne-dusk",
+      "name": "dusk",
+      "kind": "path",
+      "artboardId": "nocturne-board",
+      "parentId": null,
+      "order": 1,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        58,
+        59
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#354d59",
+        "skin": null,
+        "points": [
+          {
+            "id": "nocturne-dusk-contour-0-point-0",
+            "anchor": [
+              396,
+              198
+            ],
+            "in": [
+              396,
+              88.64761953350288
+            ],
+            "out": [
+              396,
+              307.35238046649715
+            ]
+          },
+          {
+            "id": "nocturne-dusk-contour-0-point-1",
+            "anchor": [
+              198,
+              396
+            ],
+            "in": [
+              307.35238046649715,
+              396
+            ],
+            "out": [
+              88.64761953350288,
+              396
+            ]
+          },
+          {
+            "id": "nocturne-dusk-contour-0-point-2",
+            "anchor": [
+              0,
+              198
+            ],
+            "in": [
+              0,
+              307.35238046649715
+            ],
+            "out": [
+              0,
+              88.64761953350288
+            ]
+          },
+          {
+            "id": "nocturne-dusk-contour-0-point-3",
+            "anchor": [
+              198,
+              0
+            ],
+            "in": [
+              88.64761953350288,
+              0
+            ],
+            "out": [
+              307.35238046649715,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nocturne-moon",
+      "name": "moon",
+      "kind": "path",
+      "artboardId": "nocturne-board",
+      "parentId": null,
+      "order": 2,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        322,
+        84
+      ],
+      "geometry": {
+        "closed": true,
+        "points": [
+          {
+            "id": "nocturne-moon-contour-0-point-0",
+            "anchor": [
+              43,
+              86
+            ],
+            "in": [
+              66.18950710786694,
+              86
+            ],
+            "out": [
+              19.251755757275877,
+              86
+            ]
+          },
+          {
+            "id": "nocturne-moon-contour-0-point-1",
+            "anchor": [
+              0,
+              43
+            ],
+            "in": [
+              0,
+              66.74824424272413
+            ],
+            "out": [
+              0,
+              24.720177732803883
+            ]
+          },
+          {
+            "id": "nocturne-moon-contour-0-point-2",
+            "anchor": [
+              27.490132423129502,
+              2.882182671736514
+            ],
+            "in": [
+              11.406470123216224,
+              9.10447930890832
+            ],
+            "out": [
+              24.011602640106595,
+              8.421836478665396
+            ]
+          },
+          {
+            "id": "nocturne-moon-contour-0-point-3",
+            "anchor": [
+              22,
+              22
+            ],
+            "in": [
+              22,
+              14.976000753816653
+            ],
+            "out": [
+              22,
+              41.88225099390857
+            ]
+          },
+          {
+            "id": "nocturne-moon-contour-0-point-4",
+            "anchor": [
+              58,
+              58
+            ],
+            "in": [
+              38.11774900609143,
+              58
+            ],
+            "out": [
+              69.29092890257289,
+              58
+            ]
+          },
+          {
+            "id": "nocturne-moon-contour-0-point-5",
+            "anchor": [
+              85.96822209023688,
+              44.668552228037534
+            ],
+            "in": [
+              79.36781004465962,
+              52.802043630671484
+            ],
+            "out": [
+              85.09161911283883,
+              67.64347943445293
+            ]
+          }
+        ],
+        "fillRule": "nonzero",
+        "fill": "#f3d69d",
+        "skin": null
+      }
+    },
+    {
+      "id": "nocturne-star-132",
+      "name": "star 132",
+      "kind": "path",
+      "artboardId": "nocturne-board",
+      "parentId": null,
+      "order": 4,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        132,
+        98
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e8ce9b",
+        "skin": null,
+        "points": [
+          {
+            "id": "nocturne-star-132-contour-0-point-0",
+            "anchor": [
+              5,
+              0
+            ],
+            "in": [
+              5,
+              0
+            ],
+            "out": [
+              5,
+              0
+            ]
+          },
+          {
+            "id": "nocturne-star-132-contour-0-point-1",
+            "anchor": [
+              6.060660171779821,
+              3.9393398282201786
+            ],
+            "in": [
+              6.060660171779821,
+              3.9393398282201786
+            ],
+            "out": [
+              6.060660171779821,
+              3.9393398282201786
+            ]
+          },
+          {
+            "id": "nocturne-star-132-contour-0-point-2",
+            "anchor": [
+              10,
+              5
+            ],
+            "in": [
+              10,
+              5
+            ],
+            "out": [
+              10,
+              5
+            ]
+          },
+          {
+            "id": "nocturne-star-132-contour-0-point-3",
+            "anchor": [
+              6.060660171779821,
+              6.060660171779821
+            ],
+            "in": [
+              6.060660171779821,
+              6.060660171779821
+            ],
+            "out": [
+              6.060660171779821,
+              6.060660171779821
+            ]
+          },
+          {
+            "id": "nocturne-star-132-contour-0-point-4",
+            "anchor": [
+              5,
+              10
+            ],
+            "in": [
+              5,
+              10
+            ],
+            "out": [
+              5,
+              10
+            ]
+          },
+          {
+            "id": "nocturne-star-132-contour-0-point-5",
+            "anchor": [
+              3.9393398282201786,
+              6.060660171779821
+            ],
+            "in": [
+              3.9393398282201786,
+              6.060660171779821
+            ],
+            "out": [
+              3.9393398282201786,
+              6.060660171779821
+            ]
+          },
+          {
+            "id": "nocturne-star-132-contour-0-point-6",
+            "anchor": [
+              0,
+              5.000000000000001
+            ],
+            "in": [
+              0,
+              5.000000000000001
+            ],
+            "out": [
+              0,
+              5.000000000000001
+            ]
+          },
+          {
+            "id": "nocturne-star-132-contour-0-point-7",
+            "anchor": [
+              3.9393398282201786,
+              3.9393398282201786
+            ],
+            "in": [
+              3.9393398282201786,
+              3.9393398282201786
+            ],
+            "out": [
+              3.9393398282201786,
+              3.9393398282201786
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nocturne-star-205",
+      "name": "star 205",
+      "kind": "path",
+      "artboardId": "nocturne-board",
+      "parentId": null,
+      "order": 5,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        205,
+        76
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e8ce9b",
+        "skin": null,
+        "points": [
+          {
+            "id": "nocturne-star-205-contour-0-point-0",
+            "anchor": [
+              3,
+              0
+            ],
+            "in": [
+              3,
+              0
+            ],
+            "out": [
+              3,
+              0
+            ]
+          },
+          {
+            "id": "nocturne-star-205-contour-0-point-1",
+            "anchor": [
+              3.636396103067893,
+              2.363603896932107
+            ],
+            "in": [
+              3.636396103067893,
+              2.363603896932107
+            ],
+            "out": [
+              3.636396103067893,
+              2.363603896932107
+            ]
+          },
+          {
+            "id": "nocturne-star-205-contour-0-point-2",
+            "anchor": [
+              6,
+              3
+            ],
+            "in": [
+              6,
+              3
+            ],
+            "out": [
+              6,
+              3
+            ]
+          },
+          {
+            "id": "nocturne-star-205-contour-0-point-3",
+            "anchor": [
+              3.636396103067893,
+              3.636396103067893
+            ],
+            "in": [
+              3.636396103067893,
+              3.636396103067893
+            ],
+            "out": [
+              3.636396103067893,
+              3.636396103067893
+            ]
+          },
+          {
+            "id": "nocturne-star-205-contour-0-point-4",
+            "anchor": [
+              3,
+              6
+            ],
+            "in": [
+              3,
+              6
+            ],
+            "out": [
+              3,
+              6
+            ]
+          },
+          {
+            "id": "nocturne-star-205-contour-0-point-5",
+            "anchor": [
+              2.363603896932107,
+              3.636396103067893
+            ],
+            "in": [
+              2.363603896932107,
+              3.636396103067893
+            ],
+            "out": [
+              2.363603896932107,
+              3.636396103067893
+            ]
+          },
+          {
+            "id": "nocturne-star-205-contour-0-point-6",
+            "anchor": [
+              0,
+              3.000000000000001
+            ],
+            "in": [
+              0,
+              3.000000000000001
+            ],
+            "out": [
+              0,
+              3.000000000000001
+            ]
+          },
+          {
+            "id": "nocturne-star-205-contour-0-point-7",
+            "anchor": [
+              2.363603896932107,
+              2.363603896932107
+            ],
+            "in": [
+              2.363603896932107,
+              2.363603896932107
+            ],
+            "out": [
+              2.363603896932107,
+              2.363603896932107
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nocturne-star-427",
+      "name": "star 427",
+      "kind": "path",
+      "artboardId": "nocturne-board",
+      "parentId": null,
+      "order": 6,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        427,
+        215
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e8ce9b",
+        "skin": null,
+        "points": [
+          {
+            "id": "nocturne-star-427-contour-0-point-0",
+            "anchor": [
+              4,
+              0
+            ],
+            "in": [
+              4,
+              0
+            ],
+            "out": [
+              4,
+              0
+            ]
+          },
+          {
+            "id": "nocturne-star-427-contour-0-point-1",
+            "anchor": [
+              4.848528137423857,
+              3.151471862576143
+            ],
+            "in": [
+              4.848528137423857,
+              3.151471862576143
+            ],
+            "out": [
+              4.848528137423857,
+              3.151471862576143
+            ]
+          },
+          {
+            "id": "nocturne-star-427-contour-0-point-2",
+            "anchor": [
+              8,
+              4
+            ],
+            "in": [
+              8,
+              4
+            ],
+            "out": [
+              8,
+              4
+            ]
+          },
+          {
+            "id": "nocturne-star-427-contour-0-point-3",
+            "anchor": [
+              4.848528137423857,
+              4.848528137423857
+            ],
+            "in": [
+              4.848528137423857,
+              4.848528137423857
+            ],
+            "out": [
+              4.848528137423857,
+              4.848528137423857
+            ]
+          },
+          {
+            "id": "nocturne-star-427-contour-0-point-4",
+            "anchor": [
+              4,
+              8
+            ],
+            "in": [
+              4,
+              8
+            ],
+            "out": [
+              4,
+              8
+            ]
+          },
+          {
+            "id": "nocturne-star-427-contour-0-point-5",
+            "anchor": [
+              3.151471862576143,
+              4.848528137423857
+            ],
+            "in": [
+              3.151471862576143,
+              4.848528137423857
+            ],
+            "out": [
+              3.151471862576143,
+              4.848528137423857
+            ]
+          },
+          {
+            "id": "nocturne-star-427-contour-0-point-6",
+            "anchor": [
+              0,
+              4.000000000000001
+            ],
+            "in": [
+              0,
+              4.000000000000001
+            ],
+            "out": [
+              0,
+              4.000000000000001
+            ]
+          },
+          {
+            "id": "nocturne-star-427-contour-0-point-7",
+            "anchor": [
+              3.151471862576143,
+              3.151471862576143
+            ],
+            "in": [
+              3.151471862576143,
+              3.151471862576143
+            ],
+            "out": [
+              3.151471862576143,
+              3.151471862576143
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nocturne-star-88",
+      "name": "star 88",
+      "kind": "path",
+      "artboardId": "nocturne-board",
+      "parentId": null,
+      "order": 7,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        88,
+        210
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e8ce9b",
+        "skin": null,
+        "points": [
+          {
+            "id": "nocturne-star-88-contour-0-point-0",
+            "anchor": [
+              3,
+              0
+            ],
+            "in": [
+              3,
+              0
+            ],
+            "out": [
+              3,
+              0
+            ]
+          },
+          {
+            "id": "nocturne-star-88-contour-0-point-1",
+            "anchor": [
+              3.636396103067893,
+              2.363603896932107
+            ],
+            "in": [
+              3.636396103067893,
+              2.363603896932107
+            ],
+            "out": [
+              3.636396103067893,
+              2.363603896932107
+            ]
+          },
+          {
+            "id": "nocturne-star-88-contour-0-point-2",
+            "anchor": [
+              6,
+              3
+            ],
+            "in": [
+              6,
+              3
+            ],
+            "out": [
+              6,
+              3
+            ]
+          },
+          {
+            "id": "nocturne-star-88-contour-0-point-3",
+            "anchor": [
+              3.636396103067893,
+              3.636396103067893
+            ],
+            "in": [
+              3.636396103067893,
+              3.636396103067893
+            ],
+            "out": [
+              3.636396103067893,
+              3.636396103067893
+            ]
+          },
+          {
+            "id": "nocturne-star-88-contour-0-point-4",
+            "anchor": [
+              3,
+              6
+            ],
+            "in": [
+              3,
+              6
+            ],
+            "out": [
+              3,
+              6
+            ]
+          },
+          {
+            "id": "nocturne-star-88-contour-0-point-5",
+            "anchor": [
+              2.363603896932107,
+              3.636396103067893
+            ],
+            "in": [
+              2.363603896932107,
+              3.636396103067893
+            ],
+            "out": [
+              2.363603896932107,
+              3.636396103067893
+            ]
+          },
+          {
+            "id": "nocturne-star-88-contour-0-point-6",
+            "anchor": [
+              0,
+              3.000000000000001
+            ],
+            "in": [
+              0,
+              3.000000000000001
+            ],
+            "out": [
+              0,
+              3.000000000000001
+            ]
+          },
+          {
+            "id": "nocturne-star-88-contour-0-point-7",
+            "anchor": [
+              2.363603896932107,
+              2.363603896932107
+            ],
+            "in": [
+              2.363603896932107,
+              2.363603896932107
+            ],
+            "out": [
+              2.363603896932107,
+              2.363603896932107
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nocturne-star-376",
+      "name": "star 376",
+      "kind": "path",
+      "artboardId": "nocturne-board",
+      "parentId": null,
+      "order": 8,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        376,
+        315
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e8ce9b",
+        "skin": null,
+        "points": [
+          {
+            "id": "nocturne-star-376-contour-0-point-0",
+            "anchor": [
+              3,
+              0
+            ],
+            "in": [
+              3,
+              0
+            ],
+            "out": [
+              3,
+              0
+            ]
+          },
+          {
+            "id": "nocturne-star-376-contour-0-point-1",
+            "anchor": [
+              3.636396103067893,
+              2.363603896932107
+            ],
+            "in": [
+              3.636396103067893,
+              2.363603896932107
+            ],
+            "out": [
+              3.636396103067893,
+              2.363603896932107
+            ]
+          },
+          {
+            "id": "nocturne-star-376-contour-0-point-2",
+            "anchor": [
+              6,
+              3
+            ],
+            "in": [
+              6,
+              3
+            ],
+            "out": [
+              6,
+              3
+            ]
+          },
+          {
+            "id": "nocturne-star-376-contour-0-point-3",
+            "anchor": [
+              3.636396103067893,
+              3.636396103067893
+            ],
+            "in": [
+              3.636396103067893,
+              3.636396103067893
+            ],
+            "out": [
+              3.636396103067893,
+              3.636396103067893
+            ]
+          },
+          {
+            "id": "nocturne-star-376-contour-0-point-4",
+            "anchor": [
+              3,
+              6
+            ],
+            "in": [
+              3,
+              6
+            ],
+            "out": [
+              3,
+              6
+            ]
+          },
+          {
+            "id": "nocturne-star-376-contour-0-point-5",
+            "anchor": [
+              2.363603896932107,
+              3.636396103067893
+            ],
+            "in": [
+              2.363603896932107,
+              3.636396103067893
+            ],
+            "out": [
+              2.363603896932107,
+              3.636396103067893
+            ]
+          },
+          {
+            "id": "nocturne-star-376-contour-0-point-6",
+            "anchor": [
+              0,
+              3.000000000000001
+            ],
+            "in": [
+              0,
+              3.000000000000001
+            ],
+            "out": [
+              0,
+              3.000000000000001
+            ]
+          },
+          {
+            "id": "nocturne-star-376-contour-0-point-7",
+            "anchor": [
+              2.363603896932107,
+              2.363603896932107
+            ],
+            "in": [
+              2.363603896932107,
+              2.363603896932107
+            ],
+            "out": [
+              2.363603896932107,
+              2.363603896932107
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nocturne-branch",
+      "name": "branch",
+      "kind": "path",
+      "artboardId": "nocturne-board",
+      "parentId": null,
+      "order": 9,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": false,
+        "fill": null,
+        "skin": null,
+        "points": [
+          {
+            "id": "nocturne-branch-contour-0-point-0",
+            "anchor": [
+              67,
+              408
+            ],
+            "in": [
+              67,
+              408
+            ],
+            "out": [
+              67,
+              408
+            ]
+          },
+          {
+            "id": "nocturne-branch-contour-0-point-1",
+            "anchor": [
+              227,
+              424
+            ],
+            "in": [
+              155,
+              430
+            ],
+            "out": [
+              316,
+              420
+            ]
+          },
+          {
+            "id": "nocturne-branch-contour-0-point-2",
+            "anchor": [
+              438,
+              397
+            ],
+            "in": [
+              438,
+              397
+            ],
+            "out": [
+              438,
+              397
+            ]
+          }
+        ],
+        "stroke": {
+          "color": "#b58a6b",
+          "width": 12,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "nocturne-owl",
+      "name": "owl",
+      "kind": "group",
+      "artboardId": "nocturne-board",
+      "parentId": null,
+      "order": 10,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        251,
+        280
+      ],
+      "geometry": null
+    },
+    {
+      "id": "nocturne-foot--47",
+      "name": "foot  47",
+      "kind": "path",
+      "artboardId": "nocturne-board",
+      "parentId": "nocturne-owl",
+      "order": 11,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -47,
+        116
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#eac18a",
+        "skin": null,
+        "points": [
+          {
+            "id": "nocturne-foot--47-contour-0-point-0",
+            "anchor": [
+              11.5,
+              0
+            ],
+            "in": [
+              5.148725376945874,
+              0
+            ],
+            "out": [
+              17.851274623054124,
+              0
+            ]
+          },
+          {
+            "id": "nocturne-foot--47-contour-0-point-1",
+            "anchor": [
+              23,
+              11.5
+            ],
+            "in": [
+              23,
+              5.148725376945874
+            ],
+            "out": [
+              23,
+              11.5
+            ]
+          },
+          {
+            "id": "nocturne-foot--47-contour-0-point-2",
+            "anchor": [
+              23,
+              20.5
+            ],
+            "in": [
+              23,
+              20.5
+            ],
+            "out": [
+              23,
+              26.851274623054124
+            ]
+          },
+          {
+            "id": "nocturne-foot--47-contour-0-point-3",
+            "anchor": [
+              11.5,
+              32
+            ],
+            "in": [
+              17.851274623054124,
+              32
+            ],
+            "out": [
+              5.148725376945874,
+              32
+            ]
+          },
+          {
+            "id": "nocturne-foot--47-contour-0-point-4",
+            "anchor": [
+              0,
+              20.5
+            ],
+            "in": [
+              0,
+              26.851274623054124
+            ],
+            "out": [
+              0,
+              20.5
+            ]
+          },
+          {
+            "id": "nocturne-foot--47-contour-0-point-5",
+            "anchor": [
+              0,
+              11.5
+            ],
+            "in": [
+              0,
+              11.5
+            ],
+            "out": [
+              0,
+              5.148725376945874
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nocturne-foot-30",
+      "name": "foot 30",
+      "kind": "path",
+      "artboardId": "nocturne-board",
+      "parentId": "nocturne-owl",
+      "order": 12,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        30,
+        116
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#eac18a",
+        "skin": null,
+        "points": [
+          {
+            "id": "nocturne-foot-30-contour-0-point-0",
+            "anchor": [
+              11.5,
+              0
+            ],
+            "in": [
+              5.148725376945874,
+              0
+            ],
+            "out": [
+              17.851274623054124,
+              0
+            ]
+          },
+          {
+            "id": "nocturne-foot-30-contour-0-point-1",
+            "anchor": [
+              23,
+              11.5
+            ],
+            "in": [
+              23,
+              5.148725376945874
+            ],
+            "out": [
+              23,
+              11.5
+            ]
+          },
+          {
+            "id": "nocturne-foot-30-contour-0-point-2",
+            "anchor": [
+              23,
+              20.5
+            ],
+            "in": [
+              23,
+              20.5
+            ],
+            "out": [
+              23,
+              26.851274623054124
+            ]
+          },
+          {
+            "id": "nocturne-foot-30-contour-0-point-3",
+            "anchor": [
+              11.5,
+              32
+            ],
+            "in": [
+              17.851274623054124,
+              32
+            ],
+            "out": [
+              5.148725376945874,
+              32
+            ]
+          },
+          {
+            "id": "nocturne-foot-30-contour-0-point-4",
+            "anchor": [
+              0,
+              20.5
+            ],
+            "in": [
+              0,
+              26.851274623054124
+            ],
+            "out": [
+              0,
+              20.5
+            ]
+          },
+          {
+            "id": "nocturne-foot-30-contour-0-point-5",
+            "anchor": [
+              0,
+              11.5
+            ],
+            "in": [
+              0,
+              11.5
+            ],
+            "out": [
+              0,
+              5.148725376945874
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nocturne-left-wing",
+      "name": "left wing",
+      "kind": "group",
+      "artboardId": "nocturne-board",
+      "parentId": "nocturne-owl",
+      "order": 13,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -90,
+        0
+      ],
+      "geometry": null
+    },
+    {
+      "id": "nocturne-right-wing",
+      "name": "right wing",
+      "kind": "group",
+      "artboardId": "nocturne-board",
+      "parentId": "nocturne-owl",
+      "order": 14,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        87,
+        0
+      ],
+      "geometry": null
+    },
+    {
+      "id": "nocturne-left-wing-shape",
+      "name": "left wing shape",
+      "kind": "path",
+      "artboardId": "nocturne-board",
+      "parentId": "nocturne-left-wing",
+      "order": 15,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -12,
+        23
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#589d93",
+        "skin": null,
+        "points": [
+          {
+            "id": "nocturne-left-wing-shape-contour-0-point-0",
+            "anchor": [
+              35,
+              0
+            ],
+            "in": [
+              35,
+              -34.2416544876
+            ],
+            "out": [
+              35,
+              34.2416544876
+            ]
+          },
+          {
+            "id": "nocturne-left-wing-shape-contour-0-point-1",
+            "anchor": [
+              0,
+              62
+            ],
+            "in": [
+              19.329966242999998,
+              62
+            ],
+            "out": [
+              -19.329966242999998,
+              62
+            ]
+          },
+          {
+            "id": "nocturne-left-wing-shape-contour-0-point-2",
+            "anchor": [
+              -35,
+              0
+            ],
+            "in": [
+              -35,
+              34.2416544876
+            ],
+            "out": [
+              -35,
+              -34.2416544876
+            ]
+          },
+          {
+            "id": "nocturne-left-wing-shape-contour-0-point-3",
+            "anchor": [
+              0,
+              -62
+            ],
+            "in": [
+              -19.329966242999998,
+              -62
+            ],
+            "out": [
+              19.329966242999998,
+              -62
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nocturne-right-wing-shape",
+      "name": "right wing shape",
+      "kind": "path",
+      "artboardId": "nocturne-board",
+      "parentId": "nocturne-right-wing",
+      "order": 16,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        12,
+        23
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#589d93",
+        "skin": null,
+        "points": [
+          {
+            "id": "nocturne-right-wing-shape-contour-0-point-0",
+            "anchor": [
+              35,
+              0
+            ],
+            "in": [
+              35,
+              -34.2416544876
+            ],
+            "out": [
+              35,
+              34.2416544876
+            ]
+          },
+          {
+            "id": "nocturne-right-wing-shape-contour-0-point-1",
+            "anchor": [
+              0,
+              62
+            ],
+            "in": [
+              19.329966242999998,
+              62
+            ],
+            "out": [
+              -19.329966242999998,
+              62
+            ]
+          },
+          {
+            "id": "nocturne-right-wing-shape-contour-0-point-2",
+            "anchor": [
+              -35,
+              0
+            ],
+            "in": [
+              -35,
+              34.2416544876
+            ],
+            "out": [
+              -35,
+              -34.2416544876
+            ]
+          },
+          {
+            "id": "nocturne-right-wing-shape-contour-0-point-3",
+            "anchor": [
+              0,
+              -62
+            ],
+            "in": [
+              -19.329966242999998,
+              -62
+            ],
+            "out": [
+              19.329966242999998,
+              -62
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nocturne-eye-light",
+      "name": "eye light",
+      "kind": "path",
+      "artboardId": "nocturne-board",
+      "parentId": "nocturne-owl",
+      "order": 17,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -80,
+        -76
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f5e8c9",
+        "skin": null,
+        "points": [
+          {
+            "id": "nocturne-eye-light-contour-0-point-0",
+            "anchor": [
+              35,
+              0
+            ],
+            "in": [
+              15.670033755922226,
+              0
+            ],
+            "out": [
+              35,
+              0
+            ]
+          },
+          {
+            "id": "nocturne-eye-light-contour-0-point-1",
+            "anchor": [
+              125,
+              0
+            ],
+            "in": [
+              125,
+              0
+            ],
+            "out": [
+              144.32996624407778,
+              0
+            ]
+          },
+          {
+            "id": "nocturne-eye-light-contour-0-point-2",
+            "anchor": [
+              160,
+              35
+            ],
+            "in": [
+              160,
+              15.670033755922226
+            ],
+            "out": [
+              160,
+              35
+            ]
+          },
+          {
+            "id": "nocturne-eye-light-contour-0-point-3",
+            "anchor": [
+              160,
+              55
+            ],
+            "in": [
+              160,
+              55
+            ],
+            "out": [
+              160,
+              74.32996624407778
+            ]
+          },
+          {
+            "id": "nocturne-eye-light-contour-0-point-4",
+            "anchor": [
+              125,
+              90
+            ],
+            "in": [
+              144.32996624407778,
+              90
+            ],
+            "out": [
+              125,
+              90
+            ]
+          },
+          {
+            "id": "nocturne-eye-light-contour-0-point-5",
+            "anchor": [
+              35,
+              90
+            ],
+            "in": [
+              35,
+              90
+            ],
+            "out": [
+              15.670033755922226,
+              90
+            ]
+          },
+          {
+            "id": "nocturne-eye-light-contour-0-point-6",
+            "anchor": [
+              0,
+              55
+            ],
+            "in": [
+              0,
+              74.32996624407778
+            ],
+            "out": [
+              0,
+              55
+            ]
+          },
+          {
+            "id": "nocturne-eye-light-contour-0-point-7",
+            "anchor": [
+              0,
+              35
+            ],
+            "in": [
+              0,
+              35
+            ],
+            "out": [
+              0,
+              15.670033755922226
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nocturne-owl-body",
+      "name": "owl body",
+      "kind": "path",
+      "artboardId": "nocturne-board",
+      "parentId": "nocturne-owl",
+      "order": 18,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -109,
+        -120
+      ],
+      "geometry": {
+        "closed": true,
+        "points": [
+          {
+            "id": "nocturne-owl-body-contour-0-point-0",
+            "anchor": [
+              80,
+              0
+            ],
+            "in": [
+              74.02815763048913,
+              0
+            ],
+            "out": [
+              80,
+              0
+            ]
+          },
+          {
+            "id": "nocturne-owl-body-contour-0-point-1",
+            "anchor": [
+              138,
+              0
+            ],
+            "in": [
+              138,
+              0
+            ],
+            "out": [
+              143.64793975997986,
+              0
+            ]
+          },
+          {
+            "id": "nocturne-owl-body-contour-0-point-2",
+            "anchor": [
+              154.47637587043326,
+              1.6985060990216887
+            ],
+            "in": [
+              149.159179350667,
+              0.5852830002165827
+            ],
+            "out": [
+              154.47637587043326,
+              1.6985060990216887
+            ]
+          },
+          {
+            "id": "nocturne-owl-body-contour-0-point-3",
+            "anchor": [
+              172.5,
+              -39
+            ],
+            "in": [
+              172.5,
+              -39
+            ],
+            "out": [
+              172.5,
+              -39
+            ]
+          },
+          {
+            "id": "nocturne-owl-body-contour-0-point-4",
+            "anchor": [
+              208.17624165666635,
+              41.55925535376279
+            ],
+            "in": [
+              208.17624165666635,
+              41.55925535376279
+            ],
+            "out": [
+              210.33810919656628,
+              45.49751652853472
+            ]
+          },
+          {
+            "id": "nocturne-owl-body-contour-0-point-5",
+            "anchor": [
+              213.66081922380607,
+              53.94378534407825
+            ],
+            "in": [
+              212.1781064322704,
+              49.63749790529744
+            ],
+            "out": [
+              213.66081922380607,
+              53.94378534407825
+            ]
+          },
+          {
+            "id": "nocturne-owl-body-contour-0-point-6",
+            "anchor": [
+              219,
+              66
+            ],
+            "in": [
+              219,
+              66
+            ],
+            "out": [
+              219,
+              66
+            ]
+          },
+          {
+            "id": "nocturne-owl-body-contour-0-point-7",
+            "anchor": [
+              216.77913237217558,
+              66
+            ],
+            "in": [
+              216.77913237217558,
+              66
+            ],
+            "out": [
+              217.58148635594347,
+              70.54580203132944
+            ]
+          },
+          {
+            "id": "nocturne-owl-body-contour-0-point-8",
+            "anchor": [
+              218,
+              80
+            ],
+            "in": [
+              218,
+              75.22402646611118
+            ],
+            "out": [
+              218,
+              80
+            ]
+          },
+          {
+            "id": "nocturne-owl-body-contour-0-point-9",
+            "anchor": [
+              218,
+              175
+            ],
+            "in": [
+              218,
+              175
+            ],
+            "out": [
+              218,
+              219.1827799864635
+            ]
+          },
+          {
+            "id": "nocturne-owl-body-contour-0-point-10",
+            "anchor": [
+              138,
+              255
+            ],
+            "in": [
+              182.1827799864635,
+              255
+            ],
+            "out": [
+              138,
+              255
+            ]
+          },
+          {
+            "id": "nocturne-owl-body-contour-0-point-11",
+            "anchor": [
+              80,
+              255
+            ],
+            "in": [
+              80,
+              255
+            ],
+            "out": [
+              35.81722001353651,
+              255
+            ]
+          },
+          {
+            "id": "nocturne-owl-body-contour-0-point-12",
+            "anchor": [
+              0,
+              175
+            ],
+            "in": [
+              0,
+              219.1827799864635
+            ],
+            "out": [
+              0,
+              175
+            ]
+          },
+          {
+            "id": "nocturne-owl-body-contour-0-point-13",
+            "anchor": [
+              0,
+              80
+            ],
+            "in": [
+              0,
+              80
+            ],
+            "out": [
+              0,
+              75.22402646611118
+            ]
+          },
+          {
+            "id": "nocturne-owl-body-contour-0-point-14",
+            "anchor": [
+              1.2208676278243993,
+              66
+            ],
+            "in": [
+              0.41851364405653246,
+              70.54580203132944
+            ],
+            "out": [
+              1.2208676278243993,
+              66
+            ]
+          },
+          {
+            "id": "nocturne-owl-body-contour-0-point-15",
+            "anchor": [
+              -2,
+              66
+            ],
+            "in": [
+              -2,
+              66
+            ],
+            "out": [
+              -2,
+              66
+            ]
+          },
+          {
+            "id": "nocturne-owl-body-contour-0-point-16",
+            "anchor": [
+              44.5,
+              -39
+            ],
+            "in": [
+              44.5,
+              -39
+            ],
+            "out": [
+              44.5,
+              -39
+            ]
+          },
+          {
+            "id": "nocturne-owl-body-contour-0-point-17",
+            "anchor": [
+              62.61074486422948,
+              1.8952303385826237
+            ],
+            "in": [
+              62.61074486422948,
+              1.8952303385826237
+            ],
+            "out": [
+              68.20914420486653,
+              0.6543384932266403
+            ]
+          }
+        ],
+        "contours": [
+          {
+            "closed": true,
+            "points": [
+              {
+                "id": "nocturne-owl-body-contour-1-point-0",
+                "anchor": [
+                  63.5,
+                  43
+                ],
+                "in": [
+                  81.44925436950079,
+                  43
+                ],
+                "out": [
+                  45.55074563049921,
+                  43
+                ]
+              },
+              {
+                "id": "nocturne-owl-body-contour-1-point-1",
+                "anchor": [
+                  31,
+                  75.5
+                ],
+                "in": [
+                  31,
+                  57.55074563049921
+                ],
+                "out": [
+                  31,
+                  93.44925436950079
+                ]
+              },
+              {
+                "id": "nocturne-owl-body-contour-1-point-2",
+                "anchor": [
+                  63.5,
+                  108
+                ],
+                "in": [
+                  45.55074563049921,
+                  108
+                ],
+                "out": [
+                  81.44925436950079,
+                  108
+                ]
+              },
+              {
+                "id": "nocturne-owl-body-contour-1-point-3",
+                "anchor": [
+                  96,
+                  75.5
+                ],
+                "in": [
+                  96,
+                  93.44925436950079
+                ],
+                "out": [
+                  96,
+                  57.55074563049921
+                ]
+              }
+            ]
+          },
+          {
+            "closed": true,
+            "points": [
+              {
+                "id": "nocturne-owl-body-contour-2-point-0",
+                "anchor": [
+                  154.5,
+                  43
+                ],
+                "in": [
+                  172.4492543695008,
+                  43
+                ],
+                "out": [
+                  136.5507456304992,
+                  43
+                ]
+              },
+              {
+                "id": "nocturne-owl-body-contour-2-point-1",
+                "anchor": [
+                  122,
+                  75.5
+                ],
+                "in": [
+                  122,
+                  57.55074563049921
+                ],
+                "out": [
+                  122,
+                  93.44925436950079
+                ]
+              },
+              {
+                "id": "nocturne-owl-body-contour-2-point-2",
+                "anchor": [
+                  154.5,
+                  108
+                ],
+                "in": [
+                  136.5507456304992,
+                  108
+                ],
+                "out": [
+                  172.4492543695008,
+                  108
+                ]
+              },
+              {
+                "id": "nocturne-owl-body-contour-2-point-3",
+                "anchor": [
+                  187,
+                  75.5
+                ],
+                "in": [
+                  187,
+                  93.44925436950079
+                ],
+                "out": [
+                  187,
+                  57.55074563049921
+                ]
+              }
+            ]
+          }
+        ],
+        "fillRule": "nonzero",
+        "fill": "#a5d6bb",
+        "skin": null,
+        "stroke": {
+          "color": "#407a72",
+          "width": 4,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "nocturne-eye--46",
+      "name": "eye  46",
+      "kind": "path",
+      "artboardId": "nocturne-board",
+      "parentId": "nocturne-owl",
+      "order": 23,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -46,
+        -45
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#25494c",
+        "skin": null,
+        "points": [
+          {
+            "id": "nocturne-eye--46-contour-0-point-0",
+            "anchor": [
+              14,
+              0
+            ],
+            "in": [
+              14,
+              -11.045694996
+            ],
+            "out": [
+              14,
+              11.045694996
+            ]
+          },
+          {
+            "id": "nocturne-eye--46-contour-0-point-1",
+            "anchor": [
+              0,
+              20
+            ],
+            "in": [
+              7.731986497199999,
+              20
+            ],
+            "out": [
+              -7.731986497199999,
+              20
+            ]
+          },
+          {
+            "id": "nocturne-eye--46-contour-0-point-2",
+            "anchor": [
+              -14,
+              0
+            ],
+            "in": [
+              -14,
+              11.045694996
+            ],
+            "out": [
+              -14,
+              -11.045694996
+            ]
+          },
+          {
+            "id": "nocturne-eye--46-contour-0-point-3",
+            "anchor": [
+              0,
+              -20
+            ],
+            "in": [
+              -7.731986497199999,
+              -20
+            ],
+            "out": [
+              7.731986497199999,
+              -20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nocturne-shine--46",
+      "name": "shine  46",
+      "kind": "path",
+      "artboardId": "nocturne-board",
+      "parentId": "nocturne-owl",
+      "order": 24,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -50,
+        -52
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#ffffff",
+        "skin": null,
+        "points": [
+          {
+            "id": "nocturne-shine--46-contour-0-point-0",
+            "anchor": [
+              4,
+              0
+            ],
+            "in": [
+              4,
+              -3.3137084987999996
+            ],
+            "out": [
+              4,
+              3.3137084987999996
+            ]
+          },
+          {
+            "id": "nocturne-shine--46-contour-0-point-1",
+            "anchor": [
+              0,
+              6
+            ],
+            "in": [
+              2.2091389992,
+              6
+            ],
+            "out": [
+              -2.2091389992,
+              6
+            ]
+          },
+          {
+            "id": "nocturne-shine--46-contour-0-point-2",
+            "anchor": [
+              -4,
+              0
+            ],
+            "in": [
+              -4,
+              3.3137084987999996
+            ],
+            "out": [
+              -4,
+              -3.3137084987999996
+            ]
+          },
+          {
+            "id": "nocturne-shine--46-contour-0-point-3",
+            "anchor": [
+              0,
+              -6
+            ],
+            "in": [
+              -2.2091389992,
+              -6
+            ],
+            "out": [
+              2.2091389992,
+              -6
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nocturne-cheek--46",
+      "name": "cheek  46",
+      "kind": "path",
+      "artboardId": "nocturne-board",
+      "parentId": "nocturne-owl",
+      "order": 25,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -66.7,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#d6a78f",
+        "skin": null,
+        "points": [
+          {
+            "id": "nocturne-cheek--46-contour-0-point-0",
+            "anchor": [
+              18,
+              0
+            ],
+            "in": [
+              18,
+              -4.9705627482
+            ],
+            "out": [
+              18,
+              4.9705627482
+            ]
+          },
+          {
+            "id": "nocturne-cheek--46-contour-0-point-1",
+            "anchor": [
+              0,
+              9
+            ],
+            "in": [
+              9.9411254964,
+              9
+            ],
+            "out": [
+              -9.9411254964,
+              9
+            ]
+          },
+          {
+            "id": "nocturne-cheek--46-contour-0-point-2",
+            "anchor": [
+              -18,
+              0
+            ],
+            "in": [
+              -18,
+              4.9705627482
+            ],
+            "out": [
+              -18,
+              -4.9705627482
+            ]
+          },
+          {
+            "id": "nocturne-cheek--46-contour-0-point-3",
+            "anchor": [
+              0,
+              -9
+            ],
+            "in": [
+              -9.9411254964,
+              -9
+            ],
+            "out": [
+              9.9411254964,
+              -9
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nocturne-eye-46",
+      "name": "eye 46",
+      "kind": "path",
+      "artboardId": "nocturne-board",
+      "parentId": "nocturne-owl",
+      "order": 26,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        46,
+        -45
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#25494c",
+        "skin": null,
+        "points": [
+          {
+            "id": "nocturne-eye-46-contour-0-point-0",
+            "anchor": [
+              14,
+              0
+            ],
+            "in": [
+              14,
+              -11.045694996
+            ],
+            "out": [
+              14,
+              11.045694996
+            ]
+          },
+          {
+            "id": "nocturne-eye-46-contour-0-point-1",
+            "anchor": [
+              0,
+              20
+            ],
+            "in": [
+              7.731986497199999,
+              20
+            ],
+            "out": [
+              -7.731986497199999,
+              20
+            ]
+          },
+          {
+            "id": "nocturne-eye-46-contour-0-point-2",
+            "anchor": [
+              -14,
+              0
+            ],
+            "in": [
+              -14,
+              11.045694996
+            ],
+            "out": [
+              -14,
+              -11.045694996
+            ]
+          },
+          {
+            "id": "nocturne-eye-46-contour-0-point-3",
+            "anchor": [
+              0,
+              -20
+            ],
+            "in": [
+              -7.731986497199999,
+              -20
+            ],
+            "out": [
+              7.731986497199999,
+              -20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nocturne-shine-46",
+      "name": "shine 46",
+      "kind": "path",
+      "artboardId": "nocturne-board",
+      "parentId": "nocturne-owl",
+      "order": 27,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        42,
+        -52
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#ffffff",
+        "skin": null,
+        "points": [
+          {
+            "id": "nocturne-shine-46-contour-0-point-0",
+            "anchor": [
+              4,
+              0
+            ],
+            "in": [
+              4,
+              -3.3137084987999996
+            ],
+            "out": [
+              4,
+              3.3137084987999996
+            ]
+          },
+          {
+            "id": "nocturne-shine-46-contour-0-point-1",
+            "anchor": [
+              0,
+              6
+            ],
+            "in": [
+              2.2091389992,
+              6
+            ],
+            "out": [
+              -2.2091389992,
+              6
+            ]
+          },
+          {
+            "id": "nocturne-shine-46-contour-0-point-2",
+            "anchor": [
+              -4,
+              0
+            ],
+            "in": [
+              -4,
+              3.3137084987999996
+            ],
+            "out": [
+              -4,
+              -3.3137084987999996
+            ]
+          },
+          {
+            "id": "nocturne-shine-46-contour-0-point-3",
+            "anchor": [
+              0,
+              -6
+            ],
+            "in": [
+              -2.2091389992,
+              -6
+            ],
+            "out": [
+              2.2091389992,
+              -6
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nocturne-cheek-46",
+      "name": "cheek 46",
+      "kind": "path",
+      "artboardId": "nocturne-board",
+      "parentId": "nocturne-owl",
+      "order": 28,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        66.7,
+        0
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#d6a78f",
+        "skin": null,
+        "points": [
+          {
+            "id": "nocturne-cheek-46-contour-0-point-0",
+            "anchor": [
+              18,
+              0
+            ],
+            "in": [
+              18,
+              -4.9705627482
+            ],
+            "out": [
+              18,
+              4.9705627482
+            ]
+          },
+          {
+            "id": "nocturne-cheek-46-contour-0-point-1",
+            "anchor": [
+              0,
+              9
+            ],
+            "in": [
+              9.9411254964,
+              9
+            ],
+            "out": [
+              -9.9411254964,
+              9
+            ]
+          },
+          {
+            "id": "nocturne-cheek-46-contour-0-point-2",
+            "anchor": [
+              -18,
+              0
+            ],
+            "in": [
+              -18,
+              4.9705627482
+            ],
+            "out": [
+              -18,
+              -4.9705627482
+            ]
+          },
+          {
+            "id": "nocturne-cheek-46-contour-0-point-3",
+            "anchor": [
+              0,
+              -9
+            ],
+            "in": [
+              -9.9411254964,
+              -9
+            ],
+            "out": [
+              9.9411254964,
+              -9
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nocturne-beak",
+      "name": "beak",
+      "kind": "path",
+      "artboardId": "nocturne-board",
+      "parentId": "nocturne-owl",
+      "order": 29,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -12,
+        -20
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#edbd75",
+        "skin": null,
+        "points": [
+          {
+            "id": "nocturne-beak-contour-0-point-0",
+            "anchor": [
+              12,
+              0
+            ],
+            "in": [
+              12,
+              0
+            ],
+            "out": [
+              12,
+              0
+            ]
+          },
+          {
+            "id": "nocturne-beak-contour-0-point-1",
+            "anchor": [
+              24,
+              14.5
+            ],
+            "in": [
+              24,
+              14.5
+            ],
+            "out": [
+              24,
+              14.5
+            ]
+          },
+          {
+            "id": "nocturne-beak-contour-0-point-2",
+            "anchor": [
+              12,
+              29
+            ],
+            "in": [
+              12,
+              29
+            ],
+            "out": [
+              12,
+              29
+            ]
+          },
+          {
+            "id": "nocturne-beak-contour-0-point-3",
+            "anchor": [
+              0,
+              14.5
+            ],
+            "in": [
+              0,
+              14.5
+            ],
+            "out": [
+              0,
+              14.5
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nocturne-belly-mark-0",
+      "name": "belly mark 0",
+      "kind": "path",
+      "artboardId": "nocturne-board",
+      "parentId": "nocturne-owl",
+      "order": 30,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -34,
+        57
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#78b7a4",
+        "skin": null,
+        "points": [
+          {
+            "id": "nocturne-belly-mark-0-contour-0-point-0",
+            "anchor": [
+              6,
+              0
+            ],
+            "in": [
+              2.686291501015239,
+              0
+            ],
+            "out": [
+              9.313708498984761,
+              0
+            ]
+          },
+          {
+            "id": "nocturne-belly-mark-0-contour-0-point-1",
+            "anchor": [
+              12,
+              6
+            ],
+            "in": [
+              12,
+              2.686291501015239
+            ],
+            "out": [
+              12,
+              6
+            ]
+          },
+          {
+            "id": "nocturne-belly-mark-0-contour-0-point-2",
+            "anchor": [
+              12,
+              23
+            ],
+            "in": [
+              12,
+              23
+            ],
+            "out": [
+              12,
+              26.31370849898476
+            ]
+          },
+          {
+            "id": "nocturne-belly-mark-0-contour-0-point-3",
+            "anchor": [
+              6,
+              29
+            ],
+            "in": [
+              9.313708498984761,
+              29
+            ],
+            "out": [
+              2.686291501015239,
+              29
+            ]
+          },
+          {
+            "id": "nocturne-belly-mark-0-contour-0-point-4",
+            "anchor": [
+              0,
+              23
+            ],
+            "in": [
+              0,
+              26.31370849898476
+            ],
+            "out": [
+              0,
+              23
+            ]
+          },
+          {
+            "id": "nocturne-belly-mark-0-contour-0-point-5",
+            "anchor": [
+              0,
+              6
+            ],
+            "in": [
+              0,
+              6
+            ],
+            "out": [
+              0,
+              2.686291501015239
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nocturne-belly-mark-1",
+      "name": "belly mark 1",
+      "kind": "path",
+      "artboardId": "nocturne-board",
+      "parentId": "nocturne-owl",
+      "order": 31,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -7,
+        57
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#78b7a4",
+        "skin": null,
+        "points": [
+          {
+            "id": "nocturne-belly-mark-1-contour-0-point-0",
+            "anchor": [
+              6,
+              0
+            ],
+            "in": [
+              2.686291501015239,
+              0
+            ],
+            "out": [
+              9.313708498984761,
+              0
+            ]
+          },
+          {
+            "id": "nocturne-belly-mark-1-contour-0-point-1",
+            "anchor": [
+              12,
+              6
+            ],
+            "in": [
+              12,
+              2.686291501015239
+            ],
+            "out": [
+              12,
+              6
+            ]
+          },
+          {
+            "id": "nocturne-belly-mark-1-contour-0-point-2",
+            "anchor": [
+              12,
+              23
+            ],
+            "in": [
+              12,
+              23
+            ],
+            "out": [
+              12,
+              26.31370849898476
+            ]
+          },
+          {
+            "id": "nocturne-belly-mark-1-contour-0-point-3",
+            "anchor": [
+              6,
+              29
+            ],
+            "in": [
+              9.313708498984761,
+              29
+            ],
+            "out": [
+              2.686291501015239,
+              29
+            ]
+          },
+          {
+            "id": "nocturne-belly-mark-1-contour-0-point-4",
+            "anchor": [
+              0,
+              23
+            ],
+            "in": [
+              0,
+              26.31370849898476
+            ],
+            "out": [
+              0,
+              23
+            ]
+          },
+          {
+            "id": "nocturne-belly-mark-1-contour-0-point-5",
+            "anchor": [
+              0,
+              6
+            ],
+            "in": [
+              0,
+              6
+            ],
+            "out": [
+              0,
+              2.686291501015239
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nocturne-belly-mark-2",
+      "name": "belly mark 2",
+      "kind": "path",
+      "artboardId": "nocturne-board",
+      "parentId": "nocturne-owl",
+      "order": 32,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        20,
+        57
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#78b7a4",
+        "skin": null,
+        "points": [
+          {
+            "id": "nocturne-belly-mark-2-contour-0-point-0",
+            "anchor": [
+              6,
+              0
+            ],
+            "in": [
+              2.686291501015239,
+              0
+            ],
+            "out": [
+              9.313708498984761,
+              0
+            ]
+          },
+          {
+            "id": "nocturne-belly-mark-2-contour-0-point-1",
+            "anchor": [
+              12,
+              6
+            ],
+            "in": [
+              12,
+              2.686291501015239
+            ],
+            "out": [
+              12,
+              6
+            ]
+          },
+          {
+            "id": "nocturne-belly-mark-2-contour-0-point-2",
+            "anchor": [
+              12,
+              23
+            ],
+            "in": [
+              12,
+              23
+            ],
+            "out": [
+              12,
+              26.31370849898476
+            ]
+          },
+          {
+            "id": "nocturne-belly-mark-2-contour-0-point-3",
+            "anchor": [
+              6,
+              29
+            ],
+            "in": [
+              9.313708498984761,
+              29
+            ],
+            "out": [
+              2.686291501015239,
+              29
+            ]
+          },
+          {
+            "id": "nocturne-belly-mark-2-contour-0-point-4",
+            "anchor": [
+              0,
+              23
+            ],
+            "in": [
+              0,
+              26.31370849898476
+            ],
+            "out": [
+              0,
+              23
+            ]
+          },
+          {
+            "id": "nocturne-belly-mark-2-contour-0-point-5",
+            "anchor": [
+              0,
+              6
+            ],
+            "in": [
+              0,
+              6
+            ],
+            "out": [
+              0,
+              2.686291501015239
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [
+    {
+      "id": "nocturne-night-watch",
+      "name": "Night watch",
+      "artboardId": "nocturne-board",
+      "fps": 60,
+      "duration": 120,
+      "loop": true,
+      "tracks": [
+        {
+          "targetId": "nocturne-owl",
+          "property": "y",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 280,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 273,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 280,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "nocturne-left-wing",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": -0.03,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 0.06,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": -0.03,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "nocturne-right-wing",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0.03,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": -0.06,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0.03,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "nocturne-board": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  },
+  "advanced": {
+    "clips": [],
+    "feathers": [],
+    "ik": []
+  }
+}

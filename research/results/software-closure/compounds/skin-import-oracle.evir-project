@@ -1,0 +1,437 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 3,
+  "id": "project-75fb5c4b-a553-4725-a7f4-98fc9ed93f77",
+  "name": "Imported Rive scene",
+  "artboards": [
+    {
+      "id": "artboard-5a51b033-1e1e-4f6c-8b74-b52cc955abd4",
+      "name": "Artboard 1",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+      "name": "Bone",
+      "kind": "bone",
+      "artboardId": "artboard-5a51b033-1e1e-4f6c-8b74-b52cc955abd4",
+      "parentId": null,
+      "order": 1,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "length": 80
+      }
+    },
+    {
+      "id": "node-5400fa6b-93e1-4801-894a-71c12b6e2073",
+      "name": "Circle",
+      "kind": "path",
+      "artboardId": "artboard-5a51b033-1e1e-4f6c-8b74-b52cc955abd4",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        70,
+        70
+      ],
+      "geometry": {
+        "fill": "#89cdb7ff",
+        "closed": true,
+        "skin": {
+          "bindWorld": [
+            1,
+            0,
+            0,
+            1,
+            70,
+            70
+          ],
+          "bones": [
+            {
+              "boneId": "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+              "bind": [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0
+              ]
+            }
+          ],
+          "weights": [
+            {
+              "pointId": "point-8eb86d41-9c42-4f36-9888-66a3240878f9",
+              "anchor": [
+                [
+                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  1
+                ]
+              ],
+              "in": [
+                [
+                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  1
+                ]
+              ],
+              "out": [
+                [
+                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  1
+                ]
+              ]
+            },
+            {
+              "pointId": "point-33a67631-188c-42d0-9cec-d14bd7b76743",
+              "anchor": [
+                [
+                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  1
+                ]
+              ],
+              "in": [
+                [
+                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  1
+                ]
+              ],
+              "out": [
+                [
+                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  1
+                ]
+              ]
+            },
+            {
+              "pointId": "point-248ab595-8e21-4f7e-a005-b7d9f781af19",
+              "anchor": [
+                [
+                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  1
+                ]
+              ],
+              "in": [
+                [
+                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  1
+                ]
+              ],
+              "out": [
+                [
+                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  1
+                ]
+              ]
+            },
+            {
+              "pointId": "point-b304f543-0615-40b1-a0de-35480daecfa9",
+              "anchor": [
+                [
+                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  1
+                ]
+              ],
+              "in": [
+                [
+                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  1
+                ]
+              ],
+              "out": [
+                [
+                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  1
+                ]
+              ]
+            },
+            {
+              "pointId": "point-815f053a-e61d-4473-96ee-7840f4680879",
+              "anchor": [
+                [
+                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  1
+                ]
+              ],
+              "in": [
+                [
+                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  1
+                ]
+              ],
+              "out": [
+                [
+                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  1
+                ]
+              ]
+            },
+            {
+              "pointId": "point-6fa4759b-ded7-4115-a920-3edbf3fa5b85",
+              "anchor": [
+                [
+                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  1
+                ]
+              ],
+              "in": [
+                [
+                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  1
+                ]
+              ],
+              "out": [
+                [
+                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  1
+                ]
+              ]
+            },
+            {
+              "pointId": "point-307ce46a-c1db-4a68-bf69-fb8218fe1a29",
+              "anchor": [
+                [
+                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  1
+                ]
+              ],
+              "in": [
+                [
+                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  1
+                ]
+              ],
+              "out": [
+                [
+                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  1
+                ]
+              ]
+            },
+            {
+              "pointId": "point-100bee63-63f7-471a-a834-7ac2eb5c26c4",
+              "anchor": [
+                [
+                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  1
+                ]
+              ],
+              "in": [
+                [
+                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  1
+                ]
+              ],
+              "out": [
+                [
+                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  1
+                ]
+              ]
+            }
+          ]
+        },
+        "points": [
+          {
+            "id": "point-8eb86d41-9c42-4f36-9888-66a3240878f9",
+            "anchor": [
+              300,
+              150
+            ],
+            "in": [
+              299.9999963788299,
+              67.15728759765634
+            ],
+            "out": [
+              299.9999963788299,
+              232.84271240234366
+            ]
+          },
+          {
+            "id": "point-33a67631-188c-42d0-9cec-d14bd7b76743",
+            "anchor": [
+              150,
+              300
+            ],
+            "in": [
+              232.84271240234375,
+              300
+            ],
+            "out": [
+              67.15728759765656,
+              299.99999275765975
+            ]
+          },
+          {
+            "id": "point-248ab595-8e21-4f7e-a005-b7d9f781af19",
+            "anchor": [
+              0,
+              150
+            ],
+            "in": [
+              -0.0000036211701106309717,
+              232.84271240234366
+            ],
+            "out": [
+              -0.0000036211701106309717,
+              67.15728759765634
+            ]
+          },
+          {
+            "id": "point-b304f543-0615-40b1-a0de-35480daecfa9",
+            "anchor": [
+              150,
+              0
+            ],
+            "in": [
+              67.15728759765656,
+              -0.0000072423402212619375
+            ],
+            "out": [
+              232.84271240234375,
+              0
+            ]
+          }
+        ],
+        "contours": [
+          {
+            "closed": true,
+            "points": [
+              {
+                "id": "point-815f053a-e61d-4473-96ee-7840f4680879",
+                "anchor": [
+                  150,
+                  80
+                ],
+                "in": [
+                  188.65993118286133,
+                  80
+                ],
+                "out": [
+                  111.34006881713881,
+                  79.99999662024135
+                ]
+              },
+              {
+                "id": "point-6fa4759b-ded7-4115-a920-3edbf3fa5b85",
+                "anchor": [
+                  80,
+                  150
+                ],
+                "in": [
+                  79.99999831012067,
+                  111.3400688171387
+                ],
+                "out": [
+                  79.99999831012067,
+                  188.6599311828613
+                ]
+              },
+              {
+                "id": "point-307ce46a-c1db-4a68-bf69-fb8218fe1a29",
+                "anchor": [
+                  150,
+                  220
+                ],
+                "in": [
+                  111.34006881713881,
+                  219.99999662024135
+                ],
+                "out": [
+                  188.65993118286133,
+                  220
+                ]
+              },
+              {
+                "id": "point-100bee63-63f7-471a-a834-7ac2eb5c26c4",
+                "anchor": [
+                  220,
+                  150
+                ],
+                "in": [
+                  219.99999831012067,
+                  188.6599311828613
+                ],
+                "out": [
+                  219.99999831012067,
+                  111.3400688171387
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [
+    {
+      "id": "animation-911fa58d-30d4-4d9b-beed-952c068524bd",
+      "name": "Animation 1",
+      "artboardId": "artboard-5a51b033-1e1e-4f6c-8b74-b52cc955abd4",
+      "fps": 60,
+      "duration": 120,
+      "loop": true,
+      "tracks": [
+        {
+          "targetId": "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+          "property": "x",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 60,
+              "value": 50,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "artboard-5a51b033-1e1e-4f6c-8b74-b52cc955abd4": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  },
+  "advanced": {
+    "clips": [],
+    "feathers": [],
+    "ik": []
+  }
+}

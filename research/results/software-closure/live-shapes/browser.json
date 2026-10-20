@@ -1,0 +1,71 @@
+{
+  "checkedAt": "2026-10-20T10:42:04.943Z",
+  "scope": "Cloud automation only; no physical or human evidence.",
+  "viewports": [
+    {
+      "width": 320,
+      "height": 844,
+      "checks": [
+        "persistent live source controls",
+        "point-count regeneration",
+        "stable IDs for fixed topology",
+        "runtime omits shape controls",
+        "zero automated WCAG violations",
+        "free-path conversion and point edit",
+        "one-step undo/redo",
+        "exact native export",
+        "durable recovery",
+        "no overflow"
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "checks": [
+        "persistent live source controls",
+        "point-count regeneration",
+        "stable IDs for fixed topology",
+        "runtime omits shape controls",
+        "zero automated WCAG violations",
+        "free-path conversion and point edit",
+        "one-step undo/redo",
+        "exact native export",
+        "durable recovery",
+        "no overflow"
+      ]
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "checks": [
+        "persistent live source controls",
+        "point-count regeneration",
+        "stable IDs for fixed topology",
+        "runtime omits shape controls",
+        "zero automated WCAG violations",
+        "free-path conversion and point edit",
+        "one-step undo/redo",
+        "exact native export",
+        "durable recovery",
+        "no overflow"
+      ]
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "checks": [
+        "persistent live source controls",
+        "point-count regeneration",
+        "stable IDs for fixed topology",
+        "runtime omits shape controls",
+        "zero automated WCAG violations",
+        "free-path conversion and point edit",
+        "one-step undo/redo",
+        "exact native export",
+        "durable recovery",
+        "no overflow"
+      ]
+    }
+  ],
+  "browser": "153.0.8010.12"
+}

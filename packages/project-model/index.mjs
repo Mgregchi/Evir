@@ -17,6 +17,8 @@ export { defaultStroke, strokeProperties, strokeValue, STROKE_CAPS, STROKE_JOINS
 import { validatePaint } from "./paint.mjs";
 export { validatePaint, MAX_GRADIENT_STOPS } from "./paint.mjs";
 import { validateFeatures } from "./features.mjs";
+import {validateShape} from './shapes.mjs';
+export {SHAPES,shapeGeometry,canonicalShape,shapeOptionKeys} from './shapes.mjs';
 import { ProjectError, newId as id } from "./primitives.mjs";
 export {
   ProjectError,
@@ -182,7 +184,7 @@ function validateDocument(p, runtime) {
     )
       problem(`${path}.transform`, "expected six finite affine values");
     if (n.kind === "rectangle") {
-      if (record(n.geometry, `${path}.geometry`, ["width", "height", "fill", ...(Object.hasOwn(n.geometry ?? {}, "stroke") ? ["stroke"] : [])])) {
+      if (record(n.geometry, `${path}.geometry`, ["width", "height", "fill", ...(["stroke","shape"].filter(k=>Object.hasOwn(n.geometry ?? {},k)))])) {
         positive(n.geometry.width, `${path}.geometry.width`);
         positive(n.geometry.height, `${path}.geometry.height`);
         if (sceneVersion === 1 && typeof n.geometry.fill !== "string")
@@ -207,6 +209,7 @@ function validateDocument(p, runtime) {
       )
     )
       problem(`${path}.kind`, "unsupported node type");
+    if(n.geometry?.shape!==undefined){if(runtime)problem(path,"shape controls belong in editable source only");if(!p.advanced)problem(path,"shape controls require advanced source");validateShape(n,problem);}
     const chain = new Set([n.id]);
     let parent = nodes.get(n.parentId);
     while (parent) {
@@ -310,6 +313,7 @@ export function toRuntimeProject(project) {
   scene.schemaVersion = project.schemaVersion === 3 ? 2 : 1;
   scene.animations ??= [];
   scene.machines ??= [];
+  for(const n of scene.nodes)if(n.geometry)delete n.geometry.shape;
   for (const machine of scene.machines)
     machine.states = machine.states.map(({ position, ...state }) => state);
   return validateRuntimeProject(scene);

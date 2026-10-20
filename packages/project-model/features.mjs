@@ -89,7 +89,7 @@ export function validateFeatures(
         );
     }
     if (n.kind !== "path") continue;
-    if (!rec(g, path + ".geometry", ["closed", "fill", "points", "skin", ...['stroke','contours','fillRule'].filter(k=>Object.hasOwn(g ?? {},k))]))
+    if (!rec(g, path + ".geometry", ["closed", "fill", "points", "skin", ...['stroke','contours','fillRule','shape'].filter(k=>Object.hasOwn(g ?? {},k))]))
       continue;
     if(g.fillRule!==undefined && !['nonzero','evenodd'].includes(g.fillRule))problem(path,'expected nonzero or evenodd fill rule');
     if(g.contours!==undefined && (!Array.isArray(g.contours)||g.contours.length>255)) {problem(path,'at most 255 additional contours');continue;}

@@ -1,3 +1,4 @@
+import {smoothConnection} from './smooth-connection.mjs';
 import { inverse, multiply, validateProject, worldTransform } from '@evir/project-model';
 import { mapPoint } from '@evir/runtime/geometry';
 
@@ -11,6 +12,7 @@ function editable(p,n) {
     if(p.editor.locked.includes(v.id)) throw Error('Unlock both paths and their parents before joining.');
     if(p.editor.hidden.includes(v.id)) throw Error('Show both paths and their parents before joining.');
   }
+  if(n.geometry.shape)throw Error('Convert live shapes to free paths before joining.');
   if(n.geometry.closed) throw Error('Open both paths before joining their endpoints.');
   if(n.geometry.contours?.length)throw Error('Release compound contours before joining separate paths.');
   if(n.geometry.skin) throw Error('Unbind both paths before joining. New topology needs new skin weights.');
@@ -35,7 +37,7 @@ function paints(a,b,m) {
 // Pure plan: validation finishes before the caller's project is changed.
 export function planPathJoin(p,keepId,otherId,{keepEnd='last',otherEnd='first',mode='bridge'}={}) {
   if(keepId===otherId) throw Error('Choose a different path to join.');
-  if(!['first','last'].includes(keepEnd)||!['first','last'].includes(otherEnd)||!['bridge','merge'].includes(mode))
+  if(!['first','last'].includes(keepEnd)||!['first','last'].includes(otherEnd)||!['bridge','merge','smooth'].includes(mode))
     throw Error('Choose First or Last endpoints and a connection method.');
   const keep=p.nodes.find(n=>n.id===keepId),other=p.nodes.find(n=>n.id===otherId);
   editable(p,keep);editable(p,other);
@@ -66,6 +68,7 @@ export function planPathJoin(p,keepId,otherId,{keepEnd='last',otherEnd='first',m
   const gap=Math.hypot(from[0]-to[0],from[1]-to[1]);
   if(!Number.isFinite(gap)||matrix.some(x=>!Number.isFinite(x)))throw Error('Joined world coordinates must remain finite.');
   if(mode==='bridge') {end.out=[...end.anchor];start.in=[...start.anchor];}
+  else if(mode==='smooth')smoothConnection(end,start);
   else {end.out=start.out.map((v,i)=>v+end.anchor[i]-start.anchor[i]);b.shift();}
   let points=[...a,...b];if(keepEnd==='first')points=reverse(points);
   if(points.some(v=>['anchor','in','out'].some(k=>v[k].some(x=>!Number.isFinite(x)||Math.abs(x)>1e6))))

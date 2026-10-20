@@ -33,3 +33,5 @@ Wisp’s organic outlines are generated sampled loops fitted with Studio’s fre
 Pocket garden is original MIT vector artwork generated with Evir’s own shape factory; its poster is an actual Canvas capture. `first-bounce.*` is the exact completed beginner lesson. `learn-shapes.png` and `learn-bounce.png` are actual Studio screenshots produced by `tests/editor/shapes-browser.cjs`; no external artwork or supplied brand alteration is involved.
 
 `lumen-poster.png` is an actual Canvas capture of the original Lumen firefly. The editable source and `.riv` in `examples/lumen.*` contain 48 named vector/group nodes, sparse Rest/Joy/Courage timelines and an ordered direct state. The artwork is MIT project work from `../direct-scene.mjs`; no supplied reference imagery or changed brand artwork is embedded.
+
+`nocturne-poster.png` is an actual Evir Canvas capture of the original Nocturne owl. `compound-scene.mjs` creates curved body/ear unions, real eye cutouts and a subtracted crescent, with separate wing/group motion. Editable source, compatible export and starting shapes are supplied under the project MIT license; no external artwork or changed brand image is included.

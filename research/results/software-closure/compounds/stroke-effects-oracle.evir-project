@@ -1,0 +1,202 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 3,
+  "id": "compound-stroke-effects",
+  "name": "stroke-effects",
+  "artboards": [
+    {
+      "id": "artboard-58018055-ab10-4e0a-a81f-1fa5476b58af",
+      "name": "Artboard 1",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "node-f4b226c9-3f9a-4324-910f-d704758e3a3f",
+      "name": "Circle",
+      "kind": "path",
+      "artboardId": "artboard-58018055-ab10-4e0a-a81f-1fa5476b58af",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        70,
+        70
+      ],
+      "geometry": {
+        "closed": true,
+        "points": [
+          {
+            "id": "point-1df265d6-29e3-49cc-9909-3d059b569324",
+            "anchor": [
+              300,
+              150
+            ],
+            "in": [
+              300,
+              67.15728752538097
+            ],
+            "out": [
+              300,
+              232.84271247461902
+            ]
+          },
+          {
+            "id": "point-d9a53b32-04f6-4b44-988a-de69ca08d04b",
+            "anchor": [
+              150,
+              300
+            ],
+            "in": [
+              232.84271247461902,
+              300
+            ],
+            "out": [
+              67.15728752538097,
+              300
+            ]
+          },
+          {
+            "id": "point-b6c4c261-3857-4848-99ca-3c83015d882c",
+            "anchor": [
+              0,
+              150
+            ],
+            "in": [
+              0,
+              232.84271247461902
+            ],
+            "out": [
+              0,
+              67.15728752538097
+            ]
+          },
+          {
+            "id": "point-3504d838-43c7-4fe3-bc95-e50ae9e83f1c",
+            "anchor": [
+              150,
+              0
+            ],
+            "in": [
+              67.15728752538097,
+              0
+            ],
+            "out": [
+              232.84271247461902,
+              0
+            ]
+          }
+        ],
+        "contours": [
+          {
+            "closed": true,
+            "points": [
+              {
+                "id": "point-1daca3a1-2789-4649-af27-69fa05e6fd93",
+                "anchor": [
+                  150,
+                  80
+                ],
+                "in": [
+                  188.65993248815556,
+                  80
+                ],
+                "out": [
+                  111.34006751184445,
+                  80
+                ]
+              },
+              {
+                "id": "point-b4211f58-bb4f-4d3a-9dbc-6d2902c22d4d",
+                "anchor": [
+                  80,
+                  150
+                ],
+                "in": [
+                  80,
+                  111.34006751184445
+                ],
+                "out": [
+                  80,
+                  188.65993248815556
+                ]
+              },
+              {
+                "id": "point-f06bfd33-5a8f-49a0-9735-439a1986ef2c",
+                "anchor": [
+                  150,
+                  220
+                ],
+                "in": [
+                  111.34006751184445,
+                  220
+                ],
+                "out": [
+                  188.65993248815556,
+                  220
+                ]
+              },
+              {
+                "id": "point-ccd8115a-3e35-403e-8a81-3ad794f3fdad",
+                "anchor": [
+                  220,
+                  150
+                ],
+                "in": [
+                  220,
+                  188.65993248815556
+                ],
+                "out": [
+                  220,
+                  111.34006751184445
+                ]
+              }
+            ]
+          }
+        ],
+        "fillRule": "nonzero",
+        "fill": "#89cdb7",
+        "skin": null,
+        "stroke": {
+          "color": "#244a3e",
+          "width": 7,
+          "cap": "round",
+          "join": "round",
+          "dash": [
+            14,
+            9
+          ],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0.1,
+            "end": 0.8,
+            "offset": 0.04
+          }
+        }
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "artboard-58018055-ab10-4e0a-a81f-1fa5476b58af": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  },
+  "advanced": {
+    "clips": [],
+    "feathers": [],
+    "ik": []
+  }
+}

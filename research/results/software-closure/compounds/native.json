@@ -1,0 +1,622 @@
+{
+  "checkedAt": "2026-10-20T10:34:36.064Z",
+  "runtimeVersion": "2.44.0",
+  "scope": "Cloud Chromium/software rendering, not physical-device performance or human accessibility evidence.",
+  "method": "Compound curves, nonzero/evenodd holes, strokes/effects, clipping and shared skin bindings, plus independently encoded native compound import against official Canvas/WebGL2 pixels.",
+  "thresholds": {
+    "mae": 2.5,
+    "coverageDifference": 350,
+    "minimumCoverage": 50
+  },
+  "fixtures": [
+    {
+      "name": "union",
+      "sourceSha256": "8327a5626d96b4fb086123abdce9cb31e54eb5519603f685a2df3f5a8c76796c",
+      "rivSha256": "8479d650b5659017408367dd8b6f3c618ced07f53d00a3d6acf505c84e26875f"
+    },
+    {
+      "name": "subtract",
+      "sourceSha256": "e9411189788371f77819935ec96acff163d98752ad3b6b53177e69f7edffe741",
+      "rivSha256": "f178d8119fa1a2e37036d54383afb09c2f501eb6a3751f70cb96d3c628b337b7"
+    },
+    {
+      "name": "intersect",
+      "sourceSha256": "cd2fa3c966e9fc3c818468e7704fc9ee2027fbc31c3be1ccafebf2458e79a5da",
+      "rivSha256": "b3d2235071c75bb10f3c610898833cf1e5f6041c5c14981f2bf3c5b31ecd7ac3"
+    },
+    {
+      "name": "exclude",
+      "sourceSha256": "9c8f83d0534a87f2687425e8daf6674788fee22e0ab83f8b1d351368ee1dd29b",
+      "rivSha256": "897a38181f287c2f1eb941182a15c6ab453bf5c5399ae232b538ffe810aa569e"
+    },
+    {
+      "name": "nonzero",
+      "sourceSha256": "b3c5164ff9263fd7d14883c88ecb1f23aa93899d7f6fb0ce18b9822f4445c0ad",
+      "rivSha256": "c26c9f5d27f2100846afd94ff9bd54e310bded30684c034c842ee3d04774d7aa"
+    },
+    {
+      "name": "evenodd",
+      "sourceSha256": "1e65a38674be7a6dc0298c5066180e1d9ab78f7820e0514abc626f0deacfe246",
+      "rivSha256": "fb25d8689c070b7b28726db7dede191ca00a25de472e943a38eacf6786844951"
+    },
+    {
+      "name": "stroke",
+      "sourceSha256": "3bd1bfe0a91fed614b104ad21eb63c5fab6c345846cd3ec22bc378eb790fb308",
+      "rivSha256": "a2495d34b162e602e10c7364d66728a5cffdbf26dd343abc860606a1937ada04"
+    },
+    {
+      "name": "stroke-effects",
+      "sourceSha256": "7f1dda06b5e5ba3e240a222b699a81a9bec61e470cfbadd69503234e84092db8",
+      "rivSha256": "80d3ccb6b5600eb59a37b4a2cfcf5c78ce2c65ed78cb3592d42bcb17fcf52326"
+    },
+    {
+      "name": "clip-nonzero",
+      "sourceSha256": "abe5a3bb1cec5d33f7bcb2a0032c0a140b39026e500a525782a341b4d0e1ba97",
+      "rivSha256": "2566bf77e95021b9f30a733815f8773268a400f9621a1c8ba6beb7f2e0b69887"
+    },
+    {
+      "name": "clip-evenodd",
+      "sourceSha256": "2b9bdf511f24d2b91925d4559d4164bd54fc88e61ecf20832a38e8c04fdad4c7",
+      "rivSha256": "9c9d87e135c757c4aa268d888eaadaf86c1c5eac8696bcb5f7ce068fb3f7135a"
+    },
+    {
+      "name": "skin",
+      "sourceSha256": "7be155517ae73fe5a3391c3467cd5b370cc03b210bc3c696bd95fe8b8f356b7b",
+      "rivSha256": "1d923fa5ce6c42e6c6060333f5a5bf56e23c0bb0829d51b4981c8fa90b976946"
+    },
+    {
+      "name": "skin-import",
+      "sourceSha256": "328c70167182525815d1bcd3d7413d3c80ff12545d5eee0da93eccfc62f70a55",
+      "rivSha256": "1d923fa5ce6c42e6c6060333f5a5bf56e23c0bb0829d51b4981c8fa90b976946"
+    },
+    {
+      "name": "native-evenodd",
+      "sourceSha256": "5fc0ac66afdb49bdaca30e2006e6d0d25a95df45b80981534a407794d594f39b",
+      "rivSha256": "fa18ba24a5a639766d666ea88feac5e6dc319e91aa33560bab408f9f9babb1ab"
+    },
+    {
+      "name": "native-evenodd-reexport",
+      "sourceSha256": "5fc0ac66afdb49bdaca30e2006e6d0d25a95df45b80981534a407794d594f39b",
+      "rivSha256": "5940625f8578fdbbfb85883af2c649edcdde423192cb23610b058c23e00e8a51"
+    },
+    {
+      "name": "nocturne",
+      "sourceSha256": "b402f49a7fc5b395b12e4356a5d6db54ce30f2bd95e86ccaae8b16f7ecbf1955",
+      "rivSha256": "6972a0ef98134433866dff40e89d707bbc651d67ad608e7e1be91c2a4616fd7d"
+    },
+    {
+      "name": "studio-compound",
+      "sourceSha256": "424b92b8d6aca55255a0e86afe049857cb7b683d48bf6c7cb184f02a02ff078f",
+      "rivSha256": "6f57be0a8e5c92f44b16d9b4af5cacd0040e1e662442f4a8d8b68f5b6556a030"
+    }
+  ],
+  "backends": [
+    {
+      "backend": "canvas",
+      "checks": [
+        {
+          "scene": "union",
+          "frame": null,
+          "mae": 0,
+          "covered": 18646,
+          "expectedCovered": 18646
+        },
+        {
+          "scene": "subtract",
+          "frame": null,
+          "mae": 0,
+          "covered": 14837,
+          "expectedCovered": 14837
+        },
+        {
+          "scene": "intersect",
+          "frame": null,
+          "mae": 0,
+          "covered": 3191,
+          "expectedCovered": 3191
+        },
+        {
+          "scene": "exclude",
+          "frame": null,
+          "mae": 0,
+          "covered": 15666,
+          "expectedCovered": 15666
+        },
+        {
+          "scene": "nonzero",
+          "frame": null,
+          "mae": 0,
+          "covered": 17887,
+          "expectedCovered": 17887
+        },
+        {
+          "scene": "evenodd",
+          "frame": null,
+          "mae": 0,
+          "covered": 14172,
+          "expectedCovered": 14172
+        },
+        {
+          "scene": "stroke",
+          "frame": null,
+          "mae": 0.0005645751953125,
+          "covered": 15445,
+          "expectedCovered": 15445
+        },
+        {
+          "scene": "stroke-effects",
+          "frame": null,
+          "mae": 0.13334274291992188,
+          "covered": 14958,
+          "expectedCovered": 14941
+        },
+        {
+          "scene": "clip-nonzero",
+          "frame": null,
+          "mae": 0,
+          "covered": 17865,
+          "expectedCovered": 17865
+        },
+        {
+          "scene": "clip-evenodd",
+          "frame": null,
+          "mae": 0,
+          "covered": 14140,
+          "expectedCovered": 14140
+        },
+        {
+          "scene": "skin",
+          "frame": 0,
+          "mae": 0,
+          "covered": 14172,
+          "expectedCovered": 14172
+        },
+        {
+          "scene": "skin",
+          "frame": 30,
+          "mae": 0,
+          "covered": 14187,
+          "expectedCovered": 14187
+        },
+        {
+          "scene": "skin",
+          "frame": 60,
+          "mae": 0,
+          "covered": 14172,
+          "expectedCovered": 14172
+        },
+        {
+          "scene": "skin",
+          "frame": 90,
+          "mae": 0,
+          "covered": 14187,
+          "expectedCovered": 14187
+        },
+        {
+          "scene": "skin",
+          "frame": 120,
+          "mae": 0,
+          "covered": 14172,
+          "expectedCovered": 14172
+        },
+        {
+          "scene": "skin-import",
+          "frame": 0,
+          "mae": 0,
+          "covered": 14172,
+          "expectedCovered": 14172
+        },
+        {
+          "scene": "skin-import",
+          "frame": 30,
+          "mae": 0,
+          "covered": 14187,
+          "expectedCovered": 14187
+        },
+        {
+          "scene": "skin-import",
+          "frame": 60,
+          "mae": 0,
+          "covered": 14172,
+          "expectedCovered": 14172
+        },
+        {
+          "scene": "skin-import",
+          "frame": 90,
+          "mae": 0,
+          "covered": 14187,
+          "expectedCovered": 14187
+        },
+        {
+          "scene": "skin-import",
+          "frame": 120,
+          "mae": 0,
+          "covered": 14172,
+          "expectedCovered": 14172
+        },
+        {
+          "scene": "native-evenodd",
+          "frame": null,
+          "mae": 0,
+          "covered": 32400,
+          "expectedCovered": 32400
+        },
+        {
+          "scene": "native-evenodd-reexport",
+          "frame": null,
+          "mae": 0,
+          "covered": 32400,
+          "expectedCovered": 32400
+        },
+        {
+          "scene": "nocturne",
+          "frame": 0,
+          "mae": 0.10580825805664062,
+          "covered": 49810,
+          "expectedCovered": 49815
+        },
+        {
+          "scene": "nocturne",
+          "frame": 30,
+          "mae": 0.10571670532226562,
+          "covered": 49810,
+          "expectedCovered": 49815
+        },
+        {
+          "scene": "nocturne",
+          "frame": 60,
+          "mae": 0.10569000244140625,
+          "covered": 49810,
+          "expectedCovered": 49815
+        },
+        {
+          "scene": "nocturne",
+          "frame": 90,
+          "mae": 0.10571670532226562,
+          "covered": 49810,
+          "expectedCovered": 49815
+        },
+        {
+          "scene": "nocturne",
+          "frame": 120,
+          "mae": 0.10580825805664062,
+          "covered": 49810,
+          "expectedCovered": 49815
+        },
+        {
+          "scene": "studio-compound",
+          "frame": null,
+          "mae": 0,
+          "covered": 8762,
+          "expectedCovered": 8762
+        }
+      ],
+      "graphics": {
+        "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+        "contexts": [
+          {
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "unmaskedRendererAvailable": true,
+            "contextLost": false,
+            "errors": [],
+            "extensions": [
+              "EXT_clip_control",
+              "EXT_color_buffer_float",
+              "EXT_color_buffer_half_float",
+              "EXT_conservative_depth",
+              "EXT_depth_clamp",
+              "EXT_float_blend",
+              "EXT_polygon_offset_clamp",
+              "EXT_texture_compression_bptc",
+              "EXT_texture_compression_rgtc",
+              "EXT_texture_filter_anisotropic",
+              "EXT_texture_mirror_clamp_to_edge",
+              "NV_shader_noperspective_interpolation",
+              "OES_draw_buffers_indexed",
+              "OES_sample_variables",
+              "OES_shader_multisample_interpolation",
+              "OES_texture_float_linear",
+              "OVR_multiview2",
+              "WEBGL_clip_cull_distance",
+              "WEBGL_compressed_texture_astc",
+              "WEBGL_compressed_texture_etc",
+              "WEBGL_compressed_texture_etc1",
+              "WEBGL_compressed_texture_s3tc",
+              "WEBGL_compressed_texture_s3tc_srgb",
+              "WEBGL_debug_renderer_info",
+              "WEBGL_debug_shaders",
+              "WEBGL_lose_context",
+              "WEBGL_multi_draw",
+              "WEBGL_polygon_mode",
+              "WEBGL_stencil_texturing"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "backend": "webgl2",
+      "checks": [
+        {
+          "scene": "union",
+          "frame": null,
+          "mae": 0.28910064697265625,
+          "covered": 18540,
+          "expectedCovered": 18646
+        },
+        {
+          "scene": "subtract",
+          "frame": null,
+          "mae": 0.28377532958984375,
+          "covered": 14746,
+          "expectedCovered": 14837
+        },
+        {
+          "scene": "intersect",
+          "frame": null,
+          "mae": 0.13151168823242188,
+          "covered": 3142,
+          "expectedCovered": 3191
+        },
+        {
+          "scene": "exclude",
+          "frame": null,
+          "mae": 0.35703277587890625,
+          "covered": 15550,
+          "expectedCovered": 15666
+        },
+        {
+          "scene": "nonzero",
+          "frame": null,
+          "mae": 0.27123260498046875,
+          "covered": 17788,
+          "expectedCovered": 17887
+        },
+        {
+          "scene": "evenodd",
+          "frame": null,
+          "mae": 0.3519248962402344,
+          "covered": 14064,
+          "expectedCovered": 14172
+        },
+        {
+          "scene": "stroke",
+          "frame": null,
+          "mae": 0.36446380615234375,
+          "covered": 15250,
+          "expectedCovered": 15445
+        },
+        {
+          "scene": "stroke-effects",
+          "frame": null,
+          "mae": 0.3273658752441406,
+          "covered": 14824,
+          "expectedCovered": 14941
+        },
+        {
+          "scene": "clip-nonzero",
+          "frame": null,
+          "mae": 0.20363235473632812,
+          "covered": 17788,
+          "expectedCovered": 17865
+        },
+        {
+          "scene": "clip-evenodd",
+          "frame": null,
+          "mae": 0.2731819152832031,
+          "covered": 14064,
+          "expectedCovered": 14140
+        },
+        {
+          "scene": "skin",
+          "frame": 0,
+          "mae": 0.3519248962402344,
+          "covered": 14064,
+          "expectedCovered": 14172
+        },
+        {
+          "scene": "skin",
+          "frame": 30,
+          "mae": 0.449432373046875,
+          "covered": 14025,
+          "expectedCovered": 14187
+        },
+        {
+          "scene": "skin",
+          "frame": 60,
+          "mae": 0.3519248962402344,
+          "covered": 14064,
+          "expectedCovered": 14172
+        },
+        {
+          "scene": "skin",
+          "frame": 90,
+          "mae": 0.449432373046875,
+          "covered": 14025,
+          "expectedCovered": 14187
+        },
+        {
+          "scene": "skin",
+          "frame": 120,
+          "mae": 0.3519248962402344,
+          "covered": 14064,
+          "expectedCovered": 14172
+        },
+        {
+          "scene": "skin-import",
+          "frame": 0,
+          "mae": 0.3519248962402344,
+          "covered": 14064,
+          "expectedCovered": 14172
+        },
+        {
+          "scene": "skin-import",
+          "frame": 30,
+          "mae": 0.449432373046875,
+          "covered": 14025,
+          "expectedCovered": 14187
+        },
+        {
+          "scene": "skin-import",
+          "frame": 60,
+          "mae": 0.3519248962402344,
+          "covered": 14064,
+          "expectedCovered": 14172
+        },
+        {
+          "scene": "skin-import",
+          "frame": 90,
+          "mae": 0.449432373046875,
+          "covered": 14025,
+          "expectedCovered": 14187
+        },
+        {
+          "scene": "skin-import",
+          "frame": 120,
+          "mae": 0.3519248962402344,
+          "covered": 14064,
+          "expectedCovered": 14172
+        },
+        {
+          "scene": "native-evenodd",
+          "frame": null,
+          "mae": 0,
+          "covered": 32400,
+          "expectedCovered": 32400
+        },
+        {
+          "scene": "native-evenodd-reexport",
+          "frame": null,
+          "mae": 0,
+          "covered": 32400,
+          "expectedCovered": 32400
+        },
+        {
+          "scene": "nocturne",
+          "frame": 0,
+          "mae": 0.4682350158691406,
+          "covered": 49784,
+          "expectedCovered": 49815
+        },
+        {
+          "scene": "nocturne",
+          "frame": 30,
+          "mae": 0.4773826599121094,
+          "covered": 49784,
+          "expectedCovered": 49815
+        },
+        {
+          "scene": "nocturne",
+          "frame": 60,
+          "mae": 0.4842185974121094,
+          "covered": 49784,
+          "expectedCovered": 49815
+        },
+        {
+          "scene": "nocturne",
+          "frame": 90,
+          "mae": 0.4773826599121094,
+          "covered": 49784,
+          "expectedCovered": 49815
+        },
+        {
+          "scene": "nocturne",
+          "frame": 120,
+          "mae": 0.4682350158691406,
+          "covered": 49784,
+          "expectedCovered": 49815
+        },
+        {
+          "scene": "studio-compound",
+          "frame": null,
+          "mae": 0.3040428161621094,
+          "covered": 8671,
+          "expectedCovered": 8762
+        }
+      ],
+      "graphics": {
+        "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+        "contexts": [
+          {
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "unmaskedRendererAvailable": true,
+            "contextLost": false,
+            "errors": [],
+            "extensions": [
+              "EXT_clip_control",
+              "EXT_color_buffer_float",
+              "EXT_color_buffer_half_float",
+              "EXT_conservative_depth",
+              "EXT_depth_clamp",
+              "EXT_float_blend",
+              "EXT_polygon_offset_clamp",
+              "EXT_texture_compression_bptc",
+              "EXT_texture_compression_rgtc",
+              "EXT_texture_filter_anisotropic",
+              "EXT_texture_mirror_clamp_to_edge",
+              "NV_shader_noperspective_interpolation",
+              "OES_draw_buffers_indexed",
+              "OES_sample_variables",
+              "OES_shader_multisample_interpolation",
+              "OES_texture_float_linear",
+              "OVR_multiview2",
+              "WEBGL_clip_cull_distance",
+              "WEBGL_compressed_texture_astc",
+              "WEBGL_compressed_texture_etc",
+              "WEBGL_compressed_texture_etc1",
+              "WEBGL_compressed_texture_s3tc",
+              "WEBGL_compressed_texture_s3tc_srgb",
+              "WEBGL_debug_renderer_info",
+              "WEBGL_debug_shaders",
+              "WEBGL_lose_context",
+              "WEBGL_multi_draw",
+              "WEBGL_polygon_mode",
+              "WEBGL_stencil_texturing"
+            ]
+          },
+          {
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "unmaskedRendererAvailable": true,
+            "contextLost": false,
+            "errors": [],
+            "extensions": [
+              "EXT_clip_control",
+              "EXT_color_buffer_float",
+              "EXT_color_buffer_half_float",
+              "EXT_conservative_depth",
+              "EXT_depth_clamp",
+              "EXT_float_blend",
+              "EXT_polygon_offset_clamp",
+              "EXT_texture_compression_bptc",
+              "EXT_texture_compression_rgtc",
+              "EXT_texture_filter_anisotropic",
+              "EXT_texture_mirror_clamp_to_edge",
+              "NV_shader_noperspective_interpolation",
+              "OES_draw_buffers_indexed",
+              "OES_sample_variables",
+              "OES_shader_multisample_interpolation",
+              "OES_texture_float_linear",
+              "OVR_multiview2",
+              "WEBGL_clip_cull_distance",
+              "WEBGL_compressed_texture_astc",
+              "WEBGL_compressed_texture_etc",
+              "WEBGL_compressed_texture_etc1",
+              "WEBGL_compressed_texture_s3tc",
+              "WEBGL_compressed_texture_s3tc_srgb",
+              "WEBGL_debug_renderer_info",
+              "WEBGL_debug_shaders",
+              "WEBGL_lose_context",
+              "WEBGL_multi_draw",
+              "WEBGL_polygon_mode",
+              "WEBGL_stencil_texturing"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "browser": "153.0.8010.12"
+}

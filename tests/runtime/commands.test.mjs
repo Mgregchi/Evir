@@ -72,3 +72,13 @@ test('playback, static reparent and a command-created machine retain validated s
   assert.equal(h.s.execute(request(h.s,'input',{machineId:'lesson-machine',inputId:'Enabled',value:false})).error.code,'MISSING_TARGET');
   const source=h.s.snapshot();assert.equal(h.s.execute(request(h.s,'patch',{commands:[{op:'set_playback',animationId:'compass-turn',playback:{mode:'loop',iterations:0,speed:0}}]})).ok,false);assert.deepEqual(h.s.snapshot(),source);
 });
+
+test('Agent shape controls and compound commands retain atomic history, scoped IDs and lock guards',()=>{
+ const h=setup(),patch=commands=>h.s.execute(request(h.s,'patch',{commands}));
+ let result=patch([{op:'create_shape',nodeId:'outer',preset:'circle',options:{width:180,parametric:true}},{op:'create_shape',nodeId:'inner',preset:'circle',options:{width:80,parametric:true}}]);assert(result.ok,JSON.stringify(result));assert.deepEqual(result.changedIds,['outer','inner']);assert.equal(h.history.revision,1);assert.equal(h.s.snapshot().schemaVersion,3);
+ result=patch([{op:'set_shape_parameters',nodeId:'outer',changes:{width:240}},{op:'set_shape_parameters',nodeId:'inner',changes:{width:90}}]);assert(result.ok);assert.equal(h.s.snapshot().nodes[0].geometry.shape.options.width,240);h.history.undo();assert.equal(h.s.snapshot().nodes[0].geometry.shape.options.width,180);h.history.redo();
+ const before=h.s.snapshot();assert.equal(patch([{op:'set_shape_parameters',nodeId:'outer',changes:{width:200}},{op:'set_shape_parameters',nodeId:'inner',changes:{width:-1}}]).ok,false);assert.deepEqual(h.s.snapshot(),before);
+ assert(patch([{op:'combine_paths',nodeIds:['outer','inner'],fillRule:'evenodd'}]).ok);assert.equal(h.s.snapshot().nodes.length,1);assert.equal(h.s.snapshot().nodes[0].geometry.contours.length,1);assert.equal(h.s.snapshot().nodes[0].geometry.shape,undefined);result=patch([{op:'release_compound',nodeId:'outer'}]);assert(result.ok);assert.equal(result.changedIds.length,2);assert.equal(h.s.snapshot().nodes.length,2);h.history.undo();assert.equal(h.s.snapshot().nodes.length,1);
+ h.history.undo();assert(patch([{op:'detach_shape',nodeId:'outer'}]).ok);assert.equal(h.s.snapshot().nodes[0].geometry.shape,undefined);h.history.transact('Lock inner',p=>p.editor.locked.push('inner'));assert.equal(patch([{op:'set_shape_parameters',nodeId:'inner',changes:{width:50}}]).error.code,'LOCKED');
+ const safe=h.s.snapshot();assert.equal(patch([{op:'create_shape',nodeId:'outer',preset:'star',options:{parametric:true}}]).ok,false);assert.deepEqual(h.s.snapshot(),safe);assert.equal(patch([{op:'create_shape',nodeId:'outside',preset:'circle',options:{parentId:'other-artboard'}}]).ok,false);assert.deepEqual(h.s.snapshot(),safe);
+});

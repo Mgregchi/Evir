@@ -1,3 +1,4 @@
+import {shapeParameterControls} from './shapes.mjs';
 import { machineControls, sheet } from "./advanced.mjs";
 import { neighborKey } from "./key-navigation.mjs";
 import { graphViewBox, stateViewBox } from "./graph-navigation.mjs";
@@ -341,6 +342,7 @@ export function mountAuthoring(api) {
   }
   function editGeometry(p, n, host) {
     if (mode !== "Design") return;
+    if(n.geometry?.shape){host.append(shapeParameterControls(p,n,{commit:transaction,notice:api.notice}));return;}
     if (n.kind === "rectangle")
       host.append(
         button("Convert to path", () =>
@@ -1514,7 +1516,7 @@ export function mountAuthoring(api) {
       }
     },
     hitControl(p, n, world, zoom) {
-      if (!vertices || mode !== "Design" || n?.kind !== "path") return null;
+      if (!vertices || mode !== "Design" || n?.kind !== "path" || n.geometry.shape) return null;
       for (const v of worldPoints(p, n))
         for (const key of ["anchor", "in", "out"])
           if (Math.hypot(v[key][0] - world.x, v[key][1] - world.y) < 8 / zoom) {
@@ -1549,7 +1551,7 @@ export function mountAuthoring(api) {
           ctx.fill();
         }
       }
-      if (!vertices || n?.kind !== "path" || mode !== "Design") return;
+      if (!vertices || n?.kind !== "path" || mode !== "Design" || n.geometry.shape) return;
       for (const v of worldPoints(p, n)) {
         ctx.strokeStyle = "#4d7b94";
         ctx.lineWidth = 1 / zoom;
