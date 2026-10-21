@@ -6,6 +6,6 @@ Advanced 2D contracts, source/runtime versions, asset preparation/disposal, auth
 
 Playback modes/counts/speed, independent timeline layers, the Sunday motorcycle and native export policy are documented in [playback and motorcycle contracts](../../docs/32-animation-playback-and-motorcycle.md).
 
-Native centered solid strokes now retain their centerlines through source/runtime validation, Canvas rendering, supported animation and `.riv` export/import. Studio provides a stroke bottom sheet and constant-width Freehand mode. See [native stroke contracts, workflow and limits](../../docs/41-native-strokes-and-path-effects.md); gradient/skinned strokes and full Editor-file import remain outside this increment.
+Compound paths, gradient/skinned centerline strokes and one-to-eight-bone unit-scale IK extend the supported playback subset. See [the current contracts and native comparisons](../../docs/47-software-closure.md). Automatic weights and influence locks are authoring operations; editor locks stay out of runtime snapshots. Full Editor-file import remains outside the declared subset.
 
 Ordered direct states retain keyed property values between explicit advance calls, while pose reads are idempotent and forks/reset remain independent. See [direct blend contracts and Lumen](../../docs/45-direct-blends-and-lumen.md).

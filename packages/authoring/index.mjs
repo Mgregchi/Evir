@@ -215,6 +215,7 @@ export function removeSubtree(p, nodeId) {
     );
   }
   p.nodes = p.nodes.filter((n) => !removed.has(n.id));
+  if(p.editor.weightLocks){p.editor.weightLocks=p.editor.weightLocks.filter(l=>!removed.has(l.nodeId));if(!p.editor.weightLocks.length)delete p.editor.weightLocks;}
   for (const k of ["locked", "hidden"])
     p.editor[k] = p.editor[k].filter((v) => !removed.has(v));
 }
@@ -263,6 +264,11 @@ export class History {
   }
   committed() {
     return copy(this.#project);
+  }
+  // Read-only tools can share the deeply frozen committed version. Existing
+  // snapshot/committed APIs keep returning detached, editable copies.
+  readCommitted() {
+    return this.#project;
   }
   begin(label) {
     if (this.active)
@@ -380,6 +386,7 @@ export function removePoint(p, nodeId, pointId) {
   const points=g.points.filter(v=>v.id!==pointId);g.points.splice(0,g.points.length,...points);
   if (geometry.skin)
     geometry.skin.weights = geometry.skin.weights.filter((w) => w.pointId !== pointId);
+  if(p.editor.weightLocks){p.editor.weightLocks=p.editor.weightLocks.filter(l=>l.nodeId!==nodeId||l.pointId!==pointId);if(!p.editor.weightLocks.length)delete p.editor.weightLocks;}
 }
 export function bindPath(p, nodeId, boneIds) {
   if(p.nodes.find(n=>n.id===nodeId)?.kind!=="path")throw Error("Select a path");
@@ -478,3 +485,7 @@ export function createMachine(p, artboardId) {
 export {prepareCompound,commitCompound,combinePaths,releaseCompound,COMPOUND_OPERATIONS} from './compound.mjs';
 
 export {smoothConnection} from './smooth-connection.mjs';
+
+export {unbindSkin} from './skin.mjs';
+
+export {setSkinLocks,autoSkinWeights,smoothSkinWeights} from './skin-editing.mjs';

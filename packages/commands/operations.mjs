@@ -1,7 +1,7 @@
-import {removeSubtree,reparent,setKey,addShape,setShapeParameters,detachShape,combinePaths,releaseCompound,joinPaths,bindSkin,setSkinWeights} from '@evir/authoring';
+import {removeSubtree,reparent,setKey,addShape,setShapeParameters,detachShape,combinePaths,releaseCompound,joinPaths,bindSkin,setSkinWeights,setSkinLocks,autoSkinWeights,smoothSkinWeights} from '@evir/authoring';
 import {upgradeAdvanced} from '@evir/project-model';
 import {object,fail,text,integer} from './validation.mjs';
-export const commandNames=['create_node','update_node','remove_node','reparent_node','create_animation','set_key','set_playback','create_machine','create_shape','set_shape_parameters','detach_shape','combine_paths','release_compound','join_paths','set_ik','bind_skin','set_skin_weights'];
+export const commandNames=['create_node','update_node','remove_node','reparent_node','create_animation','set_key','set_playback','create_machine','create_shape','set_shape_parameters','detach_shape','combine_paths','release_compound','join_paths','set_ik','bind_skin','set_skin_weights','set_skin_locks','auto_skin_weights','smooth_skin_weights'];
 function node(p,id,board){const n=p.nodes.find(n=>n.id===id&&n.artboardId===board);if(!n)fail('MISSING_TARGET','Node is outside this artboard or absent');return n;}
 function writable(p,n){for(let v=n;v;v=p.nodes.find(n=>n.id===v.parentId))if(p.editor.locked.includes(v.id))fail('LOCKED','A target or ancestor is locked');}
 export function applyCommands(p,commands,board){
@@ -65,6 +65,10 @@ export function applyCommands(p,commands,board){
       requireShape(['nodeId','boneIds']);writable(p,node(p,c.nodeId,board));if(!Array.isArray(c.boneIds))fail('INVALID_ARGUMENT','Choose bone IDs');for(const id of c.boneIds)node(p,id,board);bindSkin(p,c.nodeId,c.boneIds);changed.add(c.nodeId);
     }else if(c.op==='set_skin_weights'){
       requireShape(['nodeId','changes']);writable(p,node(p,c.nodeId,board));if(!Array.isArray(c.changes))fail('INVALID_ARGUMENT','Choose control assignments');for(const change of c.changes)object(change,['pointId','control','boneId','value']);setSkinWeights(p,c.nodeId,c.changes);changed.add(c.nodeId);
+    }else if(c.op==='set_skin_locks'){
+      requireShape(['nodeId','changes']);writable(p,node(p,c.nodeId,board));if(!Array.isArray(c.changes))fail('INVALID_ARGUMENT','Choose lock assignments');for(const change of c.changes)object(change,['pointId','control','boneId','locked']);setSkinLocks(p,c.nodeId,c.changes);changed.add(c.nodeId);
+    }else if(c.op==='auto_skin_weights'||c.op==='smooth_skin_weights'){
+      requireShape(['nodeId','options']);writable(p,node(p,c.nodeId,board));const automatic=c.op==='auto_skin_weights';object(c.options,[],[...(automatic?['blend','influences']:['strength','iterations']),'pointIds','control']);(automatic?autoSkinWeights:smoothSkinWeights)(p,c.nodeId,c.options);changed.add(c.nodeId);
     }else fail('UNSUPPORTED_COMMAND',`Unsupported command ${c.op}`);
   }
   return [...changed];

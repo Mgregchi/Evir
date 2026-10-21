@@ -19,7 +19,8 @@ export class WeightBrush {
   if(!['all','anchor','in','out'].includes(control)||![target,strength].every(v=>Number.isFinite(v)&&v>=0&&v<=1)||!Number.isFinite(radius)||radius<8||radius>160||!Number.isFinite(zoom)||zoom<.1||zoom>4)throw Error('Review the weight brush settings');
   const count=n.kind==='mesh'?n.geometry.vertices.length:pathPoints(n.geometry).length*(control==='all'?3:1);
   if(count>WEIGHT_BRUSH_LIMIT)throw Error('Brush painting supports at most 4,096 displayed controls; use the numeric vertex editor for this layer');
-  this.controls=weightControls(pose,visible,n.kind==='mesh'?'anchor':control);
+  this.locks=new Map();for(const lock of source.editor?.weightLocks??[])if(lock.nodeId===nodeId){const key=lock.pointId+'/'+lock.control;if(!this.locks.has(key))this.locks.set(key,new Set());this.locks.get(key).add(lock.boneId);}
+  this.controls=weightControls(pose,visible,n.kind==='mesh'?'anchor':control).filter(v=>!this.locks.get(v.pointId+'/'+v.control)?.has(boneId));
   if(this.controls.length>WEIGHT_BRUSH_LIMIT)throw Error('Brush painting supports at most 4,096 displayed controls; use the numeric vertex editor for this layer');
   this.nodeId=nodeId;this.boneId=boneId;this.target=target;this.strength=strength;this.radius=radius/zoom;
   this.base=structuredClone(n.geometry.skin.weights);this.entries=new Map(this.base.map(w=>[w.pointId,w]));this.influence=new Float64Array(this.controls.length);this.samples=0;this.previous=null;
@@ -44,7 +45,7 @@ export class WeightBrush {
  apply(p){
   const n=p.nodes.find(n=>n.id===this.nodeId);n.geometry.skin.weights=structuredClone(this.base);
   const changes=[];
-  this.controls.forEach((v,i)=>{if(!this.influence[i])return;const old=this.entries.get(v.pointId)[v.control].find(([b])=>b===this.boneId)?.[1]??0;changes.push({...v,boneId:this.boneId,value:old+(this.target-old)*this.influence[i]});});
+  this.controls.forEach((v,i)=>{if(!this.influence[i])return;const entry=this.entries.get(v.pointId)[v.control],old=entry.find(([b])=>b===this.boneId)?.[1]??0,locked=this.locks.get(v.pointId+'/'+v.control),remaining=1-entry.reduce((sum,[id,w])=>sum+(locked?.has(id)?w:0),0),target=Math.min(this.target,remaining);changes.push({...v,boneId:this.boneId,value:old+(target-old)*this.influence[i]});});
   setSkinWeights(p,this.nodeId,changes);return changes.length;
  }
 }

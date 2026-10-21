@@ -1,0 +1,90 @@
+{
+  "checkedAt": "2026-10-21T14:45:49.174Z",
+  "scope": "Cloud browser automation only, not physical or human evidence.",
+  "viewports": [
+    {
+      "width": 320,
+      "height": 844,
+      "checks": [
+        "per-control influence lock",
+        "preview/cancel preserves source",
+        "automatic weights match shared API",
+        "reachable sheet actions",
+        "zero automated WCAG violations",
+        "frozen bytes preserved",
+        "one-step undo/redo",
+        "topology smoothing matches shared API",
+        "unbind clears locks and undo restores them",
+        "exact native export",
+        "durable source recovery",
+        "no overflow or browser defaults"
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "checks": [
+        "per-control influence lock",
+        "preview/cancel preserves source",
+        "automatic weights match shared API",
+        "reachable sheet actions",
+        "zero automated WCAG violations",
+        "frozen bytes preserved",
+        "one-step undo/redo",
+        "topology smoothing matches shared API",
+        "unbind clears locks and undo restores them",
+        "exact native export",
+        "durable source recovery",
+        "no overflow or browser defaults"
+      ]
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "checks": [
+        "per-control influence lock",
+        "preview/cancel preserves source",
+        "automatic weights match shared API",
+        "reachable sheet actions",
+        "zero automated WCAG violations",
+        "frozen bytes preserved",
+        "one-step undo/redo",
+        "topology smoothing matches shared API",
+        "unbind clears locks and undo restores them",
+        "exact native export",
+        "durable source recovery",
+        "no overflow or browser defaults"
+      ]
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "checks": [
+        "per-control influence lock",
+        "preview/cancel preserves source",
+        "automatic weights match shared API",
+        "reachable sheet actions",
+        "zero automated WCAG violations",
+        "frozen bytes preserved",
+        "one-step undo/redo",
+        "topology smoothing matches shared API",
+        "unbind clears locks and undo restores them",
+        "exact native export",
+        "durable source recovery",
+        "no overflow or browser defaults"
+      ]
+    }
+  ],
+  "browser": "153.0.8010.12",
+  "bindingCatalog": {
+    "bones": 84,
+    "maximumMountedChoices": 24,
+    "checks": [
+      "bounded legacy panel",
+      "search and 24-item pages",
+      "selection survives page/search changes",
+      "keyboard focus survives choice refresh",
+      "cancel preserves bindings"
+    ]
+  }
+}

@@ -1,0 +1,3392 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 3,
+  "id": "kelp-project",
+  "name": "Kelp — a little wave from below",
+  "artboards": [
+    {
+      "id": "kelp-board",
+      "name": "Kelp — a little wave from below",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "kelp-water-card",
+      "name": "water card",
+      "kind": "path",
+      "artboardId": "kelp-board",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        25,
+        25
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#e4eeeb",
+        "skin": null,
+        "points": [
+          {
+            "id": "kelp-water-card-p0",
+            "anchor": [
+              46,
+              0
+            ],
+            "in": [
+              20.5949015092,
+              0
+            ],
+            "out": [
+              46,
+              0
+            ]
+          },
+          {
+            "id": "kelp-water-card-p1",
+            "anchor": [
+              416,
+              0
+            ],
+            "in": [
+              416,
+              0
+            ],
+            "out": [
+              441.4050984908,
+              0
+            ]
+          },
+          {
+            "id": "kelp-water-card-p2",
+            "anchor": [
+              462,
+              46
+            ],
+            "in": [
+              462,
+              20.5949015092
+            ],
+            "out": [
+              462,
+              46
+            ]
+          },
+          {
+            "id": "kelp-water-card-p3",
+            "anchor": [
+              462,
+              416
+            ],
+            "in": [
+              462,
+              416
+            ],
+            "out": [
+              462,
+              441.4050984908
+            ]
+          },
+          {
+            "id": "kelp-water-card-p4",
+            "anchor": [
+              416,
+              462
+            ],
+            "in": [
+              441.4050984908,
+              462
+            ],
+            "out": [
+              416,
+              462
+            ]
+          },
+          {
+            "id": "kelp-water-card-p5",
+            "anchor": [
+              46,
+              462
+            ],
+            "in": [
+              46,
+              462
+            ],
+            "out": [
+              20.5949015092,
+              462
+            ]
+          },
+          {
+            "id": "kelp-water-card-p6",
+            "anchor": [
+              0,
+              416
+            ],
+            "in": [
+              0,
+              441.4050984908
+            ],
+            "out": [
+              0,
+              416
+            ]
+          },
+          {
+            "id": "kelp-water-card-p7",
+            "anchor": [
+              0,
+              46
+            ],
+            "in": [
+              0,
+              46
+            ],
+            "out": [
+              0,
+              20.5949015092
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "kelp-quiet-water",
+      "name": "quiet water",
+      "kind": "path",
+      "artboardId": "kelp-board",
+      "parentId": null,
+      "order": 1,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        256,
+        258
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#c9ddd9",
+        "skin": null,
+        "points": [
+          {
+            "id": "kelp-quiet-water-p0",
+            "anchor": [
+              210,
+              0
+            ],
+            "in": [
+              210,
+              -115.979797458
+            ],
+            "out": [
+              210,
+              115.979797458
+            ]
+          },
+          {
+            "id": "kelp-quiet-water-p1",
+            "anchor": [
+              0,
+              210
+            ],
+            "in": [
+              115.979797458,
+              210
+            ],
+            "out": [
+              -115.979797458,
+              210
+            ]
+          },
+          {
+            "id": "kelp-quiet-water-p2",
+            "anchor": [
+              -210,
+              0
+            ],
+            "in": [
+              -210,
+              115.979797458
+            ],
+            "out": [
+              -210,
+              -115.979797458
+            ]
+          },
+          {
+            "id": "kelp-quiet-water-p3",
+            "anchor": [
+              0,
+              -210
+            ],
+            "in": [
+              -115.979797458,
+              -210
+            ],
+            "out": [
+              115.979797458,
+              -210
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "kelp-bubble-89",
+      "name": "bubble 89",
+      "kind": "path",
+      "artboardId": "kelp-board",
+      "parentId": null,
+      "order": 2,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        89,
+        125
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f4f1dd",
+        "skin": null,
+        "points": [
+          {
+            "id": "kelp-bubble-89-p0",
+            "anchor": [
+              13,
+              0
+            ],
+            "in": [
+              13,
+              -7.179701747399999
+            ],
+            "out": [
+              13,
+              7.179701747399999
+            ]
+          },
+          {
+            "id": "kelp-bubble-89-p1",
+            "anchor": [
+              0,
+              13
+            ],
+            "in": [
+              7.179701747399999,
+              13
+            ],
+            "out": [
+              -7.179701747399999,
+              13
+            ]
+          },
+          {
+            "id": "kelp-bubble-89-p2",
+            "anchor": [
+              -13,
+              0
+            ],
+            "in": [
+              -13,
+              7.179701747399999
+            ],
+            "out": [
+              -13,
+              -7.179701747399999
+            ]
+          },
+          {
+            "id": "kelp-bubble-89-p3",
+            "anchor": [
+              0,
+              -13
+            ],
+            "in": [
+              -7.179701747399999,
+              -13
+            ],
+            "out": [
+              7.179701747399999,
+              -13
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "kelp-bubble-light-89",
+      "name": "bubble light 89",
+      "kind": "path",
+      "artboardId": "kelp-board",
+      "parentId": null,
+      "order": 3,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        85.1,
+        121.1
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#ffffff",
+        "skin": null,
+        "points": [
+          {
+            "id": "kelp-bubble-light-89-p0",
+            "anchor": [
+              2.6,
+              0
+            ],
+            "in": [
+              2.6,
+              -1.43594034948
+            ],
+            "out": [
+              2.6,
+              1.43594034948
+            ]
+          },
+          {
+            "id": "kelp-bubble-light-89-p1",
+            "anchor": [
+              0,
+              2.6
+            ],
+            "in": [
+              1.43594034948,
+              2.6
+            ],
+            "out": [
+              -1.43594034948,
+              2.6
+            ]
+          },
+          {
+            "id": "kelp-bubble-light-89-p2",
+            "anchor": [
+              -2.6,
+              0
+            ],
+            "in": [
+              -2.6,
+              1.43594034948
+            ],
+            "out": [
+              -2.6,
+              -1.43594034948
+            ]
+          },
+          {
+            "id": "kelp-bubble-light-89-p3",
+            "anchor": [
+              0,
+              -2.6
+            ],
+            "in": [
+              -1.43594034948,
+              -2.6
+            ],
+            "out": [
+              1.43594034948,
+              -2.6
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "kelp-bubble-401",
+      "name": "bubble 401",
+      "kind": "path",
+      "artboardId": "kelp-board",
+      "parentId": null,
+      "order": 4,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        401,
+        142
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f4f1dd",
+        "skin": null,
+        "points": [
+          {
+            "id": "kelp-bubble-401-p0",
+            "anchor": [
+              9,
+              0
+            ],
+            "in": [
+              9,
+              -4.9705627482
+            ],
+            "out": [
+              9,
+              4.9705627482
+            ]
+          },
+          {
+            "id": "kelp-bubble-401-p1",
+            "anchor": [
+              0,
+              9
+            ],
+            "in": [
+              4.9705627482,
+              9
+            ],
+            "out": [
+              -4.9705627482,
+              9
+            ]
+          },
+          {
+            "id": "kelp-bubble-401-p2",
+            "anchor": [
+              -9,
+              0
+            ],
+            "in": [
+              -9,
+              4.9705627482
+            ],
+            "out": [
+              -9,
+              -4.9705627482
+            ]
+          },
+          {
+            "id": "kelp-bubble-401-p3",
+            "anchor": [
+              0,
+              -9
+            ],
+            "in": [
+              -4.9705627482,
+              -9
+            ],
+            "out": [
+              4.9705627482,
+              -9
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "kelp-bubble-light-401",
+      "name": "bubble light 401",
+      "kind": "path",
+      "artboardId": "kelp-board",
+      "parentId": null,
+      "order": 5,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        398.3,
+        139.3
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#ffffff",
+        "skin": null,
+        "points": [
+          {
+            "id": "kelp-bubble-light-401-p0",
+            "anchor": [
+              1.8,
+              0
+            ],
+            "in": [
+              1.8,
+              -0.99411254964
+            ],
+            "out": [
+              1.8,
+              0.99411254964
+            ]
+          },
+          {
+            "id": "kelp-bubble-light-401-p1",
+            "anchor": [
+              0,
+              1.8
+            ],
+            "in": [
+              0.99411254964,
+              1.8
+            ],
+            "out": [
+              -0.99411254964,
+              1.8
+            ]
+          },
+          {
+            "id": "kelp-bubble-light-401-p2",
+            "anchor": [
+              -1.8,
+              0
+            ],
+            "in": [
+              -1.8,
+              0.99411254964
+            ],
+            "out": [
+              -1.8,
+              -0.99411254964
+            ]
+          },
+          {
+            "id": "kelp-bubble-light-401-p3",
+            "anchor": [
+              0,
+              -1.8
+            ],
+            "in": [
+              -0.99411254964,
+              -1.8
+            ],
+            "out": [
+              0.99411254964,
+              -1.8
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "kelp-bubble-430",
+      "name": "bubble 430",
+      "kind": "path",
+      "artboardId": "kelp-board",
+      "parentId": null,
+      "order": 6,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        430,
+        300
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f4f1dd",
+        "skin": null,
+        "points": [
+          {
+            "id": "kelp-bubble-430-p0",
+            "anchor": [
+              15,
+              0
+            ],
+            "in": [
+              15,
+              -8.284271247
+            ],
+            "out": [
+              15,
+              8.284271247
+            ]
+          },
+          {
+            "id": "kelp-bubble-430-p1",
+            "anchor": [
+              0,
+              15
+            ],
+            "in": [
+              8.284271247,
+              15
+            ],
+            "out": [
+              -8.284271247,
+              15
+            ]
+          },
+          {
+            "id": "kelp-bubble-430-p2",
+            "anchor": [
+              -15,
+              0
+            ],
+            "in": [
+              -15,
+              8.284271247
+            ],
+            "out": [
+              -15,
+              -8.284271247
+            ]
+          },
+          {
+            "id": "kelp-bubble-430-p3",
+            "anchor": [
+              0,
+              -15
+            ],
+            "in": [
+              -8.284271247,
+              -15
+            ],
+            "out": [
+              8.284271247,
+              -15
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "kelp-bubble-light-430",
+      "name": "bubble light 430",
+      "kind": "path",
+      "artboardId": "kelp-board",
+      "parentId": null,
+      "order": 7,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        425.5,
+        295.5
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#ffffff",
+        "skin": null,
+        "points": [
+          {
+            "id": "kelp-bubble-light-430-p0",
+            "anchor": [
+              3,
+              0
+            ],
+            "in": [
+              3,
+              -1.6568542493999998
+            ],
+            "out": [
+              3,
+              1.6568542493999998
+            ]
+          },
+          {
+            "id": "kelp-bubble-light-430-p1",
+            "anchor": [
+              0,
+              3
+            ],
+            "in": [
+              1.6568542493999998,
+              3
+            ],
+            "out": [
+              -1.6568542493999998,
+              3
+            ]
+          },
+          {
+            "id": "kelp-bubble-light-430-p2",
+            "anchor": [
+              -3,
+              0
+            ],
+            "in": [
+              -3,
+              1.6568542493999998
+            ],
+            "out": [
+              -3,
+              -1.6568542493999998
+            ]
+          },
+          {
+            "id": "kelp-bubble-light-430-p3",
+            "anchor": [
+              0,
+              -3
+            ],
+            "in": [
+              -1.6568542493999998,
+              -3
+            ],
+            "out": [
+              1.6568542493999998,
+              -3
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "kelp-bubble-109",
+      "name": "bubble 109",
+      "kind": "path",
+      "artboardId": "kelp-board",
+      "parentId": null,
+      "order": 8,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        109,
+        285
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f4f1dd",
+        "skin": null,
+        "points": [
+          {
+            "id": "kelp-bubble-109-p0",
+            "anchor": [
+              7,
+              0
+            ],
+            "in": [
+              7,
+              -3.8659932485999997
+            ],
+            "out": [
+              7,
+              3.8659932485999997
+            ]
+          },
+          {
+            "id": "kelp-bubble-109-p1",
+            "anchor": [
+              0,
+              7
+            ],
+            "in": [
+              3.8659932485999997,
+              7
+            ],
+            "out": [
+              -3.8659932485999997,
+              7
+            ]
+          },
+          {
+            "id": "kelp-bubble-109-p2",
+            "anchor": [
+              -7,
+              0
+            ],
+            "in": [
+              -7,
+              3.8659932485999997
+            ],
+            "out": [
+              -7,
+              -3.8659932485999997
+            ]
+          },
+          {
+            "id": "kelp-bubble-109-p3",
+            "anchor": [
+              0,
+              -7
+            ],
+            "in": [
+              -3.8659932485999997,
+              -7
+            ],
+            "out": [
+              3.8659932485999997,
+              -7
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "kelp-bubble-light-109",
+      "name": "bubble light 109",
+      "kind": "path",
+      "artboardId": "kelp-board",
+      "parentId": null,
+      "order": 9,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        106.9,
+        282.9
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#ffffff",
+        "skin": null,
+        "points": [
+          {
+            "id": "kelp-bubble-light-109-p0",
+            "anchor": [
+              1.4000000000000001,
+              0
+            ],
+            "in": [
+              1.4000000000000001,
+              -0.7731986497200001
+            ],
+            "out": [
+              1.4000000000000001,
+              0.7731986497200001
+            ]
+          },
+          {
+            "id": "kelp-bubble-light-109-p1",
+            "anchor": [
+              0,
+              1.4000000000000001
+            ],
+            "in": [
+              0.7731986497200001,
+              1.4000000000000001
+            ],
+            "out": [
+              -0.7731986497200001,
+              1.4000000000000001
+            ]
+          },
+          {
+            "id": "kelp-bubble-light-109-p2",
+            "anchor": [
+              -1.4000000000000001,
+              0
+            ],
+            "in": [
+              -1.4000000000000001,
+              0.7731986497200001
+            ],
+            "out": [
+              -1.4000000000000001,
+              -0.7731986497200001
+            ]
+          },
+          {
+            "id": "kelp-bubble-light-109-p3",
+            "anchor": [
+              0,
+              -1.4000000000000001
+            ],
+            "in": [
+              -0.7731986497200001,
+              -1.4000000000000001
+            ],
+            "out": [
+              0.7731986497200001,
+              -1.4000000000000001
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "kelp-bubble-347",
+      "name": "bubble 347",
+      "kind": "path",
+      "artboardId": "kelp-board",
+      "parentId": null,
+      "order": 10,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        347,
+        73
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#f4f1dd",
+        "skin": null,
+        "points": [
+          {
+            "id": "kelp-bubble-347-p0",
+            "anchor": [
+              6,
+              0
+            ],
+            "in": [
+              6,
+              -3.3137084987999996
+            ],
+            "out": [
+              6,
+              3.3137084987999996
+            ]
+          },
+          {
+            "id": "kelp-bubble-347-p1",
+            "anchor": [
+              0,
+              6
+            ],
+            "in": [
+              3.3137084987999996,
+              6
+            ],
+            "out": [
+              -3.3137084987999996,
+              6
+            ]
+          },
+          {
+            "id": "kelp-bubble-347-p2",
+            "anchor": [
+              -6,
+              0
+            ],
+            "in": [
+              -6,
+              3.3137084987999996
+            ],
+            "out": [
+              -6,
+              -3.3137084987999996
+            ]
+          },
+          {
+            "id": "kelp-bubble-347-p3",
+            "anchor": [
+              0,
+              -6
+            ],
+            "in": [
+              -3.3137084987999996,
+              -6
+            ],
+            "out": [
+              3.3137084987999996,
+              -6
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "kelp-bubble-light-347",
+      "name": "bubble light 347",
+      "kind": "path",
+      "artboardId": "kelp-board",
+      "parentId": null,
+      "order": 11,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        345.2,
+        71.2
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#ffffff",
+        "skin": null,
+        "points": [
+          {
+            "id": "kelp-bubble-light-347-p0",
+            "anchor": [
+              1.2000000000000002,
+              0
+            ],
+            "in": [
+              1.2000000000000002,
+              -0.6627416997600001
+            ],
+            "out": [
+              1.2000000000000002,
+              0.6627416997600001
+            ]
+          },
+          {
+            "id": "kelp-bubble-light-347-p1",
+            "anchor": [
+              0,
+              1.2000000000000002
+            ],
+            "in": [
+              0.6627416997600001,
+              1.2000000000000002
+            ],
+            "out": [
+              -0.6627416997600001,
+              1.2000000000000002
+            ]
+          },
+          {
+            "id": "kelp-bubble-light-347-p2",
+            "anchor": [
+              -1.2000000000000002,
+              0
+            ],
+            "in": [
+              -1.2000000000000002,
+              0.6627416997600001
+            ],
+            "out": [
+              -1.2000000000000002,
+              -0.6627416997600001
+            ]
+          },
+          {
+            "id": "kelp-bubble-light-347-p3",
+            "anchor": [
+              0,
+              -1.2000000000000002
+            ],
+            "in": [
+              -0.6627416997600001,
+              -1.2000000000000002
+            ],
+            "out": [
+              0.6627416997600001,
+              -1.2000000000000002
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "kelp-sea-shadow",
+      "name": "sea shadow",
+      "kind": "path",
+      "artboardId": "kelp-board",
+      "parentId": null,
+      "order": 12,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        246,
+        430
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#aac8c1",
+        "skin": null,
+        "points": [
+          {
+            "id": "kelp-sea-shadow-p0",
+            "anchor": [
+              130,
+              0
+            ],
+            "in": [
+              130,
+              -8.8365559968
+            ],
+            "out": [
+              130,
+              8.8365559968
+            ]
+          },
+          {
+            "id": "kelp-sea-shadow-p1",
+            "anchor": [
+              0,
+              16
+            ],
+            "in": [
+              71.797017474,
+              16
+            ],
+            "out": [
+              -71.797017474,
+              16
+            ]
+          },
+          {
+            "id": "kelp-sea-shadow-p2",
+            "anchor": [
+              -130,
+              0
+            ],
+            "in": [
+              -130,
+              8.8365559968
+            ],
+            "out": [
+              -130,
+              -8.8365559968
+            ]
+          },
+          {
+            "id": "kelp-sea-shadow-p3",
+            "anchor": [
+              0,
+              -16
+            ],
+            "in": [
+              -71.797017474,
+              -16
+            ],
+            "out": [
+              71.797017474,
+              -16
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "kelp-left-tendril",
+      "name": "left tendril",
+      "kind": "path",
+      "artboardId": "kelp-board",
+      "parentId": null,
+      "order": 13,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": false,
+        "fill": null,
+        "skin": null,
+        "points": [
+          {
+            "id": "kelp-left-tendril-p0",
+            "anchor": [
+              215,
+              367
+            ],
+            "in": [
+              215,
+              367
+            ],
+            "out": [
+              170,
+              356
+            ]
+          },
+          {
+            "id": "kelp-left-tendril-p1",
+            "anchor": [
+              119,
+              405
+            ],
+            "in": [
+              124,
+              371
+            ],
+            "out": [
+              113,
+              424
+            ]
+          },
+          {
+            "id": "kelp-left-tendril-p2",
+            "anchor": [
+              83,
+              402
+            ],
+            "in": [
+              99,
+              424
+            ],
+            "out": [
+              83,
+              402
+            ]
+          }
+        ],
+        "stroke": {
+          "color": {
+            "type": "linear",
+            "start": [
+              83,
+              370
+            ],
+            "end": [
+              220,
+              405
+            ],
+            "stops": [
+              {
+                "position": 0,
+                "color": "#609f9aff"
+              },
+              {
+                "position": 1,
+                "color": "#a7d8bbff"
+              }
+            ]
+          },
+          "width": 25,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "kelp-right-tendril",
+      "name": "right tendril",
+      "kind": "path",
+      "artboardId": "kelp-board",
+      "parentId": null,
+      "order": 14,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": false,
+        "fill": null,
+        "skin": null,
+        "points": [
+          {
+            "id": "kelp-right-tendril-p0",
+            "anchor": [
+              260,
+              369
+            ],
+            "in": [
+              260,
+              369
+            ],
+            "out": [
+              295,
+              366
+            ]
+          },
+          {
+            "id": "kelp-right-tendril-p1",
+            "anchor": [
+              343,
+              420
+            ],
+            "in": [
+              310,
+              418
+            ],
+            "out": [
+              364,
+              425
+            ]
+          },
+          {
+            "id": "kelp-right-tendril-p2",
+            "anchor": [
+              388,
+              396
+            ],
+            "in": [
+              384,
+              420
+            ],
+            "out": [
+              388,
+              396
+            ]
+          }
+        ],
+        "stroke": {
+          "color": {
+            "type": "linear",
+            "start": [
+              260,
+              369
+            ],
+            "end": [
+              390,
+              415
+            ],
+            "stops": [
+              {
+                "position": 0,
+                "color": "#89c6acff"
+              },
+              {
+                "position": 1,
+                "color": "#b8e1c1ff"
+              }
+            ]
+          },
+          "width": 25,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "kelp-little-tendril",
+      "name": "little tendril",
+      "kind": "path",
+      "artboardId": "kelp-board",
+      "parentId": null,
+      "order": 15,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": false,
+        "fill": null,
+        "skin": null,
+        "points": [
+          {
+            "id": "kelp-little-tendril-p0",
+            "anchor": [
+              234,
+              389
+            ],
+            "in": [
+              234,
+              389
+            ],
+            "out": [
+              224,
+              411
+            ]
+          },
+          {
+            "id": "kelp-little-tendril-p1",
+            "anchor": [
+              210,
+              431
+            ],
+            "in": [
+              225,
+              441
+            ],
+            "out": [
+              203,
+              416
+            ]
+          }
+        ],
+        "stroke": {
+          "color": "#70b6a7",
+          "width": 24,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "kelp-wave-bone-1",
+      "name": "wave bone 1",
+      "kind": "bone",
+      "artboardId": "kelp-board",
+      "parentId": null,
+      "order": 16,
+      "transform": [
+        0,
+        -1,
+        1,
+        0,
+        190,
+        340
+      ],
+      "geometry": {
+        "length": 42
+      }
+    },
+    {
+      "id": "kelp-wave-bone-2",
+      "name": "wave bone 2",
+      "kind": "bone",
+      "artboardId": "kelp-board",
+      "parentId": "kelp-wave-bone-1",
+      "order": 17,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "length": 42
+      }
+    },
+    {
+      "id": "kelp-wave-bone-3",
+      "name": "wave bone 3",
+      "kind": "bone",
+      "artboardId": "kelp-board",
+      "parentId": "kelp-wave-bone-2",
+      "order": 18,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "length": 42
+      }
+    },
+    {
+      "id": "kelp-wave-bone-4",
+      "name": "wave bone 4",
+      "kind": "bone",
+      "artboardId": "kelp-board",
+      "parentId": "kelp-wave-bone-3",
+      "order": 19,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "length": 42
+      }
+    },
+    {
+      "id": "kelp-hello-tendril",
+      "name": "hello tendril",
+      "kind": "path",
+      "artboardId": "kelp-board",
+      "parentId": null,
+      "order": 20,
+      "transform": [
+        0,
+        -1,
+        1,
+        0,
+        190,
+        340
+      ],
+      "geometry": {
+        "closed": false,
+        "fill": null,
+        "skin": {
+          "bindWorld": [
+            0,
+            -1,
+            1,
+            0,
+            190,
+            340
+          ],
+          "bones": [
+            {
+              "boneId": "kelp-wave-bone-1",
+              "bind": [
+                0,
+                -1,
+                1,
+                0,
+                190,
+                340
+              ]
+            },
+            {
+              "boneId": "kelp-wave-bone-2",
+              "bind": [
+                0,
+                -1,
+                1,
+                0,
+                190,
+                298
+              ]
+            },
+            {
+              "boneId": "kelp-wave-bone-3",
+              "bind": [
+                0,
+                -1,
+                1,
+                0,
+                190,
+                256
+              ]
+            },
+            {
+              "boneId": "kelp-wave-bone-4",
+              "bind": [
+                0,
+                -1,
+                1,
+                0,
+                190,
+                214
+              ]
+            }
+          ],
+          "weights": [
+            {
+              "pointId": "kelp-hello-tendril-p0",
+              "anchor": [
+                [
+                  "kelp-wave-bone-1",
+                  0.796078431372549
+                ],
+                [
+                  "kelp-wave-bone-2",
+                  0.20392156862745098
+                ],
+                [
+                  "kelp-wave-bone-3",
+                  0
+                ],
+                [
+                  "kelp-wave-bone-4",
+                  0
+                ]
+              ],
+              "in": [
+                [
+                  "kelp-wave-bone-1",
+                  0.8352941176470589
+                ],
+                [
+                  "kelp-wave-bone-2",
+                  0.16470588235294117
+                ],
+                [
+                  "kelp-wave-bone-3",
+                  0
+                ],
+                [
+                  "kelp-wave-bone-4",
+                  0
+                ]
+              ],
+              "out": [
+                [
+                  "kelp-wave-bone-1",
+                  0.7333333333333333
+                ],
+                [
+                  "kelp-wave-bone-2",
+                  0.26666666666666666
+                ],
+                [
+                  "kelp-wave-bone-3",
+                  0
+                ],
+                [
+                  "kelp-wave-bone-4",
+                  0
+                ]
+              ]
+            },
+            {
+              "pointId": "kelp-hello-tendril-p1",
+              "anchor": [
+                [
+                  "kelp-wave-bone-1",
+                  0.6980392156862745
+                ],
+                [
+                  "kelp-wave-bone-2",
+                  0.30196078431372547
+                ],
+                [
+                  "kelp-wave-bone-3",
+                  0
+                ],
+                [
+                  "kelp-wave-bone-4",
+                  0
+                ]
+              ],
+              "in": [
+                [
+                  "kelp-wave-bone-1",
+                  0.7450980392156863
+                ],
+                [
+                  "kelp-wave-bone-2",
+                  0.2549019607843137
+                ],
+                [
+                  "kelp-wave-bone-3",
+                  0
+                ],
+                [
+                  "kelp-wave-bone-4",
+                  0
+                ]
+              ],
+              "out": [
+                [
+                  "kelp-wave-bone-1",
+                  0.6196078431372549
+                ],
+                [
+                  "kelp-wave-bone-2",
+                  0.3568627450980392
+                ],
+                [
+                  "kelp-wave-bone-3",
+                  0.023529411764705882
+                ],
+                [
+                  "kelp-wave-bone-4",
+                  0
+                ]
+              ]
+            },
+            {
+              "pointId": "kelp-hello-tendril-p2",
+              "anchor": [
+                [
+                  "kelp-wave-bone-1",
+                  0.5019607843137255
+                ],
+                [
+                  "kelp-wave-bone-2",
+                  0.4627450980392157
+                ],
+                [
+                  "kelp-wave-bone-3",
+                  0.03529411764705882
+                ],
+                [
+                  "kelp-wave-bone-4",
+                  0
+                ]
+              ],
+              "in": [
+                [
+                  "kelp-wave-bone-1",
+                  0.5529411764705883
+                ],
+                [
+                  "kelp-wave-bone-2",
+                  0.41568627450980394
+                ],
+                [
+                  "kelp-wave-bone-3",
+                  0.03137254901960784
+                ],
+                [
+                  "kelp-wave-bone-4",
+                  0
+                ]
+              ],
+              "out": [
+                [
+                  "kelp-wave-bone-1",
+                  0.38823529411764707
+                ],
+                [
+                  "kelp-wave-bone-2",
+                  0.48627450980392156
+                ],
+                [
+                  "kelp-wave-bone-3",
+                  0.12549019607843137
+                ],
+                [
+                  "kelp-wave-bone-4",
+                  0
+                ]
+              ]
+            },
+            {
+              "pointId": "kelp-hello-tendril-p3",
+              "anchor": [
+                [
+                  "kelp-wave-bone-1",
+                  0.26666666666666666
+                ],
+                [
+                  "kelp-wave-bone-2",
+                  0.5568627450980392
+                ],
+                [
+                  "kelp-wave-bone-3",
+                  0.17647058823529413
+                ],
+                [
+                  "kelp-wave-bone-4",
+                  0
+                ]
+              ],
+              "in": [
+                [
+                  "kelp-wave-bone-1",
+                  0.3176470588235294
+                ],
+                [
+                  "kelp-wave-bone-2",
+                  0.5215686274509804
+                ],
+                [
+                  "kelp-wave-bone-3",
+                  0.1607843137254902
+                ],
+                [
+                  "kelp-wave-bone-4",
+                  0
+                ]
+              ],
+              "out": [
+                [
+                  "kelp-wave-bone-1",
+                  0.1607843137254902
+                ],
+                [
+                  "kelp-wave-bone-2",
+                  0.5098039215686274
+                ],
+                [
+                  "kelp-wave-bone-3",
+                  0.3058823529411765
+                ],
+                [
+                  "kelp-wave-bone-4",
+                  0.023529411764705882
+                ]
+              ]
+            },
+            {
+              "pointId": "kelp-hello-tendril-p4",
+              "anchor": [
+                [
+                  "kelp-wave-bone-1",
+                  0.09803921568627451
+                ],
+                [
+                  "kelp-wave-bone-2",
+                  0.4666666666666667
+                ],
+                [
+                  "kelp-wave-bone-3",
+                  0.4
+                ],
+                [
+                  "kelp-wave-bone-4",
+                  0.03529411764705882
+                ]
+              ],
+              "in": [
+                [
+                  "kelp-wave-bone-1",
+                  0.12549019607843137
+                ],
+                [
+                  "kelp-wave-bone-2",
+                  0.47843137254901963
+                ],
+                [
+                  "kelp-wave-bone-3",
+                  0.36470588235294116
+                ],
+                [
+                  "kelp-wave-bone-4",
+                  0.03137254901960784
+                ]
+              ],
+              "out": [
+                [
+                  "kelp-wave-bone-1",
+                  0.03137254901960784
+                ],
+                [
+                  "kelp-wave-bone-2",
+                  0.36470588235294116
+                ],
+                [
+                  "kelp-wave-bone-3",
+                  0.47843137254901963
+                ],
+                [
+                  "kelp-wave-bone-4",
+                  0.12549019607843137
+                ]
+              ]
+            },
+            {
+              "pointId": "kelp-hello-tendril-p5",
+              "anchor": [
+                [
+                  "kelp-wave-bone-1",
+                  0.0196078431372549
+                ],
+                [
+                  "kelp-wave-bone-2",
+                  0.26666666666666666
+                ],
+                [
+                  "kelp-wave-bone-3",
+                  0.5372549019607843
+                ],
+                [
+                  "kelp-wave-bone-4",
+                  0.17647058823529413
+                ]
+              ],
+              "in": [
+                [
+                  "kelp-wave-bone-1",
+                  0.023529411764705882
+                ],
+                [
+                  "kelp-wave-bone-2",
+                  0.3058823529411765
+                ],
+                [
+                  "kelp-wave-bone-3",
+                  0.5098039215686274
+                ],
+                [
+                  "kelp-wave-bone-4",
+                  0.1607843137254902
+                ]
+              ],
+              "out": [
+                [
+                  "kelp-wave-bone-1",
+                  0
+                ],
+                [
+                  "kelp-wave-bone-2",
+                  0.1607843137254902
+                ],
+                [
+                  "kelp-wave-bone-3",
+                  0.5215686274509804
+                ],
+                [
+                  "kelp-wave-bone-4",
+                  0.3176470588235294
+                ]
+              ]
+            },
+            {
+              "pointId": "kelp-hello-tendril-p6",
+              "anchor": [
+                [
+                  "kelp-wave-bone-1",
+                  0
+                ],
+                [
+                  "kelp-wave-bone-2",
+                  0.09803921568627451
+                ],
+                [
+                  "kelp-wave-bone-3",
+                  0.47058823529411764
+                ],
+                [
+                  "kelp-wave-bone-4",
+                  0.43137254901960786
+                ]
+              ],
+              "in": [
+                [
+                  "kelp-wave-bone-1",
+                  0
+                ],
+                [
+                  "kelp-wave-bone-2",
+                  0.12549019607843137
+                ],
+                [
+                  "kelp-wave-bone-3",
+                  0.48627450980392156
+                ],
+                [
+                  "kelp-wave-bone-4",
+                  0.38823529411764707
+                ]
+              ],
+              "out": [
+                [
+                  "kelp-wave-bone-1",
+                  0
+                ],
+                [
+                  "kelp-wave-bone-2",
+                  0.03137254901960784
+                ],
+                [
+                  "kelp-wave-bone-3",
+                  0.41568627450980394
+                ],
+                [
+                  "kelp-wave-bone-4",
+                  0.5529411764705883
+                ]
+              ]
+            },
+            {
+              "pointId": "kelp-hello-tendril-p7",
+              "anchor": [
+                [
+                  "kelp-wave-bone-1",
+                  0
+                ],
+                [
+                  "kelp-wave-bone-2",
+                  0.0196078431372549
+                ],
+                [
+                  "kelp-wave-bone-3",
+                  0.30196078431372547
+                ],
+                [
+                  "kelp-wave-bone-4",
+                  0.6784313725490196
+                ]
+              ],
+              "in": [
+                [
+                  "kelp-wave-bone-1",
+                  0
+                ],
+                [
+                  "kelp-wave-bone-2",
+                  0.023529411764705882
+                ],
+                [
+                  "kelp-wave-bone-3",
+                  0.3568627450980392
+                ],
+                [
+                  "kelp-wave-bone-4",
+                  0.6196078431372549
+                ]
+              ],
+              "out": [
+                [
+                  "kelp-wave-bone-1",
+                  0
+                ],
+                [
+                  "kelp-wave-bone-2",
+                  0
+                ],
+                [
+                  "kelp-wave-bone-3",
+                  0.2549019607843137
+                ],
+                [
+                  "kelp-wave-bone-4",
+                  0.7450980392156863
+                ]
+              ]
+            },
+            {
+              "pointId": "kelp-hello-tendril-p8",
+              "anchor": [
+                [
+                  "kelp-wave-bone-1",
+                  0
+                ],
+                [
+                  "kelp-wave-bone-2",
+                  0
+                ],
+                [
+                  "kelp-wave-bone-3",
+                  0.20392156862745098
+                ],
+                [
+                  "kelp-wave-bone-4",
+                  0.796078431372549
+                ]
+              ],
+              "in": [
+                [
+                  "kelp-wave-bone-1",
+                  0
+                ],
+                [
+                  "kelp-wave-bone-2",
+                  0
+                ],
+                [
+                  "kelp-wave-bone-3",
+                  0.26666666666666666
+                ],
+                [
+                  "kelp-wave-bone-4",
+                  0.7333333333333333
+                ]
+              ],
+              "out": [
+                [
+                  "kelp-wave-bone-1",
+                  0
+                ],
+                [
+                  "kelp-wave-bone-2",
+                  0
+                ],
+                [
+                  "kelp-wave-bone-3",
+                  0.16470588235294117
+                ],
+                [
+                  "kelp-wave-bone-4",
+                  0.8352941176470589
+                ]
+              ]
+            }
+          ]
+        },
+        "points": [
+          {
+            "id": "kelp-hello-tendril-p0",
+            "anchor": [
+              0,
+              0
+            ],
+            "in": [
+              -7,
+              0
+            ],
+            "out": [
+              7,
+              0
+            ]
+          },
+          {
+            "id": "kelp-hello-tendril-p1",
+            "anchor": [
+              21,
+              0
+            ],
+            "in": [
+              14,
+              0
+            ],
+            "out": [
+              28,
+              0
+            ]
+          },
+          {
+            "id": "kelp-hello-tendril-p2",
+            "anchor": [
+              42,
+              0
+            ],
+            "in": [
+              35,
+              0
+            ],
+            "out": [
+              49,
+              0
+            ]
+          },
+          {
+            "id": "kelp-hello-tendril-p3",
+            "anchor": [
+              63,
+              0
+            ],
+            "in": [
+              56,
+              0
+            ],
+            "out": [
+              70,
+              0
+            ]
+          },
+          {
+            "id": "kelp-hello-tendril-p4",
+            "anchor": [
+              84,
+              0
+            ],
+            "in": [
+              77,
+              0
+            ],
+            "out": [
+              91,
+              0
+            ]
+          },
+          {
+            "id": "kelp-hello-tendril-p5",
+            "anchor": [
+              105,
+              0
+            ],
+            "in": [
+              98,
+              0
+            ],
+            "out": [
+              112,
+              0
+            ]
+          },
+          {
+            "id": "kelp-hello-tendril-p6",
+            "anchor": [
+              126,
+              0
+            ],
+            "in": [
+              119,
+              0
+            ],
+            "out": [
+              133,
+              0
+            ]
+          },
+          {
+            "id": "kelp-hello-tendril-p7",
+            "anchor": [
+              147,
+              0
+            ],
+            "in": [
+              140,
+              0
+            ],
+            "out": [
+              154,
+              0
+            ]
+          },
+          {
+            "id": "kelp-hello-tendril-p8",
+            "anchor": [
+              168,
+              0
+            ],
+            "in": [
+              161,
+              0
+            ],
+            "out": [
+              175,
+              0
+            ]
+          }
+        ],
+        "stroke": {
+          "color": {
+            "type": "linear",
+            "start": [
+              0,
+              0
+            ],
+            "end": [
+              168,
+              0
+            ],
+            "stops": [
+              {
+                "position": 0,
+                "color": "#579f9aff"
+              },
+              {
+                "position": 1,
+                "color": "#c9eac5ff"
+              }
+            ]
+          },
+          "width": 26,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "kelp-body",
+      "name": "body",
+      "kind": "path",
+      "artboardId": "kelp-board",
+      "parentId": null,
+      "order": 21,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        235,
+        348
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#92d4b5",
+        "skin": null,
+        "points": [
+          {
+            "id": "kelp-body-p0",
+            "anchor": [
+              76,
+              0
+            ],
+            "in": [
+              76,
+              -38.1076477362
+            ],
+            "out": [
+              76,
+              38.1076477362
+            ]
+          },
+          {
+            "id": "kelp-body-p1",
+            "anchor": [
+              0,
+              69
+            ],
+            "in": [
+              41.9736409848,
+              69
+            ],
+            "out": [
+              -41.9736409848,
+              69
+            ]
+          },
+          {
+            "id": "kelp-body-p2",
+            "anchor": [
+              -76,
+              0
+            ],
+            "in": [
+              -76,
+              38.1076477362
+            ],
+            "out": [
+              -76,
+              -38.1076477362
+            ]
+          },
+          {
+            "id": "kelp-body-p3",
+            "anchor": [
+              0,
+              -69
+            ],
+            "in": [
+              -41.9736409848,
+              -69
+            ],
+            "out": [
+              41.9736409848,
+              -69
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "kelp-belly-light",
+      "name": "belly light",
+      "kind": "path",
+      "artboardId": "kelp-board",
+      "parentId": null,
+      "order": 22,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        245,
+        380
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#b6e4c6",
+        "skin": null,
+        "points": [
+          {
+            "id": "kelp-belly-light-p0",
+            "anchor": [
+              47,
+              0
+            ],
+            "in": [
+              47,
+              -17.1208272438
+            ],
+            "out": [
+              47,
+              17.1208272438
+            ]
+          },
+          {
+            "id": "kelp-belly-light-p1",
+            "anchor": [
+              0,
+              31
+            ],
+            "in": [
+              25.9573832406,
+              31
+            ],
+            "out": [
+              -25.9573832406,
+              31
+            ]
+          },
+          {
+            "id": "kelp-belly-light-p2",
+            "anchor": [
+              -47,
+              0
+            ],
+            "in": [
+              -47,
+              17.1208272438
+            ],
+            "out": [
+              -47,
+              -17.1208272438
+            ]
+          },
+          {
+            "id": "kelp-belly-light-p3",
+            "anchor": [
+              0,
+              -31
+            ],
+            "in": [
+              -25.9573832406,
+              -31
+            ],
+            "out": [
+              25.9573832406,
+              -31
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "kelp-body-freckle-182",
+      "name": "body freckle 182",
+      "kind": "path",
+      "artboardId": "kelp-board",
+      "parentId": null,
+      "order": 23,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        182,
+        340
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#72b8a3",
+        "skin": null,
+        "points": [
+          {
+            "id": "kelp-body-freckle-182-p0",
+            "anchor": [
+              8,
+              0
+            ],
+            "in": [
+              8,
+              -3.09279459888
+            ],
+            "out": [
+              8,
+              3.09279459888
+            ]
+          },
+          {
+            "id": "kelp-body-freckle-182-p1",
+            "anchor": [
+              0,
+              5.6
+            ],
+            "in": [
+              4.4182779984,
+              5.6
+            ],
+            "out": [
+              -4.4182779984,
+              5.6
+            ]
+          },
+          {
+            "id": "kelp-body-freckle-182-p2",
+            "anchor": [
+              -8,
+              0
+            ],
+            "in": [
+              -8,
+              3.09279459888
+            ],
+            "out": [
+              -8,
+              -3.09279459888
+            ]
+          },
+          {
+            "id": "kelp-body-freckle-182-p3",
+            "anchor": [
+              0,
+              -5.6
+            ],
+            "in": [
+              -4.4182779984,
+              -5.6
+            ],
+            "out": [
+              4.4182779984,
+              -5.6
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "kelp-body-freckle-286",
+      "name": "body freckle 286",
+      "kind": "path",
+      "artboardId": "kelp-board",
+      "parentId": null,
+      "order": 24,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        286,
+        337
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#72b8a3",
+        "skin": null,
+        "points": [
+          {
+            "id": "kelp-body-freckle-286-p0",
+            "anchor": [
+              6,
+              0
+            ],
+            "in": [
+              6,
+              -2.3195959491599996
+            ],
+            "out": [
+              6,
+              2.3195959491599996
+            ]
+          },
+          {
+            "id": "kelp-body-freckle-286-p1",
+            "anchor": [
+              0,
+              4.199999999999999
+            ],
+            "in": [
+              3.3137084987999996,
+              4.199999999999999
+            ],
+            "out": [
+              -3.3137084987999996,
+              4.199999999999999
+            ]
+          },
+          {
+            "id": "kelp-body-freckle-286-p2",
+            "anchor": [
+              -6,
+              0
+            ],
+            "in": [
+              -6,
+              2.3195959491599996
+            ],
+            "out": [
+              -6,
+              -2.3195959491599996
+            ]
+          },
+          {
+            "id": "kelp-body-freckle-286-p3",
+            "anchor": [
+              0,
+              -4.199999999999999
+            ],
+            "in": [
+              -3.3137084987999996,
+              -4.199999999999999
+            ],
+            "out": [
+              3.3137084987999996,
+              -4.199999999999999
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "kelp-body-freckle-277",
+      "name": "body freckle 277",
+      "kind": "path",
+      "artboardId": "kelp-board",
+      "parentId": null,
+      "order": 25,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        277,
+        390
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#72b8a3",
+        "skin": null,
+        "points": [
+          {
+            "id": "kelp-body-freckle-277-p0",
+            "anchor": [
+              7,
+              0
+            ],
+            "in": [
+              7,
+              -2.7061952740199997
+            ],
+            "out": [
+              7,
+              2.7061952740199997
+            ]
+          },
+          {
+            "id": "kelp-body-freckle-277-p1",
+            "anchor": [
+              0,
+              4.8999999999999995
+            ],
+            "in": [
+              3.8659932485999997,
+              4.8999999999999995
+            ],
+            "out": [
+              -3.8659932485999997,
+              4.8999999999999995
+            ]
+          },
+          {
+            "id": "kelp-body-freckle-277-p2",
+            "anchor": [
+              -7,
+              0
+            ],
+            "in": [
+              -7,
+              2.7061952740199997
+            ],
+            "out": [
+              -7,
+              -2.7061952740199997
+            ]
+          },
+          {
+            "id": "kelp-body-freckle-277-p3",
+            "anchor": [
+              0,
+              -4.8999999999999995
+            ],
+            "in": [
+              -3.8659932485999997,
+              -4.8999999999999995
+            ],
+            "out": [
+              3.8659932485999997,
+              -4.8999999999999995
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "kelp-eye-210",
+      "name": "eye 210",
+      "kind": "path",
+      "artboardId": "kelp-board",
+      "parentId": null,
+      "order": 26,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        210,
+        332
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#2c5357",
+        "skin": null,
+        "points": [
+          {
+            "id": "kelp-eye-210-p0",
+            "anchor": [
+              8,
+              0
+            ],
+            "in": [
+              8,
+              -6.627416997599999
+            ],
+            "out": [
+              8,
+              6.627416997599999
+            ]
+          },
+          {
+            "id": "kelp-eye-210-p1",
+            "anchor": [
+              0,
+              12
+            ],
+            "in": [
+              4.4182779984,
+              12
+            ],
+            "out": [
+              -4.4182779984,
+              12
+            ]
+          },
+          {
+            "id": "kelp-eye-210-p2",
+            "anchor": [
+              -8,
+              0
+            ],
+            "in": [
+              -8,
+              6.627416997599999
+            ],
+            "out": [
+              -8,
+              -6.627416997599999
+            ]
+          },
+          {
+            "id": "kelp-eye-210-p3",
+            "anchor": [
+              0,
+              -12
+            ],
+            "in": [
+              -4.4182779984,
+              -12
+            ],
+            "out": [
+              4.4182779984,
+              -12
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "kelp-shine-210",
+      "name": "shine 210",
+      "kind": "path",
+      "artboardId": "kelp-board",
+      "parentId": null,
+      "order": 27,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        208,
+        328
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#ffffff",
+        "skin": null,
+        "points": [
+          {
+            "id": "kelp-shine-210-p0",
+            "anchor": [
+              2.5,
+              0
+            ],
+            "in": [
+              2.5,
+              -2.2091389992
+            ],
+            "out": [
+              2.5,
+              2.2091389992
+            ]
+          },
+          {
+            "id": "kelp-shine-210-p1",
+            "anchor": [
+              0,
+              4
+            ],
+            "in": [
+              1.3807118745,
+              4
+            ],
+            "out": [
+              -1.3807118745,
+              4
+            ]
+          },
+          {
+            "id": "kelp-shine-210-p2",
+            "anchor": [
+              -2.5,
+              0
+            ],
+            "in": [
+              -2.5,
+              2.2091389992
+            ],
+            "out": [
+              -2.5,
+              -2.2091389992
+            ]
+          },
+          {
+            "id": "kelp-shine-210-p3",
+            "anchor": [
+              0,
+              -4
+            ],
+            "in": [
+              -1.3807118745,
+              -4
+            ],
+            "out": [
+              1.3807118745,
+              -4
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "kelp-eye-258",
+      "name": "eye 258",
+      "kind": "path",
+      "artboardId": "kelp-board",
+      "parentId": null,
+      "order": 28,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        258,
+        329
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#2c5357",
+        "skin": null,
+        "points": [
+          {
+            "id": "kelp-eye-258-p0",
+            "anchor": [
+              8,
+              0
+            ],
+            "in": [
+              8,
+              -6.627416997599999
+            ],
+            "out": [
+              8,
+              6.627416997599999
+            ]
+          },
+          {
+            "id": "kelp-eye-258-p1",
+            "anchor": [
+              0,
+              12
+            ],
+            "in": [
+              4.4182779984,
+              12
+            ],
+            "out": [
+              -4.4182779984,
+              12
+            ]
+          },
+          {
+            "id": "kelp-eye-258-p2",
+            "anchor": [
+              -8,
+              0
+            ],
+            "in": [
+              -8,
+              6.627416997599999
+            ],
+            "out": [
+              -8,
+              -6.627416997599999
+            ]
+          },
+          {
+            "id": "kelp-eye-258-p3",
+            "anchor": [
+              0,
+              -12
+            ],
+            "in": [
+              -4.4182779984,
+              -12
+            ],
+            "out": [
+              4.4182779984,
+              -12
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "kelp-shine-258",
+      "name": "shine 258",
+      "kind": "path",
+      "artboardId": "kelp-board",
+      "parentId": null,
+      "order": 29,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        256,
+        325
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#ffffff",
+        "skin": null,
+        "points": [
+          {
+            "id": "kelp-shine-258-p0",
+            "anchor": [
+              2.5,
+              0
+            ],
+            "in": [
+              2.5,
+              -2.2091389992
+            ],
+            "out": [
+              2.5,
+              2.2091389992
+            ]
+          },
+          {
+            "id": "kelp-shine-258-p1",
+            "anchor": [
+              0,
+              4
+            ],
+            "in": [
+              1.3807118745,
+              4
+            ],
+            "out": [
+              -1.3807118745,
+              4
+            ]
+          },
+          {
+            "id": "kelp-shine-258-p2",
+            "anchor": [
+              -2.5,
+              0
+            ],
+            "in": [
+              -2.5,
+              2.2091389992
+            ],
+            "out": [
+              -2.5,
+              -2.2091389992
+            ]
+          },
+          {
+            "id": "kelp-shine-258-p3",
+            "anchor": [
+              0,
+              -4
+            ],
+            "in": [
+              -1.3807118745,
+              -4
+            ],
+            "out": [
+              1.3807118745,
+              -4
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "kelp-left-cheek",
+      "name": "left cheek",
+      "kind": "path",
+      "artboardId": "kelp-board",
+      "parentId": null,
+      "order": 30,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        193,
+        351
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#dfb69a",
+        "skin": null,
+        "points": [
+          {
+            "id": "kelp-left-cheek-p0",
+            "anchor": [
+              12,
+              0
+            ],
+            "in": [
+              12,
+              -3.3137084987999996
+            ],
+            "out": [
+              12,
+              3.3137084987999996
+            ]
+          },
+          {
+            "id": "kelp-left-cheek-p1",
+            "anchor": [
+              0,
+              6
+            ],
+            "in": [
+              6.627416997599999,
+              6
+            ],
+            "out": [
+              -6.627416997599999,
+              6
+            ]
+          },
+          {
+            "id": "kelp-left-cheek-p2",
+            "anchor": [
+              -12,
+              0
+            ],
+            "in": [
+              -12,
+              3.3137084987999996
+            ],
+            "out": [
+              -12,
+              -3.3137084987999996
+            ]
+          },
+          {
+            "id": "kelp-left-cheek-p3",
+            "anchor": [
+              0,
+              -6
+            ],
+            "in": [
+              -6.627416997599999,
+              -6
+            ],
+            "out": [
+              6.627416997599999,
+              -6
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "kelp-right-cheek",
+      "name": "right cheek",
+      "kind": "path",
+      "artboardId": "kelp-board",
+      "parentId": null,
+      "order": 31,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        275,
+        349
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#dfb69a",
+        "skin": null,
+        "points": [
+          {
+            "id": "kelp-right-cheek-p0",
+            "anchor": [
+              12,
+              0
+            ],
+            "in": [
+              12,
+              -3.3137084987999996
+            ],
+            "out": [
+              12,
+              3.3137084987999996
+            ]
+          },
+          {
+            "id": "kelp-right-cheek-p1",
+            "anchor": [
+              0,
+              6
+            ],
+            "in": [
+              6.627416997599999,
+              6
+            ],
+            "out": [
+              -6.627416997599999,
+              6
+            ]
+          },
+          {
+            "id": "kelp-right-cheek-p2",
+            "anchor": [
+              -12,
+              0
+            ],
+            "in": [
+              -12,
+              3.3137084987999996
+            ],
+            "out": [
+              -12,
+              -3.3137084987999996
+            ]
+          },
+          {
+            "id": "kelp-right-cheek-p3",
+            "anchor": [
+              0,
+              -6
+            ],
+            "in": [
+              -6.627416997599999,
+              -6
+            ],
+            "out": [
+              6.627416997599999,
+              -6
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "kelp-smile",
+      "name": "smile",
+      "kind": "path",
+      "artboardId": "kelp-board",
+      "parentId": null,
+      "order": 32,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": false,
+        "fill": null,
+        "skin": null,
+        "points": [
+          {
+            "id": "kelp-smile-p0",
+            "anchor": [
+              225,
+              350
+            ],
+            "in": [
+              225,
+              350
+            ],
+            "out": [
+              233,
+              363
+            ]
+          },
+          {
+            "id": "kelp-smile-p1",
+            "anchor": [
+              246,
+              350
+            ],
+            "in": [
+              238,
+              362
+            ],
+            "out": [
+              246,
+              350
+            ]
+          }
+        ],
+        "stroke": {
+          "color": "#3e776e",
+          "width": 3,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "kelp-wave-target",
+      "name": "wave target",
+      "kind": "group",
+      "artboardId": "kelp-board",
+      "parentId": null,
+      "order": 33,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        245,
+        190
+      ],
+      "geometry": null
+    }
+  ],
+  "assets": [],
+  "animations": [
+    {
+      "id": "kelp-little-wave",
+      "name": "A little wave",
+      "artboardId": "kelp-board",
+      "fps": 60,
+      "duration": 120,
+      "loop": true,
+      "tracks": [
+        {
+          "targetId": "kelp-wave-target",
+          "property": "x",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 245,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 300,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 245,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "kelp-wave-target",
+          "property": "y",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 190,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 60,
+              "value": 245,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            },
+            {
+              "frame": 120,
+              "value": 190,
+              "easing": {
+                "type": "cubic",
+                "curve": [
+                  0.45,
+                  0,
+                  0.55,
+                  1
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "kelp-board": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    },
+    "weightLocks": [
+      {
+        "nodeId": "kelp-hello-tendril",
+        "pointId": "kelp-hello-tendril-p2",
+        "control": "anchor",
+        "boneId": "kelp-wave-bone-1"
+      }
+    ]
+  },
+  "advanced": {
+    "clips": [],
+    "feathers": [],
+    "ik": [
+      {
+        "boneId": "kelp-wave-bone-4",
+        "targetId": "kelp-wave-target",
+        "count": 4,
+        "invert": false,
+        "strength": 1
+      }
+    ]
+  }
+}

@@ -267,5 +267,21 @@
     "bytes": 3178,
     "retrievedAt": "2026-10-21T08:39:41.911971+00:00",
     "sha256": "13400dbc3b0788c0d78ed2715872a4ed7cea386b11daebb20a7959decab2171f"
+  },
+  {
+    "name": "mdn-resize-observer",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver",
+    "status": 200,
+    "bytes": 154794,
+    "retrievedAt": "2026-10-21T14:21:34.183203+00:00",
+    "sha256": "26111343fc43c5f409782b8ccef00ed20fc35eacf947ecb2927d73cd6354eaac"
+  },
+  {
+    "name": "mdn-idb-transactions",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction",
+    "status": 200,
+    "bytes": 166175,
+    "retrievedAt": "2026-10-21T14:21:34.242849+00:00",
+    "sha256": "977ed77a09b4c315c181ab521e688d2b4a90ca258fcfd7b3c927b7406175636c"
   }
 ]

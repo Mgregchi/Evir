@@ -418,6 +418,7 @@ export function mountAdvanced(api) {
                   };
                 }
                 p.nodes.find((v) => v.id === n.id).geometry = draft;
+                if(bone&&p.editor.weightLocks){p.editor.weightLocks=p.editor.weightLocks.filter(l=>l.nodeId!==n.id);if(!p.editor.weightLocks.length)delete p.editor.weightLocks;}
               }),
             api.notice,
             this,

@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-10-21T14:52:38.574447+00:00",
+  "status": "in-progress: official-runtime and public-site integration checks are running",
+  "scope": "Cloud Chromium/software rendering only. No physical-device or human-study evidence.",
+  "baseMain": "c10290725dd62d556b67a35a10d5c3841924aca1",
+  "local": {
+    "unitTests": {
+      "passed": 220,
+      "failed": 0,
+      "command": "node --test tests/editor/*.test.mjs tests/runtime/*.test.mjs tests/frontend/*.test.mjs"
+    },
+    "standaloneBuilds": {
+      "passed": 6,
+      "command": "npm run runtime:build"
+    },
+    "editorWorkflows": {
+      "status": "passed in segments",
+      "note": "Initial timing failures are retained. A separate reload failure led to a deterministic background-resize regression and its fix. Existing assertions/timeouts were retained."
+    }
+  },
+  "recoveryProof": "recovery/regression.json",
+  "deferred": [
+    "physical-device testing",
+    "hosted backend services"
+  ],
+  "hostedCI": "Previous jobs could not start because the repository account is locked due to billing; recheck the new head after push."
+}

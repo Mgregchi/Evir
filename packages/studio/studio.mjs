@@ -2503,7 +2503,9 @@ new ResizeObserver(() => {
     // Fit views stay fitted; manually panned views retain their world-space center.
     cancelDrag();
     resetTouches();
-    if (fittedView) fit();
+    // Layout changes are view adjustments, not source edits. Saving here can
+    // reclaim another tab's newly saved copy as the last active project.
+    if (fittedView) fit(false);
     else {
       if (stageSize) {
         camera().x += (r.width - stageSize.width) / 2;
@@ -2578,7 +2580,7 @@ advanced = mountAdvanced({
   select,
   notice,
 });
-weightTools=mountSkinWeights({authored:()=>store.snapshot(),project,selected:()=>selected,mode:()=>authoring.mode,revision:()=>store.revision,
+weightTools=mountSkinWeights({authored:()=>store.readCommitted(),project,selected:()=>selected,mode:()=>authoring.mode,revision:()=>store.revision,
   editable:(p,n)=>editable(p,n,"locked")&&editable(p,n,"hidden"),ready:penReady,cancel:cancelDrag,
   commit:(label,fn)=>edit(label,fn,true),draw,notice,refresh:render,cursor:()=>{stage.style.cursor=toolCursor();},
   activate:()=>{setTool("select");render();if(matchMedia("(max-width:850px)").matches)document.querySelector("#close-panel")?.click();},focusStage:()=>stage.focus()});

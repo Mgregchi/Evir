@@ -1,3 +1,4 @@
+import {validateWeightLocks} from './weight-locks.mjs';
 export {
   encodeBase64,
   decodeBase64,
@@ -236,7 +237,7 @@ function validateDocument(p, runtime) {
     )
       problem(`${path}.data`, "expected base64 asset bytes");
   });
-  if (!runtime && record(p.editor, "editor", ["locked", "hidden", "cameras"])) {
+  if (!runtime && record(p.editor, "editor", ["locked", "hidden", "cameras",...(Object.hasOwn(p.editor??{},"weightLocks")?["weightLocks"]:[])])) {
     for (const k of ["locked", "hidden"]) {
       if (!Array.isArray(p.editor[k]))
         problem(`editor.${k}`, "expected ID array");
@@ -271,6 +272,7 @@ function validateDocument(p, runtime) {
     validateFeatures(p, problem, identifier, { editorState: !runtime });
   if (!issues.length && sceneVersion === 3)
     validateAdvanced(p, problem, identifier);
+  if (!issues.length && !runtime) validateWeightLocks(p, problem);
   if (issues.length) throw new ProjectError(issues);
   return p;
 }

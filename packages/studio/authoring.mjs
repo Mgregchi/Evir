@@ -17,6 +17,7 @@ import {
   insertPoint,
   removePoint,
   bindPath,
+  unbindSkin,
   setWeight,
   setKey,
   createAnimation,
@@ -471,6 +472,8 @@ export function mountAuthoring(api) {
         (v) => v.kind === "bone" && v.artboardId === n.artboardId,
       ),
       chosen = new Set(n.geometry.skin?.bones.map((b) => b.boneId) || []);
+    if(bones.length>24)rig.append(el("p","Use Bind skin bones… or Rebind skin bones… below to search all bones."));
+    else {
     for (const b of bones) {
       const label = el("label");
       label.className = "check-field";
@@ -489,12 +492,13 @@ export function mountAuthoring(api) {
         () => transaction("Bind path", (p) => bindPath(p, n.id, [...chosen])),
       ),
     );
+    }
     if (n.geometry.skin) {
       rig.append(
         button("Unbind", () =>
           transaction(
             "Unbind path",
-            (p) => (p.nodes.find((v) => v.id === n.id).geometry.skin = null),
+            (p) => unbindSkin(p,n.id),
           ),
         ),
       );
