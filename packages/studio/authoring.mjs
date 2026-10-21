@@ -69,6 +69,8 @@ export function mountAuthoring(api) {
     player = null,
     playerSource = null,
     selectedKey = null,
+    keyProperty = "x",
+    keyEasing = "linear",
     editState = null,
     lastTime = 0,
     raf = null;
@@ -712,13 +714,14 @@ export function mountAuthoring(api) {
             ["x", "y"].includes(k)
           ),
       );
-      let property = allowed[0],
-        easing = "linear";
+      keyProperty=allowed.includes(keyProperty)?keyProperty:allowed[0];
+      let property = keyProperty,
+        easing = keyEasing;
       const propertySelect = select(
           "Key property",
           allowed.map((k) => [k, k]),
           property,
-          (v) => (property = v),
+          (v) => (keyProperty=property = v),
         ),
         easingSelect = select(
           "New key easing",
@@ -728,7 +731,7 @@ export function mountAuthoring(api) {
             ["cubic", "Cubic ease"],
           ],
           easing,
-          (v) => (easing = v),
+          (v) => (keyEasing=easing = v),
         );
       controls.append(
         propertySelect,

@@ -1,3 +1,4 @@
+import {solveChain} from './ik-chain.mjs';
 import {
   worldTransform,
   inverse,
@@ -10,6 +11,7 @@ import {
 import { components, getValue } from "./geometry.mjs";
 export function solveIK(p) {
   for (const ik of p.advanced?.ik ?? []) {
+    if(ik.count>2){solveChain(p,ik);continue;}
     const tip = p.nodes.find((n) => n.id === ik.boneId),
       root = ik.count === 2 ? p.nodes.find((n) => n.id === tip.parentId) : tip;
     const parent = root.parentId

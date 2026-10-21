@@ -1,3 +1,4 @@
+import {validatePaint,gradientProperties,gradientValue} from './paint.mjs';
 // Retained centerline paint. Source v3 / runtime v2; earlier readers reject it.
 import {pathContours,pathPoints} from './contours.mjs';
 export const STROKE_CAPS = ["butt", "round", "square"];
@@ -7,10 +8,11 @@ export function defaultStroke(color = "#243f33") {
     trim: {start: 0, end: 1, offset: 0}};
 }
 export function strokeProperties(n) {
-  return n.geometry?.stroke ? ["stroke.width", "stroke.color", "stroke.trimStart", "stroke.trimEnd", "stroke.trimOffset",
+  return n.geometry?.stroke ? ["stroke.width", ...(typeof n.geometry.stroke.color==='string'?["stroke.color"]:gradientProperties(n.geometry.stroke.color,'stroke.paint.')), "stroke.trimStart", "stroke.trimEnd", "stroke.trimOffset",
     ...(Array.isArray(n.geometry.stroke.dash) && n.geometry.stroke.dash.length ? ["stroke.dashOffset"] : [])] : [];
 }
 export function strokeValue(n, property, value) {
+  if(property.startsWith("stroke.paint."))return arguments.length===3?gradientValue(n.geometry.stroke.color,property.slice(13),value):gradientValue(n.geometry.stroke.color,property.slice(13));
   const key = property.slice(7), stroke = n.geometry.stroke;
   const host = key.startsWith("trim") ? stroke.trim : stroke;
   const field = key.startsWith("trim") ? key.slice(4).toLowerCase() : key;
@@ -28,11 +30,10 @@ export function validateStroke(n, p, problem) {
     return true;
   };
   if (!p.advanced) problem(path, "native strokes require source v3 / runtime v2");
-  if (g.skin) problem(path, "strokes on skinned paths are outside the tested contract");
   if (p.advanced?.feathers?.some(f => f.targetId === n.id)) problem(path, "stroke feathering is outside the tested contract");
   const s = g.stroke;
   if (!rec(s,path,["color","width","cap","join","dash","dashOffset","trim"])) return;
-  if (typeof s.color !== "string" || !/^#[\da-fA-F]{6}([\da-fA-F]{2})?$/.test(s.color)) problem(path+".color", "expected hex color");
+  validatePaint(s.color,path+".color",problem);
   const finite = (v,k,lo,hi) => {if (!Number.isFinite(v) || v < lo || v > hi) problem(path+"."+k,`expected number in [${lo},${hi}]`);};
   finite(s.width,"width",0,256);
   if (!STROKE_CAPS.includes(s.cap)) problem(path+".cap","expected butt, round or square");

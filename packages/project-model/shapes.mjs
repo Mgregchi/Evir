@@ -81,7 +81,7 @@ export function shapeGeometry(preset,options={},pointId=()=>newId('point')){
   return {kind:'path',width:w,height:h,geometry};
 }
 
-export function shapeOptionKeys(type){return ['width',...(!['circle','line'].includes(type)?['height']:[]),...(['rounded','bubble'].includes(type)?['radius']:[]),...(['star','polygon'].includes(type)?['sides']:[]),...(type==='star'?['inner']:[])];}
+export function shapeOptionKeys(type){return ['width',...(type!=='circle'?['height']:[]),...(['rounded','bubble'].includes(type)?['radius']:[]),...(['star','polygon'].includes(type)?['sides']:[]),...(type==='star'?['inner']:[])];}
 export function canonicalShape(type,options={}){
  const result=shapeGeometry(type,options),{width,height}=result;
  const defaults={width,height,radius:Math.min(20,Math.min(width,(type==='bubble'?.76:1)*height)/2),sides:type==='star'?5:6,inner:45};

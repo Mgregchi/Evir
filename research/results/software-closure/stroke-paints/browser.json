@@ -1,0 +1,75 @@
+{
+  "checkedAt": "2026-10-21T08:25:29.363Z",
+  "scope": "Cloud viewports and automated accessibility, not physical/human evidence.",
+  "viewports": [
+    {
+      "width": 320,
+      "height": 844,
+      "checks": [
+        "editable skinned gradient source",
+        "cancel preserves source",
+        "radial/endpoints authoring",
+        "reachable actions",
+        "zero automated WCAG violations",
+        "one-step undo/redo",
+        "width edit retains gradient",
+        "gradient property keying",
+        "exact native export",
+        "durable recovery",
+        "no overflow"
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "checks": [
+        "editable skinned gradient source",
+        "cancel preserves source",
+        "radial/endpoints authoring",
+        "reachable actions",
+        "zero automated WCAG violations",
+        "one-step undo/redo",
+        "width edit retains gradient",
+        "gradient property keying",
+        "exact native export",
+        "durable recovery",
+        "no overflow"
+      ]
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "checks": [
+        "editable skinned gradient source",
+        "cancel preserves source",
+        "radial/endpoints authoring",
+        "reachable actions",
+        "zero automated WCAG violations",
+        "one-step undo/redo",
+        "width edit retains gradient",
+        "gradient property keying",
+        "exact native export",
+        "durable recovery",
+        "no overflow"
+      ]
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "checks": [
+        "editable skinned gradient source",
+        "cancel preserves source",
+        "radial/endpoints authoring",
+        "reachable actions",
+        "zero automated WCAG violations",
+        "one-step undo/redo",
+        "width edit retains gradient",
+        "gradient property keying",
+        "exact native export",
+        "durable recovery",
+        "no overflow"
+      ]
+    }
+  ],
+  "browser": "153.0.8010.12"
+}

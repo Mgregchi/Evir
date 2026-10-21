@@ -2159,7 +2159,27 @@
         "fill": "#a5d6bb",
         "skin": null,
         "stroke": {
-          "color": "#407a72",
+          "color": {
+            "type": "linear",
+            "start": [
+              -109,
+              -120
+            ],
+            "end": [
+              109,
+              135
+            ],
+            "stops": [
+              {
+                "position": 0,
+                "color": "#407a72ff"
+              },
+              {
+                "position": 1,
+                "color": "#b7e7caff"
+              }
+            ]
+          },
           "width": 4,
           "cap": "round",
           "join": "round",

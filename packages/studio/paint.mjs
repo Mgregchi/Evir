@@ -4,6 +4,8 @@ const el = (tag, text) => {
   if (text !== undefined) node.textContent = text;
   return node;
 };
+const readPaint=(geometry,target)=>target==='stroke'?geometry.stroke.color:geometry.fill;
+const writePaint=(geometry,target,value)=>{if(target==='stroke')geometry.stroke.color=value;else geometry.fill=value;};
 // Inspector and path controls share the same transaction; draft paint never
 // mutates the project until Apply. Native dialog supplies focus containment,
 // while the existing interaction-sheet CSS supplies the bottom-sheet UI.
@@ -15,9 +17,10 @@ export function paintControls({
   disabled = false,
   paintDisabled = disabled,
   label = "Fill color",
+  target = "fill",
 }) {
   const host = el("div"),
-    fill = node.geometry.fill;
+    fill = readPaint(node.geometry,target);
   if (typeof fill === "string") {
     const field = el("label");
     field.className = "field";
@@ -30,9 +33,8 @@ export function paintControls({
     input.onchange = () =>
       commit("Change fill", (p) => {
         const geometry = p.nodes.find((n) => n.id === node.id).geometry;
-        geometry.fill =
-          input.value +
-          (geometry.fill.length === 9 ? geometry.fill.slice(7) : "");
+        const original=readPaint(geometry,target);
+        writePaint(geometry,target,input.value+(original.length===9?original.slice(7):""));
       });
     field.append(input);
     host.append(field);
@@ -43,12 +45,13 @@ export function paintControls({
         `${fill.type === "linear" ? "Linear" : "Radial"} gradient · ${fill.stops.length} stops`,
       ),
     );
-  const open = el("button", "Edit fill");
+  const open = el("button", target==='stroke'?"Edit stroke paint":"Edit fill");
   open.disabled = paintDisabled;
   open.dataset.paintNode = node.id;
+  open.dataset.paintTarget=target;
   open.onclick = () => {
     try {
-      openPaintSheet({ project, node, commit, open });
+      openPaintSheet({ project, node, commit, open, target });
     } catch (error) {
       notice(error);
     }
@@ -56,13 +59,13 @@ export function paintControls({
   host.append(open);
   return host;
 }
-function openPaintSheet({ project, node, commit, open }) {
+function openPaintSheet({ project, node, commit, open, target }) {
   document.querySelector("#paint-sheet")?.remove();
   const sheet = el("dialog");
   sheet.id = "paint-sheet";
   sheet.className = "interaction-sheet";
   sheet.setAttribute("aria-labelledby", "paint-title");
-  const title = el("h2", `Fill · ${node.name}`);
+  const title = el("h2", `${target==='stroke'?'Stroke paint':'Fill'} · ${node.name}`);
   title.id = "paint-title";
   const description = el(
     "p",
@@ -74,7 +77,7 @@ function openPaintSheet({ project, node, commit, open }) {
   const form = el("form"),
     body = el("div");
   form.noValidate = true;
-  const original = structuredClone(node.geometry.fill);
+  const original = structuredClone(readPaint(node.geometry,target));
   const initial = original ?? "#8fd9af";
   let kind = typeof initial === "string" ? "solid" : initial.type;
   let solid = typeof initial === "string" ? initial : initial.stops[0].color;
@@ -145,9 +148,9 @@ function openPaintSheet({ project, node, commit, open }) {
   };
   const typeLabel = el("label");
   typeLabel.className = "field";
-  typeLabel.append(el("span", "Fill type"));
+  typeLabel.append(el("span", target==='stroke'?"Stroke paint type":"Fill type"));
   const type = el("select");
-  type.setAttribute("aria-label", "Fill type");
+  type.setAttribute("aria-label", target==='stroke'?"Stroke paint type":"Fill type");
   for (const [value, label] of [
     ["solid", "Solid"],
     ["linear", "Linear gradient"],
@@ -257,10 +260,10 @@ function openPaintSheet({ project, node, commit, open }) {
   }
   const actions = el("div");
   actions.className = "dialog-actions";
-  const cancel = el("button", "Cancel fill");
+  const cancel = el("button", target==='stroke'?"Cancel stroke paint":"Cancel fill");
   cancel.type = "button";
   cancel.onclick = () => sheet.close();
-  const apply = el("button", "Apply fill");
+  const apply = el("button", target==='stroke'?"Apply stroke paint":"Apply fill");
   apply.type = "submit";
   apply.className = "primary";
   actions.append(cancel, apply);
@@ -270,6 +273,7 @@ function openPaintSheet({ project, node, commit, open }) {
   render();
   form.onsubmit = (event) => {
     event.preventDefault();
+    if(!sheet.open||!sheet.isConnected)return;
     try {
       const fill =
         kind === "solid"
@@ -285,27 +289,22 @@ function openPaintSheet({ project, node, commit, open }) {
       if (
         kind !== "solid" &&
         project.animations.some((a) =>
-          a.tracks.some((t) => t.targetId === node.id && t.property === "fill"),
+          a.tracks.some((t) => t.targetId === node.id && t.property === (target==='stroke'?'stroke.color':'fill')),
         )
       )
         throw Error(
-          "This shape has fill color keys. Remove those keys before converting to a gradient.",
+          "This paint has color keys. Remove those keys before converting to a gradient.",
         );
       const candidate = structuredClone(project);
-      candidate.nodes.find((n) => n.id === node.id).geometry.fill =
-        structuredClone(fill);
+      writePaint(candidate.nodes.find((n)=>n.id===node.id).geometry,target,structuredClone(fill));
       if(node.geometry.skin && typeof fill!=="string")upgradeAdvanced(candidate);
       validateProject(candidate);
       if (
         !commit("Change shape paint", (p) => {
-          const target = p.nodes.find((n) => n.id === node.id);
-          if (
-            !target ||
-            JSON.stringify(target.geometry.fill) !== JSON.stringify(original)
-          )
-            throw Error("The shape changed. Reopen its fill before applying.");
-          if(target.geometry.skin && typeof fill!=="string")upgradeAdvanced(p);
-          target.geometry.fill = structuredClone(fill);
+          const layer=p.nodes.find(n=>n.id===node.id);
+          if(!layer||JSON.stringify(readPaint(layer.geometry,target))!==JSON.stringify(original))throw Error('The shape changed. Reopen its paint before applying.');
+          if(layer.geometry.skin&&typeof fill!=="string")upgradeAdvanced(p);
+          writePaint(layer.geometry,target,structuredClone(fill));
         })
       )
         throw Error(
@@ -320,7 +319,7 @@ function openPaintSheet({ project, node, commit, open }) {
     "close",
     () => {
       (
-        document.querySelector(`[data-paint-node="${node.id}"]`) || open
+        document.querySelector(`[data-paint-node="${node.id}"][data-paint-target="${target}"]`) || open
       ).focus();
       sheet.remove();
     },

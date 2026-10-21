@@ -1,0 +1,156 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 3,
+  "id": "project-edec0ed9-3f5f-4339-a770-7fd6fb2d46ac",
+  "name": "Untitled character",
+  "artboards": [
+    {
+      "id": "artboard-94b8d381-308a-4843-a6ed-fe499514bc30",
+      "name": "Artboard 1",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "node-961a5032-dbb6-472a-bba4-025c9bd722c9",
+      "name": "Polygon",
+      "kind": "path",
+      "artboardId": "artboard-94b8d381-308a-4843-a6ed-fe499514bc30",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        166,
+        176
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#89e4c4",
+        "skin": null,
+        "points": [
+          {
+            "id": "point-f1171ffb-2de6-4aa9-b6d2-e9644fadb211",
+            "anchor": [
+              110,
+              0
+            ],
+            "in": [
+              110,
+              0
+            ],
+            "out": [
+              110,
+              0
+            ]
+          },
+          {
+            "id": "point-3907ba68-8c51-441d-bc0b-1fc00e490498",
+            "anchor": [
+              205.26279441628824,
+              40
+            ],
+            "in": [
+              205.26279441628824,
+              40
+            ],
+            "out": [
+              205.26279441628824,
+              40
+            ]
+          },
+          {
+            "id": "point-10aa5d17-9734-48bb-95dc-eb4fea87f182",
+            "anchor": [
+              205.26279441628827,
+              119.99999999999999
+            ],
+            "in": [
+              205.26279441628827,
+              119.99999999999999
+            ],
+            "out": [
+              205.26279441628827,
+              119.99999999999999
+            ]
+          },
+          {
+            "id": "point-b0b41ab7-44a6-439d-82f8-e928cbfe27f9",
+            "anchor": [
+              110,
+              160
+            ],
+            "in": [
+              110,
+              160
+            ],
+            "out": [
+              110,
+              160
+            ]
+          },
+          {
+            "id": "point-bfc17dc6-4c8f-4090-9789-055d30d00004",
+            "anchor": [
+              14.737205583711766,
+              120.00000000000003
+            ],
+            "in": [
+              14.737205583711766,
+              120.00000000000003
+            ],
+            "out": [
+              14.737205583711766,
+              120.00000000000003
+            ]
+          },
+          {
+            "id": "point-0af90389-b130-43ac-b015-f4561cf9e08d",
+            "anchor": [
+              14.737205583711754,
+              39.99999999999999
+            ],
+            "in": [
+              14.737205583711754,
+              39.99999999999999
+            ],
+            "out": [
+              14.737205583711754,
+              39.99999999999999
+            ]
+          }
+        ],
+        "shape": {
+          "type": "polygon",
+          "options": {
+            "width": 220,
+            "height": 160,
+            "sides": 6
+          }
+        }
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "artboard-94b8d381-308a-4843-a6ed-fe499514bc30": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  },
+  "advanced": {
+    "clips": [],
+    "feathers": [],
+    "ik": []
+  }
+}

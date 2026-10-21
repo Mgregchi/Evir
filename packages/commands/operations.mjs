@@ -1,14 +1,14 @@
-import {removeSubtree,reparent,setKey,addShape,setShapeParameters,detachShape,combinePaths,releaseCompound,joinPaths} from '@evir/authoring';
+import {removeSubtree,reparent,setKey,addShape,setShapeParameters,detachShape,combinePaths,releaseCompound,joinPaths,bindSkin,setSkinWeights} from '@evir/authoring';
 import {upgradeAdvanced} from '@evir/project-model';
-import {object,fail,text} from './validation.mjs';
-export const commandNames=['create_node','update_node','remove_node','reparent_node','create_animation','set_key','set_playback','create_machine','create_shape','set_shape_parameters','detach_shape','combine_paths','release_compound','join_paths'];
+import {object,fail,text,integer} from './validation.mjs';
+export const commandNames=['create_node','update_node','remove_node','reparent_node','create_animation','set_key','set_playback','create_machine','create_shape','set_shape_parameters','detach_shape','combine_paths','release_compound','join_paths','set_ik','bind_skin','set_skin_weights'];
 function node(p,id,board){const n=p.nodes.find(n=>n.id===id&&n.artboardId===board);if(!n)fail('MISSING_TARGET','Node is outside this artboard or absent');return n;}
 function writable(p,n){for(let v=n;v;v=p.nodes.find(n=>n.id===v.parentId))if(p.editor.locked.includes(v.id))fail('LOCKED','A target or ancestor is locked');}
 export function applyCommands(p,commands,board){
   if(!Array.isArray(commands)||commands.length<1||commands.length>64)fail('INVALID_ARGUMENT','Patch needs 1–64 commands');
   const changed=new Set();
   for(const c of commands){
-    object(c,['op'],['node','nodeId','changes','parentId','animation','animationId','property','frame','value','easing','playback','machine','preset','options','nodeIds','fillRule','otherId']);
+    object(c,['op'],['node','nodeId','changes','parentId','animation','animationId','property','frame','value','easing','playback','machine','preset','options','nodeIds','fillRule','otherId','constraint','boneIds']);
     const requireShape=(keys)=>object(c,['op',...keys]);
     const animation=id=>{const a=p.animations.find(a=>a.id===id&&a.artboardId===board);if(!a)fail('MISSING_TARGET','Animation is outside this artboard or absent');return a;};
     if(c.op==='create_node'){
@@ -53,6 +53,18 @@ export function applyCommands(p,commands,board){
       requireShape(['nodeId']);writable(p,node(p,c.nodeId,board));for(const id of releaseCompound(p,c.nodeId))changed.add(id);
     }else if(c.op==='join_paths'){
       requireShape(['nodeId','otherId','options']);writable(p,node(p,c.nodeId,board));writable(p,node(p,c.otherId,board));object(c.options,[],['keepEnd','otherEnd','mode']);joinPaths(p,c.nodeId,c.otherId,c.options);changed.add(c.nodeId);changed.add(c.otherId);
+    }else if(c.op==='set_ik'){
+      requireShape(['nodeId','constraint']);const n=node(p,c.nodeId,board);writable(p,n);if(n.kind!=='bone')fail('INVALID_ARGUMENT','IK belongs to a bone');
+      upgradeAdvanced(p);const index=p.advanced.ik.findIndex(v=>v.boneId===n.id);
+      if(c.constraint===null){if(index>=0)p.advanced.ik.splice(index,1);changed.add(n.id);}
+      else{object(c.constraint,['targetId','count','invert','strength']);integer(c.constraint.count,'Chain length',1,8);node(p,c.constraint.targetId,board);
+        let b=n;for(let i=0;i<c.constraint.count;i++){if(!b||b.kind!=='bone')fail('MISSING_TARGET','Missing IK chain bone');writable(p,b);changed.add(b.id);b=p.nodes.find(v=>v.id===b.parentId);}
+        const constraint={boneId:n.id,...structuredClone(c.constraint)};if(index>=0)p.advanced.ik[index]=constraint;else p.advanced.ik.push(constraint);
+      }
+    }else if(c.op==='bind_skin'){
+      requireShape(['nodeId','boneIds']);writable(p,node(p,c.nodeId,board));if(!Array.isArray(c.boneIds))fail('INVALID_ARGUMENT','Choose bone IDs');for(const id of c.boneIds)node(p,id,board);bindSkin(p,c.nodeId,c.boneIds);changed.add(c.nodeId);
+    }else if(c.op==='set_skin_weights'){
+      requireShape(['nodeId','changes']);writable(p,node(p,c.nodeId,board));if(!Array.isArray(c.changes))fail('INVALID_ARGUMENT','Choose control assignments');for(const change of c.changes)object(change,['pointId','control','boneId','value']);setSkinWeights(p,c.nodeId,c.changes);changed.add(c.nodeId);
     }else fail('UNSUPPORTED_COMMAND',`Unsupported command ${c.op}`);
   }
   return [...changed];

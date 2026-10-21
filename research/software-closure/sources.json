@@ -193,5 +193,79 @@
     "status": 200,
     "bytes": 4562,
     "sha256": "956a78df0ab42af422f98ccf5b0ce6ec47307c418b942104fbc2609f7c59d9d6"
+  },
+  {
+    "name": "pinned-linear_gradient.cpp",
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/shapes/paint/linear_gradient.cpp",
+    "status": 200,
+    "bytes": 8698,
+    "retrievedAt": "2026-10-20T10:51:27.560878+00:00",
+    "sha256": "78fbb77d97bebf18af1183181ae603d497fd1e9f514e6188376766a0d05b5c88"
+  },
+  {
+    "name": "pinned-stroke.cpp",
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/shapes/paint/stroke.cpp",
+    "status": 200,
+    "bytes": 3577,
+    "retrievedAt": "2026-10-20T10:51:28.014180+00:00",
+    "sha256": "c4a35251cb2e70bf2934babd26dee101b9c5bff7208ad6058eedf4c1410c9279"
+  },
+  {
+    "name": "blender-auto-weights",
+    "url": "https://docs.blender.org/manual/en/latest/animation/armatures/skinning/parenting.html",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "name": "blender-weight-tools",
+    "url": "https://docs.blender.org/manual/en/latest/sculpt_paint/weight_paint/editing.html",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "name": "rive-ik-guide",
+    "url": "https://rive.app/docs/editor/constraints/ik-constraint.md",
+    "status": 200,
+    "bytes": 3992,
+    "retrievedAt": "2026-10-21T08:30:08.636444+00:00",
+    "sha256": "ed61d3753542bd5f0cd987a8942051055007f6bbac12dbf64d1776296314a2fe"
+  },
+  {
+    "name": "rive-bones-guide",
+    "url": "https://rive.app/docs/editor/manipulating-shapes/bones.md",
+    "status": 200,
+    "bytes": 8128,
+    "retrievedAt": "2026-10-21T08:30:09.572537+00:00",
+    "sha256": "5c39e551c8d298f27784017d365799d5c3452fc49258e0cf1b0b4611b8265698"
+  },
+  {
+    "name": "pinned-bone.cpp",
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/bones/bone.cpp",
+    "status": 200,
+    "bytes": 983,
+    "retrievedAt": "2026-10-21T08:39:41.911767+00:00",
+    "sha256": "54f60b7cffa77d30a28ebec00ca08b4a44b01c7d7cac18ac5e10a312cfa631d4"
+  },
+  {
+    "name": "pinned-constraint.hpp",
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/include/rive/constraints/constraint.hpp",
+    "status": 200,
+    "bytes": 2132,
+    "retrievedAt": "2026-10-21T08:39:41.911853+00:00",
+    "sha256": "1f0f0228d139f659a3ae35bd2715e0e2938acd852e11164ce1368df38acc804c"
+  },
+  {
+    "name": "pinned-constraint.cpp",
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/constraints/constraint.cpp",
+    "status": 200,
+    "bytes": 3622,
+    "retrievedAt": "2026-10-21T08:39:41.911875+00:00",
+    "sha256": "b93e60ea0f154b9b6497a577a5bf93309131137a6ac71760aad1aba4ff58123b"
+  },
+  {
+    "name": "pinned-transform_component.cpp",
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/transform_component.cpp",
+    "status": 200,
+    "bytes": 3178,
+    "retrievedAt": "2026-10-21T08:39:41.911971+00:00",
+    "sha256": "13400dbc3b0788c0d78ed2715872a4ed7cea386b11daebb20a7959decab2171f"
   }
 ]

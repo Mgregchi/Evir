@@ -22,7 +22,7 @@ export function compoundStudy(makeProject,{starting=false}={}){
  shape('beak','diamond',-12,-20,24,29,'#edbd75',owl);
  for(let i=0;i<3;i++)shape('belly-mark-'+i,'capsule',-34+i*27,57,12,29,'#78b7a4',owl);
  const a=anim('night-watch','Night watch');key(a,owl,'y',[[0,280],[60,273],[120,280]]);key(a,left,'rotation',[[0,-.03],[60,.06],[120,-.03]]);key(a,right,'rotation',[[0,.03],[60,-.06],[120,.03]]);
- if(!starting){booleanPaths(p,[body,holeL,holeR],{operation:'subtract'});const n=p.nodes.find(n=>n.id===body);n.geometry.stroke={...defaultStroke('#407a72'),width:4};}
+ if(!starting){booleanPaths(p,[body,holeL,holeR],{operation:'subtract'});const n=p.nodes.find(n=>n.id===body);n.geometry.stroke={...defaultStroke(),width:4,color:{type:'linear',start:[-109,-120],end:[109,135],stops:[{position:0,color:'#407a72ff'},{position:1,color:'#b7e7caff'}]}};}
  // Stable controls make both original sources and native exports reproducible.
  for(const n of p.nodes)if(n.kind==='path')for(const[c,part]of pathContours(n.geometry).entries())part.points.forEach((v,i)=>v.id=n.id+'-contour-'+c+'-point-'+i);
  return p;

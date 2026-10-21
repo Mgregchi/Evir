@@ -1,0 +1,353 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 3,
+  "id": "project-4ae5f9fd-4af8-4f54-aece-af65d2edd08a",
+  "name": "Imported Rive scene",
+  "artboards": [
+    {
+      "id": "artboard-cd732ca2-1615-45fe-aedd-23ceb0a17016",
+      "name": "Artboard 1",
+      "width": 640,
+      "height": 480
+    }
+  ],
+  "nodes": [
+    {
+      "id": "node-9cc4c3c0-9d3d-4f10-9755-96866b4d6063",
+      "name": "Bone",
+      "kind": "bone",
+      "artboardId": "artboard-cd732ca2-1615-45fe-aedd-23ceb0a17016",
+      "parentId": null,
+      "order": 1,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        80,
+        80
+      ],
+      "geometry": {
+        "length": 90
+      }
+    },
+    {
+      "id": "node-7dd49ee2-cde5-4e9a-8f03-d45853e28908",
+      "name": "Bone",
+      "kind": "bone",
+      "artboardId": "artboard-cd732ca2-1615-45fe-aedd-23ceb0a17016",
+      "parentId": "node-9cc4c3c0-9d3d-4f10-9755-96866b4d6063",
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "length": 90
+      }
+    },
+    {
+      "id": "node-0c3eebd8-ce36-464f-9cef-15ee7d730d8d",
+      "name": "Path",
+      "kind": "path",
+      "artboardId": "artboard-cd732ca2-1615-45fe-aedd-23ceb0a17016",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1.149999976158142,
+        0,
+        0,
+        0.8500000238418579,
+        90,
+        110
+      ],
+      "geometry": {
+        "fill": null,
+        "stroke": {
+          "color": "#89e4c4ff",
+          "width": 18,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        },
+        "closed": false,
+        "skin": {
+          "bindWorld": [
+            1.149999976158142,
+            0,
+            0,
+            0.8500000238418579,
+            90,
+            110
+          ],
+          "bones": [
+            {
+              "boneId": "node-9cc4c3c0-9d3d-4f10-9755-96866b4d6063",
+              "bind": [
+                1,
+                0,
+                0,
+                1,
+                80,
+                80
+              ]
+            },
+            {
+              "boneId": "node-7dd49ee2-cde5-4e9a-8f03-d45853e28908",
+              "bind": [
+                1,
+                0,
+                0,
+                1,
+                170,
+                80
+              ]
+            }
+          ],
+          "weights": [
+            {
+              "pointId": "point-849a6857-0e91-46ac-824b-81798cb54143",
+              "anchor": [
+                [
+                  "node-9cc4c3c0-9d3d-4f10-9755-96866b4d6063",
+                  1
+                ]
+              ],
+              "in": [
+                [
+                  "node-9cc4c3c0-9d3d-4f10-9755-96866b4d6063",
+                  1
+                ]
+              ],
+              "out": [
+                [
+                  "node-9cc4c3c0-9d3d-4f10-9755-96866b4d6063",
+                  1
+                ]
+              ]
+            },
+            {
+              "pointId": "point-bd86e741-ed80-491c-89da-057a71b669a8",
+              "anchor": [
+                [
+                  "node-9cc4c3c0-9d3d-4f10-9755-96866b4d6063",
+                  0.6666666666666666
+                ],
+                [
+                  "node-7dd49ee2-cde5-4e9a-8f03-d45853e28908",
+                  0.3333333333333333
+                ]
+              ],
+              "in": [
+                [
+                  "node-9cc4c3c0-9d3d-4f10-9755-96866b4d6063",
+                  0.6666666666666666
+                ],
+                [
+                  "node-7dd49ee2-cde5-4e9a-8f03-d45853e28908",
+                  0.3333333333333333
+                ]
+              ],
+              "out": [
+                [
+                  "node-9cc4c3c0-9d3d-4f10-9755-96866b4d6063",
+                  0.6666666666666666
+                ],
+                [
+                  "node-7dd49ee2-cde5-4e9a-8f03-d45853e28908",
+                  0.3333333333333333
+                ]
+              ]
+            },
+            {
+              "pointId": "point-0cd38b1b-415a-4c57-aa5e-ab09ac1bf9d1",
+              "anchor": [
+                [
+                  "node-9cc4c3c0-9d3d-4f10-9755-96866b4d6063",
+                  0.3333333333333333
+                ],
+                [
+                  "node-7dd49ee2-cde5-4e9a-8f03-d45853e28908",
+                  0.6666666666666666
+                ]
+              ],
+              "in": [
+                [
+                  "node-9cc4c3c0-9d3d-4f10-9755-96866b4d6063",
+                  0.3333333333333333
+                ],
+                [
+                  "node-7dd49ee2-cde5-4e9a-8f03-d45853e28908",
+                  0.6666666666666666
+                ]
+              ],
+              "out": [
+                [
+                  "node-9cc4c3c0-9d3d-4f10-9755-96866b4d6063",
+                  0.3333333333333333
+                ],
+                [
+                  "node-7dd49ee2-cde5-4e9a-8f03-d45853e28908",
+                  0.6666666666666666
+                ]
+              ]
+            },
+            {
+              "pointId": "point-aabe34a0-a3a4-49ae-b592-c12935e2afb7",
+              "anchor": [
+                [
+                  "node-7dd49ee2-cde5-4e9a-8f03-d45853e28908",
+                  1
+                ]
+              ],
+              "in": [
+                [
+                  "node-7dd49ee2-cde5-4e9a-8f03-d45853e28908",
+                  1
+                ]
+              ],
+              "out": [
+                [
+                  "node-7dd49ee2-cde5-4e9a-8f03-d45853e28908",
+                  1
+                ]
+              ]
+            }
+          ]
+        },
+        "points": [
+          {
+            "id": "point-849a6857-0e91-46ac-824b-81798cb54143",
+            "anchor": [
+              120,
+              60
+            ],
+            "in": [
+              119.99999855153196,
+              26.862915039062536
+            ],
+            "out": [
+              119.99999855153196,
+              93.13708496093747
+            ]
+          },
+          {
+            "id": "point-bd86e741-ed80-491c-89da-057a71b669a8",
+            "anchor": [
+              60,
+              120
+            ],
+            "in": [
+              93.1370849609375,
+              120
+            ],
+            "out": [
+              26.862915039062628,
+              119.9999971030639
+            ]
+          },
+          {
+            "id": "point-0cd38b1b-415a-4c57-aa5e-ab09ac1bf9d1",
+            "anchor": [
+              0,
+              60
+            ],
+            "in": [
+              -0.0000014484680442523888,
+              93.13708496093747
+            ],
+            "out": [
+              -0.0000014484680442523888,
+              26.862915039062536
+            ]
+          },
+          {
+            "id": "point-aabe34a0-a3a4-49ae-b592-c12935e2afb7",
+            "anchor": [
+              60,
+              0
+            ],
+            "in": [
+              26.862915039062628,
+              -0.0000028969360885047747
+            ],
+            "out": [
+              93.1370849609375,
+              0
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [
+    {
+      "id": "animation-19330215-8157-47cd-a83e-a68f79183f95",
+      "name": "Animation 1",
+      "artboardId": "artboard-cd732ca2-1615-45fe-aedd-23ceb0a17016",
+      "fps": 60,
+      "duration": 120,
+      "loop": true,
+      "tracks": [
+        {
+          "targetId": "node-7dd49ee2-cde5-4e9a-8f03-d45853e28908",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 0,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 60,
+              "value": 0.6000000238418579,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 120,
+              "value": 0,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "artboard-cd732ca2-1615-45fe-aedd-23ceb0a17016": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  },
+  "advanced": {
+    "clips": [],
+    "feathers": [],
+    "ik": []
+  }
+}

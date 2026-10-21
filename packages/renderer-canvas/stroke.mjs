@@ -1,3 +1,4 @@
+import {paintOnContext} from './paint.mjs';
 // Bounded software path effects. Source keeps cubic controls; effect output is
 // a polyline approximation (0.01-unit control-polygon excess, 8-unit chords).
 // Dash phase follows Rive's path-length wrap, not Canvas setLineDash phase.
@@ -88,7 +89,7 @@ export function strokeContours(g) {
   return dashed;
 }
 export function strokeStyle(ctx,g) {
-  const s=g.stroke;ctx.setLineDash([]);ctx.lineDashOffset=0;ctx.lineWidth=s.width;ctx.lineCap=s.cap;ctx.lineJoin=s.join;ctx.miterLimit=4;ctx.strokeStyle=s.color;
+  const s=g.stroke;ctx.setLineDash([]);ctx.lineDashOffset=0;ctx.lineWidth=s.width;ctx.lineCap=s.cap;ctx.lineJoin=s.join;ctx.miterLimit=4;ctx.strokeStyle=paintOnContext(ctx,s.color);
 }
 export function strokePathOnContext(ctx,g) {
   ctx.beginPath();

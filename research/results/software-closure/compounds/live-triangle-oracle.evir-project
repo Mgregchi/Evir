@@ -1,0 +1,110 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 3,
+  "id": "project-9829eae4-a8a5-4694-9c98-1df358068270",
+  "name": "Untitled character",
+  "artboards": [
+    {
+      "id": "artboard-9cf4e1ce-b1be-47f4-aba9-e210ecea1d8a",
+      "name": "Artboard 1",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "node-4320d22f-4b2c-4a53-9bd4-807b5a3efc50",
+      "name": "Triangle",
+      "kind": "path",
+      "artboardId": "artboard-9cf4e1ce-b1be-47f4-aba9-e210ecea1d8a",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        166,
+        176
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#89e4c4",
+        "skin": null,
+        "points": [
+          {
+            "id": "point-d942c37b-178b-450c-b373-3250800c12d9",
+            "anchor": [
+              110,
+              0
+            ],
+            "in": [
+              110,
+              0
+            ],
+            "out": [
+              110,
+              0
+            ]
+          },
+          {
+            "id": "point-da8a3648-76d4-4a9f-a76d-80e30056765e",
+            "anchor": [
+              220,
+              160
+            ],
+            "in": [
+              220,
+              160
+            ],
+            "out": [
+              220,
+              160
+            ]
+          },
+          {
+            "id": "point-eb3af9ef-1e53-4126-9d5e-0a737b7c3371",
+            "anchor": [
+              0,
+              160
+            ],
+            "in": [
+              0,
+              160
+            ],
+            "out": [
+              0,
+              160
+            ]
+          }
+        ],
+        "shape": {
+          "type": "triangle",
+          "options": {
+            "width": 220,
+            "height": 160
+          }
+        }
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "artboard-9cf4e1ce-b1be-47f4-aba9-e210ecea1d8a": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  },
+  "advanced": {
+    "clips": [],
+    "feathers": [],
+    "ik": []
+  }
+}

@@ -1,0 +1,268 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 3,
+  "id": "project-15aa589c-f118-425c-9b23-131b0be0d7d6",
+  "name": "IK 3 strength 0 invert false",
+  "artboards": [
+    {
+      "id": "artboard-4974b690-3634-4a5b-9f0a-263f93d54a11",
+      "name": "Artboard 1",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "node-3a30cec1-9c53-412d-b256-c6f9e40675c3",
+      "name": "Group",
+      "kind": "group",
+      "artboardId": "artboard-4974b690-3634-4a5b-9f0a-263f93d54a11",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        140,
+        250
+      ],
+      "geometry": null
+    },
+    {
+      "id": "node-6e5d99d6-02e3-4073-bb8d-9464a585dcae",
+      "name": "Segment 0",
+      "kind": "bone",
+      "artboardId": "artboard-4974b690-3634-4a5b-9f0a-263f93d54a11",
+      "parentId": "node-3a30cec1-9c53-412d-b256-c6f9e40675c3",
+      "order": 0,
+      "transform": [
+        0.9959527330119943,
+        -0.08987854919801104,
+        0.08987854919801104,
+        0.9959527330119943,
+        0,
+        0
+      ],
+      "geometry": {
+        "length": 36
+      }
+    },
+    {
+      "id": "node-7fa17233-1e35-4d39-bada-c35758ac9439",
+      "name": "Rectangle",
+      "kind": "rectangle",
+      "artboardId": "artboard-4974b690-3634-4a5b-9f0a-263f93d54a11",
+      "parentId": "node-6e5d99d6-02e3-4073-bb8d-9464a585dcae",
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        -7
+      ],
+      "geometry": {
+        "width": 36,
+        "height": 14,
+        "fill": "#edb75f"
+      }
+    },
+    {
+      "id": "node-8412d2f1-27c3-4f81-803b-8b84bc939e61",
+      "name": "Segment 1",
+      "kind": "bone",
+      "artboardId": "artboard-4974b690-3634-4a5b-9f0a-263f93d54a11",
+      "parentId": "node-6e5d99d6-02e3-4073-bb8d-9464a585dcae",
+      "order": 1,
+      "transform": [
+        0.9915618937147881,
+        0.12963414261969486,
+        -0.12963414261969486,
+        0.9915618937147881,
+        0,
+        0
+      ],
+      "geometry": {
+        "length": 36
+      }
+    },
+    {
+      "id": "node-0ca61e2a-4fef-401b-84b8-d74c9842ed67",
+      "name": "Rectangle",
+      "kind": "rectangle",
+      "artboardId": "artboard-4974b690-3634-4a5b-9f0a-263f93d54a11",
+      "parentId": "node-8412d2f1-27c3-4f81-803b-8b84bc939e61",
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        -7
+      ],
+      "geometry": {
+        "width": 36,
+        "height": 14,
+        "fill": "#89e4c4"
+      }
+    },
+    {
+      "id": "node-ee136067-592c-460f-99c6-947546b71396",
+      "name": "Segment 2",
+      "kind": "bone",
+      "artboardId": "artboard-4974b690-3634-4a5b-9f0a-263f93d54a11",
+      "parentId": "node-8412d2f1-27c3-4f81-803b-8b84bc939e61",
+      "order": 1,
+      "transform": [
+        0.9959527330119943,
+        -0.08987854919801104,
+        0.08987854919801104,
+        0.9959527330119943,
+        0,
+        0
+      ],
+      "geometry": {
+        "length": 36
+      }
+    },
+    {
+      "id": "node-63d21e0a-d027-4d73-8ec1-482d29ae8265",
+      "name": "Rectangle",
+      "kind": "rectangle",
+      "artboardId": "artboard-4974b690-3634-4a5b-9f0a-263f93d54a11",
+      "parentId": "node-ee136067-592c-460f-99c6-947546b71396",
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        -7
+      ],
+      "geometry": {
+        "width": 36,
+        "height": 14,
+        "fill": "#edb75f"
+      }
+    },
+    {
+      "id": "node-30925384-3b9e-46f5-b8c1-1534f30ecec3",
+      "name": "Group",
+      "kind": "group",
+      "artboardId": "artboard-4974b690-3634-4a5b-9f0a-263f93d54a11",
+      "parentId": null,
+      "order": 1,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        220,
+        170
+      ],
+      "geometry": null
+    }
+  ],
+  "assets": [],
+  "animations": [
+    {
+      "id": "animation-2e3653ab-d556-4416-897d-e10f269d1560",
+      "name": "Animation 1",
+      "artboardId": "artboard-4974b690-3634-4a5b-9f0a-263f93d54a11",
+      "fps": 60,
+      "duration": 120,
+      "loop": true,
+      "tracks": [
+        {
+          "targetId": "node-30925384-3b9e-46f5-b8c1-1534f30ecec3",
+          "property": "x",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 220,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 60,
+              "value": 270,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 120,
+              "value": 220,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "node-30925384-3b9e-46f5-b8c1-1534f30ecec3",
+          "property": "y",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 170,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 60,
+              "value": 290,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 120,
+              "value": 170,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "artboard-4974b690-3634-4a5b-9f0a-263f93d54a11": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  },
+  "advanced": {
+    "clips": [],
+    "feathers": [],
+    "ik": [
+      {
+        "boneId": "node-ee136067-592c-460f-99c6-947546b71396",
+        "targetId": "node-30925384-3b9e-46f5-b8c1-1534f30ecec3",
+        "count": 3,
+        "strength": 0,
+        "invert": false
+      }
+    ]
+  }
+}

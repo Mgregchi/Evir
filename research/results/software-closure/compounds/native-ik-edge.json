@@ -1,0 +1,379 @@
+{
+  "checkedAt": "2026-10-21T08:47:32.693Z",
+  "runtimeVersion": "2.44.0",
+  "scope": "Cloud Chromium/software rendering, not physical-device performance or human accessibility evidence.",
+  "method": "Compound curves and winding, live presets, smooth connectors, gradient/skinned strokes, clips and shared bindings, including actual Studio exports and independently encoded native compound import against official Canvas/WebGL2 pixels.",
+  "thresholds": {
+    "mae": 2.5,
+    "coverageDifference": 350,
+    "minimumCoverage": 50
+  },
+  "casePrefix": "ik-edge-",
+  "fixtures": [
+    {
+      "name": "ik-edge-coincident-0.5-false",
+      "sourceSha256": "4d1b089b56114c5618f57b3f42bada85d89854f510ce41d72240516f50801067",
+      "rivSha256": "b498df390274ed8bbbf06a50401916da0853699c69e4352fdf86f35c4fd86234"
+    },
+    {
+      "name": "ik-edge-coincident-1-false",
+      "sourceSha256": "dae8116a38df160c2c5d0b6e9e4be4798efbb033c516692c7409c45939624371",
+      "rivSha256": "49e9496d18bb4717448e6c4179adf7a04c81139dcab0005cdd2fb243c20036c3"
+    },
+    {
+      "name": "ik-edge-coincident-0.5-true",
+      "sourceSha256": "809de9b931c254cb45e156fdb9de3f84611b72c2fdfbcd643659b4da2068ae99",
+      "rivSha256": "c6b2a4468338bf6bf6a02dbaa9eedc9fff0a53b02fbc798c184c41f4a04dc18e"
+    },
+    {
+      "name": "ik-edge-coincident-1-true",
+      "sourceSha256": "8dd92dbb1ac4b8f8c216309dfe7459e701f5ae9227169213ac769b4918c1771e",
+      "rivSha256": "5c4b1fb856c274bee4741bdf384113df01a8c94b7fc0f4d5a86e1f505e0e3f73"
+    },
+    {
+      "name": "ik-edge-unreachable-0.5-false",
+      "sourceSha256": "a1a70267a1bbeaeafe1aaea27ab60a9876ae045b302f475d0a34d628374fa8a9",
+      "rivSha256": "579df088d36f43bb221c13f3fde257a20dc7e7a9481ed2bf66eec1853fe9bb08"
+    },
+    {
+      "name": "ik-edge-unreachable-1-false",
+      "sourceSha256": "0f3755bae775669da11542ebfb3a4afbc41fe44ed51d7e8dfa9130be86473471",
+      "rivSha256": "7de7a0ea2991c951f8e14dd424c8609d99477073203dbb329aab7d70c333c293"
+    },
+    {
+      "name": "ik-edge-unreachable-0.5-true",
+      "sourceSha256": "e6cd3427754e9af3ced3fff0531269e057d5bf54936d1814c9c247f8fd729941",
+      "rivSha256": "a1a8beccdfe5361da6da4bb562d366015c31dd462a83e3e4aa4330a9fde8d680"
+    },
+    {
+      "name": "ik-edge-unreachable-1-true",
+      "sourceSha256": "8ac0a608b4fb134e25663c280854cc71bedccbb1e5e9bb7d3fc53f9803d73712",
+      "rivSha256": "720e9b23d94e48f7aaaed110daa96435d2e42da17b7b89efceb08bc5725e5a61"
+    },
+    {
+      "name": "ik-edge-aligned-0.5-false",
+      "sourceSha256": "9c7b0aac19e01c28707e9467d70afbd16dd5b28b1c770fa62e889e4d6108bb3b",
+      "rivSha256": "f4199bd97f45ddf98f58526f8dd8cce262c15dc9751e4c55156adc75508477ab"
+    },
+    {
+      "name": "ik-edge-aligned-1-false",
+      "sourceSha256": "49eb0db405e834b359bbb310874fe617af51954071d4a943359da1a0b208e644",
+      "rivSha256": "7a061d91ab3a68d717b5b672083dded0b193e47bfff4ae78292eefdf8ec9f9ac"
+    },
+    {
+      "name": "ik-edge-aligned-0.5-true",
+      "sourceSha256": "4c15f5b0f35f49c493e580dc3336f3a4399677e0510e47474709d3be67ac41e2",
+      "rivSha256": "c2df55a9cd5c21be93391579749de49acbef176eb762841915360a8c220daa0f"
+    },
+    {
+      "name": "ik-edge-aligned-1-true",
+      "sourceSha256": "d3519a757b45b631ed29421ae2afa979cda0876f8741324fc25c47fe03c070bc",
+      "rivSha256": "92ab26cb88c94928a76afec4573527d375541caa1a5fa00d7630471cc327bc97"
+    }
+  ],
+  "backends": [
+    {
+      "backend": "canvas",
+      "checks": [
+        {
+          "scene": "ik-edge-coincident-0.5-false",
+          "frame": null,
+          "mae": 0,
+          "covered": 558,
+          "expectedCovered": 558
+        },
+        {
+          "scene": "ik-edge-coincident-1-false",
+          "frame": null,
+          "mae": 0.001934051513671875,
+          "covered": 294,
+          "expectedCovered": 294
+        },
+        {
+          "scene": "ik-edge-coincident-0.5-true",
+          "frame": null,
+          "mae": 0,
+          "covered": 555,
+          "expectedCovered": 555
+        },
+        {
+          "scene": "ik-edge-coincident-1-true",
+          "frame": null,
+          "mae": 0.001926422119140625,
+          "covered": 293,
+          "expectedCovered": 293
+        },
+        {
+          "scene": "ik-edge-unreachable-0.5-false",
+          "frame": null,
+          "mae": 0,
+          "covered": 1175,
+          "expectedCovered": 1175
+        },
+        {
+          "scene": "ik-edge-unreachable-1-false",
+          "frame": null,
+          "mae": 0,
+          "covered": 1201,
+          "expectedCovered": 1201
+        },
+        {
+          "scene": "ik-edge-unreachable-0.5-true",
+          "frame": null,
+          "mae": 0,
+          "covered": 1175,
+          "expectedCovered": 1175
+        },
+        {
+          "scene": "ik-edge-unreachable-1-true",
+          "frame": null,
+          "mae": 0,
+          "covered": 1201,
+          "expectedCovered": 1201
+        },
+        {
+          "scene": "ik-edge-aligned-0.5-false",
+          "frame": null,
+          "mae": 0,
+          "covered": 582,
+          "expectedCovered": 582
+        },
+        {
+          "scene": "ik-edge-aligned-1-false",
+          "frame": null,
+          "mae": 0.0001983642578125,
+          "covered": 576,
+          "expectedCovered": 576
+        },
+        {
+          "scene": "ik-edge-aligned-0.5-true",
+          "frame": null,
+          "mae": 0.000064849853515625,
+          "covered": 582,
+          "expectedCovered": 582
+        },
+        {
+          "scene": "ik-edge-aligned-1-true",
+          "frame": null,
+          "mae": 0.000213623046875,
+          "covered": 576,
+          "expectedCovered": 576
+        }
+      ],
+      "graphics": {
+        "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+        "contexts": [
+          {
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "unmaskedRendererAvailable": true,
+            "contextLost": false,
+            "errors": [],
+            "extensions": [
+              "EXT_clip_control",
+              "EXT_color_buffer_float",
+              "EXT_color_buffer_half_float",
+              "EXT_conservative_depth",
+              "EXT_depth_clamp",
+              "EXT_float_blend",
+              "EXT_polygon_offset_clamp",
+              "EXT_texture_compression_bptc",
+              "EXT_texture_compression_rgtc",
+              "EXT_texture_filter_anisotropic",
+              "EXT_texture_mirror_clamp_to_edge",
+              "NV_shader_noperspective_interpolation",
+              "OES_draw_buffers_indexed",
+              "OES_sample_variables",
+              "OES_shader_multisample_interpolation",
+              "OES_texture_float_linear",
+              "OVR_multiview2",
+              "WEBGL_clip_cull_distance",
+              "WEBGL_compressed_texture_astc",
+              "WEBGL_compressed_texture_etc",
+              "WEBGL_compressed_texture_etc1",
+              "WEBGL_compressed_texture_s3tc",
+              "WEBGL_compressed_texture_s3tc_srgb",
+              "WEBGL_debug_renderer_info",
+              "WEBGL_debug_shaders",
+              "WEBGL_lose_context",
+              "WEBGL_multi_draw",
+              "WEBGL_polygon_mode",
+              "WEBGL_stencil_texturing"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "backend": "webgl2",
+      "checks": [
+        {
+          "scene": "ik-edge-coincident-0.5-false",
+          "frame": null,
+          "mae": 0.07146453857421875,
+          "covered": 531,
+          "expectedCovered": 558
+        },
+        {
+          "scene": "ik-edge-coincident-1-false",
+          "frame": null,
+          "mae": 0.0393218994140625,
+          "covered": 288,
+          "expectedCovered": 294
+        },
+        {
+          "scene": "ik-edge-coincident-0.5-true",
+          "frame": null,
+          "mae": 0.03412628173828125,
+          "covered": 547,
+          "expectedCovered": 555
+        },
+        {
+          "scene": "ik-edge-coincident-1-true",
+          "frame": null,
+          "mae": 0.037014007568359375,
+          "covered": 288,
+          "expectedCovered": 293
+        },
+        {
+          "scene": "ik-edge-unreachable-0.5-false",
+          "frame": null,
+          "mae": 0.18981170654296875,
+          "covered": 1106,
+          "expectedCovered": 1175
+        },
+        {
+          "scene": "ik-edge-unreachable-1-false",
+          "frame": null,
+          "mae": 0.2404022216796875,
+          "covered": 1115,
+          "expectedCovered": 1201
+        },
+        {
+          "scene": "ik-edge-unreachable-0.5-true",
+          "frame": null,
+          "mae": 0.18981170654296875,
+          "covered": 1106,
+          "expectedCovered": 1175
+        },
+        {
+          "scene": "ik-edge-unreachable-1-true",
+          "frame": null,
+          "mae": 0.2404022216796875,
+          "covered": 1115,
+          "expectedCovered": 1201
+        },
+        {
+          "scene": "ik-edge-aligned-0.5-false",
+          "frame": null,
+          "mae": 0.08618545532226562,
+          "covered": 549,
+          "expectedCovered": 582
+        },
+        {
+          "scene": "ik-edge-aligned-1-false",
+          "frame": null,
+          "mae": 0.00054931640625,
+          "covered": 576,
+          "expectedCovered": 576
+        },
+        {
+          "scene": "ik-edge-aligned-0.5-true",
+          "frame": null,
+          "mae": 0.08618545532226562,
+          "covered": 549,
+          "expectedCovered": 582
+        },
+        {
+          "scene": "ik-edge-aligned-1-true",
+          "frame": null,
+          "mae": 0.00054931640625,
+          "covered": 576,
+          "expectedCovered": 576
+        }
+      ],
+      "graphics": {
+        "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+        "contexts": [
+          {
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "unmaskedRendererAvailable": true,
+            "contextLost": false,
+            "errors": [],
+            "extensions": [
+              "EXT_clip_control",
+              "EXT_color_buffer_float",
+              "EXT_color_buffer_half_float",
+              "EXT_conservative_depth",
+              "EXT_depth_clamp",
+              "EXT_float_blend",
+              "EXT_polygon_offset_clamp",
+              "EXT_texture_compression_bptc",
+              "EXT_texture_compression_rgtc",
+              "EXT_texture_filter_anisotropic",
+              "EXT_texture_mirror_clamp_to_edge",
+              "NV_shader_noperspective_interpolation",
+              "OES_draw_buffers_indexed",
+              "OES_sample_variables",
+              "OES_shader_multisample_interpolation",
+              "OES_texture_float_linear",
+              "OVR_multiview2",
+              "WEBGL_clip_cull_distance",
+              "WEBGL_compressed_texture_astc",
+              "WEBGL_compressed_texture_etc",
+              "WEBGL_compressed_texture_etc1",
+              "WEBGL_compressed_texture_s3tc",
+              "WEBGL_compressed_texture_s3tc_srgb",
+              "WEBGL_debug_renderer_info",
+              "WEBGL_debug_shaders",
+              "WEBGL_lose_context",
+              "WEBGL_multi_draw",
+              "WEBGL_polygon_mode",
+              "WEBGL_stencil_texturing"
+            ]
+          },
+          {
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "unmaskedRendererAvailable": true,
+            "contextLost": false,
+            "errors": [],
+            "extensions": [
+              "EXT_clip_control",
+              "EXT_color_buffer_float",
+              "EXT_color_buffer_half_float",
+              "EXT_conservative_depth",
+              "EXT_depth_clamp",
+              "EXT_float_blend",
+              "EXT_polygon_offset_clamp",
+              "EXT_texture_compression_bptc",
+              "EXT_texture_compression_rgtc",
+              "EXT_texture_filter_anisotropic",
+              "EXT_texture_mirror_clamp_to_edge",
+              "NV_shader_noperspective_interpolation",
+              "OES_draw_buffers_indexed",
+              "OES_sample_variables",
+              "OES_shader_multisample_interpolation",
+              "OES_texture_float_linear",
+              "OVR_multiview2",
+              "WEBGL_clip_cull_distance",
+              "WEBGL_compressed_texture_astc",
+              "WEBGL_compressed_texture_etc",
+              "WEBGL_compressed_texture_etc1",
+              "WEBGL_compressed_texture_s3tc",
+              "WEBGL_compressed_texture_s3tc_srgb",
+              "WEBGL_debug_renderer_info",
+              "WEBGL_debug_shaders",
+              "WEBGL_lose_context",
+              "WEBGL_multi_draw",
+              "WEBGL_polygon_mode",
+              "WEBGL_stencil_texturing"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "browser": "153.0.8010.12"
+}

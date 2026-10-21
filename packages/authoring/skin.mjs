@@ -11,7 +11,6 @@ function skinNode(p,id){
 export function bindSkin(p,nodeId,boneIds){
  const n=skinNode(p,nodeId);
  if(!Array.isArray(boneIds)||!boneIds.length||boneIds.length>4||new Set(boneIds).size!==boneIds.length)throw Error('Choose one to four different bones');
- if(n.geometry.stroke)throw Error('Skinned strokes are outside the current rendering contract');
  const bindWorld=worldTransform(p,nodeId);inverse(bindWorld);
  const bones=boneIds.map(boneId=>{const bone=p.nodes.find(v=>v.id===boneId);if(bone?.kind!=='bone'||bone.artboardId!==n.artboardId)throw Error('Choose bones in the same artboard');const bind=worldTransform(p,boneId);inverse(bind);return{boneId,bind};});
  const weights=quantize(boneIds.map(b=>[b,1/boneIds.length]));

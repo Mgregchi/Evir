@@ -21,6 +21,7 @@ import { fileURLToPath } from 'node:url';
 import {directStudy} from './direct-scene.mjs';
 import {weightStudy} from './weight-scene.mjs';
 import {shapeGarden,firstBounce} from './shape-scene.mjs';
+import {kelpStudy} from './kelp-scene.mjs';
 import {compoundStudy} from './compound-scene.mjs';
 const output = fileURLToPath(new URL('./assets/examples/', import.meta.url));
 
@@ -387,6 +388,7 @@ factories.gust=()=>weightStudy(project);
 factories.lumen=()=>directStudy(project);
 factories.garden=()=>shapeGarden(project);
 factories.nocturne=()=>compoundStudy(project);
+factories.kelp=()=>kelpStudy(project);
 for(const name of exampleIds) {
   const p=await factories[name]();validateProject(p);
   const compiled=compileProject(p);

@@ -35,3 +35,5 @@ Pocket garden is original MIT vector artwork generated with Evir’s own shape f
 `lumen-poster.png` is an actual Canvas capture of the original Lumen firefly. The editable source and `.riv` in `examples/lumen.*` contain 48 named vector/group nodes, sparse Rest/Joy/Courage timelines and an ordered direct state. The artwork is MIT project work from `../direct-scene.mjs`; no supplied reference imagery or changed brand artwork is embedded.
 
 `nocturne-poster.png` is an actual Evir Canvas capture of the original Nocturne owl. `compound-scene.mjs` creates curved body/ear unions, real eye cutouts and a subtracted crescent, with separate wing/group motion. Editable source, compatible export and starting shapes are supplied under the project MIT license; no external artwork or changed brand image is included.
+
+`kelp-poster.png` is an actual Canvas capture of the original Kelp sea creature from `../kelp-scene.mjs`. Editable source and native export contain a four-bone IK chain, separately weighted curve handles, a gradient centerline stroke and a looping independent target. MIT project artwork; no external imagery or modified brand artwork is included.

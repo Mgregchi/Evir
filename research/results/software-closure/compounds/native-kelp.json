@@ -1,0 +1,226 @@
+{
+  "checkedAt": "2026-10-21T08:45:37.015Z",
+  "runtimeVersion": "2.44.0",
+  "scope": "Cloud Chromium/software rendering, not physical-device performance or human accessibility evidence.",
+  "method": "Compound curves and winding, live presets, smooth connectors, gradient/skinned strokes, clips and shared bindings, including actual Studio exports and independently encoded native compound import against official Canvas/WebGL2 pixels.",
+  "thresholds": {
+    "mae": 2.5,
+    "coverageDifference": 350,
+    "minimumCoverage": 50
+  },
+  "casePrefix": "kelp",
+  "fixtures": [
+    {
+      "name": "kelp",
+      "sourceSha256": "db9148523a275ca211b8ed2d2cd1751da19286bb3a5217ba3b729a9b0dd5b3f1",
+      "rivSha256": "07d7107ccf0a0b792d247af52cc8f0b45b351a455f051bec294e408fb22df49b"
+    }
+  ],
+  "backends": [
+    {
+      "backend": "canvas",
+      "checks": [
+        {
+          "scene": "kelp",
+          "frame": 0,
+          "mae": 0.035915374755859375,
+          "covered": 53359,
+          "expectedCovered": 53358
+        },
+        {
+          "scene": "kelp",
+          "frame": 30,
+          "mae": 0.0359039306640625,
+          "covered": 53359,
+          "expectedCovered": 53358
+        },
+        {
+          "scene": "kelp",
+          "frame": 60,
+          "mae": 0.03612518310546875,
+          "covered": 53359,
+          "expectedCovered": 53358
+        },
+        {
+          "scene": "kelp",
+          "frame": 90,
+          "mae": 0.0359039306640625,
+          "covered": 53359,
+          "expectedCovered": 53358
+        },
+        {
+          "scene": "kelp",
+          "frame": 120,
+          "mae": 0.035915374755859375,
+          "covered": 53359,
+          "expectedCovered": 53358
+        }
+      ],
+      "graphics": {
+        "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+        "contexts": [
+          {
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "unmaskedRendererAvailable": true,
+            "contextLost": false,
+            "errors": [],
+            "extensions": [
+              "EXT_clip_control",
+              "EXT_color_buffer_float",
+              "EXT_color_buffer_half_float",
+              "EXT_conservative_depth",
+              "EXT_depth_clamp",
+              "EXT_float_blend",
+              "EXT_polygon_offset_clamp",
+              "EXT_texture_compression_bptc",
+              "EXT_texture_compression_rgtc",
+              "EXT_texture_filter_anisotropic",
+              "EXT_texture_mirror_clamp_to_edge",
+              "NV_shader_noperspective_interpolation",
+              "OES_draw_buffers_indexed",
+              "OES_sample_variables",
+              "OES_shader_multisample_interpolation",
+              "OES_texture_float_linear",
+              "OVR_multiview2",
+              "WEBGL_clip_cull_distance",
+              "WEBGL_compressed_texture_astc",
+              "WEBGL_compressed_texture_etc",
+              "WEBGL_compressed_texture_etc1",
+              "WEBGL_compressed_texture_s3tc",
+              "WEBGL_compressed_texture_s3tc_srgb",
+              "WEBGL_debug_renderer_info",
+              "WEBGL_debug_shaders",
+              "WEBGL_lose_context",
+              "WEBGL_multi_draw",
+              "WEBGL_polygon_mode",
+              "WEBGL_stencil_texturing"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "backend": "webgl2",
+      "checks": [
+        {
+          "scene": "kelp",
+          "frame": 0,
+          "mae": 0.26250457763671875,
+          "covered": 53306,
+          "expectedCovered": 53358
+        },
+        {
+          "scene": "kelp",
+          "frame": 30,
+          "mae": 0.26190948486328125,
+          "covered": 53306,
+          "expectedCovered": 53358
+        },
+        {
+          "scene": "kelp",
+          "frame": 60,
+          "mae": 0.2616424560546875,
+          "covered": 53306,
+          "expectedCovered": 53358
+        },
+        {
+          "scene": "kelp",
+          "frame": 90,
+          "mae": 0.26190948486328125,
+          "covered": 53306,
+          "expectedCovered": 53358
+        },
+        {
+          "scene": "kelp",
+          "frame": 120,
+          "mae": 0.26250457763671875,
+          "covered": 53306,
+          "expectedCovered": 53358
+        }
+      ],
+      "graphics": {
+        "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+        "contexts": [
+          {
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "unmaskedRendererAvailable": true,
+            "contextLost": false,
+            "errors": [],
+            "extensions": [
+              "EXT_clip_control",
+              "EXT_color_buffer_float",
+              "EXT_color_buffer_half_float",
+              "EXT_conservative_depth",
+              "EXT_depth_clamp",
+              "EXT_float_blend",
+              "EXT_polygon_offset_clamp",
+              "EXT_texture_compression_bptc",
+              "EXT_texture_compression_rgtc",
+              "EXT_texture_filter_anisotropic",
+              "EXT_texture_mirror_clamp_to_edge",
+              "NV_shader_noperspective_interpolation",
+              "OES_draw_buffers_indexed",
+              "OES_sample_variables",
+              "OES_shader_multisample_interpolation",
+              "OES_texture_float_linear",
+              "OVR_multiview2",
+              "WEBGL_clip_cull_distance",
+              "WEBGL_compressed_texture_astc",
+              "WEBGL_compressed_texture_etc",
+              "WEBGL_compressed_texture_etc1",
+              "WEBGL_compressed_texture_s3tc",
+              "WEBGL_compressed_texture_s3tc_srgb",
+              "WEBGL_debug_renderer_info",
+              "WEBGL_debug_shaders",
+              "WEBGL_lose_context",
+              "WEBGL_multi_draw",
+              "WEBGL_polygon_mode",
+              "WEBGL_stencil_texturing"
+            ]
+          },
+          {
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "unmaskedRendererAvailable": true,
+            "contextLost": false,
+            "errors": [],
+            "extensions": [
+              "EXT_clip_control",
+              "EXT_color_buffer_float",
+              "EXT_color_buffer_half_float",
+              "EXT_conservative_depth",
+              "EXT_depth_clamp",
+              "EXT_float_blend",
+              "EXT_polygon_offset_clamp",
+              "EXT_texture_compression_bptc",
+              "EXT_texture_compression_rgtc",
+              "EXT_texture_filter_anisotropic",
+              "EXT_texture_mirror_clamp_to_edge",
+              "NV_shader_noperspective_interpolation",
+              "OES_draw_buffers_indexed",
+              "OES_sample_variables",
+              "OES_shader_multisample_interpolation",
+              "OES_texture_float_linear",
+              "OVR_multiview2",
+              "WEBGL_clip_cull_distance",
+              "WEBGL_compressed_texture_astc",
+              "WEBGL_compressed_texture_etc",
+              "WEBGL_compressed_texture_etc1",
+              "WEBGL_compressed_texture_s3tc",
+              "WEBGL_compressed_texture_s3tc_srgb",
+              "WEBGL_debug_renderer_info",
+              "WEBGL_debug_shaders",
+              "WEBGL_lose_context",
+              "WEBGL_multi_draw",
+              "WEBGL_polygon_mode",
+              "WEBGL_stencil_texturing"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "browser": "153.0.8010.12"
+}

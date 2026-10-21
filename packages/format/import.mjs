@@ -436,8 +436,11 @@ async function decodeProject(input) {
         r,
         "paint",
       );
+      return readPaint(paint,node,'paint.');
+    };
+    const readPaint=(paint,node,prefix)=>{
       if (paint.r.type === "SolidColor") {
-        targets.set(paint.i + "/37", { node, property: "fill" });
+        targets.set(paint.i + "/37", { node, property: prefix==='paint.'?"fill":"stroke.color" });
         return color(paint.r.fields.colorValue ?? 0xff000000);
       }
       const f = paint.r.fields,
@@ -450,13 +453,13 @@ async function decodeProject(input) {
       for (const k of ["startX", "startY", "endX", "endY"])
         targets.set(paint.i + "/" + gradientType.properties[k], {
           node,
-          property: "paint." + k,
+          property: prefix + k,
         });
       for (const [j, s] of stops.entries()) {
-        targets.set(s.i + "/38", { node, property: `paint.stop.${j}.color` });
+        targets.set(s.i + "/38", { node, property: `${prefix}stop.${j}.color` });
         targets.set(s.i + "/39", {
           node,
-          property: `paint.stop.${j}.position`,
+          property: `${prefix}stop.${j}.position`,
         });
       }
       return {
@@ -476,9 +479,8 @@ async function decodeProject(input) {
       if(!(f.transformAffectsStroke ?? true) || (f.position ?? 0)!==0)fail(r,"only centered, transform-scaled strokes are editable");
       const s=defaultStroke();s.width=f.thickness ?? 1;s.cap=STROKE_CAPS[f.cap ?? 0];s.join=STROKE_JOINS[f.join ?? 0];
       const paint=single(children(i).filter(v=>["SolidColor","LinearGradient","RadialGradient"].includes(v.r.type)),r,"stroke paint");
-      if(paint.r.type!=="SolidColor")fail(paint.r,"gradient strokes are outside the editable subset");
-      s.color=color(paint.r.fields.colorValue ?? 0xff000000);
-      targets.set(i+"/47",{node,property:"stroke.width"});targets.set(paint.i+"/37",{node,property:"stroke.color"});
+      s.color=readPaint(paint,node,'stroke.paint.');
+      targets.set(i+"/47",{node,property:"stroke.width"});
       const trims=children(i).filter(v=>v.r.type==="TrimPath"),dashes=children(i).filter(v=>v.r.type==="DashPath");
       if(trims.length) {
         const t=single(trims,r,"trim effect");

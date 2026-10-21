@@ -5,7 +5,7 @@
   "name": "exclude",
   "artboards": [
     {
-      "id": "artboard-f651c5ed-befa-423d-9404-07a721d7ab79",
+      "id": "artboard-d4c2f5b8-f7a9-4492-8fba-302e9060621f",
       "name": "Artboard 1",
       "width": 512,
       "height": 512
@@ -13,10 +13,10 @@
   ],
   "nodes": [
     {
-      "id": "node-e07fc749-bcbf-4166-a62d-55947e42c7e9",
+      "id": "node-cfc655eb-b6d5-40cc-926b-7e16c93ca25c",
       "name": "Circle",
       "kind": "path",
-      "artboardId": "artboard-f651c5ed-befa-423d-9404-07a721d7ab79",
+      "artboardId": "artboard-d4c2f5b8-f7a9-4492-8fba-302e9060621f",
       "parentId": null,
       "order": 0,
       "transform": [
@@ -31,7 +31,7 @@
         "closed": true,
         "points": [
           {
-            "id": "point-9dd59f61-ee9a-4d73-832a-6e9b22b92b7a",
+            "id": "point-7f5fbdb3-d6e2-46d1-a48b-b8a2e4c2a166",
             "anchor": [
               278.4236303023615,
               72.44981569737345
@@ -46,7 +46,7 @@
             ]
           },
           {
-            "id": "point-a2361759-1d50-45da-b0f2-17d02141563f",
+            "id": "point-cef075c7-49cd-4e1f-9429-a4d48af812e9",
             "anchor": [
               330,
               140
@@ -61,7 +61,7 @@
             ]
           },
           {
-            "id": "point-1ee2edbe-6d84-4d49-afa6-82609b0d610f",
+            "id": "point-8d23c8d0-ebf5-4eeb-9a47-3a915e160715",
             "anchor": [
               290.32753643565906,
               203.10704565318133
@@ -76,7 +76,7 @@
             ]
           },
           {
-            "id": "point-5d0444df-cc04-45de-a2d1-ae69c437f150",
+            "id": "point-2242ba9b-9ec4-485c-a8cf-405b01533760",
             "anchor": [
               300,
               150
@@ -96,7 +96,7 @@
             "closed": true,
             "points": [
               {
-                "id": "point-af6d8fd0-6b1b-424d-a4bc-568c85d57d1a",
+                "id": "point-1676a3be-0e1b-4b05-b664-656e65bc54fd",
                 "anchor": [
                   150,
                   300
@@ -111,7 +111,7 @@
                 ]
               },
               {
-                "id": "point-ff3ac375-23b3-486c-a729-a9bea7ec61ae",
+                "id": "point-2e229ca4-7e6a-452e-9da3-025b91dc5073",
                 "anchor": [
                   0,
                   150
@@ -126,7 +126,7 @@
                 ]
               },
               {
-                "id": "point-e6938d2d-a9bd-4389-8dc6-eb7f8014bfca",
+                "id": "point-418f839e-e1ce-4d0b-abbe-307a51435577",
                 "anchor": [
                   150,
                   0
@@ -141,7 +141,7 @@
                 ]
               },
               {
-                "id": "point-53a47c9b-70cc-49e5-9353-dcdc119dc471",
+                "id": "point-8266e955-a6e5-4381-8219-6f130fd06601",
                 "anchor": [
                   278.42363031668515,
                   72.44981572069459
@@ -156,7 +156,7 @@
                 ]
               },
               {
-                "id": "point-22f9353c-0a8d-4cb5-80d6-492d60e37210",
+                "id": "point-2a9594d9-40ab-49b9-bfd0-9d4e32d9156f",
                 "anchor": [
                   260,
                   70
@@ -171,7 +171,7 @@
                 ]
               },
               {
-                "id": "point-7f92b9a7-b62d-4983-95d9-eb98292be072",
+                "id": "point-b156ebd9-e1f5-45ef-b5db-f0628167c904",
                 "anchor": [
                   190,
                   140
@@ -186,7 +186,7 @@
                 ]
               },
               {
-                "id": "point-03cdcc44-34ca-400a-aba7-6ebd8026f433",
+                "id": "point-22066366-7dc9-4679-a889-175c0ae773fe",
                 "anchor": [
                   260,
                   210
@@ -201,7 +201,7 @@
                 ]
               },
               {
-                "id": "point-60cba722-062b-4424-bc19-23d1c1f50407",
+                "id": "point-51e51d8b-572b-4146-8139-83b514bde330",
                 "anchor": [
                   290.32753643563564,
                   203.10704565323985
@@ -231,7 +231,7 @@
     "locked": [],
     "hidden": [],
     "cameras": {
-      "artboard-f651c5ed-befa-423d-9404-07a721d7ab79": {
+      "artboard-d4c2f5b8-f7a9-4492-8fba-302e9060621f": {
         "x": 0,
         "y": 0,
         "zoom": 1

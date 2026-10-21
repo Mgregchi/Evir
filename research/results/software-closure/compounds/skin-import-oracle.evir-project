@@ -1,11 +1,11 @@
 {
   "format": "evir-project",
   "schemaVersion": 3,
-  "id": "project-75fb5c4b-a553-4725-a7f4-98fc9ed93f77",
+  "id": "project-dbb9900d-e3c1-40a8-ae41-d969ca0ed43f",
   "name": "Imported Rive scene",
   "artboards": [
     {
-      "id": "artboard-5a51b033-1e1e-4f6c-8b74-b52cc955abd4",
+      "id": "artboard-646a92cb-104c-4597-91f5-e44fb1588e62",
       "name": "Artboard 1",
       "width": 512,
       "height": 512
@@ -13,10 +13,10 @@
   ],
   "nodes": [
     {
-      "id": "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+      "id": "node-fb7190b8-af62-47c3-bfa7-c2be8bbb6cf6",
       "name": "Bone",
       "kind": "bone",
-      "artboardId": "artboard-5a51b033-1e1e-4f6c-8b74-b52cc955abd4",
+      "artboardId": "artboard-646a92cb-104c-4597-91f5-e44fb1588e62",
       "parentId": null,
       "order": 1,
       "transform": [
@@ -32,10 +32,10 @@
       }
     },
     {
-      "id": "node-5400fa6b-93e1-4801-894a-71c12b6e2073",
+      "id": "node-ceaf0a3f-f1c4-40f3-9422-8d3c9aefb64a",
       "name": "Circle",
       "kind": "path",
-      "artboardId": "artboard-5a51b033-1e1e-4f6c-8b74-b52cc955abd4",
+      "artboardId": "artboard-646a92cb-104c-4597-91f5-e44fb1588e62",
       "parentId": null,
       "order": 0,
       "transform": [
@@ -60,7 +60,7 @@
           ],
           "bones": [
             {
-              "boneId": "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+              "boneId": "node-fb7190b8-af62-47c3-bfa7-c2be8bbb6cf6",
               "bind": [
                 1,
                 0,
@@ -73,169 +73,169 @@
           ],
           "weights": [
             {
-              "pointId": "point-8eb86d41-9c42-4f36-9888-66a3240878f9",
+              "pointId": "point-20cd78de-1d85-48e9-94d8-1aa4525279e9",
               "anchor": [
                 [
-                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  "node-fb7190b8-af62-47c3-bfa7-c2be8bbb6cf6",
                   1
                 ]
               ],
               "in": [
                 [
-                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  "node-fb7190b8-af62-47c3-bfa7-c2be8bbb6cf6",
                   1
                 ]
               ],
               "out": [
                 [
-                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  "node-fb7190b8-af62-47c3-bfa7-c2be8bbb6cf6",
                   1
                 ]
               ]
             },
             {
-              "pointId": "point-33a67631-188c-42d0-9cec-d14bd7b76743",
+              "pointId": "point-028f2e00-2e2f-4b0d-85e7-27a963478f01",
               "anchor": [
                 [
-                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  "node-fb7190b8-af62-47c3-bfa7-c2be8bbb6cf6",
                   1
                 ]
               ],
               "in": [
                 [
-                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  "node-fb7190b8-af62-47c3-bfa7-c2be8bbb6cf6",
                   1
                 ]
               ],
               "out": [
                 [
-                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  "node-fb7190b8-af62-47c3-bfa7-c2be8bbb6cf6",
                   1
                 ]
               ]
             },
             {
-              "pointId": "point-248ab595-8e21-4f7e-a005-b7d9f781af19",
+              "pointId": "point-e3bac4d6-4f0d-4bf0-90f6-ccdeec5a86eb",
               "anchor": [
                 [
-                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  "node-fb7190b8-af62-47c3-bfa7-c2be8bbb6cf6",
                   1
                 ]
               ],
               "in": [
                 [
-                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  "node-fb7190b8-af62-47c3-bfa7-c2be8bbb6cf6",
                   1
                 ]
               ],
               "out": [
                 [
-                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  "node-fb7190b8-af62-47c3-bfa7-c2be8bbb6cf6",
                   1
                 ]
               ]
             },
             {
-              "pointId": "point-b304f543-0615-40b1-a0de-35480daecfa9",
+              "pointId": "point-8537f60c-3dd8-47d2-b188-868fbb73f80c",
               "anchor": [
                 [
-                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  "node-fb7190b8-af62-47c3-bfa7-c2be8bbb6cf6",
                   1
                 ]
               ],
               "in": [
                 [
-                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  "node-fb7190b8-af62-47c3-bfa7-c2be8bbb6cf6",
                   1
                 ]
               ],
               "out": [
                 [
-                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  "node-fb7190b8-af62-47c3-bfa7-c2be8bbb6cf6",
                   1
                 ]
               ]
             },
             {
-              "pointId": "point-815f053a-e61d-4473-96ee-7840f4680879",
+              "pointId": "point-3d6e805c-5eda-4384-9658-90f7084429b3",
               "anchor": [
                 [
-                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  "node-fb7190b8-af62-47c3-bfa7-c2be8bbb6cf6",
                   1
                 ]
               ],
               "in": [
                 [
-                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  "node-fb7190b8-af62-47c3-bfa7-c2be8bbb6cf6",
                   1
                 ]
               ],
               "out": [
                 [
-                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  "node-fb7190b8-af62-47c3-bfa7-c2be8bbb6cf6",
                   1
                 ]
               ]
             },
             {
-              "pointId": "point-6fa4759b-ded7-4115-a920-3edbf3fa5b85",
+              "pointId": "point-2c475e19-5d9e-43ab-bbcd-df83f6dd1134",
               "anchor": [
                 [
-                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  "node-fb7190b8-af62-47c3-bfa7-c2be8bbb6cf6",
                   1
                 ]
               ],
               "in": [
                 [
-                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  "node-fb7190b8-af62-47c3-bfa7-c2be8bbb6cf6",
                   1
                 ]
               ],
               "out": [
                 [
-                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  "node-fb7190b8-af62-47c3-bfa7-c2be8bbb6cf6",
                   1
                 ]
               ]
             },
             {
-              "pointId": "point-307ce46a-c1db-4a68-bf69-fb8218fe1a29",
+              "pointId": "point-07959b45-8451-4e25-a501-0f70a65fe26c",
               "anchor": [
                 [
-                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  "node-fb7190b8-af62-47c3-bfa7-c2be8bbb6cf6",
                   1
                 ]
               ],
               "in": [
                 [
-                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  "node-fb7190b8-af62-47c3-bfa7-c2be8bbb6cf6",
                   1
                 ]
               ],
               "out": [
                 [
-                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  "node-fb7190b8-af62-47c3-bfa7-c2be8bbb6cf6",
                   1
                 ]
               ]
             },
             {
-              "pointId": "point-100bee63-63f7-471a-a834-7ac2eb5c26c4",
+              "pointId": "point-e75bbe47-a61b-471f-85cd-3894cdb7b676",
               "anchor": [
                 [
-                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  "node-fb7190b8-af62-47c3-bfa7-c2be8bbb6cf6",
                   1
                 ]
               ],
               "in": [
                 [
-                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  "node-fb7190b8-af62-47c3-bfa7-c2be8bbb6cf6",
                   1
                 ]
               ],
               "out": [
                 [
-                  "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+                  "node-fb7190b8-af62-47c3-bfa7-c2be8bbb6cf6",
                   1
                 ]
               ]
@@ -244,7 +244,7 @@
         },
         "points": [
           {
-            "id": "point-8eb86d41-9c42-4f36-9888-66a3240878f9",
+            "id": "point-20cd78de-1d85-48e9-94d8-1aa4525279e9",
             "anchor": [
               300,
               150
@@ -259,7 +259,7 @@
             ]
           },
           {
-            "id": "point-33a67631-188c-42d0-9cec-d14bd7b76743",
+            "id": "point-028f2e00-2e2f-4b0d-85e7-27a963478f01",
             "anchor": [
               150,
               300
@@ -274,7 +274,7 @@
             ]
           },
           {
-            "id": "point-248ab595-8e21-4f7e-a005-b7d9f781af19",
+            "id": "point-e3bac4d6-4f0d-4bf0-90f6-ccdeec5a86eb",
             "anchor": [
               0,
               150
@@ -289,7 +289,7 @@
             ]
           },
           {
-            "id": "point-b304f543-0615-40b1-a0de-35480daecfa9",
+            "id": "point-8537f60c-3dd8-47d2-b188-868fbb73f80c",
             "anchor": [
               150,
               0
@@ -309,7 +309,7 @@
             "closed": true,
             "points": [
               {
-                "id": "point-815f053a-e61d-4473-96ee-7840f4680879",
+                "id": "point-3d6e805c-5eda-4384-9658-90f7084429b3",
                 "anchor": [
                   150,
                   80
@@ -324,7 +324,7 @@
                 ]
               },
               {
-                "id": "point-6fa4759b-ded7-4115-a920-3edbf3fa5b85",
+                "id": "point-2c475e19-5d9e-43ab-bbcd-df83f6dd1134",
                 "anchor": [
                   80,
                   150
@@ -339,7 +339,7 @@
                 ]
               },
               {
-                "id": "point-307ce46a-c1db-4a68-bf69-fb8218fe1a29",
+                "id": "point-07959b45-8451-4e25-a501-0f70a65fe26c",
                 "anchor": [
                   150,
                   220
@@ -354,7 +354,7 @@
                 ]
               },
               {
-                "id": "point-100bee63-63f7-471a-a834-7ac2eb5c26c4",
+                "id": "point-e75bbe47-a61b-471f-85cd-3894cdb7b676",
                 "anchor": [
                   220,
                   150
@@ -377,15 +377,15 @@
   "assets": [],
   "animations": [
     {
-      "id": "animation-911fa58d-30d4-4d9b-beed-952c068524bd",
+      "id": "animation-1dfe9922-41cb-45c8-b75c-e9c6f54f4ece",
       "name": "Animation 1",
-      "artboardId": "artboard-5a51b033-1e1e-4f6c-8b74-b52cc955abd4",
+      "artboardId": "artboard-646a92cb-104c-4597-91f5-e44fb1588e62",
       "fps": 60,
       "duration": 120,
       "loop": true,
       "tracks": [
         {
-          "targetId": "node-6af928bd-4cde-42d9-ad3d-35d11d89ad1d",
+          "targetId": "node-fb7190b8-af62-47c3-bfa7-c2be8bbb6cf6",
           "property": "x",
           "keys": [
             {
@@ -422,7 +422,7 @@
     "locked": [],
     "hidden": [],
     "cameras": {
-      "artboard-5a51b033-1e1e-4f6c-8b74-b52cc955abd4": {
+      "artboard-646a92cb-104c-4597-91f5-e44fb1588e62": {
         "x": 0,
         "y": 0,
         "zoom": 1

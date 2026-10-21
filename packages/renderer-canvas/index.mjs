@@ -6,20 +6,11 @@ import {
   worldTransform,
   inverse,
   transformResolver,
+  pathContours,
 } from "@evir/project-model";
 import { worldPoints, mapPoint, controlMatrix } from "@evir/runtime/geometry";
-export function paintOnContext(ctx, fill) {
-  if (typeof fill === "string") return fill;
-  const [x, y] = fill.start,
-    [ex, ey] = fill.end;
-  const gradient =
-    fill.type === "linear"
-      ? ctx.createLinearGradient(x, y, ex, ey)
-      : ctx.createRadialGradient(x, y, 0, x, y, Math.hypot(ex - x, ey - y));
-  for (const stop of [...fill.stops].sort((a, b) => a.position - b.position))
-    gradient.addColorStop(stop.position, stop.color);
-  return gradient;
-}
+import {paintOnContext} from './paint.mjs';
+export {paintOnContext} from './paint.mjs';
 export function pathOnContext(ctx, points, closed) {
   ctx.beginPath();
   for(let start=0;start<points.length;){
@@ -131,7 +122,13 @@ export function drawScene(
         ctx.restore();
         if (n.geometry.stroke?.width) {
           ctx.save();ctx.transform(...resolve(n.id));
-          strokeStyle(ctx,n.geometry);strokePathOnContext(ctx,n.geometry);ctx.stroke();ctx.restore();
+          let geometry=n.geometry;
+          if(geometry.skin){
+            const inversePaint=inverse(resolve(n.id));let offset=0;
+            const parts=pathContours(geometry).map(c=>({...c,points:points.slice(offset,offset+=c.points.length).map(v=>({...v,...Object.fromEntries(['anchor','in','out'].map(k=>[k,mapPoint(inversePaint,v[k])]))}))}));
+            geometry={...geometry,...parts[0],...(parts.length>1?{contours:parts.slice(1)}:{})};
+          }
+          strokeStyle(ctx,geometry);strokePathOnContext(ctx,geometry);ctx.stroke();ctx.restore();
         }
       } else if (n.kind === "text") {
         ctx.save();
@@ -273,17 +270,12 @@ export function nodeBounds(p, n) {
   // Conservative local miter/round/square envelope, transformed per shape.
   for (const v of nodes.filter(v => !isHidden(p,v) && v.geometry?.stroke)) {
     const s=v.geometry.stroke, pad=s.width*(s.join==="miter"?2:Math.SQRT1_2),m=worldTransform(p,v.id);
-    const source=v.kind==="path"?v.geometry.points.flatMap(p=>[p.anchor,p.in,p.out]):[[0,0],[v.geometry.width,0],[v.geometry.width,v.geometry.height],[0,v.geometry.height]];
-    for(const point of source)for(const dx of [-pad,pad])for(const dy of [-pad,pad])points.push(mapPoint(m,[point[0]+dx,point[1]+dy]));
+    const source=v.kind==="path"?worldPoints(p,v).flatMap(p=>[p.anchor,p.in,p.out]):[[0,0],[v.geometry.width,0],[v.geometry.width,v.geometry.height],[0,v.geometry.height]].map(v=>mapPoint(m,v));
+    for(const point of source)for(const dx of [-pad,pad])for(const dy of [-pad,pad])points.push([point[0]+m[0]*dx+m[2]*dy,point[1]+m[1]*dx+m[3]*dy]);
   }
-  const xs = points.map((v) => v[0]),
-    ys = points.map((v) => v[1]);
-  return {
-    x: Math.min(...xs),
-    y: Math.min(...ys),
-    width: Math.max(...xs) - Math.min(...xs),
-    height: Math.max(...ys) - Math.min(...ys),
-  };
+  let x=Infinity,y=Infinity,right=-Infinity,bottom=-Infinity;
+  for(const point of points){x=Math.min(x,point[0]);y=Math.min(y,point[1]);right=Math.max(right,point[0]);bottom=Math.max(bottom,point[1]);}
+  return {x,y,width:right-x,height:bottom-y};
 }
 
 // Host adapter: sizing and scheduling belong to the app; scene drawing belongs

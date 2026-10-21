@@ -6,10 +6,10 @@ This pass follows each change through the shared model, authoring, runtime/rende
 
 | Work area | Current work and acceptance |
 | --- | --- |
-| Compound/Boolean paths | Implemented: shared contours and winding rules, curve-preserving optional Paper 0.14 kernel, cancellable Studio worker, contour editing, source/native round trips and original art. 56 official Canvas/WebGL2 comparisons and four responsive workflows passed before the subsequent live-shape expansion. Full integration checks are running. |
-| Drawing and live shapes | Persistent preset controls implemented; see [live shapes](49-live-shape-controls.md). Smooth endpoint connection/continuation implemented with reflected handles and unchanged old curve segments. Freehand gesture concatenation and gradient/skinned strokes remain. |
+| Compound/Boolean paths | Implemented: shared contours and winding rules, curve-preserving optional Paper 0.14 kernel, cancellable Studio worker, contour editing, source/native round trips and original art. The expanded geometry/paint report passes 216 official Canvas/WebGL2 comparisons. Four responsive compound workflows pass; broader integration work continues. |
+| Drawing and live shapes | Persistent preset controls implemented; see [live shapes](49-live-shape-controls.md). Smooth endpoint connection/continuation implemented with reflected handles and unchanged old curve segments. [Gradient/skinned strokes](50-gradient-and-skinned-strokes.md) are implemented and compared with both official runtimes. Freehand gesture concatenation remains. |
 | Editable import | Compound contours join the existing static contour support. Animated geometry, rounding/flags, data/layout and text/assets need independent native fixtures and official-runtime comparisons. |
-| Rigging/blending | Automatic weights, smoothing/locks, general IK, nested blends and weighted layers need explicit source/runtime/export contracts and controls. |
+| Rigging/blending | [Longer unit-scale IK chains and Kelp](51-longer-ik-chains-and-kelp.md) are implemented, with pixel and raw native matrix comparisons. Automatic weights, smoothing/locks, nonunit IK, nested blends and weighted layers remain. |
 | Text/layout/assets | Multiline/rich text, external resources and reflow require resource ownership, deterministic layout and matching supported native behavior. |
 | Rendering | Inner feather/offset behavior and existing approximation differences require source research and measured rendering comparisons. No full-renderer-parity claim follows from selected fixtures. |
 | Scale/reliability | Paginate or virtualize remaining large control lists, extend animation rebasing and investigate the recorded intermittent browser-test timeout. |

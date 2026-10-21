@@ -1,0 +1,1501 @@
+{
+  "checkedAt": "2026-10-21T08:39:44.374Z",
+  "runtimeVersion": "2.44.0",
+  "scope": "Cloud Chromium/software rendering, not physical-device performance or human accessibility evidence.",
+  "method": "Compound curves and winding, live presets, smooth connectors, gradient/skinned strokes, clips and shared bindings, including actual Studio exports and independently encoded native compound import against official Canvas/WebGL2 pixels.",
+  "thresholds": {
+    "mae": 2.5,
+    "coverageDifference": 350,
+    "minimumCoverage": 50
+  },
+  "casePrefix": "ik-",
+  "fixtures": [
+    {
+      "name": "ik-3-0-false",
+      "sourceSha256": "150183fb90c239ad6b6efe08826e1782952402f03eb837a5ab42bb6620316a9d",
+      "rivSha256": "dd1fd8f2a6153b775bd90b475f5cf90ffc3c0057d41e341862dccd370d9076dc"
+    },
+    {
+      "name": "ik-3-0-true",
+      "sourceSha256": "223e84b48d828da225adfeffa2c7a83ef67a4b24439a2e51950f05a268b67ee7",
+      "rivSha256": "98b39b443ff0e9d0322f96d54391fa92dbc8a8777fd02a631a4abd64559f5a8a"
+    },
+    {
+      "name": "ik-3-0.5-false",
+      "sourceSha256": "6a81c9205b3f2831372fdd1034df006e4f5cb7efd71e92a994b201207218a65a",
+      "rivSha256": "baa7fef27483533d37ea7d48f69d23da9232b75d8fb3a59fc47e113ac7892036"
+    },
+    {
+      "name": "ik-3-0.5-true",
+      "sourceSha256": "b563d2726306614abd4d7f495ff676a30de8d0c82f764c2423eb3f96017d3e1d",
+      "rivSha256": "7ec2815dcca5d1cd8bacb232152928cf0e2a952001c20fe6d3df6d57ebd79c15"
+    },
+    {
+      "name": "ik-3-1-false",
+      "sourceSha256": "6f3c47cca935e7fa7fc52cfafb010537e25d258038cad161892ce64f3663ed0b",
+      "rivSha256": "79d9da89a62a66950d3e50d0747d3ac26fdd702a670a1e74fd19d53d90e8df14"
+    },
+    {
+      "name": "ik-3-1-true",
+      "sourceSha256": "0f1195edead65aacfc68df9d97b6ba437dbcb50faefca1630d9f3ab417b8ead6",
+      "rivSha256": "69d0e469ccf05e14477b00507c6ea689526e71a74bd51940429812482441e513"
+    },
+    {
+      "name": "ik-4-0-false",
+      "sourceSha256": "c6626500d7d99496cfe56ee7c5e77832f8588a68ef34ab72d0d87accdfc196ed",
+      "rivSha256": "9249badb7a486c39a55ae220963e333639e835500dae65086f5eba6a474e61cc"
+    },
+    {
+      "name": "ik-4-0-true",
+      "sourceSha256": "fbb06e97107af52a2c429e3da26e99fef4d949d0a9e1b09b16ccd788081776b1",
+      "rivSha256": "4b9b0e0073ecd84b88a0ea4e329b088624ca65b19c70a5c3649a2fda777960b5"
+    },
+    {
+      "name": "ik-4-0.5-false",
+      "sourceSha256": "5ca10200e59a050dd750913b1d390d685f7447ad1feeb58ca1fb9b15a46b1f25",
+      "rivSha256": "46beb6ff9f21e5544cb457d191df04bbb7b6da21cae0d975d3c2e04e28e44742"
+    },
+    {
+      "name": "ik-4-0.5-true",
+      "sourceSha256": "c4bb72b62147ad63f0b9d016e577154a68f49d36d84bd01fa0db4e712342b659",
+      "rivSha256": "db86cf84b84e4faa725254dfe605c20fc5d9da9821a322abd4b2162ccbd2d843"
+    },
+    {
+      "name": "ik-4-1-false",
+      "sourceSha256": "3dc788ecc14f57f4b0bde361eefca61bc7e83e3008d8ee81f6508924dedf8307",
+      "rivSha256": "e996a828bc89076a89368012adead8aceb83b0fd0c6bbdda08f1976a531adab3"
+    },
+    {
+      "name": "ik-4-1-true",
+      "sourceSha256": "047233d22b269949b6b892b9cdfca58eb48e826b75657a79c7a9842f3b63d206",
+      "rivSha256": "7d31c843e648c0e1b2230878ac61f48e380593cbc0702d16757974b969ef180c"
+    },
+    {
+      "name": "ik-8-0-false",
+      "sourceSha256": "202098e11da220bdd398a4d739afda49ca2070f830fc81a0ba93c0f6938408e5",
+      "rivSha256": "06741fe98d2629972e832f0017360a8662761055324767744de51ee9efcf8c16"
+    },
+    {
+      "name": "ik-8-0-true",
+      "sourceSha256": "47849302eec3f53987a7966961f2647c353f08f80a5fa0f2fb8bd37edfc1e57a",
+      "rivSha256": "1a6fa754d9fa8eeff665da8f66f8d7594cbe698888eaca4aa658086b6c0025fc"
+    },
+    {
+      "name": "ik-8-0.5-false",
+      "sourceSha256": "e72c3bb6af465bce535ec7e804fc91341d48dd2a6dd685b411c3f90975c9f021",
+      "rivSha256": "818964fe7e394e780a23e13465df2bc43efb815f27f0413e37f4df8cd055def7"
+    },
+    {
+      "name": "ik-8-0.5-true",
+      "sourceSha256": "7d39e95ed79fd5a1cc69f1bcfda8806e0a67fee294dac094b0702af114c71d53",
+      "rivSha256": "ed02fafd2a06a5b44a5ba6cc9997733dabfecfbfaec794baf6e4cc1e649804d7"
+    },
+    {
+      "name": "ik-8-1-false",
+      "sourceSha256": "dad6ea708be5daf1f8e011651a7ac995688dcb836c912adc0ecf32c223d4ca73",
+      "rivSha256": "0c09cc6be81733c7f1e6fe7c5ce7abf28719c024bf8eb15cea30b86b5e2028fd"
+    },
+    {
+      "name": "ik-8-1-true",
+      "sourceSha256": "5ffaedd1a6da5358c602b6b5cbcfd8de6991ee1597f2800ac21c3b246eb35b98",
+      "rivSha256": "f69d42e2d77539de741e0ee38a27e3b240802540ddaec2b18fc7fd6bd93b5a60"
+    }
+  ],
+  "backends": [
+    {
+      "backend": "canvas",
+      "checks": [
+        {
+          "scene": "ik-3-0-false",
+          "frame": 0,
+          "mae": 0,
+          "covered": 436,
+          "expectedCovered": 436
+        },
+        {
+          "scene": "ik-3-0-false",
+          "frame": 30,
+          "mae": 0,
+          "covered": 436,
+          "expectedCovered": 436
+        },
+        {
+          "scene": "ik-3-0-false",
+          "frame": 60,
+          "mae": 0,
+          "covered": 436,
+          "expectedCovered": 436
+        },
+        {
+          "scene": "ik-3-0-false",
+          "frame": 90,
+          "mae": 0,
+          "covered": 436,
+          "expectedCovered": 436
+        },
+        {
+          "scene": "ik-3-0-false",
+          "frame": 120,
+          "mae": 0,
+          "covered": 436,
+          "expectedCovered": 436
+        },
+        {
+          "scene": "ik-3-0-true",
+          "frame": 0,
+          "mae": 0,
+          "covered": 436,
+          "expectedCovered": 436
+        },
+        {
+          "scene": "ik-3-0-true",
+          "frame": 30,
+          "mae": 0,
+          "covered": 436,
+          "expectedCovered": 436
+        },
+        {
+          "scene": "ik-3-0-true",
+          "frame": 60,
+          "mae": 0,
+          "covered": 436,
+          "expectedCovered": 436
+        },
+        {
+          "scene": "ik-3-0-true",
+          "frame": 90,
+          "mae": 0,
+          "covered": 436,
+          "expectedCovered": 436
+        },
+        {
+          "scene": "ik-3-0-true",
+          "frame": 120,
+          "mae": 0,
+          "covered": 436,
+          "expectedCovered": 436
+        },
+        {
+          "scene": "ik-3-0.5-false",
+          "frame": 0,
+          "mae": 0,
+          "covered": 456,
+          "expectedCovered": 456
+        },
+        {
+          "scene": "ik-3-0.5-false",
+          "frame": 30,
+          "mae": 0,
+          "covered": 445,
+          "expectedCovered": 445
+        },
+        {
+          "scene": "ik-3-0.5-false",
+          "frame": 60,
+          "mae": 0,
+          "covered": 439,
+          "expectedCovered": 439
+        },
+        {
+          "scene": "ik-3-0.5-false",
+          "frame": 90,
+          "mae": 0,
+          "covered": 445,
+          "expectedCovered": 445
+        },
+        {
+          "scene": "ik-3-0.5-false",
+          "frame": 120,
+          "mae": 0,
+          "covered": 456,
+          "expectedCovered": 456
+        },
+        {
+          "scene": "ik-3-0.5-true",
+          "frame": 0,
+          "mae": 0,
+          "covered": 456,
+          "expectedCovered": 456
+        },
+        {
+          "scene": "ik-3-0.5-true",
+          "frame": 30,
+          "mae": 0,
+          "covered": 447,
+          "expectedCovered": 447
+        },
+        {
+          "scene": "ik-3-0.5-true",
+          "frame": 60,
+          "mae": 0,
+          "covered": 439,
+          "expectedCovered": 439
+        },
+        {
+          "scene": "ik-3-0.5-true",
+          "frame": 90,
+          "mae": 0,
+          "covered": 447,
+          "expectedCovered": 447
+        },
+        {
+          "scene": "ik-3-0.5-true",
+          "frame": 120,
+          "mae": 0,
+          "covered": 456,
+          "expectedCovered": 456
+        },
+        {
+          "scene": "ik-3-1-false",
+          "frame": 0,
+          "mae": 0,
+          "covered": 429,
+          "expectedCovered": 429
+        },
+        {
+          "scene": "ik-3-1-false",
+          "frame": 30,
+          "mae": 0,
+          "covered": 444,
+          "expectedCovered": 444
+        },
+        {
+          "scene": "ik-3-1-false",
+          "frame": 60,
+          "mae": 0,
+          "covered": 452,
+          "expectedCovered": 452
+        },
+        {
+          "scene": "ik-3-1-false",
+          "frame": 90,
+          "mae": 0,
+          "covered": 444,
+          "expectedCovered": 444
+        },
+        {
+          "scene": "ik-3-1-false",
+          "frame": 120,
+          "mae": 0,
+          "covered": 429,
+          "expectedCovered": 429
+        },
+        {
+          "scene": "ik-3-1-true",
+          "frame": 0,
+          "mae": 0,
+          "covered": 429,
+          "expectedCovered": 429
+        },
+        {
+          "scene": "ik-3-1-true",
+          "frame": 30,
+          "mae": 0,
+          "covered": 447,
+          "expectedCovered": 447
+        },
+        {
+          "scene": "ik-3-1-true",
+          "frame": 60,
+          "mae": 0,
+          "covered": 452,
+          "expectedCovered": 452
+        },
+        {
+          "scene": "ik-3-1-true",
+          "frame": 90,
+          "mae": 0,
+          "covered": 447,
+          "expectedCovered": 447
+        },
+        {
+          "scene": "ik-3-1-true",
+          "frame": 120,
+          "mae": 0,
+          "covered": 429,
+          "expectedCovered": 429
+        },
+        {
+          "scene": "ik-4-0-false",
+          "frame": 0,
+          "mae": 0,
+          "covered": 583,
+          "expectedCovered": 583
+        },
+        {
+          "scene": "ik-4-0-false",
+          "frame": 30,
+          "mae": 0,
+          "covered": 583,
+          "expectedCovered": 583
+        },
+        {
+          "scene": "ik-4-0-false",
+          "frame": 60,
+          "mae": 0,
+          "covered": 583,
+          "expectedCovered": 583
+        },
+        {
+          "scene": "ik-4-0-false",
+          "frame": 90,
+          "mae": 0,
+          "covered": 583,
+          "expectedCovered": 583
+        },
+        {
+          "scene": "ik-4-0-false",
+          "frame": 120,
+          "mae": 0,
+          "covered": 583,
+          "expectedCovered": 583
+        },
+        {
+          "scene": "ik-4-0-true",
+          "frame": 0,
+          "mae": 0,
+          "covered": 583,
+          "expectedCovered": 583
+        },
+        {
+          "scene": "ik-4-0-true",
+          "frame": 30,
+          "mae": 0,
+          "covered": 583,
+          "expectedCovered": 583
+        },
+        {
+          "scene": "ik-4-0-true",
+          "frame": 60,
+          "mae": 0,
+          "covered": 583,
+          "expectedCovered": 583
+        },
+        {
+          "scene": "ik-4-0-true",
+          "frame": 90,
+          "mae": 0,
+          "covered": 583,
+          "expectedCovered": 583
+        },
+        {
+          "scene": "ik-4-0-true",
+          "frame": 120,
+          "mae": 0,
+          "covered": 583,
+          "expectedCovered": 583
+        },
+        {
+          "scene": "ik-4-0.5-false",
+          "frame": 0,
+          "mae": 0,
+          "covered": 599,
+          "expectedCovered": 599
+        },
+        {
+          "scene": "ik-4-0.5-false",
+          "frame": 30,
+          "mae": 0,
+          "covered": 595,
+          "expectedCovered": 595
+        },
+        {
+          "scene": "ik-4-0.5-false",
+          "frame": 60,
+          "mae": 0,
+          "covered": 594,
+          "expectedCovered": 594
+        },
+        {
+          "scene": "ik-4-0.5-false",
+          "frame": 90,
+          "mae": 0,
+          "covered": 595,
+          "expectedCovered": 595
+        },
+        {
+          "scene": "ik-4-0.5-false",
+          "frame": 120,
+          "mae": 0,
+          "covered": 599,
+          "expectedCovered": 599
+        },
+        {
+          "scene": "ik-4-0.5-true",
+          "frame": 0,
+          "mae": 0,
+          "covered": 594,
+          "expectedCovered": 594
+        },
+        {
+          "scene": "ik-4-0.5-true",
+          "frame": 30,
+          "mae": 0,
+          "covered": 593,
+          "expectedCovered": 593
+        },
+        {
+          "scene": "ik-4-0.5-true",
+          "frame": 60,
+          "mae": 0,
+          "covered": 590,
+          "expectedCovered": 590
+        },
+        {
+          "scene": "ik-4-0.5-true",
+          "frame": 90,
+          "mae": 0,
+          "covered": 593,
+          "expectedCovered": 593
+        },
+        {
+          "scene": "ik-4-0.5-true",
+          "frame": 120,
+          "mae": 0,
+          "covered": 594,
+          "expectedCovered": 594
+        },
+        {
+          "scene": "ik-4-1-false",
+          "frame": 0,
+          "mae": 0,
+          "covered": 594,
+          "expectedCovered": 594
+        },
+        {
+          "scene": "ik-4-1-false",
+          "frame": 30,
+          "mae": 0,
+          "covered": 588,
+          "expectedCovered": 588
+        },
+        {
+          "scene": "ik-4-1-false",
+          "frame": 60,
+          "mae": 0,
+          "covered": 594,
+          "expectedCovered": 594
+        },
+        {
+          "scene": "ik-4-1-false",
+          "frame": 90,
+          "mae": 0,
+          "covered": 588,
+          "expectedCovered": 588
+        },
+        {
+          "scene": "ik-4-1-false",
+          "frame": 120,
+          "mae": 0,
+          "covered": 594,
+          "expectedCovered": 594
+        },
+        {
+          "scene": "ik-4-1-true",
+          "frame": 0,
+          "mae": 0,
+          "covered": 588,
+          "expectedCovered": 588
+        },
+        {
+          "scene": "ik-4-1-true",
+          "frame": 30,
+          "mae": 0,
+          "covered": 587,
+          "expectedCovered": 587
+        },
+        {
+          "scene": "ik-4-1-true",
+          "frame": 60,
+          "mae": 0,
+          "covered": 598,
+          "expectedCovered": 598
+        },
+        {
+          "scene": "ik-4-1-true",
+          "frame": 90,
+          "mae": 0,
+          "covered": 587,
+          "expectedCovered": 587
+        },
+        {
+          "scene": "ik-4-1-true",
+          "frame": 120,
+          "mae": 0,
+          "covered": 588,
+          "expectedCovered": 588
+        },
+        {
+          "scene": "ik-8-0-false",
+          "frame": 0,
+          "mae": 0,
+          "covered": 1156,
+          "expectedCovered": 1156
+        },
+        {
+          "scene": "ik-8-0-false",
+          "frame": 30,
+          "mae": 0,
+          "covered": 1156,
+          "expectedCovered": 1156
+        },
+        {
+          "scene": "ik-8-0-false",
+          "frame": 60,
+          "mae": 0,
+          "covered": 1156,
+          "expectedCovered": 1156
+        },
+        {
+          "scene": "ik-8-0-false",
+          "frame": 90,
+          "mae": 0,
+          "covered": 1156,
+          "expectedCovered": 1156
+        },
+        {
+          "scene": "ik-8-0-false",
+          "frame": 120,
+          "mae": 0,
+          "covered": 1156,
+          "expectedCovered": 1156
+        },
+        {
+          "scene": "ik-8-0-true",
+          "frame": 0,
+          "mae": 0,
+          "covered": 1156,
+          "expectedCovered": 1156
+        },
+        {
+          "scene": "ik-8-0-true",
+          "frame": 30,
+          "mae": 0,
+          "covered": 1156,
+          "expectedCovered": 1156
+        },
+        {
+          "scene": "ik-8-0-true",
+          "frame": 60,
+          "mae": 0,
+          "covered": 1156,
+          "expectedCovered": 1156
+        },
+        {
+          "scene": "ik-8-0-true",
+          "frame": 90,
+          "mae": 0,
+          "covered": 1156,
+          "expectedCovered": 1156
+        },
+        {
+          "scene": "ik-8-0-true",
+          "frame": 120,
+          "mae": 0,
+          "covered": 1156,
+          "expectedCovered": 1156
+        },
+        {
+          "scene": "ik-8-0.5-false",
+          "frame": 0,
+          "mae": 0.00002288818359375,
+          "covered": 1182,
+          "expectedCovered": 1182
+        },
+        {
+          "scene": "ik-8-0.5-false",
+          "frame": 30,
+          "mae": 0,
+          "covered": 1186,
+          "expectedCovered": 1186
+        },
+        {
+          "scene": "ik-8-0.5-false",
+          "frame": 60,
+          "mae": 0,
+          "covered": 841,
+          "expectedCovered": 841
+        },
+        {
+          "scene": "ik-8-0.5-false",
+          "frame": 90,
+          "mae": 0,
+          "covered": 1186,
+          "expectedCovered": 1186
+        },
+        {
+          "scene": "ik-8-0.5-false",
+          "frame": 120,
+          "mae": 0.00002288818359375,
+          "covered": 1182,
+          "expectedCovered": 1182
+        },
+        {
+          "scene": "ik-8-0.5-true",
+          "frame": 0,
+          "mae": 0,
+          "covered": 987,
+          "expectedCovered": 987
+        },
+        {
+          "scene": "ik-8-0.5-true",
+          "frame": 30,
+          "mae": 0,
+          "covered": 851,
+          "expectedCovered": 851
+        },
+        {
+          "scene": "ik-8-0.5-true",
+          "frame": 60,
+          "mae": 0,
+          "covered": 1182,
+          "expectedCovered": 1182
+        },
+        {
+          "scene": "ik-8-0.5-true",
+          "frame": 90,
+          "mae": 0,
+          "covered": 851,
+          "expectedCovered": 851
+        },
+        {
+          "scene": "ik-8-0.5-true",
+          "frame": 120,
+          "mae": 0,
+          "covered": 987,
+          "expectedCovered": 987
+        },
+        {
+          "scene": "ik-8-1-false",
+          "frame": 0,
+          "mae": 0,
+          "covered": 1163,
+          "expectedCovered": 1163
+        },
+        {
+          "scene": "ik-8-1-false",
+          "frame": 30,
+          "mae": 0,
+          "covered": 1170,
+          "expectedCovered": 1170
+        },
+        {
+          "scene": "ik-8-1-false",
+          "frame": 60,
+          "mae": 0,
+          "covered": 1165,
+          "expectedCovered": 1165
+        },
+        {
+          "scene": "ik-8-1-false",
+          "frame": 90,
+          "mae": 0,
+          "covered": 1170,
+          "expectedCovered": 1170
+        },
+        {
+          "scene": "ik-8-1-false",
+          "frame": 120,
+          "mae": 0,
+          "covered": 1163,
+          "expectedCovered": 1163
+        },
+        {
+          "scene": "ik-8-1-true",
+          "frame": 0,
+          "mae": 0.0000457763671875,
+          "covered": 1156,
+          "expectedCovered": 1156
+        },
+        {
+          "scene": "ik-8-1-true",
+          "frame": 30,
+          "mae": 0,
+          "covered": 1158,
+          "expectedCovered": 1158
+        },
+        {
+          "scene": "ik-8-1-true",
+          "frame": 60,
+          "mae": 0,
+          "covered": 1164,
+          "expectedCovered": 1164
+        },
+        {
+          "scene": "ik-8-1-true",
+          "frame": 90,
+          "mae": 0,
+          "covered": 1158,
+          "expectedCovered": 1158
+        },
+        {
+          "scene": "ik-8-1-true",
+          "frame": 120,
+          "mae": 0.0000457763671875,
+          "covered": 1156,
+          "expectedCovered": 1156
+        }
+      ],
+      "graphics": {
+        "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+        "contexts": [
+          {
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "unmaskedRendererAvailable": true,
+            "contextLost": false,
+            "errors": [],
+            "extensions": [
+              "EXT_clip_control",
+              "EXT_color_buffer_float",
+              "EXT_color_buffer_half_float",
+              "EXT_conservative_depth",
+              "EXT_depth_clamp",
+              "EXT_float_blend",
+              "EXT_polygon_offset_clamp",
+              "EXT_texture_compression_bptc",
+              "EXT_texture_compression_rgtc",
+              "EXT_texture_filter_anisotropic",
+              "EXT_texture_mirror_clamp_to_edge",
+              "NV_shader_noperspective_interpolation",
+              "OES_draw_buffers_indexed",
+              "OES_sample_variables",
+              "OES_shader_multisample_interpolation",
+              "OES_texture_float_linear",
+              "OVR_multiview2",
+              "WEBGL_clip_cull_distance",
+              "WEBGL_compressed_texture_astc",
+              "WEBGL_compressed_texture_etc",
+              "WEBGL_compressed_texture_etc1",
+              "WEBGL_compressed_texture_s3tc",
+              "WEBGL_compressed_texture_s3tc_srgb",
+              "WEBGL_debug_renderer_info",
+              "WEBGL_debug_shaders",
+              "WEBGL_lose_context",
+              "WEBGL_multi_draw",
+              "WEBGL_polygon_mode",
+              "WEBGL_stencil_texturing"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "backend": "webgl2",
+      "checks": [
+        {
+          "scene": "ik-3-0-false",
+          "frame": 0,
+          "mae": 0.04947662353515625,
+          "covered": 418,
+          "expectedCovered": 436
+        },
+        {
+          "scene": "ik-3-0-false",
+          "frame": 30,
+          "mae": 0.04947662353515625,
+          "covered": 418,
+          "expectedCovered": 436
+        },
+        {
+          "scene": "ik-3-0-false",
+          "frame": 60,
+          "mae": 0.04947662353515625,
+          "covered": 418,
+          "expectedCovered": 436
+        },
+        {
+          "scene": "ik-3-0-false",
+          "frame": 90,
+          "mae": 0.04947662353515625,
+          "covered": 418,
+          "expectedCovered": 436
+        },
+        {
+          "scene": "ik-3-0-false",
+          "frame": 120,
+          "mae": 0.04947662353515625,
+          "covered": 418,
+          "expectedCovered": 436
+        },
+        {
+          "scene": "ik-3-0-true",
+          "frame": 0,
+          "mae": 0.04947662353515625,
+          "covered": 418,
+          "expectedCovered": 436
+        },
+        {
+          "scene": "ik-3-0-true",
+          "frame": 30,
+          "mae": 0.04947662353515625,
+          "covered": 418,
+          "expectedCovered": 436
+        },
+        {
+          "scene": "ik-3-0-true",
+          "frame": 60,
+          "mae": 0.04947662353515625,
+          "covered": 418,
+          "expectedCovered": 436
+        },
+        {
+          "scene": "ik-3-0-true",
+          "frame": 90,
+          "mae": 0.04947662353515625,
+          "covered": 418,
+          "expectedCovered": 436
+        },
+        {
+          "scene": "ik-3-0-true",
+          "frame": 120,
+          "mae": 0.04947662353515625,
+          "covered": 418,
+          "expectedCovered": 436
+        },
+        {
+          "scene": "ik-3-0.5-false",
+          "frame": 0,
+          "mae": 0.10555648803710938,
+          "covered": 415,
+          "expectedCovered": 456
+        },
+        {
+          "scene": "ik-3-0.5-false",
+          "frame": 30,
+          "mae": 0.067596435546875,
+          "covered": 418,
+          "expectedCovered": 445
+        },
+        {
+          "scene": "ik-3-0.5-false",
+          "frame": 60,
+          "mae": 0.0438690185546875,
+          "covered": 427,
+          "expectedCovered": 439
+        },
+        {
+          "scene": "ik-3-0.5-false",
+          "frame": 90,
+          "mae": 0.067596435546875,
+          "covered": 418,
+          "expectedCovered": 445
+        },
+        {
+          "scene": "ik-3-0.5-false",
+          "frame": 120,
+          "mae": 0.10555648803710938,
+          "covered": 415,
+          "expectedCovered": 456
+        },
+        {
+          "scene": "ik-3-0.5-true",
+          "frame": 0,
+          "mae": 0.10555648803710938,
+          "covered": 415,
+          "expectedCovered": 456
+        },
+        {
+          "scene": "ik-3-0.5-true",
+          "frame": 30,
+          "mae": 0.07698440551757812,
+          "covered": 418,
+          "expectedCovered": 447
+        },
+        {
+          "scene": "ik-3-0.5-true",
+          "frame": 60,
+          "mae": 0.0438690185546875,
+          "covered": 427,
+          "expectedCovered": 439
+        },
+        {
+          "scene": "ik-3-0.5-true",
+          "frame": 90,
+          "mae": 0.07698440551757812,
+          "covered": 418,
+          "expectedCovered": 447
+        },
+        {
+          "scene": "ik-3-0.5-true",
+          "frame": 120,
+          "mae": 0.10555648803710938,
+          "covered": 415,
+          "expectedCovered": 456
+        },
+        {
+          "scene": "ik-3-1-false",
+          "frame": 0,
+          "mae": 0.0183563232421875,
+          "covered": 424,
+          "expectedCovered": 429
+        },
+        {
+          "scene": "ik-3-1-false",
+          "frame": 30,
+          "mae": 0.0612030029296875,
+          "covered": 423,
+          "expectedCovered": 444
+        },
+        {
+          "scene": "ik-3-1-false",
+          "frame": 60,
+          "mae": 0.07349777221679688,
+          "covered": 426,
+          "expectedCovered": 452
+        },
+        {
+          "scene": "ik-3-1-false",
+          "frame": 90,
+          "mae": 0.0612030029296875,
+          "covered": 423,
+          "expectedCovered": 444
+        },
+        {
+          "scene": "ik-3-1-false",
+          "frame": 120,
+          "mae": 0.0183563232421875,
+          "covered": 424,
+          "expectedCovered": 429
+        },
+        {
+          "scene": "ik-3-1-true",
+          "frame": 0,
+          "mae": 0.0183563232421875,
+          "covered": 424,
+          "expectedCovered": 429
+        },
+        {
+          "scene": "ik-3-1-true",
+          "frame": 30,
+          "mae": 0.07120132446289062,
+          "covered": 420,
+          "expectedCovered": 447
+        },
+        {
+          "scene": "ik-3-1-true",
+          "frame": 60,
+          "mae": 0.07349777221679688,
+          "covered": 426,
+          "expectedCovered": 452
+        },
+        {
+          "scene": "ik-3-1-true",
+          "frame": 90,
+          "mae": 0.07120132446289062,
+          "covered": 420,
+          "expectedCovered": 447
+        },
+        {
+          "scene": "ik-3-1-true",
+          "frame": 120,
+          "mae": 0.0183563232421875,
+          "covered": 424,
+          "expectedCovered": 429
+        },
+        {
+          "scene": "ik-4-0-false",
+          "frame": 0,
+          "mae": 0.07387542724609375,
+          "covered": 557,
+          "expectedCovered": 583
+        },
+        {
+          "scene": "ik-4-0-false",
+          "frame": 30,
+          "mae": 0.07387542724609375,
+          "covered": 557,
+          "expectedCovered": 583
+        },
+        {
+          "scene": "ik-4-0-false",
+          "frame": 60,
+          "mae": 0.07387542724609375,
+          "covered": 557,
+          "expectedCovered": 583
+        },
+        {
+          "scene": "ik-4-0-false",
+          "frame": 90,
+          "mae": 0.07387542724609375,
+          "covered": 557,
+          "expectedCovered": 583
+        },
+        {
+          "scene": "ik-4-0-false",
+          "frame": 120,
+          "mae": 0.07387542724609375,
+          "covered": 557,
+          "expectedCovered": 583
+        },
+        {
+          "scene": "ik-4-0-true",
+          "frame": 0,
+          "mae": 0.07387542724609375,
+          "covered": 557,
+          "expectedCovered": 583
+        },
+        {
+          "scene": "ik-4-0-true",
+          "frame": 30,
+          "mae": 0.07387542724609375,
+          "covered": 557,
+          "expectedCovered": 583
+        },
+        {
+          "scene": "ik-4-0-true",
+          "frame": 60,
+          "mae": 0.07387542724609375,
+          "covered": 557,
+          "expectedCovered": 583
+        },
+        {
+          "scene": "ik-4-0-true",
+          "frame": 90,
+          "mae": 0.07387542724609375,
+          "covered": 557,
+          "expectedCovered": 583
+        },
+        {
+          "scene": "ik-4-0-true",
+          "frame": 120,
+          "mae": 0.07387542724609375,
+          "covered": 557,
+          "expectedCovered": 583
+        },
+        {
+          "scene": "ik-4-0.5-false",
+          "frame": 0,
+          "mae": 0.119781494140625,
+          "covered": 554,
+          "expectedCovered": 599
+        },
+        {
+          "scene": "ik-4-0.5-false",
+          "frame": 30,
+          "mae": 0.11119461059570312,
+          "covered": 553,
+          "expectedCovered": 595
+        },
+        {
+          "scene": "ik-4-0.5-false",
+          "frame": 60,
+          "mae": 0.08870697021484375,
+          "covered": 561,
+          "expectedCovered": 594
+        },
+        {
+          "scene": "ik-4-0.5-false",
+          "frame": 90,
+          "mae": 0.11119461059570312,
+          "covered": 553,
+          "expectedCovered": 595
+        },
+        {
+          "scene": "ik-4-0.5-false",
+          "frame": 120,
+          "mae": 0.119781494140625,
+          "covered": 554,
+          "expectedCovered": 599
+        },
+        {
+          "scene": "ik-4-0.5-true",
+          "frame": 0,
+          "mae": 0.0924224853515625,
+          "covered": 560,
+          "expectedCovered": 594
+        },
+        {
+          "scene": "ik-4-0.5-true",
+          "frame": 30,
+          "mae": 0.09320449829101562,
+          "covered": 560,
+          "expectedCovered": 593
+        },
+        {
+          "scene": "ik-4-0.5-true",
+          "frame": 60,
+          "mae": 0.0763397216796875,
+          "covered": 565,
+          "expectedCovered": 590
+        },
+        {
+          "scene": "ik-4-0.5-true",
+          "frame": 90,
+          "mae": 0.09320449829101562,
+          "covered": 560,
+          "expectedCovered": 593
+        },
+        {
+          "scene": "ik-4-0.5-true",
+          "frame": 120,
+          "mae": 0.0924224853515625,
+          "covered": 560,
+          "expectedCovered": 594
+        },
+        {
+          "scene": "ik-4-1-false",
+          "frame": 0,
+          "mae": 0.1108245849609375,
+          "covered": 554,
+          "expectedCovered": 594
+        },
+        {
+          "scene": "ik-4-1-false",
+          "frame": 30,
+          "mae": 0.10731124877929688,
+          "covered": 547,
+          "expectedCovered": 588
+        },
+        {
+          "scene": "ik-4-1-false",
+          "frame": 60,
+          "mae": 0.11058425903320312,
+          "covered": 552,
+          "expectedCovered": 594
+        },
+        {
+          "scene": "ik-4-1-false",
+          "frame": 90,
+          "mae": 0.10731124877929688,
+          "covered": 547,
+          "expectedCovered": 588
+        },
+        {
+          "scene": "ik-4-1-false",
+          "frame": 120,
+          "mae": 0.1108245849609375,
+          "covered": 554,
+          "expectedCovered": 594
+        },
+        {
+          "scene": "ik-4-1-true",
+          "frame": 0,
+          "mae": 0.1010589599609375,
+          "covered": 551,
+          "expectedCovered": 588
+        },
+        {
+          "scene": "ik-4-1-true",
+          "frame": 30,
+          "mae": 0.10914993286132812,
+          "covered": 547,
+          "expectedCovered": 587
+        },
+        {
+          "scene": "ik-4-1-true",
+          "frame": 60,
+          "mae": 0.11284255981445312,
+          "covered": 555,
+          "expectedCovered": 598
+        },
+        {
+          "scene": "ik-4-1-true",
+          "frame": 90,
+          "mae": 0.10914993286132812,
+          "covered": 547,
+          "expectedCovered": 587
+        },
+        {
+          "scene": "ik-4-1-true",
+          "frame": 120,
+          "mae": 0.1010589599609375,
+          "covered": 551,
+          "expectedCovered": 588
+        },
+        {
+          "scene": "ik-8-0-false",
+          "frame": 0,
+          "mae": 0.13999176025390625,
+          "covered": 1110,
+          "expectedCovered": 1156
+        },
+        {
+          "scene": "ik-8-0-false",
+          "frame": 30,
+          "mae": 0.13999176025390625,
+          "covered": 1110,
+          "expectedCovered": 1156
+        },
+        {
+          "scene": "ik-8-0-false",
+          "frame": 60,
+          "mae": 0.13999176025390625,
+          "covered": 1110,
+          "expectedCovered": 1156
+        },
+        {
+          "scene": "ik-8-0-false",
+          "frame": 90,
+          "mae": 0.13999176025390625,
+          "covered": 1110,
+          "expectedCovered": 1156
+        },
+        {
+          "scene": "ik-8-0-false",
+          "frame": 120,
+          "mae": 0.13999176025390625,
+          "covered": 1110,
+          "expectedCovered": 1156
+        },
+        {
+          "scene": "ik-8-0-true",
+          "frame": 0,
+          "mae": 0.13999176025390625,
+          "covered": 1110,
+          "expectedCovered": 1156
+        },
+        {
+          "scene": "ik-8-0-true",
+          "frame": 30,
+          "mae": 0.13999176025390625,
+          "covered": 1110,
+          "expectedCovered": 1156
+        },
+        {
+          "scene": "ik-8-0-true",
+          "frame": 60,
+          "mae": 0.13999176025390625,
+          "covered": 1110,
+          "expectedCovered": 1156
+        },
+        {
+          "scene": "ik-8-0-true",
+          "frame": 90,
+          "mae": 0.13999176025390625,
+          "covered": 1110,
+          "expectedCovered": 1156
+        },
+        {
+          "scene": "ik-8-0-true",
+          "frame": 120,
+          "mae": 0.13999176025390625,
+          "covered": 1110,
+          "expectedCovered": 1156
+        },
+        {
+          "scene": "ik-8-0.5-false",
+          "frame": 0,
+          "mae": 0.20415878295898438,
+          "covered": 1107,
+          "expectedCovered": 1182
+        },
+        {
+          "scene": "ik-8-0.5-false",
+          "frame": 30,
+          "mae": 0.21373367309570312,
+          "covered": 1107,
+          "expectedCovered": 1186
+        },
+        {
+          "scene": "ik-8-0.5-false",
+          "frame": 60,
+          "mae": 0.12053298950195312,
+          "covered": 799,
+          "expectedCovered": 841
+        },
+        {
+          "scene": "ik-8-0.5-false",
+          "frame": 90,
+          "mae": 0.21373367309570312,
+          "covered": 1107,
+          "expectedCovered": 1186
+        },
+        {
+          "scene": "ik-8-0.5-false",
+          "frame": 120,
+          "mae": 0.20415878295898438,
+          "covered": 1107,
+          "expectedCovered": 1182
+        },
+        {
+          "scene": "ik-8-0.5-true",
+          "frame": 0,
+          "mae": 0.17139053344726562,
+          "covered": 922,
+          "expectedCovered": 987
+        },
+        {
+          "scene": "ik-8-0.5-true",
+          "frame": 30,
+          "mae": 0.11876678466796875,
+          "covered": 809,
+          "expectedCovered": 851
+        },
+        {
+          "scene": "ik-8-0.5-true",
+          "frame": 60,
+          "mae": 0.193206787109375,
+          "covered": 1112,
+          "expectedCovered": 1182
+        },
+        {
+          "scene": "ik-8-0.5-true",
+          "frame": 90,
+          "mae": 0.11876678466796875,
+          "covered": 809,
+          "expectedCovered": 851
+        },
+        {
+          "scene": "ik-8-0.5-true",
+          "frame": 120,
+          "mae": 0.17139053344726562,
+          "covered": 922,
+          "expectedCovered": 987
+        },
+        {
+          "scene": "ik-8-1-false",
+          "frame": 0,
+          "mae": 0.17126083374023438,
+          "covered": 1097,
+          "expectedCovered": 1163
+        },
+        {
+          "scene": "ik-8-1-false",
+          "frame": 30,
+          "mae": 0.19360733032226562,
+          "covered": 1098,
+          "expectedCovered": 1170
+        },
+        {
+          "scene": "ik-8-1-false",
+          "frame": 60,
+          "mae": 0.21597671508789062,
+          "covered": 1086,
+          "expectedCovered": 1165
+        },
+        {
+          "scene": "ik-8-1-false",
+          "frame": 90,
+          "mae": 0.19360733032226562,
+          "covered": 1098,
+          "expectedCovered": 1170
+        },
+        {
+          "scene": "ik-8-1-false",
+          "frame": 120,
+          "mae": 0.17126083374023438,
+          "covered": 1097,
+          "expectedCovered": 1163
+        },
+        {
+          "scene": "ik-8-1-true",
+          "frame": 0,
+          "mae": 0.18210983276367188,
+          "covered": 1088,
+          "expectedCovered": 1156
+        },
+        {
+          "scene": "ik-8-1-true",
+          "frame": 30,
+          "mae": 0.20056533813476562,
+          "covered": 1082,
+          "expectedCovered": 1158
+        },
+        {
+          "scene": "ik-8-1-true",
+          "frame": 60,
+          "mae": 0.18552780151367188,
+          "covered": 1098,
+          "expectedCovered": 1164
+        },
+        {
+          "scene": "ik-8-1-true",
+          "frame": 90,
+          "mae": 0.20056533813476562,
+          "covered": 1082,
+          "expectedCovered": 1158
+        },
+        {
+          "scene": "ik-8-1-true",
+          "frame": 120,
+          "mae": 0.18210983276367188,
+          "covered": 1088,
+          "expectedCovered": 1156
+        }
+      ],
+      "graphics": {
+        "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+        "contexts": [
+          {
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "unmaskedRendererAvailable": true,
+            "contextLost": false,
+            "errors": [],
+            "extensions": [
+              "EXT_clip_control",
+              "EXT_color_buffer_float",
+              "EXT_color_buffer_half_float",
+              "EXT_conservative_depth",
+              "EXT_depth_clamp",
+              "EXT_float_blend",
+              "EXT_polygon_offset_clamp",
+              "EXT_texture_compression_bptc",
+              "EXT_texture_compression_rgtc",
+              "EXT_texture_filter_anisotropic",
+              "EXT_texture_mirror_clamp_to_edge",
+              "NV_shader_noperspective_interpolation",
+              "OES_draw_buffers_indexed",
+              "OES_sample_variables",
+              "OES_shader_multisample_interpolation",
+              "OES_texture_float_linear",
+              "OVR_multiview2",
+              "WEBGL_clip_cull_distance",
+              "WEBGL_compressed_texture_astc",
+              "WEBGL_compressed_texture_etc",
+              "WEBGL_compressed_texture_etc1",
+              "WEBGL_compressed_texture_s3tc",
+              "WEBGL_compressed_texture_s3tc_srgb",
+              "WEBGL_debug_renderer_info",
+              "WEBGL_debug_shaders",
+              "WEBGL_lose_context",
+              "WEBGL_multi_draw",
+              "WEBGL_polygon_mode",
+              "WEBGL_stencil_texturing"
+            ]
+          },
+          {
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "unmaskedRendererAvailable": true,
+            "contextLost": false,
+            "errors": [],
+            "extensions": [
+              "EXT_clip_control",
+              "EXT_color_buffer_float",
+              "EXT_color_buffer_half_float",
+              "EXT_conservative_depth",
+              "EXT_depth_clamp",
+              "EXT_float_blend",
+              "EXT_polygon_offset_clamp",
+              "EXT_texture_compression_bptc",
+              "EXT_texture_compression_rgtc",
+              "EXT_texture_filter_anisotropic",
+              "EXT_texture_mirror_clamp_to_edge",
+              "NV_shader_noperspective_interpolation",
+              "OES_draw_buffers_indexed",
+              "OES_sample_variables",
+              "OES_shader_multisample_interpolation",
+              "OES_texture_float_linear",
+              "OVR_multiview2",
+              "WEBGL_clip_cull_distance",
+              "WEBGL_compressed_texture_astc",
+              "WEBGL_compressed_texture_etc",
+              "WEBGL_compressed_texture_etc1",
+              "WEBGL_compressed_texture_s3tc",
+              "WEBGL_compressed_texture_s3tc_srgb",
+              "WEBGL_debug_renderer_info",
+              "WEBGL_debug_shaders",
+              "WEBGL_lose_context",
+              "WEBGL_multi_draw",
+              "WEBGL_polygon_mode",
+              "WEBGL_stencil_texturing"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "browser": "153.0.8010.12"
+}

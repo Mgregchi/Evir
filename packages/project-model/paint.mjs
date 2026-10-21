@@ -71,3 +71,11 @@ export function validatePaint(fill, path, problem) {
     color(stop.color, `${key}.color`);
   }
 }
+
+export function gradientProperties(fill,prefix='paint.'){
+ return fill&&typeof fill==='object'&&Array.isArray(fill.stops)?[...['startX','startY','endX','endY'].map(k=>prefix+k),...fill.stops.flatMap((_,i)=>[`${prefix}stop.${i}.position`,`${prefix}stop.${i}.color`])]:[];
+}
+export function gradientValue(fill,property,value){
+ const bits=property.split('.'),host=bits[0]==='stop'?fill.stops[Number(bits[1])]:fill[bits[0].startsWith('start')?'start':'end'],key=bits[0]==='stop'?bits[2]:bits[0].endsWith('X')?0:1;
+ if(arguments.length===3)host[key]=key==='position'?Math.max(0,Math.min(1,value)):value;return host[key];
+}
