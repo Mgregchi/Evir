@@ -7,7 +7,8 @@
   "exports": {
     ".": "./index.mjs",
     "./standalone": "./dist/index.mjs",
-    "./example": "./compass.mjs"
+    "./example": "./compass.mjs",
+    "./mcp-tools": "./mcp-tools.mjs"
   },
   "files": [
     "*.mjs",

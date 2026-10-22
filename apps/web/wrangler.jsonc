@@ -23,5 +23,21 @@
     "crons": [
       "17 3 * * *"
     ]
-  }
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "LIVE_SESSIONS",
+        "class_name": "LiveSession"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "live-session-v1",
+      "new_sqlite_classes": [
+        "LiveSession"
+      ]
+    }
+  ]
 }

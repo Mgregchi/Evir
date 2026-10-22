@@ -1,3 +1,4 @@
+import {mountRemoteCommands} from './remote-commands.mjs';
 import { upgradeAdvanced,pathPoints } from "@evir/project-model";
 import { mountAdvanced, sheet } from "./advanced.mjs";
 import { mountLiveCommands } from "./live-commands.mjs";
@@ -9,7 +10,7 @@ import { continuationControls, numericContinuation } from "./continuation-contro
 import { pathJoinControls } from './path-join-controls.mjs';
 import {compoundControls} from './compound-controls.mjs';
 import { canSnapGuides, snapWithGuides } from "./guides.mjs";
-let liveTools, riveViewer, canvasGuides, alignmentKey = null;
+let remoteTools, liveTools, riveViewer, canvasGuides, alignmentKey = null;
 import { ProjectRecovery, RecoveryQueue, RecoveryConflict } from "./recovery.mjs";
 import { mountProjectLibrary } from "./project-library.mjs";
 import { SceneAssets, sceneOrder } from "@evir/renderer-canvas";
@@ -1156,6 +1157,7 @@ function refreshProperties(p=project()) {
 }
 function render() {
   liveTools?.refresh();
+  remoteTools?.refresh();
   const p = project();
   setSelection(
     [...selectedIds].filter((id) =>
@@ -2613,8 +2615,9 @@ window.evirStudio = {
   guideEditing: () => canvasGuides.editing(),
   pathDraft: () => penDraft instanceof ContinuationDraft ? {targetId:penDraft.targetId,endpoint:penDraft.endpoint,added:penDraft.addedCount,points:structuredClone(penDraft.points)} : null,
 };
-liveTools = mountLiveCommands({history:()=>store,artboardId:()=>activeArtboard,ready:penReady,changed:()=>{render();persist();}});
+liveTools = mountLiveCommands({onStart:()=>remoteTools?.stop('Local preview started. Remote access stopped.'),history:()=>store,artboardId:()=>activeArtboard,ready:penReady,changed:()=>{render();persist();}});
 window.evirStudio.live = liveTools.api;
+remoteTools=mountRemoteCommands({history:()=>store,artboardId:()=>activeArtboard,ready:penReady,changed:()=>{render();persist();},stopLocal:()=>liveTools.api.stop(),notice});
 riveViewer = mountRiveViewer();
 window.evirStudio.originalRiv = {snapshot:riveViewer.snapshot};
 const mcpButton = element('button','MCP setup…');

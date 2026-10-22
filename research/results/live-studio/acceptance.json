@@ -1,0 +1,55 @@
+{
+  "checkedAt": "2026-10-22T11:57:23.536627+00:00",
+  "status": "targeted service/browser acceptance passed; broad regression and final-source checks running",
+  "baseMain": "5f41c2d629c5ca4e2ad1b31939e5024cd910180a",
+  "scope": "Synthetic OAuth client with actual local workerd/D1/Durable Object and Chromium protocol routing. No commercial-client pairing, provider deployment, physical-device or human-accessibility evidence.",
+  "local": {
+    "units": {
+      "passed": 220,
+      "command": "node --test tests/editor/*.test.mjs tests/runtime/*.test.mjs tests/frontend/*.test.mjs"
+    },
+    "packageBuilds": {
+      "passed": 6,
+      "command": "npm run runtime:build"
+    },
+    "service": {
+      "passed": 11,
+      "command": "npm run test:service",
+      "note": "Earlier full service run; subsequent scope/HTML/lifecycle changes have targeted checks. Final-source full run remains."
+    },
+    "scopes": {
+      "passed": 7,
+      "command": "node --test tests/service/live.test.mjs tests/service/auth.test.mjs",
+      "note": "Overlaps service tests, including added per-session narrowing and same-account grant isolation."
+    },
+    "liveBrowser": {
+      "passed": 1,
+      "report": "browser.json",
+      "note": "Real command delivery, retries, Undo, animation creation, typed controls, three widths, Stop and project switching. Final source adds superseded-cue reporting and updated guide; targeted rerun remains."
+    },
+    "regressions": "npm run test:editor, npm run validate:editor and npm run test:web are running sequentially."
+  },
+  "remaining": [
+    "Production Cloudflare deployment and named-client pairing",
+    "DCR/CIMD/confidential-client support where required",
+    "Dedicated audience/MCP Apps hosts, frame capture, narration/media clock",
+    "Durable project storage and multi-user collaboration",
+    "Physical-device and human usability/screen-reader evidence"
+  ],
+  "sourceHashes": {
+    "packages/service/index.mjs": "ed658d21bd29f2d71611db3036c289023824c3d0c5bf480a882db78052611c78",
+    "packages/service/live-session.mjs": "065c7e47ad21a23f466b709106cfc40f1bd608ceafd95171812e2b91ee2bcf20",
+    "packages/service/account-page.mjs": "38dd035f9cf46c2ad81f4f8775df5fe52c12889f2717c4e571a2ebf04eea637f",
+    "packages/service/live.mjs": "b714f4460eaa4ef74fbef94668b2a9cae2d8a7bbaffe450dab2a0f537cf2b745",
+    "packages/service/security.mjs": "4cedf27b77eb2b270a54205e66e31371887466560f4b3fe5d20026d2d0153642",
+    "packages/service/passkeys.mjs": "6c5b466b83701c7e43282df62aff8b3beb91103d70bc744d9d2b72a143cfe889",
+    "packages/service/mcp.mjs": "6f5d12e8bb4b3b6b539e1ab45fd7f4ffb8dfd77d413c60365ed1eff7400290e2",
+    "packages/service/accounts.mjs": "ba0ffd7fecc1862047ed2131719a36006390fd5082f372ec8039adb6496acce3",
+    "packages/service/oauth.mjs": "0efb3076d10178e5a7f89bc7db6a18253f1e95da7d347159e233c6939d9522e1",
+    "packages/service/account-client.mjs": "386c6f78cf067b7621091e120f60e53bf606b5f7203934a51c8b5c10b50b7777",
+    "packages/studio/remote-commands.mjs": "1a0f444d9e48bd7ba67c10d3701234a2ec1ca19c9b98e904dca98041ce5946c3",
+    "packages/commands/mcp-tools.mjs": "0c1d72ffb7cd59a54d50e4430d68f6dee10ced8a811bd614770101a9080807db",
+    "apps/web/wrangler.jsonc": "13f31fe6dff5596acc7155e9066644583c978ea857f12b432d8d7e62b1496952",
+    "packages/service/migrations/0002_live_sessions.sql": "d31b9fd1f4ba5a2ae0e282ac6391fe67dc0d840b5286a8396596cb30cda00b8e"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "checkedAt": "2026-10-22T11:39:20.412Z",
+  "browser": "153.0.8010.12",
+  "scope": "Cloud Chromium with real workerd/D1/Durable Object transport. Synthetic OAuth client, not a paired commercial agent or physical device.",
+  "checks": [
+    "Actual MCP → Worker → Durable Object → browser command path, rendered cue, identical retry and one shared Undo",
+    "Agent-defined speed slider updates locally and produces sequenced input events without changing source",
+    "Responsive/automated accessibility; minimized preview does not claim readiness; motion opt-in; Stop rejects later calls",
+    "Replacing a project stops sharing; the old agent context cannot read the replacement"
+  ]
+}

@@ -1,0 +1,5 @@
+# Live-session transport research
+
+The source ledger records successful retrievals, dates and hashes for Cloudflare's official WebSocket-hibernation, Durable Object state/migration documentation sources and the pinned MCP authorization/transport specification. Observations: a Worker can accept a hibernation-capable WebSocket in a Durable Object, retain attachment metadata across activation, use an alarm to expire the session and provision the class through a deployment migration. MCP permits stateless HTTP requests and explicit OAuth scopes.
+
+Choices: keep D1 as the identity/grant/lease registry, use a private Durable Object binding as a transient relay, and keep the browser's existing CommandSession/Undo authoritative. The bridge has no offline queue or persistent scene payload. Tool timeout means uncertainty, not rollback. These sources establish supported APIs, not production latency/cost/availability or compatibility with a named agent platform. Workerd/browser evidence is recorded separately.

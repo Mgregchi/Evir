@@ -5,7 +5,7 @@ import {newId} from '@evir/project-model';
 import {showMcpGuide} from './guidance.mjs';
 const el=(tag,text)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;return n;};
 const button=(label,fn)=>{const b=el('button',label);b.type='button';b.onclick=fn;return b;};
-export function mountLiveCommands({history,artboardId,ready,changed}){
+export function mountLiveCommands({history,artboardId,ready,changed,onStart=()=>{}}){
   let session,pairedHistory,dialog,renderer,canvas,controlsHost,details,result,status,start,stop,lesson,executeButton,command,motion,play,help,summary,target,sample;
   let generation=0,raf=0,last=0,prepared=-1,controlsKey='',busy=false,refreshQueued=false;
   const cancel=()=>{cancelAnimationFrame(raf);raf=0;last=0;};
@@ -80,7 +80,7 @@ export function mountLiveCommands({history,artboardId,ready,changed}){
     dialog.append(button('MCP setup and connection guide',()=>{stopAccess();dialog.close();showMcpGuide();}));
     status=el('p','Local access stopped');status.setAttribute('role','status');dialog.append(status);
     const actions=el('div');actions.className='dialog-actions';
-    start=button('Grant local access',()=>{if(!ready())return;stopAccess();pairedHistory=history();session=new CommandSession(pairedHistory.committed(),{history:pairedHistory,artboardId:artboardId()});controlsKey='';refresh();});
+    start=button('Grant local access',()=>{if(!ready())return;onStart();stopAccess();pairedHistory=history();session=new CommandSession(pairedHistory.committed(),{history:pairedHistory,artboardId:artboardId()});controlsKey='';refresh();});
     start.className='primary';
     stop=button('Stop local access',()=>{stopAccess();refresh();});actions.append(start,stop);dialog.append(actions);
     const layout=el('div');layout.className='live-tools-grid';const preview=el('section');preview.append(el('h3','Audience preview'));

@@ -25,8 +25,10 @@ export function showMcpGuide(){
   if(document.querySelector('#mcp-setup-sheet'))return;
   const opener=document.activeElement,dialog=el('dialog');dialog.id='mcp-setup-sheet';dialog.className='interaction-sheet guidance-sheet';
   const title=el('h2','MCP setup');title.id='mcp-setup-title';dialog.setAttribute('aria-labelledby',title.id);dialog.append(title,
-    el('p','MCP lets an agent inspect and edit an Evir scene through tools. The current server runs on your computer, using a local project file. It is a local prototype.'),
-    el('p','It does not connect to this open Studio tab. Live tools is the separate browser preview. A live agent-to-Studio connection is still planned.'));
+    el('p','MCP lets an agent inspect and edit an Evir scene through typed tools. On the Cloudflare deployment, Live agent connection shares this open project after you approve a connected agent.'),
+    el('p','Connect your MCP client to '+location.origin+'/mcp, sign in with a passkey and approve scene permissions. Then choose Live agent connection in the Project menu, select the agent and grant this project for a limited time. Stop sharing ends access; scene edits share Studio Undo.'),
+    el('p','The local stdio server below does not connect to this open Studio tab. It edits a separate project file on your computer. Live tools remains the separate local preview.'));
+  dialog.append(button('Set up a live agent connection',()=>{dialog.addEventListener('close',()=>document.dispatchEvent(new Event('evir-open-live-pairing')),{once:true});dialog.close();}),el('h3','Local stdio setup (optional)'));
   const steps=el('ol');
   for(const [title,text] of [
     ['1. Prepare Evir on your computer','Install Node.js 24 and Git, clone the Evir repository, then run npm ci in its folder. This setup needs a desktop computer and a client that supports local stdio MCP servers.'],
