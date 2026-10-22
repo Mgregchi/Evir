@@ -61,4 +61,7 @@ await writeFile(path.join(out,'build-info.json'),JSON.stringify({builtAt:new Dat
 await mkdir(path.join(out,'studio'),{recursive:true});
 await writeFile(path.join(out,'studio/index.html'),`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=${route(config,'editor/')}"><link rel="canonical" href="${escape(canonical('editor/')||route(config,'editor/'))}"><title>Evir Studio</title></head><body><a href="${route(config,'editor/')}">Explore Evir Studio</a></body></html>`);
 await buildStudio({outDir:path.join(out,'editor/studio'),basePath:config.editorUrl.replace(/\/$/,''),homeUrl:route(config)});
+await mkdir(path.join(out,'account'),{recursive:true});
+for(const [from,to] of [['account-client.mjs','app.mjs'],['account.css','styles.css']])
+  await cp(path.join(root,'packages/service',from),path.join(out,'account',to));
 console.log(`Built ${content.length} Evir public pages into ${path.relative(root,out)}${config.basePath?` for ${config.basePath}/`:''}; editor destination ${config.editorUrl}`);

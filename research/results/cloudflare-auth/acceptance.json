@@ -1,0 +1,77 @@
+{
+  "checkedAt": "2026-10-22T08:05:36.194517+00:00",
+  "status": "service acceptance passed; public-site regression running",
+  "baseMain": "87fb0d0edb7d7091c82d8a702dbc7bbf3abd2a92",
+  "scope": "Local workerd/D1, Chromium virtual authenticator and browser automation inside the cloud workspace. No production deployment, named-agent pairing, real device or human accessibility evidence.",
+  "local": {
+    "service": {
+      "command": "npm run test:service",
+      "passed": 7,
+      "failed": 0,
+      "log": "logs/evir-account-service-complete.log"
+    },
+    "actualHtmlRoutes": {
+      "command": "node --test tests/service/auth.test.mjs",
+      "passed": 3,
+      "note": "Overlaps the seven service tests; rerun after using actual built home/Studio HTML and final account-link composition.",
+      "log": "logs/evir-account-routes-final.log"
+    },
+    "frontend": {
+      "command": "npm run test:frontend",
+      "passed": 27,
+      "failed": 0
+    },
+    "engineBoundary": {
+      "passed": 1,
+      "command": "node --test tests/runtime/boundaries.test.mjs"
+    },
+    "build": {
+      "command": "npm run web:build",
+      "status": "passed"
+    },
+    "workerBundle": {
+      "command": "wrangler deploy --config GENERATED_CONFIG --dry-run",
+      "status": "passed with DB and ASSETS bindings; no upload"
+    },
+    "web": {
+      "command": "npm run test:web",
+      "status": "running; all 22 page/configuration checks and 279 Canvas comparisons passed so far"
+    }
+  },
+  "observedRetries": [
+    "The first virtual-authenticator fixture attempted a second registration on the same excluded authenticator. Corrected the fixture to use another authenticator; registration assertions remain.",
+    "A website Studio export download timed out during overlapping validation; unchanged public-site rerun passed that workflow.",
+    "Synchronous nested Wrangler CLI test processes timed out on later runs. Changed that test to asynchronous child execution and serialized service test files; all seven tests then passed without relaxing time limits."
+  ],
+  "deferred": [
+    "Live Studio session/project bridge and editing scopes",
+    "DCR/CIMD/confidential-client adapters where required by an actual client",
+    "Named ChatGPT/Claude/other-platform pairing and live Cloudflare deployment",
+    "Physical-device and human usability/screen-reader evidence",
+    "Hosted scene persistence/collaboration and self-service account deletion"
+  ],
+  "versions": {
+    "node": "24.19.0",
+    "wrangler": "4.151.3",
+    "miniflare": "4.20260730.0",
+    "simplewebauthn": "14.0.3",
+    "chromium": "153.0.8010.12"
+  },
+  "sourceHashes": {
+    "packages/service/README.md": "509f714349bc9329052ebb6a1769b9c68eb1ff4e43f2329c7fab85d442cade9b",
+    "packages/service/account-client.mjs": "b7c0866dd5224bdf5f2d5660a174fd801e647194bdc8b5c166bd6a6dbf393407",
+    "packages/service/account-page.mjs": "38885a5bbb036a29bc977c70834f849cad0355540dd24d6d0d762e062e72957f",
+    "packages/service/account.css": "3a7fe8d2fdbd158b1d0cfbe7e450f488995183c045f1bd88108b947482aaff38",
+    "packages/service/accounts.mjs": "e43bfc18af5fdf73ab02a656252a95ae5ac9b6257cb404bb3c19bfa547806c70",
+    "packages/service/index.mjs": "466ae15f08a7717680c120e772c86f9556c8900b19fa5add1a3d4edf6100bf47",
+    "packages/service/mcp.mjs": "4e8f0f0cb58aade2a0b1c73fd1c71aebc6069fd1960c5ffdf5d3fe1383a66b3a",
+    "packages/service/migrations/0001_identity.sql": "3be94e0f9b07cc04bc536ae9af5f95ba3a501c9899ed43e6d33bbcd07ae9a28e",
+    "packages/service/oauth.mjs": "c3d96f2ad297bf13679f4cad067a8a0b454c77f4e470b90e78d4c37d8eb267a6",
+    "packages/service/package.json": "21fdf4eb7cec8e685d51f007f42e49b8501ac363ff4a5e53ef2463bbace56068",
+    "packages/service/passkeys.mjs": "6c5b466b83701c7e43282df62aff8b3beb91103d70bc744d9d2b72a143cfe889",
+    "packages/service/security.mjs": "e6173c82a1fe6485e743878d09cac8f0f146dbad487d68f4e8c23a3834ef98c1",
+    "apps/web/worker.mjs": "9ed544c7c93b98ed0c229bc5e73cadacc445a023b9c10aedde18bf1f1ad52257",
+    "apps/web/wrangler.jsonc": "290075381b7dcbbcdfe142ee22799bbd09f1fb4a43a74ff822adbf0cd6d1c44b",
+    "tools/deploy-cloudflare.mjs": "71ce5a93fc7d8d740af10e94b13726e4d21135c229f969f55484cc973668300d"
+  }
+}

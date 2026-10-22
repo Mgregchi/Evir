@@ -1,0 +1,19 @@
+
+> evir-workspace@0.1.0 test:service
+> node --test --test-concurrency=1 tests/service/*.test.mjs
+
+✔ Passkey challenges, origin isolation, recovery and account ownership run against real D1 (2147.985218ms)
+✔ OAuth PKCE, exact redirects, single-use codes, refresh rotation and revocation protect MCP (1376.579221ms)
+✔ Oversized input, expired codes, rate limits and unsafe origins fail closed (984.441185ms)
+✔ A virtual authenticator creates and signs into an email-free account, with responsive consent and recovery (7613.235079ms)
+✔ Cloudflare configuration preserves dashboard values and binds only an explicit existing D1 database (5.063846ms)
+✔ Migration failure stops publication; repeat deployment uses the migration ledger without destructive resets (16.036594ms)
+✔ Pinned Wrangler applies the D1 migration ledger twice without resetting existing account data (13004.696192ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 27643.925387

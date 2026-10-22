@@ -1,5 +1,27 @@
 {
   "name": "evir",
   "compatibility_date": "2026-10-09",
-  "assets": {"directory": "./dist", "not_found_handling": "404-page"}
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page",
+    "binding": "ASSETS",
+    "run_worker_first": [
+      "/",
+      "/editor/studio",
+      "/editor/studio/",
+      "/account",
+      "/account/*",
+      "/api/*",
+      "/oauth/*",
+      "/mcp",
+      "/.well-known/oauth-*"
+    ]
+  },
+  "main": "./worker.mjs",
+  "keep_vars": true,
+  "triggers": {
+    "crons": [
+      "17 3 * * *"
+    ]
+  }
 }

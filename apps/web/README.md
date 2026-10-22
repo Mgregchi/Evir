@@ -52,7 +52,7 @@ The browser checks cover all public pages at root and under `/Evir/`, internal a
 
 ## Hosting
 
-Follow [the single-project GitHub deployment guide](../../docs/20-github-connected-hosting.md) for Cloudflare Workers, Pages or Netlify. Serve `apps/web/dist` with directory index handling, JavaScript MIME types and `404.html` for missing pages. No proxy or blanket SPA fallback is needed. A web deployment does not publish engine packages.
+Follow [the single-project GitHub deployment guide](../../docs/20-github-connected-hosting.md) for Cloudflare Workers, Pages or Netlify. Serve `apps/web/dist` with directory index handling, JavaScript MIME types and `404.html` for missing pages. No proxy or blanket SPA fallback is needed. On Workers, the small web entry delegates accounts and authenticated MCP to `@evir/service`; [dashboard-only account setup](../../docs/53-cloudflare-accounts-and-mcp.md) covers D1, automatic migrations and preserved variables/secrets. Pages/Netlify still host only the frontend. A web deployment does not publish engine packages.
 
 ## Scope and assets
 

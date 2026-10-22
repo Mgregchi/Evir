@@ -1,0 +1,93 @@
+[
+  {
+    "url": "https://developers.cloudflare.com/workers/wrangler/configuration/",
+    "error": "HTTP Error 403: Forbidden",
+    "retrievedOn": "2026-10-22"
+  },
+  {
+    "url": "https://developers.cloudflare.com/d1/reference/migrations/",
+    "error": "HTTP Error 403: Forbidden",
+    "retrievedOn": "2026-10-22"
+  },
+  {
+    "url": "https://developers.cloudflare.com/workers/ci-cd/builds/configuration/",
+    "error": "HTTP Error 403: Forbidden",
+    "retrievedOn": "2026-10-22"
+  },
+  {
+    "url": "https://developers.cloudflare.com/workers/configuration/secrets/",
+    "error": "HTTP Error 403: Forbidden",
+    "retrievedOn": "2026-10-22"
+  },
+  {
+    "url": "https://developers.cloudflare.com/workers/static-assets/routing/worker-script/",
+    "error": "HTTP Error 403: Forbidden",
+    "retrievedOn": "2026-10-22"
+  },
+  {
+    "url": "https://simplewebauthn.dev/docs/packages/server",
+    "error": "HTTP Error 403: Forbidden",
+    "retrievedOn": "2026-10-22"
+  },
+  {
+    "url": "https://modelcontextprotocol.io/specification/2025-11-25/basic/authorization",
+    "status": 200,
+    "sha256": "dc85763c8ca374b96d43fe1daf9d8070963085476220bd53c9a83a69aee4b12c",
+    "snippets": [
+      "scribed in OAuth 2.1 Section 7.5 ) To mitigate this, MCP clients MUST implement PKCE according to OAuth 2.1 Section 7.5.2 and MUST verify PKCE support before proceeding with authorization. PKCE helps prevent authorization code interception and injection attacks by requiring clients to create a secret verifier-challenge pair, ensuring that only the original requestor can exchange an authorization code for tokens. MCP clients MUST use the S256 code challenge method when technically capable, as required by OAuth 2.1 Section 4.1.1 . Since OAuth 2.1 and PKCE specifications do not define a mechanism for clients to discover PKCE support, MCP clients MUST rely on authorization server metadata to verify this capability: OAuth 2.0 Authorization Server Metadata : If code_challenge_methods_supported is absent, the authorization se"
+    ],
+    "retrievedOn": "2026-10-22"
+  },
+  {
+    "url": "https://developers.openai.com/apps-sdk/build/auth/",
+    "status": 200,
+    "sha256": "f0b3a625b20841f4f6d6af19f4e5212021abbbfe8137f648274bd18620110ae8",
+    "snippets": [
+      "uments (CIMD), dynamic client registration (DCR), predefined OAuth clients, and PKCE. MCP authorization spec requirements Host protected resource metadata on your MCP server Publish OAuth metadata from your authorization server Echo the resource parameter throughout the OAuth flow Choose how the OpenAI host identifies or registers its OAuth client: CIMD, DCR, or a predefined OAuth client Publish the token endpoint authentication methods your authorization server accepts Here is what the spec expects, in plain language. Host protected resource metadata on your MCP server You need an HTTPS endpoint such as GET https://your-mcp.example.com/.well-known/oauth-protected-resource (or advertise the same URL in a WWW-Authenticate header on 401 Unauthorized responses) so ChatGPT knows where to fetch your metadata. That endpoint ",
+      "nts use Client ID Metadata Documents (CIMD), dynamic client registration (DCR), predefined OAuth clients, and PKCE. MCP authorization spec requirements Host protected resource metadata on your MCP server Publish OAuth metadata from your authorization server Echo the resource parameter throughout the OAuth flow Choose how the OpenAI host identifies or registers its OAuth client: CIMD, DCR, or a predefined OAuth client Publish the token endpoint authentication methods your authorization server accepts Here is what the spec expects, in plain language. Host protected resource metadata on your MCP server You need an HTTPS endpoint such as GET https://your-mcp.example.com/.well-known/oauth-protected-resource (or advertise the same URL in a WWW-Authenticate header on 401 Unauthorized responses) so ChatGPT knows where to fetch"
+    ],
+    "retrievedOn": "2026-10-22"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/cloudflare/cloudflare-docs/production/src/content/docs/workers/wrangler/configuration.mdx",
+    "status": 200,
+    "sha256": "3abd99e5505355de3f4159c3f024d1fb95677fae946fd99cbcb07c39258323f2",
+    "retrievedOn": "2026-10-22"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/cloudflare/cloudflare-docs/production/src/content/docs/d1/reference/migrations.mdx",
+    "status": 200,
+    "sha256": "f638c1b1e2df6c1c623a13a2e28075aa02c6033c8e89c46bff58225437302f0c",
+    "retrievedOn": "2026-10-22"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/cloudflare/cloudflare-docs/production/src/content/docs/workers/ci-cd/builds/configuration.mdx",
+    "status": 200,
+    "sha256": "eefe3350a9779ddae37a2cf33884af088893dc948b0e3085fc456f3a789bab1c",
+    "retrievedOn": "2026-10-22"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/cloudflare/cloudflare-docs/production/src/content/docs/workers/configuration/secrets.mdx",
+    "status": 200,
+    "sha256": "7221df483c14bfeeb9c2b125691c4f9be8c3e6f31512905a6f074885213d0a39",
+    "retrievedOn": "2026-10-22"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/cloudflare/cloudflare-docs/production/src/content/docs/workers/static-assets/routing/worker-script.mdx",
+    "status": 200,
+    "sha256": "867ac5bc92e4ee81e6ffdeecbd395fc18c455697d2af532d75ea8912ed6f4d48",
+    "retrievedOn": "2026-10-22"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/MasterKale/SimpleWebAuthn/master/packages/server/src/registration/generateRegistrationOptions.ts",
+    "status": 200,
+    "sha256": "b2e84decd6f984c13d6ac31c7e156e1465e172bd4a7dc1677f059329e23e0fd3",
+    "retrievedOn": "2026-10-22"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/MasterKale/SimpleWebAuthn/master/packages/server/src/authentication/verifyAuthenticationResponse.ts",
+    "status": 200,
+    "sha256": "0c04ea06f7d24d5216f283227785ed92db0ed862da2e5f7a708589f43793c95f",
+    "retrievedOn": "2026-10-22"
+  }
+]
