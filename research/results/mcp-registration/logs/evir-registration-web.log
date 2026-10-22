@@ -1,0 +1,11 @@
+
+> evir-workspace@0.1.0 test:web
+> node tests/site/browser.cjs && node tests/site/examples.cjs && node tests/site/gallery.cjs && node tests/site/motorcycle.cjs && node tests/site/characters.cjs && node tests/site/learn.cjs
+
+Public site: 22 page/configuration checks; 3 viewport widths; no WCAG A/AA violations.
+canvas: 279 showcase keyframe/transition comparisons passed.
+webgl2: 279 showcase keyframe/transition comparisons passed.
+Gallery: 32 editable studies, lazy loading, Signal interaction/reset and responsive accessibility passed.
+Motorcycle: responsive controls, keyboard, lifecycle and accessibility checks passed.
+Character collection: three styles, three expressions, keyboard/motion/reset/retry and three responsive widths passed.
+Learn: four widths, keyboard, actual teaching assets, source download, subpath routing and accessibility passed.

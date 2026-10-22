@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-10-22T17:16:49.898594+00:00",
-  "status": "service/frontend/packaging acceptance passed; website/experience regression running",
+  "checkedAt": "2026-10-22T17:20:17.324607+00:00",
+  "status": "all local acceptance passed; production and named-client observations remain unverified",
   "baseMain": "08c659cab3955b0357f853cda5297fd3dd043667",
   "scope": "Synthetic registered clients and cloud Chromium against actual local workerd/D1/Durable Object handlers. Not a provider deployment, named-client pairing, physical-device or human-accessibility result.",
   "local": {
@@ -28,11 +28,18 @@
     },
     "web": {
       "command": "npm run test:web",
-      "status": "running"
+      "passed": true,
+      "pageConfigurationChecks": 22,
+      "showcaseKeyframeTransitionComparisons": 558,
+      "galleryStudies": 32,
+      "log": "logs/evir-registration-web.log",
+      "note": "Includes motorcycle controls/lifecycle, three character styles, Learn at four widths, subpath hosting and automated accessibility."
     },
     "experience": {
       "command": "npm run test:experience",
-      "status": "queued after website"
+      "passed": true,
+      "log": "logs/evir-registration-quality.log",
+      "report": "experience-quality.json"
     }
   },
   "browserReport": "browser.json",
@@ -60,5 +67,24 @@
     "tests/service/live-fixtures.mjs": "daeaa9b2d604499f5d34d8c9ef8164ee780949252a54cc5f82c64d82f93a8ae6",
     "tests/service/migrations.test.mjs": "4b09a8d4b29ad8b13693ff8597b4d520f7b031ed271353cce2eca4bf2cbdc28a",
     "docs/55-mcp-client-registration.md": "95f04c48727e7255c10d9bcd2c793da030afdc6017cdb7ed6b62bb5a1106d999"
-  }
+  },
+  "implementationCommit": "cb25f3069c9fa089313488b3b60b5dfafe3f44f7",
+  "environment": {
+    "node": "v24.19.0",
+    "chromium": "153.0.8010.12",
+    "playwright": "1.63.0",
+    "wrangler": "4.151.3",
+    "officialRiveRuntime": "2.44.0",
+    "graphics": "Cloud software rendering. No physical-device performance measurements."
+  },
+  "ci": {
+    "checkedCommit": "cb25f3069c9fa089313488b3b60b5dfafe3f44f7",
+    "runIds": [
+      39821347866,
+      39821348035
+    ],
+    "status": "blocked before execution",
+    "annotation": "The job was not started because your account is locked due to a billing issue."
+  },
+  "validationScope": "No Studio, model, renderer or format implementation changed. Final service suite executes the actual Studio live-editing path; site/native-showcase and frontend checks cover the public privacy update. The complete editor authoring/native suite from merged PR43 was not redundantly repeated."
 }
