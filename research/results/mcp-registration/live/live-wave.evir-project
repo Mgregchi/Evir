@@ -1,0 +1,344 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 2,
+  "id": "project-2423c844-9af6-4a93-a97c-2b2a45f62839",
+  "name": "Little explorer",
+  "artboards": [
+    {
+      "id": "artboard-c59515b3-bf6c-4fd9-8426-75fec868b155",
+      "name": "Artboard 1",
+      "width": 640,
+      "height": 480
+    }
+  ],
+  "nodes": [
+    {
+      "id": "node-be1ffbae-7c7d-4369-a24e-e6b2ae8cfd9d",
+      "name": "Explorer",
+      "kind": "group",
+      "artboardId": "artboard-c59515b3-bf6c-4fd9-8426-75fec868b155",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        220,
+        105
+      ],
+      "geometry": null
+    },
+    {
+      "id": "node-abfd1cd6-921b-4749-a1fb-c3dbf2ba2f55",
+      "name": "Left boot",
+      "kind": "rectangle",
+      "artboardId": "artboard-c59515b3-bf6c-4fd9-8426-75fec868b155",
+      "parentId": "node-be1ffbae-7c7d-4369-a24e-e6b2ae8cfd9d",
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        15,
+        205
+      ],
+      "geometry": {
+        "width": 58,
+        "height": 28,
+        "fill": "#54777b"
+      }
+    },
+    {
+      "id": "node-f2646355-572a-4f78-9b06-93b0fe0ab4e0",
+      "name": "Right boot",
+      "kind": "rectangle",
+      "artboardId": "artboard-c59515b3-bf6c-4fd9-8426-75fec868b155",
+      "parentId": "node-be1ffbae-7c7d-4369-a24e-e6b2ae8cfd9d",
+      "order": 1,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        109,
+        205
+      ],
+      "geometry": {
+        "width": 58,
+        "height": 28,
+        "fill": "#54777b"
+      }
+    },
+    {
+      "id": "node-16631ccd-7b4a-4c0c-b021-fea275baeef0",
+      "name": "Left arm",
+      "kind": "rectangle",
+      "artboardId": "artboard-c59515b3-bf6c-4fd9-8426-75fec868b155",
+      "parentId": "node-be1ffbae-7c7d-4369-a24e-e6b2ae8cfd9d",
+      "order": 2,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        -20,
+        113
+      ],
+      "geometry": {
+        "width": 27,
+        "height": 74,
+        "fill": "#82bea9"
+      }
+    },
+    {
+      "id": "node-79d12e04-0b27-46be-8ec1-12e3f2b003dc",
+      "name": "Right arm",
+      "kind": "rectangle",
+      "artboardId": "artboard-c59515b3-bf6c-4fd9-8426-75fec868b155",
+      "parentId": "node-be1ffbae-7c7d-4369-a24e-e6b2ae8cfd9d",
+      "order": 3,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        177,
+        113
+      ],
+      "geometry": {
+        "width": 27,
+        "height": 74,
+        "fill": "#82bea9"
+      }
+    },
+    {
+      "id": "node-158f25c1-e500-4852-89e2-13edd7044bd8",
+      "name": "Body",
+      "kind": "rectangle",
+      "artboardId": "artboard-c59515b3-bf6c-4fd9-8426-75fec868b155",
+      "parentId": "node-be1ffbae-7c7d-4369-a24e-e6b2ae8cfd9d",
+      "order": 4,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        10,
+        105
+      ],
+      "geometry": {
+        "width": 162,
+        "height": 105,
+        "fill": "#a0d7bd"
+      }
+    },
+    {
+      "id": "node-fec3d780-5e16-405d-ac8f-3bab38251e43",
+      "name": "Chest light",
+      "kind": "rectangle",
+      "artboardId": "artboard-c59515b3-bf6c-4fd9-8426-75fec868b155",
+      "parentId": "node-be1ffbae-7c7d-4369-a24e-e6b2ae8cfd9d",
+      "order": 5,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        69,
+        129
+      ],
+      "geometry": {
+        "width": 44,
+        "height": 37,
+        "fill": "#edb75f"
+      }
+    },
+    {
+      "id": "node-48de5637-3fd9-4e90-b7d3-97285b79a132",
+      "name": "Antenna",
+      "kind": "rectangle",
+      "artboardId": "artboard-c59515b3-bf6c-4fd9-8426-75fec868b155",
+      "parentId": "node-be1ffbae-7c7d-4369-a24e-e6b2ae8cfd9d",
+      "order": 6,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        85,
+        -17
+      ],
+      "geometry": {
+        "width": 12,
+        "height": 30,
+        "fill": "#54777b"
+      }
+    },
+    {
+      "id": "node-2b294c0a-673d-4f61-ab55-4524826b495a",
+      "name": "Antenna light",
+      "kind": "rectangle",
+      "artboardId": "artboard-c59515b3-bf6c-4fd9-8426-75fec868b155",
+      "parentId": "node-be1ffbae-7c7d-4369-a24e-e6b2ae8cfd9d",
+      "order": 7,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        78,
+        -28
+      ],
+      "geometry": {
+        "width": 26,
+        "height": 18,
+        "fill": "#edb75f"
+      }
+    },
+    {
+      "id": "node-bb5f5604-c5d2-47f4-af38-38092ba76b07",
+      "name": "Head",
+      "kind": "rectangle",
+      "artboardId": "artboard-c59515b3-bf6c-4fd9-8426-75fec868b155",
+      "parentId": "node-be1ffbae-7c7d-4369-a24e-e6b2ae8cfd9d",
+      "order": 8,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "width": 182,
+        "height": 102,
+        "fill": "#b9e6cd"
+      }
+    },
+    {
+      "id": "node-cbef71bd-4b07-44c5-9dbb-1ff1d9e7f055",
+      "name": "Left eye",
+      "kind": "rectangle",
+      "artboardId": "artboard-c59515b3-bf6c-4fd9-8426-75fec868b155",
+      "parentId": "node-be1ffbae-7c7d-4369-a24e-e6b2ae8cfd9d",
+      "order": 9,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        39,
+        34
+      ],
+      "geometry": {
+        "width": 20,
+        "height": 26,
+        "fill": "#233e3c"
+      }
+    },
+    {
+      "id": "node-e70da55c-4bd2-4abf-a763-d319076ce58f",
+      "name": "Right eye",
+      "kind": "rectangle",
+      "artboardId": "artboard-c59515b3-bf6c-4fd9-8426-75fec868b155",
+      "parentId": "node-be1ffbae-7c7d-4369-a24e-e6b2ae8cfd9d",
+      "order": 10,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        123,
+        34
+      ],
+      "geometry": {
+        "width": 20,
+        "height": 26,
+        "fill": "#233e3c"
+      }
+    },
+    {
+      "id": "node-90c2a7ee-5a9d-4db5-9f11-9ef84dcf976f",
+      "name": "Smile",
+      "kind": "rectangle",
+      "artboardId": "artboard-c59515b3-bf6c-4fd9-8426-75fec868b155",
+      "parentId": "node-be1ffbae-7c7d-4369-a24e-e6b2ae8cfd9d",
+      "order": 11,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        72,
+        72
+      ],
+      "geometry": {
+        "width": 38,
+        "height": 7,
+        "fill": "#54777b"
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [
+    {
+      "id": "live-wave",
+      "name": "An agent says hello",
+      "artboardId": "artboard-c59515b3-bf6c-4fd9-8426-75fec868b155",
+      "fps": 60,
+      "duration": 120,
+      "playback": {
+        "mode": "loop",
+        "iterations": 0,
+        "speed": 1
+      },
+      "tracks": [
+        {
+          "targetId": "node-79d12e04-0b27-46be-8ec1-12e3f2b003dc",
+          "property": "rotation",
+          "keys": [
+            {
+              "frame": 0,
+              "value": -0.3,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 60,
+              "value": 0.3,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 120,
+              "value": -0.3,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "artboard-c59515b3-bf6c-4fd9-8426-75fec868b155": {
+        "zoom": 1.225,
+        "x": 50,
+        "y": 110
+      }
+    }
+  }
+}

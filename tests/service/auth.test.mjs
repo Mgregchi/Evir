@@ -23,7 +23,7 @@ test('Passkey challenges, origin isolation, recovery and account ownership run a
 test('OAuth PKCE, exact redirects, single-use codes, refresh rotation and revocation protect MCP',async()=>{
  const h=await harness();try {
   const a=await h.account(),b=await h.account();const verifier=random(),challenge=await hash(verifier),query=authQuery(challenge);
-  const metadata=await (await h.request('/.well-known/oauth-authorization-server')).json();assert.deepEqual(metadata.code_challenge_methods_supported,['S256']);assert(!metadata.registration_endpoint);
+  const metadata=await (await h.request('/.well-known/oauth-authorization-server')).json();assert.deepEqual(metadata.code_challenge_methods_supported,['S256']);assert.equal(metadata.registration_endpoint,site+'/oauth/register');assert.deepEqual(metadata.token_endpoint_auth_methods_supported,['none','client_secret_post','client_secret_basic']);assert(!metadata.client_id_metadata_document_supported);
   assert.equal((await h.request('/mcp')).status,401);assert.match((await h.request('/mcp')).headers.get('www-authenticate'),/resource_metadata/);
   const evil=new URLSearchParams(query);evil.set('redirect_uri','https://attacker.test/');const invalid=await h.request('/oauth/authorize?'+evil);assert.equal(invalid.status,400);assert(!invalid.headers.get('Location'));
   const deny=await (await h.request('/api/oauth/consent',post({query:query.toString(),approved:false},a.cookie))).json();assert.equal(new URL(deny.redirect).searchParams.get('error'),'access_denied');

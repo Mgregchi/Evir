@@ -1,0 +1,64 @@
+{
+  "checkedAt": "2026-10-22T17:16:49.898594+00:00",
+  "status": "service/frontend/packaging acceptance passed; website/experience regression running",
+  "baseMain": "08c659cab3955b0357f853cda5297fd3dd043667",
+  "scope": "Synthetic registered clients and cloud Chromium against actual local workerd/D1/Durable Object handlers. Not a provider deployment, named-client pairing, physical-device or human-accessibility result.",
+  "local": {
+    "service": {
+      "command": "npm run test:service",
+      "passed": 18,
+      "failed": 0,
+      "log": "logs/evir-registration-service-final.log"
+    },
+    "frontend": {
+      "command": "npm run test:frontend",
+      "passed": 27,
+      "failed": 0,
+      "log": "logs/evir-registration-frontend.log"
+    },
+    "webBuild": {
+      "command": "npm run web:build",
+      "passed": true,
+      "log": "logs/evir-registration-build.log"
+    },
+    "deploymentDryRun": {
+      "passed": true,
+      "log": "logs/evir-registration-dry.log",
+      "note": "Generated existing deploy configuration with a fake D1 UUID; no remote migration or provider publication."
+    },
+    "web": {
+      "command": "npm run test:web",
+      "status": "running"
+    },
+    "experience": {
+      "command": "npm run test:experience",
+      "status": "queued after website"
+    }
+  },
+  "browserReport": "browser.json",
+  "liveReport": "live/browser.json",
+  "remaining": [
+    "Production deployment and actual ChatGPT/Claude/Groq/other-host pairing",
+    "CIMD, private_key_jwt and native HTTP-loopback clients",
+    "Registration management and broader fleet policy",
+    "Audience/MCP Apps hosts, media orchestration, durable project storage and multi-user collaboration",
+    "Physical-device testing postponed; human usability/screen-reader evidence open"
+  ],
+  "sourceHashes": {
+    "packages/service/oauth-clients.mjs": "f5314ce37cc20ebabd4285d3e16b893a4d50ba57424f9d3a4ff0f179c2da50e8",
+    "packages/service/oauth.mjs": "10962422183ec83eb7b78129ccd5a1383a14d2b835fcc929a1e9f5eb44688dd3",
+    "packages/service/mcp.mjs": "6af5bad973e18ff413d1b706327909e872ea8bf38d892c170fbb0490b9a0348e",
+    "packages/service/index.mjs": "5b74f640f5ae52e252a5a0d13fde97969102e98c7d1a3658cda6ee2f9d1fb456",
+    "packages/service/account-page.mjs": "31b5fc1da18f824a55a3fbf8031abaa3ed3cd4e0ab535b744f339f049982bf3f",
+    "packages/service/account-client.mjs": "36aba770902337c173aabdf6ba2cf0cd91aee29c0f1d90aa7c13cafa6a20672a",
+    "packages/service/account.css": "9e8032dadbeafcb605e93a95ebf713e90299123c5567228f7f652307a7086a3e",
+    "packages/service/migrations/0003_oauth_clients.sql": "e48119ecd73c49472319fdb76f139254ed559cfc2f7421133c08e51d22dc9cf4",
+    "apps/web/content.mjs": "c9e263e34cd920e184df1a2a8097839b8d3ecdf662d06dd1a61cfee587cd89e3",
+    "tests/service/registration.test.mjs": "8192e234b3dd9863cf74a33f1b348b7fda974b621635ea80811344a4f751b70e",
+    "tests/service/registration-browser.test.mjs": "eeffce049cc5a08ee176c0d3b3bf4e5ef50f99c8e2b8aaa88ef493a89cd4ccb6",
+    "tests/service/live-browser.test.mjs": "40c2f78e12da83c2c5607b9b5d6bfe01404dec8bc2aacfce9224289d056a4b0f",
+    "tests/service/live-fixtures.mjs": "daeaa9b2d604499f5d34d8c9ef8164ee780949252a54cc5f82c64d82f93a8ae6",
+    "tests/service/migrations.test.mjs": "4b09a8d4b29ad8b13693ff8597b4d520f7b031ed271353cce2eca4bf2cbdc28a",
+    "docs/55-mcp-client-registration.md": "95f04c48727e7255c10d9bcd2c793da030afdc6017cdb7ed6b62bb5a1106d999"
+  }
+}

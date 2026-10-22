@@ -1,0 +1,9 @@
+# Automatic MCP registration evidence
+
+[Acceptance and reproduction](acceptance.json) tracks the current validation status. [Connection guide](../../../docs/55-mcp-client-registration.md) distinguishes documented host options from actual named-client evidence. [Primary sources](../../mcp-registration/sources.json) record retrievals, redirects and hashes.
+
+The final service suite exercises public, POST-secret and Basic-secret registrations; PKCE/resource/callback/scope/client binding; refresh rotation and authenticated revocation; malformed/mixed authentication; protocol-version negotiation; metadata/rate/storage bounds; and an actual existing-account D1 upgrade followed by repeat migration, preserving registered credentials.
+
+[Browser consent report](browser.json) and 320/390/1440 captures verify escaped names, visible long destinations, unverified-name disclosure, Cancel/Approve, keyboard-accessible controls and automated accessibility. [Live report](live/browser.json) and its original editable wave source bootstrap through real dynamic registration/consent/PKCE with no predefined clients, then execute real Studio edits, shared Undo, retries, controls, cues and Stop/context changes over workerd/D1/Durable Objects. No scene operation is mocked. The existing WebSocket test adapter records Chromium constructor arguments to relay the private handshake to local workerd because Playwright does not expose those headers.
+
+The clients are synthetic. These are cloud software/virtual-authenticator checks, not a production Cloudflare deployment, ChatGPT/Claude/Groq pairing, physical-device measurement or human usability/screen-reader study. Confidential credentials are generated test values and are not included in these artifacts. Physical testing remains postponed.

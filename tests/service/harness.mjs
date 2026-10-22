@@ -6,7 +6,7 @@ import path from 'node:path';
 export const site='https://evir.test';
 export const callback='https://agent.example/callback';
 export const client={client_id:'test-agent',client_name:'Test agent',redirect_uris:[callback]};
-export async function harness() {
+export async function harness({oauthClients=[client]}={}) {
   const temp=await mkdtemp(path.join(tmpdir(),'evir-service-'));
   const output=await build({entryPoints:['apps/web/worker.mjs'],bundle:true,format:'esm',platform:'browser',target:'es2022',write:false});
   const mf=new Miniflare({modules:true,script:output.outputFiles[0].text,compatibilityDate:'2026-07-14',d1Databases:['DB'],durableObjects:{LIVE_SESSIONS:{className:'LiveSession',useSQLite:true}},serviceBindings:{ASSETS:async req=>{
@@ -14,7 +14,7 @@ export async function harness() {
     const file=pathname==='/'?'index.html':pathname==='/editor/studio/'?'editor/studio/index.html':null;
     if(!file)return new Response('Not found',{status:404});
     return new Response(await readFile(path.join('apps/web/dist',file)),{headers:{'Content-Type':'text/html'}});
-  }},bindings:{SITE_URL:site,OAUTH_CLIENTS:JSON.stringify([client])},log:new Log(LogLevel.ERROR)});
+  }},bindings:{SITE_URL:site,OAUTH_CLIENTS:JSON.stringify(oauthClients)},log:new Log(LogLevel.ERROR)});
   const db=await mf.getD1Database('DB');
   // workerd D1 exec expects each SQL statement on a single line.
   for(const file of (await readdir('packages/service/migrations')).filter(f=>f.endsWith('.sql')).sort()){
