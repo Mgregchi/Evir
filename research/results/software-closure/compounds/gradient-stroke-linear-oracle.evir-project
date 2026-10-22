@@ -1,11 +1,11 @@
 {
   "format": "evir-project",
   "schemaVersion": 3,
-  "id": "project-4dcf697a-ac41-42ed-8dba-39e2ede8210a",
+  "id": "project-ab5b5fcf-bb57-45d5-bd18-3a6e291e3ef6",
   "name": "Untitled character",
   "artboards": [
     {
-      "id": "artboard-5b78aebe-39e8-4934-8fba-efbd8451cbd8",
+      "id": "artboard-312cefc6-b55f-4d5c-9a1d-da5525060663",
       "name": "Artboard 1",
       "width": 640,
       "height": 480
@@ -13,10 +13,10 @@
   ],
   "nodes": [
     {
-      "id": "node-1aaf6594-49e6-4a95-95d7-c8fab1a8c972",
+      "id": "node-54b40c0e-e786-4363-915e-cfbb9bc067d4",
       "name": "Path",
       "kind": "path",
-      "artboardId": "artboard-5b78aebe-39e8-4934-8fba-efbd8451cbd8",
+      "artboardId": "artboard-312cefc6-b55f-4d5c-9a1d-da5525060663",
       "parentId": null,
       "order": 0,
       "transform": [
@@ -33,7 +33,7 @@
         "skin": null,
         "points": [
           {
-            "id": "point-4ef10f87-72ef-473a-ba4c-d430f6b4437f",
+            "id": "point-f040440c-a7de-4716-95a9-52283b2b92d0",
             "anchor": [
               120,
               60
@@ -48,7 +48,7 @@
             ]
           },
           {
-            "id": "point-41f05c5b-8c01-4aee-bc34-81f02183f782",
+            "id": "point-29da3e94-690d-470b-ba00-de236c980d43",
             "anchor": [
               60,
               120
@@ -63,7 +63,7 @@
             ]
           },
           {
-            "id": "point-50169858-a943-400d-9f4d-733b08be0824",
+            "id": "point-a51f3ff5-cefc-488b-9ab3-dc9190abf7c3",
             "anchor": [
               0,
               60
@@ -78,7 +78,7 @@
             ]
           },
           {
-            "id": "point-dea7838e-681b-48f2-883f-0a85f3c0e4b1",
+            "id": "point-0416d95b-a0a0-4c7e-ac15-1d95372f13a6",
             "anchor": [
               60,
               0
@@ -132,15 +132,15 @@
   "assets": [],
   "animations": [
     {
-      "id": "animation-1f954422-2ab6-4193-9caf-1b86bebc07b8",
+      "id": "animation-3053b794-64d6-4600-b96b-b20ae11ed77c",
       "name": "Animation 1",
-      "artboardId": "artboard-5b78aebe-39e8-4934-8fba-efbd8451cbd8",
+      "artboardId": "artboard-312cefc6-b55f-4d5c-9a1d-da5525060663",
       "fps": 60,
       "duration": 120,
       "loop": true,
       "tracks": [
         {
-          "targetId": "node-1aaf6594-49e6-4a95-95d7-c8fab1a8c972",
+          "targetId": "node-54b40c0e-e786-4363-915e-cfbb9bc067d4",
           "property": "stroke.paint.endX",
           "keys": [
             {
@@ -170,7 +170,7 @@
           ]
         },
         {
-          "targetId": "node-1aaf6594-49e6-4a95-95d7-c8fab1a8c972",
+          "targetId": "node-54b40c0e-e786-4363-915e-cfbb9bc067d4",
           "property": "stroke.paint.stop.0.color",
           "keys": [
             {
@@ -207,7 +207,7 @@
     "locked": [],
     "hidden": [],
     "cameras": {
-      "artboard-5b78aebe-39e8-4934-8fba-efbd8451cbd8": {
+      "artboard-312cefc6-b55f-4d5c-9a1d-da5525060663": {
         "x": 0,
         "y": 0,
         "zoom": 1

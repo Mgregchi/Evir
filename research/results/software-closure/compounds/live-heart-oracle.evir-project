@@ -1,11 +1,11 @@
 {
   "format": "evir-project",
   "schemaVersion": 3,
-  "id": "project-6090706e-1c45-46a0-a4c5-6644b32e2e52",
+  "id": "project-7d16c3a0-4cdb-4fc3-b968-1cce7e5c797f",
   "name": "Untitled character",
   "artboards": [
     {
-      "id": "artboard-32591f6b-fe57-4d57-adf3-9448d33e2212",
+      "id": "artboard-366aa9a3-f47a-469b-9ce8-4cd388cfa8d5",
       "name": "Artboard 1",
       "width": 512,
       "height": 512
@@ -13,10 +13,10 @@
   ],
   "nodes": [
     {
-      "id": "node-e9eee99a-bea9-4c4d-97c9-4ec8fe3e621e",
+      "id": "node-810a6cf7-89f8-4e60-95b6-a0e0cad3c599",
       "name": "Heart",
       "kind": "path",
-      "artboardId": "artboard-32591f6b-fe57-4d57-adf3-9448d33e2212",
+      "artboardId": "artboard-366aa9a3-f47a-469b-9ce8-4cd388cfa8d5",
       "parentId": null,
       "order": 0,
       "transform": [
@@ -33,7 +33,7 @@
         "skin": null,
         "points": [
           {
-            "id": "point-61b45308-55f0-4fe8-8007-d0dc94427665",
+            "id": "point-a13bf3ea-e01e-4bdb-993b-edd87b476654",
             "anchor": [
               110,
               40
@@ -48,7 +48,7 @@
             ]
           },
           {
-            "id": "point-ce8618a5-76ea-4473-a2ed-5671744afbae",
+            "id": "point-3f3128c7-e16b-4ca5-bd17-ddbd7ee987e0",
             "anchor": [
               17.6,
               76.8
@@ -63,7 +63,7 @@
             ]
           },
           {
-            "id": "point-7709601c-e2ce-4c6c-8bab-eec30e20dfae",
+            "id": "point-7de6a899-b3cc-477a-8591-26e3547528e7",
             "anchor": [
               110,
               160
@@ -78,7 +78,7 @@
             ]
           },
           {
-            "id": "point-36fc25d3-a157-42b0-9168-93d092fa2def",
+            "id": "point-ab9e1469-c9cc-443f-a4d4-ce981d6918a8",
             "anchor": [
               202.4,
               76.8
@@ -110,7 +110,7 @@
     "locked": [],
     "hidden": [],
     "cameras": {
-      "artboard-32591f6b-fe57-4d57-adf3-9448d33e2212": {
+      "artboard-366aa9a3-f47a-469b-9ce8-4cd388cfa8d5": {
         "x": 0,
         "y": 0,
         "zoom": 1

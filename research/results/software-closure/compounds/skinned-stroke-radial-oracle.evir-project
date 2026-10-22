@@ -1,11 +1,11 @@
 {
   "format": "evir-project",
   "schemaVersion": 3,
-  "id": "project-0c059ed0-b3e8-474c-8399-a485b60c96f7",
+  "id": "project-f52fa1c2-3e9d-4cfe-b3d5-0673f1933206",
   "name": "Skinned radial stroke",
   "artboards": [
     {
-      "id": "artboard-ec3cb38c-7483-4c77-8459-26582dddb24d",
+      "id": "artboard-cf80a3c4-a824-472a-9aeb-7a82385d5f3e",
       "name": "Artboard 1",
       "width": 640,
       "height": 480
@@ -13,10 +13,10 @@
   ],
   "nodes": [
     {
-      "id": "node-ce9d6549-b7fa-4f57-8236-0861cebb6bfa",
+      "id": "node-cdda51d4-bce2-4a30-b733-564872b8fa76",
       "name": "Path",
       "kind": "path",
-      "artboardId": "artboard-ec3cb38c-7483-4c77-8459-26582dddb24d",
+      "artboardId": "artboard-cf80a3c4-a824-472a-9aeb-7a82385d5f3e",
       "parentId": null,
       "order": 0,
       "transform": [
@@ -41,7 +41,7 @@
           ],
           "bones": [
             {
-              "boneId": "node-035ad9e7-a399-4697-996c-c6992ccf1a2c",
+              "boneId": "node-06ac61d6-9944-4112-83f0-2ef4c9bf9322",
               "bind": [
                 1,
                 0,
@@ -52,7 +52,7 @@
               ]
             },
             {
-              "boneId": "node-5b0889b7-8edd-4083-983d-9e98b4826935",
+              "boneId": "node-9f27af97-b598-42ef-95ea-47fc81c0c499",
               "bind": [
                 1,
                 0,
@@ -65,133 +65,133 @@
           ],
           "weights": [
             {
-              "pointId": "point-4f9c9c95-2739-4fed-bed3-1ca7fada21be",
+              "pointId": "point-6b0adc66-2859-4866-b1e0-55d258c0df20",
               "anchor": [
                 [
-                  "node-035ad9e7-a399-4697-996c-c6992ccf1a2c",
+                  "node-06ac61d6-9944-4112-83f0-2ef4c9bf9322",
                   1
                 ],
                 [
-                  "node-5b0889b7-8edd-4083-983d-9e98b4826935",
+                  "node-9f27af97-b598-42ef-95ea-47fc81c0c499",
                   0
                 ]
               ],
               "in": [
                 [
-                  "node-035ad9e7-a399-4697-996c-c6992ccf1a2c",
+                  "node-06ac61d6-9944-4112-83f0-2ef4c9bf9322",
                   1
                 ],
                 [
-                  "node-5b0889b7-8edd-4083-983d-9e98b4826935",
+                  "node-9f27af97-b598-42ef-95ea-47fc81c0c499",
                   0
                 ]
               ],
               "out": [
                 [
-                  "node-035ad9e7-a399-4697-996c-c6992ccf1a2c",
+                  "node-06ac61d6-9944-4112-83f0-2ef4c9bf9322",
                   1
                 ],
                 [
-                  "node-5b0889b7-8edd-4083-983d-9e98b4826935",
+                  "node-9f27af97-b598-42ef-95ea-47fc81c0c499",
                   0
                 ]
               ]
             },
             {
-              "pointId": "point-af957c12-bffe-4236-aa71-f0651782af69",
+              "pointId": "point-f4bc5f89-9aa4-4528-9cb0-7e6b42005d13",
               "anchor": [
                 [
-                  "node-035ad9e7-a399-4697-996c-c6992ccf1a2c",
+                  "node-06ac61d6-9944-4112-83f0-2ef4c9bf9322",
                   0.6666666666666666
                 ],
                 [
-                  "node-5b0889b7-8edd-4083-983d-9e98b4826935",
+                  "node-9f27af97-b598-42ef-95ea-47fc81c0c499",
                   0.3333333333333333
                 ]
               ],
               "in": [
                 [
-                  "node-035ad9e7-a399-4697-996c-c6992ccf1a2c",
+                  "node-06ac61d6-9944-4112-83f0-2ef4c9bf9322",
                   0.6666666666666666
                 ],
                 [
-                  "node-5b0889b7-8edd-4083-983d-9e98b4826935",
+                  "node-9f27af97-b598-42ef-95ea-47fc81c0c499",
                   0.3333333333333333
                 ]
               ],
               "out": [
                 [
-                  "node-035ad9e7-a399-4697-996c-c6992ccf1a2c",
+                  "node-06ac61d6-9944-4112-83f0-2ef4c9bf9322",
                   0.6666666666666666
                 ],
                 [
-                  "node-5b0889b7-8edd-4083-983d-9e98b4826935",
+                  "node-9f27af97-b598-42ef-95ea-47fc81c0c499",
                   0.3333333333333333
                 ]
               ]
             },
             {
-              "pointId": "point-cebdb111-de43-442f-992b-733052f98d30",
+              "pointId": "point-058c523c-fdfd-415d-8e63-1af4c33c70d2",
               "anchor": [
                 [
-                  "node-035ad9e7-a399-4697-996c-c6992ccf1a2c",
+                  "node-06ac61d6-9944-4112-83f0-2ef4c9bf9322",
                   0.3333333333333333
                 ],
                 [
-                  "node-5b0889b7-8edd-4083-983d-9e98b4826935",
+                  "node-9f27af97-b598-42ef-95ea-47fc81c0c499",
                   0.6666666666666666
                 ]
               ],
               "in": [
                 [
-                  "node-035ad9e7-a399-4697-996c-c6992ccf1a2c",
+                  "node-06ac61d6-9944-4112-83f0-2ef4c9bf9322",
                   0.3333333333333333
                 ],
                 [
-                  "node-5b0889b7-8edd-4083-983d-9e98b4826935",
+                  "node-9f27af97-b598-42ef-95ea-47fc81c0c499",
                   0.6666666666666666
                 ]
               ],
               "out": [
                 [
-                  "node-035ad9e7-a399-4697-996c-c6992ccf1a2c",
+                  "node-06ac61d6-9944-4112-83f0-2ef4c9bf9322",
                   0.3333333333333333
                 ],
                 [
-                  "node-5b0889b7-8edd-4083-983d-9e98b4826935",
+                  "node-9f27af97-b598-42ef-95ea-47fc81c0c499",
                   0.6666666666666666
                 ]
               ]
             },
             {
-              "pointId": "point-66933faf-e440-4ce1-abeb-fadf26eb3f98",
+              "pointId": "point-205c86b8-ef3e-4453-91cb-3d0f98e7d4cd",
               "anchor": [
                 [
-                  "node-035ad9e7-a399-4697-996c-c6992ccf1a2c",
+                  "node-06ac61d6-9944-4112-83f0-2ef4c9bf9322",
                   0
                 ],
                 [
-                  "node-5b0889b7-8edd-4083-983d-9e98b4826935",
+                  "node-9f27af97-b598-42ef-95ea-47fc81c0c499",
                   1
                 ]
               ],
               "in": [
                 [
-                  "node-035ad9e7-a399-4697-996c-c6992ccf1a2c",
+                  "node-06ac61d6-9944-4112-83f0-2ef4c9bf9322",
                   0
                 ],
                 [
-                  "node-5b0889b7-8edd-4083-983d-9e98b4826935",
+                  "node-9f27af97-b598-42ef-95ea-47fc81c0c499",
                   1
                 ]
               ],
               "out": [
                 [
-                  "node-035ad9e7-a399-4697-996c-c6992ccf1a2c",
+                  "node-06ac61d6-9944-4112-83f0-2ef4c9bf9322",
                   0
                 ],
                 [
-                  "node-5b0889b7-8edd-4083-983d-9e98b4826935",
+                  "node-9f27af97-b598-42ef-95ea-47fc81c0c499",
                   1
                 ]
               ]
@@ -200,7 +200,7 @@
         },
         "points": [
           {
-            "id": "point-4f9c9c95-2739-4fed-bed3-1ca7fada21be",
+            "id": "point-6b0adc66-2859-4866-b1e0-55d258c0df20",
             "anchor": [
               120,
               60
@@ -215,7 +215,7 @@
             ]
           },
           {
-            "id": "point-af957c12-bffe-4236-aa71-f0651782af69",
+            "id": "point-f4bc5f89-9aa4-4528-9cb0-7e6b42005d13",
             "anchor": [
               60,
               120
@@ -230,7 +230,7 @@
             ]
           },
           {
-            "id": "point-cebdb111-de43-442f-992b-733052f98d30",
+            "id": "point-058c523c-fdfd-415d-8e63-1af4c33c70d2",
             "anchor": [
               0,
               60
@@ -245,7 +245,7 @@
             ]
           },
           {
-            "id": "point-66933faf-e440-4ce1-abeb-fadf26eb3f98",
+            "id": "point-205c86b8-ef3e-4453-91cb-3d0f98e7d4cd",
             "anchor": [
               60,
               0
@@ -296,10 +296,10 @@
       }
     },
     {
-      "id": "node-035ad9e7-a399-4697-996c-c6992ccf1a2c",
+      "id": "node-06ac61d6-9944-4112-83f0-2ef4c9bf9322",
       "name": "Bone",
       "kind": "bone",
-      "artboardId": "artboard-ec3cb38c-7483-4c77-8459-26582dddb24d",
+      "artboardId": "artboard-cf80a3c4-a824-472a-9aeb-7a82385d5f3e",
       "parentId": null,
       "order": 1,
       "transform": [
@@ -315,11 +315,11 @@
       }
     },
     {
-      "id": "node-5b0889b7-8edd-4083-983d-9e98b4826935",
+      "id": "node-9f27af97-b598-42ef-95ea-47fc81c0c499",
       "name": "Bone",
       "kind": "bone",
-      "artboardId": "artboard-ec3cb38c-7483-4c77-8459-26582dddb24d",
-      "parentId": "node-035ad9e7-a399-4697-996c-c6992ccf1a2c",
+      "artboardId": "artboard-cf80a3c4-a824-472a-9aeb-7a82385d5f3e",
+      "parentId": "node-06ac61d6-9944-4112-83f0-2ef4c9bf9322",
       "order": 0,
       "transform": [
         1,
@@ -337,15 +337,15 @@
   "assets": [],
   "animations": [
     {
-      "id": "animation-524d9427-270d-451d-a2a0-1cdac1e73bd5",
+      "id": "animation-2524415a-0fd1-4933-9da6-544003b05a6b",
       "name": "Animation 1",
-      "artboardId": "artboard-ec3cb38c-7483-4c77-8459-26582dddb24d",
+      "artboardId": "artboard-cf80a3c4-a824-472a-9aeb-7a82385d5f3e",
       "fps": 60,
       "duration": 120,
       "loop": true,
       "tracks": [
         {
-          "targetId": "node-ce9d6549-b7fa-4f57-8236-0861cebb6bfa",
+          "targetId": "node-cdda51d4-bce2-4a30-b733-564872b8fa76",
           "property": "stroke.paint.endX",
           "keys": [
             {
@@ -375,7 +375,7 @@
           ]
         },
         {
-          "targetId": "node-ce9d6549-b7fa-4f57-8236-0861cebb6bfa",
+          "targetId": "node-cdda51d4-bce2-4a30-b733-564872b8fa76",
           "property": "stroke.paint.stop.0.color",
           "keys": [
             {
@@ -405,7 +405,7 @@
           ]
         },
         {
-          "targetId": "node-5b0889b7-8edd-4083-983d-9e98b4826935",
+          "targetId": "node-9f27af97-b598-42ef-95ea-47fc81c0c499",
           "property": "rotation",
           "keys": [
             {
@@ -442,7 +442,7 @@
     "locked": [],
     "hidden": [],
     "cameras": {
-      "artboard-ec3cb38c-7483-4c77-8459-26582dddb24d": {
+      "artboard-cf80a3c4-a824-472a-9aeb-7a82385d5f3e": {
         "x": 0,
         "y": 0,
         "zoom": 1

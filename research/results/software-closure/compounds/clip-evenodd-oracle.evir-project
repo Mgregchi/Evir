@@ -5,7 +5,7 @@
   "name": "clip-evenodd",
   "artboards": [
     {
-      "id": "artboard-b90ce77c-5f73-42e8-b34d-648f36eafbbd",
+      "id": "artboard-77802275-7f3e-422f-9d2a-664d8cff96a5",
       "name": "Artboard 1",
       "width": 512,
       "height": 512
@@ -13,10 +13,10 @@
   ],
   "nodes": [
     {
-      "id": "node-4f506b4e-e3d4-4f52-9413-6fa51e0338f0",
+      "id": "node-4e3ff2be-0f38-4946-a204-84781ef63f7f",
       "name": "Circle",
       "kind": "path",
-      "artboardId": "artboard-b90ce77c-5f73-42e8-b34d-648f36eafbbd",
+      "artboardId": "artboard-77802275-7f3e-422f-9d2a-664d8cff96a5",
       "parentId": null,
       "order": 0,
       "transform": [
@@ -31,7 +31,7 @@
         "closed": true,
         "points": [
           {
-            "id": "point-0135fa9e-8fb3-47e3-b2c3-293d829d9a30",
+            "id": "point-b72185db-dda8-4b25-b7eb-2f540695160d",
             "anchor": [
               300,
               150
@@ -46,7 +46,7 @@
             ]
           },
           {
-            "id": "point-e58666ee-306f-4c77-9b2f-8e2586437b2f",
+            "id": "point-b41424aa-cffa-4949-bbae-5ccdde014659",
             "anchor": [
               150,
               300
@@ -61,7 +61,7 @@
             ]
           },
           {
-            "id": "point-a305ebc6-7e4c-40b4-9895-cae4040322aa",
+            "id": "point-d23c6890-c66e-4c45-9574-9a1510984dcd",
             "anchor": [
               0,
               150
@@ -76,7 +76,7 @@
             ]
           },
           {
-            "id": "point-8564c6e3-ffcd-42a8-9b90-1a5ef31cdbe8",
+            "id": "point-74b724e1-5dae-46b2-a734-4983bb6d4eb3",
             "anchor": [
               150,
               0
@@ -96,7 +96,7 @@
             "closed": true,
             "points": [
               {
-                "id": "point-1825c347-a10a-4c26-87a5-cd96c4c10490",
+                "id": "point-354fea5f-09fd-45f3-8357-b54c0e855732",
                 "anchor": [
                   220,
                   150
@@ -111,7 +111,7 @@
                 ]
               },
               {
-                "id": "point-25978799-7d53-4596-a114-073015f1fd4e",
+                "id": "point-045037d0-c237-4020-ab8d-4c99dc4fba6f",
                 "anchor": [
                   150,
                   220
@@ -126,7 +126,7 @@
                 ]
               },
               {
-                "id": "point-9abe01fc-9f76-4591-ae42-1d6e105f7fd7",
+                "id": "point-a6691435-d606-492c-9551-f1377954199c",
                 "anchor": [
                   80,
                   150
@@ -141,7 +141,7 @@
                 ]
               },
               {
-                "id": "point-55f684dc-af0a-421c-932b-c22088332392",
+                "id": "point-229372e5-7748-4a34-a1d0-1f84d138020a",
                 "anchor": [
                   150,
                   80
@@ -164,10 +164,10 @@
       }
     },
     {
-      "id": "node-4fa1a01f-bc77-4728-8a47-f5e02b8abfb4",
+      "id": "node-f3a38ffa-fcac-42ef-8164-985f30b4ae26",
       "name": "Rectangle",
       "kind": "rectangle",
-      "artboardId": "artboard-b90ce77c-5f73-42e8-b34d-648f36eafbbd",
+      "artboardId": "artboard-77802275-7f3e-422f-9d2a-664d8cff96a5",
       "parentId": null,
       "order": 1,
       "transform": [
@@ -192,7 +192,7 @@
     "locked": [],
     "hidden": [],
     "cameras": {
-      "artboard-b90ce77c-5f73-42e8-b34d-648f36eafbbd": {
+      "artboard-77802275-7f3e-422f-9d2a-664d8cff96a5": {
         "x": 0,
         "y": 0,
         "zoom": 1
@@ -202,8 +202,8 @@
   "advanced": {
     "clips": [
       {
-        "targetId": "node-4fa1a01f-bc77-4728-8a47-f5e02b8abfb4",
-        "maskId": "node-4f506b4e-e3d4-4f52-9413-6fa51e0338f0",
+        "targetId": "node-f3a38ffa-fcac-42ef-8164-985f30b4ae26",
+        "maskId": "node-4e3ff2be-0f38-4946-a204-84781ef63f7f",
         "visible": false,
         "fillRule": "evenodd"
       }

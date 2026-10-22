@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-10-21T14:52:38.574447+00:00",
-  "status": "in-progress: official-runtime and public-site integration checks are running",
+  "checkedAt": "2026-10-22T05:45:43.326968+00:00",
+  "status": "completed local acceptance in segments; hosted CI blocked",
   "scope": "Cloud Chromium/software rendering only. No physical-device or human-study evidence.",
   "baseMain": "c10290725dd62d556b67a35a10d5c3841924aca1",
   "local": {
@@ -15,7 +15,42 @@
     },
     "editorWorkflows": {
       "status": "passed in segments",
-      "note": "Initial timing failures are retained. A separate reload failure led to a deterministic background-resize regression and its fix. Existing assertions/timeouts were retained."
+      "note": "Initial timing failures are retained. A separate reload failure led to a deterministic background-resize regression and its fix. Existing assertions/timeouts were retained.",
+      "scriptsPassed": 30
+    },
+    "pixelTransport": {
+      "passed": 2,
+      "command": "npm run test:pixel-transfer",
+      "scope": "Exact byte preservation; renderer assertions and tolerances unchanged."
+    },
+    "officialRuntime": {
+      "status": "passed in segments",
+      "command": "npm run validate:editor",
+      "targetedPixelComparisons": 450,
+      "independentBoneMatrixComparisons": 180,
+      "report": "compounds/native.json",
+      "poseReport": "compounds/ik-poses.json",
+      "note": "All component checks passed. One WebGL navigation timed out before fixture execution and passed unchanged on retry. Earlier numeric pixel transfer was stopped and replaced with exact packed bytes; affected suites were rerun."
+    },
+    "publicSite": {
+      "command": "npm run test:web",
+      "status": "passed",
+      "pageConfigurationChecks": 22,
+      "editableStudies": 32,
+      "showcaseComparisons": 558,
+      "learnWidths": 4,
+      "reports": "site/"
+    },
+    "experience": {
+      "command": "npm run test:experience",
+      "status": "passed",
+      "checks": [
+        "retry/recovery",
+        "idle callbacks",
+        "custom feedback",
+        "SEO",
+        "automated accessibility"
+      ]
     }
   },
   "recoveryProof": "recovery/regression.json",
@@ -23,5 +58,33 @@
     "physical-device testing",
     "hosted backend services"
   ],
-  "hostedCI": "Previous jobs could not start because the repository account is locked due to billing; recheck the new head after push."
+  "hostedCI": {
+    "status": "blocked before jobs executed",
+    "message": "The job was not started because your account is locked due to a billing issue.",
+    "checkedHead": "4c034b18039b3865523feaf55260929aafb9a87d",
+    "runs": [
+      39620741387,
+      39620741393
+    ]
+  },
+  "productionCommit": "4c034b18039b3865523feaf55260929aafb9a87d",
+  "observedRetries": [
+    "Structured-guides Fit click and library New click timed out; unchanged reruns passed. These cloud timing failures are retained, not claimed fixed.",
+    "Separate deterministic library background-resize failure was reproduced before the fix and passed afterward; see recovery/regression.json.",
+    "WebGL advanced-authoring navigation timed out before fixtures; unchanged retry passed."
+  ],
+  "logs": "validation/",
+  "stillOpen": [
+    "Broader editable import and native fixture coverage",
+    "Nonunit IK, nested blends and general weighted layers",
+    "Multiline/rich text, external assets and reflow",
+    "Inner feather/offset rendering differences",
+    "Freehand gesture concatenation, general animation rebasing and other large control lists",
+    "Matched official Editor scenes and human/screen-reader evidence"
+  ],
+  "validationSources": {
+    "tools/pixel-transfer.mjs": "04d1c0d30b52957a37da7901e02097bea53369c02d2abf28491dc0bcf277dc0e",
+    "tools/pixel-transfer.cjs": "c7ea63938aa32475949c48723c34a66ef98688b658a91c253baaaeebf94e2ecc",
+    "tests/research/pixel-transfer.test.mjs": "34a8f0b095339b5131f9cb8c88ccf20d43fa502c7072c793a409d29da26973fc"
+  }
 }

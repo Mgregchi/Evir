@@ -1,11 +1,11 @@
 {
   "format": "evir-project",
   "schemaVersion": 3,
-  "id": "project-8823e083-d814-4455-b85c-7f2eab80cfdf",
+  "id": "project-164fc56d-d7db-407c-872f-94f9ff9601ba",
   "name": "IK 4 strength 0.5 invert false",
   "artboards": [
     {
-      "id": "artboard-047c47ed-043b-482d-9782-3faeb116e00f",
+      "id": "artboard-3f0e77e5-2769-4dcc-86e8-37d31c580b2c",
       "name": "Artboard 1",
       "width": 512,
       "height": 512
@@ -13,10 +13,10 @@
   ],
   "nodes": [
     {
-      "id": "node-9e7942de-82ea-4c2c-9558-12a69e93e4d5",
+      "id": "node-e0f0af2e-9a07-4a52-903d-1a03fde10d03",
       "name": "Group",
       "kind": "group",
-      "artboardId": "artboard-047c47ed-043b-482d-9782-3faeb116e00f",
+      "artboardId": "artboard-3f0e77e5-2769-4dcc-86e8-37d31c580b2c",
       "parentId": null,
       "order": 0,
       "transform": [
@@ -30,11 +30,11 @@
       "geometry": null
     },
     {
-      "id": "node-cb3106b9-2951-4e01-a8ec-fc8798ae5afe",
+      "id": "node-634799de-7cf3-4ab6-9067-28c2ad0b3411",
       "name": "Segment 0",
       "kind": "bone",
-      "artboardId": "artboard-047c47ed-043b-482d-9782-3faeb116e00f",
-      "parentId": "node-9e7942de-82ea-4c2c-9558-12a69e93e4d5",
+      "artboardId": "artboard-3f0e77e5-2769-4dcc-86e8-37d31c580b2c",
+      "parentId": "node-e0f0af2e-9a07-4a52-903d-1a03fde10d03",
       "order": 0,
       "transform": [
         0.9959527330119943,
@@ -49,11 +49,11 @@
       }
     },
     {
-      "id": "node-8d0b0b04-15f9-46f8-b05d-a40a9a38c837",
+      "id": "node-5fa1bbed-8d0b-4261-ae63-6777c3551904",
       "name": "Rectangle",
       "kind": "rectangle",
-      "artboardId": "artboard-047c47ed-043b-482d-9782-3faeb116e00f",
-      "parentId": "node-cb3106b9-2951-4e01-a8ec-fc8798ae5afe",
+      "artboardId": "artboard-3f0e77e5-2769-4dcc-86e8-37d31c580b2c",
+      "parentId": "node-634799de-7cf3-4ab6-9067-28c2ad0b3411",
       "order": 0,
       "transform": [
         1,
@@ -70,11 +70,11 @@
       }
     },
     {
-      "id": "node-ad2bfeef-6c7f-4163-aa0b-2e59beaf2a4d",
+      "id": "node-d3c2a843-baab-47b7-bd4b-9f460d60ed65",
       "name": "Segment 1",
       "kind": "bone",
-      "artboardId": "artboard-047c47ed-043b-482d-9782-3faeb116e00f",
-      "parentId": "node-cb3106b9-2951-4e01-a8ec-fc8798ae5afe",
+      "artboardId": "artboard-3f0e77e5-2769-4dcc-86e8-37d31c580b2c",
+      "parentId": "node-634799de-7cf3-4ab6-9067-28c2ad0b3411",
       "order": 1,
       "transform": [
         0.9915618937147881,
@@ -89,11 +89,11 @@
       }
     },
     {
-      "id": "node-10784a55-8db3-4eba-8a0a-56fc92c0d468",
+      "id": "node-4890444a-81c5-4818-ae76-11f40168d9dd",
       "name": "Rectangle",
       "kind": "rectangle",
-      "artboardId": "artboard-047c47ed-043b-482d-9782-3faeb116e00f",
-      "parentId": "node-ad2bfeef-6c7f-4163-aa0b-2e59beaf2a4d",
+      "artboardId": "artboard-3f0e77e5-2769-4dcc-86e8-37d31c580b2c",
+      "parentId": "node-d3c2a843-baab-47b7-bd4b-9f460d60ed65",
       "order": 0,
       "transform": [
         1,
@@ -110,11 +110,11 @@
       }
     },
     {
-      "id": "node-4455f534-84d3-4f81-9241-bb50096fec5f",
+      "id": "node-b9caf8d2-01bb-4709-9148-bbde98880405",
       "name": "Segment 2",
       "kind": "bone",
-      "artboardId": "artboard-047c47ed-043b-482d-9782-3faeb116e00f",
-      "parentId": "node-ad2bfeef-6c7f-4163-aa0b-2e59beaf2a4d",
+      "artboardId": "artboard-3f0e77e5-2769-4dcc-86e8-37d31c580b2c",
+      "parentId": "node-d3c2a843-baab-47b7-bd4b-9f460d60ed65",
       "order": 1,
       "transform": [
         0.9959527330119943,
@@ -129,11 +129,11 @@
       }
     },
     {
-      "id": "node-23c24e9b-acd2-48d6-9d7e-db1f350c2f0d",
+      "id": "node-02b64f1c-93d3-4e50-8a8a-0533f5fa3eb2",
       "name": "Rectangle",
       "kind": "rectangle",
-      "artboardId": "artboard-047c47ed-043b-482d-9782-3faeb116e00f",
-      "parentId": "node-4455f534-84d3-4f81-9241-bb50096fec5f",
+      "artboardId": "artboard-3f0e77e5-2769-4dcc-86e8-37d31c580b2c",
+      "parentId": "node-b9caf8d2-01bb-4709-9148-bbde98880405",
       "order": 0,
       "transform": [
         1,
@@ -150,11 +150,11 @@
       }
     },
     {
-      "id": "node-a6c29645-935e-4461-99ef-2e7a73cfa12b",
+      "id": "node-ac61434c-a3c6-4409-a6f3-e060fe050e09",
       "name": "Segment 3",
       "kind": "bone",
-      "artboardId": "artboard-047c47ed-043b-482d-9782-3faeb116e00f",
-      "parentId": "node-4455f534-84d3-4f81-9241-bb50096fec5f",
+      "artboardId": "artboard-3f0e77e5-2769-4dcc-86e8-37d31c580b2c",
+      "parentId": "node-b9caf8d2-01bb-4709-9148-bbde98880405",
       "order": 1,
       "transform": [
         0.9915618937147881,
@@ -169,11 +169,11 @@
       }
     },
     {
-      "id": "node-6eb1fa08-9749-42f8-b3ed-ff397032cb9c",
+      "id": "node-15b9f26f-eb61-4f1f-85f4-c28b4bcc7744",
       "name": "Rectangle",
       "kind": "rectangle",
-      "artboardId": "artboard-047c47ed-043b-482d-9782-3faeb116e00f",
-      "parentId": "node-a6c29645-935e-4461-99ef-2e7a73cfa12b",
+      "artboardId": "artboard-3f0e77e5-2769-4dcc-86e8-37d31c580b2c",
+      "parentId": "node-ac61434c-a3c6-4409-a6f3-e060fe050e09",
       "order": 0,
       "transform": [
         1,
@@ -190,10 +190,10 @@
       }
     },
     {
-      "id": "node-52dc9b4c-cab9-4087-a6ee-1ebd69c3c215",
+      "id": "node-487d3ebf-5760-417b-b46a-c0ab40632a16",
       "name": "Group",
       "kind": "group",
-      "artboardId": "artboard-047c47ed-043b-482d-9782-3faeb116e00f",
+      "artboardId": "artboard-3f0e77e5-2769-4dcc-86e8-37d31c580b2c",
       "parentId": null,
       "order": 1,
       "transform": [
@@ -210,15 +210,15 @@
   "assets": [],
   "animations": [
     {
-      "id": "animation-55bdd288-2c66-43c8-99a5-ec1133ed7567",
+      "id": "animation-06f392d5-db01-4cd0-8cd4-aeb5399c28ab",
       "name": "Animation 1",
-      "artboardId": "artboard-047c47ed-043b-482d-9782-3faeb116e00f",
+      "artboardId": "artboard-3f0e77e5-2769-4dcc-86e8-37d31c580b2c",
       "fps": 60,
       "duration": 120,
       "loop": true,
       "tracks": [
         {
-          "targetId": "node-52dc9b4c-cab9-4087-a6ee-1ebd69c3c215",
+          "targetId": "node-487d3ebf-5760-417b-b46a-c0ab40632a16",
           "property": "x",
           "keys": [
             {
@@ -248,7 +248,7 @@
           ]
         },
         {
-          "targetId": "node-52dc9b4c-cab9-4087-a6ee-1ebd69c3c215",
+          "targetId": "node-487d3ebf-5760-417b-b46a-c0ab40632a16",
           "property": "y",
           "keys": [
             {
@@ -285,7 +285,7 @@
     "locked": [],
     "hidden": [],
     "cameras": {
-      "artboard-047c47ed-043b-482d-9782-3faeb116e00f": {
+      "artboard-3f0e77e5-2769-4dcc-86e8-37d31c580b2c": {
         "x": 0,
         "y": 0,
         "zoom": 1
@@ -297,8 +297,8 @@
     "feathers": [],
     "ik": [
       {
-        "boneId": "node-a6c29645-935e-4461-99ef-2e7a73cfa12b",
-        "targetId": "node-52dc9b4c-cab9-4087-a6ee-1ebd69c3c215",
+        "boneId": "node-ac61434c-a3c6-4409-a6f3-e060fe050e09",
+        "targetId": "node-487d3ebf-5760-417b-b46a-c0ab40632a16",
         "count": 4,
         "strength": 0.5,
         "invert": false

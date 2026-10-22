@@ -1,11 +1,11 @@
 {
   "format": "evir-project",
   "schemaVersion": 3,
-  "id": "project-ce671e4c-2623-451c-89bf-d6b050843609",
+  "id": "project-d8727e3f-b2d0-44eb-93be-830f5b27c1d2",
   "name": "Untitled character",
   "artboards": [
     {
-      "id": "artboard-b969d904-6ce6-4f83-bab7-4a6790a05a64",
+      "id": "artboard-f98e7fb9-ee00-4dcc-a87e-ea16218902d5",
       "name": "Artboard 1",
       "width": 512,
       "height": 512
@@ -13,10 +13,10 @@
   ],
   "nodes": [
     {
-      "id": "node-fe1c61e6-8f64-4711-99c3-a24c6cd4fecc",
+      "id": "node-fc6897e5-1cfa-4edd-9d1a-9896065ad258",
       "name": "Rectangle",
       "kind": "rectangle",
-      "artboardId": "artboard-b969d904-6ce6-4f83-bab7-4a6790a05a64",
+      "artboardId": "artboard-f98e7fb9-ee00-4dcc-a87e-ea16218902d5",
       "parentId": null,
       "order": 0,
       "transform": [
@@ -48,7 +48,7 @@
     "locked": [],
     "hidden": [],
     "cameras": {
-      "artboard-b969d904-6ce6-4f83-bab7-4a6790a05a64": {
+      "artboard-f98e7fb9-ee00-4dcc-a87e-ea16218902d5": {
         "x": 0,
         "y": 0,
         "zoom": 1

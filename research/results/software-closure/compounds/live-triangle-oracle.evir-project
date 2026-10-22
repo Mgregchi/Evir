@@ -1,11 +1,11 @@
 {
   "format": "evir-project",
   "schemaVersion": 3,
-  "id": "project-9829eae4-a8a5-4694-9c98-1df358068270",
+  "id": "project-52fb755c-dac8-4836-bc34-b6eaaf99aec1",
   "name": "Untitled character",
   "artboards": [
     {
-      "id": "artboard-9cf4e1ce-b1be-47f4-aba9-e210ecea1d8a",
+      "id": "artboard-e743ee7c-62a4-4d57-93ca-d41d80f0902e",
       "name": "Artboard 1",
       "width": 512,
       "height": 512
@@ -13,10 +13,10 @@
   ],
   "nodes": [
     {
-      "id": "node-4320d22f-4b2c-4a53-9bd4-807b5a3efc50",
+      "id": "node-f0296982-0ba3-4e85-a200-b7d9d451a4f9",
       "name": "Triangle",
       "kind": "path",
-      "artboardId": "artboard-9cf4e1ce-b1be-47f4-aba9-e210ecea1d8a",
+      "artboardId": "artboard-e743ee7c-62a4-4d57-93ca-d41d80f0902e",
       "parentId": null,
       "order": 0,
       "transform": [
@@ -33,7 +33,7 @@
         "skin": null,
         "points": [
           {
-            "id": "point-d942c37b-178b-450c-b373-3250800c12d9",
+            "id": "point-23681f67-2f85-4fe9-99aa-ac37ad5ce610",
             "anchor": [
               110,
               0
@@ -48,7 +48,7 @@
             ]
           },
           {
-            "id": "point-da8a3648-76d4-4a9f-a76d-80e30056765e",
+            "id": "point-08ed5b10-443d-46fa-9ac9-80629b2e3d8f",
             "anchor": [
               220,
               160
@@ -63,7 +63,7 @@
             ]
           },
           {
-            "id": "point-eb3af9ef-1e53-4126-9d5e-0a737b7c3371",
+            "id": "point-6d75ae7a-a19c-493c-9778-69a349d20517",
             "anchor": [
               0,
               160
@@ -95,7 +95,7 @@
     "locked": [],
     "hidden": [],
     "cameras": {
-      "artboard-9cf4e1ce-b1be-47f4-aba9-e210ecea1d8a": {
+      "artboard-e743ee7c-62a4-4d57-93ca-d41d80f0902e": {
         "x": 0,
         "y": 0,
         "zoom": 1

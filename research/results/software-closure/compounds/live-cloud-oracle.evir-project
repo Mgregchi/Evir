@@ -1,11 +1,11 @@
 {
   "format": "evir-project",
   "schemaVersion": 3,
-  "id": "project-fc027c9f-0632-4252-953f-6117dcff9e2c",
+  "id": "project-73cbeaf2-0284-47b7-baef-437117eb2b01",
   "name": "Untitled character",
   "artboards": [
     {
-      "id": "artboard-bb7a1e7c-93a4-4eb8-9927-9aa77344aaea",
+      "id": "artboard-f89e2e56-5884-4258-bdf4-02e82899c16e",
       "name": "Artboard 1",
       "width": 512,
       "height": 512
@@ -13,10 +13,10 @@
   ],
   "nodes": [
     {
-      "id": "node-152f905d-0ef7-4843-9715-bb3f5380caf3",
+      "id": "node-87da11a3-7bfd-46f5-bfbe-5862e8b4feba",
       "name": "Cloud",
       "kind": "path",
-      "artboardId": "artboard-bb7a1e7c-93a4-4eb8-9927-9aa77344aaea",
+      "artboardId": "artboard-f89e2e56-5884-4258-bdf4-02e82899c16e",
       "parentId": null,
       "order": 0,
       "transform": [
@@ -33,7 +33,7 @@
         "skin": null,
         "points": [
           {
-            "id": "point-3bab4ae6-b129-45d3-85c4-63e6f1ad679a",
+            "id": "point-2bb08844-289d-4a57-bd21-50062af806b4",
             "anchor": [
               48.4,
               140.8
@@ -48,7 +48,7 @@
             ]
           },
           {
-            "id": "point-e89f6a6c-2ca6-48d6-bee2-7583488668fb",
+            "id": "point-1e8b9b9b-cebe-44b3-8f80-0a58a60ed7bd",
             "anchor": [
               44,
               57.599999999999994
@@ -63,7 +63,7 @@
             ]
           },
           {
-            "id": "point-7ce62e52-b788-46f4-8987-fd3ef23d45cf",
+            "id": "point-a1c8eaeb-f5e9-4828-bab4-8a2041b4dc99",
             "anchor": [
               145.20000000000002,
               44.800000000000004
@@ -78,7 +78,7 @@
             ]
           },
           {
-            "id": "point-e821b81e-df4f-48a4-b0dc-d25c48c3a5ca",
+            "id": "point-f59ceeb2-9afb-4327-b54b-175c3dddcd7b",
             "anchor": [
               193.6,
               86.4
@@ -93,7 +93,7 @@
             ]
           },
           {
-            "id": "point-02d21517-6ec7-45ab-b16a-67ccc9d03806",
+            "id": "point-65b29bff-9384-44c6-8b8d-27d2c57ef0c9",
             "anchor": [
               149.60000000000002,
               140.8
@@ -125,7 +125,7 @@
     "locked": [],
     "hidden": [],
     "cameras": {
-      "artboard-bb7a1e7c-93a4-4eb8-9927-9aa77344aaea": {
+      "artboard-f89e2e56-5884-4258-bdf4-02e82899c16e": {
         "x": 0,
         "y": 0,
         "zoom": 1

@@ -1,0 +1,34 @@
+
+> evir-workspace@0.1.0 runtime:build
+> npm run build --workspace @evir/project-model --workspace @evir/runtime --workspace @evir/renderer-canvas --workspace @evir/authoring --workspace @evir/format --workspace @evir/commands
+
+
+> @evir/project-model@0.1.0 build
+> node ../../tools/build-package.mjs
+
+Built @evir/project-model@0.1.0 standalone module
+
+> @evir/runtime@0.1.0 build
+> node ../../tools/build-package.mjs
+
+Built @evir/runtime@0.1.0 standalone module
+
+> @evir/renderer-canvas@0.1.0 build
+> node ../../tools/build-package.mjs
+
+Built @evir/renderer-canvas@0.1.0 standalone module
+
+> @evir/authoring@0.1.0 build
+> node ../../tools/build-package.mjs
+
+Built @evir/authoring@0.1.0 standalone module
+
+> @evir/format@0.1.0 build
+> node ../../tools/build-package.mjs
+
+Built @evir/format@0.1.0 standalone module
+
+> @evir/commands@0.1.0 build
+> node ../../tools/build-package.mjs
+
+Built @evir/commands@0.1.0 standalone module

@@ -1,11 +1,11 @@
 {
   "format": "evir-project",
   "schemaVersion": 3,
-  "id": "project-0c04c7ce-30cd-47e0-820f-d87cf2232c6c",
+  "id": "project-c1e0d898-4cac-4c7e-85e0-5c8c7dc230f6",
   "name": "IK 4 strength 0.5 invert false",
   "artboards": [
     {
-      "id": "artboard-226f0e6f-a67b-4af8-83a3-8d5c202169d7",
+      "id": "artboard-a1c41178-1e9d-4d95-95e9-d4b82b4e51d3",
       "name": "Artboard 1",
       "width": 512,
       "height": 512
@@ -13,10 +13,10 @@
   ],
   "nodes": [
     {
-      "id": "node-bd486d4d-e7e3-437d-a62a-53fd169aea18",
+      "id": "node-b359d70f-1dec-4c9f-94c9-6f8dae125e87",
       "name": "Group",
       "kind": "group",
-      "artboardId": "artboard-226f0e6f-a67b-4af8-83a3-8d5c202169d7",
+      "artboardId": "artboard-a1c41178-1e9d-4d95-95e9-d4b82b4e51d3",
       "parentId": null,
       "order": 0,
       "transform": [
@@ -30,11 +30,11 @@
       "geometry": null
     },
     {
-      "id": "node-1b191aab-2055-4e9a-98ae-33e3e706c634",
+      "id": "node-c69c080e-3c78-461e-aebf-59ca75fffdf3",
       "name": "Segment 0",
       "kind": "bone",
-      "artboardId": "artboard-226f0e6f-a67b-4af8-83a3-8d5c202169d7",
-      "parentId": "node-bd486d4d-e7e3-437d-a62a-53fd169aea18",
+      "artboardId": "artboard-a1c41178-1e9d-4d95-95e9-d4b82b4e51d3",
+      "parentId": "node-b359d70f-1dec-4c9f-94c9-6f8dae125e87",
       "order": 0,
       "transform": [
         0.9959527330119943,
@@ -49,11 +49,11 @@
       }
     },
     {
-      "id": "node-101f73a0-9fd1-4c15-81fe-caad10c0ca7d",
+      "id": "node-6828e067-1969-4fa0-9394-c29437e9b262",
       "name": "Rectangle",
       "kind": "rectangle",
-      "artboardId": "artboard-226f0e6f-a67b-4af8-83a3-8d5c202169d7",
-      "parentId": "node-1b191aab-2055-4e9a-98ae-33e3e706c634",
+      "artboardId": "artboard-a1c41178-1e9d-4d95-95e9-d4b82b4e51d3",
+      "parentId": "node-c69c080e-3c78-461e-aebf-59ca75fffdf3",
       "order": 0,
       "transform": [
         1,
@@ -70,11 +70,11 @@
       }
     },
     {
-      "id": "node-552449b3-e4dc-47a5-9500-a3bfa0720aaf",
+      "id": "node-03f4c533-d9ac-4476-983b-fe14198fd9be",
       "name": "Segment 1",
       "kind": "bone",
-      "artboardId": "artboard-226f0e6f-a67b-4af8-83a3-8d5c202169d7",
-      "parentId": "node-1b191aab-2055-4e9a-98ae-33e3e706c634",
+      "artboardId": "artboard-a1c41178-1e9d-4d95-95e9-d4b82b4e51d3",
+      "parentId": "node-c69c080e-3c78-461e-aebf-59ca75fffdf3",
       "order": 1,
       "transform": [
         0.9915618937147881,
@@ -89,11 +89,11 @@
       }
     },
     {
-      "id": "node-48be9fc1-b731-4994-8b30-06a17c766012",
+      "id": "node-356044ac-8fbb-4629-aaad-9c5b8be46cd6",
       "name": "Rectangle",
       "kind": "rectangle",
-      "artboardId": "artboard-226f0e6f-a67b-4af8-83a3-8d5c202169d7",
-      "parentId": "node-552449b3-e4dc-47a5-9500-a3bfa0720aaf",
+      "artboardId": "artboard-a1c41178-1e9d-4d95-95e9-d4b82b4e51d3",
+      "parentId": "node-03f4c533-d9ac-4476-983b-fe14198fd9be",
       "order": 0,
       "transform": [
         1,
@@ -110,11 +110,11 @@
       }
     },
     {
-      "id": "node-4497d361-3ac8-4e43-a9dc-06217966d87f",
+      "id": "node-945d6770-8d8d-4b11-9fee-3113900f4ba6",
       "name": "Segment 2",
       "kind": "bone",
-      "artboardId": "artboard-226f0e6f-a67b-4af8-83a3-8d5c202169d7",
-      "parentId": "node-552449b3-e4dc-47a5-9500-a3bfa0720aaf",
+      "artboardId": "artboard-a1c41178-1e9d-4d95-95e9-d4b82b4e51d3",
+      "parentId": "node-03f4c533-d9ac-4476-983b-fe14198fd9be",
       "order": 1,
       "transform": [
         0.9959527330119943,
@@ -129,11 +129,11 @@
       }
     },
     {
-      "id": "node-80e1f0cb-09a7-43bc-a8f8-86c313b5fc59",
+      "id": "node-b3cda9c1-41f1-4a22-ae01-a1bc33604df7",
       "name": "Rectangle",
       "kind": "rectangle",
-      "artboardId": "artboard-226f0e6f-a67b-4af8-83a3-8d5c202169d7",
-      "parentId": "node-4497d361-3ac8-4e43-a9dc-06217966d87f",
+      "artboardId": "artboard-a1c41178-1e9d-4d95-95e9-d4b82b4e51d3",
+      "parentId": "node-945d6770-8d8d-4b11-9fee-3113900f4ba6",
       "order": 0,
       "transform": [
         1,
@@ -150,11 +150,11 @@
       }
     },
     {
-      "id": "node-fbb6c3f2-c5da-4888-848c-cc435e5e0ef2",
+      "id": "node-acee4c6d-a54d-414c-8128-2666f88667dd",
       "name": "Segment 3",
       "kind": "bone",
-      "artboardId": "artboard-226f0e6f-a67b-4af8-83a3-8d5c202169d7",
-      "parentId": "node-4497d361-3ac8-4e43-a9dc-06217966d87f",
+      "artboardId": "artboard-a1c41178-1e9d-4d95-95e9-d4b82b4e51d3",
+      "parentId": "node-945d6770-8d8d-4b11-9fee-3113900f4ba6",
       "order": 1,
       "transform": [
         0.9915618937147881,
@@ -169,11 +169,11 @@
       }
     },
     {
-      "id": "node-6bf7e6fa-d7d1-4aa9-b77c-99521914a424",
+      "id": "node-e5cc5f55-b288-4e05-a395-ce0342fc3be5",
       "name": "Rectangle",
       "kind": "rectangle",
-      "artboardId": "artboard-226f0e6f-a67b-4af8-83a3-8d5c202169d7",
-      "parentId": "node-fbb6c3f2-c5da-4888-848c-cc435e5e0ef2",
+      "artboardId": "artboard-a1c41178-1e9d-4d95-95e9-d4b82b4e51d3",
+      "parentId": "node-acee4c6d-a54d-414c-8128-2666f88667dd",
       "order": 0,
       "transform": [
         1,
@@ -190,10 +190,10 @@
       }
     },
     {
-      "id": "node-847f7a10-66b9-4ddd-bf4b-291d5213d246",
+      "id": "node-d08e70a7-cbc7-491e-af45-5941f077ee7c",
       "name": "Group",
       "kind": "group",
-      "artboardId": "artboard-226f0e6f-a67b-4af8-83a3-8d5c202169d7",
+      "artboardId": "artboard-a1c41178-1e9d-4d95-95e9-d4b82b4e51d3",
       "parentId": null,
       "order": 1,
       "transform": [
@@ -214,7 +214,7 @@
     "locked": [],
     "hidden": [],
     "cameras": {
-      "artboard-226f0e6f-a67b-4af8-83a3-8d5c202169d7": {
+      "artboard-a1c41178-1e9d-4d95-95e9-d4b82b4e51d3": {
         "x": 0,
         "y": 0,
         "zoom": 1
@@ -226,8 +226,8 @@
     "feathers": [],
     "ik": [
       {
-        "boneId": "node-fbb6c3f2-c5da-4888-848c-cc435e5e0ef2",
-        "targetId": "node-847f7a10-66b9-4ddd-bf4b-291d5213d246",
+        "boneId": "node-acee4c6d-a54d-414c-8128-2666f88667dd",
+        "targetId": "node-d08e70a7-cbc7-491e-af45-5941f077ee7c",
         "count": 4,
         "strength": 0.5,
         "invert": false

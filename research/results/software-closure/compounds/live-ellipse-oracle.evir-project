@@ -1,11 +1,11 @@
 {
   "format": "evir-project",
   "schemaVersion": 3,
-  "id": "project-8c41e0f0-5435-4b46-84f1-3c8db72116c9",
+  "id": "project-a4034a6e-872b-4623-a54e-5e077551de70",
   "name": "Untitled character",
   "artboards": [
     {
-      "id": "artboard-906aa2fd-76fe-4105-9310-7eae646139a3",
+      "id": "artboard-bae0efec-c62e-46fb-9fe4-1923942d6c05",
       "name": "Artboard 1",
       "width": 512,
       "height": 512
@@ -13,10 +13,10 @@
   ],
   "nodes": [
     {
-      "id": "node-9d3d0e8e-95ef-47e8-9993-74f124fce85c",
+      "id": "node-c872ae09-d6d5-4ac1-8343-a05637b2ec03",
       "name": "Ellipse",
       "kind": "path",
-      "artboardId": "artboard-906aa2fd-76fe-4105-9310-7eae646139a3",
+      "artboardId": "artboard-bae0efec-c62e-46fb-9fe4-1923942d6c05",
       "parentId": null,
       "order": 0,
       "transform": [
@@ -33,7 +33,7 @@
         "skin": null,
         "points": [
           {
-            "id": "point-5634d1ed-d29a-48da-ae9b-0a004c972483",
+            "id": "point-0cb6bde3-2acf-4f41-8a74-956c11710707",
             "anchor": [
               220,
               80
@@ -48,7 +48,7 @@
             ]
           },
           {
-            "id": "point-c7d6b561-c415-4cc8-9c0d-d17d54d71bde",
+            "id": "point-516c4ff9-8217-4a5f-81e8-1781d04f1be6",
             "anchor": [
               110,
               160
@@ -63,7 +63,7 @@
             ]
           },
           {
-            "id": "point-ab6e5b2c-d9ca-41ab-9a1f-8c0c2ded1ad0",
+            "id": "point-a1776efa-317e-4c66-b814-beb8dc292856",
             "anchor": [
               0,
               80
@@ -78,7 +78,7 @@
             ]
           },
           {
-            "id": "point-e8751a02-2a9b-492f-9dc8-eae060731738",
+            "id": "point-33cdb346-e023-4f22-901e-1fa2296e8c5e",
             "anchor": [
               110,
               0
@@ -110,7 +110,7 @@
     "locked": [],
     "hidden": [],
     "cameras": {
-      "artboard-906aa2fd-76fe-4105-9310-7eae646139a3": {
+      "artboard-bae0efec-c62e-46fb-9fe4-1923942d6c05": {
         "x": 0,
         "y": 0,
         "zoom": 1

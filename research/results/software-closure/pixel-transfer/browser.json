@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-10-21T15:26:54.905Z",
+  "browser": "153.0.8010.12",
+  "scope": "One local cloud-browser sample per method, with the encoder module primed. Measures validation transport only; no renderer, GPU or physical-device performance claim.",
+  "sourceSha256": "04d1c0d30b52957a37da7901e02097bea53369c02d2abf28491dc0bcf277dc0e",
+  "results": [
+    {
+      "method": "number-array",
+      "wallMs": 12970.148612,
+      "nodeCpuMs": 12776.417,
+      "bytes": 262144,
+      "exact": true
+    },
+    {
+      "method": "base64-bytes",
+      "wallMs": 123.38130100000126,
+      "nodeCpuMs": 44.313,
+      "bytes": 262144,
+      "exact": true
+    }
+  ]
+}

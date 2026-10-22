@@ -1,11 +1,11 @@
 {
   "format": "evir-project",
   "schemaVersion": 3,
-  "id": "project-da130bab-2fc6-4f2e-8f43-b380ae936492",
+  "id": "project-97765f7e-9567-4d3d-a9b2-380959d83f45",
   "name": "Untitled character",
   "artboards": [
     {
-      "id": "artboard-56ebfbe1-035e-41e1-8a94-564feed90716",
+      "id": "artboard-6096174e-d089-4072-bf45-515875307672",
       "name": "Artboard 1",
       "width": 512,
       "height": 512
@@ -13,10 +13,10 @@
   ],
   "nodes": [
     {
-      "id": "node-86149a9a-620a-446f-aec2-599cd740c2cb",
+      "id": "node-2be07181-a671-45b7-806a-66c872b404ce",
       "name": "Circle",
       "kind": "path",
-      "artboardId": "artboard-56ebfbe1-035e-41e1-8a94-564feed90716",
+      "artboardId": "artboard-6096174e-d089-4072-bf45-515875307672",
       "parentId": null,
       "order": 0,
       "transform": [
@@ -33,7 +33,7 @@
         "skin": null,
         "points": [
           {
-            "id": "point-37beb60f-7d23-468b-8a48-92307b2105b7",
+            "id": "point-055ce1f0-8fb8-477d-b15b-d09bec7c9a76",
             "anchor": [
               220,
               110
@@ -48,7 +48,7 @@
             ]
           },
           {
-            "id": "point-97544b30-2a90-47aa-82e3-56a98f7ee56e",
+            "id": "point-a39224f6-ed19-4793-85af-6ea910344a77",
             "anchor": [
               110,
               220
@@ -63,7 +63,7 @@
             ]
           },
           {
-            "id": "point-ebb50d04-a698-46a6-99dc-a4ac14a34a2e",
+            "id": "point-2879ee72-f8e2-4285-a788-7e77fff7927b",
             "anchor": [
               0,
               110
@@ -78,7 +78,7 @@
             ]
           },
           {
-            "id": "point-787b9199-92dc-4bf3-94b2-106056a061e4",
+            "id": "point-1c39ae65-3972-468c-9fdf-289df346685c",
             "anchor": [
               110,
               0
@@ -109,7 +109,7 @@
     "locked": [],
     "hidden": [],
     "cameras": {
-      "artboard-56ebfbe1-035e-41e1-8a94-564feed90716": {
+      "artboard-6096174e-d089-4072-bf45-515875307672": {
         "x": 0,
         "y": 0,
         "zoom": 1

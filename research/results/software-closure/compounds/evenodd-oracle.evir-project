@@ -5,7 +5,7 @@
   "name": "evenodd",
   "artboards": [
     {
-      "id": "artboard-9724eb03-6c35-4124-b396-3397031c0653",
+      "id": "artboard-17960d62-8424-4595-b8c0-c1fdf0183866",
       "name": "Artboard 1",
       "width": 512,
       "height": 512
@@ -13,10 +13,10 @@
   ],
   "nodes": [
     {
-      "id": "node-3e8ed676-d46f-4219-b87e-0962699feb13",
+      "id": "node-5d432a7c-3bc0-4c52-affa-4eaeefb5663b",
       "name": "Circle",
       "kind": "path",
-      "artboardId": "artboard-9724eb03-6c35-4124-b396-3397031c0653",
+      "artboardId": "artboard-17960d62-8424-4595-b8c0-c1fdf0183866",
       "parentId": null,
       "order": 0,
       "transform": [
@@ -31,7 +31,7 @@
         "closed": true,
         "points": [
           {
-            "id": "point-b325d58b-8a75-44df-afbe-145e55e18eec",
+            "id": "point-626a934a-32cf-4e17-8273-b9dedf594ac0",
             "anchor": [
               300,
               150
@@ -46,7 +46,7 @@
             ]
           },
           {
-            "id": "point-e5e29b22-e89c-40a7-9a59-1cd2037e9c0c",
+            "id": "point-6ffddce0-164b-43b0-b26b-cb0d18f5d67c",
             "anchor": [
               150,
               300
@@ -61,7 +61,7 @@
             ]
           },
           {
-            "id": "point-c7fcaa9a-5b9d-4068-95f0-cda5a3a5e33a",
+            "id": "point-6e8f7685-924c-49a8-bf8f-beb0dc5e0e4d",
             "anchor": [
               0,
               150
@@ -76,7 +76,7 @@
             ]
           },
           {
-            "id": "point-2f5494d6-391d-4ad5-abcf-519c97caa127",
+            "id": "point-bf9f6533-06b9-4b74-afc5-a7a38b394e51",
             "anchor": [
               150,
               0
@@ -96,7 +96,7 @@
             "closed": true,
             "points": [
               {
-                "id": "point-ed6797bc-5a67-4b2b-86d4-6b9211af3341",
+                "id": "point-b65ff4a1-7e61-48aa-8247-dd9da46ec276",
                 "anchor": [
                   220,
                   150
@@ -111,7 +111,7 @@
                 ]
               },
               {
-                "id": "point-a6dc5d14-b2ef-493e-a76e-16569375b193",
+                "id": "point-ff0e5c7f-c017-4c0f-ab4e-ffcd38c12915",
                 "anchor": [
                   150,
                   220
@@ -126,7 +126,7 @@
                 ]
               },
               {
-                "id": "point-da0b87ac-6781-4617-91c3-efd929813762",
+                "id": "point-798720c2-6ad5-40f3-8dcd-26f0699c5e3f",
                 "anchor": [
                   80,
                   150
@@ -141,7 +141,7 @@
                 ]
               },
               {
-                "id": "point-e0c3b966-ac36-4b54-8843-d5e95fd8dfe4",
+                "id": "point-1299eb19-48b7-4bdf-9a35-02e65aaa0161",
                 "anchor": [
                   150,
                   80
@@ -171,7 +171,7 @@
     "locked": [],
     "hidden": [],
     "cameras": {
-      "artboard-9724eb03-6c35-4124-b396-3397031c0653": {
+      "artboard-17960d62-8424-4595-b8c0-c1fdf0183866": {
         "x": 0,
         "y": 0,
         "zoom": 1

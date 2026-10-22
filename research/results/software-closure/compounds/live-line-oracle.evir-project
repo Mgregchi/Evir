@@ -1,11 +1,11 @@
 {
   "format": "evir-project",
   "schemaVersion": 3,
-  "id": "project-5e4fccda-6580-42cf-9bcc-6cf8acb01910",
+  "id": "project-a55f44f7-8a4e-46f6-85b4-df298cde4bd7",
   "name": "Untitled character",
   "artboards": [
     {
-      "id": "artboard-2d9eea14-c28f-46a1-880e-0159e48c1115",
+      "id": "artboard-632f6f73-d7a2-4dc1-94a6-682cf2940a71",
       "name": "Artboard 1",
       "width": 512,
       "height": 512
@@ -13,10 +13,10 @@
   ],
   "nodes": [
     {
-      "id": "node-7a547cb4-aa3d-4678-9fd3-02acf887d0db",
+      "id": "node-75806527-56ff-49d1-b804-0a24b7e582fc",
       "name": "Line",
       "kind": "path",
-      "artboardId": "artboard-2d9eea14-c28f-46a1-880e-0159e48c1115",
+      "artboardId": "artboard-632f6f73-d7a2-4dc1-94a6-682cf2940a71",
       "parentId": null,
       "order": 0,
       "transform": [
@@ -33,7 +33,7 @@
         "skin": null,
         "points": [
           {
-            "id": "point-f87515ce-d9e9-45d1-a75c-080a7d3796bc",
+            "id": "point-179ec101-7ebd-4298-a39a-e48da937ce9a",
             "anchor": [
               0,
               80
@@ -48,7 +48,7 @@
             ]
           },
           {
-            "id": "point-ea0785a9-bccc-458c-827f-ad98ba3814dd",
+            "id": "point-68140dae-3be2-4806-99ed-0eef10a61d88",
             "anchor": [
               220,
               80
@@ -93,7 +93,7 @@
     "locked": [],
     "hidden": [],
     "cameras": {
-      "artboard-2d9eea14-c28f-46a1-880e-0159e48c1115": {
+      "artboard-632f6f73-d7a2-4dc1-94a6-682cf2940a71": {
         "x": 0,
         "y": 0,
         "zoom": 1

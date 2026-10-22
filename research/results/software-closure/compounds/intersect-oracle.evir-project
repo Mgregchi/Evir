@@ -5,7 +5,7 @@
   "name": "intersect",
   "artboards": [
     {
-      "id": "artboard-06406483-c0fc-40ec-8675-c9f04a15fa9d",
+      "id": "artboard-58499110-f069-4a3a-a861-cd47f905a789",
       "name": "Artboard 1",
       "width": 512,
       "height": 512
@@ -13,10 +13,10 @@
   ],
   "nodes": [
     {
-      "id": "node-40a1a534-6190-4142-a4bf-763500c7ce40",
+      "id": "node-6b4ec971-552b-4716-ad3b-fa9275603213",
       "name": "Circle",
       "kind": "path",
-      "artboardId": "artboard-06406483-c0fc-40ec-8675-c9f04a15fa9d",
+      "artboardId": "artboard-58499110-f069-4a3a-a861-cd47f905a789",
       "parentId": null,
       "order": 0,
       "transform": [
@@ -31,7 +31,7 @@
         "closed": true,
         "points": [
           {
-            "id": "point-7aa2e36f-1fad-4dc9-8bfc-5a9f1249db20",
+            "id": "point-01bda4f2-149d-4353-aade-429aa7b243f6",
             "anchor": [
               300,
               150
@@ -46,7 +46,7 @@
             ]
           },
           {
-            "id": "point-c0d1cde5-4bf1-4323-88db-a3dd3ef25fb5",
+            "id": "point-7cc0d617-07b1-41a9-8e34-7f5961c44b34",
             "anchor": [
               290.3275364356589,
               203.10704565318133
@@ -61,7 +61,7 @@
             ]
           },
           {
-            "id": "point-7e8910fa-28e9-41bf-8060-959a6baf3120",
+            "id": "point-49f4782f-2b78-46bc-ae8b-a73234237edf",
             "anchor": [
               260,
               210
@@ -76,7 +76,7 @@
             ]
           },
           {
-            "id": "point-2fe44d16-d23c-4332-ab56-427c008e3e4d",
+            "id": "point-33f10581-dbe7-44d1-a915-0064330cae5b",
             "anchor": [
               190,
               140
@@ -91,7 +91,7 @@
             ]
           },
           {
-            "id": "point-b11bebb3-6360-4641-98f5-43b887895bf5",
+            "id": "point-1ffdf872-635f-4534-bcb9-c102a3d0b4df",
             "anchor": [
               260,
               70
@@ -106,7 +106,7 @@
             ]
           },
           {
-            "id": "point-5e9cf7ed-1d40-46dd-bc75-9befaaf067c1",
+            "id": "point-095a69c9-7674-45a2-a8f8-cc085fb79f8d",
             "anchor": [
               278.4236303023615,
               72.44981569737345
@@ -134,7 +134,7 @@
     "locked": [],
     "hidden": [],
     "cameras": {
-      "artboard-06406483-c0fc-40ec-8675-c9f04a15fa9d": {
+      "artboard-58499110-f069-4a3a-a861-cd47f905a789": {
         "x": 0,
         "y": 0,
         "zoom": 1

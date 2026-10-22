@@ -1,11 +1,11 @@
 {
   "format": "evir-project",
   "schemaVersion": 3,
-  "id": "project-a0088e43-65db-4b0b-b390-90820782f73b",
+  "id": "project-64c80614-a817-4a88-84d1-6fc9159eb639",
   "name": "Untitled character",
   "artboards": [
     {
-      "id": "artboard-62c387e6-bdc9-401e-89c0-3cad2b5582e3",
+      "id": "artboard-bbb08ea1-ef8f-4951-a371-820f02fd9325",
       "name": "Artboard 1",
       "width": 512,
       "height": 512
@@ -13,10 +13,10 @@
   ],
   "nodes": [
     {
-      "id": "node-b4d1faf2-7afb-47cc-a2fa-b8d4f2be38b8",
+      "id": "node-bc58c2a0-9735-4079-85c0-50757cd76817",
       "name": "Diamond",
       "kind": "path",
-      "artboardId": "artboard-62c387e6-bdc9-401e-89c0-3cad2b5582e3",
+      "artboardId": "artboard-bbb08ea1-ef8f-4951-a371-820f02fd9325",
       "parentId": null,
       "order": 0,
       "transform": [
@@ -33,7 +33,7 @@
         "skin": null,
         "points": [
           {
-            "id": "point-6fbdcfbb-40cf-4520-b9e0-1e16172baf2d",
+            "id": "point-37a3c3e8-0833-4e84-8dff-ef92863317d5",
             "anchor": [
               110,
               0
@@ -48,7 +48,7 @@
             ]
           },
           {
-            "id": "point-4090e374-2695-477e-9cfc-e41e9861b08f",
+            "id": "point-7070c381-c8e4-461e-9cf1-1962cc562210",
             "anchor": [
               220,
               80
@@ -63,7 +63,7 @@
             ]
           },
           {
-            "id": "point-2165fdb9-f168-4258-ab6f-19bf9db07e78",
+            "id": "point-b2481e9b-4029-449a-8bc0-bb1fbe8cc3a1",
             "anchor": [
               110,
               160
@@ -78,7 +78,7 @@
             ]
           },
           {
-            "id": "point-5013260f-13f7-474a-a552-c500d656eade",
+            "id": "point-d2d4eb8f-02ef-4b72-85eb-5fe41d51fa2d",
             "anchor": [
               0,
               80
@@ -110,7 +110,7 @@
     "locked": [],
     "hidden": [],
     "cameras": {
-      "artboard-62c387e6-bdc9-401e-89c0-3cad2b5582e3": {
+      "artboard-bbb08ea1-ef8f-4951-a371-820f02fd9325": {
         "x": 0,
         "y": 0,
         "zoom": 1

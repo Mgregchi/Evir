@@ -1,3 +1,4 @@
+const{readCanvasPixels,decodePixels}=require('./pixel-transfer.cjs');
 const fs=require('node:fs'),assert=require('node:assert/strict'),{createHash}=require('node:crypto'),{PNG}=require('pngjs');
 const {run}=require('./browser.cjs'),gpu=require('./gpu_diagnostics.cjs');
 const dir='research/results/import-geometry';
@@ -15,11 +16,11 @@ function difference(a,b){let error=0,covered=0,expectedCovered=0;assert.equal(a.
    report.browser=browser.version();await gpu.install(page);await page.reload();const checks=[];
    const pixels=async(name,frame,animation)=>{
     await page.evaluate(async({name,frame,animation})=>{await loadFixture(name,{src:`/research/results/import-geometry/${name}.riv`,autoplay:false,...(animation?{animations:animation}:{})});player.stopRendering();if(animation)player.scrub(animation,frame/60);player.drawFrame();player.stopRendering();},{name,frame,animation});
-    return backend==='canvas'?await page.evaluate(()=>Array.from(document.querySelector('#canvas').getContext('2d').getImageData(0,0,256,256).data)):PNG.sync.read(await page.locator('#canvas').screenshot({omitBackground:true})).data;
+    return backend==='canvas'?await readCanvasPixels(page):PNG.sync.read(await page.locator('#canvas').screenshot({omitBackground:true})).data;
    };
    for(const c of cases)for(const frame of(c.project.animations.length?[0,30,60,90,120]:[null])){
     const original=await pixels(c.name,frame,c.project.animations[0]?.name);
-    const editable=await page.evaluate(async({p,frame})=>{const{CanvasRenderer,evaluate}=await import('/tools/.test-build/oracle.mjs');const canvas=document.createElement('canvas');canvas.width=canvas.height=256;const ctx=canvas.getContext('2d');ctx.scale(256/p.artboards[0].width,256/p.artboards[0].height);const renderer=new CanvasRenderer(ctx);renderer.draw(evaluate(p,p.animations[0]?.id,frame??0),p.artboards[0].id);renderer.dispose();return Array.from(canvas.getContext('2d').getImageData(0,0,256,256).data);},{p:c.project,frame});
+    const editable=decodePixels(await page.evaluate(async({p,frame})=>{const{CanvasRenderer,evaluate}=await import('/tools/.test-build/oracle.mjs');const canvas=document.createElement('canvas');canvas.width=canvas.height=256;const ctx=canvas.getContext('2d');ctx.scale(256/p.artboards[0].width,256/p.artboards[0].height);const renderer=new CanvasRenderer(ctx);renderer.draw(evaluate(p,p.animations[0]?.id,frame??0),p.artboards[0].id);renderer.dispose();const{encodePixels}=await import('/tools/pixel-transfer.mjs');return encodePixels(canvas.getContext('2d').getImageData(0,0,256,256).data);},{p:c.project,frame}));
     const reexport=await pixels(c.name+'-reexport',frame,c.project.animations[0]?.name);
     assert(difference(original,original).covered>1000,`${backend} ${c.name} must render visible geometry`);
     for(const [target,actual]of[['editable',editable],['native-reexport',reexport]]){const row={scene:c.name,frame,target,...difference(actual,original)};checks.push(row);console.log(backend,row);assert(row.mae<report.thresholds.mae,`${backend} ${c.name} ${target} MAE ${row.mae}`);assert(Math.abs(row.covered-row.expectedCovered)<report.thresholds.coverageDifference,`${backend} ${c.name} ${target} coverage`);}

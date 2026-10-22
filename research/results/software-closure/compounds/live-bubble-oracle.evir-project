@@ -1,11 +1,11 @@
 {
   "format": "evir-project",
   "schemaVersion": 3,
-  "id": "project-50d1ef2c-8543-46f6-8512-df2f1f206e89",
+  "id": "project-e713bb82-c376-4646-8731-081cf73bae3a",
   "name": "Untitled character",
   "artboards": [
     {
-      "id": "artboard-49d6a82b-f0ca-45c9-a465-fde678e06955",
+      "id": "artboard-c8414385-c2b8-42df-a380-b6017a513b74",
       "name": "Artboard 1",
       "width": 512,
       "height": 512
@@ -13,10 +13,10 @@
   ],
   "nodes": [
     {
-      "id": "node-6261245f-3358-45e3-a620-c5e439dffa11",
+      "id": "node-088dcb0f-2356-413c-96d6-7100683c0d05",
       "name": "Speech bubble",
       "kind": "path",
-      "artboardId": "artboard-49d6a82b-f0ca-45c9-a465-fde678e06955",
+      "artboardId": "artboard-c8414385-c2b8-42df-a380-b6017a513b74",
       "parentId": null,
       "order": 0,
       "transform": [
@@ -33,7 +33,7 @@
         "skin": null,
         "points": [
           {
-            "id": "point-05277f72-addc-491a-a2cd-2aed01964bfb",
+            "id": "point-7c61305f-cc68-4492-a326-696c71e75d4b",
             "anchor": [
               20,
               0
@@ -48,7 +48,7 @@
             ]
           },
           {
-            "id": "point-c7b2365e-df88-4abe-9f75-370985bc48c0",
+            "id": "point-44e6cb0a-f0a0-463a-b8ac-55a1b9870d15",
             "anchor": [
               200,
               0
@@ -63,7 +63,7 @@
             ]
           },
           {
-            "id": "point-70955459-9658-47da-9047-2c01ec1c2742",
+            "id": "point-2e9d34ff-aaab-4546-aed7-2e2f09bcbab4",
             "anchor": [
               220,
               20
@@ -78,7 +78,7 @@
             ]
           },
           {
-            "id": "point-5815e05e-27a3-4960-b51b-7feeb6894f34",
+            "id": "point-42be3b02-2b92-44d9-9701-c51a9ea6e98b",
             "anchor": [
               220,
               101.6
@@ -93,7 +93,7 @@
             ]
           },
           {
-            "id": "point-e4aead4a-5d84-4c4c-ab32-36ff947a5506",
+            "id": "point-2cfaf743-9e09-4e48-abfb-0f9f95c4e3ac",
             "anchor": [
               200,
               121.6
@@ -108,7 +108,7 @@
             ]
           },
           {
-            "id": "point-783cc8eb-12de-4625-889f-9810c3f03e7a",
+            "id": "point-58394c4d-94d8-40b8-8717-c43b1af4882a",
             "anchor": [
               136.4,
               121.6
@@ -123,7 +123,7 @@
             ]
           },
           {
-            "id": "point-08a5fb2e-b849-4475-b10e-944f6d4c51aa",
+            "id": "point-affc654a-c090-4bd0-860c-69faa2e346b4",
             "anchor": [
               81.4,
               160
@@ -138,7 +138,7 @@
             ]
           },
           {
-            "id": "point-603da5d6-27b4-48e8-8598-68027c89bd58",
+            "id": "point-373aa630-d976-4c6c-a934-196e3e65c146",
             "anchor": [
               81.4,
               121.6
@@ -153,7 +153,7 @@
             ]
           },
           {
-            "id": "point-2c4e5fbf-5163-4991-bcec-ab0510521e2d",
+            "id": "point-2df2f579-7b8b-4b6d-bd07-dab7df947a09",
             "anchor": [
               20,
               121.6
@@ -168,7 +168,7 @@
             ]
           },
           {
-            "id": "point-62b73907-2671-4c58-846d-0420cfe0fd71",
+            "id": "point-c4409e18-d162-4496-b8d9-fe366e451769",
             "anchor": [
               0,
               101.6
@@ -183,7 +183,7 @@
             ]
           },
           {
-            "id": "point-b32fc74a-70ad-444c-a5c9-8dcd565671c5",
+            "id": "point-ed9d5361-55f8-44c0-aa83-dbab42923bc7",
             "anchor": [
               0,
               20
@@ -216,7 +216,7 @@
     "locked": [],
     "hidden": [],
     "cameras": {
-      "artboard-49d6a82b-f0ca-45c9-a465-fde678e06955": {
+      "artboard-c8414385-c2b8-42df-a380-b6017a513b74": {
         "x": 0,
         "y": 0,
         "zoom": 1
