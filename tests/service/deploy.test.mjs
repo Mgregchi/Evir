@@ -7,6 +7,7 @@ test('Cloudflare configuration preserves dashboard values and binds only an expl
   const config=deployConfig(base,{D1_DATABASE_ID:id,WORKERS_CI_BRANCH:'main',SECRET:'never-serialize'},'/checkout');
   assert.equal(config.keep_vars,true);assert.equal(config.d1_databases[0].database_id,id);assert.equal(config.d1_databases[0].binding,'DB');assert(!('vars'in config));assert(!JSON.stringify(config).includes('never-serialize'));
   assert.throws(()=>deployConfig(base,{},'/checkout'),/D1_DATABASE_ID/);
+  for(const override of [{vars:{SITE_URL:'https://unwanted.example'}},{env:{production:{vars:{}}}}])assert.throws(()=>deployConfig({...base,...override},{D1_DATABASE_ID:id},'/checkout'),/Cloudflare dashboard/);
   assert.throws(()=>deployConfig(base,{D1_DATABASE_ID:id,WORKERS_CI_BRANCH:'feature'},'/checkout'),/only from main/);
   assert.deepEqual(deploySteps('/config').map(s=>s[0]),['d1','deploy']);assert(deploySteps('/config')[0].includes('--remote'));
 });

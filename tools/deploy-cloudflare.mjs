@@ -4,6 +4,7 @@ import {fileURLToPath} from 'node:url';
 import {spawnSync} from 'node:child_process';
 import path from 'node:path';
 export function deployConfig(base,env,root) {
+  if(Object.hasOwn(base,'vars')||Object.hasOwn(base,'env'))throw Error('Runtime variables belong to the Cloudflare dashboard; remove vars/env value overrides from repository configuration.');
   if(!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(env.D1_DATABASE_ID||''))throw Error('Set D1_DATABASE_ID in Cloudflare Build variables to your existing D1 database UUID. No database is created automatically.');
   if(env.WORKERS_CI_BRANCH&&env.WORKERS_CI_BRANCH!=='main')throw Error('Production migrations run only from main. Disable non-production builds, or configure an isolated preview Worker and database.');
   return {...base,main:path.join(root,'apps/web/worker.mjs'),assets:{...base.assets,directory:path.join(root,'apps/web/dist')},d1_databases:[{binding:'DB',database_name:'evir-accounts',database_id:env.D1_DATABASE_ID,migrations_dir:path.join(root,'packages/service/migrations')}],keep_vars:true};

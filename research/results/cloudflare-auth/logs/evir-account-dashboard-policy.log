@@ -1,0 +1,10 @@
+✔ Cloudflare configuration preserves dashboard values and binds only an explicit existing D1 database (25.791766ms)
+✔ Migration failure stops publication; repeat deployment uses the migration ledger without destructive resets (50.550778ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 280.715946
