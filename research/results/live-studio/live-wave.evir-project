@@ -1,11 +1,11 @@
 {
   "format": "evir-project",
   "schemaVersion": 2,
-  "id": "project-fc75dc82-c744-4d54-a074-b5774cb93701",
+  "id": "project-dbe79343-c34a-4b9f-8d0a-6d489111602a",
   "name": "Little explorer",
   "artboards": [
     {
-      "id": "artboard-3b4c2bf4-26eb-4c8b-905b-9498ceb00526",
+      "id": "artboard-2bbf7960-85a5-415f-8697-9cf4f37251c3",
       "name": "Artboard 1",
       "width": 640,
       "height": 480
@@ -13,10 +13,10 @@
   ],
   "nodes": [
     {
-      "id": "node-35c85647-5c99-4193-80a8-df7d289ca5df",
+      "id": "node-0aeefc22-fb2e-467e-9844-465659d74683",
       "name": "Explorer",
       "kind": "group",
-      "artboardId": "artboard-3b4c2bf4-26eb-4c8b-905b-9498ceb00526",
+      "artboardId": "artboard-2bbf7960-85a5-415f-8697-9cf4f37251c3",
       "parentId": null,
       "order": 0,
       "transform": [
@@ -30,11 +30,11 @@
       "geometry": null
     },
     {
-      "id": "node-37999739-2fca-4b30-a833-1cf80b26e632",
+      "id": "node-3f2f3029-61c1-4dfe-93f1-53adc082da04",
       "name": "Left boot",
       "kind": "rectangle",
-      "artboardId": "artboard-3b4c2bf4-26eb-4c8b-905b-9498ceb00526",
-      "parentId": "node-35c85647-5c99-4193-80a8-df7d289ca5df",
+      "artboardId": "artboard-2bbf7960-85a5-415f-8697-9cf4f37251c3",
+      "parentId": "node-0aeefc22-fb2e-467e-9844-465659d74683",
       "order": 0,
       "transform": [
         1,
@@ -51,11 +51,11 @@
       }
     },
     {
-      "id": "node-eb0c36b2-3c2f-403f-a18b-3da3ae2507c0",
+      "id": "node-1d9cb56c-e069-45c8-a987-8ddef8ae12e0",
       "name": "Right boot",
       "kind": "rectangle",
-      "artboardId": "artboard-3b4c2bf4-26eb-4c8b-905b-9498ceb00526",
-      "parentId": "node-35c85647-5c99-4193-80a8-df7d289ca5df",
+      "artboardId": "artboard-2bbf7960-85a5-415f-8697-9cf4f37251c3",
+      "parentId": "node-0aeefc22-fb2e-467e-9844-465659d74683",
       "order": 1,
       "transform": [
         1,
@@ -72,11 +72,11 @@
       }
     },
     {
-      "id": "node-357aeaf0-59ee-448c-a8be-cedb866d51b5",
+      "id": "node-f5a59186-3360-4bcb-b137-3deefe3f2c14",
       "name": "Left arm",
       "kind": "rectangle",
-      "artboardId": "artboard-3b4c2bf4-26eb-4c8b-905b-9498ceb00526",
-      "parentId": "node-35c85647-5c99-4193-80a8-df7d289ca5df",
+      "artboardId": "artboard-2bbf7960-85a5-415f-8697-9cf4f37251c3",
+      "parentId": "node-0aeefc22-fb2e-467e-9844-465659d74683",
       "order": 2,
       "transform": [
         1,
@@ -93,11 +93,11 @@
       }
     },
     {
-      "id": "node-e49c7856-3c6c-4c4b-a61b-a397689964c6",
+      "id": "node-8f1f2c6b-d541-4c2a-9093-9d2df7787d76",
       "name": "Right arm",
       "kind": "rectangle",
-      "artboardId": "artboard-3b4c2bf4-26eb-4c8b-905b-9498ceb00526",
-      "parentId": "node-35c85647-5c99-4193-80a8-df7d289ca5df",
+      "artboardId": "artboard-2bbf7960-85a5-415f-8697-9cf4f37251c3",
+      "parentId": "node-0aeefc22-fb2e-467e-9844-465659d74683",
       "order": 3,
       "transform": [
         1,
@@ -114,11 +114,11 @@
       }
     },
     {
-      "id": "node-07a6b48b-9d78-44ae-b0d9-cb163eb44d64",
+      "id": "node-af36aeb7-b5ea-4aa6-a7f8-709917340825",
       "name": "Body",
       "kind": "rectangle",
-      "artboardId": "artboard-3b4c2bf4-26eb-4c8b-905b-9498ceb00526",
-      "parentId": "node-35c85647-5c99-4193-80a8-df7d289ca5df",
+      "artboardId": "artboard-2bbf7960-85a5-415f-8697-9cf4f37251c3",
+      "parentId": "node-0aeefc22-fb2e-467e-9844-465659d74683",
       "order": 4,
       "transform": [
         1,
@@ -135,11 +135,11 @@
       }
     },
     {
-      "id": "node-8423c528-99bf-46df-b410-d67ba6e99ec2",
+      "id": "node-50467626-081e-485e-bf2f-caf6a978114b",
       "name": "Chest light",
       "kind": "rectangle",
-      "artboardId": "artboard-3b4c2bf4-26eb-4c8b-905b-9498ceb00526",
-      "parentId": "node-35c85647-5c99-4193-80a8-df7d289ca5df",
+      "artboardId": "artboard-2bbf7960-85a5-415f-8697-9cf4f37251c3",
+      "parentId": "node-0aeefc22-fb2e-467e-9844-465659d74683",
       "order": 5,
       "transform": [
         1,
@@ -156,11 +156,11 @@
       }
     },
     {
-      "id": "node-c8d1281f-2230-4fbb-bdc1-44b658a97fce",
+      "id": "node-11ec81cd-0c42-4aef-8571-ee4204a8f9b3",
       "name": "Antenna",
       "kind": "rectangle",
-      "artboardId": "artboard-3b4c2bf4-26eb-4c8b-905b-9498ceb00526",
-      "parentId": "node-35c85647-5c99-4193-80a8-df7d289ca5df",
+      "artboardId": "artboard-2bbf7960-85a5-415f-8697-9cf4f37251c3",
+      "parentId": "node-0aeefc22-fb2e-467e-9844-465659d74683",
       "order": 6,
       "transform": [
         1,
@@ -177,11 +177,11 @@
       }
     },
     {
-      "id": "node-ae76034e-0da3-44ce-bd8e-9e584c1fb9ba",
+      "id": "node-8dc124db-543d-4477-b6b3-d9648a9a8f26",
       "name": "Antenna light",
       "kind": "rectangle",
-      "artboardId": "artboard-3b4c2bf4-26eb-4c8b-905b-9498ceb00526",
-      "parentId": "node-35c85647-5c99-4193-80a8-df7d289ca5df",
+      "artboardId": "artboard-2bbf7960-85a5-415f-8697-9cf4f37251c3",
+      "parentId": "node-0aeefc22-fb2e-467e-9844-465659d74683",
       "order": 7,
       "transform": [
         1,
@@ -198,11 +198,11 @@
       }
     },
     {
-      "id": "node-66f718ab-ce28-4edf-b7d7-ceeafa9fb617",
+      "id": "node-6d13ba0d-1a9f-4d94-a060-ca5ceadfc380",
       "name": "Head",
       "kind": "rectangle",
-      "artboardId": "artboard-3b4c2bf4-26eb-4c8b-905b-9498ceb00526",
-      "parentId": "node-35c85647-5c99-4193-80a8-df7d289ca5df",
+      "artboardId": "artboard-2bbf7960-85a5-415f-8697-9cf4f37251c3",
+      "parentId": "node-0aeefc22-fb2e-467e-9844-465659d74683",
       "order": 8,
       "transform": [
         1,
@@ -219,11 +219,11 @@
       }
     },
     {
-      "id": "node-555479da-74f7-45c8-b67f-70c15a99a376",
+      "id": "node-84ac773f-cb35-4297-99a7-748163e9b594",
       "name": "Left eye",
       "kind": "rectangle",
-      "artboardId": "artboard-3b4c2bf4-26eb-4c8b-905b-9498ceb00526",
-      "parentId": "node-35c85647-5c99-4193-80a8-df7d289ca5df",
+      "artboardId": "artboard-2bbf7960-85a5-415f-8697-9cf4f37251c3",
+      "parentId": "node-0aeefc22-fb2e-467e-9844-465659d74683",
       "order": 9,
       "transform": [
         1,
@@ -240,11 +240,11 @@
       }
     },
     {
-      "id": "node-7d310e06-ced9-4b22-8468-6a142f408b84",
+      "id": "node-238a9120-c9f5-4457-88da-5a42f2a56cf6",
       "name": "Right eye",
       "kind": "rectangle",
-      "artboardId": "artboard-3b4c2bf4-26eb-4c8b-905b-9498ceb00526",
-      "parentId": "node-35c85647-5c99-4193-80a8-df7d289ca5df",
+      "artboardId": "artboard-2bbf7960-85a5-415f-8697-9cf4f37251c3",
+      "parentId": "node-0aeefc22-fb2e-467e-9844-465659d74683",
       "order": 10,
       "transform": [
         1,
@@ -261,11 +261,11 @@
       }
     },
     {
-      "id": "node-4363656f-5a65-449d-890a-76ab7a781089",
+      "id": "node-b242a6d0-f5cc-4c66-bc93-01fb3b155eeb",
       "name": "Smile",
       "kind": "rectangle",
-      "artboardId": "artboard-3b4c2bf4-26eb-4c8b-905b-9498ceb00526",
-      "parentId": "node-35c85647-5c99-4193-80a8-df7d289ca5df",
+      "artboardId": "artboard-2bbf7960-85a5-415f-8697-9cf4f37251c3",
+      "parentId": "node-0aeefc22-fb2e-467e-9844-465659d74683",
       "order": 11,
       "transform": [
         1,
@@ -287,7 +287,7 @@
     {
       "id": "live-wave",
       "name": "An agent says hello",
-      "artboardId": "artboard-3b4c2bf4-26eb-4c8b-905b-9498ceb00526",
+      "artboardId": "artboard-2bbf7960-85a5-415f-8697-9cf4f37251c3",
       "fps": 60,
       "duration": 120,
       "playback": {
@@ -297,7 +297,7 @@
       },
       "tracks": [
         {
-          "targetId": "node-e49c7856-3c6c-4c4b-a61b-a397689964c6",
+          "targetId": "node-8f1f2c6b-d541-4c2a-9093-9d2df7787d76",
           "property": "rotation",
           "keys": [
             {
@@ -334,7 +334,7 @@
     "locked": [],
     "hidden": [],
     "cameras": {
-      "artboard-3b4c2bf4-26eb-4c8b-905b-9498ceb00526": {
+      "artboard-2bbf7960-85a5-415f-8697-9cf4f37251c3": {
         "zoom": 1.225,
         "x": 50,
         "y": 110

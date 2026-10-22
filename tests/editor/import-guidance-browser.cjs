@@ -31,6 +31,14 @@ const {run}=require('../../tools/browser.cjs');
    await page.getByLabel('Your Evir checkout folder',{exact:true}).fill('/home/you/Evir');const config=JSON.parse(await page.locator('#mcp-setup-sheet pre').innerText());assert.equal(config.mcpServers['evir-local'].command,'node');assert.equal(config.mcpServers['evir-local'].args[0],'/home/you/Evir/tools/mcp-local.mjs');
    const configDownload=page.waitForEvent('download');await page.getByRole('button',{name:'Download configuration',exact:true}).click();assert.deepEqual(JSON.parse(fs.readFileSync(await (await configDownload).path())),config);
    assert.deepEqual(await page.evaluate(async()=>(await axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa']}})).violations.map(v=>v.id)),[]);await page.screenshot({path:`${evidence}/mcp-setup-${width}.png`,animations:'disabled'});await page.getByRole('button',{name:'Close MCP setup',exact:true}).click();
+   // Hosted pairing is reachable from the guide; its sheet replaces the guide,
+   // and static-only hosting explains the missing service without browser dialogs.
+   await page.getByRole('button',{name:'Project menu',exact:true}).click();await page.getByRole('button',{name:'MCP setup…',exact:true}).click();
+   assert.match(await page.locator('#mcp-setup-sheet').innerText(),/sign in with a passkey/);
+   await page.getByRole('button',{name:'Set up a live agent connection',exact:true}).click();
+   await page.locator('#remote-pair-sheet[open]').waitFor();assert.equal(await page.locator('#mcp-setup-sheet').count(),0);
+   await page.waitForFunction(()=>document.querySelector('#remote-pair-sheet [role=alert]')?.textContent.includes('Cloudflare service deployment'));
+   await page.getByRole('button',{name:'Close live connection setup',exact:true}).click();
    page.removeAllListeners('request');
   }
   const {execFileSync}=require('node:child_process'),{createStaticServer}=await import('../../tools/static-server.mjs');
@@ -38,6 +46,6 @@ const {run}=require('../../tools/browser.cjs');
   const server=createStaticServer(path.resolve(output),'/Evir');await new Promise(r=>server.listen(0,'127.0.0.1',r));const origin=`http://127.0.0.1:${server.address().port}`;
   try{await page.goto(origin+'/Evir/editor/studio/');await page.waitForFunction(()=>window.evirStudio);await page.locator('#riv-view-file').setInputFiles(fixture);await page.waitForFunction(()=>!evirStudio.originalRiv.snapshot().loading&&evirStudio.originalRiv.snapshot().animationNames.length);const wasm=await fetch(origin+'/Evir/editor/studio/assets/rive-view.wasm');assert.equal(wasm.headers.get('content-type'),'application/wasm');await wasm.arrayBuffer();await page.getByRole('button',{name:'Back to Studio',exact:true}).click();}
   finally{await new Promise(r=>server.close(r));}
-  report.checks=['prefixed hosting and WASM MIME','failed conversion preserves Studio source','clear feature diagnostics and read-only alternative','official renderer loaded on demand from same origin','paused original view, play, pause and reset pixels','exact original bytes download','viewer closes and disposes playback','supported .riv remains editable','malformed original reports failure','visible MCP setup with absolute-path configuration/download','no overflow and zero automated accessibility violations'];
+  report.checks=['prefixed hosting and WASM MIME','failed conversion preserves Studio source','clear feature diagnostics and read-only alternative','official renderer loaded on demand from same origin','paused original view, play, pause and reset pixels','exact original bytes download','viewer closes and disposes playback','supported .riv remains editable','malformed original reports failure','visible MCP setup with absolute-path configuration/download','hosted guide replaces itself with pairing sheet; static hosting reports missing service','no overflow and zero automated accessibility violations'];
  });fs.writeFileSync(`${evidence}/browser.json`,JSON.stringify(report,null,2)+'\n');console.log('Import/view/MCP guidance: two widths, preservation, original playback, editable import and accessibility passed.');
 })().catch(e=>{console.error(e);process.exitCode=1;});
