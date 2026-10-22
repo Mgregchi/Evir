@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-10-22T07:57:14.692Z",
+  "browser": "153.0.8010.12",
+  "scope": "Cloud Chromium virtual authenticator and local workerd/D1 only. No physical device, named-agent pairing or human accessibility claim.",
+  "checks": [
+    "WebAuthn registration verified by real Worker against D1; no email",
+    "Recovery codes clear on bottom-sheet dismissal",
+    "Discoverable passkey login verifies a signed authentication assertion",
+    "Adding and removing passkeys retains an account access method",
+    "Consent at 320, 390 and 1440 CSS pixels: no overflow or automated WCAG A/AA violations"
+  ]
+}

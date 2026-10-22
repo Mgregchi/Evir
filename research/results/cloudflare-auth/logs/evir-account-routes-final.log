@@ -1,0 +1,11 @@
+✔ Passkey challenges, origin isolation, recovery and account ownership run against real D1 (4545.585563ms)
+✔ OAuth PKCE, exact redirects, single-use codes, refresh rotation and revocation protect MCP (2372.298065ms)
+✔ Oversized input, expired codes, rate limits and unsafe origins fail closed (2022.374893ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 11789.150814

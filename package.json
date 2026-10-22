@@ -62,7 +62,9 @@
     "validate:direct": "node tools/validate-direct-blends.cjs",
     "validate:shapes": "node tools/validate-shapes.cjs",
     "validate:compounds": "node tools/validate-compounds.cjs",
-    "test:pixel-transfer": "node --test tests/research/pixel-transfer.test.mjs"
+    "test:pixel-transfer": "node --test tests/research/pixel-transfer.test.mjs",
+    "cloudflare:deploy": "node tools/deploy-cloudflare.mjs",
+    "test:service": "node --test --test-concurrency=1 tests/service/*.test.mjs"
   },
   "dependencies": {
     "@rive-app/canvas": "2.44.0",
@@ -72,6 +74,8 @@
   },
   "devDependencies": {
     "axe-core": "4.14.0",
-    "esbuild": "0.28.2"
+    "esbuild": "0.28.2",
+    "miniflare": "4.20260730.0",
+    "wrangler": "4.151.3"
   }
 }

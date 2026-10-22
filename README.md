@@ -59,7 +59,7 @@ Evir Format (.evir)
 Runtime (Web, Mobile, etc.)
 ```
 
-The product has one hosted frontend, `apps/web`, which imports the separate `@evir/studio` package and serves it at `/editor/studio/`. `/product` is the product overview and `/editor` is the public editor landing. Engine packages retain independent APIs and releases. The reusable engine lives in `packages/runtime`, with its validated model and Canvas2D renderer alongside it. See [the API guide](packages/README.md) and [migration/hosting guide](docs/19-workspace-migration.md). GPU/native backends and backend services are not implemented by this separation.
+The product has one hosted frontend, `apps/web`, which imports the separate `@evir/studio` package and serves it at `/editor/studio/`. `/product` is the product overview and `/editor` is the public editor landing. Engine packages retain independent APIs and releases. The reusable engine lives in `packages/runtime`, with its validated model and Canvas2D renderer alongside it. See [the API guide](packages/README.md) and [migration/hosting guide](docs/19-workspace-migration.md). GPU/native backends are not implemented by this separation. [Independent Worker/D1 account services](docs/53-cloudflare-accounts-and-mcp.md) now add optional passkey sign-in and account-only authenticated MCP; live Studio pairing remains open.
 
 We are **not** forced to be compatible with `.riv`.  
 Instead, we will design our own efficient format optimized for:
@@ -155,4 +155,4 @@ The [Studio interaction guide and remaining-work plan](docs/25-studio-navigation
 
 [Path continuation](docs/36-path-continuation.md) extends open unskinned paths from either endpoint with Pen or numeric curves, preserving their identity and paint. Sprig adds an original completed study, starting project and point recipe.
 
-Static gradient authoring and the original Dawn study are documented in [gradient acceptance](docs/28-studio-gradient-paints.md). The proposed independent persistence/live-session backend, remote MCP tools and agent-defined audience controls are recorded in [backend and live agent sessions](docs/29-backend-and-live-agent-sessions.md); these services remain proposals, not shipped integrations.
+Static gradient authoring and the original Dawn study are documented in [gradient acceptance](docs/28-studio-gradient-paints.md). The proposed independent persistence/live-session backend, remote MCP tools and agent-defined audience controls are recorded in [backend and live agent sessions](docs/29-backend-and-live-agent-sessions.md); scene persistence/live-session services remain proposals. [Cloudflare passkey accounts and account-only authenticated MCP](docs/53-cloudflare-accounts-and-mcp.md) are implemented separately.

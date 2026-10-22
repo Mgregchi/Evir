@@ -12,3 +12,8 @@ tools/.test-build/
 packages/*/.test-build/
 packages/*/.env
 packages/*/.env.*
+
+# Generated Cloudflare deployment configurations and local emulator state.
+apps/web/.deploy/
+.wrangler/
+.dev.vars*

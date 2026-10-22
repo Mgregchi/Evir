@@ -16,6 +16,7 @@
 
 ```text
 apps/web/                  # public pages and web composition/hosting
+packages/service/          # Worker/D1 accounts and authenticated MCP APIs
 packages/studio/           # Studio browser UI, styles, template and build interface
 packages/project-model/    # validated editable/runtime project contracts
 packages/runtime/          # loading, motion and state machines
@@ -31,7 +32,7 @@ The web build writes only `apps/web/dist`, including `editor/studio/`. Runtime p
 
 ## Engine boundary
 
-`packages/runtime` is Evir's playback core, with the model and Canvas2D adapter alongside it. Official `@rive-app/canvas` and `@rive-app/webgl2` are research/test oracles, not the engine embedded in the frontend. The `.riv` compiler covers a declared subset. GPU/native backends, broader import/parity and physical-device performance remain future work. There is no backend service yet.
+`packages/runtime` is Evir's playback core, with the model and Canvas2D adapter alongside it. Official `@rive-app/canvas` and `@rive-app/webgl2` are research/test oracles, not the engine embedded in the frontend. The `.riv` compiler covers a declared subset. GPU/native backends, broader import/parity and physical-device performance remain future work. The independent `packages/service` now implements Cloudflare Worker/D1 passkey accounts and an account-only authenticated MCP endpoint; see [hosting and service contracts](53-cloudflare-accounts-and-mcp.md). It does not yet bridge agents to Studio projects.
 
 ## Guardrails
 
@@ -39,6 +40,6 @@ The web build writes only `apps/web/dist`, including `editor/studio/`. Runtime p
 - Studio imports engine/authoring APIs; web imports Studio's supported build interface.
 - Editor-only state such as selection, undo history, cameras and panels cannot enter runtime files.
 - Generated bundles are outputs, never a second hand-edited source implementation.
-- Future backend/account/collaboration/agent services must sit behind explicit APIs; they are not introduced by this hosting change.
+- Account services sit behind explicit HTTP APIs in `packages/service`; the web Worker composes them with static hosting. Collaboration and live project/session pairing remain separate work.
 
 Use [the package API guide](../packages/README.md) for engine contracts, [the migration record](19-workspace-migration.md) for implementation details, and [the single-project hosting guide](20-github-connected-hosting.md) for deployment.

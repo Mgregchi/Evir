@@ -1,5 +1,7 @@
 # Local commands and MCP prototype
 
+**Hosted update:** [Cloudflare accounts and authenticated MCP](53-cloudflare-accounts-and-mcp.md) adds passkey sign-in and account-only remote discovery. It does not yet pair with the live Studio document. The scene-editing tools below remain local.
+
 Research and implementation: 12 October 2026. Physical tests are postponed by the user. This increment implements a shared command package, Studio's opt-in local command console, a local stdio MCP adapter and an original Compass study. Hosted backend services, remote pairing, voice narration and MCP Apps remain future work.
 
 ## Research first

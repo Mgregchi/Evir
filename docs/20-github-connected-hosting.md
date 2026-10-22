@@ -25,16 +25,20 @@ For the existing `evir` Worker, open **Workers & Pages → evir → Settings →
 | Production branch | `main` |
 | Root directory | `apps/web` |
 | Build command | `npm --prefix ../.. ci && npm --prefix ../.. run web:build` |
-| Deploy command | `npx wrangler deploy --config wrangler.jsonc` |
-| Preview command | `npx wrangler preview --config wrangler.jsonc`, or disable previews initially |
+| Deploy command | `npm --prefix ../.. run cloudflare:deploy` |
+| Non-production builds/previews | Disable for the production account service |
 
-Under **Build Variables and Secrets**, add `NODE_VERSION=24` and `SKIP_DEPENDENCY_INSTALL=1`; add `SITE_URL` only to override the default public address. Optional links belong here too, rather than Worker runtime bindings. The command installs from the root lockfile, then builds the web app; Wrangler serves `./dist` beside its app configuration.
+Create a D1 database named `evir-accounts` in the Cloudflare dashboard first. Copy its UUID into **Build Variables and Secrets** as `D1_DATABASE_ID`. Give the connected build API token **Account → D1 → Edit** permission (Cloudflare’s documented default token omits it). The deploy command applies pending migrations automatically before publishing; no local Wrangler setup or SQL console steps are needed. See [the account setup guide](53-cloudflare-accounts-and-mcp.md) for runtime settings, connection callbacks and failure recovery.
 
-Build/deploy, then use **Domains → Add Domain** to connect the public hostname. **Studio needs no separate Worker, path route, asset handler or proxy:** its files are inside the same web output. The Worker name must match `name` in `apps/web/wrangler.jsonc` (currently `evir`).
+Under **Build Variables and Secrets**, add `NODE_VERSION=24` and `SKIP_DEPENDENCY_INSTALL=1`; add `SITE_URL` only to override the default public address. Optional links belong here too, rather than Worker runtime bindings. Account settings such as `OAUTH_CLIENTS` belong in the Worker’s runtime **Variables and Secrets**. Dashboard variables and secrets are preserved on deployment (`keep_vars` and `--keep-vars`); the repository contains no value overrides. The command installs from the root lockfile, then builds the web app; Wrangler serves `./dist` beside its app configuration.
+
+Build/deploy, then use **Domains → Add Domain** to connect the public hostname. **Studio needs no separate Worker, path route or proxy:** its files are inside the same web output. The Worker name must match `name` in `apps/web/wrangler.jsonc` (currently `evir`).
 
 For a new project, use **Create application → Import a repository → GitHub** with the same settings. If a preview reports “This Worker does not exist on your account”, check the selected account, connected Worker and configured name.
 
 ## Netlify
+
+This hosts the frontend only. The passkey/D1/MCP account service requires the Cloudflare Worker setup above; it does not run on Netlify.
 
 Use **Add new project → Import an existing project → GitHub**, authorize `Mgregchi/Evir`, and configure:
 
@@ -51,6 +55,8 @@ The package directory selects `apps/web/netlify.toml`; installation uses the roo
 Studio is a directory in this same output. Do not add an external editor proxy or a blanket SPA rewrite to `/index.html`.
 
 ## Cloudflare Pages
+
+This hosts the frontend only. Use Workers above for the passkey/D1/MCP account service.
 
 Use **Create application → Pages → Connect to Git**, select `Mgregchi/Evir`, and configure:
 
