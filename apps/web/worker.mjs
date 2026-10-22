@@ -1,5 +1,6 @@
 // Web composition only. Authentication and MCP implementations belong to the service package.
 import {fetchService,cleanup} from '@evir/service';
+export {LiveSession} from '@evir/service/live-session';
 export default {
   async fetch(request,env) {
     const service=await fetchService(request,env);if(service)return service;

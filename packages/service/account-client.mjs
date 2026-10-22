@@ -25,7 +25,7 @@ async function load(){
   $('#signin').hidden=!!account;$('#account').hidden=!account;$('#consent').hidden=true;
   if(!account){status('Choose an existing passkey, or create your first Evir account.');return;}
   if(location.pathname==='/oauth/authorize'){
-    const c=await api('/api/oauth/request'+location.search);$('#client-name').textContent=`${c.clientName} wants to read your Evir account identifier and connection status.`;$('#account').hidden=true;$('#consent').hidden=false;status('Review this connection before allowing access.');return;
+    const c=await api('/api/oauth/request'+location.search);$('#client-name').textContent=`${c.clientName} requests: ${c.permissions.join('; ')}. Studio project access still requires a separate grant inside Studio.`;$('#account').hidden=true;$('#consent').hidden=false;status('Review this connection before allowing access.');return;
   }
   $('#endpoint').textContent=location.origin+'/mcp';$('#connections').replaceChildren();$('#credentials').replaceChildren();
   for(const c of account.connections)row($('#connections'),`${c.client_name} · ${c.scope}`,'Revoke',async()=>{await api('/api/account/revoke',{id:c.id});await load();status('Connection revoked.');});

@@ -1,0 +1,141 @@
+{
+  "checkedAt": "2026-10-22T12:41:02.541844+00:00",
+  "status": "local acceptance complete; production deployment and named-client pairing unverified",
+  "baseMain": "5f41c2d629c5ca4e2ad1b31939e5024cd910180a",
+  "scope": "Synthetic OAuth client with actual local workerd/D1/Durable Object and Chromium protocol routing. No commercial-client pairing, provider deployment, physical-device or human-accessibility evidence.",
+  "local": {
+    "units": {
+      "passed": 220,
+      "command": "node --test tests/editor/*.test.mjs tests/runtime/*.test.mjs tests/frontend/*.test.mjs"
+    },
+    "packageBuilds": {
+      "passed": 6,
+      "command": "npm run runtime:build"
+    },
+    "service": {
+      "passed": 12,
+      "failed": 0,
+      "command": "npm run test:service",
+      "log": "logs/evir-live-service-final.log",
+      "note": "Final-source sequential service suite, including real D1/workerd/Durable Object, browser virtual passkey authentication and live editing, scope/grant isolation, timeout, and repeat migration ledger checks."
+    },
+    "scopes": {
+      "passed": 7,
+      "command": "node --test tests/service/live.test.mjs tests/service/auth.test.mjs",
+      "note": "Overlaps service tests, including added per-session narrowing and same-account grant isolation."
+    },
+    "liveBrowser": {
+      "passed": 1,
+      "report": "browser.json",
+      "includedIn": "service",
+      "note": "Final-source real command delivery, retries including superseded cues, Undo, animation creation, typed controls, three widths, Stop and project switching."
+    },
+    "regressions": {
+      "studio": {
+        "command": "npm run test:editor",
+        "unitTests": 135,
+        "browserScripts": 30,
+        "log": "logs/evir-live-editor.log",
+        "note": "Broad increment build. Late pairing-sheet/guidance/cue changes were covered by the final rebuilt live service/browser and guidance reruns; the full 30 workflows were not redundantly rerun after those changes."
+      },
+      "native": {
+        "command": "npm run validate:editor",
+        "passed": true,
+        "log": "logs/evir-live-native.log",
+        "note": "Complete required export/clock/pixel/matrix suite; Canvas and WebGL2, including 225 compound and 90 IK comparisons per backend."
+      },
+      "web": {
+        "command": "npm run test:web",
+        "passed": true,
+        "pageConfigurationChecks": 22,
+        "showcaseKeyframeTransitionComparisons": 558,
+        "editableGalleryStudies": 32,
+        "log": "logs/evir-live-web.log",
+        "note": "Includes motorcycle controls/lifecycle, three character styles, beginner Learn page at four widths, prefixed hosting and automated accessibility."
+      }
+    },
+    "finalBuild": {
+      "command": "npm run web:build",
+      "passed": true,
+      "log": "logs/evir-live-build-final.log"
+    },
+    "guide": {
+      "command": "node tests/editor/import-guidance-browser.cjs",
+      "passed": true,
+      "log": "logs/evir-live-guide-final.log",
+      "report": "guide.json",
+      "note": "Two widths, guide-to-pairing-sheet transition, static-host service explanation, original-file preservation/viewing and prefixed hosting."
+    },
+    "experience": {
+      "command": "npm run test:experience",
+      "passed": true,
+      "log": "logs/evir-live-quality-final.log",
+      "report": "experience-quality.json"
+    },
+    "stdio": {
+      "command": "node --test tests/runtime/mcp.test.mjs",
+      "passed": 1,
+      "log": "logs/evir-live-stdio-final.log",
+      "note": "Overlaps runtime unit coverage; final shared schema extraction regression."
+    },
+    "deploymentDryRun": {
+      "passed": true,
+      "log": "logs/evir-live-dry-final.log",
+      "configLog": "logs/evir-live-config-final.log",
+      "note": "Pinned Wrangler bundles generated configuration with fake D1 UUID, LIVE_SESSIONS class/binding/migration and assets; no provider deployment or remote migration was performed."
+    }
+  },
+  "remaining": [
+    "Production Cloudflare deployment and named-client pairing",
+    "DCR/CIMD/confidential-client support where required",
+    "Dedicated audience/MCP Apps hosts, frame capture, narration/media clock",
+    "Durable project storage and multi-user collaboration",
+    "Physical-device and human usability/screen-reader evidence"
+  ],
+  "sourceHashes": {
+    "packages/service/index.mjs": "ed658d21bd29f2d71611db3036c289023824c3d0c5bf480a882db78052611c78",
+    "packages/service/live-session.mjs": "065c7e47ad21a23f466b709106cfc40f1bd608ceafd95171812e2b91ee2bcf20",
+    "packages/service/account-page.mjs": "38dd035f9cf46c2ad81f4f8775df5fe52c12889f2717c4e571a2ebf04eea637f",
+    "packages/service/live.mjs": "b714f4460eaa4ef74fbef94668b2a9cae2d8a7bbaffe450dab2a0f537cf2b745",
+    "packages/service/security.mjs": "4cedf27b77eb2b270a54205e66e31371887466560f4b3fe5d20026d2d0153642",
+    "packages/service/passkeys.mjs": "6c5b466b83701c7e43282df62aff8b3beb91103d70bc744d9d2b72a143cfe889",
+    "packages/service/mcp.mjs": "6f5d12e8bb4b3b6b539e1ab45fd7f4ffb8dfd77d413c60365ed1eff7400290e2",
+    "packages/service/accounts.mjs": "ba0ffd7fecc1862047ed2131719a36006390fd5082f372ec8039adb6496acce3",
+    "packages/service/oauth.mjs": "0efb3076d10178e5a7f89bc7db6a18253f1e95da7d347159e233c6939d9522e1",
+    "packages/service/account-client.mjs": "386c6f78cf067b7621091e120f60e53bf606b5f7203934a51c8b5c10b50b7777",
+    "packages/studio/remote-commands.mjs": "1a0f444d9e48bd7ba67c10d3701234a2ec1ca19c9b98e904dca98041ce5946c3",
+    "packages/commands/mcp-tools.mjs": "0c1d72ffb7cd59a54d50e4430d68f6dee10ced8a811bd614770101a9080807db",
+    "apps/web/wrangler.jsonc": "13f31fe6dff5596acc7155e9066644583c978ea857f12b432d8d7e62b1496952",
+    "packages/service/migrations/0002_live_sessions.sql": "d31b9fd1f4ba5a2ae0e282ac6391fe67dc0d840b5286a8396596cb30cda00b8e",
+    "packages/studio/guidance.mjs": "9b722c63e9ee49c85689d94edad7f81a9cf9b507cf8969603cc18019e3511a19",
+    "packages/studio/live-commands.mjs": "34d37f2e8456c5dd48c7989258ceb670dcd8e6aed39e812705fe243df9b8c3e7",
+    "packages/studio/studio.mjs": "aa88193bd7b120f1741e8f26c7a9f17dca087b7d6f89073c697b6a2ca31db458",
+    "packages/studio/studio.css": "28f6e9c9ab57db6db6b87504faef006623ccde9f3a5ef2566d784bbdfc671ecd",
+    "apps/web/worker.mjs": "48f185433a67f49a0d546e59afe74e3b1753910251ec279dcebe7537e5072212",
+    "apps/web/content.mjs": "c6833c3274ccd157bff074113c466e0504a323c907ee47e4d4ec47bdd6131b91",
+    "docs/54-live-studio-pairing.md": "ad066ce9b9b2291f84b40dda09dbcfbcf82f065f4c540f7a661f62511cf19c7b",
+    "tests/service/live.test.mjs": "b729800e23b89c02e5571eb40f424971cec727e1c3d1b30f77765720858107aa",
+    "tests/service/live-browser.test.mjs": "8ed74a159f2ed0efa63adb05df8633f8971025b01df911fde12f4673c5b26efb",
+    "tests/editor/import-guidance-browser.cjs": "1ad8cec3008e0c7b40028877ca20ec6f58be7025195af23e19f0694247f736b0",
+    "research/results/live-studio/live-wave.evir-project": "6bb8a3837b5e9f23a81dd09aeddfcd341522b5c89e086bbb10e35c709ff692d3"
+  },
+  "implementationCommit": "74e43027bc6d5546828f9e5280e3cc763cc19e60",
+  "environment": {
+    "node": "24.19.0",
+    "chromium": "153.0.8010.12",
+    "playwright": "1.63.0",
+    "wrangler": "4.151.3",
+    "officialRiveRuntime": "2.44.0",
+    "graphics": "Cloud software rendering; WebGL2 uses SwiftShader. No physical-device performance evidence."
+  },
+  "ci": {
+    "checkedCommit": "74e43027bc6d5546828f9e5280e3cc763cc19e60",
+    "status": "jobs rejected before execution by GitHub account billing lock",
+    "runIds": [
+      39774582478,
+      39774582361,
+      39774582340
+    ],
+    "annotation": "The job was not started because your account is locked due to a billing issue."
+  }
+}

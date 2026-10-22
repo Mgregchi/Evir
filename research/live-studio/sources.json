@@ -1,0 +1,32 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/cloudflare/cloudflare-docs/production/src/content/docs/durable-objects/best-practices/websockets.mdx",
+    "status": 200,
+    "sha256": "1caaef431440ba7837abc25119706a55bb88b1b3e1c6b58275f4078956695418",
+    "retrievedAt": "2026-10-22T08:23:25.909724+00:00"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/cloudflare/cloudflare-docs/production/src/content/docs/durable-objects/reference/durable-objects-migrations.mdx",
+    "status": 200,
+    "sha256": "0d27d9b29296a8ca4595ca32498f16eba3de433de6c7da35653fd537a8048d68",
+    "retrievedAt": "2026-10-22T08:23:26.553868+00:00"
+  },
+  {
+    "url": "https://modelcontextprotocol.io/specification/2025-11-25/basic/transports",
+    "status": 200,
+    "sha256": "a5fea3da41dbee407587d5ac39e7a009c72d9183badc01c085ee80dd02fc8a5e",
+    "retrievedAt": "2026-10-22T08:23:27.316239+00:00"
+  },
+  {
+    "url": "https://modelcontextprotocol.io/specification/2025-11-25/basic/authorization",
+    "status": 200,
+    "sha256": "dc85763c8ca374b96d43fe1daf9d8070963085476220bd53c9a83a69aee4b12c",
+    "retrievedAt": "2026-10-22T08:23:28.309254+00:00"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/cloudflare/cloudflare-docs/production/src/content/docs/durable-objects/api/state.mdx",
+    "status": 200,
+    "sha256": "7c5756084b05a2ba23f607e8696cd8f48d46247590528ae951fa359dd1e97221",
+    "retrievedAt": "2026-10-22T08:23:29.015668+00:00"
+  }
+]

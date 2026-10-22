@@ -1,7 +1,8 @@
 // Host-selected, in-memory stdio server. stdout contains JSON-RPC only.
 import {readFile,stat} from 'node:fs/promises';
 import {openProject} from '@evir/project-model';
-import {CommandSession,commandSchema,controlSchema} from '@evir/commands';
+import {CommandSession} from '@evir/commands';
+import {sceneTools} from '@evir/commands/mcp-tools';
 import {object,encoded} from '../packages/commands/validation.mjs';
 const argv=process.argv.slice(2),options={};
 try{
@@ -12,20 +13,7 @@ try{
 let session;
 try{const project=await openProject(await readFile(options['--project'],'utf8'));session=new CommandSession(project,{...(options['--session']?{sessionId:options['--session']}:{}),...(options['--artboard']?{artboardId:options['--artboard']}:{})});}
 catch(e){process.stderr.write('Could not open project: '+e.message+'\n');process.exit(1);}
-const shape=(properties,required=Object.keys(properties))=>({type:'object',properties,required,additionalProperties:false});
-const string={type:'string',minLength:1,maxLength:120},contextSchema=shape({sessionId:{...string,maxLength:80},projectId:string,artboardId:string});
-const context={context:contextSchema},version={type:'integer',const:1},revision={type:'integer',minimum:0},request={...context,schemaVersion:version,requestId:{...string,maxLength:80},expectedRevision:revision};
-const tools=[
-  {name:'inspect_scene',description:'Inspect the paired local scene and revision. Without context, discover the host-selected session. Page through at most 100 nodes.',inputSchema:shape({...context,offset:{type:'integer',minimum:0,maximum:1000000},limit:{type:'integer',minimum:1,maximum:100}},[])},
-  {name:'get_scene_snapshot',description:'Read the source project (up to 2 MiB); no file write or runtime export.',inputSchema:shape(context)},
-  {name:'get_session_events',description:'Read bounded session events. If resetRequired, inspect the scene before proceeding. This process cannot acknowledge rendered visual readiness.',inputSchema:shape({...context,since:revision},['context'])},
-  {name:'apply_scene_patch',description:'Apply 1–64 atomic authoring operations. One undo transaction. Context and expectedRevision are required; use a new requestId after conflicts.',operation:'patch',inputSchema:shape({...request,payload:shape({commands:{type:'array',minItems:1,maxItems:64,items:commandSchema},label:string},['commands'])})},
-  {name:'expose_controls',description:'Expose up to 16 typed controls, bound to one animation speed or one machine. Controls do not enter source exports.',operation:'controls',inputSchema:shape({...request,payload:shape({controls:{type:'array',minItems:1,maxItems:16,items:controlSchema}})})},
-  {name:'play_animation',description:'Start/pause a selected animation or machine. A rendering host drives frame deltas; stdio does not animate or capture frames.',operation:'play',inputSchema:shape({...request,payload:{...shape({playing:{type:'boolean'},animationId:string,machineId:string},['playing']),oneOf:[{required:['animationId']},{required:['machineId']}]}})},
-  {name:'set_input',description:'Set a typed machine input or fire a trigger in local presentation state.',operation:'input',inputSchema:shape({...request,payload:shape({machineId:string,inputId:string,value:{type:['number','boolean']}})})},
-  {name:'set_control',description:'Set an exposed control by ID. Range/step and input types are checked.',operation:'control',inputSchema:shape({...request,payload:shape({controlId:string,value:{type:['number','boolean']}})})},
-  {name:'stop_session',description:'Revoke this process session, discard presentation state and reject further mutations. Start a new process to grant a new session.',inputSchema:shape(context)},
-].map(t=>({...t,annotations:{readOnlyHint:!t.operation&&t.name!=='stop_session',destructiveHint:false,idempotentHint:true,openWorldHint:false}}));
+const tools=sceneTools;
 let initialized=false,ready=false;
 const send=value=>process.stdout.write(JSON.stringify(value)+'\n');
 const result=value=>({content:[{type:'text',text:JSON.stringify(value)}],structuredContent:value,...(value.ok===false?{isError:true}:{})});

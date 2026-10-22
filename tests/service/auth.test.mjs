@@ -36,7 +36,7 @@ test('OAuth PKCE, exact redirects, single-use codes, refresh rotation and revoca
   assert.equal((await h.request('/oauth/token',form({...params,resource:site+'/different-server'}))).status,400);
   const badScope=new URLSearchParams(query);badScope.set('scope','scene:write');assert.equal((await h.request('/oauth/authorize?'+badScope)).status,400);
   const exchange=await h.request('/oauth/token',form(params));assert.equal(exchange.status,200);const tokens=await exchange.json();assert.equal(tokens.expires_in,600);assert.equal((await h.request('/oauth/token',form(params))).status,400);
-  const tool=await (await h.request('/mcp',mcp(tokens.access_token,'tools/call',{name:'get_connection_status',arguments:{}}))).json();assert.equal(tool.result.structuredContent.accountId,a.id);assert.equal(tool.result.structuredContent.liveStudioPairing,false);
+  const tool=await (await h.request('/mcp',mcp(tokens.access_token,'tools/call',{name:'get_connection_status',arguments:{}}))).json();assert.equal(tool.result.structuredContent.accountId,a.id);assert.equal(tool.result.structuredContent.liveStudioPairing,true);
   const refresh={grant_type:'refresh_token',client_id:client.client_id,resource:site+'/mcp',refresh_token:tokens.refresh_token};const renewed=await (await h.request('/oauth/token',form(refresh))).json();assert(renewed.access_token);assert.equal((await h.request('/oauth/token',form(refresh))).status,400);
   const g=(await h.db.prepare('SELECT id FROM grants WHERE account_id = ?').bind(a.id).first()).id;
   await h.request('/api/account/revoke',post({id:g},b.cookie));assert.equal((await h.request('/mcp',mcp(renewed.access_token))).status,200);

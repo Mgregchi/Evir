@@ -1,10 +1,10 @@
 name: Account service validation
 on:
   pull_request:
-    paths: ['packages/service/**', 'apps/web/**', 'tests/service/**', 'tools/deploy-cloudflare.mjs', 'package*.json', '.github/workflows/service.yml']
+    paths: ['packages/service/**', 'packages/commands/**', 'packages/studio/**', 'apps/web/**', 'tests/service/**', 'tools/deploy-cloudflare.mjs', 'package*.json', '.github/workflows/service.yml']
   push:
     branches: [main]
-    paths: ['packages/service/**', 'apps/web/**', 'tests/service/**', 'tools/deploy-cloudflare.mjs', 'package*.json', '.github/workflows/service.yml']
+    paths: ['packages/service/**', 'packages/commands/**', 'packages/studio/**', 'apps/web/**', 'tests/service/**', 'tools/deploy-cloudflare.mjs', 'package*.json', '.github/workflows/service.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -27,4 +27,6 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: cloudflare-auth-validation
-          path: research/results/cloudflare-auth/
+          path: |
+            research/results/cloudflare-auth/
+            research/results/live-studio/

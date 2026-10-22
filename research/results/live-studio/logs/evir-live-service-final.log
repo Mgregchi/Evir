@@ -1,0 +1,24 @@
+
+> evir-workspace@0.1.0 test:service
+> node --test --test-concurrency=1 tests/service/*.test.mjs
+
+✔ Passkey challenges, origin isolation, recovery and account ownership run against real D1 (13305.156052ms)
+✔ OAuth PKCE, exact redirects, single-use codes, refresh rotation and revocation protect MCP (12022.880832ms)
+✔ Oversized input, expired codes, rate limits and unsafe origins fail closed (4897.045291ms)
+✔ A virtual authenticator creates and signs into an email-free account, with responsive consent and recovery (29527.673191ms)
+✔ Cloudflare configuration preserves dashboard values and binds only an explicit existing D1 database (27.728036ms)
+✔ Migration failure stops publication; repeat deployment uses the migration ledger without destructive resets (127.659387ms)
+✔ An authenticated MCP caller edits the real Studio history, retries safely and binds live audience controls (39963.076078ms)
+✔ Live sharing binds one account, grant and tab key; broker relays once and stops on revocation (11578.355723ms)
+✔ OAuth scene scopes cannot escalate, and Studio can grant a smaller capability set (3742.632803ms)
+✔ The broker does not queue offline work and bounds in-flight delivery; timeout is explicitly uncertain (13073.869267ms)
+✔ Studio permissions narrow a fully authorized agent and another grant on the same account cannot inherit the share (3930.351391ms)
+✔ Pinned Wrangler applies the D1 migration ledger twice without resetting existing account data (56277.433699ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 208689.850406

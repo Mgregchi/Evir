@@ -1,5 +1,7 @@
 # Cloudflare accounts and authenticated MCP
 
+**Live-session update:** [Live Studio pairing](54-live-studio-pairing.md) now adds explicit project sharing, scene scopes and a WebSocket bridge. The dashboard settings below stay the same; the next Git deployment provisions its namespace and D1 migration automatically.
+
 22 October 2026. The owner selected Cloudflare Workers and D1, with deployment entirely through the GitHub-connected Cloudflare dashboard. No local Wrangler command is required from the owner.
 
 ## What this increment does
@@ -67,7 +69,7 @@ This release uses **predefined public OAuth clients** with PKCE. In the client p
 
 Replace both placeholders with that platform's actual settings. Never use wildcard callbacks or copy an assumed ChatGPT/Claude callback from an example. No client secret is used: the client must support public-client `none` authentication with PKCE. A platform requiring confidential-client secrets, DCR or Client ID Metadata Documents exclusively needs a subsequent adapter; those methods are not advertised. Groq inference alone is not an MCP connector; its host application controls the connection flow. No named platform pairing has been observed in this workspace.
 
-The client opens Evir's consent page. Users sign in with a passkey and choose **Allow connection** or **Cancel**. In this increment the only scope is `account:read` and the only remote tool is `get_connection_status`. It reports account/connection capabilities, not artwork. Existing local stdio scene tools are unchanged. Account authentication does not connect the agent to an open Studio tab, upload a project or expose editing/animation controls. A later live-session bridge will explicitly grant project/session capabilities and reuse the existing atomic command contract.
+The client opens Evir's consent page. Users sign in with a passkey and choose **Allow connection** or **Cancel**. The first account increment exposed only `account:read` and `get_connection_status`. [The live-session increment](54-live-studio-pairing.md) now adds scene reading, editing and presentation scopes, separately granted project access from Studio, and the shared atomic command contract. Existing account-only tokens do not gain these permissions: reauthorize the connection when scene access is wanted. Signing in alone still does not share any project. Local stdio scene tools remain available.
 
 ## Evidence and boundaries
 

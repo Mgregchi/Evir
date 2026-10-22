@@ -1,0 +1,15 @@
+✔ Passkey challenges, origin isolation, recovery and account ownership run against real D1 (13325.774108ms)
+✔ OAuth PKCE, exact redirects, single-use codes, refresh rotation and revocation protect MCP (2774.742753ms)
+✔ Oversized input, expired codes, rate limits and unsafe origins fail closed (2340.138353ms)
+✔ Live sharing binds one account, grant and tab key; broker relays once and stops on revocation (12715.007716ms)
+✔ OAuth scene scopes cannot escalate, and Studio can grant a smaller capability set (3415.805366ms)
+✔ The broker does not queue offline work and bounds in-flight delivery; timeout is explicitly uncertain (12274.396028ms)
+✔ Studio permissions narrow a fully authorized agent and another grant on the same account cannot inherit the share (4275.772632ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 34461.354234
