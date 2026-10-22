@@ -1,0 +1,30 @@
+RUN node tests/editor/workspace-browser.cjs
+Workspace UX acceptance passed across six portrait/landscape/tablet/desktop sizes
+RUN node tests/editor/navigation-browser.cjs
+Studio navigation and organization acceptance passed
+RUN node tests/editor/playback-browser.cjs
+Playback sheets and independent layers: mobile/desktop passed.
+RUN node tests/editor/live-browser.cjs
+Local live tools: two widths, consent, typed controls, readiness, undo and automated accessibility passed.
+RUN node tests/editor/import-guidance-browser.cjs
+Import/view/MCP guidance: two widths, preservation, original playback, editable import and accessibility passed.
+RUN node tests/editor/skin-weights-browser.cjs
+Graphical skin weights: four viewports, numeric/brush paths, mesh editing, interruption, undo/export/recovery and accessibility passed.
+RUN node tests/editor/path-joining-browser.cjs
+Path joining: four responsive workflows, preview, bridge/merge, history, export and recovery passed.
+RUN node tests/editor/import-geometry-browser.cjs
+Editable contour import: native scene, point editing, motion, export, recovery and unsupported-geometry feedback passed at two widths.
+RUN node tests/editor/direct-blends-browser.cjs
+Direct blends: four responsive workflows, ordered rows, numeric weights, history, inputs, native export, recovery and accessibility passed.
+RUN node tests/editor/shapes-browser.cjs
+Shapes and first animation: four complete responsive creation/animation/export workflows passed.
+RUN node tests/editor/compound-browser.cjs
+Compound shapes: four responsive preview/cancel/boolean/edit/export/recovery workflows passed.
+RUN node tests/editor/parametric-shapes-browser.cjs
+Live shape controls: four responsive editing/export/recovery workflows passed.
+RUN node tests/editor/gradient-strokes-browser.cjs
+Gradient/skinned strokes: four responsive paint/key/export workflows passed.
+RUN node tests/editor/ik-chains-browser.cjs
+Longer IK chains: four responsive edit/pose/export workflows passed.
+RUN node tests/editor/skin-tools-browser.cjs
+Skin tools: four responsive lock/auto/smooth/unbind/export workflows passed.

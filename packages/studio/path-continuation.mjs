@@ -1,3 +1,4 @@
+import {smoothConnection} from '@evir/authoring';
 import { newId, worldTransform } from "@evir/project-model";
 import { mapPoint } from "@evir/runtime/geometry";
 import { available } from "./selection.mjs";
@@ -20,8 +21,10 @@ function target(project, id) {
     throw Error("Unlock the path and its parents before continuing.");
   if (!available(project, node, "hidden"))
     throw Error("Show the path and its parents before continuing.");
+  if(node.geometry.shape)throw Error('Convert the live shape to a free path before continuing.');
   if (node.geometry.closed)
     throw Error("Open the path in Path controls before continuing.");
+  if(node.geometry.contours?.length)throw Error('Release compound contours before continuing this path.');
   if (node.geometry.skin)
     throw Error(
       "Unbind the path before adding points. Existing weights cannot describe new vertices.",
@@ -34,9 +37,9 @@ function target(project, id) {
 // Keep existing geometry outside History until Finish. A reversed working copy
 // lets Pen grow from either endpoint; commit restores the source direction.
 export class ContinuationDraft extends PenDraft {
-  constructor(project, nodeId, { endpoint = "last", closed = false } = {}) {
+  constructor(project, nodeId, { endpoint = "last", closed = false, smooth = false } = {}) {
     const node = target(project, nodeId);
-    if (!["first", "last"].includes(endpoint) || typeof closed !== "boolean")
+    if (!["first", "last"].includes(endpoint) || (typeof closed !== "boolean" || typeof smooth !== "boolean"))
       throw Error("Choose First or Last endpoint and a path closure.");
     super({
       artboardId: node.artboardId,
@@ -47,6 +50,7 @@ export class ContinuationDraft extends PenDraft {
     this.original = structuredClone(node);
     this.endpoint = endpoint;
     this.closed = closed;
+    this.smooth = smooth;
     this.points =
       endpoint === "first"
         ? reversed(node.geometry.points)
@@ -107,12 +111,18 @@ export class ContinuationDraft extends PenDraft {
     if (!this.addedCount) return;
     super.removeLast();
   }
+  worldPoints() {
+    const points=structuredClone(this.points);
+    if(this.smooth&&this.addedCount)smoothConnection(points[this.originalCount-1],points[this.originalCount]);
+    return points.map(p=>({id:p.id,...Object.fromEntries(["anchor","in","out"].map(k=>[k,mapPoint(this.matrix,p[k])]))}));
+  }
   geometry(closed = this.closed) {
     if (typeof closed !== "boolean")
       throw Error("Choose whether the finished path is open or closed.");
     if (!this.addedCount)
       throw Error("Add at least one point before finishing an extension.");
     const geometry = super.geometry(closed);
+    if(this.smooth)smoothConnection(geometry.points[this.originalCount-1],geometry.points[this.originalCount]);
     return {
       ...this.original.geometry,
       closed: geometry.closed,

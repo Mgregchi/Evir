@@ -1,0 +1,124 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 3,
+  "id": "project-97765f7e-9567-4d3d-a9b2-380959d83f45",
+  "name": "Untitled character",
+  "artboards": [
+    {
+      "id": "artboard-6096174e-d089-4072-bf45-515875307672",
+      "name": "Artboard 1",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "node-2be07181-a671-45b7-806a-66c872b404ce",
+      "name": "Circle",
+      "kind": "path",
+      "artboardId": "artboard-6096174e-d089-4072-bf45-515875307672",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        166,
+        166
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#89e4c4",
+        "skin": null,
+        "points": [
+          {
+            "id": "point-055ce1f0-8fb8-477d-b15b-d09bec7c9a76",
+            "anchor": [
+              220,
+              110
+            ],
+            "in": [
+              220,
+              49.24867751861271
+            ],
+            "out": [
+              220,
+              170.7513224813873
+            ]
+          },
+          {
+            "id": "point-a39224f6-ed19-4793-85af-6ea910344a77",
+            "anchor": [
+              110,
+              220
+            ],
+            "in": [
+              170.7513224813873,
+              220
+            ],
+            "out": [
+              49.24867751861271,
+              220
+            ]
+          },
+          {
+            "id": "point-2879ee72-f8e2-4285-a788-7e77fff7927b",
+            "anchor": [
+              0,
+              110
+            ],
+            "in": [
+              0,
+              170.7513224813873
+            ],
+            "out": [
+              0,
+              49.24867751861271
+            ]
+          },
+          {
+            "id": "point-1c39ae65-3972-468c-9fdf-289df346685c",
+            "anchor": [
+              110,
+              0
+            ],
+            "in": [
+              49.24867751861271,
+              0
+            ],
+            "out": [
+              170.7513224813873,
+              0
+            ]
+          }
+        ],
+        "shape": {
+          "type": "circle",
+          "options": {
+            "width": 220
+          }
+        }
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "artboard-6096174e-d089-4072-bf45-515875307672": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  },
+  "advanced": {
+    "clips": [],
+    "feathers": [],
+    "ik": []
+  }
+}

@@ -1,3 +1,4 @@
+const {readCanvasPixels,decodePixels} = require("./pixel-transfer.cjs");
 const assert = require("node:assert/strict"),
   fs = require("node:fs"),
   { PNG } = require("pngjs");
@@ -40,7 +41,7 @@ const gpu = require("./gpu_diagnostics.cjs");
             },
             [p.animations[0].name, frame / 60],
           );
-        const expected = await page.evaluate(
+        const expected = decodePixels(await page.evaluate(
           async ({ p, frame }) => {
             const { evaluate, CanvasRenderer } = await import(
               "/tools/.test-build/oracle.mjs"
@@ -50,25 +51,17 @@ const gpu = require("./gpu_diagnostics.cjs");
             const r = new CanvasRenderer(c.getContext("2d"));
             await r.prepare(p);
             r.draw(evaluate(p, p.animations[0]?.id, frame), p.artboards[0].id);
-            const data = Array.from(
-              c.getContext("2d").getImageData(0, 0, 256, 256).data,
-            );
+            const {encodePixels} = await import('/tools/pixel-transfer.mjs');
+            const data = encodePixels(c.getContext("2d").getImageData(0, 0, 256, 256).data);
             r.dispose();
             return data;
           },
           { p, frame },
-        );
+        ));
         const backend = process.env.RIVE_RENDERER || "canvas";
         const actual =
           backend === "canvas"
-            ? await page.evaluate(() =>
-                Array.from(
-                  document
-                    .querySelector("#canvas")
-                    .getContext("2d")
-                    .getImageData(0, 0, 256, 256).data,
-                ),
-              )
+            ? await readCanvasPixels(page)
             : Array.from(
                 PNG.sync.read(
                   await page
@@ -127,7 +120,7 @@ const gpu = require("./gpu_diagnostics.cjs");
       [0.2, null],
       [0, 0.25],
     ]) {
-      const expected = await page.evaluate(
+      const expected = decodePixels(await page.evaluate(
         async ({ dt, level }) => {
           if (level !== null) {
             evirMotion.setInput("position", level);
@@ -146,23 +139,15 @@ const gpu = require("./gpu_diagnostics.cjs");
           c.width = c.height = 256;
           const renderer = new CanvasRenderer(c.getContext("2d"));
           renderer.draw(evirMotion.advance(dt), evirMotion.artboard.id);
-          return Array.from(
-            c.getContext("2d").getImageData(0, 0, 256, 256).data,
-          );
+          const {encodePixels} = await import('/tools/pixel-transfer.mjs');
+          return encodePixels(c.getContext("2d").getImageData(0, 0, 256, 256).data);
         },
         { dt, level },
-      );
+      ));
       const backend = process.env.RIVE_RENDERER || "canvas",
         actual =
           backend === "canvas"
-            ? await page.evaluate(() =>
-                Array.from(
-                  document
-                    .querySelector("#canvas")
-                    .getContext("2d")
-                    .getImageData(0, 0, 256, 256).data,
-                ),
-              )
+            ? await readCanvasPixels(page)
             : Array.from(
                 PNG.sync.read(
                   await page

@@ -1,0 +1,125 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 3,
+  "id": "project-64c80614-a817-4a88-84d1-6fc9159eb639",
+  "name": "Untitled character",
+  "artboards": [
+    {
+      "id": "artboard-bbb08ea1-ef8f-4951-a371-820f02fd9325",
+      "name": "Artboard 1",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "node-bc58c2a0-9735-4079-85c0-50757cd76817",
+      "name": "Diamond",
+      "kind": "path",
+      "artboardId": "artboard-bbb08ea1-ef8f-4951-a371-820f02fd9325",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        166,
+        176
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#89e4c4",
+        "skin": null,
+        "points": [
+          {
+            "id": "point-37a3c3e8-0833-4e84-8dff-ef92863317d5",
+            "anchor": [
+              110,
+              0
+            ],
+            "in": [
+              110,
+              0
+            ],
+            "out": [
+              110,
+              0
+            ]
+          },
+          {
+            "id": "point-7070c381-c8e4-461e-9cf1-1962cc562210",
+            "anchor": [
+              220,
+              80
+            ],
+            "in": [
+              220,
+              80
+            ],
+            "out": [
+              220,
+              80
+            ]
+          },
+          {
+            "id": "point-b2481e9b-4029-449a-8bc0-bb1fbe8cc3a1",
+            "anchor": [
+              110,
+              160
+            ],
+            "in": [
+              110,
+              160
+            ],
+            "out": [
+              110,
+              160
+            ]
+          },
+          {
+            "id": "point-d2d4eb8f-02ef-4b72-85eb-5fe41d51fa2d",
+            "anchor": [
+              0,
+              80
+            ],
+            "in": [
+              0,
+              80
+            ],
+            "out": [
+              0,
+              80
+            ]
+          }
+        ],
+        "shape": {
+          "type": "diamond",
+          "options": {
+            "width": 220,
+            "height": 160
+          }
+        }
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "artboard-bbb08ea1-ef8f-4951-a371-820f02fd9325": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  },
+  "advanced": {
+    "clips": [],
+    "feathers": [],
+    "ik": []
+  }
+}

@@ -1,6 +1,6 @@
 # @evir/project-model
 
-Owns strict editable-project and runtime-snapshot validation, verified JSON persistence, identifiers and scene transforms. `createProject`, `validateProject`, `openProject` and `serializeProject` retain the current editable v1/v2 contract. `toRuntimeProject`, `validateRuntimeProject` and `openRuntimeProject` provide playback data without editor state. See [package usage and release boundaries](https://github.com/Mgregchi/Evir/blob/main/packages/README.md).
+Owns strict editable-project and runtime-snapshot validation, verified JSON persistence, identifiers and scene transforms. `createProject`, `validateProject`, `openProject` and `serializeProject` retain the editable v1–v3 contracts. `toRuntimeProject`, `validateRuntimeProject` and `openRuntimeProject` provide playback data without editor state. See [package usage and release boundaries](https://github.com/Mgregchi/Evir/blob/main/packages/README.md).
 
 The early source v2/runtime v1 vocabulary now allows a solid hex string or static `linear`/`radial` object in `geometry.fill`: two distinct local endpoints and 2–16 strictly increasing stops with hex RGBA colors. Skinned gradient paths and color-key tracks on gradient fills reject explicitly. Source v1 remains solid-only. Earlier readers reject this extension; no silent conversion or new binary format is implied. See [the contract and acceptance](../../docs/28-studio-gradient-paints.md).
 
@@ -8,4 +8,4 @@ Advanced 2D contracts, source/runtime versions, asset preparation/disposal, auth
 
 Playback modes/counts/speed, independent timeline layers, the Sunday motorcycle and native export policy are documented in [playback and motorcycle contracts](../../docs/32-animation-playback-and-motorcycle.md).
 
-Native centered solid strokes now retain their centerlines through source/runtime validation, Canvas rendering, supported animation and `.riv` export/import. Studio provides a stroke bottom sheet and constant-width Freehand mode. See [native stroke contracts, workflow and limits](../../docs/41-native-strokes-and-path-effects.md); gradient/skinned strokes and full Editor-file import remain outside this increment.
+Native centered strokes retain their centerlines through source/runtime validation, Canvas rendering, supported animation and `.riv` export/import. Source v3/runtime v2 additionally support gradient/skinned strokes and compound contours; [the current closure ledger](../../docs/47-software-closure.md) links their contracts and native comparisons. Live shape controls and optional `editor.weightLocks` are editable-source metadata and stay out of runtime snapshots. Full Editor-file import remains outside the supported subset.

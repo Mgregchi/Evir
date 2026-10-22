@@ -1,0 +1,149 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 3,
+  "id": "compound-union",
+  "name": "union",
+  "artboards": [
+    {
+      "id": "artboard-7cbcf24d-d21b-494b-a5d2-09e9571736b2",
+      "name": "Artboard 1",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "node-ddd69830-7b4f-40e0-8909-0c34f263da8a",
+      "name": "Circle",
+      "kind": "path",
+      "artboardId": "artboard-7cbcf24d-d21b-494b-a5d2-09e9571736b2",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        70,
+        70
+      ],
+      "geometry": {
+        "closed": true,
+        "points": [
+          {
+            "id": "point-44989e5f-b5b5-4e55-80d9-691d64b1431e",
+            "anchor": [
+              150,
+              300
+            ],
+            "in": [
+              214.14394164016622,
+              300
+            ],
+            "out": [
+              67.15728752538097,
+              300
+            ]
+          },
+          {
+            "id": "point-a52d31e4-6220-4bce-93dc-b72b42f38fe8",
+            "anchor": [
+              0,
+              150
+            ],
+            "in": [
+              0,
+              232.84271247461902
+            ],
+            "out": [
+              0,
+              67.15728752538097
+            ]
+          },
+          {
+            "id": "point-84f9215a-5aa2-45c9-9d06-c5aaaf08db58",
+            "anchor": [
+              150,
+              0
+            ],
+            "in": [
+              67.15728752538097,
+              0
+            ],
+            "out": [
+              204.46185249813288,
+              0
+            ]
+          },
+          {
+            "id": "point-d9441d3f-2e66-4c39-930f-7592685894d8",
+            "anchor": [
+              278.4236303166851,
+              72.44981572069457
+            ],
+            "in": [
+              252.14459802808568,
+              29.02480733728764
+            ],
+            "out": [
+              308.14535057197634,
+              80.53706453682538
+            ]
+          },
+          {
+            "id": "point-b77ca950-4d81-48b9-85b6-afa1eaaadfd7",
+            "anchor": [
+              330,
+              140
+            ],
+            "in": [
+              330,
+              107.71631883017922
+            ],
+            "out": [
+              330,
+              167.79486284807038
+            ]
+          },
+          {
+            "id": "point-fdf7d226-d097-4f18-b926-c2441aa1cdb4",
+            "anchor": [
+              290.3275364356355,
+              203.1070456532399
+            ],
+            "in": [
+              313.80030582287253,
+              191.8060843881798
+            ],
+            "out": [
+              268.8841791593258,
+              259.73795651046555
+            ]
+          }
+        ],
+        "fillRule": "nonzero",
+        "fill": "#89cdb7",
+        "skin": null
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "artboard-7cbcf24d-d21b-494b-a5d2-09e9571736b2": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  },
+  "advanced": {
+    "clips": [],
+    "feathers": [],
+    "ik": []
+  }
+}

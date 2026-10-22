@@ -8,12 +8,13 @@ import {
   validateProject,
   upgradeAdvanced,
   strokeValue,
+  pathPoints,pointContour,pathContours,
 } from "@evir/project-model";
 import {bindSkin,setSkinWeights} from './skin.mjs';
 export {bindSkin,setSkinWeights} from './skin.mjs';
 import { shareState } from "./shared-state.mjs";
 export { joinPaths, planPathJoin, PATH_JOIN_LIMIT } from './path-joining.mjs';
-export { SHAPES, shapeGeometry, addShape } from './shapes.mjs';
+export { SHAPES, shapeGeometry, addShape,setShapeParameters,detachShape } from './shapes.mjs';
 import { quantize, components } from "@evir/runtime/geometry";
 const copy = (x) => structuredClone(x),
   clone = copy,
@@ -214,6 +215,7 @@ export function removeSubtree(p, nodeId) {
     );
   }
   p.nodes = p.nodes.filter((n) => !removed.has(n.id));
+  if(p.editor.weightLocks){p.editor.weightLocks=p.editor.weightLocks.filter(l=>!removed.has(l.nodeId));if(!p.editor.weightLocks.length)delete p.editor.weightLocks;}
   for (const k of ["locked", "hidden"])
     p.editor[k] = p.editor[k].filter((v) => !removed.has(v));
 }
@@ -262,6 +264,11 @@ export class History {
   }
   committed() {
     return copy(this.#project);
+  }
+  // Read-only tools can share the deeply frozen committed version. Existing
+  // snapshot/committed APIs keep returning detached, editable copies.
+  readCommitted() {
+    return this.#project;
   }
   begin(label) {
     if (this.active)
@@ -348,10 +355,12 @@ export function convertRectangle(p, id) {
     })),
   };
 }
-export function insertPoint(p, nodeId, index) {
+export function insertPoint(p, nodeId, index,contourIndex=0) {
   const n = p.nodes.find((n) => n.id === nodeId),
-    g = n.geometry;
-  if (g.skin) throw Error("Unbind the path before changing its topology");
+    g = pathContours(n.geometry)[contourIndex];
+  if(n.geometry.shape)throw Error('Convert the live shape to a free path before editing points');
+  if (!g)throw Error('Choose an existing contour');
+  if (n.geometry.skin) throw Error("Unbind the path before changing its topology");
   if (!g.closed && index === g.points.length - 1)
     throw Error("Select a segment before the final point");
   const a = g.points[index],
@@ -369,12 +378,15 @@ export function insertPoint(p, nodeId, index) {
   return v.id;
 }
 export function removePoint(p, nodeId, pointId) {
-  const g = p.nodes.find((n) => n.id === nodeId).geometry;
+  const geometry=p.nodes.find((n)=>n.id===nodeId).geometry,g=pointContour(geometry,pointId);
+  if(geometry.shape)throw Error('Convert the live shape to a free path before editing points');
+  if(!g)throw Error('Choose an existing point');
   if (g.points.length <= (g.closed ? 3 : 2))
     throw Error("A closed path needs three points; an open path needs two");
-  g.points = g.points.filter((v) => v.id !== pointId);
-  if (g.skin)
-    g.skin.weights = g.skin.weights.filter((w) => w.pointId !== pointId);
+  const points=g.points.filter(v=>v.id!==pointId);g.points.splice(0,g.points.length,...points);
+  if (geometry.skin)
+    geometry.skin.weights = geometry.skin.weights.filter((w) => w.pointId !== pointId);
+  if(p.editor.weightLocks){p.editor.weightLocks=p.editor.weightLocks.filter(l=>l.nodeId!==nodeId||l.pointId!==pointId);if(!p.editor.weightLocks.length)delete p.editor.weightLocks;}
 }
 export function bindPath(p, nodeId, boneIds) {
   if(p.nodes.find(n=>n.id===nodeId)?.kind!=="path")throw Error("Select a path");
@@ -469,3 +481,11 @@ export function createMachine(p, artboardId) {
   p.machines.push(m);
   return m.id;
 }
+
+export {prepareCompound,commitCompound,combinePaths,releaseCompound,COMPOUND_OPERATIONS} from './compound.mjs';
+
+export {smoothConnection} from './smooth-connection.mjs';
+
+export {unbindSkin} from './skin.mjs';
+
+export {setSkinLocks,autoSkinWeights,smoothSkinWeights} from './skin-editing.mjs';

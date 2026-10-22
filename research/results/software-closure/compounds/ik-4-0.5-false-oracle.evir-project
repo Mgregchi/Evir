@@ -1,0 +1,308 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 3,
+  "id": "project-164fc56d-d7db-407c-872f-94f9ff9601ba",
+  "name": "IK 4 strength 0.5 invert false",
+  "artboards": [
+    {
+      "id": "artboard-3f0e77e5-2769-4dcc-86e8-37d31c580b2c",
+      "name": "Artboard 1",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "node-e0f0af2e-9a07-4a52-903d-1a03fde10d03",
+      "name": "Group",
+      "kind": "group",
+      "artboardId": "artboard-3f0e77e5-2769-4dcc-86e8-37d31c580b2c",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        140,
+        250
+      ],
+      "geometry": null
+    },
+    {
+      "id": "node-634799de-7cf3-4ab6-9067-28c2ad0b3411",
+      "name": "Segment 0",
+      "kind": "bone",
+      "artboardId": "artboard-3f0e77e5-2769-4dcc-86e8-37d31c580b2c",
+      "parentId": "node-e0f0af2e-9a07-4a52-903d-1a03fde10d03",
+      "order": 0,
+      "transform": [
+        0.9959527330119943,
+        -0.08987854919801104,
+        0.08987854919801104,
+        0.9959527330119943,
+        0,
+        0
+      ],
+      "geometry": {
+        "length": 36
+      }
+    },
+    {
+      "id": "node-5fa1bbed-8d0b-4261-ae63-6777c3551904",
+      "name": "Rectangle",
+      "kind": "rectangle",
+      "artboardId": "artboard-3f0e77e5-2769-4dcc-86e8-37d31c580b2c",
+      "parentId": "node-634799de-7cf3-4ab6-9067-28c2ad0b3411",
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        -7
+      ],
+      "geometry": {
+        "width": 36,
+        "height": 14,
+        "fill": "#edb75f"
+      }
+    },
+    {
+      "id": "node-d3c2a843-baab-47b7-bd4b-9f460d60ed65",
+      "name": "Segment 1",
+      "kind": "bone",
+      "artboardId": "artboard-3f0e77e5-2769-4dcc-86e8-37d31c580b2c",
+      "parentId": "node-634799de-7cf3-4ab6-9067-28c2ad0b3411",
+      "order": 1,
+      "transform": [
+        0.9915618937147881,
+        0.12963414261969486,
+        -0.12963414261969486,
+        0.9915618937147881,
+        0,
+        0
+      ],
+      "geometry": {
+        "length": 36
+      }
+    },
+    {
+      "id": "node-4890444a-81c5-4818-ae76-11f40168d9dd",
+      "name": "Rectangle",
+      "kind": "rectangle",
+      "artboardId": "artboard-3f0e77e5-2769-4dcc-86e8-37d31c580b2c",
+      "parentId": "node-d3c2a843-baab-47b7-bd4b-9f460d60ed65",
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        -7
+      ],
+      "geometry": {
+        "width": 36,
+        "height": 14,
+        "fill": "#89e4c4"
+      }
+    },
+    {
+      "id": "node-b9caf8d2-01bb-4709-9148-bbde98880405",
+      "name": "Segment 2",
+      "kind": "bone",
+      "artboardId": "artboard-3f0e77e5-2769-4dcc-86e8-37d31c580b2c",
+      "parentId": "node-d3c2a843-baab-47b7-bd4b-9f460d60ed65",
+      "order": 1,
+      "transform": [
+        0.9959527330119943,
+        -0.08987854919801104,
+        0.08987854919801104,
+        0.9959527330119943,
+        0,
+        0
+      ],
+      "geometry": {
+        "length": 36
+      }
+    },
+    {
+      "id": "node-02b64f1c-93d3-4e50-8a8a-0533f5fa3eb2",
+      "name": "Rectangle",
+      "kind": "rectangle",
+      "artboardId": "artboard-3f0e77e5-2769-4dcc-86e8-37d31c580b2c",
+      "parentId": "node-b9caf8d2-01bb-4709-9148-bbde98880405",
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        -7
+      ],
+      "geometry": {
+        "width": 36,
+        "height": 14,
+        "fill": "#edb75f"
+      }
+    },
+    {
+      "id": "node-ac61434c-a3c6-4409-a6f3-e060fe050e09",
+      "name": "Segment 3",
+      "kind": "bone",
+      "artboardId": "artboard-3f0e77e5-2769-4dcc-86e8-37d31c580b2c",
+      "parentId": "node-b9caf8d2-01bb-4709-9148-bbde98880405",
+      "order": 1,
+      "transform": [
+        0.9915618937147881,
+        0.12963414261969486,
+        -0.12963414261969486,
+        0.9915618937147881,
+        0,
+        0
+      ],
+      "geometry": {
+        "length": 36
+      }
+    },
+    {
+      "id": "node-15b9f26f-eb61-4f1f-85f4-c28b4bcc7744",
+      "name": "Rectangle",
+      "kind": "rectangle",
+      "artboardId": "artboard-3f0e77e5-2769-4dcc-86e8-37d31c580b2c",
+      "parentId": "node-ac61434c-a3c6-4409-a6f3-e060fe050e09",
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        -7
+      ],
+      "geometry": {
+        "width": 36,
+        "height": 14,
+        "fill": "#89e4c4"
+      }
+    },
+    {
+      "id": "node-487d3ebf-5760-417b-b46a-c0ab40632a16",
+      "name": "Group",
+      "kind": "group",
+      "artboardId": "artboard-3f0e77e5-2769-4dcc-86e8-37d31c580b2c",
+      "parentId": null,
+      "order": 1,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        220,
+        170
+      ],
+      "geometry": null
+    }
+  ],
+  "assets": [],
+  "animations": [
+    {
+      "id": "animation-06f392d5-db01-4cd0-8cd4-aeb5399c28ab",
+      "name": "Animation 1",
+      "artboardId": "artboard-3f0e77e5-2769-4dcc-86e8-37d31c580b2c",
+      "fps": 60,
+      "duration": 120,
+      "loop": true,
+      "tracks": [
+        {
+          "targetId": "node-487d3ebf-5760-417b-b46a-c0ab40632a16",
+          "property": "x",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 220,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 60,
+              "value": 270,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 120,
+              "value": 220,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "node-487d3ebf-5760-417b-b46a-c0ab40632a16",
+          "property": "y",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 170,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 60,
+              "value": 290,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 120,
+              "value": 170,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "artboard-3f0e77e5-2769-4dcc-86e8-37d31c580b2c": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  },
+  "advanced": {
+    "clips": [],
+    "feathers": [],
+    "ik": [
+      {
+        "boneId": "node-ac61434c-a3c6-4409-a6f3-e060fe050e09",
+        "targetId": "node-487d3ebf-5760-417b-b46a-c0ab40632a16",
+        "count": 4,
+        "strength": 0.5,
+        "invert": false
+      }
+    ]
+  }
+}

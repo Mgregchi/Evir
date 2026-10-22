@@ -21,6 +21,8 @@ import { fileURLToPath } from 'node:url';
 import {directStudy} from './direct-scene.mjs';
 import {weightStudy} from './weight-scene.mjs';
 import {shapeGarden,firstBounce} from './shape-scene.mjs';
+import {kelpStudy} from './kelp-scene.mjs';
+import {compoundStudy} from './compound-scene.mjs';
 const output = fileURLToPath(new URL('./assets/examples/', import.meta.url));
 
 function project(name, label) {
@@ -385,6 +387,8 @@ await mkdir(output,{recursive:true});
 factories.gust=()=>weightStudy(project);
 factories.lumen=()=>directStudy(project);
 factories.garden=()=>shapeGarden(project);
+factories.nocturne=()=>compoundStudy(project);
+factories.kelp=()=>kelpStudy(project);
 for(const name of exampleIds) {
   const p=await factories[name]();validateProject(p);
   const compiled=compileProject(p);
@@ -420,3 +424,5 @@ for(const name of exampleIds) {
 const lesson=firstBounce();validateProject(lesson);
 await writeFile(`${output}first-bounce.evir-project`,JSON.stringify(lesson,null,2)+'\n');
 await writeFile(`${output}first-bounce.riv`,compileProject(lesson).bytes);
+
+const nocturneStart=compoundStudy(project,{starting:true});validateProject(nocturneStart);await writeFile(output+'nocturne-start.evir-project',JSON.stringify(nocturneStart,null,2)+'\n');

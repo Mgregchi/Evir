@@ -1,0 +1,222 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 3,
+  "id": "project-ab5b5fcf-bb57-45d5-bd18-3a6e291e3ef6",
+  "name": "Untitled character",
+  "artboards": [
+    {
+      "id": "artboard-312cefc6-b55f-4d5c-9a1d-da5525060663",
+      "name": "Artboard 1",
+      "width": 640,
+      "height": 480
+    }
+  ],
+  "nodes": [
+    {
+      "id": "node-54b40c0e-e786-4363-915e-cfbb9bc067d4",
+      "name": "Path",
+      "kind": "path",
+      "artboardId": "artboard-312cefc6-b55f-4d5c-9a1d-da5525060663",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "closed": false,
+        "fill": null,
+        "skin": null,
+        "points": [
+          {
+            "id": "point-f040440c-a7de-4716-95a9-52283b2b92d0",
+            "anchor": [
+              120,
+              60
+            ],
+            "in": [
+              120,
+              26.862915012000002
+            ],
+            "out": [
+              120,
+              93.137084988
+            ]
+          },
+          {
+            "id": "point-29da3e94-690d-470b-ba00-de236c980d43",
+            "anchor": [
+              60,
+              120
+            ],
+            "in": [
+              93.137084988,
+              120
+            ],
+            "out": [
+              26.862915012000002,
+              120
+            ]
+          },
+          {
+            "id": "point-a51f3ff5-cefc-488b-9ab3-dc9190abf7c3",
+            "anchor": [
+              0,
+              60
+            ],
+            "in": [
+              0,
+              93.137084988
+            ],
+            "out": [
+              0,
+              26.862915012000002
+            ]
+          },
+          {
+            "id": "point-0416d95b-a0a0-4c7e-ac15-1d95372f13a6",
+            "anchor": [
+              60,
+              0
+            ],
+            "in": [
+              26.862915012000002,
+              0
+            ],
+            "out": [
+              93.137084988,
+              0
+            ]
+          }
+        ],
+        "stroke": {
+          "color": {
+            "type": "linear",
+            "start": [
+              0,
+              0
+            ],
+            "end": [
+              120,
+              100
+            ],
+            "stops": [
+              {
+                "position": 0,
+                "color": "#89e4c4ff"
+              },
+              {
+                "position": 1,
+                "color": "#edb75fff"
+              }
+            ]
+          },
+          "width": 18,
+          "cap": "round",
+          "join": "round",
+          "dash": [],
+          "dashOffset": 0,
+          "trim": {
+            "start": 0,
+            "end": 1,
+            "offset": 0
+          }
+        }
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [
+    {
+      "id": "animation-3053b794-64d6-4600-b96b-b20ae11ed77c",
+      "name": "Animation 1",
+      "artboardId": "artboard-312cefc6-b55f-4d5c-9a1d-da5525060663",
+      "fps": 60,
+      "duration": 120,
+      "loop": true,
+      "tracks": [
+        {
+          "targetId": "node-54b40c0e-e786-4363-915e-cfbb9bc067d4",
+          "property": "stroke.paint.endX",
+          "keys": [
+            {
+              "frame": 0,
+              "value": 120,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 60,
+              "value": 190,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 120,
+              "value": 120,
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            }
+          ]
+        },
+        {
+          "targetId": "node-54b40c0e-e786-4363-915e-cfbb9bc067d4",
+          "property": "stroke.paint.stop.0.color",
+          "keys": [
+            {
+              "frame": 0,
+              "value": "#89e4c4ff",
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 60,
+              "value": "#4d91c7ff",
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            },
+            {
+              "frame": 120,
+              "value": "#89e4c4ff",
+              "easing": {
+                "type": "linear",
+                "curve": null
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "artboard-312cefc6-b55f-4d5c-9a1d-da5525060663": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  },
+  "advanced": {
+    "clips": [],
+    "feathers": [],
+    "ik": []
+  }
+}

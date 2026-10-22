@@ -1,8 +1,28 @@
 {
-  "name": "@evir/authoring", "version": "0.1.0", "type": "module", "license": "MIT",
+  "name": "@evir/authoring",
+  "version": "0.1.0",
+  "type": "module",
+  "license": "MIT",
   "description": "Evir editing operations, key creation, binding and undo transactions",
-  "exports": {".": "./index.mjs", "./standalone": "./dist/index.mjs"},
-  "files": ["*.mjs", "dist", "README.md", "LICENSE"],
-  "dependencies": {"@evir/project-model": "0.1.0", "@evir/runtime": "0.1.0"},
-  "scripts": {"build": "node ../../tools/build-package.mjs"}
+  "exports": {
+    ".": "./index.mjs",
+    "./standalone": "./dist/index.mjs",
+    "./boolean": "./boolean.mjs",
+    "./boolean/standalone": "./dist/boolean.mjs"
+  },
+  "files": [
+    "*.mjs",
+    "dist",
+    "README.md",
+    "LICENSE",
+    "LICENSE.paper"
+  ],
+  "dependencies": {
+    "@evir/project-model": "0.1.0",
+    "@evir/runtime": "0.1.0",
+    "paper": "0.14.0"
+  },
+  "scripts": {
+    "build": "node ../../tools/build-package.mjs"
+  }
 }

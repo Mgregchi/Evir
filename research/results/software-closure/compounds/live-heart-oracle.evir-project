@@ -1,0 +1,125 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 3,
+  "id": "project-7d16c3a0-4cdb-4fc3-b968-1cce7e5c797f",
+  "name": "Untitled character",
+  "artboards": [
+    {
+      "id": "artboard-366aa9a3-f47a-469b-9ce8-4cd388cfa8d5",
+      "name": "Artboard 1",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "node-810a6cf7-89f8-4e60-95b6-a0e0cad3c599",
+      "name": "Heart",
+      "kind": "path",
+      "artboardId": "artboard-366aa9a3-f47a-469b-9ce8-4cd388cfa8d5",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        166,
+        176
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#89e4c4",
+        "skin": null,
+        "points": [
+          {
+            "id": "point-a13bf3ea-e01e-4bdb-993b-edd87b476654",
+            "anchor": [
+              110,
+              40
+            ],
+            "in": [
+              171.6,
+              -16
+            ],
+            "out": [
+              48.4,
+              -16
+            ]
+          },
+          {
+            "id": "point-3f3128c7-e16b-4ca5-bd17-ddbd7ee987e0",
+            "anchor": [
+              17.6,
+              76.8
+            ],
+            "in": [
+              -26.4,
+              28.799999999999997
+            ],
+            "out": [
+              39.6,
+              105.60000000000001
+            ]
+          },
+          {
+            "id": "point-7de6a899-b3cc-477a-8591-26e3547528e7",
+            "anchor": [
+              110,
+              160
+            ],
+            "in": [
+              79.2,
+              134.4
+            ],
+            "out": [
+              140.8,
+              134.4
+            ]
+          },
+          {
+            "id": "point-ab9e1469-c9cc-443f-a4d4-ce981d6918a8",
+            "anchor": [
+              202.4,
+              76.8
+            ],
+            "in": [
+              180.39999999999998,
+              105.60000000000001
+            ],
+            "out": [
+              246.40000000000003,
+              28.799999999999997
+            ]
+          }
+        ],
+        "shape": {
+          "type": "heart",
+          "options": {
+            "width": 220,
+            "height": 160
+          }
+        }
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "artboard-366aa9a3-f47a-469b-9ce8-4cd388cfa8d5": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  },
+  "advanced": {
+    "clips": [],
+    "feathers": [],
+    "ik": []
+  }
+}

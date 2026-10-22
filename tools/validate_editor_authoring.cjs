@@ -1,3 +1,4 @@
+const {readCanvasPixels,decodePixels} = require("./pixel-transfer.cjs");
 const assert = require("node:assert/strict"),
   fs = require("node:fs"),
   { PNG } = require("pngjs");
@@ -30,23 +31,13 @@ const { run } = require("./browser.cjs");
     const backend = process.env.RIVE_RENDERER || "canvas",
       results = [];
     async function pixels() {
-      if (backend === "canvas")
-        return page.evaluate(() =>
-          Array.from(
-            document
-              .getElementById("canvas")
-              .getContext("2d")
-              .getImageData(0, 0, 256, 256).data,
-          ),
-        );
-      return Array.from(
-        PNG.sync.read(
-          await page.locator("#canvas").screenshot({ omitBackground: true }),
-        ).data,
-      );
+      if (backend === "canvas") return readCanvasPixels(page);
+      return PNG.sync.read(
+        await page.locator("#canvas").screenshot({ omitBackground: true }),
+      ).data;
     }
     async function compare(label, animationId, frame, source = p) {
-      const expected = await page.evaluate(
+      const expected = decodePixels(await page.evaluate(
         async ({ p, id, frame }) => {
           const { evaluate } = await import("/tools/.test-build/oracle.mjs"),
             { drawScene } = await import("/tools/.test-build/oracle.mjs");
@@ -65,12 +56,11 @@ const { run } = require("./browser.cjs");
           ctx.rect(0, 0, board.width, board.height);
           ctx.clip();
           drawScene(ctx, pose, p.artboards[0].id, { ignoreEditorState: true });
-          return Array.from(
-            canvas.getContext("2d").getImageData(0, 0, 256, 256).data,
-          );
+          const {encodePixels} = await import('/tools/pixel-transfer.mjs');
+          return encodePixels(canvas.getContext("2d").getImageData(0, 0, 256, 256).data);
         },
         { p: source, id: animationId, frame },
-      );
+      ));
       const actual = await pixels();
       let error = 0,
         count = 0,

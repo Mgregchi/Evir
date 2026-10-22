@@ -6,7 +6,7 @@ The library belongs to this browser profile and website origin. It requires no a
 
 ## Two tabs and recovery
 
-Opening another tab restores the last saved entry without writing an unchanged source. Saves compare the tab's expected revision against the stored revision and write source plus metadata in one IndexedDB transaction. A stale tab cannot overwrite a newer save. Same-origin BroadcastChannel messages provide early notice; transaction checks still enforce safety when the channel is unavailable.
+Opening another tab restores the last saved entry without writing an unchanged source. Automatic layout refitting updates only the in-memory camera, leaving the save revision and last active entry unchanged. Explicit Fit/pan actions and authored edits retain their normal persistence. Saves compare the tab's expected revision against the stored revision and write source plus metadata in one IndexedDB transaction. A stale tab cannot overwrite a newer save. Same-origin BroadcastChannel messages provide early notice; transaction checks still enforce safety when the channel is unavailable.
 
 When another tab saves this project, a persistent custom notice offers:
 
@@ -30,3 +30,5 @@ Use the existing original [Sprig](../apps/web/assets/examples/sprig.evir-project
 [Browser evidence](../research/results/project-library/browser.json) and four-size screenshots cover search/reopen, New/import retention, original geometry, actual two-tab conflicts, both conflict actions, reload, metadata paging, aborted writes, legacy migration, quota rollback, delayed asset preparation and keyboard focus. The landscape run disables BroadcastChannel to exercise the fallback. The existing large-recovery workflow verifies a 1,000-node source and a 4 MiB embedded asset.
 
 Reproduce with `npm run test:editor` and `npm run validate:editor`. For a focused iteration after `npm run web:build`, run `node tests/editor/library-browser.cjs`. These are automated Chromium/software checks, not physical-device, moderated-user or screen-reader evidence. Hosted backend, physical tests, rich feature parity/import and broader control virtualization remain separate work.
+
+The [closure regression and before/after evidence](../research/results/software-closure/recovery/regression.json) add a background-tab resize immediately after saving a separate copy. The old automatic-fit save deterministically reclaimed the original entry; the corrected observer keeps the copy as the last active entry. [Primary-source retrievals](../research/software-closure/sources.json) cover ResizeObserver notifications and IndexedDB transactions. Treating automatic layout as a view-only adjustment is Evir's product choice.

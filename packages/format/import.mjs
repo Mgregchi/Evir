@@ -5,7 +5,7 @@ import {
   ProjectError,
   newId,
   encodeBase64,
-  defaultStroke, STROKE_CAPS, STROKE_JOINS,
+  defaultStroke, STROKE_CAPS, STROKE_JOINS,pathContours,
 } from "@evir/project-model";
 import schema from "./schema/runtime.json" with { type: "json" };
 import {contourTypes, vertexTypes, editableContour, isIdentityContour} from './contours.mjs';
@@ -427,7 +427,7 @@ async function decodeProject(input) {
         components[owner],
         "fill",
       );
-      if (![0, 2].includes(r.fields.fillRule ?? 0))
+      if (![0, 1, 2].includes(r.fields.fillRule ?? 0))
         fail(r, "unsupported fill rule");
       const paint = single(
         children(i).filter((v) =>
@@ -436,8 +436,11 @@ async function decodeProject(input) {
         r,
         "paint",
       );
+      return readPaint(paint,node,'paint.');
+    };
+    const readPaint=(paint,node,prefix)=>{
       if (paint.r.type === "SolidColor") {
-        targets.set(paint.i + "/37", { node, property: "fill" });
+        targets.set(paint.i + "/37", { node, property: prefix==='paint.'?"fill":"stroke.color" });
         return color(paint.r.fields.colorValue ?? 0xff000000);
       }
       const f = paint.r.fields,
@@ -450,13 +453,13 @@ async function decodeProject(input) {
       for (const k of ["startX", "startY", "endX", "endY"])
         targets.set(paint.i + "/" + gradientType.properties[k], {
           node,
-          property: "paint." + k,
+          property: prefix + k,
         });
       for (const [j, s] of stops.entries()) {
-        targets.set(s.i + "/38", { node, property: `paint.stop.${j}.color` });
+        targets.set(s.i + "/38", { node, property: `${prefix}stop.${j}.color` });
         targets.set(s.i + "/39", {
           node,
-          property: `paint.stop.${j}.position`,
+          property: `${prefix}stop.${j}.position`,
         });
       }
       return {
@@ -476,9 +479,8 @@ async function decodeProject(input) {
       if(!(f.transformAffectsStroke ?? true) || (f.position ?? 0)!==0)fail(r,"only centered, transform-scaled strokes are editable");
       const s=defaultStroke();s.width=f.thickness ?? 1;s.cap=STROKE_CAPS[f.cap ?? 0];s.join=STROKE_JOINS[f.join ?? 0];
       const paint=single(children(i).filter(v=>["SolidColor","LinearGradient","RadialGradient"].includes(v.r.type)),r,"stroke paint");
-      if(paint.r.type!=="SolidColor")fail(paint.r,"gradient strokes are outside the editable subset");
-      s.color=color(paint.r.fields.colorValue ?? 0xff000000);
-      targets.set(i+"/47",{node,property:"stroke.width"});targets.set(paint.i+"/37",{node,property:"stroke.color"});
+      s.color=readPaint(paint,node,'stroke.paint.');
+      targets.set(i+"/47",{node,property:"stroke.width"});
       const trims=children(i).filter(v=>v.r.type==="TrimPath"),dashes=children(i).filter(v=>v.r.type==="DashPath");
       if(trims.length) {
         const t=single(trims,r,"trim effect");
@@ -537,22 +539,22 @@ async function decodeProject(input) {
         n.geometry = { length: f.length ?? 0 };
         targets.set(i + "/89", { node: id, property: "length" });
       } else if (r.type === "Shape") {
-        const shape = single(
-          children(i).filter((v) =>
-            contourTypes.has(v.r.type),
-          ),
-          r,
-          "shape contour",
-        );
+        const shapes=children(i).filter(v=>contourTypes.has(v.r.type));
+        if(!shapes.length||shapes.length>256)fail(r,'expected one to 256 shape contours');
         const fills=children(i).filter(v=>v.r.type==="Fill"),s=stroke(i,id);
         if(fills.length>1 || (!fills.length && !s))fail(r,"expected one fill and/or one supported stroke");
         if(s && fills.length && children(i).find(v=>v.r.type==="Stroke").i<fills[0].i)fail(r,"only fill-before-stroke paint order is editable");
         n.geometry = {fill: fills.length ? fill(i,id) : null, ...(s ? {stroke:s} : {})};
-        const vertices=children(shape.i).filter(v=>vertexTypes.has(v.r.type));
-        const skin=children(shape.i).filter(v=>v.r.type==="Skin");
-        if(skin.length && !isIdentityContour(shape.r.fields))fail(shape.r,"transformed skinned contours are outside the editable subset");
-        const decoded=editableContour(shape.r,vertices,{fail,pointId:()=>newId("point")});
-        n.kind=decoded.kind;Object.assign(n.geometry,decoded.geometry);
+        const decoded=shapes.map(shape=>{
+          const vertices=children(shape.i).filter(v=>vertexTypes.has(v.r.type));
+          const skin=children(shape.i).filter(v=>v.r.type==='Skin');
+          if(skin.length&&!isIdentityContour(shape.r.fields))fail(shape.r,'transformed skinned contours are outside the editable subset');
+          return editableContour(shape.r,vertices,{fail,pointId:()=>newId('point'),forcePath:shapes.length>1||(fills[0]?.r.fields.fillRule===1)});
+        });
+        n.kind=decoded[0].kind;Object.assign(n.geometry,decoded[0].geometry);
+        if(shapes.length>1)n.geometry.contours=decoded.slice(1).map(v=>({closed:v.geometry.closed,points:v.geometry.points}));
+        if(fills[0]?.r.fields.fillRule===1)n.geometry.fillRule='evenodd';
+        const shape=shapes[0];
         if (n.kind === "rectangle") {
           targets.set(shape.i + "/20", { node: id, property: "width" });
           targets.set(shape.i + "/21", { node: id, property: "height" });
@@ -627,10 +629,10 @@ async function decodeProject(input) {
         }
       }
       // Skin is shared by path controls and textured mesh vertices.
-      const contour = children(i).find((v) =>
-        ["PointsPath", "Mesh"].includes(v.r.type),
-      );
-      if (contour) {
+      const sourceContours=children(i).filter(v=>contourTypes.has(v.r.type)||v.r.type==="Mesh");
+      const partSkins=sourceContours.map(c=>children(c.i).filter(v=>v.r.type==="Skin"));
+      if(partSkins.some(s=>s.length)&&partSkins.some(s=>!s.length))fail(r,"mixed bound and unbound compound contours need separate shapes");
+      for (const [contourIndex,contour] of sourceContours.entries()) {
         const skins=children(contour.i).filter(v=>v.r.type==="Skin");
         if(skins.length>1)fail(contour.r,"expected at most one skin");
         const skin=skins[0];
@@ -656,7 +658,7 @@ async function decodeProject(input) {
           const vertices = children(contour.i).filter((v) =>
             vertexTypes.has(v.r.type) || ["MeshVertex", "ContourMeshVertex"].includes(v.r.type),
           );
-          n.geometry.skin = {
+          const decodedSkin = {
             bindWorld: matrix(skin.r.fields),
             bones,
             weights: vertices.map((v, j) => {
@@ -674,7 +676,7 @@ async function decodeProject(input) {
                 fail(weight.r,"vertex weight type must match its straight/cubic geometry");
               return {
                 pointId: (n.kind === "path"
-                  ? n.geometry.points
+                  ? pathContours(n.geometry)[contourIndex].points
                   : n.geometry.vertices)[j].id,
                 anchor,
                 in:
@@ -688,6 +690,13 @@ async function decodeProject(input) {
               };
             }),
           };
+          if(!n.geometry.skin)n.geometry.skin=decodedSkin;
+          else {
+            const shared=n.geometry.skin;
+            if(shared.bindWorld.some((v,j)=>Math.abs(v-decodedSkin.bindWorld[j])>1e-6))fail(skin.r,'compound contours need matching skin coordinate spaces');
+            for(const bone of decodedSkin.bones){const old=shared.bones.find(b=>b.boneId===bone.boneId);if(old&&old.bind.some((v,j)=>Math.abs(v-bone.bind[j])>1e-6))fail(skin.r,'compound tendon bind transforms differ');if(!old)shared.bones.push(bone);}
+            shared.weights.push(...decodedSkin.weights);
+          }
         }
       }
     }
@@ -700,13 +709,14 @@ async function decodeProject(input) {
     for (const r of components) {
       const f = r.fields;
       if (r.type === "ClippingShape") {
-        if (f.isVisible === false || (f.fillRule ?? 0) !== 0)
+        if (f.isVisible === false || ![0,1].includes(f.fillRule ?? 0))
           fail(r, "disabled/alternate-rule clips are unsupported");
         const mask = components[f.sourceId];
         p.advanced.clips.push({
           targetId: nodeIds.get(f.parentId),
           maskId: nodeIds.get(f.sourceId),
           visible: mask?.fields.opacity !== 0,
+          ...(f.fillRule===1?{fillRule:"evenodd"}:p.nodes.find(n=>n.id===nodeIds.get(f.sourceId))?.geometry?.fillRule==="evenodd"?{fillRule:"nonzero"}:{}),
         });
       } else if (r.type === "Feather") {
         const owner = components[f.parentId];

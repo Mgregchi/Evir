@@ -3,6 +3,7 @@ import { paintProperties, isColorProperty } from "./advanced.mjs";
 import { validatePaint } from "./paint.mjs";
 import { inverse } from "./primitives.mjs";
 import { validatePlayback } from './playback.mjs';
+import {pathContours} from './contours.mjs';
 export const ANIMATABLE = [
   "x",
   "y",
@@ -88,8 +89,11 @@ export function validateFeatures(
         );
     }
     if (n.kind !== "path") continue;
-    if (!rec(g, path + ".geometry", ["closed", "fill", "points", "skin", ...(Object.hasOwn(g ?? {}, "stroke") ? ["stroke"] : [])]))
+    if (!rec(g, path + ".geometry", ["closed", "fill", "points", "skin", ...['stroke','contours','fillRule','shape'].filter(k=>Object.hasOwn(g ?? {},k))]))
       continue;
+    if(g.fillRule!==undefined && !['nonzero','evenodd'].includes(g.fillRule))problem(path,'expected nonzero or evenodd fill rule');
+    if(g.contours!==undefined && (!Array.isArray(g.contours)||g.contours.length>255)) {problem(path,'at most 255 additional contours');continue;}
+    if((g.contours||g.fillRule)&&!p.advanced)problem(path,'compound paths require advanced source');
     if (typeof g.closed !== "boolean")
       problem(path + ".closed", "expected boolean");
     if (g.fill !== null || !g.stroke) validatePaint(g.fill, path + ".fill", problem);
@@ -99,16 +103,20 @@ export function validateFeatures(
         path + ".fill",
         "gradient paint on skinned paths is outside the supported contract",
       );
-    if (!arr(g.points, path + ".points")) continue;
-    if (g.points.length < (g.closed ? 3 : 2))
-      problem(path + ".points", "too few control points");
     const pointIds = new Set();
-    for (const v of g.points) {
+    for(const [i,c] of pathContours(g).entries()) {
+    if(i && !rec(c,path+'.contour '+i,['points','closed']))continue;
+    if(typeof c.closed!=='boolean')problem(path,'contour closure must be boolean');
+    if (!arr(c.points, path + ".points")) continue;
+    if (c.points.length < (c.closed ? 3 : 2))problem(path + ".points", "too few control points");
+    for (const v of c.points) {
       if (!rec(v, path + ".point", ["id", "anchor", "in", "out"])) continue;
       identifier(v.id, path + ".point.id");
       pointIds.add(v.id);
       for (const k of ["anchor", "in", "out"]) vec(v[k], path + "." + k);
     }
+    }
+    if(pointIds.size>16384)problem(path,'at most 16,384 path controls');
     if (g.skin === null) continue;
     if (!rec(g.skin, path + ".skin", ["bindWorld", "bones", "weights"]))
       continue;

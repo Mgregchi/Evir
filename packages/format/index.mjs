@@ -5,6 +5,7 @@ import {
   pngSize,
   playbackSettings,
   STROKE_CAPS, STROKE_JOINS,
+  pathContours,
 } from "@evir/project-model";
 import { components, quantize, getValue } from "@evir/runtime/geometry";
 const OP = { eq: 0, ne: 1, le: 2, ge: 3, lt: 4, gt: 5 }; // pinned TransitionConditionOp
@@ -307,9 +308,10 @@ export function compileProject(project, schema = runtimeSchema) {
             });
         }
         if (n.kind === "path") {
+          for(const contour of pathContours(n.geometry)){
           const path = componentRecord("PointsPath", {
               parentId: index,
-              isClosed: n.geometry.closed,
+              isClosed: contour.closed,
             }).index,
             skin = n.geometry.skin;
           const packed = (influences) => {
@@ -330,7 +332,7 @@ export function compileProject(project, schema = runtimeSchema) {
                 ) >>> 0,
             };
           };
-          for (const v of n.geometry.points) {
+          for (const v of contour.points) {
             const delta = (handle) => {
                 const x = v[handle][0] - v.anchor[0],
                   y = v[handle][1] - v.anchor[1];
@@ -380,6 +382,7 @@ export function compileProject(project, schema = runtimeSchema) {
               pending.push({ record: tendon.record, boneId: b.boneId });
             }
           }
+          }
         }
         if (["rectangle", "path"].includes(n.kind)) {
           const feather = project.advanced?.feathers.find(
@@ -388,7 +391,7 @@ export function compileProject(project, schema = runtimeSchema) {
           if (n.geometry.fill !== null) {
           const fill = componentRecord("Fill", {
             parentId: index,
-            ...(feather ? { fillRule: 2 } : {}),
+            ...(n.geometry.fillRule==='evenodd' ? {fillRule:1} : feather ? {fillRule:2} : {}),
           }).index;
           fills.set(n.id, fill);
           const paint = n.geometry.fill;
@@ -445,8 +448,19 @@ export function compileProject(project, schema = runtimeSchema) {
             const stroke = componentRecord("Stroke", {parentId:index, thickness:s.width,
               cap:STROKE_CAPS.indexOf(s.cap), join:STROKE_JOINS.indexOf(s.join), transformAffectsStroke:true}).index;
             targets.set(n.id+"/stroke.width",{index:stroke,type:"Stroke",property:"thickness"});
+            if(typeof s.color==='string'){
             const solid=componentRecord("SolidColor",{parentId:stroke,colorValue:color(s.color)}).index;
             targets.set(n.id+"/stroke.color",{index:solid,type:"SolidColor",property:"colorValue"});
+            }else{
+              const paint=s.color,type=paint.type==='linear'?'LinearGradient':'RadialGradient';
+              const gradient=componentRecord(type,{parentId:stroke,startX:paint.start[0],startY:paint.start[1],endX:paint.end[0],endY:paint.end[1]}).index;
+              for(const property of ['startX','startY','endX','endY'])targets.set(n.id+'/stroke.paint.'+property,{index:gradient,type,property});
+              for(const [i,stop]of paint.stops.entries()){
+                const index=componentRecord('GradientStop',{parentId:gradient,position:stop.position,colorValue:color(stop.color)}).index;
+                targets.set(n.id+`/stroke.paint.stop.${i}.position`,{index,type:'GradientStop',property:'position'});
+                targets.set(n.id+`/stroke.paint.stop.${i}.color`,{index,type:'GradientStop',property:'colorValue'});
+              }
+            }
             if(s.trim.start!==0 || s.trim.end!==1 || s.trim.offset!==0 || project.animations.some(a=>a.tracks.some(t=>t.targetId===n.id && t.property.startsWith("stroke.trim")))) {
             const trim=componentRecord("TrimPath",{parentId:stroke,start:s.trim.start,end:s.trim.end,offset:s.trim.offset,modeValue:1}).index;
             for(const [property,field] of [["trimStart","start"],["trimEnd","end"],["trimOffset","offset"]])
@@ -471,7 +485,7 @@ export function compileProject(project, schema = runtimeSchema) {
         componentRecord("ClippingShape", {
           parentId: ids.get(c.targetId),
           sourceId: ids.get(c.maskId),
-          fillRule: 0,
+          fillRule: (c.fillRule??project.nodes.find(n=>n.id===c.maskId).geometry.fillRule)==='evenodd'?1:0,
           isVisible: true,
         });
     for (const f of project.advanced?.feathers ?? [])
@@ -729,7 +743,7 @@ export function compileProject(project, schema = runtimeSchema) {
     bytes: Uint8Array.from(out),
     mapping,
     scope:
-      "2D fills, animated gradients, clipping, outer feather, embedded PNG/TTF assets, single-line text, textured meshes, one/two-bone unit-scale IK, four-influence skinning, typed keys, one-layer timed transitions, 1D blends, ordered direct blends and click listeners. No universal Rive compatibility.",
+      "2D fills, animated gradients, clipping, outer feather, embedded PNG/TTF assets, single-line text, textured meshes, one-to-eight-bone unit-scale IK, four-influence skinning, typed keys, one-layer timed transitions, 1D blends, ordered direct blends and click listeners. No universal Rive compatibility.",
   };
 }
 

@@ -1,6 +1,8 @@
+import {paintOnContext} from './paint.mjs';
 // Bounded software path effects. Source keeps cubic controls; effect output is
 // a polyline approximation (0.01-unit control-polygon excess, 8-unit chords).
 // Dash phase follows Rive's path-length wrap, not Canvas setLineDash phase.
+import {pathContours} from '@evir/project-model';
 const distance = (a,b) => Math.hypot(a[0]-b[0],a[1]-b[1]);
 const midpoint = (a,b) => [(a[0]+b[0])/2,(a[1]+b[1])/2];
 export function centerline(g) {
@@ -60,14 +62,14 @@ function range(measure,start,end,closed) {
   return result;
 }
 export function strokeContours(g) {
-  const stroke=g.stroke, original=flatten(g),{start,end,offset}=stroke.trim;
-  let contours=[original],measure=measured(contours);
+  const stroke=g.stroke, originals=(g.points?pathContours(g):[g]).map(flatten),original=originals[0],{start,end,offset}=stroke.trim;
+  let contours=originals,measure=measured(contours);
   if(!measure.length)return [];
   if(start!==0 || end!==1 || offset!==0) {
     let from=Math.min(start,end)+wrap(offset,1),to=Math.max(start,end)+wrap(offset,1);
     if(from>=1){from-=1;to-=1;}
-    contours=range(measure,from*measure.length,to*measure.length,original.closed);
-    if(start===0 && end===1 && original.closed && contours.length===1)contours[0].closed=true;
+    contours=range(measure,from*measure.length,to*measure.length,originals.length===1&&original.closed);
+    if(start===0 && end===1 && originals.length===1 && original.closed && contours.length===1)contours[0].closed=true;
   }
   const checked=paths=>{if(paths.reduce((sum,c)=>sum+c.points.length,0)>65536)throw new RangeError("Stroke effect output budget exceeded");return paths;};
   if(!stroke.dash.length)return checked(contours);
@@ -87,15 +89,17 @@ export function strokeContours(g) {
   return dashed;
 }
 export function strokeStyle(ctx,g) {
-  const s=g.stroke;ctx.setLineDash([]);ctx.lineDashOffset=0;ctx.lineWidth=s.width;ctx.lineCap=s.cap;ctx.lineJoin=s.join;ctx.miterLimit=4;ctx.strokeStyle=s.color;
+  const s=g.stroke;ctx.setLineDash([]);ctx.lineDashOffset=0;ctx.lineWidth=s.width;ctx.lineCap=s.cap;ctx.lineJoin=s.join;ctx.miterLimit=4;ctx.strokeStyle=paintOnContext(ctx,s.color);
 }
 export function strokePathOnContext(ctx,g) {
   ctx.beginPath();
   const s=g.stroke;
   if(!s.dash.length && s.trim.start===0 && s.trim.end===1 && s.trim.offset===0) {
-    const {points,closed}=centerline(g);ctx.moveTo(...points[0].anchor);
+    for(const part of g.points?pathContours(g):[g]){
+    const {points,closed}=centerline(part);ctx.moveTo(...points[0].anchor);
     for(let i=1;i<points.length;i++)ctx.bezierCurveTo(...points[i-1].out,...points[i].in,...points[i].anchor);
     if(closed){ctx.bezierCurveTo(...points.at(-1).out,...points[0].in,...points[0].anchor);ctx.closePath();}
+    }
   } else for(const c of strokeContours(g)) {
     if(c.points.length<2)continue;
     ctx.moveTo(...c.points[0]);for(const p of c.points.slice(1))ctx.lineTo(...p);if(c.closed)ctx.closePath();

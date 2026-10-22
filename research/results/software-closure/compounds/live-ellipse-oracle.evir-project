@@ -1,0 +1,125 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 3,
+  "id": "project-a4034a6e-872b-4623-a54e-5e077551de70",
+  "name": "Untitled character",
+  "artboards": [
+    {
+      "id": "artboard-bae0efec-c62e-46fb-9fe4-1923942d6c05",
+      "name": "Artboard 1",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "node-c872ae09-d6d5-4ac1-8343-a05637b2ec03",
+      "name": "Ellipse",
+      "kind": "path",
+      "artboardId": "artboard-bae0efec-c62e-46fb-9fe4-1923942d6c05",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        166,
+        176
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#89e4c4",
+        "skin": null,
+        "points": [
+          {
+            "id": "point-0cb6bde3-2acf-4f41-8a74-956c11710707",
+            "anchor": [
+              220,
+              80
+            ],
+            "in": [
+              220,
+              35.81722001353651
+            ],
+            "out": [
+              220,
+              124.18277998646349
+            ]
+          },
+          {
+            "id": "point-516c4ff9-8217-4a5f-81e8-1781d04f1be6",
+            "anchor": [
+              110,
+              160
+            ],
+            "in": [
+              170.7513224813873,
+              160
+            ],
+            "out": [
+              49.24867751861271,
+              160
+            ]
+          },
+          {
+            "id": "point-a1776efa-317e-4c66-b814-beb8dc292856",
+            "anchor": [
+              0,
+              80
+            ],
+            "in": [
+              0,
+              124.18277998646349
+            ],
+            "out": [
+              0,
+              35.81722001353651
+            ]
+          },
+          {
+            "id": "point-33cdb346-e023-4f22-901e-1fa2296e8c5e",
+            "anchor": [
+              110,
+              0
+            ],
+            "in": [
+              49.24867751861271,
+              0
+            ],
+            "out": [
+              170.7513224813873,
+              0
+            ]
+          }
+        ],
+        "shape": {
+          "type": "ellipse",
+          "options": {
+            "width": 220,
+            "height": 160
+          }
+        }
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "artboard-bae0efec-c62e-46fb-9fe4-1923942d6c05": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  },
+  "advanced": {
+    "clips": [],
+    "feathers": [],
+    "ik": []
+  }
+}

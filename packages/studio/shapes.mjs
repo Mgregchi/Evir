@@ -1,4 +1,4 @@
-import {SHAPES,shapeGeometry,addShape} from '@evir/authoring';
+import {SHAPES,shapeGeometry,addShape,setShapeParameters,detachShape} from '@evir/authoring';
 import {sheet} from './advanced.mjs';
 
 const el=(tag,text)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;return n;};
@@ -28,12 +28,13 @@ export function mountShapes(api){
     if(api.mode()!=='Design'){api.notice('Switch to Design to add shapes.');return;}
     const revision=api.revision(),source=api.project(),selection=api.selected(),scope=source.id,
       selected=source.nodes.find(n=>n.id===selection),parentId=['group','bone'].includes(selected?.kind)?selected.id:null;
-    let preset='circle',applied=false;
+    let preset='circle',applied=false,parametric=true;
     const options={width:120,height:100,fill:'#89e4c4',radius:20,sides:5,inner:45,strokeWidth:4};
     const guard=()=>{if(api.revision()!==revision||api.project().id!==scope||api.mode()!=='Design'||api.selected()!==selection)
       throw Error('The project or selection changed. Close Shapes and open it again.');};
     const dialog=sheet('Create a shape',body=>{
       body.className='shape-sheet';body.append(el('p','Choose a shape, adjust its size, then Add shape. It becomes an editable layer; no imported artwork is needed.'));
+      const choice=el('label');choice.className='shape-live-choice';const checkbox=el('input');checkbox.type='checkbox';checkbox.checked=true;checkbox.onchange=()=>parametric=checkbox.checked;choice.append(checkbox,el('span','Keep editable shape controls'));body.append(choice);
       const palette=el('div');palette.className='shape-palette';
       const fields=el('div');fields.className='shape-fields';
       const preview=el('div');preview.className='shape-preview';
@@ -67,15 +68,15 @@ export function mountShapes(api){
         group.append(grid);palette.append(group);
       }
       const optionsPanel=el('div');optionsPanel.className='shape-options';
-      optionsPanel.append(preview,fields,status,el('p','New shapes appear in the active artboard, or inside a selected group/bone. Use Properties to move, scale, recolor or edit points afterwards. Preset parameters are used when adding; they are not live shape constraints.'));
+      optionsPanel.append(preview,fields,status,el('p','New shapes appear in the active artboard, or inside a selected group/bone. Use Properties to move, scale, recolor or edit points afterwards. Keep shape controls to adjust size, radius or points later. Convert to a free path when you want to edit individual curve handles.'));
       body.append(palette,optionsPanel);
       renderFields();
     },signal=>{
       if(signal.aborted)return false;guard();
       // Validate outside history so invalid drafts stay inline in the sheet.
-      const draft=structuredClone(api.project());addShape(draft,preset,{...options,parentId,artboardId:api.artboardId()});
+      const draft=structuredClone(api.project());addShape(draft,preset,{...options,parametric,parentId,artboardId:api.artboardId()});
       let created;
-      applied=api.commit('Add '+SHAPES.find(s=>s.id===preset).name,p=>{created=addShape(p,preset,{...options,parentId,artboardId:api.artboardId()});});
+      applied=api.commit('Add '+SHAPES.find(s=>s.id===preset).name,p=>{created=addShape(p,preset,{...options,parametric,parentId,artboardId:api.artboardId()});});
       if(applied)api.select(created);
       return applied;
     },api.notice,opener);
@@ -84,4 +85,16 @@ export function mountShapes(api){
     dialog.addEventListener('close',()=>{if(applied)requestAnimationFrame(()=>document.querySelector('#stage').focus());},{once:true});
   };
   menu.onclick=open;document.querySelector('#empty-shapes').onclick=open;
+}
+
+export function shapeParameterControls(p,n,api){
+ const definition=n.geometry?.shape;if(!definition)return null;
+ const section=el('section');section.className='property-section';section.append(el('h3',SHAPES.find(s=>s.id===definition.type).name+' controls'));
+ const labels={width:definition.type==='circle'?'Shape size':'Shape width',height:'Shape height',radius:'Shape corner radius',sides:definition.type==='star'?'Star points':'Polygon sides',inner:'Inner radius (%)'};
+ for(const [key,value]of Object.entries(definition.options)){
+  const l=el('label'),input=el('input');l.className='field';l.append(el('span',labels[key]));input.type='number';input.value=value;input.step=key==='sides'?'1':'any';input.min=key==='radius'?0:key==='inner'?10:key==='sides'?3:2;input.max=key==='sides'?12:key==='inner'?90:4096;input.setAttribute('aria-label',labels[key]);
+  input.onchange=()=>{try{api.commit('Edit shape parameters',q=>setShapeParameters(q,n.id,{[key]:input.valueAsNumber}));}catch(e){api.notice(e);}};l.append(input);section.append(l);
+ }
+ const detach=el('button','Convert to free path');detach.type='button';detach.onclick=()=>api.commit('Convert live shape to free path',q=>detachShape(q,n.id));
+ section.append(detach,el('p','Shape controls stay in editable source. Convert to a free path to edit anchors and handles. Undo restores the controls.'));return section;
 }

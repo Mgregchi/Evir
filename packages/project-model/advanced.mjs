@@ -8,7 +8,7 @@ export function upgradeAdvanced(p) {
   return p;
 }
 export const isColorProperty = (p) =>
-  p === "fill" || p === "stroke.color" || /^paint\.stop\.\d+\.color$/.test(p);
+  p === "fill" || p === "stroke.color" || /^(?:stroke\.)?paint\.stop\.\d+\.color$/.test(p);
 export function paintProperties(n) {
   const f = n.geometry?.fill;
   return f && typeof f !== "string"
@@ -244,7 +244,8 @@ export function validateAdvanced(p, problem, identifier) {
   };
   const clips = new Set();
   for (const c of p.advanced.clips) {
-    if (!rec(c, "clip", ["targetId", "maskId", "visible"])) continue;
+    if (!rec(c, "clip", ["targetId", "maskId", "visible",...(Object.hasOwn(c??{},"fillRule")?["fillRule"]:[])])) continue;
+    if(c.fillRule!==undefined&&!['nonzero','evenodd'].includes(c.fillRule))problem("clip","invalid fill rule");
     const n = nodes.get(c.targetId),
       mask = refs(n, c.maskId, "clip");
     if (clips.has(c.targetId)) problem("clip", "one mask per target");
@@ -276,11 +277,11 @@ export function validateAdvanced(p, problem, identifier) {
       target = refs(tip, c.targetId, "ik");
     if (
       tip?.kind !== "bone" ||
-      ![1, 2].includes(c.count) ||
+      (!Number.isInteger(c.count)||c.count<1||c.count>8) ||
       typeof c.invert !== "boolean" ||
       ancestor(target?.id, c.boneId)
     )
-      problem("ik", "one/two-bone IK needs an independent target");
+      problem("ik", "IK needs one to eight bones and an independent target");
     finite(c.strength, "ik.strength", 0, 1);
     let b = tip;
     for (let i = 0; i < c.count; i++, b = nodes.get(b?.parentId)) {

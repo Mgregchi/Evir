@@ -41,6 +41,7 @@ const { run } = require("../../tools/browser.cjs");
       return project;
     };
     for (const width of [320, 390, 844, 1440]) {
+      console.log(`Library workflow: ${width}px`);
       const height = width === 844 ? 390 : 844,
         context = await browser.newContext({
           viewport: { width, height },
@@ -138,13 +139,24 @@ const { run } = require("../../tools/browser.cjs");
         .getByRole("button", { name: "Open Sprig from first tab", exact: true })
         .waitFor();
       await other.getByRole("button", { name: "Done", exact: true }).click();
+      // Layout changes in the other tab must not reclaim the saved copy as the
+      // last active project or create a new authored save revision.
+      const beforeResize = await revision();
+      await p.setViewportSize({width:width+1,height});
+      await p.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+      await saved(p);
+      assert.deepEqual(await revision(),beforeResize,"automatic refitting must not save a background tab over the last active project");
+      await p.setViewportSize({width,height});
       // The first tab's source is retained and a new conflict can resolve to latest.
       await p.reload();
       await p.waitForFunction(
         () =>
           window.evirStudio &&
           evirStudio.snapshot().name === "Sprig from second tab",
-      );
+      ).catch(async error => {
+        console.error('Reload recovery mismatch', {width, current:await p.evaluate(()=>({name:window.evirStudio?.snapshot().name,status:document.querySelector('#save-status')?.textContent})), other:await other.evaluate(()=>({name:window.evirStudio?.snapshot().name,status:document.querySelector('#save-status')?.textContent}))});
+        throw error;
+      });
       await saved(p);
       await other.locator("#project-name").fill("Latest shared sprig");
       await other.locator("#project-name").dispatchEvent("change");

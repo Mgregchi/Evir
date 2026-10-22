@@ -1,3 +1,4 @@
+import {paintControls} from './paint.mjs';
 import {defaultStroke,upgradeAdvanced,validateProject} from '@evir/project-model';
 const el=(tag,text)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;return n;};
 export function strokeControls({project,node,commit,notice,disabled=false}) {
@@ -5,7 +6,7 @@ export function strokeControls({project,node,commit,notice,disabled=false}) {
   host.append(el('p',node.geometry.stroke?`${node.geometry.stroke.width} units · ${node.geometry.stroke.cap} ends · ${node.geometry.stroke.join} joins`:'Add editable centerline paint to this shape.'));
   const open=el('button',node.geometry.stroke?'Edit stroke':'Add stroke');open.type='button';open.dataset.strokeNode=node.id;
   open.disabled=disabled;open.onclick=()=>{try{openStrokeSheet({project,node,commit,open});}catch(error){notice(error);}};
-  host.append(open);return host;
+  host.append(open);if(node.geometry.stroke)host.append(paintControls({project,node,commit,notice,disabled,target:'stroke',label:'Stroke paint color'}));return host;
 }
 function openStrokeSheet({project,node,commit,open}) {
   document.querySelector('#stroke-sheet')?.remove();
@@ -29,7 +30,8 @@ function openStrokeSheet({project,node,commit,open}) {
     input.onchange=()=>change(input.value);wrap.append(input);body.append(wrap);return input;
   };
   const width=field('Stroke width',draft.width,'number',v=>draft.width=v);width.min='0';width.max='256';
-  field('Stroke color',draft.color,'text',v=>draft.color=v);
+  if(typeof draft.color==='string')field('Stroke color',draft.color,'text',v=>draft.color=v);
+  else body.append(el('p','Gradient stroke paint is retained. Use Edit stroke paint in Properties to edit its endpoints/stops.'));
   select('Stroke cap',draft.cap,[['butt','Butt'],['round','Round'],['square','Square']],v=>draft.cap=v);
   select('Stroke join',draft.join,[['miter','Miter'],['round','Round'],['bevel','Bevel']],v=>draft.join=v);
   select('Shape fill',fill===null?'none':'keep',[['keep','Keep fill'],['none','No fill']],v=>fill=v==='none'?null:(original.fill ?? '#8fd9af'));
@@ -51,6 +53,7 @@ function openStrokeSheet({project,node,commit,open}) {
   const save=el('button','Apply stroke');save.type='submit';save.className='primary';actions.append(cancel,save);
   form.append(body,error,actions);sheet.append(title,intro,form);document.body.append(sheet);
   function apply(remove=false) {
+    if(!sheet.open||!sheet.isConnected)return;
     try {
       const candidate=structuredClone(project),target=candidate.nodes.find(n=>n.id===node.id);
       upgradeAdvanced(candidate);

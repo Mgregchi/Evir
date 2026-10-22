@@ -112,3 +112,10 @@ test('Shared parent animation stays intact; control-coordinate and topology budg
   large.p.nodes.find(n=>n.id===large.other).geometry.points.push({id:'one-too-many',anchor:[2049,0],in:[2049,0],out:[2049,0]});
   assert.throws(()=>joinPaths(large.p,large.keep,large.other),/4,096/);
 });
+
+test('Smooth connectors preserve every existing segment and mirror endpoint derivatives for all endpoint pairings',()=>{
+ for(const keepEnd of ['first','last'])for(const otherEnd of ['first','last']){
+ const f=fixture(true),a=f.p.nodes.find(n=>n.id===f.keep),b=f.p.nodes.find(n=>n.id===f.other);for(const n of[a,b])for(const p of n.geometry.points){p.in=p.anchor.map((v,i)=>v-(i?12:18));p.out=p.anchor.map((v,i)=>v+(i?10:22));}
+ const before=structuredClone(f.p),plan=planPathJoin(f.p,f.keep,f.other,{keepEnd,otherEnd,mode:'smooth'});assert.deepEqual(f.p,before);joinPaths(f.p,f.keep,f.other,{keepEnd,otherEnd,mode:'smooth'});preservedSegments(before,f.p,f.keep);preservedSegments(before,f.p,f.other);const points=f.p.nodes.find(n=>n.id===f.keep).geometry.points,aIndex=points.findIndex(v=>v.id===a.geometry.points[keepEnd==='last'?2:0].id),bIndex=points.findIndex(v=>v.id===b.geometry.points[otherEnd==='first'?0:2].id);for(const i of[aIndex,bIndex]){const p=points[i];assert(Math.abs(p.in[0]+p.out[0]-2*p.anchor[0])<1e-8);assert(Math.abs(p.in[1]+p.out[1]-2*p.anchor[1])<1e-8);}validateProject(f.p);compileProject(f.p);
+ }
+});

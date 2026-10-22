@@ -1,3 +1,4 @@
+import {shapeParameterControls} from './shapes.mjs';
 import { machineControls, sheet } from "./advanced.mjs";
 import { neighborKey } from "./key-navigation.mjs";
 import { graphViewBox, stateViewBox } from "./graph-navigation.mjs";
@@ -9,12 +10,14 @@ import {
   validateProject,
   newId,
   propertiesFor,
+  pathContours,pathPoints,
 } from "@evir/project-model";
 import {
   convertRectangle,
   insertPoint,
   removePoint,
   bindPath,
+  unbindSkin,
   setWeight,
   setKey,
   createAnimation,
@@ -67,6 +70,8 @@ export function mountAuthoring(api) {
     player = null,
     playerSource = null,
     selectedKey = null,
+    keyProperty = "x",
+    keyEasing = "linear",
     editState = null,
     lastTime = 0,
     raf = null;
@@ -340,6 +345,7 @@ export function mountAuthoring(api) {
   }
   function editGeometry(p, n, host) {
     if (mode !== "Design") return;
+    if(n.geometry?.shape){host.append(shapeParameterControls(p,n,{commit:transaction,notice:api.notice}));return;}
     if (n.kind === "rectangle")
       host.append(
         button("Convert to path", () =>
@@ -365,6 +371,8 @@ export function mountAuthoring(api) {
     const section = el("section");
     section.className = "property-section";
     section.append(el("h3", "Path controls"));
+    const contours=pathContours(n.geometry),contourIndex=Math.max(0,contours.findIndex(c=>c.points.some(v=>v.id===pointId))),contour=contours[contourIndex];
+    if(contours.length>1)section.append(select('Contour',contours.map((c,i)=>[String(i),`Contour ${i+1}`]),String(contourIndex),i=>{pointId=contours[Number(i)].points[0].id;api.refresh();}));
     section.append(
       button(vertices ? "Done editing points" : "Edit points", () => {
         vertices = !vertices;
@@ -372,21 +380,21 @@ export function mountAuthoring(api) {
       }),
     );
     section.append(
-      button(n.geometry.closed ? "Open path" : "Close path", () =>
+      button(contour.closed ? "Open path" : "Close path", () =>
         transaction(
           "Change path closure",
           (p) =>
-            (p.nodes.find((v) => v.id === n.id).geometry.closed =
-              !n.geometry.closed),
+            (pathContours(p.nodes.find((v) => v.id === n.id).geometry)[contourIndex].closed =
+              !contour.closed),
         ),
       ),
     );
-    if (!n.geometry.points.some((v) => v.id === pointId))
-      pointId = n.geometry.points[0].id;
+    if (!contour.points.some((v) => v.id === pointId))
+      pointId = contour.points[0].id;
     section.append(
       select(
         "Control point",
-        n.geometry.points.map((v, i) => [v.id, `Point ${i + 1}`]),
+        contour.points.map((v, i) => [v.id, `Point ${i + 1}`]),
         pointId,
         (id) => {
           pointId = id;
@@ -409,7 +417,7 @@ export function mountAuthoring(api) {
         },
       ),
     );
-    const point = n.geometry.points.find((v) => v.id === pointId);
+    const point = contour.points.find((v) => v.id === pointId);
     for (const [label, index] of [
       ["Point X", 0],
       ["Point Y", 1],
@@ -420,9 +428,7 @@ export function mountAuthoring(api) {
           point[control][index],
           (value) =>
             transaction("Edit control point", (p) => {
-              const v = p.nodes
-                .find((v) => v.id === n.id)
-                .geometry.points.find((v) => v.id === pointId);
+              const v = pathPoints(p.nodes.find(v=>v.id===n.id).geometry).find(v=>v.id===pointId);
               if (control === "anchor") {
                 const delta = value - v.anchor[index];
                 for (const key of ["anchor", "in", "out"])
@@ -438,7 +444,7 @@ export function mountAuthoring(api) {
           pointId = insertPoint(
             p,
             n.id,
-            n.geometry.points.findIndex((v) => v.id === pointId),
+            contour.points.findIndex((v) => v.id === pointId),contourIndex,
           );
         }),
       ),
@@ -466,6 +472,8 @@ export function mountAuthoring(api) {
         (v) => v.kind === "bone" && v.artboardId === n.artboardId,
       ),
       chosen = new Set(n.geometry.skin?.bones.map((b) => b.boneId) || []);
+    if(bones.length>24)rig.append(el("p","Use Bind skin bones… or Rebind skin bones… below to search all bones."));
+    else {
     for (const b of bones) {
       const label = el("label");
       label.className = "check-field";
@@ -484,12 +492,13 @@ export function mountAuthoring(api) {
         () => transaction("Bind path", (p) => bindPath(p, n.id, [...chosen])),
       ),
     );
+    }
     if (n.geometry.skin) {
       rig.append(
         button("Unbind", () =>
           transaction(
             "Unbind path",
-            (p) => (p.nodes.find((v) => v.id === n.id).geometry.skin = null),
+            (p) => unbindSkin(p,n.id),
           ),
         ),
       );
@@ -709,13 +718,14 @@ export function mountAuthoring(api) {
             ["x", "y"].includes(k)
           ),
       );
-      let property = allowed[0],
-        easing = "linear";
+      keyProperty=allowed.includes(keyProperty)?keyProperty:allowed[0];
+      let property = keyProperty,
+        easing = keyEasing;
       const propertySelect = select(
           "Key property",
           allowed.map((k) => [k, k]),
           property,
-          (v) => (property = v),
+          (v) => (keyProperty=property = v),
         ),
         easingSelect = select(
           "New key easing",
@@ -725,7 +735,7 @@ export function mountAuthoring(api) {
             ["cubic", "Cubic ease"],
           ],
           easing,
-          (v) => (easing = v),
+          (v) => (keyEasing=easing = v),
         );
       controls.append(
         propertySelect,
@@ -1513,7 +1523,7 @@ export function mountAuthoring(api) {
       }
     },
     hitControl(p, n, world, zoom) {
-      if (!vertices || mode !== "Design" || n?.kind !== "path") return null;
+      if (!vertices || mode !== "Design" || n?.kind !== "path" || n.geometry.shape) return null;
       for (const v of worldPoints(p, n))
         for (const key of ["anchor", "in", "out"])
           if (Math.hypot(v[key][0] - world.x, v[key][1] - world.y) < 8 / zoom) {
@@ -1548,7 +1558,7 @@ export function mountAuthoring(api) {
           ctx.fill();
         }
       }
-      if (!vertices || n?.kind !== "path" || mode !== "Design") return;
+      if (!vertices || n?.kind !== "path" || mode !== "Design" || n.geometry.shape) return;
       for (const v of worldPoints(p, n)) {
         ctx.strokeStyle = "#4d7b94";
         ctx.lineWidth = 1 / zoom;

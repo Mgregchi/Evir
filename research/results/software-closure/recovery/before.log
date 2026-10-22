@@ -1,0 +1,21 @@
+Library workflow: 320px
+AssertionError [ERR_ASSERTION]: automatic refitting must not save a background tab over the last active project
++ actual - expected
+
+  {
++   key: '5d3f3809-e58e-4bb6-813b-d85fcec68a3c',
++   revision: 3
+-   key: '826db3fd-c364-4a08-867c-0dc55f6ff484',
+-   revision: 1
+  }
+
+    at /workspace/Evir/tests/editor/library-browser.cjs:148:14
+    at async exports.run (/workspace/Evir/tools/browser.cjs:51:5)
+    at async /workspace/Evir/tests/editor/library-browser.cjs:9:3 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: [Object],
+  expected: [Object],
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}

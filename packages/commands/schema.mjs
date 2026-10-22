@@ -8,6 +8,18 @@ const node=shape({id,name,kind:{enum:['rectangle','group','bone','path','text','
 const playback=shape({mode:{enum:['once','loop','ping-pong']},iterations:{type:'integer',minimum:0,maximum:10000},speed:{type:'number',minimum:.01,maximum:16}});
 const command=(op,properties)=>shape({op:{const:op},...properties});
 export const commandSchema={oneOf:[
+  command('create_shape',{nodeId:id,preset:{enum:['rectangle','rounded','circle','ellipse','triangle','diamond','polygon','star','line','capsule','arrow','heart','cloud','bubble']},options:shape({parentId:{type:['string','null']},name,x:{type:'number'},y:{type:'number'},width:{type:'number',minimum:2,maximum:4096},height:{type:'number',minimum:2,maximum:4096},radius:{type:'number',minimum:0},sides:{type:'integer',minimum:3,maximum:12},inner:{type:'number',minimum:10,maximum:90},fill:{type:'string',pattern:'^#[a-fA-F0-9]{6}([a-fA-F0-9]{2})?$'},strokeWidth:{type:'number',minimum:.1,maximum:128},parametric:{type:'boolean'}},[])}),
+  command('set_shape_parameters',{nodeId:id,changes:{...shape({width:{type:'number'},height:{type:'number'},radius:{type:'number'},sides:{type:'integer'},inner:{type:'number'}},[]),minProperties:1}}),
+  command('detach_shape',{nodeId:id}),
+  command('combine_paths',{nodeIds:{type:'array',items:id,minItems:2,maxItems:8,uniqueItems:true},fillRule:{enum:['nonzero','evenodd']}}),
+  command('release_compound',{nodeId:id}),
+  command('join_paths',{nodeId:id,otherId:id,options:shape({keepEnd:{enum:['first','last']},otherEnd:{enum:['first','last']},mode:{enum:['bridge','smooth','merge']}},[])}),
+  command('set_ik',{nodeId:id,constraint:{oneOf:[{type:'null'},shape({targetId:id,count:{type:'integer',minimum:1,maximum:8},invert:{type:'boolean'},strength:{type:'number',minimum:0,maximum:1}})]}}),
+  command('bind_skin',{nodeId:id,boneIds:{type:'array',minItems:1,maxItems:4,uniqueItems:true,items:id}}),
+  command('set_skin_weights',{nodeId:id,changes:{type:'array',maxItems:12288,items:shape({pointId:id,control:{enum:['anchor','in','out']},boneId:id,value:{type:'number',minimum:0,maximum:1}})}}),
+  command('set_skin_locks',{nodeId:id,changes:{type:'array',maxItems:12288,items:shape({pointId:id,control:{enum:['anchor','in','out']},boneId:id,locked:{type:'boolean'}})}}),
+  command('auto_skin_weights',{nodeId:id,options:shape({blend:{type:'number',minimum:0,maximum:1},influences:{type:'integer',minimum:1,maximum:4},pointIds:{type:'array',maxItems:4096,uniqueItems:true,items:id},control:{enum:['all','anchor','in','out']}},[])}),
+  command('smooth_skin_weights',{nodeId:id,options:shape({strength:{type:'number',minimum:0,maximum:1},iterations:{type:'integer',minimum:1,maximum:10},pointIds:{type:'array',maxItems:4096,uniqueItems:true,items:id},control:{enum:['all','anchor','in','out']}},[])}),
   command('create_node',{node}),
   command('update_node',{nodeId:id,changes:{...shape({name,transform:matrix,geometry},[]),minProperties:1}}),
   command('remove_node',{nodeId:id}),command('reparent_node',{nodeId:id,parentId:{type:['string','null']}}),

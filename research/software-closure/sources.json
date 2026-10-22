@@ -1,0 +1,287 @@
+[
+  {
+    "name": "paper-boolean",
+    "url": "https://paperjs.org/reference/pathitem/",
+    "retrievedAt": "2026-10-20T09:59:06.110298+00:00",
+    "status": 200,
+    "finalUrl": "https://paperjs.org/reference/pathitem/",
+    "bytes": 213952,
+    "sha256": "ac05f606a8eb6ef5b5070f60cd688e3430b1a07bc5528281620b00715dc9589c"
+  },
+  {
+    "name": "polygon-clipping",
+    "url": "https://raw.githubusercontent.com/mfogel/polygon-clipping/master/README.md",
+    "retrievedAt": "2026-10-20T09:59:06.114415+00:00",
+    "status": 200,
+    "finalUrl": "https://raw.githubusercontent.com/mfogel/polygon-clipping/master/README.md",
+    "bytes": 4764,
+    "sha256": "b7733affb4bd6879587aeaa4fe0a557eb0b50f2b1d29193da814e5d64464328c"
+  },
+  {
+    "name": "rive-path",
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/master/src/shapes/path.cpp",
+    "retrievedAt": "2026-10-20T09:59:06.117072+00:00",
+    "status": 200,
+    "finalUrl": "https://raw.githubusercontent.com/rive-app/rive-runtime/master/src/shapes/path.cpp",
+    "bytes": 18331,
+    "sha256": "1cf916412ec00c2a80b0f8453a8782646819ad016ba60d9ee6e59247e950d694"
+  },
+  {
+    "name": "rive-rectangle",
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/master/src/shapes/rectangle.cpp",
+    "retrievedAt": "2026-10-20T09:59:06.119155+00:00",
+    "status": 200,
+    "finalUrl": "https://raw.githubusercontent.com/rive-app/rive-runtime/master/src/shapes/rectangle.cpp",
+    "bytes": 1115,
+    "sha256": "0293b5b2db107aae187c8e78253b51146c0a4dfe3d76f6bccd326b2c2057256c"
+  },
+  {
+    "name": "rive-feather",
+    "url": "https://rive.app/docs/editor/manipulating-shapes/feathering",
+    "retrievedAt": "2026-10-20T09:59:06.120240+00:00",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "name": "mcp-tools",
+    "url": "https://modelcontextprotocol.io/specification/2025-11-25/server/tools",
+    "retrievedAt": "2026-10-20T09:59:06.123404+00:00",
+    "status": 200,
+    "finalUrl": "https://modelcontextprotocol.io/specification/2025-11-25/server/tools",
+    "bytes": 691778,
+    "sha256": "6e925a9285458b5a2327df324956c0bacd8030607facfe2d3db0b5560eaeaf73"
+  },
+  {
+    "name": "svg-fill",
+    "url": "https://www.w3.org/TR/SVG2/painting.html#WindingRule",
+    "retrievedAt": "2026-10-20T09:59:06.125824+00:00",
+    "status": 200,
+    "finalUrl": "https://www.w3.org/TR/SVG2/painting.html#WindingRule",
+    "bytes": 164046,
+    "sha256": "49f3f71568cec71d40d04dd5695abf4055698c0522ee269b5ad1210c0b774876"
+  },
+  {
+    "name": "rive-layout",
+    "url": "https://rive.app/docs/editor/layouts/layouts-overview",
+    "retrievedAt": "2026-10-20T09:59:06.127853+00:00",
+    "status": 200,
+    "finalUrl": "https://rive.app/docs/editor/layouts/layouts-overview",
+    "bytes": 357971,
+    "sha256": "22b32b5e01d79a763594992914e6898a0e717b387e76a13213331d1523b450aa"
+  },
+  {
+    "name": "rive-blends",
+    "url": "https://rive.app/docs/editor/state-machine/blend-states",
+    "retrievedAt": "2026-10-20T09:59:06.133275+00:00",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "name": "pinned-trim",
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/shapes/paint/trim_path.cpp",
+    "retrievedAt": "2026-10-20T10:24:20.903672+00:00",
+    "status": 200,
+    "bytes": 8120,
+    "sha256": "8a4e0bf5219afab39ab585207be8051a2ab9d10c0901139737792284c4906e43"
+  },
+  {
+    "name": "pinned-rounding",
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/shapes/path.cpp",
+    "retrievedAt": "2026-10-20T10:24:22.085570+00:00",
+    "status": 200,
+    "bytes": 21702,
+    "sha256": "2d7c66a6d968e78fb304aa68422eb595dfd30764eb7dd6a08bead9f7cc1eb5be"
+  },
+  {
+    "name": "paper-smoothing",
+    "url": "https://paperjs.org/reference/path/#smooth-options",
+    "retrievedAt": "2026-10-20T10:43:59.740819+00:00",
+    "status": 200,
+    "bytes": 280812,
+    "sha256": "184017343d4830c32d14eadce26e4f6dfb314813ba556546b4e79f4a371807e2"
+  },
+  {
+    "name": "svg-cubic-continuity",
+    "url": "https://www.w3.org/TR/SVG2/paths.html#PathDataCubicBezierCommands",
+    "retrievedAt": "2026-10-20T10:44:00.653744+00:00",
+    "status": 200,
+    "bytes": 85037,
+    "sha256": "0324612f634d9f8045eda2925770398f11d13e5e17a2bde2ca628d8400907499"
+  },
+  {
+    "name": "pinned-ik_constraint.cpp",
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/constraints/ik_constraint.cpp",
+    "retrievedAt": "2026-10-20T10:46:27.832125+00:00",
+    "status": 200,
+    "bytes": 9615,
+    "sha256": "413c80904a8b94100d70e032c24cdb2990ffeaaebf6b20c4a100f8e23c47cfbf"
+  },
+  {
+    "name": "pinned-cubic_detached_vertex.cpp",
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/shapes/cubic_detached_vertex.cpp",
+    "retrievedAt": "2026-10-20T10:46:27.834532+00:00",
+    "status": 200,
+    "bytes": 1165,
+    "sha256": "43c5f640c82e424030b7d53c2363e1797ec53cb2e2c7ab0d8dbb9a143af394ac"
+  },
+  {
+    "name": "pinned-cubic_vertex.cpp",
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/shapes/cubic_vertex.cpp",
+    "retrievedAt": "2026-10-20T10:46:27.836703+00:00",
+    "status": 200,
+    "bytes": 2443,
+    "sha256": "7d2e0a45d6ed26a2e30873ebf3eb773419d40299ad83569c5db276815ad5e018"
+  },
+  {
+    "name": "pinned-feather.cpp",
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/shapes/paint/feather.cpp",
+    "retrievedAt": "2026-10-20T10:46:27.838195+00:00",
+    "status": 200,
+    "bytes": 3828,
+    "sha256": "4e78c95b3e0a23c59b594f9c59bd8259a655b585d01bbf4bfbfc9e91ee4d725f"
+  },
+  {
+    "name": "pinned-skin.cpp",
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/bones/skin.cpp",
+    "retrievedAt": "2026-10-20T10:46:27.839776+00:00",
+    "status": 200,
+    "bytes": 6549,
+    "sha256": "1c008654161cb9dba3a65793f617490a49264528b6e92614e0211b9b5da79732"
+  },
+  {
+    "name": "pinned-weight.cpp",
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/bones/weight.cpp",
+    "retrievedAt": "2026-10-20T10:46:27.841053+00:00",
+    "status": 200,
+    "bytes": 2139,
+    "sha256": "4fc15b7db029a9503696a109fbef68fe9d35c6b3c510cff444547f61a782d148"
+  },
+  {
+    "name": "pinned-text.cpp",
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/text/text.cpp",
+    "retrievedAt": "2026-10-20T10:46:28.861876+00:00",
+    "status": 200,
+    "bytes": 64368,
+    "sha256": "28fb15042f331630ac675adce559e68466ae837541c6b6f193b03812cd10b84d"
+  },
+  {
+    "name": "pinned-text_style.cpp",
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/text/text_style.cpp",
+    "retrievedAt": "2026-10-20T10:46:28.966783+00:00",
+    "status": 200,
+    "bytes": 5090,
+    "sha256": "0d702cd3faf2df687f1fd467619b0b96a8ca64e44cf89bbb6153f4b0c9893850"
+  },
+  {
+    "name": "pinned-layout_component.cpp",
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/layout_component.cpp",
+    "retrievedAt": "2026-10-20T10:46:29.004783+00:00",
+    "status": 200,
+    "bytes": 69618,
+    "sha256": "2eba2da86ef19249d00d51084996107bd25dcfac87fe4d8087aa3fe09f73a863"
+  },
+  {
+    "name": "pinned-blend_state_direct_instance.cpp",
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/animation/blend_state_direct_instance.cpp",
+    "retrievedAt": "2026-10-20T10:46:29.098776+00:00",
+    "status": 200,
+    "bytes": 2329,
+    "sha256": "6286a853c2a4b12e834fcf0920f0282b6ce0ba13efbd21e245bcf7b611e963c4"
+  },
+  {
+    "name": "pinned-blend_state_1d_instance.cpp",
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/animation/blend_state_1d_instance.cpp",
+    "retrievedAt": "2026-10-20T10:46:29.099344+00:00",
+    "status": 200,
+    "bytes": 4562,
+    "sha256": "956a78df0ab42af422f98ccf5b0ce6ec47307c418b942104fbc2609f7c59d9d6"
+  },
+  {
+    "name": "pinned-linear_gradient.cpp",
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/shapes/paint/linear_gradient.cpp",
+    "status": 200,
+    "bytes": 8698,
+    "retrievedAt": "2026-10-20T10:51:27.560878+00:00",
+    "sha256": "78fbb77d97bebf18af1183181ae603d497fd1e9f514e6188376766a0d05b5c88"
+  },
+  {
+    "name": "pinned-stroke.cpp",
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/shapes/paint/stroke.cpp",
+    "status": 200,
+    "bytes": 3577,
+    "retrievedAt": "2026-10-20T10:51:28.014180+00:00",
+    "sha256": "c4a35251cb2e70bf2934babd26dee101b9c5bff7208ad6058eedf4c1410c9279"
+  },
+  {
+    "name": "blender-auto-weights",
+    "url": "https://docs.blender.org/manual/en/latest/animation/armatures/skinning/parenting.html",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "name": "blender-weight-tools",
+    "url": "https://docs.blender.org/manual/en/latest/sculpt_paint/weight_paint/editing.html",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "name": "rive-ik-guide",
+    "url": "https://rive.app/docs/editor/constraints/ik-constraint.md",
+    "status": 200,
+    "bytes": 3992,
+    "retrievedAt": "2026-10-21T08:30:08.636444+00:00",
+    "sha256": "ed61d3753542bd5f0cd987a8942051055007f6bbac12dbf64d1776296314a2fe"
+  },
+  {
+    "name": "rive-bones-guide",
+    "url": "https://rive.app/docs/editor/manipulating-shapes/bones.md",
+    "status": 200,
+    "bytes": 8128,
+    "retrievedAt": "2026-10-21T08:30:09.572537+00:00",
+    "sha256": "5c39e551c8d298f27784017d365799d5c3452fc49258e0cf1b0b4611b8265698"
+  },
+  {
+    "name": "pinned-bone.cpp",
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/bones/bone.cpp",
+    "status": 200,
+    "bytes": 983,
+    "retrievedAt": "2026-10-21T08:39:41.911767+00:00",
+    "sha256": "54f60b7cffa77d30a28ebec00ca08b4a44b01c7d7cac18ac5e10a312cfa631d4"
+  },
+  {
+    "name": "pinned-constraint.hpp",
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/include/rive/constraints/constraint.hpp",
+    "status": 200,
+    "bytes": 2132,
+    "retrievedAt": "2026-10-21T08:39:41.911853+00:00",
+    "sha256": "1f0f0228d139f659a3ae35bd2715e0e2938acd852e11164ce1368df38acc804c"
+  },
+  {
+    "name": "pinned-constraint.cpp",
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/constraints/constraint.cpp",
+    "status": 200,
+    "bytes": 3622,
+    "retrievedAt": "2026-10-21T08:39:41.911875+00:00",
+    "sha256": "b93e60ea0f154b9b6497a577a5bf93309131137a6ac71760aad1aba4ff58123b"
+  },
+  {
+    "name": "pinned-transform_component.cpp",
+    "url": "https://raw.githubusercontent.com/rive-app/rive-runtime/7aa93402a27c800db8a36acc8672612c100ea9b1/src/transform_component.cpp",
+    "status": 200,
+    "bytes": 3178,
+    "retrievedAt": "2026-10-21T08:39:41.911971+00:00",
+    "sha256": "13400dbc3b0788c0d78ed2715872a4ed7cea386b11daebb20a7959decab2171f"
+  },
+  {
+    "name": "mdn-resize-observer",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver",
+    "status": 200,
+    "bytes": 154794,
+    "retrievedAt": "2026-10-21T14:21:34.183203+00:00",
+    "sha256": "26111343fc43c5f409782b8ccef00ed20fc35eacf947ecb2927d73cd6354eaac"
+  },
+  {
+    "name": "mdn-idb-transactions",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction",
+    "status": 200,
+    "bytes": 166175,
+    "retrievedAt": "2026-10-21T14:21:34.242849+00:00",
+    "sha256": "977ed77a09b4c315c181ab521e688d2b4a90ca258fcfd7b3c927b7406175636c"
+  }
+]

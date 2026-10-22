@@ -1,0 +1,186 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 3,
+  "id": "project-6387a54f-0779-4292-bd92-ec94b7bc390b",
+  "name": "Imported Rive scene",
+  "artboards": [
+    {
+      "id": "artboard-020e0a19-88c2-4ca1-be55-2dd6901bdbbe",
+      "name": "Native holes",
+      "width": 256,
+      "height": 256
+    }
+  ],
+  "nodes": [
+    {
+      "id": "node-43e8135d-c029-4192-9610-c075d806eb33",
+      "name": "Two native contours",
+      "kind": "path",
+      "artboardId": "artboard-020e0a19-88c2-4ca1-be55-2dd6901bdbbe",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "fill": "#89cdb7ff",
+        "closed": true,
+        "skin": null,
+        "points": [
+          {
+            "id": "point-c3749036-ad2b-4974-8569-66e2cc3111db",
+            "anchor": [
+              30,
+              30
+            ],
+            "in": [
+              30,
+              30
+            ],
+            "out": [
+              30,
+              30
+            ]
+          },
+          {
+            "id": "point-08bea90b-a6f7-4fc4-9e69-a5bfa9fa8a5d",
+            "anchor": [
+              225,
+              30
+            ],
+            "in": [
+              225,
+              30
+            ],
+            "out": [
+              225,
+              30
+            ]
+          },
+          {
+            "id": "point-0d078f38-4abc-4303-963a-2bdb409e0396",
+            "anchor": [
+              225,
+              225
+            ],
+            "in": [
+              225,
+              225
+            ],
+            "out": [
+              225,
+              225
+            ]
+          },
+          {
+            "id": "point-d9cb80a5-4fde-4a4c-8d72-2330d09055d5",
+            "anchor": [
+              30,
+              225
+            ],
+            "in": [
+              30,
+              225
+            ],
+            "out": [
+              30,
+              225
+            ]
+          }
+        ],
+        "contours": [
+          {
+            "closed": true,
+            "points": [
+              {
+                "id": "point-75262cf7-2097-4877-8a05-ec39e63f3df4",
+                "anchor": [
+                  90,
+                  90
+                ],
+                "in": [
+                  90,
+                  90
+                ],
+                "out": [
+                  90,
+                  90
+                ]
+              },
+              {
+                "id": "point-36dd353c-c424-4cd1-a3df-6398b13b40f9",
+                "anchor": [
+                  165,
+                  90
+                ],
+                "in": [
+                  165,
+                  90
+                ],
+                "out": [
+                  165,
+                  90
+                ]
+              },
+              {
+                "id": "point-8ed5fdfa-35eb-4d50-bee4-0de5bff58794",
+                "anchor": [
+                  165,
+                  165
+                ],
+                "in": [
+                  165,
+                  165
+                ],
+                "out": [
+                  165,
+                  165
+                ]
+              },
+              {
+                "id": "point-8339cb6d-971b-437c-b8d6-1b87673ebfa7",
+                "anchor": [
+                  90,
+                  165
+                ],
+                "in": [
+                  90,
+                  165
+                ],
+                "out": [
+                  90,
+                  165
+                ]
+              }
+            ]
+          }
+        ],
+        "fillRule": "evenodd"
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "artboard-020e0a19-88c2-4ca1-be55-2dd6901bdbbe": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  },
+  "advanced": {
+    "clips": [],
+    "feathers": [],
+    "ik": []
+  }
+}

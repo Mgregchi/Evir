@@ -68,6 +68,7 @@ export function sheet(title, build, apply, notice, opener) {
   const actions = el("div");
   actions.className = "dialog-actions";
   const applyButton = button("Apply", async () => {
+    if(!dialog.open||!dialog.isConnected||controller.signal.aborted)return;
     applyButton.disabled = true;
     try {
       if ((await apply(controller.signal)) !== false) dialog.close();
@@ -82,7 +83,7 @@ export function sheet(title, build, apply, notice, opener) {
     }
   });
   actions.append(
-    button("Cancel", () => dialog.close()),
+    button("Cancel", () => {controller.abort();dialog.close();}),
     applyButton,
   );
   dialog.append(actions);
@@ -96,6 +97,7 @@ export function sheet(title, build, apply, notice, opener) {
     },
     { once: true },
   );
+  dialog.addEventListener("cancel",()=>controller.abort());
   dialog.showModal();
   return dialog;
 }
@@ -416,6 +418,7 @@ export function mountAdvanced(api) {
                   };
                 }
                 p.nodes.find((v) => v.id === n.id).geometry = draft;
+                if(bone&&p.editor.weightLocks){p.editor.weightLocks=p.editor.weightLocks.filter(l=>l.nodeId!==n.id);if(!p.editor.weightLocks.length)delete p.editor.weightLocks;}
               }),
             api.notice,
             this,
@@ -542,6 +545,7 @@ export function mountAdvanced(api) {
                 [
                   ["1", "One bone"],
                   ["2", "Two bones"],
+                  ...Array.from({length:6},(_,i)=>[String(i+3),`${i+3} bones`]),
                 ],
                 String(draft.count),
                 (v) => (draft.count = Number(v)),
@@ -565,7 +569,7 @@ export function mountAdvanced(api) {
               h.append(
                 el(
                   "p",
-                  "IK supports one or two bones with unit scales and an independent target. Move the target to pose the chain.",
+                  "IK supports one to eight bones with unit scales and an independent target. Move the target to pose the chain.",
                 ),
               );
             },

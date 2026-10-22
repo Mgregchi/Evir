@@ -1,0 +1,231 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 3,
+  "id": "project-e713bb82-c376-4646-8731-081cf73bae3a",
+  "name": "Untitled character",
+  "artboards": [
+    {
+      "id": "artboard-c8414385-c2b8-42df-a380-b6017a513b74",
+      "name": "Artboard 1",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "node-088dcb0f-2356-413c-96d6-7100683c0d05",
+      "name": "Speech bubble",
+      "kind": "path",
+      "artboardId": "artboard-c8414385-c2b8-42df-a380-b6017a513b74",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        166,
+        176
+      ],
+      "geometry": {
+        "closed": true,
+        "fill": "#89e4c4",
+        "skin": null,
+        "points": [
+          {
+            "id": "point-7c61305f-cc68-4492-a326-696c71e75d4b",
+            "anchor": [
+              20,
+              0
+            ],
+            "in": [
+              8.954305003384128,
+              0
+            ],
+            "out": [
+              20,
+              0
+            ]
+          },
+          {
+            "id": "point-44e6cb0a-f0a0-463a-b8ac-55a1b9870d15",
+            "anchor": [
+              200,
+              0
+            ],
+            "in": [
+              200,
+              0
+            ],
+            "out": [
+              211.04569499661588,
+              0
+            ]
+          },
+          {
+            "id": "point-2e9d34ff-aaab-4546-aed7-2e2f09bcbab4",
+            "anchor": [
+              220,
+              20
+            ],
+            "in": [
+              220,
+              8.954305003384128
+            ],
+            "out": [
+              220,
+              20
+            ]
+          },
+          {
+            "id": "point-42be3b02-2b92-44d9-9701-c51a9ea6e98b",
+            "anchor": [
+              220,
+              101.6
+            ],
+            "in": [
+              220,
+              101.6
+            ],
+            "out": [
+              220,
+              112.64569499661587
+            ]
+          },
+          {
+            "id": "point-2cfaf743-9e09-4e48-abfb-0f9f95c4e3ac",
+            "anchor": [
+              200,
+              121.6
+            ],
+            "in": [
+              211.04569499661588,
+              121.6
+            ],
+            "out": [
+              200,
+              121.6
+            ]
+          },
+          {
+            "id": "point-58394c4d-94d8-40b8-8717-c43b1af4882a",
+            "anchor": [
+              136.4,
+              121.6
+            ],
+            "in": [
+              136.4,
+              121.6
+            ],
+            "out": [
+              136.4,
+              121.6
+            ]
+          },
+          {
+            "id": "point-affc654a-c090-4bd0-860c-69faa2e346b4",
+            "anchor": [
+              81.4,
+              160
+            ],
+            "in": [
+              81.4,
+              160
+            ],
+            "out": [
+              81.4,
+              160
+            ]
+          },
+          {
+            "id": "point-373aa630-d976-4c6c-a934-196e3e65c146",
+            "anchor": [
+              81.4,
+              121.6
+            ],
+            "in": [
+              81.4,
+              121.6
+            ],
+            "out": [
+              81.4,
+              121.6
+            ]
+          },
+          {
+            "id": "point-2df2f579-7b8b-4b6d-bd07-dab7df947a09",
+            "anchor": [
+              20,
+              121.6
+            ],
+            "in": [
+              20,
+              121.6
+            ],
+            "out": [
+              8.954305003384128,
+              121.6
+            ]
+          },
+          {
+            "id": "point-c4409e18-d162-4496-b8d9-fe366e451769",
+            "anchor": [
+              0,
+              101.6
+            ],
+            "in": [
+              0,
+              112.64569499661587
+            ],
+            "out": [
+              0,
+              101.6
+            ]
+          },
+          {
+            "id": "point-ed9d5361-55f8-44c0-aa83-dbab42923bc7",
+            "anchor": [
+              0,
+              20
+            ],
+            "in": [
+              0,
+              20
+            ],
+            "out": [
+              0,
+              8.954305003384128
+            ]
+          }
+        ],
+        "shape": {
+          "type": "bubble",
+          "options": {
+            "width": 220,
+            "height": 160,
+            "radius": 20
+          }
+        }
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "artboard-c8414385-c2b8-42df-a380-b6017a513b74": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  },
+  "advanced": {
+    "clips": [],
+    "feathers": [],
+    "ik": []
+  }
+}

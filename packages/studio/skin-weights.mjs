@@ -1,10 +1,12 @@
-import {bindSkin,setSkinWeights} from '@evir/authoring';
+import {weightOperationSheet} from './skin-weight-tools.mjs';
+import {pathPoints} from '@evir/project-model';
+import {bindSkin,setSkinWeights,setSkinLocks} from '@evir/authoring';
 import {sheet} from './advanced.mjs';
 import {WeightBrush,weightControls,WEIGHT_BRUSH_LIMIT} from './weight-brush.mjs';
 const colors=['#6dcfae','#e5a77d','#9ea7e8','#e4cf72'];
 const el=(tag,text)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;return n;};
 const button=(name,fn)=>{const b=el('button',name);b.type='button';b.onclick=fn;return b;};
-const pointList=n=>n.kind==='mesh'?n.geometry.vertices:n.geometry.points;
+const pointList=n=>n.kind==='mesh'?n.geometry.vertices:pathPoints(n.geometry);
 export function mountSkinWeights(api){
  let active=null,settings={boneId:null,control:'all',target:1,strength:1,radius:36},hover=null;
  const stage=document.querySelector('#stage'),stageLabel=stage.getAttribute('aria-label');
@@ -15,12 +17,15 @@ export function mountSkinWeights(api){
  function bind(n,opener){
   const [p]=current(),revision=api.revision(),chosen=new Set(n.geometry.skin?.bones.map(b=>b.boneId)??[]);
   sheet('Bind skin bones',host=>{
-   host.append(el('p','Choose one to four bones in this artboard. Binding resets every vertex and handle to equal weights. Save existing weight edits first if you want to keep them.'));
-   for(const b of p.nodes.filter(v=>v.kind==='bone'&&v.artboardId===n.artboardId)){
-    const l=el('label'),input=el('input');l.className='check-field';input.type='checkbox';input.checked=chosen.has(b.id);input.setAttribute('aria-label','Skin bind '+b.name);input.onchange=()=>input.checked?chosen.add(b.id):chosen.delete(b.id);l.append(input,el('span',b.name));host.append(l);
+   host.append(el('p','Choose one to four bones in this artboard. Binding resets every vertex and handle to equal weights and removes this layer’s influence locks. Save existing weight edits first if you want to keep them.'));
+   const bones=p.nodes.filter(v=>v.kind==='bone'&&v.artboardId===n.artboardId),label=el('label'),search=el('input'),list=el('div'),status=el('p'),navigation=el('div');let page=0;label.className='field';label.append(el('span','Find a skin bone'));search.type='search';search.setAttribute('aria-label','Find a skin bone');label.append(search);status.setAttribute('role','status');navigation.className='bone-page-actions';
+   const previous=button('Previous bone page',()=>{page--;render();}),next=button('Next bone page',()=>{page++;render();}),clear=button('Clear chosen bones',()=>{chosen.clear();render();});navigation.append(previous,next,clear);host.append(label,status,list,navigation);
+   function render(focusId){const filtered=bones.filter(b=>b.name.toLocaleLowerCase().includes(search.value.trim().toLocaleLowerCase())),pages=Math.max(1,Math.ceil(filtered.length/24));page=Math.max(0,Math.min(page,pages-1));list.replaceChildren();status.textContent=`${chosen.size} chosen · ${filtered.length} matching bones · page ${page+1} of ${pages}`;previous.disabled=page===0;next.disabled=page+1>=pages;
+    for(const b of filtered.slice(page*24,page*24+24)){const l=el('label'),input=el('input');l.className='check-field';input.type='checkbox';input.checked=chosen.has(b.id);input.disabled=!input.checked&&chosen.size>=4;input.setAttribute('aria-label','Skin bind '+b.name);input.onchange=()=>{const focused=document.activeElement===input;input.checked?chosen.add(b.id):chosen.delete(b.id);render(focused?b.id:null);};l.append(input,el('span',b.name));list.append(l);if(focusId===b.id)input.focus();}
    }
+   search.oninput=()=>{page=0;render();};render();
   },()=>{
-   if(api.revision()!==revision)throw Error('The scene changed. Reopen binding to review it.');
+   if(api.revision()!==revision||api.authored().id!==p.id||api.selected()!==n.id||api.mode()!=='Design')throw Error('The scene changed. Reopen binding to review it.');
    if(!api.commit('Bind skin bones',q=>bindSkin(q,n.id,[...chosen])))return false;stop();api.draw();return true;
   },api.notice,opener);
  }
@@ -28,8 +33,8 @@ export function mountSkinWeights(api){
   if(!n.geometry.skin){bind(n,opener);return;}
   api.cancel();stop();api.draw();let[p]=current(),revision=api.revision(),index=0;
   const draft={...settings,boneId:n.geometry.skin.bones.some(b=>b.boneId===settings.boneId)?settings.boneId:n.geometry.skin.bones[0].boneId};
-  const check=()=>{const[q,node]=current();if(q.id!==p.id||node?.id!==n.id||api.revision()!==revision||!valid(q,node))throw Error('The scene changed. Close this sheet and reopen Skin weights.');return node;};
-  let stats,dialog;
+  const check=()=>{if(!dialog?.open||!dialog.isConnected)throw Error('These weight tools have closed.');const[q,node]=current();if(q.id!==p.id||node?.id!==n.id||api.revision()!==revision||!valid(q,node))throw Error('The scene changed. Close this sheet and reopen Skin weights.');return node;};
+  let stats,dialog,lockField;
   dialog=sheet('Skin weights',host=>{
    host.className='skin-weight-fields';host.append(el('p','Choose a bone and target weight. Paint on the stage, or apply the same value to a numbered vertex here. Other bone weights share the remainder; totals stay at 100%. Apply weight to vertex commits immediately with its own Undo; closing keeps edits already applied.'));
    const field=(label,value,change,{min,max,step='any'}={})=>{const l=el('label'),input=el('input');l.className='field';input.type='number';input.value=value;input.step=step;if(min!==undefined)input.min=min;if(max!==undefined)input.max=max;input.setAttribute('aria-label',label);input.oninput=()=>{change(input.value.trim()===''?NaN:input.valueAsNumber);showStats();};l.append(el('span',label),input);host.append(l);return input;};
@@ -41,6 +46,8 @@ export function mountSkinWeights(api){
    field('Brush radius (screen pixels)',draft.radius,v=>draft.radius=v,{min:8,max:160});
    host.append(el('h3','Numeric alternative'));
    field('Weight vertex number',1,v=>index=v-1,{min:1,max:pointList(n).length,step:1});stats=el('p');stats.setAttribute('role','status');host.append(stats);
+   const lockLabel=el('label');lockLabel.className='check-field';lockField=el('input');lockField.type='checkbox';lockField.setAttribute('aria-label','Lock bone influence on vertex');lockLabel.append(lockField,el('span','Lock this bone influence on the vertex'));host.append(lockLabel);
+   lockField.onchange=()=>{try{const node=check(),point=pointList(node)[index];if(!Number.isInteger(index)||!point)throw Error('Choose an existing vertex number');const keys=node.kind==='mesh'?['anchor']:draft.control==='all'?['anchor','in','out']:[draft.control];if(!api.commit('Change influence lock',q=>setSkinLocks(q,node.id,keys.map(control=>({pointId:point.id,control,boneId:draft.boneId,locked:lockField.checked})))))throw Error('Influence lock was rejected.');revision=api.revision();showStats();dialog.querySelector('[role=alert]').textContent='';}catch(e){showStats();dialog.querySelector('[role=alert]').textContent=e.message;}};
    host.append(button('Apply weight to vertex',()=>{try{
     if(!Number.isFinite(draft.target)||draft.target<0||draft.target>1)throw Error('Target weight must be between 0 and 100%');
     const node=check(),point=pointList(node)[index];if(!Number.isInteger(index)||!point)throw Error('Choose an existing vertex number');
@@ -55,7 +62,7 @@ export function mountSkinWeights(api){
   },api.notice,opener);
   dialog.id='skin-weight-sheet';dialog.querySelector('.dialog-actions button:last-child').textContent='Start painting weights';dialog.querySelector('.dialog-actions button:first-child').textContent='Close weight tools';
   dialog.addEventListener('close',()=>{if(active){api.focusStage();api.draw();}else document.querySelector('[data-skin-weights]')?.focus();},{once:true});
-  function showStats(){if(!stats)return;const[q,node]=current(),point=pointList(node??n)[index],entry=node?.geometry.skin?.weights.find(w=>w.pointId===point?.id);stats.textContent=entry?`${node.kind==='mesh'?'Vertex':'Point'} ${index+1}: `+node.geometry.skin.bones.map((b,i)=>`${i+1}. ${q.nodes.find(v=>v.id===b.boneId).name} ${Math.round((entry[draft.control==='all'?'anchor':draft.control]?.find(([id])=>id===b.boneId)?.[1]??0)*100)}%`).join(' · '):'Choose a valid vertex number.';}
+  function showStats(){if(!stats)return;const[q,node]=current(),point=pointList(node??n)[index],entry=node?.geometry.skin?.weights.find(w=>w.pointId===point?.id);if(lockField){const controls=node?.kind==='mesh'?['anchor']:draft.control==='all'?['anchor','in','out']:[draft.control],locks=q.editor.weightLocks??[],count=controls.filter(control=>locks.some(l=>l.nodeId===n.id&&l.pointId===point?.id&&l.control===control&&l.boneId===draft.boneId)).length;lockField.checked=count===controls.length;lockField.indeterminate=count>0&&count<controls.length;lockField.disabled=!entry;}stats.textContent=entry?`${node.kind==='mesh'?'Vertex':'Point'} ${index+1}: `+node.geometry.skin.bones.map((b,i)=>`${i+1}. ${q.nodes.find(v=>v.id===b.boneId).name} ${Math.round((entry[draft.control==='all'?'anchor':draft.control]?.find(([id])=>id===b.boneId)?.[1]??0)*100)}%`).join(' · '):'Choose a valid vertex number.';}
   showStats();
  }
  return{
@@ -64,7 +71,7 @@ export function mountSkinWeights(api){
   sync(p,n){if(active&&(active!==n?.id||!valid(p,n)))stop();},
   controls(p,n,host){if(api.mode()!=='Design'||!['path','mesh'].includes(n.kind)||!api.editable(p,n))return;const section=el('section');section.className='property-section';section.append(el('h3','Skin weights'));
    const b=button(n.geometry.skin?'Skin weights…':'Bind skin bones…',()=>{try{if(api.ready())open(n,b);}catch(e){api.notice(e.message);}});b.dataset.skinWeights=n.id;section.append(b);
-   if(n.geometry.skin)section.append(button('Rebind skin bones…',()=>bind(n,b)));
+   if(n.geometry.skin){section.append(button('Rebind skin bones…',()=>bind(n,b)));for(const[kind,label]of [['auto','Automatic weights…'],['smooth','Smooth weights…']]){const openTool=button(label,()=>{try{if(!api.ready())return;api.cancel();stop();api.draw();weightOperationSheet(n,api,kind,openTool);}catch(e){api.notice(e.message);}});openTool.dataset.weightOperation=kind;openTool.dataset.weightNode=n.id;section.append(openTool);}}
    if(active===n.id)section.append(el('p','Painting weights · '+p.nodes.find(v=>v.id===settings.boneId)?.name));host.append(section);
   },
   begin(p,n,world,zoom){if(active!==n?.id||!valid(p,n))return null;hover=world;return new WeightBrush({source:api.authored(),pose:p,nodeId:n.id,...settings,zoom});},
@@ -72,7 +79,7 @@ export function mountSkinWeights(api){
   overlay(ctx,p,n,zoom){
    if(active!==n?.id||!valid(p,n))return;
    ctx.save();
-   const count=n.kind==='mesh'?n.geometry.vertices.length:n.geometry.points.length*(settings.control==='all'?3:1);if(count>WEIGHT_BRUSH_LIMIT){ctx.restore();return;}
+   const count=n.kind==='mesh'?n.geometry.vertices.length:pathPoints(n.geometry).length*(settings.control==='all'?3:1);if(count>WEIGHT_BRUSH_LIMIT){ctx.restore();return;}
    const entries=new Map(n.geometry.skin.weights.map(w=>[w.pointId,w])),bones=n.geometry.skin.bones;
    for(const v of weightControls(p,n,n.kind==='mesh'?'anchor':settings.control)){
     const weights=new Map(entries.get(v.pointId)[v.control]),r=(v.control==='anchor'?6:4)/zoom;let angle=-Math.PI/2;

@@ -1,0 +1,63 @@
+{
+  "format": "evir-project",
+  "schemaVersion": 3,
+  "id": "project-d8727e3f-b2d0-44eb-93be-830f5b27c1d2",
+  "name": "Untitled character",
+  "artboards": [
+    {
+      "id": "artboard-f98e7fb9-ee00-4dcc-a87e-ea16218902d5",
+      "name": "Artboard 1",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "nodes": [
+    {
+      "id": "node-fc6897e5-1cfa-4edd-9d1a-9896065ad258",
+      "name": "Rectangle",
+      "kind": "rectangle",
+      "artboardId": "artboard-f98e7fb9-ee00-4dcc-a87e-ea16218902d5",
+      "parentId": null,
+      "order": 0,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        166,
+        176
+      ],
+      "geometry": {
+        "width": 220,
+        "height": 160,
+        "fill": "#89e4c4",
+        "shape": {
+          "type": "rectangle",
+          "options": {
+            "width": 220,
+            "height": 160
+          }
+        }
+      }
+    }
+  ],
+  "assets": [],
+  "animations": [],
+  "machines": [],
+  "editor": {
+    "locked": [],
+    "hidden": [],
+    "cameras": {
+      "artboard-f98e7fb9-ee00-4dcc-a87e-ea16218902d5": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  },
+  "advanced": {
+    "clips": [],
+    "feathers": [],
+    "ik": []
+  }
+}

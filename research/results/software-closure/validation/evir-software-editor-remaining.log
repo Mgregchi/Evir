@@ -1,0 +1,46 @@
+RUN node tests/editor/freehand-browser.cjs
+Freehand: five responsive workflows, touch cancellation/drawing, editable persistence and two official-runtime pixel comparisons passed.
+RUN node tests/editor/brush-browser.cjs
+Brush: four responsive workflows, synthetic pressure, mouse/touch fallback, history/recovery/export and two official-runtime comparisons passed.
+RUN node tests/editor/stroke-browser.cjs
+Native stroke editing: five viewport sizes, recovery, binary import and freehand centerlines passed.
+RUN node tests/editor/paint-browser.cjs
+canvas { frame: 0, mae: 0.00000762939453125 }
+canvas { frame: 30, mae: 0.00000762939453125 }
+webgl2 { frame: 0, mae: 0.17285537719726562 }
+webgl2 { frame: 30, mae: 0.24460220336914062 }
+RUN node tests/editor/advanced-browser.cjs
+RUN node tests/editor/workflow-browser.cjs
+Workflow and large recovery browser checks passed
+RUN node tests/editor/library-browser.cjs
+page.waitForFunction: Timeout 20000ms exceeded.
+    at /workspace/Evir/tests/editor/library-browser.cjs:143:15
+    at async exports.run (/workspace/Evir/tools/browser.cjs:51:5)
+    at async /workspace/Evir/tests/editor/library-browser.cjs:9:3 {
+  log: [],
+  name: 'TimeoutError'
+}
+node:child_process:981
+    throw err;
+    ^
+
+Error: Command failed: node tests/editor/library-browser.cjs
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:942:11)
+    at execFileSync (node:child_process:978:15)
+    at [stdin]:2:299
+    at runScriptInThisContext (node:internal/vm:219:10)
+    at node:internal/process/execution:451:12
+    at [stdin]-wrapper:6:24
+    at runScriptInContext (node:internal/process/execution:449:60)
+    at evalFunction (node:internal/process/execution:283:30) {
+  status: 1,
+  signal: null,
+  output: [ null, null, null ],
+  pid: 295237,
+  stdout: null,
+  stderr: null
+}
+
+Node.js v24.19.0

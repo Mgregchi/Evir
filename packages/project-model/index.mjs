@@ -1,3 +1,4 @@
+import {validateWeightLocks} from './weight-locks.mjs';
 export {
   encodeBase64,
   decodeBase64,
@@ -17,6 +18,8 @@ export { defaultStroke, strokeProperties, strokeValue, STROKE_CAPS, STROKE_JOINS
 import { validatePaint } from "./paint.mjs";
 export { validatePaint, MAX_GRADIENT_STOPS } from "./paint.mjs";
 import { validateFeatures } from "./features.mjs";
+import {validateShape} from './shapes.mjs';
+export {SHAPES,shapeGeometry,canonicalShape,shapeOptionKeys} from './shapes.mjs';
 import { ProjectError, newId as id } from "./primitives.mjs";
 export {
   ProjectError,
@@ -28,6 +31,7 @@ export {
   transformResolver,
 } from "./primitives.mjs";
 export { ANIMATABLE, propertiesFor } from "./features.mjs";
+export {pathContours,pathPoints,pointContour,reverseContour} from './contours.mjs';
 const copy = (value) => structuredClone(value);
 export function createProject() {
   const artboardId = id("artboard");
@@ -181,7 +185,7 @@ function validateDocument(p, runtime) {
     )
       problem(`${path}.transform`, "expected six finite affine values");
     if (n.kind === "rectangle") {
-      if (record(n.geometry, `${path}.geometry`, ["width", "height", "fill", ...(Object.hasOwn(n.geometry ?? {}, "stroke") ? ["stroke"] : [])])) {
+      if (record(n.geometry, `${path}.geometry`, ["width", "height", "fill", ...(["stroke","shape"].filter(k=>Object.hasOwn(n.geometry ?? {},k)))])) {
         positive(n.geometry.width, `${path}.geometry.width`);
         positive(n.geometry.height, `${path}.geometry.height`);
         if (sceneVersion === 1 && typeof n.geometry.fill !== "string")
@@ -206,6 +210,7 @@ function validateDocument(p, runtime) {
       )
     )
       problem(`${path}.kind`, "unsupported node type");
+    if(n.geometry?.shape!==undefined){if(runtime)problem(path,"shape controls belong in editable source only");if(!p.advanced)problem(path,"shape controls require advanced source");validateShape(n,problem);}
     const chain = new Set([n.id]);
     let parent = nodes.get(n.parentId);
     while (parent) {
@@ -232,7 +237,7 @@ function validateDocument(p, runtime) {
     )
       problem(`${path}.data`, "expected base64 asset bytes");
   });
-  if (!runtime && record(p.editor, "editor", ["locked", "hidden", "cameras"])) {
+  if (!runtime && record(p.editor, "editor", ["locked", "hidden", "cameras",...(Object.hasOwn(p.editor??{},"weightLocks")?["weightLocks"]:[])])) {
     for (const k of ["locked", "hidden"]) {
       if (!Array.isArray(p.editor[k]))
         problem(`editor.${k}`, "expected ID array");
@@ -267,6 +272,7 @@ function validateDocument(p, runtime) {
     validateFeatures(p, problem, identifier, { editorState: !runtime });
   if (!issues.length && sceneVersion === 3)
     validateAdvanced(p, problem, identifier);
+  if (!issues.length && !runtime) validateWeightLocks(p, problem);
   if (issues.length) throw new ProjectError(issues);
   return p;
 }
@@ -309,6 +315,7 @@ export function toRuntimeProject(project) {
   scene.schemaVersion = project.schemaVersion === 3 ? 2 : 1;
   scene.animations ??= [];
   scene.machines ??= [];
+  for(const n of scene.nodes)if(n.geometry)delete n.geometry.shape;
   for (const machine of scene.machines)
     machine.states = machine.states.map(({ position, ...state }) => state);
   return validateRuntimeProject(scene);

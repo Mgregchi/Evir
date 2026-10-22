@@ -1,0 +1,43 @@
+{
+  "checkedAt": "2026-10-21T14:25:30.083Z",
+  "scope": "Cloud Chromium, actual IndexedDB and two tabs. No physical-device or human evidence.",
+  "method": "Save a conflict copy in the second tab, resize the unchanged original tab by one CSS pixel, wait for layout frames and settled save status, then compare the last-entry key/revision before reloading.",
+  "before": {
+    "outcome": "failed deterministically",
+    "viewport": 320,
+    "lastEntryChanged": true,
+    "expectedRevision": 1,
+    "actualRevision": 3,
+    "log": "before.log"
+  },
+  "after": {
+    "outcome": "passed",
+    "viewports": [
+      [
+        320,
+        844
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        844,
+        390
+      ],
+      [
+        1440,
+        844
+      ]
+    ],
+    "originalTimeoutMs": 20000,
+    "lastEntryAndRevisionPreserved": true,
+    "allExistingAssertionsRetained": true,
+    "log": "after.log"
+  },
+  "change": "ResizeObserver uses fit(false); explicit Fit and authored edits still persist.",
+  "testSource": "tests/editor/library-browser.cjs",
+  "testSha256": "b9aca213b511bad8776bba8036dc43be2fe08b59576d7244049da2265cc11d0a",
+  "sources": "research/software-closure/sources.json",
+  "separateTimingFailures": "Initial Fit/New click timeouts were observed separately. This regression proves the recovery race; it does not establish the root cause of every automation timeout."
+}
