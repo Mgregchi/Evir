@@ -1,6 +1,8 @@
 # Backend and live agent sessions — proposed architecture
 
-Research reviewed 11 October 2026. This records the user's live teaching/storytelling vision and the backend recommendation. **Hosted architecture remains a proposal.** A [local command/MCP prototype](33-local-commands-and-mcp.md) now implements initial tooling; there is still no shipped backend, remote pairing, collaboration service or model/narration integration. Today's independent engine packages run locally; Studio's project persistence is browser-local. See the [earlier agent/platform research](15-ai-agent-authoring-research.md) and [retrieval provenance](../research/live-agent-sessions/sources.json).
+**Current status:** [Worker/D1 accounts](53-cloudflare-accounts-and-mcp.md), [live Studio pairing](54-live-studio-pairing.md), [automatic registration](55-mcp-client-registration.md) and [published identities](56-published-client-identities.md) now implement part of this architecture. Durable cloud scenes, collaboration and narration orchestration remain open; see [the current register](57-remaining-work.md).
+
+Historical proposal reviewed 11 October 2026. The sections below preserve the original architecture and research, rather than describing all current shipped behavior. Studio persistence remains browser-local; the live service relays edits to an explicitly shared browser project. See [retrieval provenance](../research/live-agent-sessions/sources.json).
 
 ## What the backend would own
 

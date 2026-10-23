@@ -1,0 +1,39 @@
+
+> evir-workspace@0.1.0 test:service
+> node --test --test-concurrency=1 tests/service/*.test.mjs
+
+✔ Passkey challenges, origin isolation, recovery and account ownership run against real D1 (8204.52445ms)
+✔ OAuth PKCE, exact redirects, single-use codes, refresh rotation and revocation protect MCP (8149.189365ms)
+✔ Oversized input, expired codes, rate limits and unsafe origins fail closed (5897.82579ms)
+✔ A virtual authenticator creates and signs into an email-free account, with responsive consent and recovery (54883.011936ms)
+✔ Cloudflare configuration preserves dashboard values and binds only an explicit existing D1 database (12.241586ms)
+✔ Migration failure stops publication; repeat deployment uses the migration ledger without destructive resets (47.00063ms)
+✔ A dynamically registered MCP caller edits the real Studio history, retries safely and binds live audience controls (15906.84805ms)
+✔ Live sharing binds one account, grant and tab key; broker relays once and stops on revocation (3282.845747ms)
+✔ OAuth scene scopes cannot escalate, and Studio can grant a smaller capability set (2066.821309ms)
+✔ The broker does not queue offline work and bounds in-flight delivery; timeout is explicitly uncertain (12568.227618ms)
+✔ Studio permissions narrow a fully authorized agent and another grant on the same account cannot inherit the share (2823.831786ms)
+✔ Pinned Wrangler upgrades existing accounts, then repeats migrations without resetting client credentials (55149.663273ms)
+✔ Published consent shows its hostname, recovers from document failure, and completes a port-bound native callback (14523.388677ms)
+✔ Published ES256 assertions authenticate tokens, rotate refresh and reject replay atomically (7274.310473ms)
+✔ Published RS256 assertions authenticate tokens, rotate refresh and reject replay atomically (3343.075623ms)
+✔ Assertions reject wrong keys, algorithms, audiences, identities, lifetime, headers, missing nonce and mixed credentials (2029.854307ms)
+✔ Plural published methods take precedence over the legacy hint without enabling shared secrets (2162.307429ms)
+✔ Published defaults and fresh callback/scope restrictions constrain later token issuance (1716.96276ms)
+✔ Document fetch policy rejects arbitrary URLs, redirects, mismatches, symmetric metadata, private keys and excess bodies (6688.506115ms)
+✔ The observed Claude Code document allows only declared loopback hosts/path, and codes bind the actual port (1786.536464ms)
+✔ Unknown kid rotates a cached JWKS once and metadata cache respects no-store, Age and its entry budget (9857.155451ms)
+✔ Registered-client consent shows the exact destination, escapes names, and supports cancel/approve without sharing artwork (10136.32392ms)
+✔ DCR none: consent, PKCE, scope/resource binding, refresh and authenticated revocation (4099.063277ms)
+✔ DCR client_secret_post: consent, PKCE, scope/resource binding, refresh and authenticated revocation (3386.074517ms)
+✔ DCR client_secret_basic: consent, PKCE, scope/resource binding, refresh and authenticated revocation (4076.252879ms)
+✔ RFC defaults, exact redirects, unsupported metadata, and mixed client authentication fail safely (5244.291356ms)
+✔ Registration rate and global storage bounds do not create accounts or delete existing clients (4853.716883ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 27
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 274460.777575

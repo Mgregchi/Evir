@@ -1,6 +1,6 @@
 # Cloudflare accounts and authenticated MCP
 
-**Connector update:** [Automatic client registration](55-mcp-client-registration.md) now supports DCR and confidential-client authentication. Most hosted connections can register automatically without `OAUTH_CLIENTS`. Existing predefined clients remain available.
+**Connector update:** [Automatic client registration](55-mcp-client-registration.md) now supports DCR and confidential-client authentication. Most hosted connections can register automatically without `OAUTH_CLIENTS`. Existing predefined clients remain available. [Published identities and signed assertions](56-published-client-identities.md) now add a curated ChatGPT/Claude profile without new dashboard settings.
 
 **Live-session update:** [Live Studio pairing](54-live-studio-pairing.md) now adds explicit project sharing, scene scopes and a WebSocket bridge. The dashboard settings below stay the same; the next Git deployment provisions its namespace and D1 migration automatically.
 
@@ -69,7 +69,7 @@ Prefer [automatic registration](55-mcp-client-registration.md) for supported hos
 ]
 ```
 
-Replace both placeholders with that platform's actual settings. Never use wildcard callbacks or copy an assumed ChatGPT/Claude callback from an example. No client secret is used: the client must support public-client `none` authentication with PKCE. Dynamic registration now supports `none`, `client_secret_post` and `client_secret_basic`; see the connector guide instead of adding those credentials to this predefined-public-client variable. CIMD and signed client assertions remain separate adapters and are not advertised. Groq supports remote MCP with authentication headers; its host application must acquire and refresh Evir OAuth credentials. No named platform pairing has been observed in this workspace.
+Replace both placeholders with that platform's actual settings. Never use wildcard callbacks or copy an assumed ChatGPT/Claude callback from an example. No client secret is used: the client must support public-client `none` authentication with PKCE. Dynamic registration now supports `none`, `client_secret_post` and `client_secret_basic`; see the connector guide instead of adding those credentials to this predefined-public-client variable. [Published identities and signed client assertions](56-published-client-identities.md) are now advertised through a separate curated ChatGPT/Claude profile; the predefined-client setting above remains public-client only. Groq supports remote MCP with authentication headers; its host application must acquire and refresh Evir OAuth credentials. No named platform pairing has been observed in this workspace.
 
 The client opens Evir's consent page. Users sign in with a passkey and choose **Allow connection** or **Cancel**. The first account increment exposed only `account:read` and `get_connection_status`. [The live-session increment](54-live-studio-pairing.md) now adds scene reading, editing and presentation scopes, separately granted project access from Studio, and the shared atomic command contract. Existing account-only tokens do not gain these permissions: reauthorize the connection when scene access is wanted. Signing in alone still does not share any project. Local stdio scene tools remain available.
 

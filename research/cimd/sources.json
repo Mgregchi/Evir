@@ -1,0 +1,98 @@
+[
+  {
+    "url": "https://developers.openai.com/plugins/build/auth",
+    "retrievedAt": "2026-10-23T17:15:29.927360+00:00",
+    "status": 200,
+    "finalUrl": "https://developers.openai.com/plugins/build/auth",
+    "bytes": 499482,
+    "sha256": "d53d26253679f9d3d34faaba837c12c72be4a5af492ac41f6b81a1760788e841"
+  },
+  {
+    "url": "https://claude.com/docs/connectors/custom/add-unlisted",
+    "retrievedAt": "2026-10-23T17:15:30.725386+00:00",
+    "status": 200,
+    "finalUrl": "https://claude.com/docs/connectors/custom/add-unlisted",
+    "bytes": 521510,
+    "sha256": "731c0ef72be289c03b1a9407c9fc45d953e6fe70bfbfae481dcd8e2e957f96b3"
+  },
+  {
+    "url": "https://claude.com/docs/connectors/building/authentication",
+    "retrievedAt": "2026-10-23T17:15:31.832558+00:00",
+    "status": 200,
+    "finalUrl": "https://claude.com/docs/connectors/building/authentication",
+    "bytes": 576174,
+    "sha256": "e55bec4ca321c7487d57ea34042d4ee866cc4c31803cf875c54c2df1d182768d"
+  },
+  {
+    "url": "https://claude.com/docs/connectors/building/lazy-authentication.md",
+    "retrievedAt": "2026-10-23T17:15:32.844593+00:00",
+    "status": 200,
+    "finalUrl": "https://claude.com/docs/connectors/building/lazy-authentication.md",
+    "bytes": 22177,
+    "sha256": "73e62b86ad55a98282706d4d9676ccd4b21d47f29ec56a05852794450685461d"
+  },
+  {
+    "url": "https://claude.ai/oauth/claude-code-client-metadata",
+    "retrievedAt": "2026-10-23T17:15:33.446382+00:00",
+    "status": 200,
+    "finalUrl": "https://claude.ai/oauth/claude-code-client-metadata",
+    "bytes": 317,
+    "sha256": "844b69e632732c325e3bae21ab324fa3d5353ba2e15890a384e8885e9837e5a4"
+  },
+  {
+    "url": "https://chatgpt.com/oauth/client.json",
+    "retrievedAt": "2026-10-23T17:15:33.774422+00:00",
+    "status": 200,
+    "finalUrl": "https://chatgpt.com/oauth/client.json",
+    "bytes": 544,
+    "sha256": "5b62ad00a6d2562dda7b8e373611c41e09967518f5fc0824b243a8e1a29f915e"
+  },
+  {
+    "url": "https://chatgpt.com/oauth/jwks.json",
+    "retrievedAt": "2026-10-23T17:15:34.452430+00:00",
+    "status": 200,
+    "finalUrl": "https://chatgpt.com/oauth/jwks.json",
+    "bytes": 438,
+    "sha256": "d6e3f50d10230a5238732ae2d73d98c4f4721a171d22dbfc79a2cff0c2ebc114"
+  },
+  {
+    "url": "https://modelcontextprotocol.io/specification/2025-11-25/basic/authorization",
+    "retrievedAt": "2026-10-23T17:15:34.766370+00:00",
+    "status": 200,
+    "finalUrl": "https://modelcontextprotocol.io/specification/2025-11-25/basic/authorization",
+    "bytes": 623615,
+    "sha256": "e1b46e9ab9725a6956fbd9cb1ffa9515cea3047f5eb09f9d052905f33477b605"
+  },
+  {
+    "url": "https://drafts.oauth.net/draft-ietf-oauth-client-id-metadata-document/draft-ietf-oauth-client-id-metadata-document.html",
+    "retrievedAt": "2026-10-23T17:15:35.717181+00:00",
+    "status": 200,
+    "finalUrl": "https://drafts.oauth.net/draft-ietf-oauth-client-id-metadata-document/draft-ietf-oauth-client-id-metadata-document.html",
+    "bytes": 116338,
+    "sha256": "4f01ad50db149781eac814b92cbf2d35c0a1b4e58a3487421f66142de787d75f"
+  },
+  {
+    "url": "https://www.rfc-editor.org/rfc/rfc7523",
+    "retrievedAt": "2026-10-23T17:15:36.925331+00:00",
+    "status": 200,
+    "finalUrl": "https://www.rfc-editor.org/info/rfc7523/",
+    "bytes": 207615,
+    "sha256": "96f0582e031b38d31b4bf7e3915374df1a3c9afa2e37e598c40fb5aa478c7eff"
+  },
+  {
+    "url": "https://www.rfc-editor.org/rfc/rfc8725",
+    "retrievedAt": "2026-10-23T17:15:38.978892+00:00",
+    "status": 200,
+    "finalUrl": "https://www.rfc-editor.org/info/rfc8725/",
+    "bytes": 366648,
+    "sha256": "cc9fd736777a9904ec525bb2b89f104d24e9f49728f768bb38fed120620e55a8"
+  },
+  {
+    "url": "https://github.com/panva/jose/blob/v6.2.13/README.md",
+    "retrievedAt": "2026-10-23T17:15:40.771984+00:00",
+    "status": 200,
+    "finalUrl": "https://github.com/panva/jose/blob/v6.2.13/README.md",
+    "bytes": 300147,
+    "sha256": "03e5272771b2806369a809d3144e92c1b3243e96b64697f8fe6f64a717893822"
+  }
+]

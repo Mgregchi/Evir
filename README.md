@@ -155,6 +155,8 @@ The [Studio interaction guide and remaining-work plan](docs/25-studio-navigation
 
 [Path continuation](docs/36-path-continuation.md) extends open unskinned paths from either endpoint with Pen or numeric curves, preserving their identity and paint. Sprig adds an original completed study, starting project and point recipe.
 
-Static gradient authoring and the original Dawn study are documented in [gradient acceptance](docs/28-studio-gradient-paints.md). The proposed independent persistence/live-session backend, remote MCP tools and agent-defined audience controls are recorded in [backend and live agent sessions](docs/29-backend-and-live-agent-sessions.md); scene persistence/live-session services remain proposals. [Cloudflare passkey accounts](docs/53-cloudflare-accounts-and-mcp.md) and [explicit live Studio pairing](docs/54-live-studio-pairing.md) are implemented separately.
+Static gradient authoring and the original Dawn study are documented in [gradient acceptance](docs/28-studio-gradient-paints.md). The proposed independent persistence/live-session backend, remote MCP tools and agent-defined audience controls are recorded in [backend and live agent sessions](docs/29-backend-and-live-agent-sessions.md); durable scene persistence and multi-user collaboration remain proposals. [Cloudflare passkey accounts](docs/53-cloudflare-accounts-and-mcp.md) and [explicit live Studio pairing](docs/54-live-studio-pairing.md) are implemented separately.
 
 Hosted agent connection setup: [automatic MCP client registration](docs/55-mcp-client-registration.md), including current ChatGPT/Claude choices, Groq host responsibilities and explicit evidence limits.
+
+[Published client identities and signed assertions](docs/56-published-client-identities.md) extend the connector profile without new owner configuration. [All remaining work](docs/57-remaining-work.md) separates software, external evidence, postponed physical tests and optional research.
