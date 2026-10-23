@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-10-23T17:22:37.438198+00:00",
-  "status": "service, frontend, build and dry-run passed; website regression still running",
+  "checkedAt": "2026-10-23T17:28:18.303084+00:00",
+  "status": "All local acceptance passed. GitHub execution blocked by account billing lock; named-host and production observations remain open.",
   "baseMain": "08c659cab3955b0357f853cda5297fd3dd043667",
   "dependency": {
     "pullRequest": 44,
@@ -37,6 +37,23 @@
       "passed": true,
       "log": "logs/packaging.log",
       "note": "Existing deployConfig with fake D1 UUID; wrangler deploy --dry-run. No provider state changed."
+    },
+    "web": {
+      "command": "npm run test:web",
+      "passed": true,
+      "pageConfigurationChecks": 22,
+      "officialRuntimeComparisons": 558,
+      "galleryStudies": 32,
+      "log": "logs/web.log",
+      "oracleReport": "showcase-oracles.json",
+      "galleryReport": "gallery.json",
+      "note": "Includes three responsive character styles, motorcycle control/lifecycle, beginner Learn at four widths, subpath routing and automated accessibility."
+    },
+    "experience": {
+      "command": "npm run test:experience",
+      "passed": true,
+      "log": "logs/quality.log",
+      "report": "experience-quality.json"
     }
   },
   "browserReport": "browser.json",
@@ -85,5 +102,36 @@
     "tests/service/published.test.mjs": "9050852c847bf1cc957a70bf65a29811c42ca77d971b5e3450fb9557416b2e20",
     "tests/service/registration-browser.test.mjs": "eeffce049cc5a08ee176c0d3b3bf4e5ef50f99c8e2b8aaa88ef493a89cd4ccb6",
     "tests/service/registration.test.mjs": "8192e234b3dd9863cf74a33f1b348b7fda974b621635ea80811344a4f751b70e"
+  },
+  "github": {
+    "checkedAt": "2026-10-23T17:26:00.625182+00:00",
+    "pullRequest": 45,
+    "head": "f1ac05027eca1768c456a481c9c2e8ff2e219c81",
+    "status": "Blocked before execution by account billing lock; not a test-code failure or CI pass.",
+    "annotation": "The job was not started because your account is locked due to a billing issue.",
+    "runs": [
+      39994805400,
+      39994805461,
+      39994805636
+    ]
+  },
+  "evidenceHashes": {
+    "README.md": "57b0c5761d70972da40661b88ae77672725026062658c53181dbdb1651dccd08",
+    "browser.json": "a62e8c3cd030fa00a733545993ce71688df4c910b849e30567b16aa508ec7389",
+    "consent-1440.png": "fa712be3de8e63ff1d4865fc03faa2dc9c01ab3bd74da74254b19ac28554be0e",
+    "consent-320.png": "cfb6e4c96d29f3d0f3eb22e8e5754b6686b3dc884aee196d534abd6699e9ec15",
+    "consent-390.png": "d39d842890c8a2e8f6a32fb2ad0943c6bb7adebc8b8dc59993f6f8211ea5058d",
+    "experience-quality.json": "6f248bf88e57e2c6efc90e1fcae16a8d26220d45072cad68833dc0f925ae3e26",
+    "gallery.json": "c0cea283dbca6770ec5737dd7ffc8b901f3aa68cd574e160235693dbf44a28b2",
+    "logs/build.log": "8c57833cda0358f2bea578f6cc9b71bfa213167d2d3873a8603f38b0adee2060",
+    "logs/chatgpt-test.log": "108c10c30edadbf76148f34510707edb11d2becd7376a13c6d6ddf59193981c3",
+    "logs/frontend.log": "b3120a63928b339c9fba18b633fde638dd27e9cda092ea94ad444ccaabd89a6f",
+    "logs/packaging.log": "7464809ece7ed37cb7472ae10a2f34dd1ff8b98e224595fa8636c28d473f904c",
+    "logs/quality.log": "b2192dc7ff63ffde09b94cc387f0e74179720e965b2ae1dad64081e94b1ff149",
+    "logs/service-final.log": "0d2e1168ead9433310912883fa1d3495c819fb1b2618cc55acd20a9a5fbd74c0",
+    "logs/web.log": "6782ffd5d8fe6a773d26d4e9dd6c9e5c53c00aaaa0c336fcf84eb7eb38a69922",
+    "public-document.json": "64cf74b2a1d60cab423ab85f7e460990e2faaf11e1eed9617da905061c20c903",
+    "retry-390.png": "63120b2790439c4e34e5d97cfecd0c990dd0f1bbcebb746d3de10a5212a24994",
+    "showcase-oracles.json": "00b12b5fc87c9dda3145e5b543d5fa0a2dd9a08b77c7d4197ab5efb6a51a45ee"
   }
 }

@@ -28,6 +28,7 @@ Worker/D1 passkey accounts, recovery, OAuth, automatic registration, authenticat
 
 These are not satisfied by automated local checks:
 
+- Restore GitHub Actions execution: checks on this increment were blocked before starting by the repository account billing lock. Local passing checks do not replace a hosted CI result.
 - Observe the Git-connected Cloudflare production deployment: D1 migration, resource permissions, dashboard-variable preservation and recovery from failed deployment. The deployment helper and migrations have local acceptance, but no production deployment is performed by this increment.
 - Pair actual ChatGPT, Claude, Claude Code, Groq forwarding applications and other intended hosts. Record host versions, consent, scopes, refresh, Stop and publisher/key behavior. Synthetic OAuth/MCP flows and the public Claude Code metadata fetch do not establish named-host pairing.
 - Obtain controlled, matched Rive Editor exports with equivalent geometry, rigs, state/data contracts and assets. Supplied complex scenes are exploration inputs, not equivalent benchmark fixtures. The supplied room-decor attachment exceeded the transfer tool's 32 MiB limit; do not count it as tested. General editable import remains bounded even where original-file viewing is available.
