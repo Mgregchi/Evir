@@ -1,0 +1,44 @@
+
+> evir-workspace@0.1.0 test:frontend
+> node --test tests/frontend/*.test.mjs
+
+✔ momo: original curves stay editable, all expression transitions reset pose, loops keep moving (113.421714ms)
+✔ nura: original curves stay editable, all expression transitions reset pose, loops keep moving (143.377862ms)
+✔ otto: original curves stay editable, all expression transitions reset pose, loops keep moving (149.936017ms)
+✔ Nura scarf has differing control weights and deforms relative to the body (14.326442ms)
+✔ one address configures public metadata and an internal Studio route (4.0781ms)
+✔ web and Studio paths follow a prefixed SITE_URL without a second address (0.669548ms)
+✔ unconfigured web builds keep local navigation and a public preview origin (0.855756ms)
+✔ legacy site addresses and public optional links remain compatible (2.100052ms)
+✔ obsolete Studio settings cannot redirect the unified app to another origin (0.920131ms)
+✔ invalid site addresses and unsafe external links fail early (2.125653ms)
+✔ Outing starting paths and its explicit join recipe reproduce the published curved fox study (65.80785ms)
+✔ Every registered study has valid editable source and its exact compatible export (350.503003ms)
+✔ Bloom contains mixed independent control weights and a visible deforming stem (5.711414ms)
+✔ Tempo demonstrates distinct hold/linear/cubic timing and color changes (3.001255ms)
+✔ Signal gates typed inputs, consumes early triggers and restores defaults on reset (17.032152ms)
+✔ Measure provides a separately validated guide preset and three independent alignment roots (12.31851ms)
+✔ Sprig retains the open seed geometry and paint while its continuation recipe reproduces the finished study (14.375698ms)
+✔ Loom has reusable row/column guides and fixed-key spacing that fits the authored weave bands (27.077984ms)
+✔ Ribbon uses bounded pressure outlines and a constant-width fallback, with no new runtime stroke fields (1.173884ms)
+✔ Preview schedules no frames while inactive, clamps time and resumes without hidden-time jumps (3.251495ms)
+✔ A renderer failure stops the loop and invokes recovery once (0.34114ms)
+✔ motorcycle accelerates, brakes to rest, preserves wheel phase and resets every control (99.839735ms)
+✔ bumps are one-shot, independently composited and spatially spaced; road and wheels share travel distance (103.634852ms)
+✔ substeps agree across caller frame rates and reject invalid controls without mutating state (532.070945ms)
+✔ turn signal repeats exactly three cycles, then stays off independently of wheel motion (101.181262ms)
+✔ raw crawler HTML includes a working image in default builds without JavaScript (1041.159929ms)
+✔ raw crawler HTML includes a working image in override builds without JavaScript (721.205406ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 27
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2651.995783
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

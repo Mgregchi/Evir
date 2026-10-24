@@ -5,7 +5,8 @@
   "type": "module",
   "exports": {
     ".": "./index.mjs",
-    "./live-session": "./live-session.mjs"
+    "./live-session": "./live-session.mjs",
+    "./maintenance": "./maintenance.mjs"
   },
   "dependencies": {
     "@evir/commands": "0.1.0",

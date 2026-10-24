@@ -20,9 +20,7 @@
   "main": "./worker.mjs",
   "keep_vars": true,
   "triggers": {
-    "crons": [
-      "17 3 * * *"
-    ]
+    "crons": []
   },
   "durable_objects": {
     "bindings": [

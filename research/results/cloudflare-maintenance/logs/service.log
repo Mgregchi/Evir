@@ -1,0 +1,32 @@
+
+> evir-workspace@0.1.0 test:service
+> node --test --test-concurrency=1 tests/service/*.test.mjs
+
+✔ Passkey challenges, origin isolation, recovery and account ownership run against real D1 (2006.823167ms)
+✔ OAuth PKCE, exact redirects, single-use codes, refresh rotation and revocation protect MCP (1523.524827ms)
+✔ Oversized input, expired codes, rate limits and unsafe origins fail closed (1003.596207ms)
+✔ A virtual authenticator creates and signs into an email-free account, with responsive consent and recovery (6274.35896ms)
+✔ Cloudflare configuration preserves dashboard values and binds only an explicit existing D1 database (3.648088ms)
+✔ Migration failure stops publication; repeat deployment uses the migration ledger without destructive resets (14.743356ms)
+✔ An authenticated MCP caller edits the real Studio history, retries safely and binds live audience controls (6122.136533ms)
+✔ Live sharing binds one account, grant and tab key; broker relays once and stops on revocation (1216.331405ms)
+✔ OAuth scene scopes cannot escalate, and Studio can grant a smaller capability set (967.89029ms)
+✔ The broker does not queue offline work and bounds in-flight delivery; timeout is explicitly uncertain (10791.71611ms)
+✔ Studio permissions narrow a fully authorized agent and another grant on the same account cannot inherit the share (1096.658999ms)
+✔ Concurrent request housekeeping uses one shared D1 lease and preserves live/security records (2318.208628ms)
+✔ Failed or interrupted housekeeping retries after a short lease, not a full day (1311.140717ms)
+✔ The real Worker schedules housekeeping only for service traffic; expiry rejects without deletion (1455.757729ms)
+✔ Pinned Wrangler applies the D1 migration ledger twice without resetting existing account data (11817.576564ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 52101.338632
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice
