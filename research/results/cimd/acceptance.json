@@ -1,0 +1,137 @@
+{
+  "checkedAt": "2026-10-23T17:28:18.303084+00:00",
+  "status": "All local acceptance passed. GitHub execution blocked by account billing lock; named-host and production observations remain open.",
+  "baseMain": "08c659cab3955b0357f853cda5297fd3dd043667",
+  "dependency": {
+    "pullRequest": 44,
+    "head": "c78a06641392d0a431aa33b14a7e1c4789b50ba0",
+    "stateAtStart": "OPEN"
+  },
+  "scope": "Synthetic clients with ephemeral keys, real local workerd/D1/Durable Objects and cloud Chromium. Public production-loader fetches are separate observations. No remote deploy/migrations, named-host pairing, physical-device or human-accessibility claims.",
+  "local": {
+    "service": {
+      "command": "npm run test:service",
+      "passed": 27,
+      "failed": 0,
+      "log": "logs/service-final.log"
+    },
+    "chatgptSnapshot": {
+      "command": "node --test --test-name-pattern='observed ChatGPT' tests/service/published.test.mjs",
+      "passed": 1,
+      "failed": 0,
+      "log": "logs/chatgpt-test.log",
+      "note": "Added after the full suite; distinct from the 27 cases above. Combined current coverage: 28 distinct cases."
+    },
+    "frontend": {
+      "command": "npm run test:frontend",
+      "passed": 27,
+      "failed": 0,
+      "log": "logs/frontend.log"
+    },
+    "build": {
+      "command": "npm run build",
+      "passed": true,
+      "log": "logs/build.log"
+    },
+    "workerPackaging": {
+      "passed": true,
+      "log": "logs/packaging.log",
+      "note": "Existing deployConfig with fake D1 UUID; wrangler deploy --dry-run. No provider state changed."
+    },
+    "web": {
+      "command": "npm run test:web",
+      "passed": true,
+      "pageConfigurationChecks": 22,
+      "officialRuntimeComparisons": 558,
+      "galleryStudies": 32,
+      "log": "logs/web.log",
+      "oracleReport": "showcase-oracles.json",
+      "galleryReport": "gallery.json",
+      "note": "Includes three responsive character styles, motorcycle control/lifecycle, beginner Learn at four widths, subpath routing and automated accessibility."
+    },
+    "experience": {
+      "command": "npm run test:experience",
+      "passed": true,
+      "log": "logs/quality.log",
+      "report": "experience-quality.json"
+    }
+  },
+  "browserReport": "browser.json",
+  "publicFetchReport": "public-document.json",
+  "versions": {
+    "node": "v24.19.0",
+    "jose": "6.2.13",
+    "wrangler": "4.151.3",
+    "miniflare": "4.20260730.0",
+    "playwright": "1.63.0"
+  },
+  "sourceHashes": {
+    "package-lock.json": "ae36df5fd90dcbabc0bc0f5395446746de2cdca64c4cff8ca2529e822ceebbc8",
+    "packages/service/account-client.mjs": "3855cb26ad0038e9d2e445be2a636bf5ad8f4d92055580f384122bc83b6dcbdc",
+    "packages/service/account-page.mjs": "feb238036e06cc9c5371feb4d5dc6d81dc8ed866ddab649670371f48d8e75727",
+    "packages/service/accounts.mjs": "ba0ffd7fecc1862047ed2131719a36006390fd5082f372ec8039adb6496acce3",
+    "packages/service/index.mjs": "03ef1922bb68bb00e41f5ff1e392f78604e0e6f52ef7e0ceceb489619e5d3d2e",
+    "packages/service/live-session.mjs": "065c7e47ad21a23f466b709106cfc40f1bd608ceafd95171812e2b91ee2bcf20",
+    "packages/service/live.mjs": "b714f4460eaa4ef74fbef94668b2a9cae2d8a7bbaffe450dab2a0f537cf2b745",
+    "packages/service/mcp.mjs": "6af5bad973e18ff413d1b706327909e872ea8bf38d892c170fbb0490b9a0348e",
+    "packages/service/migrations/0001_identity.sql": "3be94e0f9b07cc04bc536ae9af5f95ba3a501c9899ed43e6d33bbcd07ae9a28e",
+    "packages/service/migrations/0002_live_sessions.sql": "d31b9fd1f4ba5a2ae0e282ac6391fe67dc0d840b5286a8396596cb30cda00b8e",
+    "packages/service/migrations/0003_oauth_clients.sql": "e48119ecd73c49472319fdb76f139254ed559cfc2f7421133c08e51d22dc9cf4",
+    "packages/service/migrations/0004_oauth_assertions.sql": "8748f76c0043bd2ae783d0d35b203fa2aabf8af328e374c55eaa3f5f67f2c796",
+    "packages/service/oauth-assertions.mjs": "c7d4c3cea28c8c7043d8183f836628f376c95fab74a17d54aacdf0dd85497bdd",
+    "packages/service/oauth-clients.mjs": "42a82c0941f265b28e993241bbdb851d244468c7204505392c222dd07cf6355f",
+    "packages/service/oauth-policy.mjs": "33ad512e53c9077ba665ab4e0c94b0895914da2979f491539bc768d8832b116e",
+    "packages/service/oauth-published.mjs": "15ce26b4c047e97c95b825a402960a1f571ff776a3c06d1e91a1e523c718d097",
+    "packages/service/oauth.mjs": "9c0e2a4d53ca68665f47f5629347c0429a3061b6466159894d4556a2190e8230",
+    "packages/service/passkeys.mjs": "6c5b466b83701c7e43282df62aff8b3beb91103d70bc744d9d2b72a143cfe889",
+    "packages/service/security.mjs": "576a1846de08ec0a2288f72d3a459f5e58d2033c30875eb073eef0a44f9a0b47",
+    "research/cimd/chatgpt-jwks.json": "d6e3f50d10230a5238732ae2d73d98c4f4721a171d22dbfc79a2cff0c2ebc114",
+    "research/cimd/chatgpt-metadata.json": "5b62ad00a6d2562dda7b8e373611c41e09967518f5fc0824b243a8e1a29f915e",
+    "research/cimd/claude-code-metadata.json": "844b69e632732c325e3bae21ab324fa3d5353ba2e15890a384e8885e9837e5a4",
+    "research/cimd/sources.json": "c5d35ac8bfe12f2de3cf57ab70242f95ef09c5646bf2571d790e835cdd34dc9a",
+    "tests/service/auth.test.mjs": "86b1a347eb64b91ee8db64668c9b6e435e43e3a9153fc0556eb2ff93cece8de3",
+    "tests/service/browser.test.mjs": "b88c128e37ea58934991ea1f48f6957f235ab95fa9b337363497ec84a2c293ea",
+    "tests/service/deploy.test.mjs": "20a47dee9ca4e38f671863b41799fb7903a68ee10507a866572f1f198f42b9e7",
+    "tests/service/harness.mjs": "26d3921734dcd8756317ab54b8aaaa4551dcc395560663f91f63f6ded44c57e6",
+    "tests/service/live-browser.test.mjs": "40c2f78e12da83c2c5607b9b5d6bfe01404dec8bc2aacfce9224289d056a4b0f",
+    "tests/service/live-fixtures.mjs": "daeaa9b2d604499f5d34d8c9ef8164ee780949252a54cc5f82c64d82f93a8ae6",
+    "tests/service/live.test.mjs": "b729800e23b89c02e5571eb40f424971cec727e1c3d1b30f77765720858107aa",
+    "tests/service/migrations.test.mjs": "4eb2d206fe6ee9b98bbfceb0020443a4a06661c1608182548c60197700407a13",
+    "tests/service/published-browser.test.mjs": "dfa9bf8ad9df9e13a560f55a3ffdc91de15dadbf3ce267c4144325ce8487d2ae",
+    "tests/service/published-fixtures.mjs": "8882ff41c1082186cd5334e6761413f0d74d7e4c5c7f27cedd90921c8a0fdf13",
+    "tests/service/published.test.mjs": "9050852c847bf1cc957a70bf65a29811c42ca77d971b5e3450fb9557416b2e20",
+    "tests/service/registration-browser.test.mjs": "eeffce049cc5a08ee176c0d3b3bf4e5ef50f99c8e2b8aaa88ef493a89cd4ccb6",
+    "tests/service/registration.test.mjs": "8192e234b3dd9863cf74a33f1b348b7fda974b621635ea80811344a4f751b70e"
+  },
+  "github": {
+    "checkedAt": "2026-10-23T17:26:00.625182+00:00",
+    "pullRequest": 45,
+    "head": "f1ac05027eca1768c456a481c9c2e8ff2e219c81",
+    "status": "Blocked before execution by account billing lock; not a test-code failure or CI pass.",
+    "annotation": "The job was not started because your account is locked due to a billing issue.",
+    "runs": [
+      39994805400,
+      39994805461,
+      39994805636
+    ]
+  },
+  "evidenceHashes": {
+    "README.md": "57b0c5761d70972da40661b88ae77672725026062658c53181dbdb1651dccd08",
+    "browser.json": "a62e8c3cd030fa00a733545993ce71688df4c910b849e30567b16aa508ec7389",
+    "consent-1440.png": "fa712be3de8e63ff1d4865fc03faa2dc9c01ab3bd74da74254b19ac28554be0e",
+    "consent-320.png": "cfb6e4c96d29f3d0f3eb22e8e5754b6686b3dc884aee196d534abd6699e9ec15",
+    "consent-390.png": "d39d842890c8a2e8f6a32fb2ad0943c6bb7adebc8b8dc59993f6f8211ea5058d",
+    "experience-quality.json": "6f248bf88e57e2c6efc90e1fcae16a8d26220d45072cad68833dc0f925ae3e26",
+    "gallery.json": "c0cea283dbca6770ec5737dd7ffc8b901f3aa68cd574e160235693dbf44a28b2",
+    "logs/build.log": "8c57833cda0358f2bea578f6cc9b71bfa213167d2d3873a8603f38b0adee2060",
+    "logs/chatgpt-test.log": "108c10c30edadbf76148f34510707edb11d2becd7376a13c6d6ddf59193981c3",
+    "logs/frontend.log": "b3120a63928b339c9fba18b633fde638dd27e9cda092ea94ad444ccaabd89a6f",
+    "logs/packaging.log": "7464809ece7ed37cb7472ae10a2f34dd1ff8b98e224595fa8636c28d473f904c",
+    "logs/quality.log": "b2192dc7ff63ffde09b94cc387f0e74179720e965b2ae1dad64081e94b1ff149",
+    "logs/service-final.log": "0d2e1168ead9433310912883fa1d3495c819fb1b2618cc55acd20a9a5fbd74c0",
+    "logs/web.log": "6782ffd5d8fe6a773d26d4e9dd6c9e5c53c00aaaa0c336fcf84eb7eb38a69922",
+    "public-document.json": "64cf74b2a1d60cab423ab85f7e460990e2faaf11e1eed9617da905061c20c903",
+    "retry-390.png": "63120b2790439c4e34e5d97cfecd0c990dd0f1bbcebb746d3de10a5212a24994",
+    "showcase-oracles.json": "00b12b5fc87c9dda3145e5b543d5fa0a2dd9a08b77c7d4197ab5efb6a51a45ee"
+  }
+}

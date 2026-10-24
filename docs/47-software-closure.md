@@ -1,5 +1,8 @@
 # Remaining software closure
 
+**Current scope:** use [the complete remaining-work register](57-remaining-work.md) and [hosted connector guide](56-published-client-identities.md) for current status. The dated acceptance and prototype boundaries below remain historical evidence.
+
+
 **22 October update:** the owner has now authorized and selected Worker/D1 account services. [Passkey accounts and authenticated MCP](53-cloudflare-accounts-and-mcp.md) implement accounts, with [explicit live Studio pairing](54-live-studio-pairing.md) now available. Durable scene storage and multi-user collaboration remain open. The deferred-backend statement below records the earlier software pass.
 
 20 October 2026. The user authorized continuing all remaining software work. Physical-device testing and hosted backend services remain deferred. The initial implementation starts from merged PR 40 (`c102907`). Primary-source retrieval outcomes and hashes are in [the source ledger](../research/software-closure/sources.json); unavailable pages provide no feature evidence.

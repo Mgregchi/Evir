@@ -8,7 +8,8 @@
     "./live-session": "./live-session.mjs"
   },
   "dependencies": {
+    "@evir/commands": "0.1.0",
     "@simplewebauthn/server": "14.0.3",
-    "@evir/commands": "0.1.0"
+    "jose": "6.2.13"
   }
 }

@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-10-23T17:18:19.907Z",
+  "browser": "153.0.8010.12",
+  "scope": "Synthetic native-client callback with observed public Claude Code metadata, cloud Chromium and real local workerd/D1. No real Claude Code/ChatGPT/Claude pairing or physical/human evidence.",
+  "widths": [
+    320,
+    390,
+    1440
+  ],
+  "automatedAccessibilityViolations": 0,
+  "checks": [
+    "Branded publisher-failure page with manual Retry",
+    "Uncached failed document recovers",
+    "Consent names the publisher hostname and distinguishes document from caller identity",
+    "Actual native callback port is visible",
+    "Responsive consent and automated accessibility",
+    "Callback receives state/issuer/code but no Evir cookie",
+    "PKCE exchange binds the actual callback URI",
+    "No DCR registration or Studio share is created"
+  ]
+}

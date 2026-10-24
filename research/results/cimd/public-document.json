@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-10-23T17:18:16.780Z",
+  "scope": "Production metadata/key loader in Node through the workspace proxy. Public fetch/validation only; no actual host OAuth pairing or production Worker deployment.",
+  "results": [
+    {
+      "url": "https://claude.ai/oauth/claude-code-client-metadata",
+      "status": "accepted",
+      "publisher": "claude.ai",
+      "authMethods": [
+        "none"
+      ],
+      "allowLoopback": true,
+      "redirects": [
+        "http://localhost/callback",
+        "http://127.0.0.1/callback"
+      ]
+    },
+    {
+      "url": "https://chatgpt.com/oauth/client.json",
+      "status": "accepted",
+      "publisher": "chatgpt.com",
+      "authMethods": [
+        "none",
+        "private_key_jwt"
+      ],
+      "allowLoopback": false,
+      "redirects": [
+        "https://chatgpt.com/connector_platform_oauth_redirect"
+      ],
+      "publicKeyIds": [
+        "cimd-20260428030119"
+      ]
+    }
+  ]
+}

@@ -1,18 +1,9 @@
 import {HttpError,body,hash,json,limit,now,random} from './security.mjs';
 
-export const scope='account:read';
-export const scopes=[scope,'scene:read','scene:write','scene:control'];
-export const clientAuthMethods=['none','client_secret_post','client_secret_basic'];
-export function parseScopes(value=scope){
-  if(typeof value!=='string')throw new HttpError(400,'Choose supported account and scene permissions.');
-  const selected=value.split(' ');
-  if(!selected.includes(scope)||new Set(selected).size!==selected.length||selected.some(s=>!scopes.includes(s))||selected.some(s=>['scene:write','scene:control'].includes(s))&&!selected.includes('scene:read'))throw new HttpError(400,'Choose supported account and scene permissions. Scene editing/control also require scene reading.');
-  return scopes.filter(s=>selected.includes(s)).join(' ');
-}
-function validRedirect(value){
-  if(typeof value!=='string'||!value||value.length>2048||/[\u0000-\u0020\u007f*#]/.test(value))return false;
-  try{const u=new URL(value);return u.protocol==='https:'&&!u.username&&!u.password&&!u.hash;}catch{return false;}
-}
+import {clientAuthMethods,scopes,parseScopes,validRedirect} from './oauth-policy.mjs';
+import {publishedClient} from './oauth-published.mjs';
+import {verifyClientAssertion} from './oauth-assertions.mjs';
+export {scope,scopes,parseScopes,clientAuthMethods} from './oauth-policy.mjs';
 // Dashboard-defined clients retain the public/PKCE contract from the account release.
 export function clients(env){
   let list;try{list=typeof env.OAUTH_CLIENTS==='string'?JSON.parse(env.OAUTH_CLIENTS):(env.OAUTH_CLIENTS||[]);}catch{throw new HttpError(503,'Connection configuration is invalid.');}
@@ -25,10 +16,10 @@ export function clients(env){
   return list.map(c=>({...c,token_endpoint_auth_method:'none',grant_types:['authorization_code','refresh_token'],scope:scopes.join(' '),registration:'predefined'}));
 }
 export async function findClient(env,id){
-  if(typeof id!=='string'||!id||id.length>200)return null;
+  if(typeof id!=='string'||!id||id.length>512)return null;
   const predefined=clients(env).find(c=>c.client_id===id);if(predefined)return predefined;
   const row=await env.DB.prepare('SELECT metadata,secret_hash FROM oauth_clients WHERE id = ?').bind(id).first();
-  return row?{...JSON.parse(row.metadata),secret_hash:row.secret_hash,registration:'dynamic'}:null;
+  return row?{...JSON.parse(row.metadata),secret_hash:row.secret_hash,registration:'dynamic'}:publishedClient(id);
 }
 function invalid(message,code='invalid_client_metadata'){const e=new HttpError(400,message);e.oauthError=code;throw e;}
 function choices(value,fallback,allowed){
@@ -61,6 +52,10 @@ export async function registerClient(req,env){
 }
 export async function authenticateClient(req,env,params){
   const authorization=req.headers.get('Authorization');let id=params.get('client_id'),secret=params.get('client_secret'),method=secret===null?'none':'client_secret_post';
+  if(params.has('client_assertion')||params.has('client_assertion_type')){
+    if(authorization!==null||secret!==null||params.get('client_assertion_type')!=='urn:ietf:params:oauth:client-assertion-type:jwt-bearer'||!params.get('client_assertion'))return null;
+    method='private_key_jwt';
+  }
   if(authorization!==null){
     if(secret!==null||authorization.length>2048||!/^Basic [A-Za-z0-9+/]+={0,2}$/i.test(authorization))return null;
     try{
@@ -71,7 +66,8 @@ export async function authenticateClient(req,env,params){
     }catch{return null;}
   }
   const client=await findClient(env,id);
-  if(!client||client.token_endpoint_auth_method!==method)return null;
+  if(!client||!(client.authMethods||[client.token_endpoint_auth_method]).includes(method))return null;
+  if(method==='private_key_jwt')return await verifyClientAssertion(req,env,client,params.get('client_assertion'))?client:null;
   if(method!=='none'&&(!secret||await hash(secret)!==client.secret_hash))return null;
   return client;
 }

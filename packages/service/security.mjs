@@ -49,7 +49,7 @@ export async function limit(req, env, bucket, max = 30) {
 }
 export async function cleanup(env) {
   const t = now();
-  await env.DB.batch([...['sessions', 'challenges', 'codes', 'tokens', 'rate_limits', 'live_sessions'].map(table => env.DB.prepare(`DELETE FROM ${table} WHERE expires_at <= ?`).bind(t)), env.DB.prepare('DELETE FROM grants WHERE expires_at <= ?').bind(t)]);
+  await env.DB.batch([...['sessions', 'challenges', 'codes', 'tokens', 'rate_limits', 'live_sessions', 'oauth_assertions'].map(table => env.DB.prepare(`DELETE FROM ${table} WHERE expires_at <= ?`).bind(t)), env.DB.prepare('DELETE FROM grants WHERE expires_at <= ?').bind(t)]);
 }
 export function secure(response) {
   const r = new Response(response.body, response);

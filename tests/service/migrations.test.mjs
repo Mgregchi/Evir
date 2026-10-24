@@ -11,8 +11,8 @@ test('Pinned Wrangler upgrades existing accounts, then repeats migrations withou
   const run=async args=>(await execute(process.execPath,[cli,...args,'--local','--config',config,'--persist-to',path.join(dir,'state')],{env:{...process.env,CI:'true',WRANGLER_SEND_METRICS:'false',WRANGLER_LOG_PATH:path.join(dir,'log'),XDG_CONFIG_HOME:path.join(dir,'config')},encoding:'utf8',timeout:60000})).stdout;
   const first=await run(['d1','migrations','apply','DB']);assert.match(first,/0001_identity.sql/);
   await run(['d1','execute','DB','--command',"INSERT INTO accounts VALUES ('retained-account', 1)"]);
-  await copyFile('packages/service/migrations/0003_oauth_clients.sql',path.join(migrations,'0003_oauth_clients.sql'));
-  const upgrade=await run(['d1','migrations','apply','DB']);assert.match(upgrade,/0003_oauth_clients.sql/);
+  for(const file of ['0003_oauth_clients.sql','0004_oauth_assertions.sql'])await copyFile(path.join('packages/service/migrations',file),path.join(migrations,file));
+  const upgrade=await run(['d1','migrations','apply','DB']);assert.match(upgrade,/0003_oauth_clients.sql/);assert.match(upgrade,/0004_oauth_assertions.sql/);
   await run(['d1','execute','DB','--command',"INSERT INTO oauth_clients VALUES ('retained-client', '{}', 'retained-secret-hash', 1)"]);
   const second=await run(['d1','migrations','apply','DB']);assert.match(second,/No migrations to apply/);
   const data=JSON.parse(await run(['d1','execute','DB','--command','SELECT id FROM accounts','--json']));assert.equal(data[0].results[0].id,'retained-account');
