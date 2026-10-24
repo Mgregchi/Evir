@@ -15,6 +15,6 @@ test('Migration failure stops publication; repeat deployment uses the migration 
   const calls=[];const env={D1_DATABASE_ID:id,WORKERS_CI_BRANCH:'main'};
   await assert.rejects(deploy(env,(_exe,args)=>{calls.push(args);return {status:1};}),/migration failed/);assert.equal(calls.length,1);
   calls.length=0;await deploy(env,(_exe,args,opts)=>{calls.push({args,opts});return {status:0};});assert.equal(calls.length,2);assert(calls[1].args.includes('--keep-vars'));assert.equal(calls[0].opts.env.CI,'true');
-  const generated=JSON.parse(await readFile('apps/web/.deploy/wrangler.json','utf8'));assert.equal(generated.d1_databases[0].database_id,id);assert(!('vars'in generated));
+  const generated=JSON.parse(await readFile('apps/web/.deploy/wrangler.json','utf8'));assert.equal(generated.d1_databases[0].database_id,id);assert(!('vars'in generated));assert.deepEqual(generated.triggers.crons,[],'Deployment explicitly clears Evir cron schedules');
   await rm('apps/web/.deploy',{recursive:true,force:true});
 });

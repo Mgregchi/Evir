@@ -1,9 +1,10 @@
 // Web composition only. Authentication and MCP implementations belong to the service package.
-import {fetchService,cleanup} from '@evir/service';
+import {fetchService} from '@evir/service';
+import {queueMaintenance} from '@evir/service/maintenance';
 export {LiveSession} from '@evir/service/live-session';
 export default {
-  async fetch(request,env) {
-    const service=await fetchService(request,env);if(service)return service;
+  async fetch(request,env,ctx) {
+    const service=await fetchService(request,env);if(service){queueMaintenance(env,ctx);return service;}
     const asset=await env.ASSETS.fetch(request);
     // Add account discovery only on the service-enabled host; static-only hosts stay unchanged.
     if(env.DB&&asset.status===200&&asset.headers.get('Content-Type')?.includes('text/html'))
@@ -13,5 +14,4 @@ export default {
         .transform(asset);
     return asset;
   },
-  async scheduled(_event,env,ctx) { ctx.waitUntil(cleanup(env)); },
 };

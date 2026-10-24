@@ -1,0 +1,15 @@
+▲ [WARNING] Proxy environment variables detected. We'll use your proxy for fetch requests.
+
+
+
+ ⛅️ wrangler 4.151.3 (update available 4.152.0)
+───────────────────────────────────────────────
+✨ Read 184 files from the assets directory /workspace/Evir/apps/web/dist
+Total Upload: 756.33 KiB / gzip: 142.52 KiB
+Your Worker has access to the following bindings:
+Binding                                Resource
+env.LIVE_SESSIONS (LiveSession)        Durable Object
+env.DB (evir-accounts)                 D1 Database
+env.ASSETS                             Assets
+
+--dry-run: exiting now.

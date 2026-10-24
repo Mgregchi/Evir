@@ -1,0 +1,13 @@
+✔ Cloudflare configuration preserves dashboard values and binds only an explicit existing D1 database (915.58559ms)
+✔ Migration failure stops publication; repeat deployment uses the migration ledger without destructive resets (5322.359244ms)
+✔ Concurrent request housekeeping uses one shared D1 lease and preserves live/security records (3481.475904ms)
+✔ Failed or interrupted housekeeping retries after a short lease, not a full day (1346.96375ms)
+✔ The real Worker schedules housekeeping only for service traffic; expiry rejects without deletion (920.187898ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 16690.172569

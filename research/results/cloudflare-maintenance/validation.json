@@ -1,0 +1,53 @@
+{
+  "checkedAt": "2026-10-24T02:51:42.628199+00:00",
+  "baseMain": "08c659cab3955b0357f853cda5297fd3dd043667",
+  "scope": "Real local workerd/D1 and synthetic service/browser clients. No remote deploy, schedule/account inventory or physical-device evidence.",
+  "results": {
+    "targeted": {
+      "command": "node --test tests/service/maintenance.test.mjs tests/service/deploy.test.mjs",
+      "passed": 5,
+      "note": "These five overlap the full service run; do not sum counts.",
+      "log": "logs/targeted.log"
+    },
+    "service": {
+      "command": "npm run test:service",
+      "passed": 15,
+      "failed": 0,
+      "log": "logs/service.log"
+    },
+    "frontend": {
+      "command": "npm run test:frontend",
+      "passed": 27,
+      "failed": 0,
+      "log": "logs/frontend.log"
+    },
+    "build": {
+      "command": "npm run web:build",
+      "passed": true,
+      "log": "logs/build.log"
+    },
+    "packaging": {
+      "command": "wrangler deploy --dry-run with generated deployConfig and fake D1 UUID",
+      "passed": true,
+      "log": "logs/packaging.log"
+    }
+  },
+  "configuration": {
+    "previousEvirCrons": [
+      "17 3 * * *"
+    ],
+    "newEvirCrons": [],
+    "newVariables": [],
+    "newMigrations": []
+  },
+  "sourceHashes": {
+    "apps/web/worker.mjs": "1ecd7a45f810741ba785f2020491a0320babcd2a6ea82451d85f691e2906c790",
+    "apps/web/wrangler.jsonc": "a4b73b53f1fd4b609bea36b669e28d375c579b4ac6d4fe4911aed4f2f901a613",
+    "packages/service/maintenance.mjs": "18c2bbe8093f84a2f352102d1993b17d29f94076a5120bf43b44b5f5fe79fbb7",
+    "packages/service/security.mjs": "4cedf27b77eb2b270a54205e66e31371887466560f4b3fe5d20026d2d0153642",
+    "packages/service/package.json": "1258c2744ebe7daccd606ecb4f0c28bc89c0530a04ce5d4c3eea8f1b16d7b4bf",
+    "tests/service/maintenance.test.mjs": "df4919a329f2eb748f90c209846e12e4c6d680be5a060d9c71bda50caea9a811",
+    "tests/service/deploy.test.mjs": "a33ad229c91532340f4151327fdfd7734ee041f18dfb6b693216630c6fd1c3f9",
+    "tools/deploy-cloudflare.mjs": "4f950d3ba45d7d268d0ee7747f18d6043a5194a9a7f23cbde11171d4f2b47171"
+  }
+}
