@@ -1,3 +1,4 @@
+import {registerClient} from './oauth-clients.mjs';
 import {liveApi} from './live.mjs';
 import {HttpError,json,origin,secure,cleanup} from './security.mjs';
 import {passkeys} from './passkeys.mjs';
@@ -6,7 +7,7 @@ import {metadata,scopes,authorize,consent,token,revoke} from './oauth.mjs';
 import {mcp} from './mcp.mjs';
 import {accountPage} from './account-page.mjs';
 const isService=p=>p==='/account'||p==='/account/'||p.startsWith('/api/live')||p.startsWith('/api/account')||p.startsWith('/api/passkeys/')||p.startsWith('/api/oauth/')||p==='/api/service'||p.startsWith('/oauth/')||p==='/mcp'||p.startsWith('/.well-known/oauth-');
-const publicEndpoint=p=>p==='/mcp'||p==='/oauth/token'||p==='/oauth/revoke'||p.startsWith('/.well-known/');
+const publicEndpoint=p=>p==='/mcp'||p==='/oauth/register'||p==='/oauth/token'||p==='/oauth/revoke'||p.startsWith('/.well-known/');
 export async function fetchService(req,env) {
   const url=new URL(req.url),path=url.pathname;
   if(!isService(path))return null;
@@ -17,14 +18,15 @@ export async function fetchService(req,env) {
     else if(!env.DB)throw new HttpError(503,'Accounts are not configured on this deployment yet.');
     else if(path==='/api/service'&&req.method==='GET')r=json({accounts:true,mcp:true,liveStudioPairing:!!env.LIVE_SESSIONS});
     else if((path==='/account'||path==='/account/'||path==='/oauth/authorize')&&req.method==='GET'){
-      if(path==='/oauth/authorize')authorize(url.searchParams,env);
+      if(path==='/oauth/authorize')await authorize(url.searchParams,env);
       r=new Response(accountPage,{headers:{'Content-Type':'text/html; charset=utf-8'}});
     }
     else if(path.startsWith('/api/passkeys/')&&req.method==='POST'&&/^\/api\/passkeys\/(register|login)\/(options|verify)$/.test(path))r=await passkeys(req,env,path);
     else if(path.startsWith('/api/live'))r=await liveApi(req,env,path);
     else if(path.startsWith('/api/account'))r=await accounts(req,env,path);
-    else if(path==='/api/oauth/request'&&req.method==='GET'){const a=authorize(url.searchParams,env);r=json({clientName:a.client.client_name,scope:a.scope,permissions:a.scope.split(' ').map(p=>({'account:read':'Read your account identifier and connection status','scene:read':'Read projects you explicitly share from Studio','scene:write':'Edit the selected artboard in a shared project','scene:control':'Play shared scenes and expose typed audience controls'}[p]))});}
+    else if(path==='/api/oauth/request'&&req.method==='GET'){const a=await authorize(url.searchParams,env);r=json({clientName:a.client.client_name,registration:a.client.registration,redirectUri:a.redirect,scope:a.scope,permissions:a.scope.split(' ').map(p=>({'account:read':'Read your account identifier and connection status','scene:read':'Read projects you explicitly share from Studio','scene:write':'Edit the selected artboard in a shared project','scene:control':'Play shared scenes and expose typed audience controls'}[p]))});}
     else if(path==='/api/oauth/consent'&&req.method==='POST')r=await consent(req,env);
+    else if(path==='/oauth/register'&&req.method==='POST')r=await registerClient(req,env);
     else if(path==='/oauth/token'&&req.method==='POST')r=await token(req,env);
     else if(path==='/oauth/revoke'&&req.method==='POST')r=await revoke(req,env);
     else if(path==='/mcp')r=await mcp(req,env);

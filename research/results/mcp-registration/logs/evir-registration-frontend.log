@@ -1,0 +1,39 @@
+
+> evir-workspace@0.1.0 test:frontend
+> node --test tests/frontend/*.test.mjs
+
+✔ momo: original curves stay editable, all expression transitions reset pose, loops keep moving (1259.19666ms)
+✔ nura: original curves stay editable, all expression transitions reset pose, loops keep moving (887.635094ms)
+✔ otto: original curves stay editable, all expression transitions reset pose, loops keep moving (282.239447ms)
+✔ Nura scarf has differing control weights and deforms relative to the body (9.566725ms)
+✔ one address configures public metadata and an internal Studio route (8.409639ms)
+✔ web and Studio paths follow a prefixed SITE_URL without a second address (1.113662ms)
+✔ unconfigured web builds keep local navigation and a public preview origin (0.974097ms)
+✔ legacy site addresses and public optional links remain compatible (6.77115ms)
+✔ obsolete Studio settings cannot redirect the unified app to another origin (1.556495ms)
+✔ invalid site addresses and unsafe external links fail early (2.131204ms)
+✔ Outing starting paths and its explicit join recipe reproduce the published curved fox study (249.784201ms)
+✔ Every registered study has valid editable source and its exact compatible export (1009.285458ms)
+✔ Bloom contains mixed independent control weights and a visible deforming stem (7.858277ms)
+✔ Tempo demonstrates distinct hold/linear/cubic timing and color changes (5.524999ms)
+✔ Signal gates typed inputs, consumes early triggers and restores defaults on reset (58.019126ms)
+✔ Measure provides a separately validated guide preset and three independent alignment roots (15.409339ms)
+✔ Sprig retains the open seed geometry and paint while its continuation recipe reproduces the finished study (27.090305ms)
+✔ Loom has reusable row/column guides and fixed-key spacing that fits the authored weave bands (50.057421ms)
+✔ Ribbon uses bounded pressure outlines and a constant-width fallback, with no new runtime stroke fields (3.539097ms)
+✔ Preview schedules no frames while inactive, clamps time and resumes without hidden-time jumps (37.64357ms)
+✔ A renderer failure stops the loop and invokes recovery once (1.103678ms)
+✔ motorcycle accelerates, brakes to rest, preserves wheel phase and resets every control (458.961102ms)
+✔ bumps are one-shot, independently composited and spatially spaced; road and wheels share travel distance (260.086428ms)
+✔ substeps agree across caller frame rates and reject invalid controls without mutating state (1568.460517ms)
+✔ turn signal repeats exactly three cycles, then stays off independently of wheel motion (493.188448ms)
+✔ raw crawler HTML includes a working image in default builds without JavaScript (2178.340371ms)
+✔ raw crawler HTML includes a working image in override builds without JavaScript (1510.975094ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 27
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7645.399187

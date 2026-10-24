@@ -1,12 +1,12 @@
 import test from 'node:test';import assert from 'node:assert/strict';
 import {readFile,mkdir,writeFile} from 'node:fs/promises';import path from 'node:path';
 import {chromium} from 'playwright';import axe from 'axe-core';
-import {harness,site} from './harness.mjs';import {liveGrant,rpc} from './live-fixtures.mjs';
-const folder='research/results/live-studio';
-test('An authenticated MCP caller edits the real Studio history, retries safely and binds live audience controls',{timeout:180000},async()=>{
- const h=await harness(),browser=await chromium.launch({headless:true,...(process.env.CHROMIUM_PATH?{executablePath:process.env.CHROMIUM_PATH}:{})});await mkdir(folder,{recursive:true});const checks=[];
+import {harness,site} from './harness.mjs';import {registeredLiveGrant,rpc} from './live-fixtures.mjs';
+const folder='research/results/mcp-registration/live';
+test('A dynamically registered MCP caller edits the real Studio history, retries safely and binds live audience controls',{timeout:180000},async()=>{
+ const h=await harness({oauthClients:[]}),browser=await chromium.launch({headless:true,...(process.env.CHROMIUM_PATH?{executablePath:process.env.CHROMIUM_PATH}:{})});await mkdir(folder,{recursive:true});const checks=[];
  try{
-  const owner=await h.account(),g=await liveGrant(h,owner);const context=await browser.newContext({viewport:{width:1440,height:1000}});await context.addCookies([{name:'__Host-evir-session',value:owner.token,url:site,secure:true,httpOnly:true,sameSite:'Lax'}]);
+  const owner=await h.account(),g=await registeredLiveGrant(h,owner);checks.push('Dynamic confidential-client registration, consent and S256 exchange with no predefined OAUTH_CLIENTS');const context=await browser.newContext({viewport:{width:1440,height:1000}});await context.addCookies([{name:'__Host-evir-session',value:owner.token,url:site,secure:true,httpOnly:true,sameSite:'Lax'}]);
   const sockets=new Set();
   await context.routeWebSocket('wss://evir.test/**',async route=>{
     const url=new URL(route.url());const row=await h.db.prepare('SELECT id,owner_hash FROM live_sessions WHERE id = ?').bind(url.pathname.split('/')[3]).first();

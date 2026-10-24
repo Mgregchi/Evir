@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://developers.openai.com/apps-sdk/build/auth/",
+    "finalUrl": "https://developers.openai.com/plugins/build/auth",
+    "status": 200,
+    "sha256": "8f9cd918c8758c62263e6e43998a53941c77c9b015401e73490729158791e514",
+    "retrievedAt": "2026-10-22T16:54:53.405031+00:00",
+    "bytes": 499482
+  },
+  {
+    "url": "https://platform.claude.com/docs/en/agents-and-tools/remote-mcp-servers",
+    "finalUrl": "https://platform.claude.com/docs/en/agents-and-tools/remote-mcp-servers",
+    "status": 200,
+    "sha256": "1401b9d3d8e93d3ccd6e5d7baaae1dd7e5b8a32d2f9cefeefb826394f241896d",
+    "retrievedAt": "2026-10-22T16:54:52.437218+00:00",
+    "bytes": 334330
+  },
+  {
+    "url": "https://support.claude.com/en/articles/11175166-getting-started-with-custom-connectors-using-remote-mcp",
+    "finalUrl": "https://support.claude.com/en/articles/11175166-get-started-with-custom-connectors-using-remote-mcp",
+    "status": 200,
+    "sha256": "e3443afd261a85ac5130d9d4ce4b6af6aa39cb9533871dd7a9ce744f1b162fe8",
+    "retrievedAt": "2026-10-22T16:54:52.856103+00:00",
+    "bytes": 253893
+  },
+  {
+    "url": "https://modelcontextprotocol.io/specification/2025-11-25/basic/authorization",
+    "finalUrl": "https://modelcontextprotocol.io/specification/2025-11-25/basic/authorization",
+    "status": 200,
+    "sha256": "dc85763c8ca374b96d43fe1daf9d8070963085476220bd53c9a83a69aee4b12c",
+    "retrievedAt": "2026-10-22T16:54:52.748578+00:00",
+    "bytes": 622071
+  },
+  {
+    "url": "https://www.rfc-editor.org/rfc/rfc7591.txt",
+    "finalUrl": "https://www.rfc-editor.org/rfc/rfc7591.txt",
+    "status": 200,
+    "sha256": "f9cd8b8eefdb2d1b1bd5734310f246926db0abb4ec1b2f933f358d58327964e3",
+    "retrievedAt": "2026-10-22T16:54:52.340251+00:00",
+    "bytes": 87811
+  },
+  {
+    "url": "https://www.rfc-editor.org/rfc/rfc6749.txt",
+    "finalUrl": "https://www.rfc-editor.org/rfc/rfc6749.txt",
+    "status": 200,
+    "sha256": "f204fc8661d6c92d2ec6e0b54808f961a9ad26e792f57f312d9528335519bd71",
+    "retrievedAt": "2026-10-22T16:54:52.525763+00:00",
+    "bytes": 163498
+  },
+  {
+    "url": "https://www.rfc-editor.org/rfc/rfc9700.txt",
+    "finalUrl": "https://www.rfc-editor.org/rfc/rfc9700.txt",
+    "status": 200,
+    "sha256": "9919d061d40a97886ca866b51c69389b6c81c65cd4b979056c14fdbebfcf622a",
+    "retrievedAt": "2026-10-22T16:54:52.354539+00:00",
+    "bytes": 124673
+  },
+  {
+    "url": "https://modelcontextprotocol.io/specification/2025-11-25/basic/lifecycle",
+    "finalUrl": "https://modelcontextprotocol.io/specification/2025-11-25/basic/lifecycle",
+    "status": 200,
+    "sha256": "77bf8c4c7f4352eaa9cf9c867df105cf399c650e4799efafe0f8125503997320",
+    "bytes": 440510,
+    "retrievedAt": "2026-10-22T17:01:28.190368+00:00"
+  },
+  {
+    "url": "https://console.groq.com/docs/tool-use/remote-mcp",
+    "finalUrl": "https://console.groq.com/docs/tool-use/remote-mcp",
+    "status": 200,
+    "sha256": "67889ef97517ed2010a8f4fd1c1aaf01d1ca25cfb335b4ceff03efd8000403b7",
+    "bytes": 515470,
+    "retrievedAt": "2026-10-22T17:01:28.235344+00:00"
+  }
+]

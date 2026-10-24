@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-10-22T17:14:25.069Z",
+  "browser": "153.0.8010.12",
+  "scope": "Synthetic registered connector, local workerd/D1 and cloud Chromium. Not named-client pairing, physical-device or human-accessibility evidence.",
+  "widths": [
+    320,
+    390,
+    1440
+  ],
+  "automatedAccessibilityViolations": 0,
+  "checks": [
+    "In-account connector guidance",
+    "Exact long callback is visible and wraps",
+    "Client-provided markup renders as text with no browser dialogs",
+    "Unverified identity is disclosed",
+    "Cancel issues no code/grant",
+    "Approve preserves callback parameters, state and issuer",
+    "PKCE/confidential-client token exchange completes",
+    "Account connection alone shares no Studio project"
+  ]
+}

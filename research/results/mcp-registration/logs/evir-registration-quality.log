@@ -1,0 +1,5 @@
+
+> evir-workspace@0.1.0 test:experience
+> node tests/site/quality.cjs
+
+Experience quality checks passed: retries, idle callbacks, feedback, SEO and recovery

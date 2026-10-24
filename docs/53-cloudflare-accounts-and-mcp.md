@@ -1,5 +1,7 @@
 # Cloudflare accounts and authenticated MCP
 
+**Connector update:** [Automatic client registration](55-mcp-client-registration.md) now supports DCR and confidential-client authentication. Most hosted connections can register automatically without `OAUTH_CLIENTS`. Existing predefined clients remain available.
+
 **Live-session update:** [Live Studio pairing](54-live-studio-pairing.md) now adds explicit project sharing, scene scopes and a WebSocket bridge. The dashboard settings below stay the same; the next Git deployment provisions its namespace and D1 migration automatically.
 
 22 October 2026. The owner selected Cloudflare Workers and D1, with deployment entirely through the GitHub-connected Cloudflare dashboard. No local Wrangler command is required from the owner.
@@ -36,7 +38,7 @@ Cloudflare's Git integration supplies deployment authorization through its build
 | `NODE_VERSION=24`, `SKIP_DEPENDENCY_INSTALL=1` | Build variables | Yes, existing build setup |
 | `D1_DATABASE_ID` | Build variables | Yes, existing database UUID |
 | `SITE_URL` | Build variables and Worker runtime variables | Only for a different public origin; same value in both scopes |
-| `OAUTH_CLIENTS` | Worker runtime variable, text containing JSON | Only when enabling named agent connections |
+| `OAUTH_CLIENTS` | Worker runtime variable, text containing JSON | Optional predefined clients; unnecessary for automatic registration |
 | Community/social/feedback links | Build variables | Optional; existing frontend settings |
 
 There is no `AUTH_URL`, `API_URL`, `RP_ID`, `JWT_SECRET`, frontend secret or separate editor URL. RP ID, issuer and MCP resource are derived from `SITE_URL`. Opaque tokens need no application signing secret.
@@ -55,7 +57,7 @@ The repository intentionally owns code, asset routing, the `DB` binding target a
 
 The MCP URL is `https://evir.idey.click/mcp`. The authorization-server and protected-resource metadata are available at `/.well-known/oauth-authorization-server` and `/.well-known/oauth-protected-resource/mcp`.
 
-This release uses **predefined public OAuth clients** with PKCE. In the client platform's custom MCP connection settings, obtain its exact callback URL and configure a client ID that the platform can send. Then put this text JSON in the Worker's runtime `OAUTH_CLIENTS` variable:
+Prefer [automatic registration](55-mcp-client-registration.md) for supported hosted clients. It needs no callback list or new dashboard setting. The following optional setup retains **predefined public OAuth clients** with PKCE. In the client platform's custom MCP connection settings, obtain its exact callback URL and configure a client ID that the platform can send. Then put this text JSON in the Worker's runtime `OAUTH_CLIENTS` variable:
 
 ```json
 [
@@ -67,7 +69,7 @@ This release uses **predefined public OAuth clients** with PKCE. In the client p
 ]
 ```
 
-Replace both placeholders with that platform's actual settings. Never use wildcard callbacks or copy an assumed ChatGPT/Claude callback from an example. No client secret is used: the client must support public-client `none` authentication with PKCE. A platform requiring confidential-client secrets, DCR or Client ID Metadata Documents exclusively needs a subsequent adapter; those methods are not advertised. Groq inference alone is not an MCP connector; its host application controls the connection flow. No named platform pairing has been observed in this workspace.
+Replace both placeholders with that platform's actual settings. Never use wildcard callbacks or copy an assumed ChatGPT/Claude callback from an example. No client secret is used: the client must support public-client `none` authentication with PKCE. Dynamic registration now supports `none`, `client_secret_post` and `client_secret_basic`; see the connector guide instead of adding those credentials to this predefined-public-client variable. CIMD and signed client assertions remain separate adapters and are not advertised. Groq supports remote MCP with authentication headers; its host application must acquire and refresh Evir OAuth credentials. No named platform pairing has been observed in this workspace.
 
 The client opens Evir's consent page. Users sign in with a passkey and choose **Allow connection** or **Cancel**. The first account increment exposed only `account:read` and `get_connection_status`. [The live-session increment](54-live-studio-pairing.md) now adds scene reading, editing and presentation scopes, separately granted project access from Studio, and the shared atomic command contract. Existing account-only tokens do not gain these permissions: reauthorize the connection when scene access is wanted. Signing in alone still does not share any project. Local stdio scene tools remain available.
 

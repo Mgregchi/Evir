@@ -30,3 +30,4 @@ jobs:
           path: |
             research/results/cloudflare-auth/
             research/results/live-studio/
+            research/results/mcp-registration/
