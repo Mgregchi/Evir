@@ -11,7 +11,7 @@ export function geometryCases() {
     {type:'CubicAsymmetricVertex',fields:{x:203,y:165,rotation:1.8,inDistance:48,outDistance:22}},
     {type:'CubicDetachedVertex',fields:{x:70,y:195,inRotation:.4,inDistance:29,outRotation:-2,outDistance:46}},
   ];
-  function make(name,{type='PointsPath',fields={isClosed:true},vertices=mixed,stroke=false,gradient=false,skin=false,motion=false,shape={}}={}) {
+  function make(name,{type='PointsPath',fields={isClosed:true},vertices=mixed,stroke=false,gradient=false,skin=false,bind={},motion=false,shape={}}={}) {
     const records=[{type:'Backboard',fields:{}},{type:'Artboard',fields:{name:'Board',width:256,height:256}}];
     const emit=(type,fields)=>{records.push({type,fields});return records.length-2;};
     const bone=skin?emit('RootBone',{name:'Pivot',parentId:0,x:128,y:128,length:70}):null;
@@ -22,7 +22,7 @@ export function geometryCases() {
       const id=emit(vertex.type,{parentId:path,...vertex.fields});
       if(skin){const weight={parentId:id,indices:1,values:255};emit(vertex.type==='StraightVertex'?'Weight':'CubicWeight',vertex.type==='StraightVertex'?weight:{...weight,inIndices:2,inValues:255,outIndices:1,outValues:255});}
     }
-    if(skin){const id=emit('Skin',{parentId:path,xx:1,yy:1});emit('Tendon',{parentId:id,boneId:bone,xx:1,yy:1,tx:128,ty:128});emit('Tendon',{parentId:id,boneId:steadyBone,xx:1,yy:1,tx:128,ty:128});}
+    if(skin){const id=emit('Skin',{parentId:path,xx:1,yy:1,...bind});emit('Tendon',{parentId:id,boneId:bone,xx:1,yy:1,tx:128,ty:128});emit('Tendon',{parentId:id,boneId:steadyBone,xx:1,yy:1,tx:128,ty:128});}
     if(stroke){const id=emit('Stroke',{parentId:shapeId,thickness:9,cap:1,join:1});emit('SolidColor',{parentId:id,colorValue:0xff275b49});}
     else{const fill=emit('Fill',{parentId:shapeId});if(gradient){const id=emit('LinearGradient',{parentId:fill,startX:45,startY:30,endX:200,endY:190});emit('GradientStop',{parentId:id,position:0,colorValue:0xffa1dfbd});emit('GradientStop',{parentId:id,position:1,colorValue:0xffd79771});}else emit('SolidColor',{parentId:fill,colorValue:0xff8acbab});}
     if(motion){emit('LinearAnimation',{name:'Motion',fps:60,duration:120,loopValue:1});emit('KeyedObject',{objectId:skin?bone:shapeId});emit('KeyedProperty',{propertyKey:15});for(const [frame,value]of [[0,0],[60,.35],[120,0]])emit('KeyFrameDouble',{frame,value,interpolationType:1});}
@@ -50,6 +50,10 @@ export function geometryCases() {
     {type:'StraightVertex',fields:{x:60,y:199,radius:-30}},
   ]});
   make('import-mixed-skinned',{skin:true,motion:true});
+  make('import-skinned-contour-bind',{
+    fields:{isClosed:true,x:37,y:-17,rotation:.45,scaleX:-.8,scaleY:1.3},
+    skin:true,motion:true,bind:{xx:.8,xy:.13,yx:-.1,yy:.85,tx:27,ty:19},
+  });
   return cases;
 }
 export async function importedCases(){return Promise.all(geometryCases().map(async c=>({...c,project:stableImport(await importRiv(c.bytes),c.name)})));}

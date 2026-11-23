@@ -8,7 +8,7 @@ import {
   defaultStroke, STROKE_CAPS, STROKE_JOINS,pathContours,
 } from "@evir/project-model";
 import schema from "./schema/runtime.json" with { type: "json" };
-import {contourTypes, vertexTypes, editableContour, isIdentityContour} from './contours.mjs';
+import {contourTypes, vertexTypes, editableContour} from './contours.mjs';
 const types = new Map(
   Object.entries(schema.types).map(([id, t]) => [Number(id), t]),
 );
@@ -548,7 +548,6 @@ async function decodeProject(input) {
         const decoded=shapes.map(shape=>{
           const vertices=children(shape.i).filter(v=>vertexTypes.has(v.r.type));
           const skin=children(shape.i).filter(v=>v.r.type==='Skin');
-          if(skin.length&&!isIdentityContour(shape.r.fields))fail(shape.r,'transformed skinned contours are outside the editable subset');
           return editableContour(shape.r,vertices,{fail,pointId:()=>newId('point'),skinned:skin.length>0,forcePath:shapes.length>1||(fills[0]?.r.fields.fillRule===1)});
         });
         n.kind=decoded[0].kind;Object.assign(n.geometry,decoded[0].geometry);

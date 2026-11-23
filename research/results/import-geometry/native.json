@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-23T07:18:31.449Z",
+  "checkedAt": "2026-11-23T07:45:06.809Z",
   "runtimeVersion": "2.44.0",
   "method": "Independently encoded native contour records → editable import → Evir Canvas and native re-export, compared with the original in both official runtimes. Explicit named animation frames; static fixtures contain no animations.",
   "thresholds": {
@@ -105,10 +105,16 @@
       "reexportSha256": "3568cbd8ba09c7d6a448142f80e17dfb7036707bab6eac79bbb67f4b040024c6"
     },
     {
+      "name": "import-skinned-contour-bind",
+      "nativeSha256": "5e2a8cb293d5ce0004ed8c53087e8a8e147077b204321b087b12646716430ec8",
+      "sourceSha256": "a55da3c9437755938f044d4b644dbea4a99b4f08c34ce1c26469eba065fb53fd",
+      "reexportSha256": "77c43cb41fc10d5d36feaf413d2bd226e0f4a73113e8558a7dfd8b7e1ca137a4"
+    },
+    {
       "name": "tide-native",
-      "nativeSha256": "0a9adfb33204f24401f50fd0d688731d031c7afb07b85ae6b14a553385785565",
-      "sourceSha256": "726ad4ae5b799c6b980723edf22fbfe1fa8bfda10a8d7ba3296994c10a247d21",
-      "reexportSha256": "ceef65657cec1520723ad23773f37b00262646c7e33ad18b74fa3da1bf7d994f"
+      "nativeSha256": "348d1a21a31954e2d76b4d045ec1562c457a723e52be581e59c55f368b9bf399",
+      "sourceSha256": "6af38de3a571da0c143af6b5316cfed8d2128f78d58931cc334635dfd6ce4632",
+      "reexportSha256": "912437141fb871794388fbd206c9ed8443567817b12dd59a255caa5c022912e0"
     }
   ],
   "backends": [
@@ -498,6 +504,86 @@
           "mae": 0,
           "covered": 19036,
           "expectedCovered": 19036
+        },
+        {
+          "scene": "import-skinned-contour-bind",
+          "frame": 0,
+          "target": "editable",
+          "mae": 0.09505081176757812,
+          "covered": 13239,
+          "expectedCovered": 13241
+        },
+        {
+          "scene": "import-skinned-contour-bind",
+          "frame": 0,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 13241,
+          "expectedCovered": 13241
+        },
+        {
+          "scene": "import-skinned-contour-bind",
+          "frame": 30,
+          "target": "editable",
+          "mae": 0,
+          "covered": 13475,
+          "expectedCovered": 13475
+        },
+        {
+          "scene": "import-skinned-contour-bind",
+          "frame": 30,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 13475,
+          "expectedCovered": 13475
+        },
+        {
+          "scene": "import-skinned-contour-bind",
+          "frame": 60,
+          "target": "editable",
+          "mae": 0,
+          "covered": 13600,
+          "expectedCovered": 13600
+        },
+        {
+          "scene": "import-skinned-contour-bind",
+          "frame": 60,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 13600,
+          "expectedCovered": 13600
+        },
+        {
+          "scene": "import-skinned-contour-bind",
+          "frame": 90,
+          "target": "editable",
+          "mae": 0,
+          "covered": 13475,
+          "expectedCovered": 13475
+        },
+        {
+          "scene": "import-skinned-contour-bind",
+          "frame": 90,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 13475,
+          "expectedCovered": 13475
+        },
+        {
+          "scene": "import-skinned-contour-bind",
+          "frame": 120,
+          "target": "editable",
+          "mae": 0.09505081176757812,
+          "covered": 13239,
+          "expectedCovered": 13241
+        },
+        {
+          "scene": "import-skinned-contour-bind",
+          "frame": 120,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 13241,
+          "expectedCovered": 13241
         },
         {
           "scene": "tide-native",
@@ -1010,6 +1096,86 @@
           "mae": 0,
           "covered": 18948,
           "expectedCovered": 18948
+        },
+        {
+          "scene": "import-skinned-contour-bind",
+          "frame": 0,
+          "target": "editable",
+          "mae": 0.20644378662109375,
+          "covered": 13239,
+          "expectedCovered": 13162
+        },
+        {
+          "scene": "import-skinned-contour-bind",
+          "frame": 0,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 13162,
+          "expectedCovered": 13162
+        },
+        {
+          "scene": "import-skinned-contour-bind",
+          "frame": 30,
+          "target": "editable",
+          "mae": 0.1739654541015625,
+          "covered": 13475,
+          "expectedCovered": 13416
+        },
+        {
+          "scene": "import-skinned-contour-bind",
+          "frame": 30,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 13416,
+          "expectedCovered": 13416
+        },
+        {
+          "scene": "import-skinned-contour-bind",
+          "frame": 60,
+          "target": "editable",
+          "mae": 0.2448883056640625,
+          "covered": 13600,
+          "expectedCovered": 13505
+        },
+        {
+          "scene": "import-skinned-contour-bind",
+          "frame": 60,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 13505,
+          "expectedCovered": 13505
+        },
+        {
+          "scene": "import-skinned-contour-bind",
+          "frame": 90,
+          "target": "editable",
+          "mae": 0.1739654541015625,
+          "covered": 13475,
+          "expectedCovered": 13416
+        },
+        {
+          "scene": "import-skinned-contour-bind",
+          "frame": 90,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 13416,
+          "expectedCovered": 13416
+        },
+        {
+          "scene": "import-skinned-contour-bind",
+          "frame": 120,
+          "target": "editable",
+          "mae": 0.20644378662109375,
+          "covered": 13239,
+          "expectedCovered": 13162
+        },
+        {
+          "scene": "import-skinned-contour-bind",
+          "frame": 120,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 13162,
+          "expectedCovered": 13162
         },
         {
           "scene": "tide-native",
