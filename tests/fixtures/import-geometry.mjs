@@ -11,7 +11,7 @@ export function geometryCases() {
     {type:'CubicAsymmetricVertex',fields:{x:203,y:165,rotation:1.8,inDistance:48,outDistance:22}},
     {type:'CubicDetachedVertex',fields:{x:70,y:195,inRotation:.4,inDistance:29,outRotation:-2,outDistance:46}},
   ];
-  function make(name,{type='PointsPath',fields={isClosed:true},vertices=mixed,stroke=false,gradient=false,skin=false,bind={},motion=false,shape={}}={}) {
+  function make(name,{type='PointsPath',fields={isClosed:true},vertices=mixed,stroke=false,gradient=false,skin=false,bind={},motion=false,shape={},fillRule,innerContour}={}) {
     const records=[{type:'Backboard',fields:{}},{type:'Artboard',fields:{name:'Board',width:256,height:256}}];
     const emit=(type,fields)=>{records.push({type,fields});return records.length-2;};
     const bone=skin?emit('RootBone',{name:'Pivot',parentId:0,x:128,y:128,length:70}):null;
@@ -23,8 +23,12 @@ export function geometryCases() {
       if(skin){const weight={parentId:id,indices:1,values:255};emit(vertex.type==='StraightVertex'?'Weight':'CubicWeight',vertex.type==='StraightVertex'?weight:{...weight,inIndices:2,inValues:255,outIndices:1,outValues:255});}
     }
     if(skin){const id=emit('Skin',{parentId:path,xx:1,yy:1,...bind});emit('Tendon',{parentId:id,boneId:bone,xx:1,yy:1,tx:128,ty:128});emit('Tendon',{parentId:id,boneId:steadyBone,xx:1,yy:1,tx:128,ty:128});}
+    if(innerContour){
+      const inner=emit('PointsPath',{parentId:shapeId,isClosed:true,pathFlags:2});
+      for(const [x,y] of innerContour)emit('StraightVertex',{parentId:inner,x,y});
+    }
     if(stroke){const id=emit('Stroke',{parentId:shapeId,thickness:9,cap:1,join:1});emit('SolidColor',{parentId:id,colorValue:0xff275b49});}
-    else{const fill=emit('Fill',{parentId:shapeId});if(gradient){const id=emit('LinearGradient',{parentId:fill,startX:45,startY:30,endX:200,endY:190});emit('GradientStop',{parentId:id,position:0,colorValue:0xffa1dfbd});emit('GradientStop',{parentId:id,position:1,colorValue:0xffd79771});}else emit('SolidColor',{parentId:fill,colorValue:0xff8acbab});}
+    else{const fill=emit('Fill',{parentId:shapeId,...(fillRule===undefined?{}:{fillRule})});if(gradient){const id=emit('LinearGradient',{parentId:fill,startX:45,startY:30,endX:200,endY:190});emit('GradientStop',{parentId:id,position:0,colorValue:0xffa1dfbd});emit('GradientStop',{parentId:id,position:1,colorValue:0xffd79771});}else emit('SolidColor',{parentId:fill,colorValue:0xff8acbab});}
     if(motion){emit('LinearAnimation',{name:'Motion',fps:60,duration:120,loopValue:1});emit('KeyedObject',{objectId:skin?bone:shapeId});emit('KeyedProperty',{propertyKey:15});for(const [frame,value]of [[0,0],[60,.35],[120,0]])emit('KeyFrameDouble',{frame,value,interpolationType:1});}
     cases.push({name,records,bytes:encodeRecords(records)});
   }
@@ -60,6 +64,13 @@ export function geometryCases() {
     shape:{x:128,y:128}});
   make('import-star-transformed',{type:'Star',fields:{width:144,height:117,points:6,innerRadius:.42,
     cornerRadius:-7,rotation:.21,scaleX:-.85,scaleY:1.1},shape:{x:128,y:128},stroke:true});
+  const innerContour=[[-36,-32],[-36,34],[33,34],[33,-32]];
+  make('import-counterclockwise-nonzero-hole',{type:'Rectangle',fields:{width:192,height:176},
+    shape:{x:128,y:128},innerContour});
+  const straightLoop=innerContour.map(([x,y])=>({type:'StraightVertex',fields:{x,y}}));
+  make('import-counterclockwise-stroke',{fields:{isClosed:true,pathFlags:2},vertices:straightLoop,shape:{x:128,y:128},stroke:true});
+  make('import-counterclockwise-evenodd-hole',{type:'Rectangle',fields:{width:192,height:176},
+    shape:{x:128,y:128},innerContour,fillRule:1});
   return cases;
 }
 export async function importedCases(){return Promise.all(geometryCases().map(async c=>({...c,project:stableImport(await importRiv(c.bytes),c.name)})));}

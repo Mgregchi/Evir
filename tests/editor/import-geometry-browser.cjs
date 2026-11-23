@@ -14,7 +14,7 @@ const {run}=require('../../tools/browser.cjs');
    await press('Fit');await page.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))));
    const imported=await snapshot();assert.equal(imported.nodes.length,35);assert.equal(imported.assets.length,0);assert.equal(imported.animations[0].name,'Shore hello');
    const body=imported.nodes.find(n=>n.name==='soft silhouette');assert.equal(body.kind,'path');assert.equal(body.geometry.points.length,6);assert.equal(imported.nodes.find(n=>n.name==='muzzle').geometry.points.length,4);
-   const glass=imported.nodes.find(n=>n.name==='mint sea glass');assert.equal(glass.kind,'path');assert.equal(glass.geometry.points.length,8);
+   const glass=imported.nodes.find(n=>n.name==='mint sea glass');assert.equal(glass.kind,'path');assert.equal(glass.geometry.points.length,8);assert.equal(glass.geometry.contours[0].points.length,4);
    const flipper=imported.nodes.find(n=>n.name==='waving flipper');assert.equal(flipper.geometry.skin.weights.length,5);
    assert.equal(imported.nodes.find(n=>n.id===flipper.geometry.skin.bones[0].boneId).name,'flipper pivot');
    const star=imported.nodes.find(n=>n.name==='cream sea star');assert.equal(star.kind,'path');assert.equal(star.geometry.points.length,20);
@@ -29,7 +29,7 @@ const {run}=require('../../tools/browser.cjs');
    const before=await snapshot();await page.locator('#file').setInputFiles({name:'animated-ellipse.riv',mimeType:'application/octet-stream',buffer:Buffer.from(encodeRecords(unsupported))});await page.locator('#riv-import-sheet').waitFor();assert.match(await page.locator('#riv-import-sheet').innerText(),/animated contour geometry/);assert.deepEqual(await snapshot(),before);
    await page.screenshot({path:`${out}/unsupported-geometry-${width}.png`,animations:'disabled'});await page.getByRole('button',{name:'Back to Studio',exact:true}).click();assert.deepEqual(await snapshot(),before);
    await page.reload();await page.waitForFunction(()=>window.evirStudio);assert.deepEqual(JSON.parse(JSON.stringify((await snapshot()).nodes)),JSON.parse(JSON.stringify(imported.nodes)));
-   report.viewports.push({width,checks:['native sample imports into 35 editable layers','ellipse, mixed vertex and rounded rectangle controls','numeric edit of a rounded star point and undo/redo','native export equals compiler bytes','named animation scrub and imported skin binding','unsupported geometry retains source and offers original viewing','browser recovery','no overflow','zero automated WCAG violations']});
+   report.viewports.push({width,checks:['native sample imports into 35 editable layers','ellipse, mixed vertex, rounded rectangle and cutout controls','numeric edit of a rounded star point and undo/redo','native export equals compiler bytes','named animation scrub and imported skin binding','unsupported geometry retains source and offers original viewing','browser recovery','no overflow','zero automated WCAG violations']});
   }
  });fs.writeFileSync(`${out}/browser.json`,JSON.stringify(report,null,2)+'\n');console.log('Editable contour import: native scene, point editing, motion, export, recovery and unsupported-geometry feedback passed at two widths.');
 })().catch(e=>{console.error(e);process.exitCode=1;});

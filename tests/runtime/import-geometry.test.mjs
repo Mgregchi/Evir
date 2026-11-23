@@ -109,10 +109,24 @@ test('skinned controls retain their local values and use the explicit bind matri
   assert.deepEqual(coordinates(pose,n),coordinates(control,rig));
  }
 });
+test('counterclockwise hints preserve raw order for ordinary paints and reject clockwise-fill normalization',async()=>{
+ const cases=await importedCases();
+ for(const rule of ['nonzero','evenodd']){
+  const fixture=cases.find(c=>c.name===`import-counterclockwise-${rule}-hole`);
+  const geometry=fixture.project.nodes[0].geometry;
+  assert.equal(geometry.fillRule ?? 'nonzero',rule);
+  assert.deepEqual(geometry.contours[0].points.map(p=>p.anchor),[[-36,-32],[-36,34],[33,34],[33,-32]]);
+ }
+ const source=geometryCases().find(c=>c.name==='import-counterclockwise-nonzero-hole');
+ source.records.find(r=>r.type==='Fill').fields.fillRule=2;
+ await assert.rejects(()=>importRiv(encodeRecords(source.records)),/counterclockwise path flags with a clockwise fill/);
+});
 test('unsupported rounding, flags, malformed hierarchy, weights and animated contour geometry reject',async()=>{
  for(const [name,type,field,value,reason]of [
  ['import-mixed-skinned','StraightVertex','radius',12,/rounded straight vertices with skin/],
  ['import-mixed-closed','PointsPath','pathFlags',1,/path flags/],
+ ['import-mixed-closed','PointsPath','pathFlags',3,/path flags/],
+ ['import-mixed-closed','PointsPath','pathFlags',4,/path flags/],
  ['import-mixed-closed','CubicMirroredVertex','parentId',0,/belong to a PointsPath/],
  ['import-ellipse-centered','Ellipse','parentId',0,/belong directly/],
  ['import-ellipse-centered','Ellipse','width',0,/positive width/],
