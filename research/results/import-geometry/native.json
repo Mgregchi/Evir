@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-23T07:45:06.809Z",
+  "checkedAt": "2026-11-23T10:01:10.743Z",
   "runtimeVersion": "2.44.0",
   "method": "Independently encoded native contour records → editable import → Evir Canvas and native re-export, compared with the original in both official runtimes. Explicit named animation frames; static fixtures contain no animations.",
   "thresholds": {
@@ -111,10 +111,28 @@
       "reexportSha256": "77c43cb41fc10d5d36feaf413d2bd226e0f4a73113e8558a7dfd8b7e1ca137a4"
     },
     {
+      "name": "import-triangle",
+      "nativeSha256": "ce8ccdfc01be7397a03a6a4ac7ef3be53661663ebf8d39c8c7ab489cf43d9cd0",
+      "sourceSha256": "60ea315f781996d6bd2fb282be9ce1ebd81b1c53640748e9578d8c6a90dbc706",
+      "reexportSha256": "d250dc36161625b058e21c18235c1a94449e7eeddeb00f23a528d0cd4a6b1326"
+    },
+    {
+      "name": "import-polygon-rounded",
+      "nativeSha256": "cb7cb4c200dc950233be4436bb02c6434cfae4af21aeebc590eddcfd8ccfc11a",
+      "sourceSha256": "c41307e0dfc8cb40f5a68f436655e9eee2ac6177f17475b4775df2459fdcd968",
+      "reexportSha256": "af1aa5bbf9406046fb2bc39b87d1b27ec74c67652cb8ea3939007f7a20ded9a3"
+    },
+    {
+      "name": "import-star-transformed",
+      "nativeSha256": "4b5fca0b424fc66df1bfd5e1aacd0f752a7b1362ad77c454f1785046cc2d278f",
+      "sourceSha256": "456c93feba3d4895c500a5a82c52c8fed595726388371e6e991d7544e33a6c66",
+      "reexportSha256": "f147990eece0923e1ab96ba3ea871c01222bd4e49340d1982b2179794a858946"
+    },
+    {
       "name": "tide-native",
-      "nativeSha256": "348d1a21a31954e2d76b4d045ec1562c457a723e52be581e59c55f368b9bf399",
-      "sourceSha256": "6af38de3a571da0c143af6b5316cfed8d2128f78d58931cc334635dfd6ce4632",
-      "reexportSha256": "912437141fb871794388fbd206c9ed8443567817b12dd59a255caa5c022912e0"
+      "nativeSha256": "01aec603efcdcacab7d6c20f97d26770acdcc2361fa9bcf2608d5c3c5020a3e0",
+      "sourceSha256": "d43788c9c58c4f7dc4c75386c216bc055fc67b361877c29bd11e9e5a417e57d8",
+      "reexportSha256": "773b4a0f38a0b30caf42313af8a888c5326e26a6f55085771937d219fb2f4347"
     }
   ],
   "backends": [
@@ -586,10 +604,122 @@
           "expectedCovered": 13241
         },
         {
+          "scene": "import-triangle",
+          "frame": 0,
+          "target": "editable",
+          "mae": 0.03098297119140625,
+          "covered": 5302,
+          "expectedCovered": 5305
+        },
+        {
+          "scene": "import-triangle",
+          "frame": 0,
+          "target": "native-reexport",
+          "mae": 0.03098297119140625,
+          "covered": 5302,
+          "expectedCovered": 5305
+        },
+        {
+          "scene": "import-triangle",
+          "frame": 30,
+          "target": "editable",
+          "mae": 0.07754135131835938,
+          "covered": 5347,
+          "expectedCovered": 5363
+        },
+        {
+          "scene": "import-triangle",
+          "frame": 30,
+          "target": "native-reexport",
+          "mae": 0.07754135131835938,
+          "covered": 5347,
+          "expectedCovered": 5363
+        },
+        {
+          "scene": "import-triangle",
+          "frame": 60,
+          "target": "editable",
+          "mae": 0.07882308959960938,
+          "covered": 5350,
+          "expectedCovered": 5368
+        },
+        {
+          "scene": "import-triangle",
+          "frame": 60,
+          "target": "native-reexport",
+          "mae": 0.07882308959960938,
+          "covered": 5350,
+          "expectedCovered": 5368
+        },
+        {
+          "scene": "import-triangle",
+          "frame": 90,
+          "target": "editable",
+          "mae": 0.07754135131835938,
+          "covered": 5347,
+          "expectedCovered": 5363
+        },
+        {
+          "scene": "import-triangle",
+          "frame": 90,
+          "target": "native-reexport",
+          "mae": 0.07754135131835938,
+          "covered": 5347,
+          "expectedCovered": 5363
+        },
+        {
+          "scene": "import-triangle",
+          "frame": 120,
+          "target": "editable",
+          "mae": 0.03098297119140625,
+          "covered": 5302,
+          "expectedCovered": 5305
+        },
+        {
+          "scene": "import-triangle",
+          "frame": 120,
+          "target": "native-reexport",
+          "mae": 0.03098297119140625,
+          "covered": 5302,
+          "expectedCovered": 5305
+        },
+        {
+          "scene": "import-polygon-rounded",
+          "frame": null,
+          "target": "editable",
+          "mae": 0.059894561767578125,
+          "covered": 9085,
+          "expectedCovered": 9086
+        },
+        {
+          "scene": "import-polygon-rounded",
+          "frame": null,
+          "target": "native-reexport",
+          "mae": 0.059894561767578125,
+          "covered": 9085,
+          "expectedCovered": 9086
+        },
+        {
+          "scene": "import-star-transformed",
+          "frame": null,
+          "target": "editable",
+          "mae": 0,
+          "covered": 4242,
+          "expectedCovered": 4242
+        },
+        {
+          "scene": "import-star-transformed",
+          "frame": null,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 4242,
+          "expectedCovered": 4242
+        },
+        {
           "scene": "tide-native",
           "frame": 0,
           "target": "editable",
-          "mae": 0.0015869140625,
+          "mae": 0.002422332763671875,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -597,7 +727,7 @@
           "scene": "tide-native",
           "frame": 0,
           "target": "native-reexport",
-          "mae": 0.00885009765625,
+          "mae": 0.009685516357421875,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -605,7 +735,7 @@
           "scene": "tide-native",
           "frame": 30,
           "target": "editable",
-          "mae": 0.00115966796875,
+          "mae": 0.001995086669921875,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -613,7 +743,7 @@
           "scene": "tide-native",
           "frame": 30,
           "target": "native-reexport",
-          "mae": 0.00885009765625,
+          "mae": 0.009685516357421875,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -621,7 +751,7 @@
           "scene": "tide-native",
           "frame": 60,
           "target": "editable",
-          "mae": 0.00115966796875,
+          "mae": 0.001995086669921875,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -629,7 +759,7 @@
           "scene": "tide-native",
           "frame": 60,
           "target": "native-reexport",
-          "mae": 0.00885009765625,
+          "mae": 0.009685516357421875,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -637,7 +767,7 @@
           "scene": "tide-native",
           "frame": 90,
           "target": "editable",
-          "mae": 0.00115966796875,
+          "mae": 0.001995086669921875,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -645,7 +775,7 @@
           "scene": "tide-native",
           "frame": 90,
           "target": "native-reexport",
-          "mae": 0.00885009765625,
+          "mae": 0.009685516357421875,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -653,7 +783,7 @@
           "scene": "tide-native",
           "frame": 120,
           "target": "editable",
-          "mae": 0.0015869140625,
+          "mae": 0.002422332763671875,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -661,7 +791,7 @@
           "scene": "tide-native",
           "frame": 120,
           "target": "native-reexport",
-          "mae": 0.00885009765625,
+          "mae": 0.009685516357421875,
           "covered": 65536,
           "expectedCovered": 65536
         }
@@ -1178,10 +1308,122 @@
           "expectedCovered": 13162
         },
         {
+          "scene": "import-triangle",
+          "frame": 0,
+          "target": "editable",
+          "mae": 0.14479827880859375,
+          "covered": 5302,
+          "expectedCovered": 5247
+        },
+        {
+          "scene": "import-triangle",
+          "frame": 0,
+          "target": "native-reexport",
+          "mae": 0.014923095703125,
+          "covered": 5248,
+          "expectedCovered": 5247
+        },
+        {
+          "scene": "import-triangle",
+          "frame": 30,
+          "target": "editable",
+          "mae": 0.158782958984375,
+          "covered": 5347,
+          "expectedCovered": 5295
+        },
+        {
+          "scene": "import-triangle",
+          "frame": 30,
+          "target": "native-reexport",
+          "mae": 0.020374298095703125,
+          "covered": 5291,
+          "expectedCovered": 5295
+        },
+        {
+          "scene": "import-triangle",
+          "frame": 60,
+          "target": "editable",
+          "mae": 0.17681121826171875,
+          "covered": 5350,
+          "expectedCovered": 5288
+        },
+        {
+          "scene": "import-triangle",
+          "frame": 60,
+          "target": "native-reexport",
+          "mae": 0.010311126708984375,
+          "covered": 5291,
+          "expectedCovered": 5288
+        },
+        {
+          "scene": "import-triangle",
+          "frame": 90,
+          "target": "editable",
+          "mae": 0.158782958984375,
+          "covered": 5347,
+          "expectedCovered": 5295
+        },
+        {
+          "scene": "import-triangle",
+          "frame": 90,
+          "target": "native-reexport",
+          "mae": 0.020374298095703125,
+          "covered": 5291,
+          "expectedCovered": 5295
+        },
+        {
+          "scene": "import-triangle",
+          "frame": 120,
+          "target": "editable",
+          "mae": 0.14479827880859375,
+          "covered": 5302,
+          "expectedCovered": 5247
+        },
+        {
+          "scene": "import-triangle",
+          "frame": 120,
+          "target": "native-reexport",
+          "mae": 0.014923095703125,
+          "covered": 5248,
+          "expectedCovered": 5247
+        },
+        {
+          "scene": "import-polygon-rounded",
+          "frame": null,
+          "target": "editable",
+          "mae": 0.18419647216796875,
+          "covered": 9085,
+          "expectedCovered": 9014
+        },
+        {
+          "scene": "import-polygon-rounded",
+          "frame": null,
+          "target": "native-reexport",
+          "mae": 0.00786590576171875,
+          "covered": 9016,
+          "expectedCovered": 9014
+        },
+        {
+          "scene": "import-star-transformed",
+          "frame": null,
+          "target": "editable",
+          "mae": 0.20272064208984375,
+          "covered": 4242,
+          "expectedCovered": 4114
+        },
+        {
+          "scene": "import-star-transformed",
+          "frame": null,
+          "target": "native-reexport",
+          "mae": 0.015522003173828125,
+          "covered": 4108,
+          "expectedCovered": 4114
+        },
+        {
           "scene": "tide-native",
           "frame": 0,
           "target": "editable",
-          "mae": 0.33263397216796875,
+          "mae": 0.3361854553222656,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -1189,7 +1431,7 @@
           "scene": "tide-native",
           "frame": 0,
           "target": "native-reexport",
-          "mae": 0.004192352294921875,
+          "mae": 0.005069732666015625,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -1197,7 +1439,7 @@
           "scene": "tide-native",
           "frame": 30,
           "target": "editable",
-          "mae": 0.3299903869628906,
+          "mae": 0.3335418701171875,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -1205,7 +1447,7 @@
           "scene": "tide-native",
           "frame": 30,
           "target": "native-reexport",
-          "mae": 0.00537872314453125,
+          "mae": 0.006256103515625,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -1213,7 +1455,7 @@
           "scene": "tide-native",
           "frame": 60,
           "target": "editable",
-          "mae": 0.3294792175292969,
+          "mae": 0.33303070068359375,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -1221,7 +1463,7 @@
           "scene": "tide-native",
           "frame": 60,
           "target": "native-reexport",
-          "mae": 0.00308990478515625,
+          "mae": 0.00396728515625,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -1229,7 +1471,7 @@
           "scene": "tide-native",
           "frame": 90,
           "target": "editable",
-          "mae": 0.3299903869628906,
+          "mae": 0.3335418701171875,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -1237,7 +1479,7 @@
           "scene": "tide-native",
           "frame": 90,
           "target": "native-reexport",
-          "mae": 0.00537872314453125,
+          "mae": 0.006256103515625,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -1245,7 +1487,7 @@
           "scene": "tide-native",
           "frame": 120,
           "target": "editable",
-          "mae": 0.33263397216796875,
+          "mae": 0.3361854553222656,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -1253,7 +1495,7 @@
           "scene": "tide-native",
           "frame": 120,
           "target": "native-reexport",
-          "mae": 0.004192352294921875,
+          "mae": 0.005069732666015625,
           "covered": 65536,
           "expectedCovered": 65536
         }

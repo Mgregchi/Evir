@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-23T07:45:36.092Z",
+  "checkedAt": "2026-11-23T10:01:49.750Z",
   "scope": "Cloud Chromium automation; no physical or moderated-user evidence.",
   "viewports": [
     {
@@ -7,7 +7,7 @@
       "checks": [
         "native sample imports into 35 editable layers",
         "ellipse, mixed vertex and rounded rectangle controls",
-        "numeric edit of a rounded freeform contour point and undo/redo",
+        "numeric edit of a rounded star point and undo/redo",
         "native export equals compiler bytes",
         "named animation scrub and imported skin binding",
         "unsupported geometry retains source and offers original viewing",
@@ -21,7 +21,7 @@
       "checks": [
         "native sample imports into 35 editable layers",
         "ellipse, mixed vertex and rounded rectangle controls",
-        "numeric edit of a rounded freeform contour point and undo/redo",
+        "numeric edit of a rounded star point and undo/redo",
         "native export equals compiler bytes",
         "named animation scrub and imported skin binding",
         "unsupported geometry retains source and offers original viewing",

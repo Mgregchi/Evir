@@ -54,6 +54,12 @@ export function geometryCases() {
     fields:{isClosed:true,x:37,y:-17,rotation:.45,scaleX:-.8,scaleY:1.3},
     skin:true,motion:true,bind:{xx:.8,xy:.13,yx:-.1,yy:.85,tx:27,ty:19},
   });
+  make('import-triangle',{type:'Triangle',fields:{width:115,height:90,originX:.25,originY:.7},
+    shape:{x:105,y:135},motion:true,gradient:true});
+  make('import-polygon-rounded',{type:'Polygon',fields:{width:144,height:105,cornerRadius:12},
+    shape:{x:128,y:128}});
+  make('import-star-transformed',{type:'Star',fields:{width:144,height:117,points:6,innerRadius:.42,
+    cornerRadius:-7,rotation:.21,scaleX:-.85,scaleY:1.1},shape:{x:128,y:128},stroke:true});
   return cases;
 }
 export async function importedCases(){return Promise.all(geometryCases().map(async c=>({...c,project:stableImport(await importRiv(c.bytes),c.name)})));}
