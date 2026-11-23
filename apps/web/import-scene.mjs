@@ -5,7 +5,7 @@ export function tideRecords() {
  const root=[],group=(name,x,y)=>{const n={name,type:'Node',fields:{x,y},children:[]};root.push(n);return n.children;};
  const add=(parent,name,type,fields,fill,vertices=[],stroke)=>{parent.push({name,type:'Shape',fields:{},contour:{type,fields},fill,vertices,stroke});};
  const ellipse=(parent,name,x,y,w,h,fill,stroke)=>add(parent,name,'Ellipse',{x,y,width:w,height:h},fill,[],stroke);
- const straight=(x,y)=>({type:'StraightVertex',fields:{x,y}});
+ const straight=(x,y,radius=0)=>({type:'StraightVertex',fields:{x,y,...(radius?{radius}:{})}});
  const mirror=(x,y,rotation,distance)=>({type:'CubicMirroredVertex',fields:{x,y,rotation,distance}});
  const asym=(x,y,rotation,inDistance,outDistance)=>({type:'CubicAsymmetricVertex',fields:{x,y,rotation,inDistance,outDistance}});
  const path=(parent,name,vertices,fill,stroke,closed=true)=>add(parent,name,'PointsPath',{isClosed:closed},fill,vertices,stroke);
@@ -13,7 +13,7 @@ export function tideRecords() {
  ellipse(root,'sea glass sky',256,232,414,392,0xffdcece3);
  ellipse(root,'setting sun',357,133,76,76,peach);
  ellipse(root,'sun shimmer',349,125,48,48,0xfff1c9a8);
- path(root,'far tide',[straight(50,335),asym(153,319,0,61,56),asym(338,331,0,74,65),straight(462,319),straight(462,443),straight(50,443)],0xffb7d3cd);
+ path(root,'far tide',[straight(50,335),asym(153,319,0,61,56),asym(338,331,0,74,65),straight(462,319),straight(462,443,25),straight(50,443,25)],0xffb7d3cd);
  path(root,'near tide',[straight(25,390),asym(162,373,0,70,65),asym(336,387,0,67,57),straight(487,366),straight(487,488),straight(25,488)],0xff8ebeb7);
  ellipse(root,'resting stone',255,418,245,57,0xff648d87);
  ellipse(root,'stone light',246,409,228,45,0xff98b1a2);

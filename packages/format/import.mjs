@@ -549,7 +549,7 @@ async function decodeProject(input) {
           const vertices=children(shape.i).filter(v=>vertexTypes.has(v.r.type));
           const skin=children(shape.i).filter(v=>v.r.type==='Skin');
           if(skin.length&&!isIdentityContour(shape.r.fields))fail(shape.r,'transformed skinned contours are outside the editable subset');
-          return editableContour(shape.r,vertices,{fail,pointId:()=>newId('point'),forcePath:shapes.length>1||(fills[0]?.r.fields.fillRule===1)});
+          return editableContour(shape.r,vertices,{fail,pointId:()=>newId('point'),skinned:skin.length>0,forcePath:shapes.length>1||(fills[0]?.r.fields.fillRule===1)});
         });
         n.kind=decoded[0].kind;Object.assign(n.geometry,decoded[0].geometry);
         if(shapes.length>1)n.geometry.contours=decoded.slice(1).map(v=>({closed:v.geometry.closed,points:v.geometry.points}));

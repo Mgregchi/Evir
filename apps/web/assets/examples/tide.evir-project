@@ -2480,30 +2480,60 @@
             "id": "tide-point-109",
             "anchor": [
               462,
-              443
+              418
             ],
             "in": [
               462,
-              443
+              418
             ],
             "out": [
               462,
-              443
+              431.80711874576986
             ]
           },
           {
             "id": "tide-point-110",
             "anchor": [
-              50,
+              437,
               443
             ],
             "in": [
-              50,
+              450.80711874576986,
               443
             ],
             "out": [
-              50,
+              437,
               443
+            ]
+          },
+          {
+            "id": "tide-point-111",
+            "anchor": [
+              75,
+              443
+            ],
+            "in": [
+              75,
+              443
+            ],
+            "out": [
+              61.192881254230166,
+              443
+            ]
+          },
+          {
+            "id": "tide-point-112",
+            "anchor": [
+              50,
+              418
+            ],
+            "in": [
+              50,
+              431.80711874576986
+            ],
+            "out": [
+              50,
+              418
             ]
           }
         ]
@@ -2530,7 +2560,7 @@
         "skin": null,
         "points": [
           {
-            "id": "tide-point-111",
+            "id": "tide-point-113",
             "anchor": [
               349,
               101
@@ -2545,7 +2575,7 @@
             ]
           },
           {
-            "id": "tide-point-112",
+            "id": "tide-point-114",
             "anchor": [
               373,
               125
@@ -2560,7 +2590,7 @@
             ]
           },
           {
-            "id": "tide-point-113",
+            "id": "tide-point-115",
             "anchor": [
               349,
               149
@@ -2575,7 +2605,7 @@
             ]
           },
           {
-            "id": "tide-point-114",
+            "id": "tide-point-116",
             "anchor": [
               325,
               125
@@ -2613,7 +2643,7 @@
         "skin": null,
         "points": [
           {
-            "id": "tide-point-115",
+            "id": "tide-point-117",
             "anchor": [
               357,
               95
@@ -2628,7 +2658,7 @@
             ]
           },
           {
-            "id": "tide-point-116",
+            "id": "tide-point-118",
             "anchor": [
               395,
               133
@@ -2643,7 +2673,7 @@
             ]
           },
           {
-            "id": "tide-point-117",
+            "id": "tide-point-119",
             "anchor": [
               357,
               171
@@ -2658,7 +2688,7 @@
             ]
           },
           {
-            "id": "tide-point-118",
+            "id": "tide-point-120",
             "anchor": [
               319,
               133
@@ -2696,7 +2726,7 @@
         "skin": null,
         "points": [
           {
-            "id": "tide-point-119",
+            "id": "tide-point-121",
             "anchor": [
               256,
               36
@@ -2711,7 +2741,7 @@
             ]
           },
           {
-            "id": "tide-point-120",
+            "id": "tide-point-122",
             "anchor": [
               463,
               232
@@ -2726,7 +2756,7 @@
             ]
           },
           {
-            "id": "tide-point-121",
+            "id": "tide-point-123",
             "anchor": [
               256,
               428
@@ -2741,7 +2771,7 @@
             ]
           },
           {
-            "id": "tide-point-122",
+            "id": "tide-point-124",
             "anchor": [
               49,
               232
@@ -2779,52 +2809,52 @@
         "skin": null,
         "points": [
           {
-            "id": "tide-point-123",
-            "anchor": [
-              0,
-              0
-            ],
-            "in": [
-              0,
-              0
-            ],
-            "out": [
-              0,
-              0
-            ]
-          },
-          {
-            "id": "tide-point-124",
-            "anchor": [
-              512,
-              0
-            ],
-            "in": [
-              512,
-              0
-            ],
-            "out": [
-              512,
-              0
-            ]
-          },
-          {
             "id": "tide-point-125",
             "anchor": [
-              512,
-              512
+              0,
+              0
             ],
             "in": [
-              512,
-              512
+              0,
+              0
             ],
             "out": [
-              512,
-              512
+              0,
+              0
             ]
           },
           {
             "id": "tide-point-126",
+            "anchor": [
+              512,
+              0
+            ],
+            "in": [
+              512,
+              0
+            ],
+            "out": [
+              512,
+              0
+            ]
+          },
+          {
+            "id": "tide-point-127",
+            "anchor": [
+              512,
+              512
+            ],
+            "in": [
+              512,
+              512
+            ],
+            "out": [
+              512,
+              512
+            ]
+          },
+          {
+            "id": "tide-point-128",
             "anchor": [
               0,
               512

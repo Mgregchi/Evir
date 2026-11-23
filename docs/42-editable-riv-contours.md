@@ -16,7 +16,7 @@ Evir materializes supported geometry as ordinary editable cubic controls. This p
 
 | Native geometry | Editable result | Limits |
 | --- | --- | --- |
-| Mixed `StraightVertex`, `CubicMirroredVertex`, `CubicAsymmetricVertex`, `CubicDetachedVertex` in one `PointsPath` | Ordered anchors and independent incoming/outgoing handles, retaining open/closed state | Straight-vertex radius must be zero. Contour and vertex geometry keys reject. |
+| Mixed `StraightVertex`, `CubicMirroredVertex`, `CubicAsymmetricVertex`, `CubicDetachedVertex` in one `PointsPath` | Ordered anchors and independent incoming/outgoing handles, retaining open/closed state | Static straight-vertex radii are supported on unskinned paths. Contour and vertex geometry keys reject. |
 | `Ellipse` | Four-point closed cubic path, preserving width, height and origin geometry | Positive dimensions; static geometry only. The original parametric dimensions are not Inspector properties after conversion. |
 | `Rectangle` with rounding, centered/custom origin or contour transform | Closed path in shape-local coordinates with editable corner controls | Positive dimensions and static contour geometry. |
 | Square-cornered top-left rectangle with identity contour transform | Existing rectangle node | Existing width/height animation remains supported. |
@@ -25,13 +25,15 @@ Evir materializes supported geometry as ordinary editable cubic controls. This p
 
 Supported Shape/group/bone transforms, fill/gradient/color animation and the existing centered solid stroke contract continue to use their existing mappings. A shape still needs exactly one supported contour and the supported paint combination. Static contour conversion does not broaden stroke, clipping, feather, asset, data-binding or state-machine contracts.
 
-Unsupported geometry keys reject before project replacement and now receive an **animated contour geometry** explanation. Evir does not sample or discard their motion to force an editable import. Rounded freeform vertices, nondefault path flags, procedural polygons/stars/triangles and transformed skinned paths still reject. Malformed contour/vertex/skin/weight parenting and duplicate skins reject explicitly.
+Unsupported geometry keys reject before project replacement and now receive an **animated contour geometry** explanation. Evir does not sample or discard their motion to force an editable import. Skinned rounded freeform vertices, nondefault path flags, procedural polygons/stars/triangles and transformed skinned paths still reject. Malformed contour/vertex/skin/weight parenting and duplicate skins reject explicitly.
 
-### Static rectangle rounding
+### Static corner rounding
 
 Rive's pinned [Rectangle implementation](https://github.com/rive-app/rive-runtime/blob/7aa93402a27c800db8a36acc8672612c100ea9b1/src/shapes/rectangle.cpp) visits the corners clockwise from top left. Its [generated defaults](https://github.com/rive-app/rive-runtime/blob/7aa93402a27c800db8a36acc8672612c100ea9b1/include/rive/generated/shapes/rectangle_base.hpp) link all corners to the top-left radius unless linking is explicitly disabled. The pinned [Path implementation](https://github.com/rive-app/rive-runtime/blob/7aa93402a27c800db8a36acc8672612c100ea9b1/src/shapes/path.cpp) clamps each radius magnitude to half the shorter adjacent edge, computes cubic handles, and rotates those handles for negative radii.
 
 Evir converts each rounded corner to two editable points before applying the contour transform. Linked radii, zero-radius corners, independent concave corners and oversized radii follow that same geometry. Radius and linking controls are baked into the imported path. Native radius animation still opens through the original-file viewer.
+
+For freeform straight vertices, Rive measures from the corner to the previous cubic's outgoing handle and the next cubic's incoming handle, using the adjacent anchors for straight neighbors. It clamps the radius by half both distances and wraps the neighbor lookup even at open-path endpoints. Evir uses the same construction to bake positive and negative radii into editable controls while preserving whether the contour is open. Skinned rounding stays unsupported because the native curve is rebuilt from deformed neighboring controls.
 
 ## Try Tide
 
@@ -41,7 +43,7 @@ The [native recipe](../apps/web/import-scene.mjs) contains actual ellipse, squar
 
 1. In the website's Examples page, find **Tide** and download **Native import sample** (`tide-native.riv`).
 2. Open it in Studio through **Open project** and confirm replacement after saving any existing work.
-3. Select **soft silhouette**, open **Properties → Edit points**, then change a point or handle. Undo restores the imported geometry. Select **muzzle** to inspect an ellipse converted to four cubic vertices, or **mint sea glass** to edit the eight points of a rounded rectangle.
+3. Select **soft silhouette**, open **Properties → Edit points**, then change a point or handle. Undo restores the imported geometry. Select **muzzle** to inspect an ellipse converted to four cubic vertices, **mint sea glass** for a rounded rectangle, or **far tide** for rounded freeform corners.
 4. Choose **Animate**, open **Timeline** on compact screens and scrub **Shore hello**. The body and flipper keep separate transform tracks.
 5. Save editable `.evir-project` source or export the compatible `.riv`. The gallery's ordinary **Download .riv** is the Evir re-export; **Native import sample** retains the original native contour types.
 
@@ -65,4 +67,4 @@ npm run test:experience
 
 The [scoped results directory](../research/results/import-geometry/) contains source/native/re-export hashes, selected frame comparisons, actual Studio screenshots and the completed validation ledger. Numeric reconstruction uses float32/trigonometric tolerances rather than promising byte-identical native round trips. Chromium/SwiftShader checks are cloud software evidence, not physical GPU/mobile performance or human/screen-reader testing.
 
-Broader editable Editor-file import remains open: animated geometry, freeform rounding, path flags, broader compound contours, layout/data contracts, nested artboards, richer machines and asset/text semantics require separate contracts and fixtures. Graphical weight painting, richer rigging/blending, path joins and text/layout also remain on the consolidated plan.
+Broader editable Editor-file import remains open: animated geometry, skinned freeform rounding, path flags, broader compound contours, layout/data contracts, nested artboards, richer machines and asset/text semantics require separate contracts and fixtures. Graphical weight painting, richer rigging/blending, path joins and text/layout also remain on the consolidated plan.
