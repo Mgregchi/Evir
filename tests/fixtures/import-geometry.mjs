@@ -41,6 +41,14 @@ export function geometryCases() {
   make('import-rectangle-transformed',{type:'Rectangle',fields:{width:100,height:80,originX:0,originY:0,x:80,y:48,rotation:.35,scaleX:.9,scaleY:1.1},gradient:true});
   make('import-rectangle-rounded-linked',{type:'Rectangle',fields:{width:145,height:90,cornerRadiusTL:72,cornerRadiusTR:2},shape:{x:128,y:128}});
   make('import-rectangle-rounded-independent',{type:'Rectangle',fields:{width:110,height:80,linkCornerRadius:false,cornerRadiusTL:-26,cornerRadiusTR:12,cornerRadiusBL:34,rotation:.28,scaleX:-.9,scaleY:1.2},shape:{x:128,y:128},stroke:true});
+  make('import-rounded-mixed-closed',{vertices:[
+    {type:'StraightVertex',fields:{x:50,y:65,radius:110}},mixed[1],
+    {type:'StraightVertex',fields:{x:205,y:168,radius:-28}},mixed[3],
+  ]});
+  make('import-rounded-open-stroke',{fields:{isClosed:false,x:9,y:7,scaleY:.9},stroke:true,vertices:[
+    {type:'StraightVertex',fields:{x:49,y:80,radius:24}},mixed[1],mixed[2],
+    {type:'StraightVertex',fields:{x:60,y:199,radius:-30}},
+  ]});
   make('import-mixed-skinned',{skin:true,motion:true});
   return cases;
 }
