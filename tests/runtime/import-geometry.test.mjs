@@ -54,6 +54,21 @@ test('freeform rounding follows adjacent cubic handles and preserves open endpoi
  const length=Math.hypot(11,119);
  close(open.points[0].anchor,[58+24*11/length,7+(80+24*119/length)*.9]);
 });
+test('native procedural contours become closed paths with the authored origin and point count',async()=>{
+ const all=await importedCases();
+ const triangle=all.find(c=>c.name==='import-triangle').project.nodes[0].geometry;
+ assert.equal(triangle.closed,true);assert.equal(triangle.points.length,3);
+ close(triangle.points[0].anchor,[28.75,-63]);close(triangle.points[2].anchor,[-28.75,27]);
+ const polygon=all.find(c=>c.name==='import-polygon-rounded').project.nodes[0].geometry;
+ assert.equal(polygon.closed,true);assert.equal(polygon.points.length,10);
+ const star=all.find(c=>c.name==='import-star-transformed').project.nodes[0].geometry;
+ assert.equal(star.closed,true);assert.equal(star.points.length,24);
+ for(const points of [2,257]){
+  const source=geometryCases().find(c=>c.name==='import-polygon-rounded');
+  source.records.find(r=>r.type==='Polygon').fields.points=points;
+  await assert.rejects(()=>importRiv(encodeRecords(source.records)),/3 to 256 points/);
+ }
+});
 test('static contour TRS affects all handles while Shape transform and paint remain in their own space',async()=>{
  const c=geometryCases().find(c=>c.name==='import-mixed-transformed'),p=await importRiv(c.bytes),n=p.nodes[0],f=c.records.find(r=>r.type==='PointsPath').fields;
  const map=([x,y])=>[Math.cos(f.rotation)*f.scaleX*x-Math.sin(f.rotation)*f.scaleY*y+f.x,Math.sin(f.rotation)*f.scaleX*x+Math.cos(f.rotation)*f.scaleY*y+f.y];
@@ -104,7 +119,7 @@ test('unsupported rounding, flags, malformed hierarchy, weights and animated con
  ]){const records=structuredClone(geometryCases().find(c=>c.name===name).records);records.find(r=>r.type===type).fields[field]=value;await assert.rejects(()=>importRiv(encodeRecords(records)),reason);}
  const duplicate=geometryCases()[0].records;duplicate.push({type:'Ellipse',fields:{parentId:1,width:30,height:20}});const compound=await importRiv(encodeRecords(duplicate));assert.equal(compound.nodes[0].geometry.contours.length,1);assert.equal(compound.nodes[0].geometry.contours[0].points.length,4);
  const weight=geometryCases().find(c=>c.name==='import-mixed-skinned').records;const r=weight.find(r=>r.type==='Weight');r.type='CubicWeight';await assert.rejects(()=>importRiv(encodeRecords(weight)),/weight type/);
- for(const [name,type,propertyKey]of [['import-mixed-closed','CubicMirroredVertex',82],['import-rounded-mixed-closed','StraightVertex',26],['import-ellipse-centered','Ellipse',20],['import-rectangle-centered','Rectangle',21],['import-rectangle-rounded-linked','Rectangle',31],['import-mixed-transformed','PointsPath',13],['import-skinned-contour-bind','PointsPath',13]]){
+ for(const [name,type,propertyKey]of [['import-mixed-closed','CubicMirroredVertex',82],['import-star-transformed','Star',127],['import-rounded-mixed-closed','StraightVertex',26],['import-ellipse-centered','Ellipse',20],['import-rectangle-centered','Rectangle',21],['import-rectangle-rounded-linked','Rectangle',31],['import-mixed-transformed','PointsPath',13],['import-skinned-contour-bind','PointsPath',13]]){
   const records=structuredClone(geometryCases().find(c=>c.name===name).records),objectId=records.findIndex(r=>r.type===type)-1;
   records.push({type:'LinearAnimation',fields:{name:'Geometry',fps:60,duration:60}},{type:'KeyedObject',fields:{objectId}},{type:'KeyedProperty',fields:{propertyKey}},{type:'KeyFrameDouble',fields:{frame:0,value:1}});
   await assert.rejects(()=>importRiv(encodeRecords(records)),/animated .* geometry cannot be preserved/);

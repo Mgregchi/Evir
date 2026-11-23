@@ -5,7 +5,7 @@ export const vertexTypes = new Set([
   'StraightVertex', 'CubicDetachedVertex',
   'CubicMirroredVertex', 'CubicAsymmetricVertex',
 ]);
-export const contourTypes = new Set(['PointsPath', 'Rectangle', 'Ellipse']);
+export const contourTypes = new Set(['PointsPath', 'Rectangle', 'Ellipse', 'Triangle', 'Polygon', 'Star']);
 export const contourTransform = (f) => {
   const r=f.rotation ?? 0, x=f.scaleX ?? 1, y=f.scaleY ?? 1;
   return [Math.cos(r)*x,Math.sin(r)*x,-Math.sin(r)*y,Math.cos(r)*y,f.x ?? 0,f.y ?? 0];
@@ -90,13 +90,27 @@ export function editableContour(record, vertices, {fail, pointId,forcePath=false
       const corners = [[x,y],[x+w,y],[x+w,y+h],[x,y+h]];
       points = corners.flatMap((corner,i)=>radii[i]===0 ? [point(corner)] :
         roundedCorner(corner,corners[(i+3)%4],corners[(i+1)%4],radii[i],point));
-    } else {
+    } else if(record.type==='Ellipse') {
       // Ellipse::update uses four clockwise cubic vertices and this constant.
       const k=.552284749831,rx=w/2,ry=h/2,cx=x+rx,cy=y+ry;
       points=[point([cx,y],[cx-k*rx,y],[cx+k*rx,y]),
         point([x+w,cy],[x+w,cy-k*ry],[x+w,cy+k*ry]),
         point([cx,y+h],[cx+k*rx,y+h],[cx-k*rx,y+h]),
         point([x,cy],[x,cy+k*ry],[x,cy-k*ry])];
+    } else if(record.type==='Triangle') {
+      points=[[x+w/2,y],[x+w,y+h],[x,y+h]].map(anchor=>point(anchor));
+    } else {
+      const sides=f.points ?? 5,star=record.type==='Star';
+      if(sides<3 || sides>256)fail(record,'editable polygons and stars require 3 to 256 points');
+      const count=star ? sides*2 : sides;
+      const corners=Array.from({length:count},(_,i)=>{
+        const angle=-Math.PI/2+i*2*Math.PI/count;
+        const scale=star && i%2 ? f.innerRadius ?? .5 : 1;
+        return [x+w/2+Math.cos(angle)*w/2*scale,y+h/2+Math.sin(angle)*h/2*scale];
+      });
+      const radius=f.cornerRadius ?? 0;
+      points=radius===0 ? corners.map(anchor=>point(anchor)) : corners.flatMap((corner,i)=>
+        roundedCorner(corner,corners[(i+count-1)%count],corners[(i+1)%count],radius,point));
     }
   }
   // Native skinned PointsPaths deform directly in world space using the Skin bind matrix.
