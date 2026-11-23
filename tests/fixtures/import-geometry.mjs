@@ -11,7 +11,7 @@ export function geometryCases() {
     {type:'CubicAsymmetricVertex',fields:{x:203,y:165,rotation:1.8,inDistance:48,outDistance:22}},
     {type:'CubicDetachedVertex',fields:{x:70,y:195,inRotation:.4,inDistance:29,outRotation:-2,outDistance:46}},
   ];
-  function make(name,{type='PointsPath',fields={isClosed:true},vertices=mixed,stroke=false,gradient=false,skin=false,bind={},motion=false,shape={},fillRule,innerContour}={}) {
+  function make(name,{type='PointsPath',fields={isClosed:true},vertices=mixed,stroke=false,gradient=false,skin=false,bind={},motion=false,shape={},fillRule,innerContour,innerFlags=2}={}) {
     const records=[{type:'Backboard',fields:{}},{type:'Artboard',fields:{name:'Board',width:256,height:256}}];
     const emit=(type,fields)=>{records.push({type,fields});return records.length-2;};
     const bone=skin?emit('RootBone',{name:'Pivot',parentId:0,x:128,y:128,length:70}):null;
@@ -24,7 +24,7 @@ export function geometryCases() {
     }
     if(skin){const id=emit('Skin',{parentId:path,xx:1,yy:1,...bind});emit('Tendon',{parentId:id,boneId:bone,xx:1,yy:1,tx:128,ty:128});emit('Tendon',{parentId:id,boneId:steadyBone,xx:1,yy:1,tx:128,ty:128});}
     if(innerContour){
-      const inner=emit('PointsPath',{parentId:shapeId,isClosed:true,pathFlags:2});
+      const inner=emit('PointsPath',{parentId:shapeId,isClosed:true,pathFlags:innerFlags});
       for(const [x,y] of innerContour)emit('StraightVertex',{parentId:inner,x,y});
     }
     if(stroke){const id=emit('Stroke',{parentId:shapeId,thickness:9,cap:1,join:1});emit('SolidColor',{parentId:id,colorValue:0xff275b49});}
@@ -71,6 +71,10 @@ export function geometryCases() {
   make('import-counterclockwise-stroke',{fields:{isClosed:true,pathFlags:2},vertices:straightLoop,shape:{x:128,y:128},stroke:true});
   make('import-counterclockwise-evenodd-hole',{type:'Rectangle',fields:{width:192,height:176},
     shape:{x:128,y:128},innerContour,fillRule:1});
+  make('import-hidden-primary',{type:'Rectangle',fields:{width:180,height:170,pathFlags:1},
+    shape:{x:128,y:128},innerContour,stroke:true});
+  make('import-hidden-secondary',{type:'Rectangle',fields:{width:190,height:175},
+    shape:{x:128,y:128},innerContour,innerFlags:3});
   return cases;
 }
 export async function importedCases(){return Promise.all(geometryCases().map(async c=>({...c,project:stableImport(await importRiv(c.bytes),c.name)})));}

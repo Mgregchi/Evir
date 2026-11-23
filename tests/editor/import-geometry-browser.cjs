@@ -14,11 +14,16 @@ const {run}=require('../../tools/browser.cjs');
    await press('Fit');await page.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))));
    const imported=await snapshot();assert.equal(imported.nodes.length,35);assert.equal(imported.assets.length,0);assert.equal(imported.animations[0].name,'Shore hello');
    const body=imported.nodes.find(n=>n.name==='soft silhouette');assert.equal(body.kind,'path');assert.equal(body.geometry.points.length,6);assert.equal(imported.nodes.find(n=>n.name==='muzzle').geometry.points.length,4);
-   const glass=imported.nodes.find(n=>n.name==='mint sea glass');assert.equal(glass.kind,'path');assert.equal(glass.geometry.points.length,8);assert.equal(glass.geometry.contours[0].points.length,4);
+   const glass=imported.nodes.find(n=>n.name==='mint sea glass');assert.equal(glass.kind,'path');assert.equal(glass.geometry.points.length,8);assert.equal(glass.geometry.contours[0].points.length,4);assert.equal(glass.geometry.contours[1].hidden,true);
    const flipper=imported.nodes.find(n=>n.name==='waving flipper');assert.equal(flipper.geometry.skin.weights.length,5);
    assert.equal(imported.nodes.find(n=>n.id===flipper.geometry.skin.bones[0].boneId).name,'flipper pivot');
    const star=imported.nodes.find(n=>n.name==='cream sea star');assert.equal(star.kind,'path');assert.equal(star.geometry.points.length,20);
    const tide=imported.nodes.find(n=>n.name==='far tide');assert.equal(tide.geometry.points.length,8);
+   if(width<850)await press('Layers');await press('Select mint sea glass');if(width<850){await page.keyboard.press('Escape');await press('Properties');}
+   await page.getByLabel('Contour',{exact:true}).selectOption('2');await press('Show contour');
+   assert.equal((await snapshot()).nodes.find(n=>n.id===glass.id).geometry.contours[1].hidden,undefined);
+   if(width<850)await page.keyboard.press('Escape');await press('Undo');
+   assert.equal((await snapshot()).nodes.find(n=>n.id===glass.id).geometry.contours[1].hidden,true);
    if(width<850)await press('Layers');await press('Select cream sea star');if(width<850){await page.keyboard.press('Escape');await press('Properties');}await press('Edit points');
    const field=page.getByLabel('Point X',{exact:true}),x=Number(await field.inputValue());await field.fill(String(x+3));await field.press('Tab');assert.equal((await snapshot()).nodes.find(n=>n.name==='cream sea star').geometry.points[0].anchor[0],x+3);
    if(width<850)await page.keyboard.press('Escape');await press('Undo');assert.deepEqual((await snapshot()).nodes,imported.nodes);await press('Redo');assert.equal((await snapshot()).nodes.find(n=>n.name==='cream sea star').geometry.points[0].anchor[0],x+3);await press('Undo');

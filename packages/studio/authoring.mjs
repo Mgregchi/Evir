@@ -389,6 +389,13 @@ export function mountAuthoring(api) {
         ),
       ),
     );
+    section.append(button(contour.hidden ? "Show contour" : "Hide contour", () =>
+      transaction("Change contour visibility", (p) => {
+        const part=pathContours(p.nodes.find(v=>v.id===n.id).geometry)[contourIndex];
+        if(part.hidden)delete part.hidden;
+        else part.hidden=true;
+      }),
+    ));
     if (!contour.points.some((v) => v.id === pointId))
       pointId = contour.points[0].id;
     section.append(

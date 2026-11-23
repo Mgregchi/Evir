@@ -37,6 +37,7 @@ export function setShapeParameters(p,id,changes){
  const generated=canonicalShape(type,next),geometry={...generated.geometry,fill:structuredClone(n.geometry.fill),...(generated.kind==='path'?{skin:n.geometry.skin??null}:{}),shape:generated.definition};
  if(n.geometry.stroke)geometry.stroke=structuredClone(n.geometry.stroke);
  if(n.geometry.fillRule)geometry.fillRule=n.geometry.fillRule;
+ if(n.geometry.hidden)geometry.hidden=true;
  if(n.kind==='path'){
   if(n.geometry.skin&&geometry.points.length!==n.geometry.points.length)fail('Unbind skin before changing the number of points');
   if(geometry.points.length===n.geometry.points.length)geometry.points.forEach((v,i)=>v.id=n.geometry.points[i].id);

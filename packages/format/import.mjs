@@ -559,7 +559,7 @@ async function decodeProject(input) {
           return editableContour(shape.r,vertices,{fail,pointId:()=>newId('point'),skinned:skin.length>0,forcePath:shapes.length>1||(fills[0]?.r.fields.fillRule===1)});
         });
         n.kind=decoded[0].kind;Object.assign(n.geometry,decoded[0].geometry);
-        if(shapes.length>1)n.geometry.contours=decoded.slice(1).map(v=>({closed:v.geometry.closed,points:v.geometry.points}));
+        if(shapes.length>1)n.geometry.contours=decoded.slice(1).map(v=>({closed:v.geometry.closed,points:v.geometry.points,...(v.geometry.hidden?{hidden:true}:{})}));
         if(fills[0]?.r.fields.fillRule===1)n.geometry.fillRule='evenodd';
         const shape=shapes[0];
         if (n.kind === "rectangle") {

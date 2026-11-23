@@ -63,8 +63,8 @@ export function controlMatrix(p, n, pointId, control, resolve) {
   }
   return multiply(matrix, skin.bindWorld);
 }
-export function worldPoints(p, n, resolve) {
-  return pathContours(n.geometry).flatMap((c,contour)=>c.points.map((v) => ({
+export function worldPoints(p, n, resolve, {visibleOnly=false}={}) {
+  return pathContours(n.geometry).flatMap((c,contour)=>visibleOnly&&c.hidden?[]:c.points.map((v) => ({
     id: v.id,
     ...(n.geometry.contours ? {contour,closed:c.closed} : {}),
     ...Object.fromEntries(

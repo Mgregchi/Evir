@@ -11,6 +11,7 @@ export function prepareCompound(p,ids){
   if(n.parentId!==keep.parentId||n.artboardId!==keep.artboardId)throw Error('Choose shapes under the same parent and artboard.');
   for(let a=n;a;a=p.nodes.find(v=>v.id===a.parentId))if(p.editor.locked.includes(a.id)||p.editor.hidden.includes(a.id))throw Error('Show and unlock the shapes and their parents.');
   if(n.geometry.skin)throw Error('Unbind skin before changing path topology.');
+  if(n.kind==='path'&&pathContours(n.geometry).some(c=>c.hidden))throw Error('Show every contour before combining filled shapes.');
   if(n.kind==='path'&&pathContours(n.geometry).some(c=>!c.closed))throw Error('Close every contour before combining filled shapes.');
  }
  const selected=new Set(ids);
@@ -43,9 +44,9 @@ export function releaseCompound(p,id){
  for(let n=source;n;n=p.nodes.find(v=>v.id===n.parentId))if(p.editor.locked.includes(n.id)||p.editor.hidden.includes(n.id))throw Error('Show and unlock the compound path.');
  if(p.machines.some(m=>m.listeners.some(l=>l.targetId===id))||p.advanced&&[...p.advanced.clips,...p.advanced.feathers,...p.advanced.ik].some(v=>[v.targetId,v.maskId,v.boneId].includes(id)))throw Error('Remove direct listeners and effects before releasing contours.');
  if(source.geometry.skin||p.animations.some(a=>a.tracks.some(t=>t.targetId===id)))throw Error('Remove skin and direct animation before releasing contours.');
- const candidate=clone(p),n=candidate.nodes.find(n=>n.id===id),parts=pathContours(n.geometry),base=clone(n.geometry);delete base.contours;delete base.fillRule;
+ const candidate=clone(p),n=candidate.nodes.find(n=>n.id===id),parts=pathContours(n.geometry),base=clone(n.geometry);delete base.contours;delete base.fillRule;delete base.hidden;
  const oldOrder=n.order,created=[id];
  for(const other of candidate.nodes)if(other.parentId===n.parentId&&other.artboardId===n.artboardId&&other.order>oldOrder)other.order+=parts.length-1;
- parts.forEach((c,i)=>{const next={...clone(n),id:i?newId('node'):id,name:i?`${n.name} · contour ${i+1}`:n.name,order:oldOrder+i,geometry:{...clone(base),closed:c.closed,points:clone(c.points)}};if(i){candidate.nodes.push(next);created.push(next.id);}else Object.assign(n,next);});
+ parts.forEach((c,i)=>{const next={...clone(n),id:i?newId('node'):id,name:i?`${n.name} · contour ${i+1}`:n.name,order:oldOrder+i,geometry:{...clone(base),closed:c.closed,points:clone(c.points),...(c.hidden?{hidden:true}:{})}};if(i){candidate.nodes.push(next);created.push(next.id);}else Object.assign(n,next);});
  validateProject(candidate);p.nodes=candidate.nodes;return created;
 }

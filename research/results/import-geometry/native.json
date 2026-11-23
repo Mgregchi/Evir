@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-23T12:01:17.399Z",
+  "checkedAt": "2026-11-23T12:47:46.392Z",
   "runtimeVersion": "2.44.0",
   "method": "Independently encoded native contour records → editable import → Evir Canvas and native re-export, compared with the original in both official runtimes. Explicit named animation frames; static fixtures contain no animations.",
   "thresholds": {
@@ -147,10 +147,22 @@
       "reexportSha256": "0a04c95e4c3e3d77b17420dd3fa378f7a8e91f71c16d1a237a55e591298aab55"
     },
     {
+      "name": "import-hidden-primary",
+      "nativeSha256": "26615c70cf0deeea996ef04656d9fe7abedc68e0aa02d6cdd8082462b310b4b4",
+      "sourceSha256": "8c7e7c69084e29f449f31e409968398be63cd9047551b7fcd83cf4489631e5a8",
+      "reexportSha256": "e49812120a55cccb6eb03e250715b055984603491cd49bcf661b165d6fe0baa2"
+    },
+    {
+      "name": "import-hidden-secondary",
+      "nativeSha256": "b7a1f285915aabe48908a3e7fbf5a42776b1133e10101966c1c37151ce0ea50d",
+      "sourceSha256": "04aa3a07b78ddb11712d0f04ba3309c279adc08a17c81a80ce6248cec876ca1a",
+      "reexportSha256": "421ce2aa9aaae3c8dcf5360ac81a991add219e1219daafef2bc13c9eec9abd72"
+    },
+    {
       "name": "tide-native",
-      "nativeSha256": "0939a738c086d4be497dd5e7144badfd87193e0633e0ec61de02a8f828df1683",
-      "sourceSha256": "73cc9b65adc456ba4afc86ce6addb8cfd5bb0aafc6b353a9870e80961a501184",
-      "reexportSha256": "b6c85a9c822afd1f53198c8415f1e46fa38efe3a9066ed49b31d9b89d9634a52"
+      "nativeSha256": "dc00708b0c5165ced4192ae0fda43584e3d00807b04c80bf2081d5edeb8a218a",
+      "sourceSha256": "ca9b88a4f336a502730ba3d80e0342c67ec1806413325c09b41a90949264ade3",
+      "reexportSha256": "39115d4b7d7858ceb8286b73dd793bb1632b337761d9d6f6fc15963480f01989"
     }
   ],
   "backends": [
@@ -780,6 +792,38 @@
           "mae": 0,
           "covered": 29238,
           "expectedCovered": 29238
+        },
+        {
+          "scene": "import-hidden-primary",
+          "frame": null,
+          "target": "editable",
+          "mae": 0,
+          "covered": 2680,
+          "expectedCovered": 2680
+        },
+        {
+          "scene": "import-hidden-primary",
+          "frame": null,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 2680,
+          "expectedCovered": 2680
+        },
+        {
+          "scene": "import-hidden-secondary",
+          "frame": null,
+          "target": "editable",
+          "mae": 0,
+          "covered": 33440,
+          "expectedCovered": 33440
+        },
+        {
+          "scene": "import-hidden-secondary",
+          "frame": null,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 33440,
+          "expectedCovered": 33440
         },
         {
           "scene": "tide-native",
@@ -1532,6 +1576,38 @@
           "mae": 0,
           "covered": 29238,
           "expectedCovered": 29238
+        },
+        {
+          "scene": "import-hidden-primary",
+          "frame": null,
+          "target": "editable",
+          "mae": 0.0174407958984375,
+          "covered": 2680,
+          "expectedCovered": 2676
+        },
+        {
+          "scene": "import-hidden-primary",
+          "frame": null,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 2676,
+          "expectedCovered": 2676
+        },
+        {
+          "scene": "import-hidden-secondary",
+          "frame": null,
+          "target": "editable",
+          "mae": 0,
+          "covered": 33440,
+          "expectedCovered": 33440
+        },
+        {
+          "scene": "import-hidden-secondary",
+          "frame": null,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 33440,
+          "expectedCovered": 33440
         },
         {
           "scene": "tide-native",
