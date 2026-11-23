@@ -34,7 +34,7 @@ export function tideRecords() {
  const shell=group('shore treasures',132,427);
  path(shell,'coral shell',[straight(-19,6),asym(-23,-9,-1.3,8,8),mirror(0,-23,0,12),asym(23,-9,1.3,8,8),straight(19,6)],peach,{color:0xff986e57,width:2.5});
  for(const x of [-10,0,10])path(shell,'shell ridge '+x,[straight(0,5),straight(x,-15)],null,{color:0xffbc8565,width:2},false);
- ellipse(root,'mint pebble',362,448,23,11,pale);ellipse(root,'cream pebble',387,438,12,8,cream);
+ add(root,'mint sea glass','Rectangle',{x:362,y:448,width:26,height:15,rotation:-.18,linkCornerRadius:false,cornerRadiusTL:6,cornerRadiusTR:3,cornerRadiusBR:7,cornerRadiusBL:4},pale);ellipse(root,'cream pebble',387,438,12,8,cream);
  const records=[{type:'Backboard',fields:{}},{type:'Artboard',fields:{name:'Tide — a shore-side hello',width:512,height:512}}],ids=new Map();
  const emit=(type,fields)=>{records.push({type,fields});return records.length-2;};
  const walk=(list,parentId)=>{for(const n of [...list].reverse()){

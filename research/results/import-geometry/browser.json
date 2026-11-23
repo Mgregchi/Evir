@@ -1,13 +1,13 @@
 {
-  "checkedAt": "2026-10-17T08:19:25.798Z",
+  "checkedAt": "2026-11-23T07:10:12.162Z",
   "scope": "Cloud Chromium automation; no physical or moderated-user evidence.",
   "viewports": [
     {
       "width": 390,
       "checks": [
         "native sample imports into 34 editable layers",
-        "ellipse and mixed vertex controls",
-        "numeric point edit and undo/redo",
+        "ellipse, mixed vertex and rounded rectangle controls",
+        "numeric edit of a rounded rectangle point and undo/redo",
         "native export equals compiler bytes",
         "named animation scrub",
         "unsupported geometry retains source and offers original viewing",
@@ -20,8 +20,8 @@
       "width": 1440,
       "checks": [
         "native sample imports into 34 editable layers",
-        "ellipse and mixed vertex controls",
-        "numeric point edit and undo/redo",
+        "ellipse, mixed vertex and rounded rectangle controls",
+        "numeric edit of a rounded rectangle point and undo/redo",
         "native export equals compiler bytes",
         "named animation scrub",
         "unsupported geometry retains source and offers original viewing",
@@ -31,5 +31,5 @@
       ]
     }
   ],
-  "browser": "151.0.7922.173"
+  "browser": "153.0.8010.12"
 }
