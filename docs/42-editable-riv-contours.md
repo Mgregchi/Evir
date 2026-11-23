@@ -8,7 +8,7 @@ Research and implementation: 17 October 2026. This extends the existing bounded 
 
 The [supplied-corpus geometry inventory](../research/import-geometry/corpus-geometry.json) finds 842 mirrored vertices, 412 asymmetric vertices and 360 ellipses in SOBO. These are useful targets for import research. SOBO still rejects editable import because its data contracts and other features exceed the declared subset. Type counts are not evidence of successful whole-file conversion, matched scenes or an artwork redistribution license.
 
-Mirrored/asymmetric incoming controls subtract their direction vector; detached incoming controls add their separately stored vector. Ellipses default to a centered origin and use four clockwise cubic vertices with `circleConstant = 0.552284749831`. Static contour transforms act in the shape's local geometry space. Skinned paths use a different transform contract, so transformed skinned contours remain rejected in this increment.
+Mirrored/asymmetric incoming controls subtract their direction vector; detached incoming controls add their separately stored vector. Ellipses default to a centered origin and use four clockwise cubic vertices with `circleConstant = 0.552284749831`. Static transforms on unskinned contours act in the shape's local geometry space. Skinned paths use the bind-space rules below.
 
 Evir materializes supported geometry as ordinary editable cubic controls. This preserves the rendered geometry, supported paints and bone/shape motion. It does not retain the procedural ellipse or mirrored/asymmetric editing constraint: after import, each handle can move independently. Runtime component IDs become new source IDs, as in the existing importer.
 
@@ -21,11 +21,11 @@ Evir materializes supported geometry as ordinary editable cubic controls. This p
 | `Rectangle` with rounding, centered/custom origin or contour transform | Closed path in shape-local coordinates with editable corner controls | Positive dimensions and static contour geometry. |
 | Square-cornered top-left rectangle with identity contour transform | Existing rectangle node | Existing width/height animation remains supported. |
 | Static contour translation, rotation and scale | Applied to every anchor and handle, leaving the Shape transform and paint coordinates intact | Unskinned contours only; animated contour transforms reject. |
-| Identity-transform skinned mixed-vertex path | Existing path skin with the corresponding point references | Straight `Weight` influences apply equally to the coincident anchor and handles; cubic vertices require `CubicWeight` with independent control influences. Existing influence/rig limits still apply. |
+| Skinned mixed-vertex path with static contour transform fields | Existing path skin with the original local controls and explicit bind matrix | Straight `Weight` influences apply equally to the coincident anchor and handles; cubic vertices require `CubicWeight` with independent control influences. Existing influence/rig limits still apply. |
 
 Supported Shape/group/bone transforms, fill/gradient/color animation and the existing centered solid stroke contract continue to use their existing mappings. A shape still needs exactly one supported contour and the supported paint combination. Static contour conversion does not broaden stroke, clipping, feather, asset, data-binding or state-machine contracts.
 
-Unsupported geometry keys reject before project replacement and now receive an **animated contour geometry** explanation. Evir does not sample or discard their motion to force an editable import. Skinned rounded freeform vertices, nondefault path flags, procedural polygons/stars/triangles and transformed skinned paths still reject. Malformed contour/vertex/skin/weight parenting and duplicate skins reject explicitly.
+Unsupported geometry keys reject before project replacement and now receive an **animated contour geometry** explanation. Evir does not sample or discard their motion to force an editable import. Skinned rounded freeform vertices, nondefault path flags, and procedural polygons/stars/triangles still reject. Malformed contour/vertex/skin/weight parenting and duplicate skins reject explicitly.
 
 ### Static corner rounding
 
@@ -35,16 +35,20 @@ Evir converts each rounded corner to two editable points before applying the con
 
 For freeform straight vertices, Rive measures from the corner to the previous cubic's outgoing handle and the next cubic's incoming handle, using the adjacent anchors for straight neighbors. It clamps the radius by half both distances and wraps the neighbor lookup even at open-path endpoints. Evir uses the same construction to bake positive and negative radii into editable controls while preserving whether the contour is open. Skinned rounding stays unsupported because the native curve is rebuilt from deformed neighboring controls.
 
+### Skinned contour space
+
+The pinned [PointsPath implementation](https://github.com/rive-app/rive-runtime/blob/7aa93402a27c800db8a36acc8672612c100ea9b1/src/shapes/points_path.cpp) supplies an identity composition transform for skinned paths. [Skin](https://github.com/rive-app/rive-runtime/blob/7aa93402a27c800db8a36acc8672612c100ea9b1/src/bones/skin.cpp) loads its explicit bind matrix and deforms vertices with the weighted bone transforms. Evir keeps the local anchors and handles, the bind matrix, and the independent control weights. Static translation, rotation, and scale fields on the skinned path itself are normalized away on re-export because they do not place the native deformed geometry. Animated contour properties still fall outside the editable contract.
+
 ## Try Tide
 
-**Tide — a shore-side hello** adds Pebble, an original mint seal on a sea-glass shoreline. Thirty-four named editable layers include a waving flipper, whiskers, shell, sun, muzzle and eye highlights. **Shore hello** is a two-second looping body bob and flipper wave. No image/font assets or supplied reference pixels are embedded.
+**Tide — a shore-side hello** adds Pebble, an original mint seal on a sea-glass shoreline. Thirty-five named editable layers include a waving flipper, whiskers, shell, sun, muzzle and eye highlights. **Shore hello** is a two-second looping body bob and flipper wave. No image/font assets or supplied reference pixels are embedded.
 
 The [native recipe](../apps/web/import-scene.mjs) contains actual ellipse, square-cornered and rounded rectangle, straight, mirrored and asymmetric records. The generator encodes those records independently of `compileProject`, imports that native file, assigns reproducible source IDs and compiles the editable result. The poster is an actual Evir Canvas capture. This is an original synthetic native study, **not an export produced by the Rive Editor**.
 
 1. In the website's Examples page, find **Tide** and download **Native import sample** (`tide-native.riv`).
 2. Open it in Studio through **Open project** and confirm replacement after saving any existing work.
 3. Select **soft silhouette**, open **Properties → Edit points**, then change a point or handle. Undo restores the imported geometry. Select **muzzle** to inspect an ellipse converted to four cubic vertices, **mint sea glass** for a rounded rectangle, or **far tide** for rounded freeform corners.
-4. Choose **Animate**, open **Timeline** on compact screens and scrub **Shore hello**. The body and flipper keep separate transform tracks.
+4. Choose **Animate**, open **Timeline** on compact screens and scrub **Shore hello**. The body bobs while the flipper pivot drives the imported skin.
 5. Save editable `.evir-project` source or export the compatible `.riv`. The gallery's ordinary **Download .riv** is the Evir re-export; **Native import sample** retains the original native contour types.
 
 For unsupported files, the original read-only Rive viewer and original-byte download remain available. `.rev` authoring history is not reconstructed.

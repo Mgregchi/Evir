@@ -10,7 +10,7 @@ export const contourTransform = (f) => {
   const r=f.rotation ?? 0, x=f.scaleX ?? 1, y=f.scaleY ?? 1;
   return [Math.cos(r)*x,Math.sin(r)*x,-Math.sin(r)*y,Math.cos(r)*y,f.x ?? 0,f.y ?? 0];
 };
-export const isIdentityContour = f => (f.x ?? 0)===0 && (f.y ?? 0)===0 &&
+const isIdentityContour = f => (f.x ?? 0)===0 && (f.y ?? 0)===0 &&
   (f.rotation ?? 0)===0 && (f.scaleX ?? 1)===1 && (f.scaleY ?? 1)===1;
 
 const offset = ([x,y],[dx,dy],distance) => [x+dx*distance,y+dy*distance];
@@ -99,7 +99,8 @@ export function editableContour(record, vertices, {fail, pointId,forcePath=false
         point([x,cy],[x,cy+k*ry],[x,cy-k*ry])];
     }
   }
-  if(!isIdentityContour(f)) {
+  // Native skinned PointsPaths deform directly in world space using the Skin bind matrix.
+  if(!skinned&&!isIdentityContour(f)) {
     const [a,b,c,d,x,y]=contourTransform(f);
     for(const p of points)for(const key of ['anchor','in','out']){
       const [px,py]=p[key];p[key]=[a*px+c*py+x,b*px+d*py+y];

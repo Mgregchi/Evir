@@ -22,7 +22,10 @@ export function tideRecords() {
  path(seal,'tail fan',[straight(39,103),asym(100,105,-.4,24,23),asym(117,119,1.2,13,12),asym(88,133,2.9,22,14),straight(38,128)],mint,{color:ink,width:4});
  path(seal,'soft silhouette',[asym(-83,85,-1.8,30,52),asym(-62,-64,-1.12,50,35),mirror(-4,-113,.08,37),asym(61,-65,1.18,35,49),asym(85,78,1.36,46,30),asym(0,124,3.05,46,49)],mint,{color:ink,width:4.5});
  ellipse(seal,'soft belly',-5,61,102,101,pale);
+ seal.push({name:'flipper pivot',type:'RootBone',fields:{length:55}});
  path(seal,'waving flipper',[asym(61,23,-.6,18,23),asym(109,-37,-1.4,32,24),asym(126,-41,1,15,12),asym(120,17,2.1,23,31),asym(74,58,-2.3,26,21)],mint,{color:ink,width:4});
+ seal.at(-1).skinBone='flipper pivot';
+ Object.assign(seal.at(-1).contour.fields,{x:14,y:-9,rotation:.2,scaleX:.85});
  ellipse(seal,'left eye',-29,-48,15,20,ink);ellipse(seal,'right eye',31,-48,15,20,ink);
  ellipse(seal,'left glint',-31,-52,4,5,cream);ellipse(seal,'right glint',29,-52,4,5,cream);
  ellipse(seal,'left cheek',-47,-22,23,10,peach);ellipse(seal,'right cheek',48,-22,23,10,peach);
@@ -35,18 +38,28 @@ export function tideRecords() {
  path(shell,'coral shell',[straight(-19,6),asym(-23,-9,-1.3,8,8),mirror(0,-23,0,12),asym(23,-9,1.3,8,8),straight(19,6)],peach,{color:0xff986e57,width:2.5});
  for(const x of [-10,0,10])path(shell,'shell ridge '+x,[straight(0,5),straight(x,-15)],null,{color:0xffbc8565,width:2},false);
  add(root,'mint sea glass','Rectangle',{x:362,y:448,width:26,height:15,rotation:-.18,linkCornerRadius:false,cornerRadiusTL:6,cornerRadiusTR:3,cornerRadiusBR:7,cornerRadiusBL:4},pale);ellipse(root,'cream pebble',387,438,12,8,cream);
- const records=[{type:'Backboard',fields:{}},{type:'Artboard',fields:{name:'Tide — a shore-side hello',width:512,height:512}}],ids=new Map();
+ const records=[{type:'Backboard',fields:{}},{type:'Artboard',fields:{name:'Tide — a shore-side hello',width:512,height:512}}],ids=new Map(),pendingSkins=[];
  const emit=(type,fields)=>{records.push({type,fields});return records.length-2;};
  const walk=(list,parentId)=>{for(const n of [...list].reverse()){
   const id=emit(n.type,{name:n.name,parentId,...n.fields});ids.set(n.name,id);
   if(n.children){walk(n.children,id);continue;}
+  if(!n.contour)continue;
   const contour=emit(n.contour.type,{parentId:id,...n.contour.fields});
-  for(const v of n.vertices)emit(v.type,{parentId:contour,...v.fields});
+  for(const v of n.vertices){
+   const point=emit(v.type,{parentId:contour,...v.fields});
+   if(n.skinBone)emit('CubicWeight',{parentId:point,indices:1,values:255,inIndices:1,inValues:255,outIndices:1,outValues:255});
+  }
+  if(n.skinBone){
+   const skin=emit('Skin',{parentId:contour,xx:1,yy:1,tx:251,ty:282});
+   const tendon=emit('Tendon',{parentId:skin,boneId:0,xx:1,yy:1,tx:251,ty:282});
+   pendingSkins.push([tendon,n.skinBone]);
+  }
   if(n.fill!==null){const paint=emit('Fill',{parentId:id});emit('SolidColor',{parentId:paint,colorValue:n.fill});}
   if(n.stroke){const paint=emit('Stroke',{parentId:id,thickness:n.stroke.width,cap:1,join:1});emit('SolidColor',{parentId:paint,colorValue:n.stroke.color});}
  }};walk(root,0);
+ for(const [id,bone] of pendingSkins)records[id+1].fields.boneId=ids.get(bone);
  emit('LinearAnimation',{name:'Shore hello',fps:60,duration:120,loopValue:1});
- for(const [name,property,keys]of [['Pebble',14,[[0,282],[60,277],[120,282]]],['waving flipper',15,[[0,0],[30,-.12],[60,.04],[90,-.12],[120,0]]]]){
+ for(const [name,property,keys]of [['Pebble',14,[[0,282],[60,277],[120,282]]],['flipper pivot',15,[[0,0],[30,-.12],[60,.04],[90,-.12],[120,0]]]]){
   emit('KeyedObject',{objectId:ids.get(name)});emit('KeyedProperty',{propertyKey:property});for(const [frame,value]of keys)emit('KeyFrameDouble',{frame,value,interpolationType:1});
  }
  return records;

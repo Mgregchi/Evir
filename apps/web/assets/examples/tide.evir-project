@@ -587,7 +587,7 @@
       "kind": "path",
       "artboardId": "tide-artboard-1",
       "parentId": "tide-node-8",
-      "order": 17,
+      "order": 18,
       "transform": [
         1,
         0,
@@ -653,7 +653,7 @@
       "kind": "path",
       "artboardId": "tide-artboard-1",
       "parentId": "tide-node-8",
-      "order": 16,
+      "order": 17,
       "transform": [
         1,
         0,
@@ -719,7 +719,7 @@
       "kind": "path",
       "artboardId": "tide-artboard-1",
       "parentId": "tide-node-8",
-      "order": 15,
+      "order": 16,
       "transform": [
         1,
         0,
@@ -785,7 +785,7 @@
       "kind": "path",
       "artboardId": "tide-artboard-1",
       "parentId": "tide-node-8",
-      "order": 14,
+      "order": 15,
       "transform": [
         1,
         0,
@@ -851,7 +851,7 @@
       "kind": "path",
       "artboardId": "tide-artboard-1",
       "parentId": "tide-node-8",
-      "order": 13,
+      "order": 14,
       "transform": [
         1,
         0,
@@ -932,7 +932,7 @@
       "kind": "path",
       "artboardId": "tide-artboard-1",
       "parentId": "tide-node-8",
-      "order": 12,
+      "order": 13,
       "transform": [
         1,
         0,
@@ -1015,7 +1015,7 @@
       "kind": "path",
       "artboardId": "tide-artboard-1",
       "parentId": "tide-node-8",
-      "order": 11,
+      "order": 12,
       "transform": [
         1,
         0,
@@ -1098,7 +1098,7 @@
       "kind": "path",
       "artboardId": "tide-artboard-1",
       "parentId": "tide-node-8",
-      "order": 10,
+      "order": 11,
       "transform": [
         1,
         0,
@@ -1181,7 +1181,7 @@
       "kind": "path",
       "artboardId": "tide-artboard-1",
       "parentId": "tide-node-8",
-      "order": 9,
+      "order": 10,
       "transform": [
         1,
         0,
@@ -1264,7 +1264,7 @@
       "kind": "path",
       "artboardId": "tide-artboard-1",
       "parentId": "tide-node-8",
-      "order": 8,
+      "order": 9,
       "transform": [
         1,
         0,
@@ -1347,7 +1347,7 @@
       "kind": "path",
       "artboardId": "tide-artboard-1",
       "parentId": "tide-node-8",
-      "order": 7,
+      "order": 8,
       "transform": [
         1,
         0,
@@ -1430,7 +1430,7 @@
       "kind": "path",
       "artboardId": "tide-artboard-1",
       "parentId": "tide-node-8",
-      "order": 6,
+      "order": 7,
       "transform": [
         1,
         0,
@@ -1513,7 +1513,7 @@
       "kind": "path",
       "artboardId": "tide-artboard-1",
       "parentId": "tide-node-8",
-      "order": 5,
+      "order": 6,
       "transform": [
         1,
         0,
@@ -1596,7 +1596,7 @@
       "kind": "path",
       "artboardId": "tide-artboard-1",
       "parentId": "tide-node-8",
-      "order": 4,
+      "order": 5,
       "transform": [
         1,
         0,
@@ -1621,7 +1621,136 @@
           }
         },
         "closed": true,
-        "skin": null,
+        "skin": {
+          "bindWorld": [
+            1,
+            0,
+            0,
+            1,
+            251,
+            282
+          ],
+          "bones": [
+            {
+              "boneId": "tide-node-23",
+              "bind": [
+                1,
+                0,
+                0,
+                1,
+                251,
+                282
+              ]
+            }
+          ],
+          "weights": [
+            {
+              "pointId": "tide-point-67",
+              "anchor": [
+                [
+                  "tide-node-23",
+                  1
+                ]
+              ],
+              "in": [
+                [
+                  "tide-node-23",
+                  1
+                ]
+              ],
+              "out": [
+                [
+                  "tide-node-23",
+                  1
+                ]
+              ]
+            },
+            {
+              "pointId": "tide-point-68",
+              "anchor": [
+                [
+                  "tide-node-23",
+                  1
+                ]
+              ],
+              "in": [
+                [
+                  "tide-node-23",
+                  1
+                ]
+              ],
+              "out": [
+                [
+                  "tide-node-23",
+                  1
+                ]
+              ]
+            },
+            {
+              "pointId": "tide-point-69",
+              "anchor": [
+                [
+                  "tide-node-23",
+                  1
+                ]
+              ],
+              "in": [
+                [
+                  "tide-node-23",
+                  1
+                ]
+              ],
+              "out": [
+                [
+                  "tide-node-23",
+                  1
+                ]
+              ]
+            },
+            {
+              "pointId": "tide-point-70",
+              "anchor": [
+                [
+                  "tide-node-23",
+                  1
+                ]
+              ],
+              "in": [
+                [
+                  "tide-node-23",
+                  1
+                ]
+              ],
+              "out": [
+                [
+                  "tide-node-23",
+                  1
+                ]
+              ]
+            },
+            {
+              "pointId": "tide-point-71",
+              "anchor": [
+                [
+                  "tide-node-23",
+                  1
+                ]
+              ],
+              "in": [
+                [
+                  "tide-node-23",
+                  1
+                ]
+              ],
+              "out": [
+                [
+                  "tide-node-23",
+                  1
+                ]
+              ]
+            }
+          ]
+        },
         "points": [
           {
             "id": "tide-point-67",
@@ -1703,6 +1832,25 @@
     },
     {
       "id": "tide-node-23",
+      "name": "flipper pivot",
+      "kind": "bone",
+      "artboardId": "tide-artboard-1",
+      "parentId": "tide-node-8",
+      "order": 4,
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "geometry": {
+        "length": 55
+      }
+    },
+    {
+      "id": "tide-node-24",
       "name": "soft belly",
       "kind": "path",
       "artboardId": "tide-artboard-1",
@@ -1785,7 +1933,7 @@
       }
     },
     {
-      "id": "tide-node-24",
+      "id": "tide-node-25",
       "name": "soft silhouette",
       "kind": "path",
       "artboardId": "tide-artboard-1",
@@ -1911,7 +2059,7 @@
       }
     },
     {
-      "id": "tide-node-25",
+      "id": "tide-node-26",
       "name": "tail fan",
       "kind": "path",
       "artboardId": "tide-artboard-1",
@@ -2022,7 +2170,7 @@
       }
     },
     {
-      "id": "tide-node-26",
+      "id": "tide-node-27",
       "name": "left flipper",
       "kind": "path",
       "artboardId": "tide-artboard-1",
@@ -2118,7 +2266,7 @@
       }
     },
     {
-      "id": "tide-node-27",
+      "id": "tide-node-28",
       "name": "stone light",
       "kind": "path",
       "artboardId": "tide-artboard-1",
@@ -2201,7 +2349,7 @@
       }
     },
     {
-      "id": "tide-node-28",
+      "id": "tide-node-29",
       "name": "resting stone",
       "kind": "path",
       "artboardId": "tide-artboard-1",
@@ -2284,7 +2432,7 @@
       }
     },
     {
-      "id": "tide-node-29",
+      "id": "tide-node-30",
       "name": "near tide",
       "kind": "path",
       "artboardId": "tide-artboard-1",
@@ -2397,7 +2545,7 @@
       }
     },
     {
-      "id": "tide-node-30",
+      "id": "tide-node-31",
       "name": "far tide",
       "kind": "path",
       "artboardId": "tide-artboard-1",
@@ -2540,7 +2688,7 @@
       }
     },
     {
-      "id": "tide-node-31",
+      "id": "tide-node-32",
       "name": "sun shimmer",
       "kind": "path",
       "artboardId": "tide-artboard-1",
@@ -2623,7 +2771,7 @@
       }
     },
     {
-      "id": "tide-node-32",
+      "id": "tide-node-33",
       "name": "setting sun",
       "kind": "path",
       "artboardId": "tide-artboard-1",
@@ -2706,7 +2854,7 @@
       }
     },
     {
-      "id": "tide-node-33",
+      "id": "tide-node-34",
       "name": "sea glass sky",
       "kind": "path",
       "artboardId": "tide-artboard-1",
@@ -2789,7 +2937,7 @@
       }
     },
     {
-      "id": "tide-node-34",
+      "id": "tide-node-35",
       "name": "shore paper",
       "kind": "path",
       "artboardId": "tide-artboard-1",
@@ -2913,7 +3061,7 @@
           ]
         },
         {
-          "targetId": "tide-node-22",
+          "targetId": "tide-node-23",
           "property": "rotation",
           "keys": [
             {
