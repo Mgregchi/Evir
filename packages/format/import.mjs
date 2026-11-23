@@ -552,14 +552,14 @@ async function decodeProject(input) {
         if(s && fills.length && children(i).find(v=>v.r.type==="Stroke").i<fills[0].i)fail(r,"only fill-before-stroke paint order is editable");
         n.geometry = {fill: fills.length ? fill(i,id) : null, ...(s ? {stroke:s} : {})};
         const decoded=shapes.map(shape=>{
-          if(shape.r.fields.pathFlags===2 && fills[0]?.r.fields.fillRule===2)
+          if([2,3].includes(shape.r.fields.pathFlags) && fills[0]?.r.fields.fillRule===2)
             fail(shape.r,'counterclockwise path flags with a clockwise fill are outside the editable subset');
           const vertices=children(shape.i).filter(v=>vertexTypes.has(v.r.type));
           const skin=children(shape.i).filter(v=>v.r.type==='Skin');
           return editableContour(shape.r,vertices,{fail,pointId:()=>newId('point'),skinned:skin.length>0,forcePath:shapes.length>1||(fills[0]?.r.fields.fillRule===1)});
         });
         n.kind=decoded[0].kind;Object.assign(n.geometry,decoded[0].geometry);
-        if(shapes.length>1)n.geometry.contours=decoded.slice(1).map(v=>({closed:v.geometry.closed,points:v.geometry.points}));
+        if(shapes.length>1)n.geometry.contours=decoded.slice(1).map(v=>({closed:v.geometry.closed,points:v.geometry.points,...(v.geometry.hidden?{hidden:true}:{})}));
         if(fills[0]?.r.fields.fillRule===1)n.geometry.fillRule='evenodd';
         const shape=shapes[0];
         if (n.kind === "rectangle") {

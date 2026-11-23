@@ -79,8 +79,10 @@ export function drawScene(
         const clip = clips.get(ancestor.id);
         if (clip) {
           const mask = nodes.get(clip.maskId);
-          shapePath(ctx, p, mask, resolve);
-          ctx.clip(clip.fillRule ?? mask.geometry.fillRule ?? "nonzero");
+          if(mask.kind!=="path" || pathContours(mask.geometry).some(contour=>!contour.hidden)){
+            shapePath(ctx, p, mask, resolve);
+            ctx.clip(clip.fillRule ?? mask.geometry.fillRule ?? "nonzero");
+          }
         }
         ancestor = nodes.get(ancestor.parentId);
       }
@@ -104,7 +106,7 @@ export function drawScene(
         ctx.save();
         const gradient = n.geometry.fill !== null && typeof n.geometry.fill !== "string";
         if (gradient) ctx.transform(...resolve(n.id));
-        const points = worldPoints(p, n, resolve);
+        const points = worldPoints(p, n, resolve, {visibleOnly:true});
         const paintInverse = gradient ? inverse(resolve(n.id)) : null;
         const local = gradient
           ? points.map((v) => ({
@@ -125,7 +127,8 @@ export function drawScene(
           let geometry=n.geometry;
           if(geometry.skin){
             const inversePaint=inverse(resolve(n.id));let offset=0;
-            const parts=pathContours(geometry).map(c=>({...c,points:points.slice(offset,offset+=c.points.length).map(v=>({...v,...Object.fromEntries(['anchor','in','out'].map(k=>[k,mapPoint(inversePaint,v[k])]))}))}));
+            const controls=pathContours(geometry).some(c=>c.hidden)?worldPoints(p,n,resolve):points;
+            const parts=pathContours(geometry).map(c=>({...c,points:controls.slice(offset,offset+=c.points.length).map(v=>({...v,...Object.fromEntries(['anchor','in','out'].map(k=>[k,mapPoint(inversePaint,v[k])]))}))}));
             geometry={...geometry,...parts[0],...(parts.length>1?{contours:parts.slice(1)}:{})};
           }
           strokeStyle(ctx,geometry);strokePathOnContext(ctx,geometry);ctx.stroke();ctx.restore();
@@ -159,7 +162,7 @@ export function drawScene(
 }
 function shapePath(ctx, p, n, resolve) {
   if (n.kind === "path")
-    pathOnContext(ctx, worldPoints(p, n, resolve), n.geometry.closed);
+    pathOnContext(ctx, worldPoints(p, n, resolve, {visibleOnly:true}), n.geometry.closed);
   else {
     const m = resolve(n.id),
       g = n.geometry,
@@ -232,7 +235,7 @@ export function nodeBounds(p, n) {
     .filter((v) => !isHidden(p, v))
     .flatMap((v) => {
       if (v.kind === "path")
-        return worldPoints(p, v).flatMap((p) => [p.anchor, p.in, p.out]);
+        return worldPoints(p, v, undefined, {visibleOnly:true}).flatMap((p) => [p.anchor, p.in, p.out]);
       if (v.kind === "bone") {
         const m = worldTransform(p, v.id);
         return [mapPoint(m, [0, 0]), mapPoint(m, [v.geometry.length, 0])];
@@ -270,7 +273,7 @@ export function nodeBounds(p, n) {
   // Conservative local miter/round/square envelope, transformed per shape.
   for (const v of nodes.filter(v => !isHidden(p,v) && v.geometry?.stroke)) {
     const s=v.geometry.stroke, pad=s.width*(s.join==="miter"?2:Math.SQRT1_2),m=worldTransform(p,v.id);
-    const source=v.kind==="path"?worldPoints(p,v).flatMap(p=>[p.anchor,p.in,p.out]):[[0,0],[v.geometry.width,0],[v.geometry.width,v.geometry.height],[0,v.geometry.height]].map(v=>mapPoint(m,v));
+    const source=v.kind==="path"?worldPoints(p,v,undefined,{visibleOnly:true}).flatMap(p=>[p.anchor,p.in,p.out]):[[0,0],[v.geometry.width,0],[v.geometry.width,v.geometry.height],[0,v.geometry.height]].map(v=>mapPoint(m,v));
     for(const point of source)for(const dx of [-pad,pad])for(const dy of [-pad,pad])points.push([point[0]+m[0]*dx+m[2]*dy,point[1]+m[1]*dx+m[3]*dy]);
   }
   let x=Infinity,y=Infinity,right=-Infinity,bottom=-Infinity;

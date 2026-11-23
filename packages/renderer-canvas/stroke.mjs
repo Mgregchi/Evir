@@ -62,7 +62,7 @@ function range(measure,start,end,closed) {
   return result;
 }
 export function strokeContours(g) {
-  const stroke=g.stroke, originals=(g.points?pathContours(g):[g]).map(flatten),original=originals[0],{start,end,offset}=stroke.trim;
+  const stroke=g.stroke, originals=(g.points?pathContours(g).filter(c=>!c.hidden):[g]).map(flatten),original=originals[0],{start,end,offset}=stroke.trim;
   let contours=originals,measure=measured(contours);
   if(!measure.length)return [];
   if(start!==0 || end!==1 || offset!==0) {
@@ -95,7 +95,7 @@ export function strokePathOnContext(ctx,g) {
   ctx.beginPath();
   const s=g.stroke;
   if(!s.dash.length && s.trim.start===0 && s.trim.end===1 && s.trim.offset===0) {
-    for(const part of g.points?pathContours(g):[g]){
+    for(const part of g.points?pathContours(g).filter(c=>!c.hidden):[g]){
     const {points,closed}=centerline(part);ctx.moveTo(...points[0].anchor);
     for(let i=1;i<points.length;i++)ctx.bezierCurveTo(...points[i-1].out,...points[i].in,...points[i].anchor);
     if(closed){ctx.bezierCurveTo(...points.at(-1).out,...points[0].in,...points[0].anchor);ctx.closePath();}

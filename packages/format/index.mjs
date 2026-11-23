@@ -312,6 +312,7 @@ export function compileProject(project, schema = runtimeSchema) {
           const path = componentRecord("PointsPath", {
               parentId: index,
               isClosed: contour.closed,
+              ...(contour.hidden?{pathFlags:1}:{}),
             }).index,
             skin = n.geometry.skin;
           const packed = (influences) => {

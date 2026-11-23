@@ -48,7 +48,8 @@ function roundedCorner(anchor, previous, next, radius, point) {
 export function editableContour(record, vertices, {fail, pointId,forcePath=false,skinned=false}) {
   const f=record.fields;
   // The counterclockwise hint does not alter the raw contour used by ordinary paints.
-  if(![0,2].includes(f.pathFlags ?? 0))fail(record,'hidden or unknown path flags are outside the editable contour subset');
+  if(![0,1,2,3].includes(f.pathFlags ?? 0))fail(record,'unknown path flags are outside the editable contour subset');
+  const hidden=((f.pathFlags ?? 0)&1)!==0;
   const point=(anchor,incoming=anchor,outgoing=anchor)=>({id:pointId(),anchor:[...anchor],in:[...incoming],out:[...outgoing]});
   let points, closed=true;
   if(record.type==='PointsPath') {
@@ -87,7 +88,7 @@ export function editableContour(record, vertices, {fail, pointId,forcePath=false
         ? [topLeft, f.cornerRadiusTR ?? 0, f.cornerRadiusBR ?? 0, f.cornerRadiusBL ?? 0]
         : [topLeft, topLeft, topLeft, topLeft];
       const rounded = radii.some(radius => radius !== 0);
-      if(!rounded&&!forcePath&&x===0 && y===0 && isIdentityContour(f))return {kind:'rectangle',geometry:{width:w,height:h}};
+      if(!hidden&&!rounded&&!forcePath&&x===0 && y===0 && isIdentityContour(f))return {kind:'rectangle',geometry:{width:w,height:h}};
       const corners = [[x,y],[x+w,y],[x+w,y+h],[x,y+h]];
       points = corners.flatMap((corner,i)=>radii[i]===0 ? [point(corner)] :
         roundedCorner(corner,corners[(i+3)%4],corners[(i+1)%4],radii[i],point));
@@ -121,5 +122,5 @@ export function editableContour(record, vertices, {fail, pointId,forcePath=false
       const [px,py]=p[key];p[key]=[a*px+c*py+x,b*px+d*py+y];
     }
   }
-  return {kind:'path',geometry:{closed,skin:null,points}};
+  return {kind:'path',geometry:{closed,skin:null,points,...(hidden?{hidden:true}:{})}};
 }

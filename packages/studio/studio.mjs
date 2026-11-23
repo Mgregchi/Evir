@@ -1429,7 +1429,7 @@ function hit(p, world) {
       } catch {}
     }
     if (n.kind === "path" && n.geometry.fill !== null) {
-      pathOnContext(hitContext, worldPoints(p, n), n.geometry.closed);
+      pathOnContext(hitContext, worldPoints(p, n, undefined, {visibleOnly:true}), n.geometry.closed);
       if (hitContext.isPointInPath(world.x, world.y,n.geometry.fillRule??'nonzero')) return n;
     }
     if (n.kind === "bone" && authoring?.mode !== "Interact") {

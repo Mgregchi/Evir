@@ -55,6 +55,7 @@ export function tideRecords() {
   if(n.cutout){
    const hole=emit('PointsPath',{parentId:id,isClosed:true,pathFlags:2});
    for(const v of n.cutout)emit(v.type,{parentId:hole,...v.fields});
+   emit('Ellipse',{parentId:id,x:362,y:448,width:37,height:24,pathFlags:1});
   }
   if(n.skinBone){
    const skin=emit('Skin',{parentId:contour,xx:1,yy:1,tx:251,ty:282});

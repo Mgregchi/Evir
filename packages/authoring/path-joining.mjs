@@ -12,6 +12,7 @@ function editable(p,n) {
     if(p.editor.locked.includes(v.id)) throw Error('Unlock both paths and their parents before joining.');
     if(p.editor.hidden.includes(v.id)) throw Error('Show both paths and their parents before joining.');
   }
+  if(n.geometry.hidden)throw Error('Show both contours before joining.');
   if(n.geometry.shape)throw Error('Convert live shapes to free paths before joining.');
   if(n.geometry.closed) throw Error('Open both paths before joining their endpoints.');
   if(n.geometry.contours?.length)throw Error('Release compound contours before joining separate paths.');

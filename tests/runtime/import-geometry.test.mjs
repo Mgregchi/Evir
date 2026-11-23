@@ -120,12 +120,31 @@ test('counterclockwise hints preserve raw order for ordinary paints and reject c
  const source=geometryCases().find(c=>c.name==='import-counterclockwise-nonzero-hole');
  source.records.find(r=>r.type==='Fill').fields.fillRule=2;
  await assert.rejects(()=>importRiv(encodeRecords(source.records)),/counterclockwise path flags with a clockwise fill/);
+ source.records.find(r=>r.type==='PointsPath').fields.pathFlags=3; await assert.rejects(()=>importRiv(encodeRecords(source.records)),/counterclockwise path flags with a clockwise fill/);
+});
+test('hidden contours retain editable controls and visibility through runtime conversion and native export',async()=>{
+ for(const [name,index] of [['import-hidden-primary',0],['import-hidden-secondary',1]]){
+  const fixture=(await importedCases()).find(c=>c.name===name);
+  const node=fixture.project.nodes[0],g=node.geometry;
+  const part=[g,...g.contours][index];
+  assert.equal(part.hidden,true);
+  assert.equal(worldPoints(fixture.project,node).length,8);
+  assert.equal(worldPoints(fixture.project,node,undefined,{visibleOnly:true}).length,4);
+  const runtime=toRuntimeProject(fixture.project).nodes[0].geometry;
+  assert.equal([runtime,...runtime.contours][index].hidden,true);
+  const reexport=await importRiv(compileProject(fixture.project).bytes);
+  const roundtrip=reexport.nodes[0].geometry;
+  assert.equal([roundtrip,...roundtrip.contours][index].hidden,true);
+ }
+ const original=geometryCases().find(c=>c.name==='import-rectangle-centered');
+ original.records.find(r=>r.type==='Rectangle').fields.pathFlags=1;
+ const project=await importRiv(encodeRecords(original.records)),node=project.nodes[0];
+ assert.equal(node.kind,'path');assert.equal(node.geometry.hidden,true);
+ assert.deepEqual(worldPoints(project,node,undefined,{visibleOnly:true}),[]);
 });
 test('unsupported rounding, flags, malformed hierarchy, weights and animated contour geometry reject',async()=>{
  for(const [name,type,field,value,reason]of [
  ['import-mixed-skinned','StraightVertex','radius',12,/rounded straight vertices with skin/],
- ['import-mixed-closed','PointsPath','pathFlags',1,/path flags/],
- ['import-mixed-closed','PointsPath','pathFlags',3,/path flags/],
  ['import-mixed-closed','PointsPath','pathFlags',4,/path flags/],
  ['import-mixed-closed','CubicMirroredVertex','parentId',0,/belong to a PointsPath/],
  ['import-ellipse-centered','Ellipse','parentId',0,/belong directly/],
