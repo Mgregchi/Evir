@@ -24,6 +24,23 @@ test('ellipse defaults and rectangle origins become editable cubic controls with
  const source=geometryCases().find(c=>c.name==='import-rectangle-centered');source.records.find(r=>r.type==='Rectangle').fields={parentId:1,width:50,height:30,originX:0,originY:0};
  const direct=(await importRiv(encodeRecords(source.records))).nodes[0];assert.equal(direct.kind,'rectangle');assert.equal(direct.geometry.width,50);
 });
+test('rounded rectangles clamp each linked corner and preserve independent concave and square corners',async()=>{
+ const all=await importedCases();
+ const linked=all.find(c=>c.name==='import-rectangle-rounded-linked').project.nodes[0].geometry.points;
+ assert.equal(linked.length,8);
+ close(linked[0].anchor,[-72.5,0]);close(linked[1].anchor,[-27.5,-45]);
+ close(linked[2].anchor,[27.5,-45]);close(linked[3].anchor,[72.5,0]);
+ const source=geometryCases().find(c=>c.name==='import-rectangle-rounded-independent');
+ const fields=source.records.find(r=>r.type==='Rectangle').fields;
+ Object.assign(fields,{rotation:0,scaleX:1,scaleY:1});
+ const shape=(await importRiv(encodeRecords(source.records))).nodes[0];
+ const points=shape.geometry.points,handle=26*4/3*Math.tan(Math.PI/8);
+ assert.equal(points.length,7);assert.equal(shape.geometry.closed,true);
+ close(points[0].anchor,[-55,-14]);close(points[0].out,[-55+handle,-14]);
+ close(points[1].anchor,[-29,-40]);close(points[1].in,[-29,-40+handle]);
+ close(points[4].anchor,[55,40]);close(points[4].out,points[4].anchor);
+ close(points[5].anchor,[-21,40]);close(points[6].anchor,[-55,6]);
+});
 test('static contour TRS affects all handles while Shape transform and paint remain in their own space',async()=>{
  const c=geometryCases().find(c=>c.name==='import-mixed-transformed'),p=await importRiv(c.bytes),n=p.nodes[0],f=c.records.find(r=>r.type==='PointsPath').fields;
  const map=([x,y])=>[Math.cos(f.rotation)*f.scaleX*x-Math.sin(f.rotation)*f.scaleY*y+f.x,Math.sin(f.rotation)*f.scaleX*x+Math.cos(f.rotation)*f.scaleY*y+f.y];
@@ -51,12 +68,11 @@ test('unsupported rounding, flags, malformed hierarchy, weights and animated con
  ['import-mixed-closed','CubicMirroredVertex','parentId',0,/belong to a PointsPath/],
  ['import-ellipse-centered','Ellipse','parentId',0,/belong directly/],
  ['import-ellipse-centered','Ellipse','width',0,/positive width/],
- ['import-rectangle-centered','Rectangle','cornerRadiusTL',5,/rounded rectangles/],
  ['import-mixed-skinned','PointsPath','x',2,/transformed skinned/],
  ]){const records=structuredClone(geometryCases().find(c=>c.name===name).records);records.find(r=>r.type===type).fields[field]=value;await assert.rejects(()=>importRiv(encodeRecords(records)),reason);}
  const duplicate=geometryCases()[0].records;duplicate.push({type:'Ellipse',fields:{parentId:1,width:30,height:20}});const compound=await importRiv(encodeRecords(duplicate));assert.equal(compound.nodes[0].geometry.contours.length,1);assert.equal(compound.nodes[0].geometry.contours[0].points.length,4);
  const weight=geometryCases().find(c=>c.name==='import-mixed-skinned').records;const r=weight.find(r=>r.type==='Weight');r.type='CubicWeight';await assert.rejects(()=>importRiv(encodeRecords(weight)),/weight type/);
- for(const [name,type,propertyKey]of [['import-mixed-closed','CubicMirroredVertex',82],['import-ellipse-centered','Ellipse',20],['import-rectangle-centered','Rectangle',21],['import-mixed-transformed','PointsPath',13]]){
+ for(const [name,type,propertyKey]of [['import-mixed-closed','CubicMirroredVertex',82],['import-ellipse-centered','Ellipse',20],['import-rectangle-centered','Rectangle',21],['import-rectangle-rounded-linked','Rectangle',31],['import-mixed-transformed','PointsPath',13]]){
   const records=structuredClone(geometryCases().find(c=>c.name===name).records),objectId=records.findIndex(r=>r.type===type)-1;
   records.push({type:'LinearAnimation',fields:{name:'Geometry',fps:60,duration:60}},{type:'KeyedObject',fields:{objectId}},{type:'KeyedProperty',fields:{propertyKey}},{type:'KeyFrameDouble',fields:{frame:0,value:1}});
   await assert.rejects(()=>importRiv(encodeRecords(records)),/animated .* geometry cannot be preserved/);

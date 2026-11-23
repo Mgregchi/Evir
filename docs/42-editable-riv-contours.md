@@ -18,24 +18,30 @@ Evir materializes supported geometry as ordinary editable cubic controls. This p
 | --- | --- | --- |
 | Mixed `StraightVertex`, `CubicMirroredVertex`, `CubicAsymmetricVertex`, `CubicDetachedVertex` in one `PointsPath` | Ordered anchors and independent incoming/outgoing handles, retaining open/closed state | Straight-vertex radius must be zero. Contour and vertex geometry keys reject. |
 | `Ellipse` | Four-point closed cubic path, preserving width, height and origin geometry | Positive dimensions; static geometry only. The original parametric dimensions are not Inspector properties after conversion. |
-| `Rectangle` with centered/custom origin or contour transform | Four-corner closed path in shape-local coordinates | Positive dimensions, zero corner radii, static geometry. |
-| Top-left rectangle with identity contour transform | Existing rectangle node | Existing width/height animation remains supported. |
+| `Rectangle` with rounding, centered/custom origin or contour transform | Closed path in shape-local coordinates with editable corner controls | Positive dimensions and static contour geometry. |
+| Square-cornered top-left rectangle with identity contour transform | Existing rectangle node | Existing width/height animation remains supported. |
 | Static contour translation, rotation and scale | Applied to every anchor and handle, leaving the Shape transform and paint coordinates intact | Unskinned contours only; animated contour transforms reject. |
 | Identity-transform skinned mixed-vertex path | Existing path skin with the corresponding point references | Straight `Weight` influences apply equally to the coincident anchor and handles; cubic vertices require `CubicWeight` with independent control influences. Existing influence/rig limits still apply. |
 
 Supported Shape/group/bone transforms, fill/gradient/color animation and the existing centered solid stroke contract continue to use their existing mappings. A shape still needs exactly one supported contour and the supported paint combination. Static contour conversion does not broaden stroke, clipping, feather, asset, data-binding or state-machine contracts.
 
-Unsupported geometry keys reject before project replacement and now receive an **animated contour geometry** explanation. Evir does not sample or discard their motion to force an editable import. Unsupported rounding, nondefault path flags, compound contours, procedural polygons/stars/triangles and transformed skinned paths still reject. Malformed contour/vertex/skin/weight parenting and duplicate skins reject explicitly.
+Unsupported geometry keys reject before project replacement and now receive an **animated contour geometry** explanation. Evir does not sample or discard their motion to force an editable import. Rounded freeform vertices, nondefault path flags, procedural polygons/stars/triangles and transformed skinned paths still reject. Malformed contour/vertex/skin/weight parenting and duplicate skins reject explicitly.
+
+### Static rectangle rounding
+
+Rive's pinned [Rectangle implementation](https://github.com/rive-app/rive-runtime/blob/7aa93402a27c800db8a36acc8672612c100ea9b1/src/shapes/rectangle.cpp) visits the corners clockwise from top left. Its [generated defaults](https://github.com/rive-app/rive-runtime/blob/7aa93402a27c800db8a36acc8672612c100ea9b1/include/rive/generated/shapes/rectangle_base.hpp) link all corners to the top-left radius unless linking is explicitly disabled. The pinned [Path implementation](https://github.com/rive-app/rive-runtime/blob/7aa93402a27c800db8a36acc8672612c100ea9b1/src/shapes/path.cpp) clamps each radius magnitude to half the shorter adjacent edge, computes cubic handles, and rotates those handles for negative radii.
+
+Evir converts each rounded corner to two editable points before applying the contour transform. Linked radii, zero-radius corners, independent concave corners and oversized radii follow that same geometry. Radius and linking controls are baked into the imported path. Native radius animation still opens through the original-file viewer.
 
 ## Try Tide
 
 **Tide — a shore-side hello** adds Pebble, an original mint seal on a sea-glass shoreline. Thirty-four named editable layers include a waving flipper, whiskers, shell, sun, muzzle and eye highlights. **Shore hello** is a two-second looping body bob and flipper wave. No image/font assets or supplied reference pixels are embedded.
 
-The [native recipe](../apps/web/import-scene.mjs) contains actual ellipse, centered rectangle, straight, mirrored and asymmetric records. The generator encodes those records independently of `compileProject`, imports that native file, assigns reproducible source IDs and compiles the editable result. The poster is an actual Evir Canvas capture. This is an original synthetic native study, **not an export produced by the Rive Editor**.
+The [native recipe](../apps/web/import-scene.mjs) contains actual ellipse, square-cornered and rounded rectangle, straight, mirrored and asymmetric records. The generator encodes those records independently of `compileProject`, imports that native file, assigns reproducible source IDs and compiles the editable result. The poster is an actual Evir Canvas capture. This is an original synthetic native study, **not an export produced by the Rive Editor**.
 
 1. In the website's Examples page, find **Tide** and download **Native import sample** (`tide-native.riv`).
 2. Open it in Studio through **Open project** and confirm replacement after saving any existing work.
-3. Select **soft silhouette**, open **Properties → Edit points**, then change a point or handle. Undo restores the imported geometry. Select **muzzle** to inspect an ellipse converted to four cubic vertices.
+3. Select **soft silhouette**, open **Properties → Edit points**, then change a point or handle. Undo restores the imported geometry. Select **muzzle** to inspect an ellipse converted to four cubic vertices, or **mint sea glass** to edit the eight points of a rounded rectangle.
 4. Choose **Animate**, open **Timeline** on compact screens and scrub **Shore hello**. The body and flipper keep separate transform tracks.
 5. Save editable `.evir-project` source or export the compatible `.riv`. The gallery's ordinary **Download .riv** is the Evir re-export; **Native import sample** retains the original native contour types.
 
@@ -59,4 +65,4 @@ npm run test:experience
 
 The [scoped results directory](../research/results/import-geometry/) contains source/native/re-export hashes, selected frame comparisons, actual Studio screenshots and the completed validation ledger. Numeric reconstruction uses float32/trigonometric tolerances rather than promising byte-identical native round trips. Chromium/SwiftShader checks are cloud software evidence, not physical GPU/mobile performance or human/screen-reader testing.
 
-Broader editable Editor-file import remains open: animated geometry, rounding/path flags, compound contours, layout/data contracts, nested artboards, richer machines and asset/text semantics require separate contracts and fixtures. Graphical weight painting, richer rigging/blending, path joins and text/layout also remain on the consolidated plan.
+Broader editable Editor-file import remains open: animated geometry, freeform rounding, path flags, broader compound contours, layout/data contracts, nested artboards, richer machines and asset/text semantics require separate contracts and fixtures. Graphical weight painting, richer rigging/blending, path joins and text/layout also remain on the consolidated plan.

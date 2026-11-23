@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-17T08:25:27.484Z",
+  "checkedAt": "2026-11-23T07:09:27.239Z",
   "runtimeVersion": "2.44.0",
   "method": "Independently encoded native contour records → editable import → Evir Canvas and native re-export, compared with the original in both official runtimes. Explicit named animation frames; static fixtures contain no animations.",
   "thresholds": {
@@ -75,6 +75,18 @@
       "reexportSha256": "8f8ff4396f5d63e29977deb165a438835d8f5bdb12dc3b7ce20cf54f55691b2f"
     },
     {
+      "name": "import-rectangle-rounded-linked",
+      "nativeSha256": "7860684a9f5eac0576f44475bd26f9af88227e02e03d0e98e04e41e9db097531",
+      "sourceSha256": "d726f16cf29faaba3a1f15bf2ce5b01050511a1e777bb7ddd3446ac4c8079f6a",
+      "reexportSha256": "5c1045f1c551816de22f87435cb9183fd7a25654f570a8cbb7a03a9b49ab0acb"
+    },
+    {
+      "name": "import-rectangle-rounded-independent",
+      "nativeSha256": "f802c026ce0f79f99046a1a6d39b131732cf1ecca41c2c0f95a1d4cd2f127567",
+      "sourceSha256": "fec3094ba53512eac3ce2d03d74f711ef03bcc59ff6d2c825b5c8d785c43806e",
+      "reexportSha256": "949a508e2bc2efd2bc8c5eeb491eae99d555f53072613c84744361d99f82c120"
+    },
+    {
       "name": "import-mixed-skinned",
       "nativeSha256": "9ffaa75709c57245ef898f08f44f2544f2c0c4a5cbe3bf8eaf434da839eb9188",
       "sourceSha256": "875a5be2329abefaa7bf7c5534d8349ce9f430184949e7b76af82854d5c86b18",
@@ -82,9 +94,9 @@
     },
     {
       "name": "tide-native",
-      "nativeSha256": "db243b44bf2295cef128840811d09dbcea6e1daa1b9183cfcb87786267c84f80",
-      "sourceSha256": "93859dec410fad2fc0b79e83ffc960e080899bb9b610f7bd24064ac211887ec2",
-      "reexportSha256": "6f5d17e745477d5af04746c33169cc6009e5cf147350b742e40fcb3a793ce197"
+      "nativeSha256": "e90a5386e77bafaa6e3806753f61e35227cba1a8aa4f1cc37b806e9523fc8277",
+      "sourceSha256": "82ba507fb8830009b57ac1035d5444209223f343a93b1e3ae69d57f178a67e17",
+      "reexportSha256": "968e76297b37afb69acec1ccd18a662e9d28594c4dc13a5ce21b52a1eeec6edd"
     }
   ],
   "backends": [
@@ -332,6 +344,38 @@
           "expectedCovered": 8140
         },
         {
+          "scene": "import-rectangle-rounded-linked",
+          "frame": null,
+          "target": "editable",
+          "mae": 0,
+          "covered": 11455,
+          "expectedCovered": 11455
+        },
+        {
+          "scene": "import-rectangle-rounded-linked",
+          "frame": null,
+          "target": "native-reexport",
+          "mae": 0.04578399658203125,
+          "covered": 11445,
+          "expectedCovered": 11455
+        },
+        {
+          "scene": "import-rectangle-rounded-independent",
+          "frame": null,
+          "target": "editable",
+          "mae": 0,
+          "covered": 3592,
+          "expectedCovered": 3592
+        },
+        {
+          "scene": "import-rectangle-rounded-independent",
+          "frame": null,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 3592,
+          "expectedCovered": 3592
+        },
+        {
           "scene": "import-mixed-skinned",
           "frame": 0,
           "target": "editable",
@@ -415,7 +459,7 @@
           "scene": "tide-native",
           "frame": 0,
           "target": "editable",
-          "mae": 0.00090789794921875,
+          "mae": 0.001567840576171875,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -423,7 +467,7 @@
           "scene": "tide-native",
           "frame": 0,
           "target": "native-reexport",
-          "mae": 0.0081787109375,
+          "mae": 0.008838653564453125,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -431,7 +475,7 @@
           "scene": "tide-native",
           "frame": 30,
           "target": "editable",
-          "mae": 0.00048065185546875,
+          "mae": 0.001140594482421875,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -439,7 +483,7 @@
           "scene": "tide-native",
           "frame": 30,
           "target": "native-reexport",
-          "mae": 0.0081787109375,
+          "mae": 0.008838653564453125,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -447,7 +491,7 @@
           "scene": "tide-native",
           "frame": 60,
           "target": "editable",
-          "mae": 0.00048065185546875,
+          "mae": 0.001140594482421875,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -455,7 +499,7 @@
           "scene": "tide-native",
           "frame": 60,
           "target": "native-reexport",
-          "mae": 0.0081787109375,
+          "mae": 0.008838653564453125,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -463,7 +507,7 @@
           "scene": "tide-native",
           "frame": 90,
           "target": "editable",
-          "mae": 0.00048065185546875,
+          "mae": 0.001140594482421875,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -471,7 +515,7 @@
           "scene": "tide-native",
           "frame": 90,
           "target": "native-reexport",
-          "mae": 0.0081787109375,
+          "mae": 0.008838653564453125,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -479,7 +523,7 @@
           "scene": "tide-native",
           "frame": 120,
           "target": "editable",
-          "mae": 0.00090789794921875,
+          "mae": 0.001567840576171875,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -487,13 +531,13 @@
           "scene": "tide-native",
           "frame": 120,
           "target": "native-reexport",
-          "mae": 0.0081787109375,
+          "mae": 0.008838653564453125,
           "covered": 65536,
           "expectedCovered": 65536
         }
       ],
       "graphics": {
-        "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
         "contexts": [
           {
             "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
@@ -780,6 +824,38 @@
           "expectedCovered": 8063
         },
         {
+          "scene": "import-rectangle-rounded-linked",
+          "frame": null,
+          "target": "editable",
+          "mae": 0.20532608032226562,
+          "covered": 11455,
+          "expectedCovered": 11373
+        },
+        {
+          "scene": "import-rectangle-rounded-linked",
+          "frame": null,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 11373,
+          "expectedCovered": 11373
+        },
+        {
+          "scene": "import-rectangle-rounded-independent",
+          "frame": null,
+          "target": "editable",
+          "mae": 0.16219329833984375,
+          "covered": 3592,
+          "expectedCovered": 3477
+        },
+        {
+          "scene": "import-rectangle-rounded-independent",
+          "frame": null,
+          "target": "native-reexport",
+          "mae": 0.0160369873046875,
+          "covered": 3477,
+          "expectedCovered": 3477
+        },
+        {
           "scene": "import-mixed-skinned",
           "frame": 0,
           "target": "editable",
@@ -863,7 +939,7 @@
           "scene": "tide-native",
           "frame": 0,
           "target": "editable",
-          "mae": 0.33130645751953125,
+          "mae": 0.3326454162597656,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -879,7 +955,7 @@
           "scene": "tide-native",
           "frame": 30,
           "target": "editable",
-          "mae": 0.3286628723144531,
+          "mae": 0.3300018310546875,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -895,7 +971,7 @@
           "scene": "tide-native",
           "frame": 60,
           "target": "editable",
-          "mae": 0.3281517028808594,
+          "mae": 0.32949066162109375,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -911,7 +987,7 @@
           "scene": "tide-native",
           "frame": 90,
           "target": "editable",
-          "mae": 0.3286628723144531,
+          "mae": 0.3300018310546875,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -927,7 +1003,7 @@
           "scene": "tide-native",
           "frame": 120,
           "target": "editable",
-          "mae": 0.33130645751953125,
+          "mae": 0.3326454162597656,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -941,7 +1017,7 @@
         }
       ],
       "graphics": {
-        "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
         "contexts": [
           {
             "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
@@ -1023,5 +1099,5 @@
       }
     }
   ],
-  "browser": "151.0.7922.173"
+  "browser": "153.0.8010.12"
 }

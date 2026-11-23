@@ -13,6 +13,28 @@ export const contourTransform = (f) => {
 export const isIdentityContour = f => (f.x ?? 0)===0 && (f.y ?? 0)===0 &&
   (f.rotation ?? 0)===0 && (f.scaleX ?? 1)===1 && (f.scaleY ?? 1)===1;
 
+// Rive rounds each right angle independently, including concave (negative) corners.
+function rectanglePoints(corners, radii, limit, point) {
+  const directions = [[0, 1], [-1, 0], [0, -1], [1, 0]];
+  const handleRatio = 4 / 3 * Math.tan(Math.PI / 8);
+  return corners.flatMap((corner, i) => {
+    const radius = radii[i];
+    if (radius === 0) return [point(corner)];
+
+    const previous = directions[i];
+    const next = directions[(i + 3) % 4];
+    const inset = Math.min(Math.abs(radius), limit);
+    const handle = inset * handleRatio;
+    const offset = (anchor, direction, distance) =>
+      anchor.map((value, axis) => value + direction[axis] * distance);
+    const start = offset(corner, previous, inset);
+    const end = offset(corner, next, inset);
+    const outgoing = offset(start, radius > 0 ? previous : next, radius > 0 ? -handle : handle);
+    const incoming = offset(end, radius > 0 ? next : previous, radius > 0 ? -handle : handle);
+    return [point(start, start, outgoing), point(end, incoming)];
+  });
+}
+
 export function editableContour(record, vertices, {fail, pointId,forcePath=false}) {
   const f=record.fields;
   if((f.pathFlags ?? 0)!==0)fail(record,'nondefault path flags are outside the editable contour subset');
@@ -41,10 +63,15 @@ export function editableContour(record, vertices, {fail, pointId,forcePath=false
     if(w<=0 || h<=0)fail(record,'editable parametric contours require positive width and height');
     const x=-(f.originX ?? .5)*w,y=-(f.originY ?? .5)*h;
     if(record.type==='Rectangle') {
-      for(const k of ['cornerRadiusTL','cornerRadiusTR','cornerRadiusBL','cornerRadiusBR'])
-        if((f[k] ?? 0)!==0)fail(record,'rounded rectangles are outside the editable contour subset');
-      if(!forcePath&&x===0 && y===0 && isIdentityContour(f))return {kind:'rectangle',geometry:{width:w,height:h}};
-      points=[[x,y],[x+w,y],[x+w,y+h],[x,y+h]].map(v=>point(v));
+      const topLeft = f.cornerRadiusTL ?? 0;
+      const radii = f.linkCornerRadius === false
+        ? [topLeft, f.cornerRadiusTR ?? 0, f.cornerRadiusBR ?? 0, f.cornerRadiusBL ?? 0]
+        : [topLeft, topLeft, topLeft, topLeft];
+      const rounded = radii.some(radius => radius !== 0);
+      if(!rounded&&!forcePath&&x===0 && y===0 && isIdentityContour(f))return {kind:'rectangle',geometry:{width:w,height:h}};
+      const corners = [[x,y],[x+w,y],[x+w,y+h],[x,y+h]];
+      points = rounded ? rectanglePoints(corners, radii, Math.min(w, h) / 2, point)
+        : corners.map(v => point(v));
     } else {
       // Ellipse::update uses four clockwise cubic vertices and this constant.
       const k=.552284749831,rx=w/2,ry=h/2,cx=x+rx,cy=y+ry;

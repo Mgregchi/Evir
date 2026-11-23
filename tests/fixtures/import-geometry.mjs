@@ -39,6 +39,8 @@ export function geometryCases() {
   make('import-rectangle-centered',{type:'Rectangle',fields:{width:150,height:92},shape:{x:128,y:128}});
   make('import-rectangle-origin',{type:'Rectangle',fields:{width:105,height:70,originX:-.2,originY:1.2},shape:{x:42,y:177},stroke:true});
   make('import-rectangle-transformed',{type:'Rectangle',fields:{width:100,height:80,originX:0,originY:0,x:80,y:48,rotation:.35,scaleX:.9,scaleY:1.1},gradient:true});
+  make('import-rectangle-rounded-linked',{type:'Rectangle',fields:{width:145,height:90,cornerRadiusTL:72,cornerRadiusTR:2},shape:{x:128,y:128}});
+  make('import-rectangle-rounded-independent',{type:'Rectangle',fields:{width:110,height:80,linkCornerRadius:false,cornerRadiusTL:-26,cornerRadiusTR:12,cornerRadiusBL:34,rotation:.28,scaleX:-.9,scaleY:1.2},shape:{x:128,y:128},stroke:true});
   make('import-mixed-skinned',{skin:true,motion:true});
   return cases;
 }
