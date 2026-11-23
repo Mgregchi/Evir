@@ -552,7 +552,7 @@ async function decodeProject(input) {
         if(s && fills.length && children(i).find(v=>v.r.type==="Stroke").i<fills[0].i)fail(r,"only fill-before-stroke paint order is editable");
         n.geometry = {fill: fills.length ? fill(i,id) : null, ...(s ? {stroke:s} : {})};
         const decoded=shapes.map(shape=>{
-          if(shape.r.fields.pathFlags===2 && fills[0]?.r.fields.fillRule===2)
+          if([2,3].includes(shape.r.fields.pathFlags) && fills[0]?.r.fields.fillRule===2)
             fail(shape.r,'counterclockwise path flags with a clockwise fill are outside the editable subset');
           const vertices=children(shape.i).filter(v=>vertexTypes.has(v.r.type));
           const skin=children(shape.i).filter(v=>v.r.type==='Skin');

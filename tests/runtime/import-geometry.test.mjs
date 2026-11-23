@@ -120,6 +120,7 @@ test('counterclockwise hints preserve raw order for ordinary paints and reject c
  const source=geometryCases().find(c=>c.name==='import-counterclockwise-nonzero-hole');
  source.records.find(r=>r.type==='Fill').fields.fillRule=2;
  await assert.rejects(()=>importRiv(encodeRecords(source.records)),/counterclockwise path flags with a clockwise fill/);
+ source.records.find(r=>r.type==='PointsPath').fields.pathFlags=3; await assert.rejects(()=>importRiv(encodeRecords(source.records)),/counterclockwise path flags with a clockwise fill/);
 });
 test('hidden contours retain editable controls and visibility through runtime conversion and native export',async()=>{
  for(const [name,index] of [['import-hidden-primary',0],['import-hidden-secondary',1]]){
