@@ -47,7 +47,8 @@ function roundedCorner(anchor, previous, next, radius, point) {
 
 export function editableContour(record, vertices, {fail, pointId,forcePath=false,skinned=false}) {
   const f=record.fields;
-  if((f.pathFlags ?? 0)!==0)fail(record,'nondefault path flags are outside the editable contour subset');
+  // The counterclockwise hint does not alter the raw contour used by ordinary paints.
+  if(![0,2].includes(f.pathFlags ?? 0))fail(record,'hidden or unknown path flags are outside the editable contour subset');
   const point=(anchor,incoming=anchor,outgoing=anchor)=>({id:pointId(),anchor:[...anchor],in:[...incoming],out:[...outgoing]});
   let points, closed=true;
   if(record.type==='PointsPath') {

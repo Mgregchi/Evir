@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-23T10:01:10.743Z",
+  "checkedAt": "2026-11-23T12:01:17.399Z",
   "runtimeVersion": "2.44.0",
   "method": "Independently encoded native contour records → editable import → Evir Canvas and native re-export, compared with the original in both official runtimes. Explicit named animation frames; static fixtures contain no animations.",
   "thresholds": {
@@ -129,10 +129,28 @@
       "reexportSha256": "f147990eece0923e1ab96ba3ea871c01222bd4e49340d1982b2179794a858946"
     },
     {
+      "name": "import-counterclockwise-nonzero-hole",
+      "nativeSha256": "56e29626c9c133661b8aeb9c3c68d887e5022ad08c3dda5d7107d9a9d2cca7ec",
+      "sourceSha256": "29f3f5568ce63512c0312186c9ab7248c971861f52115e11af091f6e956f82af",
+      "reexportSha256": "dda4b50680e8bd5e5f612463ad5f4fa72ae6efceea61106e65633944deef4a8f"
+    },
+    {
+      "name": "import-counterclockwise-stroke",
+      "nativeSha256": "abe59fd2c5c4c9e2332419678de99be03879f16f7eec513693a3b57dd935737e",
+      "sourceSha256": "c2ae0a99763d8d6411aeb58321359112facf7fe1a7fec288f1b8d14c5bd30743",
+      "reexportSha256": "6cd1df0029f015327dc1d136685a3d36b471e0c573c0a9283f87f5fffb2ac237"
+    },
+    {
+      "name": "import-counterclockwise-evenodd-hole",
+      "nativeSha256": "278d4a6200bcba832abac121c72c95ae7994558738da34f411f8d6ede9f64e88",
+      "sourceSha256": "dc42a747ec73b814b0528c3c9a1a29561c4b3c1056f8d6ec6795840114ea013d",
+      "reexportSha256": "0a04c95e4c3e3d77b17420dd3fa378f7a8e91f71c16d1a237a55e591298aab55"
+    },
+    {
       "name": "tide-native",
-      "nativeSha256": "01aec603efcdcacab7d6c20f97d26770acdcc2361fa9bcf2608d5c3c5020a3e0",
-      "sourceSha256": "d43788c9c58c4f7dc4c75386c216bc055fc67b361877c29bd11e9e5a417e57d8",
-      "reexportSha256": "773b4a0f38a0b30caf42313af8a888c5326e26a6f55085771937d219fb2f4347"
+      "nativeSha256": "0939a738c086d4be497dd5e7144badfd87193e0633e0ec61de02a8f828df1683",
+      "sourceSha256": "73cc9b65adc456ba4afc86ce6addb8cfd5bb0aafc6b353a9870e80961a501184",
+      "reexportSha256": "b6c85a9c822afd1f53198c8415f1e46fa38efe3a9066ed49b31d9b89d9634a52"
     }
   ],
   "backends": [
@@ -716,10 +734,58 @@
           "expectedCovered": 4242
         },
         {
+          "scene": "import-counterclockwise-nonzero-hole",
+          "frame": null,
+          "target": "editable",
+          "mae": 0,
+          "covered": 29238,
+          "expectedCovered": 29238
+        },
+        {
+          "scene": "import-counterclockwise-nonzero-hole",
+          "frame": null,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 29238,
+          "expectedCovered": 29238
+        },
+        {
+          "scene": "import-counterclockwise-stroke",
+          "frame": null,
+          "target": "editable",
+          "mae": 0,
+          "covered": 2680,
+          "expectedCovered": 2680
+        },
+        {
+          "scene": "import-counterclockwise-stroke",
+          "frame": null,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 2680,
+          "expectedCovered": 2680
+        },
+        {
+          "scene": "import-counterclockwise-evenodd-hole",
+          "frame": null,
+          "target": "editable",
+          "mae": 0,
+          "covered": 29238,
+          "expectedCovered": 29238
+        },
+        {
+          "scene": "import-counterclockwise-evenodd-hole",
+          "frame": null,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 29238,
+          "expectedCovered": 29238
+        },
+        {
           "scene": "tide-native",
           "frame": 0,
           "target": "editable",
-          "mae": 0.002422332763671875,
+          "mae": 0.00252532958984375,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -727,7 +793,7 @@
           "scene": "tide-native",
           "frame": 0,
           "target": "native-reexport",
-          "mae": 0.009685516357421875,
+          "mae": 0.00978851318359375,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -735,7 +801,7 @@
           "scene": "tide-native",
           "frame": 30,
           "target": "editable",
-          "mae": 0.001995086669921875,
+          "mae": 0.00209808349609375,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -743,7 +809,7 @@
           "scene": "tide-native",
           "frame": 30,
           "target": "native-reexport",
-          "mae": 0.009685516357421875,
+          "mae": 0.00978851318359375,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -751,7 +817,7 @@
           "scene": "tide-native",
           "frame": 60,
           "target": "editable",
-          "mae": 0.001995086669921875,
+          "mae": 0.00209808349609375,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -759,7 +825,7 @@
           "scene": "tide-native",
           "frame": 60,
           "target": "native-reexport",
-          "mae": 0.009685516357421875,
+          "mae": 0.00978851318359375,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -767,7 +833,7 @@
           "scene": "tide-native",
           "frame": 90,
           "target": "editable",
-          "mae": 0.001995086669921875,
+          "mae": 0.00209808349609375,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -775,7 +841,7 @@
           "scene": "tide-native",
           "frame": 90,
           "target": "native-reexport",
-          "mae": 0.009685516357421875,
+          "mae": 0.00978851318359375,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -783,7 +849,7 @@
           "scene": "tide-native",
           "frame": 120,
           "target": "editable",
-          "mae": 0.002422332763671875,
+          "mae": 0.00252532958984375,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -791,7 +857,7 @@
           "scene": "tide-native",
           "frame": 120,
           "target": "native-reexport",
-          "mae": 0.009685516357421875,
+          "mae": 0.00978851318359375,
           "covered": 65536,
           "expectedCovered": 65536
         }
@@ -1420,10 +1486,58 @@
           "expectedCovered": 4114
         },
         {
+          "scene": "import-counterclockwise-nonzero-hole",
+          "frame": null,
+          "target": "editable",
+          "mae": 0,
+          "covered": 29238,
+          "expectedCovered": 29238
+        },
+        {
+          "scene": "import-counterclockwise-nonzero-hole",
+          "frame": null,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 29238,
+          "expectedCovered": 29238
+        },
+        {
+          "scene": "import-counterclockwise-stroke",
+          "frame": null,
+          "target": "editable",
+          "mae": 0.0174407958984375,
+          "covered": 2680,
+          "expectedCovered": 2676
+        },
+        {
+          "scene": "import-counterclockwise-stroke",
+          "frame": null,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 2676,
+          "expectedCovered": 2676
+        },
+        {
+          "scene": "import-counterclockwise-evenodd-hole",
+          "frame": null,
+          "target": "editable",
+          "mae": 0,
+          "covered": 29238,
+          "expectedCovered": 29238
+        },
+        {
+          "scene": "import-counterclockwise-evenodd-hole",
+          "frame": null,
+          "target": "native-reexport",
+          "mae": 0,
+          "covered": 29238,
+          "expectedCovered": 29238
+        },
+        {
           "scene": "tide-native",
           "frame": 0,
           "target": "editable",
-          "mae": 0.3361854553222656,
+          "mae": 0.3364982604980469,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -1439,7 +1553,7 @@
           "scene": "tide-native",
           "frame": 30,
           "target": "editable",
-          "mae": 0.3335418701171875,
+          "mae": 0.33385467529296875,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -1455,7 +1569,7 @@
           "scene": "tide-native",
           "frame": 60,
           "target": "editable",
-          "mae": 0.33303070068359375,
+          "mae": 0.333343505859375,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -1471,7 +1585,7 @@
           "scene": "tide-native",
           "frame": 90,
           "target": "editable",
-          "mae": 0.3335418701171875,
+          "mae": 0.33385467529296875,
           "covered": 65536,
           "expectedCovered": 65536
         },
@@ -1487,7 +1601,7 @@
           "scene": "tide-native",
           "frame": 120,
           "target": "editable",
-          "mae": 0.3361854553222656,
+          "mae": 0.3364982604980469,
           "covered": 65536,
           "expectedCovered": 65536
         },

@@ -1,12 +1,12 @@
 {
-  "checkedAt": "2026-11-23T10:01:49.750Z",
+  "checkedAt": "2026-11-23T12:01:51.409Z",
   "scope": "Cloud Chromium automation; no physical or moderated-user evidence.",
   "viewports": [
     {
       "width": 390,
       "checks": [
         "native sample imports into 35 editable layers",
-        "ellipse, mixed vertex and rounded rectangle controls",
+        "ellipse, mixed vertex, rounded rectangle and cutout controls",
         "numeric edit of a rounded star point and undo/redo",
         "native export equals compiler bytes",
         "named animation scrub and imported skin binding",
@@ -20,7 +20,7 @@
       "width": 1440,
       "checks": [
         "native sample imports into 35 editable layers",
-        "ellipse, mixed vertex and rounded rectangle controls",
+        "ellipse, mixed vertex, rounded rectangle and cutout controls",
         "numeric edit of a rounded star point and undo/redo",
         "native export equals compiler bytes",
         "named animation scrub and imported skin binding",
